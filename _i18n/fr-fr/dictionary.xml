@@ -11399,7 +11399,6 @@
   <block id="2bfb7d51aea637d48bf5bca4afcb46a1" category="list-text">Connectez-vous au client Web vSphere en tant qu'administrateur vCenter. Si vous êtes déjà connecté au client Web vSphere, vous devez d'abord vous déconnecter, attendre deux à trois minutes, puis vous reconnecter.</block>
   <block id="f523905d48a1db956815565365a5a6ad" category="admonition">Cette action crée une nouvelle base de données et termine l'installation dans vSphere Web client.</block>
   <block id="9b572df8237d34b7c32142ac15f1325f" category="list-text">Dans le client Web vSphere, recherchez les tâches terminées suivantes dans le moniteur des tâches pour vous assurer que l'installation est terminée :<block ref="ec6215521ab965944e6a3eeb6b9ab6f1" prefix=" " category="inline-code"></block> et<block ref="0f5814fb45e88fb5a7d984788675e425" prefix=" " category="inline-code"></block>.</block>
-  <block id="c4676996d8b51da422f5ab619c54ae01" category="list-text">Vérifiez que les points d'extension Configuration et gestion de NetApp Element apparaissent dans l'onglet *raccourcis* du client Web vSphere et dans le panneau latéral.</block>
   <block id="3c4718429a8a2991d56e6e719c1942df" category="image-alt">La illustre les points d'extension du plug-in après une mise à niveau ou une installation réussie pour le plug-in Element 5.10 ou version ultérieure</block>
   <block id="85406fb94df2ff523b7477f229b1c9c8" category="image-alt">La illustre les points d'extension du plug-in après une mise à niveau ou une installation réussie pour le plug-in Element 4.10 ou version antérieure</block>
   <block id="a0abd6db969f497b63a29f8fbd1771df" category="inline-link-macro">Plug-in Element pour vCenter Server</block>
@@ -12360,4 +12359,7 @@
   <block id="2e531c00d20727b760f0fefbb4c65c82" category="sidebar">Affichez votre inventaire sur la page nœuds du contrôle du cloud hybride NetApp</block>
   <block id="767682e703a28fefdc1067e1fcf04243" category="sidebar">Surveillez les volumes de votre cluster de stockage avec NetApp Cloud Control</block>
   <block id="f3ef8562bc46b3fd5d64fc8a88bab6f9" category="sidebar">Installez les nœuds H410S et H610S</block>
+  <block id="d471727ba1fb423986701d5307906d08" category="list-text">Vérifiez que les points d'extension du plug-in apparaissent dans l'onglet *raccourcis* de vSphere Web client et dans le panneau latéral.</block>
+  <block id="290b380ec7760347344e9055b68f217d" category="paragraph">Depuis le plug-in Element pour vCenter Server 5.0, le point d'extension du plug-in distant NetApp Element :</block>
+  <block id="7491d78d51f3545fc9fe30d2249bc196" category="paragraph">Plug-in Element pour vCenter Server 4.10 ou version antérieure, points d'extension NetApp Element Configuration and Management :</block>
 </blocks>
