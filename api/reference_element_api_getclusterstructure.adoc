@@ -1,0 +1,71 @@
+---
+permalink: api/reference_element_api_getclusterstructure.html 
+sidebar: sidebar 
+keywords: storage,cluster,structure,config,configuration,info,get,getting,getclusterstructure 
+summary: 'Vous pouvez utiliser la méthode GetClusterstructure pour sauvegarder les informations de configuration actuelles du cluster de stockage. Si la configuration du cluster de stockage est modifiée alors que cette méthode est en cours d"exécution, le contenu de la sauvegarde de configuration sera imprévisible. Vous pouvez enregistrer ces données dans un fichier texte et les restaurer sur d"autres clusters ou sur le même cluster en cas d"incident.' 
+---
+= GetClusterStructure
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetClusterStructure` méthode de sauvegarde des informations de configuration actuelles du cluster de stockage. Si la configuration du cluster de stockage est modifiée alors que cette méthode est en cours d'exécution, le contenu de la sauvegarde de configuration sera imprévisible. Vous pouvez enregistrer ces données dans un fichier texte et les restaurer sur d'autres clusters ou sur le même cluster en cas d'incident.
+
+
+
+== Paramètre
+
+Cette méthode n'a pas de paramètre d'entrée.
+
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+résultat
+ a| 
+Objet JSON contenant les informations actuelles de configuration du cluster de stockage.
+ a| 
+xref:reference_element_api_clusterstructure.adoc[Structure du cluster]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "GetClusterStructure",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+	"id": 1,
+	"result" : <clusterStructure object containing configuration information>
+	}
+----
+
+
+== Nouveau depuis la version
+
+10.3

@@ -1,0 +1,116 @@
+---
+permalink: api/reference_element_api_modifysnapmirrorrelationship.html 
+sidebar: sidebar 
+keywords: modify,modifying,edit,editing,change,changing,snapmirror,relationship,modifysnapmirrorrelationship 
+summary: Vous pouvez utiliser ModifiySnapMirror Relationship pour modifier les intervalles auxquels un snapshot planifié se produit. Cette méthode vous permet également de supprimer ou de suspendre une programmation. 
+---
+= ModificationSnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser `ModifySnapMirrorRelationship` pour modifier les intervalles auxquels un instantané planifié se produit. Cette méthode vous permet également de supprimer ou de suspendre une programmation.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+
+
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+Volume desestinationVolume
+ a| 
+Volume de destination dans la relation SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeinfo]
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+Taux de transfert maximal
+ a| 
+Spécifie le taux de transfert de données maximal entre les volumes en kilo-octets par seconde. La valeur par défaut, 0, est illimitée et permet à la relation SnapMirror d'exploiter pleinement la bande passante réseau disponible.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+Nom de la police
+ a| 
+Spécifie le nom de la règle ONTAP SnapMirror pour la relation.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+ScheduleName
+ a| 
+Nom de la planification cron pré-existante sur le système ONTAP utilisé pour mettre à jour la relation SnapMirror.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+L'ID de terminal du système de stockage ONTAP distant communique avec le cluster de stockage Element.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+SnapMirrorRelationship
+ a| 
+Objet contenant les attributs de la relation SnapMirror modifiés.
+ a| 
+xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelationship]
+
+|===
+
+
+== Nouveau depuis la version
+
+10.1

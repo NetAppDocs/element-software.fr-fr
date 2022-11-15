@@ -1,0 +1,114 @@
+---
+permalink: api/reference_element_api_listsnapmirrorrelationships.html 
+sidebar: sidebar 
+keywords: snapmirror,endpoints,endpoint,list,listing,listsnapmirrorrelationships 
+summary: 'L"interface utilisateur Web du logiciel Element utilise la méthode ListorRelationship de SnapMirror pour lister une ou toutes les relations SnapMirror sur un cluster de stockage Element.' 
+---
+= ListorRelationships de SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'interface utilisateur Web du logiciel Element utilise le `ListSnapMirrorRelationships` Méthode permettant de lister une ou l'ensemble des relations SnapMirror sur un cluster de stockage Element.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+Répertorie uniquement les relations associées à l'ID de point final spécifié. Si aucun ID de terminal n'est fourni, le système répertorie les relations de tous les terminaux SnapMirror connus.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+Volume desestinationVolume
+ a| 
+Répertorie les relations associées au volume de destination spécifié.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeInfo]
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+Volume source
+ a| 
+Répertorie les relations associées au volume source spécifié.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeInfo]
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+un vserver
+ a| 
+Lister les relations sur le Vserver spécifié.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+RelationshipID
+ a| 
+Répertorie les relations associées à l'ID de relation spécifié.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+SnapMirrorRelationships
+ a| 
+Liste d'objets contenant des informations sur les relations SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelationship] baie
+
+|===
+
+
+== Nouveau depuis la version
+
+10.1

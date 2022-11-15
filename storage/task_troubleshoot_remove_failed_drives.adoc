@@ -1,0 +1,49 @@
+---
+permalink: storage/task_troubleshoot_remove_failed_drives.html 
+sidebar: sidebar 
+keywords: troubleshoot, failed drives, remove 
+summary: 'Le système SolidFire met un disque en panne si l"auto-diagnostic du lecteur indique au nœud qu"il a échoué ou si la communication avec le lecteur s"arrête pendant cinq minutes et demi ou plus. Le système affiche la liste des disques défectueux. Vous devez supprimer un disque défectueux de la liste des disques défaillants du logiciel NetApp Element.' 
+---
+= Retirer les disques défectueux du cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le système SolidFire met un disque en panne si l'auto-diagnostic du disque indique au nœud qu'il est en panne ou si la communication avec le disque s'arrête pendant cinq minutes et demie au moins. Le système affiche la liste des disques défectueux. Vous devez supprimer un disque défectueux de la liste des disques défaillants du logiciel NetApp Element.
+
+Les lecteurs de la liste *Alerts* s'affichent sous la forme *blockServiceUnHealthy* lorsqu'un nœud est hors ligne. Lors du redémarrage du nœud, si le nœud et ses disques sont de nouveau en ligne en cinq minutes et demi, les disques se mettent automatiquement à jour et continuent de jouer le rôle de disques actifs dans le cluster.
+
+. Dans l'interface utilisateur de l'élément, sélectionnez *Cluster* > *Drives*.
+. Cliquez sur *FAILED* pour afficher la liste des disques défectueux.
+. Notez le numéro de slot du disque défaillant.
++
+Vous avez besoin de ces informations pour localiser le lecteur défectueux dans le châssis.
+
+. Retirez les disques défectueux à l'aide de l'une des méthodes suivantes :
++
+|===
+
+
+| Option | Étapes 
+
+
+ a| 
+Pour supprimer des lecteurs individuels
+ a| 
+.. Cliquez sur *actions* pour le lecteur que vous souhaitez supprimer.
+.. Cliquez sur *Supprimer*.
+
+
+
+
+ a| 
+Pour supprimer plusieurs lecteurs
+ a| 
+.. Sélectionnez tous les lecteurs que vous souhaitez supprimer, puis cliquez sur *actions groupées*.
+.. Cliquez sur *Supprimer*.
+
+
+|===
+

@@ -1,0 +1,26 @@
+---
+permalink: hardware/index.html 
+sidebar: sidebar 
+keywords: soldifre hardware, h-series hardware, install hardware, maintain hardware, h410s, h610s 
+summary: Découvrez comment installer et gérer le matériel H-Series et SF-Series. 
+---
+= Installer et entretenir le matériel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Découvrez comment installer et gérer le matériel H-Series et SF-Series.
+
+* xref:concept_h410s_h610s_info.adoc[Informations sur le matériel H410S et H610S]
+* xref:concept_sfseries_info.adoc[Informations sur le matériel SF-Series]
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

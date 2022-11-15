@@ -1,0 +1,78 @@
+---
+permalink: storage/task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.html 
+sidebar: sidebar 
+keywords: enable, disable, encryption at rest, cluster, sed, hardware-based, encryption settings, software-based 
+summary: 'Grâce aux clusters SolidFire, vous pouvez chiffrer toutes les données stockées sur le cluster à l"aide du chiffrement logiciel ou matériel pour les données au repos.' 
+---
+= Activez et désactivez le cryptage des données au repos pour un cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avec les clusters SolidFire, vous pouvez chiffrer toutes les données au repos stockées sur les disques du cluster. Vous pouvez activer la protection des lecteurs à autochiffrement (SED) au niveau du cluster à l'aide de l'une ou l'autre link:../concepts/concept_solidfire_concepts_security.html["chiffrement matériel ou logiciel pour les données au repos"].
+
+Vous pouvez activer le chiffrement matériel au repos à l'aide de l'interface utilisateur et de l'API d'Element. L'activation de la fonctionnalité de chiffrement matériel au repos n'a aucune incidence sur les performances ou l'efficacité du cluster. Vous pouvez activer le chiffrement logiciel au repos uniquement à l'aide de l'API Element.
+
+Le chiffrement matériel au repos n'est pas activé par défaut lors de la création du cluster. Il peut être activé et désactivé depuis l'interface utilisateur d'Element.
+
+
+WARNING: Pour les clusters de stockage 100 % Flash SolidFire, le chiffrement logiciel au repos doit être activé au cours de la création du cluster et ne peut pas être désactivé une fois le cluster créé. Pour les clusters SolidFire Enterprise SDS (ESDS), le chiffrement logiciel au repos est activé par défaut.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous disposez des privilèges d'administrateur de cluster pour activer ou modifier les paramètres de chiffrement.
+* Pour le chiffrement matériel au repos, vous avez vérifié que le cluster est en état de fonctionnement avant de modifier les paramètres de chiffrement.
+* Si vous désactivez le cryptage, deux nœuds doivent participer à un cluster pour accéder à la clé afin de désactiver le cryptage sur un disque.
+
+
+
+
+== Vérifiez le chiffrement des données au repos
+
+Pour voir l'état actuel du chiffrement au repos et/ou logiciel au repos sur le cluster, utilisez le link:../api/reference_element_api_getclusterinfo.html["GetClusterInfo"^] méthode. Vous pouvez utiliser le link:../api/reference_element_api_getsoftwareencryptionatrestinfo.html["GetSoftwareEncryptionAtRestInfo"^] méthode d'obtention des informations que le cluster utilise pour chiffrer les données au repos.
+
+
+NOTE: Le tableau de bord de l'interface utilisateur du logiciel Element sur `https://<MVIP>/` à l'heure actuelle, le chiffrement des données au repos est uniquement affiché pour le chiffrement matériel.
+
+.Options
+*  hardware-based encryption at rest
+*  software-based encryption at rest
+*  hardware-based encryption at rest
+
+
+
+
+== Chiffrement matériel des données au repos
+
+
+NOTE: Pour activer le chiffrement au repos à l'aide d'une configuration externe de gestion des clés, vous devez activer le chiffrement au repos via le link:../api/reference_element_api_enableencryptionatrest.html["API"]. L'activation de l'utilisation du bouton de l'interface utilisateur Element existante revient à l'utilisation des clés générées en interne.
+
+. Dans l'interface utilisateur de l'élément, sélectionnez *Cluster* > *Paramètres*.
+. Sélectionnez *Activer le chiffrement au repos*.
+
+
+
+
+== Chiffrement logiciel des données au repos
+
+
+NOTE: Le chiffrement logiciel au repos ne peut pas être désactivé après son activation sur le cluster.
+
+. Lors de la création du cluster, exécutez la link:../api/reference_element_api_createcluster.html["créer une méthode de cluster"] avec `enableSoftwareEncryptionAtRest` réglez sur `true`.
+
+
+
+
+== Désactivation du chiffrement matériel des données au repos
+
+. Dans l'interface utilisateur de l'élément, sélectionnez *Cluster* > *Paramètres*.
+. Sélectionnez *Désactiver le chiffrement au repos*.
+
+
+[discrete]
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

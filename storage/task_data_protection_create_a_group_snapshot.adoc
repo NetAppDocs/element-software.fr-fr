@@ -1,0 +1,44 @@
+---
+permalink: storage/task_data_protection_create_a_group_snapshot.html 
+sidebar: sidebar 
+keywords: group snapshot, create, volumes, schedule, automate group snapshots 
+summary: 'Vous pouvez créer un snapshot d"un groupe de volumes et créer un planning de snapshots de groupe pour automatiser les snapshots de groupe. Un snapshot de groupe unique peut effectuer des snapshots de manière cohérente jusqu"à 32 volumes à la fois.' 
+---
+= Création d'un snapshot de groupe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer un snapshot d'un groupe de volumes et créer un planning de snapshots de groupe pour automatiser les snapshots de groupe. Un snapshot de groupe unique peut effectuer des snapshots de manière cohérente jusqu'à 32 volumes à la fois.
+
+.Étapes
+. Cliquez sur *Management* > *volumes*.
+. Utilisez les cases à cocher pour sélectionner plusieurs volumes pour un groupe de volumes.
+. Cliquez sur *actions groupées*.
+. Cliquez sur *instantané de groupe*.
+. Entrez un nouveau nom d'instantané de groupe dans la boîte de dialogue Créer un instantané de groupe de volumes.
+. *Facultatif :* cochez la case *inclure chaque membre de snapshot de groupe dans la réplication lorsqu'il est couplé* pour vous assurer que chaque snapshot est capturé dans la réplication lorsque le volume parent est couplé.
+. Sélectionnez une option de conservation pour l'instantané de groupe :
++
+** Cliquez sur *conserver indéfiniment* pour conserver indéfiniment l'instantané sur le système.
+** Cliquez sur *Set Retention Period* et utilisez les champs de spin de date pour choisir une durée pour le système de conservation de l'instantané.
+
+
+. Pour créer un seul snapshot immédiat, effectuez les opérations suivantes :
++
+.. Cliquez sur *prendre l'instantané de groupe maintenant*.
+.. Cliquez sur *Créer instantané de groupe*.
+
+
+. Pour planifier l'exécution ultérieure de l'instantané, effectuez les opérations suivantes :
++
+.. Cliquez sur *Créer planification Snapshot de groupe*.
+.. Saisissez un *Nouveau nom d'horaire*.
+.. Sélectionnez un *Type d'horaire* dans la liste.
+.. *Facultatif :* cochez la case *Programme récurrent* pour répéter l'instantané programmé périodiquement.
+.. Cliquez sur *Créer un programme*.
+
+
+

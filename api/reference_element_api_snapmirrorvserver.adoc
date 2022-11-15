@@ -1,0 +1,130 @@
+---
+permalink: api/reference_element_api_snapmirrorvserver.html 
+sidebar: sidebar 
+keywords: object,objects,snapMirrorVserver 
+summary: 'L"objet MirrorsnapvaulVserver contient des informations sur les Storage Virtual machines \(ou vServers\) au niveau du cluster ONTAP de destination.' 
+---
+= SnapMirrorVserver
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet MirrorsnapvaulVserver contient des informations sur les Storage Virtual machines (ou vServers) au niveau du cluster ONTAP de destination.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+ID du système ONTAP de destination.
+ a| 
+entier
+
+
+
+ a| 
+Vserver
+ a| 
+Nom du Vserver.
+ a| 
+chaîne
+
+
+
+ a| 
+Vserver Type
+ a| 
+Le type de Vserver. Valeurs possibles :
+
+* les données
+* admin
+* système
+* nœud
+
+ a| 
+chaîne
+
+
+
+ a| 
+Sous-type vserver
+ a| 
+Le sous-type du Vserver. Valeurs possibles :
+
+* valeur par défaut
+* dp_destination
+* les données
+* sync_source
+* destination_sync
+
+ a| 
+chaîne
+
+
+
+ a| 
+RootVolume
+ a| 
+Le volume root du Vserver.
+ a| 
+chaîne
+
+
+
+ a| 
+RootVolumegrregate
+ a| 
+L'agrégat sur lequel le volume root sera créé.
+ a| 
+chaîne
+
+
+
+ a| 
+VserverAggregateInfo
+ a| 
+Un tableau d'objets MirrorsnapvserverAggregateInfo.
+ a| 
+Objet JSON
+
+
+
+ a| 
+Etat d'administration
+ a| 
+État administratif détaillé du Vserver. Valeurs possibles :
+
+* exécution
+* arrêté
+* démarrage
+* arrêt
+* initialisation
+* suppression
+
+ a| 
+chaîne
+
+
+
+ a| 
+Etat d'opérationnalState
+ a| 
+L'état opérationnel de base du Vserver. Valeurs possibles :
+
+* exécution
+* arrêté
+
+ a| 
+chaîne
+
+|===

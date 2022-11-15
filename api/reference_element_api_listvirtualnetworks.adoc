@@ -1,0 +1,184 @@
+---
+permalink: api/reference_element_api_listvirtualnetworks.html 
+sidebar: sidebar 
+keywords: virtual,network,networks,listing,list,listvirtualnetworks 
+summary: Vous pouvez utiliser la méthode ListVirtualNetworks pour répertorier tous les réseaux virtuels configurés pour le cluster. 
+---
+= LisVirtualNetworks
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ListVirtualNetworks` méthode permettant de lister tous les réseaux virtuels configurés pour le cluster.
+
+Vous pouvez utiliser cette méthode pour vérifier les paramètres du réseau virtuel dans le cluster. Il n'y a aucun paramètre requis pour cette méthode. Toutefois, pour filtrer les résultats, vous pouvez transmettre une ou plusieurs valeurs virtualNetworkID ou virtualNetworkTag.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+VirtualNetworkID
+ a| 
+ID réseau pour filtrer la liste d'un seul réseau virtuel.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+VirtualNetworkTag
+ a| 
+Balise réseau pour filtrer la liste d'un seul réseau virtuel.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+VirtualNetworkID
+ a| 
+ID réseau à inclure dans la liste.
+ a| 
+tableau entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+VirtualNetworkTags
+ a| 
+Balise réseau à inclure dans la liste.
+ a| 
+tableau entier
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+VirtualNetworks
+ a| 
+Objet contenant des adresses IP de réseau virtuel.
+ a| 
+xref:reference_element_api_virtualnetwork.adoc[VirtualNetwork]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "ListVirtualNetworks",
+  "params": {
+     "virtualNetworkIDs": [5,6]
+   },
+"id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "virtualNetworks": [
+   {
+    "addressBlocks": [
+   {
+    "available": "11000000",
+    "size": 8,
+    "start": "10.26.250.207"
+   }
+ ],
+    "attributes": null,
+    "gateway": "10.26.250.254",
+    "name": "2250",
+    "namespace": false,
+    "netmask": "255.255.255.0",
+    "svip": "10.26.250.200",
+    "virtualNetworkID": 2250
+   },
+   {
+     "addressBlocks": [
+   {
+     "available": "11000000",
+     "size": 8,
+     "start": "10.26.241.207"
+   }
+  ],
+     "attributes": null,
+     "gateway": "10.26.241.254",
+     "name": "2241",
+     "namespace": false,
+     "netmask": "255.255.255.0",
+     "svip": "10.26.241.200",
+     "virtualNetworkID": 2241
+   },
+  {
+     "addressBlocks": [
+  {
+     "available": "11000000",
+     "size": 8,
+     "start": "10.26.240.207"
+   }
+  ],
+     "attributes": null,
+     "gateway": "10.26.240.254",
+     "name": "2240",
+     "namespace": false,
+     "netmask": "255.255.255.0",
+     "svip": "10.26.240.200",
+     "virtualNetworkID": 2240
+    },
+   {
+  }
+ ]
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

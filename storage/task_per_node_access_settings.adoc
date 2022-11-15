@@ -1,0 +1,30 @@
+---
+permalink: storage/task_per_node_access_settings.html 
+sidebar: sidebar 
+keywords: nodes, accessing node settings, accessing node settings with per-node UI 
+summary: 'Vous pouvez accéder aux paramètres réseau, aux paramètres de cluster, aux tests et aux utilitaires système dans l"interface utilisateur par nœud après avoir saisi l"adresse IP du nœud de gestion et vous authentifier.' 
+---
+= Accès aux paramètres par nœud à l'aide de l'interface utilisateur par nœud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez accéder aux paramètres réseau, aux paramètres de cluster, aux tests et aux utilitaires système dans l'interface utilisateur par nœud après avoir saisi l'adresse IP du nœud de gestion et vous authentifier.
+
+Si vous souhaitez modifier les paramètres d'un nœud à l'état actif faisant partie d'un cluster, vous devez vous connecter en tant qu'administrateur de cluster.
+
+
+TIP: Vous devez configurer ou modifier un nœud à la fois. Assurez-vous que les paramètres réseau spécifiés ont l'effet attendu et que le réseau est stable et fonctionne bien avant d'apporter des modifications à un autre nœud.
+
+. Ouvrez l'interface utilisateur par nœud à l'aide de l'une des méthodes suivantes :
++
+** Entrez l'adresse IP de gestion suivie de :442 dans une fenêtre de navigateur et connectez-vous à l'aide d'un nom d'utilisateur et d'un mot de passe admin.
+** Dans l'interface utilisateur de l'élément, sélectionnez *Cluster* > *Nodes*, puis cliquez sur le lien de l'adresse IP de gestion correspondant au nœud que vous souhaitez configurer ou modifier. Dans la fenêtre du navigateur qui s'ouvre, vous pouvez modifier les paramètres du nœud.
+
+
++
+image::../media/per_node_ui_hcc_skin.png[Page des paramètres réseau de l'interface utilisateur par nœud]
+
+

@@ -1,0 +1,406 @@
+---
+permalink: api/reference_element_api_volumestats.html 
+sidebar: sidebar 
+keywords: object,objects,volumeStats 
+summary: 'L"objet Volume Stats contient des données statistiques pour un volume individuel.' 
+---
+= Statistiques volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet Volume Stats contient des données statistiques pour un volume individuel.
+
+
+
+== Membres d'objet
+
+Vous pouvez utiliser les méthodes suivantes pour obtenir des objets Volume Stats pour certains ou tous les volumes :
+
+* xref:reference_element_api_getvolumestats.adoc[GetVolumeStats]
+* xref:reference_element_api_listvolumestatsbyaccount.adoc[ListVolumeStatsByAccount]
+* xref:reference_element_api_listvolumestatsbyvolume.adoc[ListVolumeStatsByVolume]
+* xref:reference_element_api_listvolumestatsbyvolumeaccessgroup.adoc[ListVolumeStatsByVolumeAccessGroup]
+
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Calcul | Type 
+
+
+ a| 
+ID compte
+ a| 
+L'ID du compte du propriétaire du volume.
+ a| 
+S/O
+ a| 
+entier
+
+
+
+ a| 
+IOPS d'actualIOPS
+ a| 
+Les IOPS réelles actuelles du volume au cours des 500 dernières millisecondes.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+Asynchrone
+ a| 
+Durée écoulée depuis la dernière synchronisation du volume avec le cluster distant. Si le volume n'est pas apparié, il s'agit de la valeur NULL. *Remarque :* Un volume cible dans un état de réplication actif a toujours un asyncDelay de 0 (zéro). Les volumes cibles sont conscients du système pendant la réplication et supposons que le délai asynchrone est toujours précis.
+ a| 
+S/O
+ a| 
+Chaîne de durée ISO 8601 ou nulle
+
+
+
+ a| 
+AverageIOPSize
+ a| 
+Taille moyenne en octets des E/S récentes au volume au cours des 500 dernières millisecondes.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+BurstIOPSCredit
+ a| 
+Nombre total de crédits IOP disponibles pour l'utilisateur. Lorsque les volumes n'utilisent pas le nombre maximal d'IOPS configuré, les crédits sont cumulés.
+ a| 
+S/O
+ a| 
+entier
+
+
+
+ a| 
+ClientDepth
+ a| 
+Nombre d'opérations de lecture et d'écriture en attente dans le volume.
+ a| 
+S/O
+ a| 
+entier
+
+
+
+ a| 
+Utilisation des clusters
+ a| 
+Capacité du cluster utilisée.
+ a| 
+S/O
+ a| 
+flottement
+
+
+
+ a| 
+DdesiredMetadahods
+ a| 
+Les services de métadonnées (tranche) transférés vers si les métadonnées du volume sont migrées entre les services de métadonnées. Une valeur « null » signifie que le volume n'effectue pas la migration.
+ a| 
+S/O
+ a| 
+Objet JSON
+
+
+
+ a| 
+LacycyUsec
+ a| 
+Temps moyen, en microsecondes, pour mener à bien les opérations vers le volume au cours des 500 dernières millisecondes. Une valeur « 0 » (zéro) signifie qu'il n'y a pas d'E/S au volume.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+Métadatas
+ a| 
+Services de métadonnées (tranche) sur lesquels se trouvent les métadonnées du volume. Valeurs possibles :
+
+* Primaire : principaux services de métadonnées hébergeant le volume.
+* LiveAppuyars : services de métadonnées secondaires actuellement en état « live ».
+* Dedoraires : services de métadonnées secondaires qui sont à l'état mort.
+
+ a| 
+S/O
+ a| 
+Objet JSON
+
+
+
+ a| 
+Serrures non ZeroBocks
+ a| 
+Le nombre total de blocs 4Kio contenant des données après la dernière opération de collecte des déchets.
+ a| 
+S/O
+ a| 
+entier
+
+
+
+ a| 
+Octets
+ a| 
+Total des octets cumulés lus depuis le volume depuis la création du volume.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+AdBytesLastSample
+ a| 
+Nombre total d'octets lus par le volume au cours de la dernière période d'échantillonnage.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+ReadLatencyUsec
+ a| 
+Temps moyen, en microsecondes, pour mener à bien les opérations de lecture vers le volume au cours des 500 dernières millisecondes.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+ReadLatcyUSecTotal
+ a| 
+Temps total consacré aux opérations de lecture à partir du volume.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+Opérations de lecture
+ a| 
+Total des opérations de lecture du volume depuis la création du volume.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+ReadOpsLastSample
+ a| 
+Nombre total d'opérations de lecture au cours de la dernière période d'échantillonnage.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+SamplePeriodMsec
+ a| 
+Longueur de la période d'échantillonnage, en millisecondes.
+ a| 
+S/O
+ a| 
+entier
+
+
+
+ a| 
+accélérateur
+ a| 
+Valeur flottante comprise entre 0 et 1 qui représente le volume d'accélération que le système règle les clients en dessous de leur nombre maximal d'IOPS en raison de la réplication de données, d'erreurs transitoires et de snapshots effectués.
+ a| 
+S/O
+ a| 
+flottement
+
+
+
+ a| 
+horodatage
+ a| 
+Heure actuelle au format UTC+0.
+ a| 
+S/O
+ a| 
+Chaîne de date ISO 8601
+
+
+
+ a| 
+Les reads sans alignement
+ a| 
+Total cumulé des opérations de lecture non alignées sur un volume depuis la création du volume.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+Non-aligneWrites
+ a| 
+Total cumulé des opérations d'écriture non alignées sur un volume depuis la création du volume.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+Groupes d'accès de volume
+ a| 
+Liste des ID des groupes d'accès de volume auxquels un volume appartient.
+ a| 
+S/O
+ a| 
+tableau entier
+
+
+
+ a| 
+ID de volume
+ a| 
+ID du volume.
+ a| 
+S/O
+ a| 
+entier
+
+
+
+ a| 
+Taille de volume
+ a| 
+Capacité totale provisionnée en octets.
+ a| 
+S/O
+ a| 
+entier
+
+
+
+ a| 
+Utilisation du volume
+ a| 
+Valeur à virgule flottante qui décrit la manière dont le client utilise les capacités d'entrée/sortie du volume en comparaison avec le paramètre maxIOPS QoS pour ce volume. Valeurs possibles :
+
+* 0: Le client n'utilise pas le volume.
+* 0.01 à 0.99 : le client n'utilise pas intégralement les capacités IOPS du volume.
+* 1.00 : le client utilise pleinement le volume jusqu'à la limite IOPS définie par le paramètre maxIOPS.
+* > 1.00 : le client utilise plus que la limite définie par maxIOPS. Ceci est possible lorsque le paramètre burstIOPS QoS est défini sur supérieur à maxIOPS. Par exemple, si maxIOPS est défini sur 1000 et que burstIOPS est défini sur 2000, le `volumeUtilization` la valeur est de 2.00 si le client utilise entièrement le volume.
+
+ a| 
+S/O
+ a| 
+flottement
+
+
+
+ a| 
+Octets
+ a| 
+Total des octets cumulés écrits sur le volume depuis la création du volume.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+WriteBytesLastSample
+ a| 
+Nombre total d'octets écrits sur le volume au cours de la dernière période d'échantillonnage.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+WriteLatencyUsec
+ a| 
+Temps moyen, en microsecondes, pour traiter les opérations d'écriture sur un volume au cours des 500 dernières millisecondes.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+WriteLatencyUSecTotal
+ a| 
+Temps total consacré aux opérations d'écriture sur le volume
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+WriteOps
+ a| 
+Total cumulé des opérations d'écriture sur le volume depuis la création du volume.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+WriteLastOpsSample
+ a| 
+Nombre total d'opérations d'écriture au cours de la dernière période d'échantillonnage.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+ZeroBLocks
+ a| 
+Le nombre total de blocs de 4 Ko vides sans données après la dernière opération de collecte des déchets.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+|===

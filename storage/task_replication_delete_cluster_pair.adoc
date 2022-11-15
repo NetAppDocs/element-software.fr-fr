@@ -1,0 +1,21 @@
+---
+permalink: storage/task_replication_delete_cluster_pair.html 
+sidebar: sidebar 
+keywords: cluster pairs, delete 
+summary: 'Vous pouvez supprimer une paire de clusters de l"interface utilisateur Element de l"un des clusters de la paire.' 
+---
+= Supprime une paire de clusters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer une paire de clusters de l'interface utilisateur Element de l'un des clusters de la paire.
+
+. Cliquez sur *Data protection* > *Cluster paires*.
+. Cliquez sur l'icône actions d'une paire de clusters.
+. Dans le menu qui s'affiche, cliquez sur *Supprimer*.
+. Confirmez l'action.
+. Effectuez de nouveau les étapes à partir du second cluster au sein du jumelage des clusters.
+

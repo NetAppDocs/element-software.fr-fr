@@ -1,0 +1,101 @@
+---
+permalink: api/reference_element_api_setntpinfo.html 
+sidebar: sidebar 
+keywords: ntp,info,set,setting,setntpinfo 
+summary: 'Vous pouvez utiliser la méthode SetNtpInfo pour configurer NTP sur les nœuds de cluster. Les valeurs que vous définissez avec cette interface s"appliquent à tous les nœuds du cluster. Si un serveur de diffusion NTP diffuse régulièrement des informations d"heure sur votre réseau, vous pouvez éventuellement configurer des nœuds en tant que clients de diffusion.' 
+---
+= SetNtpInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `SetNtpInfo` Méthode de configuration NTP sur les nœuds du cluster. Les valeurs que vous définissez avec cette interface s'appliquent à tous les nœuds du cluster. Si un serveur de diffusion NTP diffuse régulièrement des informations d'heure sur votre réseau, vous pouvez éventuellement configurer des nœuds en tant que clients de diffusion.
+
+
+NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
+
+
+
+== Paramètres
+
+
+NOTE: Assurez-vous que vous utilisez des serveurs NTP internes à votre réseau plutôt que les paramètres par défaut de l'installation.
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+serveurs
+ a| 
+Liste des serveurs NTP à ajouter à chaque configuration NTP de nœud.
+ a| 
+tableau de chaînes
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+client de diffusion
+ a| 
+Active chaque nœud du cluster en tant que client de diffusion.
+ a| 
+booléen
+ a| 
+faux
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "SetNtpInfo",
+   "params": {
+     "servers"  : [
+       "ntpserver1.example.org",
+       "ntpserver2.example.org",
+       "ntpserver3.example.org"
+     ],
+     "broadcastclient" : false
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "id" : 1,
+    "result" : {}
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

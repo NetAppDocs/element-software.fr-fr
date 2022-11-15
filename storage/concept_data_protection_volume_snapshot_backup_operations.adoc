@@ -1,0 +1,19 @@
+---
+permalink: storage/concept_data_protection_volume_snapshot_backup_operations.html 
+sidebar: sidebar 
+keywords: volume snapshot, backup operations, back up volume snapshot, cluster, object store 
+summary: 'Vous pouvez utiliser la fonctionnalité de sauvegarde intégrée pour sauvegarder un snapshot de volume. Vous pouvez sauvegarder des snapshots depuis un cluster SolidFire vers un magasin d"objets externe ou vers un autre cluster SolidFire. Lorsque vous sauvegardez un snapshot dans un magasin d"objets externe, vous devez disposer d"une connexion au magasin d"objets qui permet des opérations de lecture/écriture.' 
+---
+= Sauvegarder un snapshot de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser la fonctionnalité de sauvegarde intégrée pour sauvegarder un snapshot de volume. Vous pouvez sauvegarder des snapshots depuis un cluster SolidFire vers un magasin d'objets externe ou vers un autre cluster SolidFire. Lorsque vous sauvegardez un snapshot dans un magasin d'objets externe, vous devez disposer d'une connexion au magasin d'objets qui permet des opérations de lecture/écriture.
+
+* link:task_data_protection_back_up_a_volume_snapshot_to_an_amazon_s3_object_store["Sauvegarder un snapshot de volume dans un magasin d'objets Amazon S3"]
+* link:task_data_protection_back_up_a_volume_snapshot_to_openstack_swift["Sauvegardez un snapshot de volume dans un magasin d'objets OpenStack Swift"]
+* link:task_data_protection_back_up_volume_to_solidfire["Sauvegarder un snapshot de volume sur un cluster SolidFire"]
+

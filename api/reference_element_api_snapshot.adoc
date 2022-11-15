@@ -1,0 +1,223 @@
+---
+permalink: api/reference_element_api_snapshot.html 
+sidebar: sidebar 
+keywords: object,objects,snapshot 
+summary: 'L"objet de snapshot contient des informations sur un snapshot créé pour un volume. Vous pouvez utiliser la méthode Listsnapshots API pour récupérer une liste d"informations de snapshot pour un volume ou pour tous les volumes. L"objet inclut des informations sur le snapshot actif, ainsi que sur chaque snapshot créé pour un volume.' 
+---
+= snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet de snapshot contient des informations sur un snapshot créé pour un volume. Vous pouvez utiliser le `ListSnapshots` Méthode API pour récupérer la liste des informations de snapshot pour un volume ou pour tous les volumes. L'objet inclut des informations sur le snapshot actif, ainsi que sur chaque snapshot créé pour un volume.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+
+
+
+ a| 
+somme de contrôle
+ a| 
+Une petite représentation des données dans le snapshot stocké. Cette somme de contrôle peut être utilisée ultérieurement pour comparer d'autres instantanés afin de détecter des erreurs dans les données.
+ a| 
+chaîne
+
+
+
+ a| 
+CREATETIME
+ a| 
+Heure au format UTC+0 à laquelle le snapshot a été créé.
+ a| 
+Chaîne de date ISO 8601
+
+
+
+ a| 
+EnableRemoteReplication
+ a| 
+Identifie si l'instantané est activé pour la réplication à distance.
+ a| 
+booléen
+
+
+
+ a| 
+ExpirationReason
+ a| 
+Indique comment l'expiration de l'instantané est définie. Valeurs possibles :
+
+* API : l'heure d'expiration est définie à l'aide de l'API.
+* Aucun : aucune heure d'expiration n'est définie.
+* Test : la durée d'expiration est définie pour les tests.
+* fifo : l'expiration se fait sur la base du premier entré, premier sorti.
+
+ a| 
+chaîne
+
+
+
+ a| 
+Heure d'expiration
+ a| 
+Heure à laquelle ce snapshot expirera et sera purgé du cluster.
+ a| 
+Chaîne de date ISO 8601
+
+
+
+ a| 
+ID groupe
+ a| 
+ID de groupe si l'instantané est membre d'un instantané de groupe.
+ a| 
+entier
+
+
+
+ a| 
+GroupsnapshotUUID
+ a| 
+Contient des informations sur chaque instantané du groupe. Chacun de ces membres aura un paramètre UUID pour l'UUID du snapshot.
+ a| 
+chaîne
+
+
+
+ a| 
+InstanceCreateTime
+ a| 
+Heure à laquelle le snapshot a été créé sur le cluster local.
+ a| 
+Chaîne de date ISO 8601
+
+
+
+ a| 
+InstanceSnapshotUUID
+ a| 
+ID universel unique de snapshot sur le cluster local. Cet ID n'est pas répliqué sur d'autres clusters.
+ a| 
+chaîne
+
+
+
+ a| 
+nom
+ a| 
+Nom unique attribué au snapshot. Si aucun nom n'est spécifié, le nom est l'horodatage au format UTC+0 de la création de l'instantané.
+ a| 
+chaîne
+
+
+
+ a| 
+RemoteStatats
+ a| 
+Matrice contenant l'identifiant universel et l'état de réplication de chaque snapshot distant sur le cluster cible, tel qu'il est visible depuis le cluster source.
+ a| 
+xref:reference_element_api_remoteclustersnapshotstatus.adoc[RemoteClusterSnapshotStatus] baie
+
+
+
+ a| 
+SnapMirrorLabel
+ a| 
+Étiquette utilisée par le logiciel SnapMirror pour spécifier la règle de conservation des snapshots sur les terminaux SnapMirror Si elle n'est pas définie, cette valeur est nulle.
+ a| 
+chaîne
+
+
+
+ a| 
+ID de snapshot
+ a| 
+ID unique d'un snapshot existant.
+ a| 
+chaîne
+
+
+
+ a| 
+SnapshotUUID
+ a| 
+ID universel unique d'un snapshot existant. Lorsque le Snapshot est répliqué sur les clusters, cet ID est répliqué avec celui-ci et il est utilisé pour identifier le Snapshot entre les clusters.
+ a| 
+chaîne
+
+
+
+ a| 
+état
+ a| 
+État actuel du snapshot. Valeurs possibles :
+
+* Inconnu : une erreur s'est produite lors de l'obtention de l'état du snapshot.
+* Préparation : ce snapshot est en cours de préparation et n'est pas encore accessible en écriture.
+* RemoteSyncing : cet instantané est répliqué à partir d'un cluster distant.
+* Terminé : ce snapshot a terminé la préparation ou la réplication et est maintenant utilisable.
+* Active : cet instantané est la branche active.
+* Clonage : ce snapshot est impliqué dans une opération CopyVolume.
+
+ a| 
+chaîne
+
+
+
+ a| 
+Taille totale
+ a| 
+Taille totale en octets du snapshot.
+ a| 
+entier
+
+
+
+ a| 
+ID virtualVolume
+ a| 
+ID du volume virtuel associé à ce snapshot.
+ a| 
+UUID
+
+
+
+ a| 
+ID de volume
+ a| 
+ID du volume à partir de auquel l'instantané a été créé.
+ a| 
+entier
+
+
+
+ a| 
+Nom du volume
+ a| 
+Nom du volume au moment de la création du snapshot.
+ a| 
+chaîne
+
+|===
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_listsnapshots.adoc[Listsnapshots]

@@ -1,0 +1,89 @@
+---
+permalink: api/reference_element_api_getloginbanner.html 
+sidebar: sidebar 
+keywords: terms,use,banner,get,getting,getloginbanner,login 
+summary: 'Vous pouvez utiliser la méthode GetLoginBanner pour obtenir la bannière Conditions d"utilisation actuellement active que les utilisateurs voient lorsqu"ils se connectent à l"interface Web d"Element.' 
+---
+= GetLoginBanner
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetLoginBanner` Méthode d'obtention de la bannière Conditions d'utilisation actuellement active que les utilisateurs voient lorsqu'ils se connectent à l'interface Web d'Element.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+bannière
+ a| 
+Texte actuel de la bannière Conditions d'utilisation. Cette valeur peut contenir du texte même lorsque la bannière est désactivée.
+ a| 
+chaîne
+
+
+
+ a| 
+activé
+ a| 
+Statut de la bannière Conditions d'utilisation. Valeurs possibles :
+
+* True : la bannière Conditions d'utilisation s'affiche lors de la connexion à l'interface Web.
+* FALSE : la bannière Conditions d'utilisation ne s'affiche pas lors de la connexion à l'interface Web.
+
+ a| 
+booléen
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 3411,
+  "method": "GetLoginBanner",
+  "params": {}
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 3411,
+  "result": {
+    "loginBanner": {
+      "banner": "Welcome to NetApp!",
+      "enabled": false
+    }
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+10.0

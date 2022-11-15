@@ -1,0 +1,126 @@
+---
+permalink: api/reference_element_api_adddrives.html 
+sidebar: sidebar 
+keywords: drives,adding,cluster,drive,add,adddrives 
+summary: 'Vous pouvez utiliser la méthode AddDrives pour ajouter un ou plusieurs lecteurs disponibles au cluster, ce qui permet aux lecteurs d"héberger une partie des données du cluster.' 
+---
+= AddDrives
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `AddDrives` méthode permettant d'ajouter un ou plusieurs disques disponibles au cluster, ce qui permet aux disques d'héberger une partie des données du cluster.
+
+Lorsque vous ajoutez un nœud de stockage au cluster ou que vous installez de nouveaux disques dans un nœud existant, les nouveaux disques sont marqués comme disponibles et doivent être ajoutés via AddDrives avant de pouvoir être utilisés. Utilisez le xref:reference_element_api_listdrives.adoc[Lecteurs de listes] méthode d'affichage des lecteurs disponibles pour l'ajout. Lorsque vous ajoutez un lecteur, le système détermine automatiquement le type de disque qu'il doit être.
+
+La méthode est asynchrone et renvoie dès le démarrage des processus de rééquilibrage des disques dans le cluster. Toutefois, le rééquilibrage peut prendre plus de temps pour les données du cluster à l'aide des nouveaux disques ajoutés. La procédure se poursuit même une fois l'appel de méthode AddDrives terminé. Vous pouvez utiliser le xref:reference_element_api_getasyncresult.adoc[GetAsyncResult] Méthode de requête de la méthode renvoyée EasycHandle. Une fois la méthode AddDrives renvoyée, vous pouvez utiliser xref:reference_element_api_listsyncjobs.adoc[ListSyncJobs] méthode pour voir la progression du rééquilibrage des données avec les nouveaux disques.
+
+
+NOTE: Lorsque vous ajoutez plusieurs lecteurs, il est plus efficace de les ajouter dans un seul appel de méthode AddDrives plutôt que de multiples méthodes individuelles avec un seul lecteur chacun. Cela réduit la quantité d'équilibrage des données nécessaire pour stabiliser la charge de stockage sur le cluster.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+disques
+ a| 
+Informations relatives à chaque disque à ajouter au cluster. Valeurs possibles :
+
+* ID de chaîne : ID du lecteur à ajouter (entier).
+* Type : type de lecteur à ajouter (chaîne). Les valeurs valides sont « coupe », « bloc » ou « volume ». Si omis, le système attribue le type correct.
+
+ a| 
+Baie d'objets JSON
+ a| 
+Aucune
+ a| 
+Oui (le type est facultatif)
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Asynchrone
+ a| 
+Valeur de poignée utilisée pour obtenir le résultat de l'opération.
+ a| 
+entier
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "method": "AddDrives",
+  "params": {
+    "drives": [
+      {
+        "driveID": 1,
+        "type": "slice"
+      },
+      {
+        "driveID": 2,
+        "type": "block"
+      },
+      {
+        "driveID": 3,
+        "type": "block"
+      }
+    ]
+  }
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result" : {
+    "asyncHandle": 1
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_getasyncresult.adoc[GetAsyncResult]
+* xref:reference_element_api_listdrives.adoc[Lecteurs de listes]
+* xref:reference_element_api_listsyncjobs.adoc[ListSyncJobs]
+

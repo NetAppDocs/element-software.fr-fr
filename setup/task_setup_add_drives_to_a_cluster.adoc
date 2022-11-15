@@ -1,0 +1,37 @@
+---
+permalink: setup/task_setup_add_drives_to_a_cluster.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Lorsque vous ajoutez un nœud au cluster ou que vous installez de nouveaux disques dans un nœud existant, les disques s"enregistrent automatiquement comme disponibles. Vous devez ajouter des disques au cluster à l"aide de l"interface utilisateur ou de l"API Element avant qu"ils ne puissent participer au cluster.' 
+---
+= Ajout de disques à un cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous ajoutez un nœud au cluster ou que vous installez de nouveaux disques dans un nœud existant, les disques s'enregistrent automatiquement comme disponibles. Vous devez ajouter des disques au cluster à l'aide de l'interface utilisateur ou de l'API Element avant qu'ils ne puissent participer au cluster.
+
+Les lecteurs ne sont pas affichés dans la liste lecteurs disponibles lorsque les conditions suivantes existent :
+
+* Les disques sont à l'état actif, Suppression, Effacement ou échec.
+* Le nœud dont le lecteur fait partie est en attente.
+
+
+.Étapes
+. Dans l'interface utilisateur Element, sélectionnez *Cluster* > *Drives*.
+. Cliquez sur *disponible* pour afficher la liste des lecteurs disponibles.
+. Effectuez l'une des opérations suivantes :
++
+** Pour ajouter des lecteurs individuels, cliquez sur l'icône *actions* du lecteur que vous souhaitez ajouter et cliquez sur *Ajouter*.
+** Pour ajouter plusieurs lecteurs, cochez les cases des lecteurs à ajouter, cliquez sur *actions groupées*, puis cliquez sur *Ajouter*.
++
+....
+== Find more information
+* https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+* https://docs.netapp.com/us-en/vcp/index.html[NetApp Element Plug-in for vCenter Server^]
+....
+
+
+

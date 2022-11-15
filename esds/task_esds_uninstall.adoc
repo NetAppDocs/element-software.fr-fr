@@ -1,0 +1,46 @@
+---
+permalink: esds/task_esds_uninstall.html 
+sidebar: sidebar 
+keywords: solidfire esds, uninstalling solidfire esds, ansible role 
+summary: 'Vous pouvez "réinitialiser" un noeud sur lequel vous avez installé SolidFire ESDS en supprimant SolidFire ESDS sur le noeud. Pour rétablir SolidFire ESDS sur le nœud, vous devez effectuer toutes les étapes d"installation.' 
+---
+= Désinstallez SolidFire ESDS sur le nœud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez *réinitialiser* un noeud sur lequel vous avez installé SolidFire ESDS en supprimant SolidFire ESDS sur le noeud. Pour rétablir SolidFire ESDS sur le nœud, vous devez effectuer toutes les étapes d'installation.
+
+
+NOTE: Vous pouvez utiliser le lien :https://github.com/NetApp-Automation/nar_solidfire_sds_uninstall[`nar_solidfire_sds_uninstall`^] le rôle Ansible fourni par NetApp pour effectuer l'opération. Pour supprimer manuellement SolidFire ESDS sur le nœud, reportez-vous aux étapes ci-dessous.
+
+.Étapes
+. Supprimez ces disques du cluster à l'aide de l'interface utilisateur Element ou du[`RemoveDrives`^] méthode API.
++
+Ainsi, le système est-il en mesure de migrer les données des disques du nœud vers d'autres disques du cluster. Le temps nécessaire à ce processus dépend de la quantité de données à migrer.
+
+. Supprimez ce nœud du cluster à l'aide de l'interface utilisateur Element ou de[`RemoveNodes`^] méthode API.
+. Utilisez SSH pour vous connecter au nœud qui est supprimé du cluster.
+. Supprimez SolidFire ESDS du nœud comme suit :
++
+[listing]
+----
+yum remove solidfire-element
+----
+. Supprimez les données persistantes du répertoire comme suit :
++
+[listing]
+----
+rm -rf /opt/sf
+----
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

@@ -1,0 +1,119 @@
+---
+permalink: api/reference_element_api_account.html 
+sidebar: sidebar 
+keywords: account,object,accounts 
+summary: 'L"objet compte contient des informations sur un compte. Cet objet inclut uniquement les informations « configurées » sur le compte, pas les informations d"exécution ou d"utilisation.' 
+---
+= compte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet compte contient des informations sur un compte. Cet objet inclut uniquement les informations « configurées » sur le compte, pas les informations d'exécution ou d'utilisation.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ID compte
+ a| 
+ID de compte unique pour le compte.
+ a| 
+entier
+
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+
+
+
+ a| 
+EnableChap
+ a| 
+Indique si les informations d'identification de compte CHAP peuvent être utilisées par un initiateur pour accéder aux volumes.
+ a| 
+booléen
+
+
+
+ a| 
+InitiatorSecret
+ a| 
+Le secret CHAP de l'initiateur.
+ a| 
+chaîne
+
+
+
+ a| 
+état
+ a| 
+Statut actuel du compte. Valeurs possibles :
+
+* Active : un compte actif.
+* Verrouillé : un compte verrouillé.
+* Supprimé : compte supprimé et purgé.
+
+ a| 
+chaîne
+
+
+
+ a| 
+StorageautoreID
+ a| 
+ID unique du conteneur de stockage de volume virtuel associé à ce compte.
+ a| 
+UUID
+
+
+
+ a| 
+TargetSecret
+ a| 
+Le secret CHAP de la cible.
+ a| 
+chaîne
+
+
+
+ a| 
+nom d'utilisateur
+ a| 
+Nom d'utilisateur du compte.
+ a| 
+chaîne
+
+
+
+ a| 
+volumes
+ a| 
+Liste des ID de volume des volumes appartenant à ce compte.
+ a| 
+tableau entier
+
+|===
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_addaccount.adoc[Compte adpAccount]
+* xref:reference_element_api_getaccountbyid.adoc[GetAccountByID]
+* xref:reference_element_api_getaccountbyname.adoc[GetAccountByName]
+* xref:reference_element_api_listaccounts.adoc[Comptes ListAccounts]
+

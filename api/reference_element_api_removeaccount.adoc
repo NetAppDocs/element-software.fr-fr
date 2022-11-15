@@ -1,0 +1,84 @@
+---
+permalink: api/reference_element_api_removeaccount.html 
+sidebar: sidebar 
+keywords: account,accounts,remove,removing,deleting,delete,purge,volume,volumes,removeaccount 
+summary: 'Vous pouvez utiliser la méthode RemoveAccount pour supprimer un compte existant. Vous devez supprimer et purger tous les volumes associés au compte à l"aide de DeleteVolume avant de pouvoir supprimer le compte. Si les volumes du compte sont toujours en attente de suppression, vous ne pouvez pas utiliser RemoveAccount pour supprimer le compte.' 
+---
+= Supprimer le compte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `RemoveAccount` méthode de suppression d'un compte existant. Vous devez supprimer et purger tous les volumes associés au compte à l'aide de `DeleteVolume` avant de pouvoir supprimer le compte. Si les volumes du compte sont toujours en attente de suppression, vous ne pouvez pas utiliser `RemoveAccount` pour supprimer le compte.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+ID compte
+ a| 
+L'ID du compte à supprimer.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode n'a pas de valeur de retour.
+
+
+
+== Exemple de demande
+
+Les demandes de cette méthode sont similaires à l'exemple suivant.
+
+[listing]
+----
+{
+   "method": "RemoveAccount",
+   "params": {
+     "accountID"  : 25
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+
+{
+ "id" : 1,
+ "result" : { }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_deletevolume.adoc[DeleteVolume]

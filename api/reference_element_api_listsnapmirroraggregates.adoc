@@ -1,0 +1,62 @@
+---
+permalink: api/reference_element_api_listsnapmirroraggregates.html 
+sidebar: sidebar 
+keywords: snapmirror,aggregate,aggregates,list,listing,listsnapmirroraggregates 
+summary: 'L"interface utilisateur Web du logiciel Element utilise la méthode ListSnapMirror orAggregate pour répertorier tous les agrégats SnapMirror disponibles sur le système ONTAP distant. Un agrégat décrit un ensemble de ressources de stockage physiques.' 
+---
+= AgrégeSnapMirror Listete
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'interface utilisateur Web du logiciel Element utilise le `ListSnapMirrorAggregates` Méthode permettant de lister tous les agrégats SnapMirror disponibles sur le système ONTAP distant. Un agrégat décrit un ensemble de ressources de stockage physiques.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+Renvoie uniquement les agrégats associés à l'ID de point de terminaison spécifié. Si aucun ID de terminal n'est fourni, le système répertorie les agrégats à partir de tous les terminaux SnapMirror connus.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+SnapMirrorAgrégates
+ a| 
+Une liste des agrégats disponibles sur le système de stockage ONTAP.
+ a| 
+xref:reference_element_api_snapmirroraggregate.adoc[SnapMirrorAgrégate] baie
+
+|===
+
+
+== Nouveau depuis la version
+
+10.1

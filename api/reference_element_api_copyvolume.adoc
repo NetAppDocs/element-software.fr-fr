@@ -1,0 +1,140 @@
+---
+permalink: api/reference_element_api_copyvolume.html 
+sidebar: sidebar 
+keywords: volume,volumes,CopyVolume,overwrite,overwriting,data 
+summary: 'Vous pouvez utiliser la méthode CopyVolume pour écraser le contenu des données d"un volume existant avec le contenu des données d"un autre volume \(ou snapshot\). Les attributs du volume de destination tels que IQN, les paramètres QoS, la taille, le compte et l"appartenance aux groupes d"accès de volume ne sont pas modifiés. Le volume de destination doit déjà exister et être de la même taille que le volume source.' 
+---
+= CopyVolume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `CopyVolume` méthode permettant d'écraser le contenu des données d'un volume existant avec le contenu des données d'un autre volume (ou snapshot). Les attributs du volume de destination tels que IQN, les paramètres QoS, la taille, le compte et l'appartenance aux groupes d'accès de volume ne sont pas modifiés. Le volume de destination doit déjà exister et être de la même taille que le volume source.
+
+Il est préférable que les clients déconnectent le volume de destination avant le début de l'opération. Si le volume de destination est modifié pendant l'opération, les modifications sont perdues. Cette opération peut prendre un temps variable. Vous pouvez utiliser le xref:reference_element_api_getasyncresult.adoc[GetAsyncResult] méthode permettant de déterminer une fois le processus terminé, et xref:reference_element_api_listsyncjobs.adoc[ListSyncJobs] pour voir la progression de la copie.
+
+
+
+== Paramètres
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+DstVolumeID
+ a| 
+VolumeID du volume à écraser.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+ID de volume
+ a| 
+ID Volumedu volume à lire.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+ID de snapshot
+ a| 
+ID du snapshot utilisé comme source du clone. Si aucun ID n'est fourni, le volume actif actuel est utilisé.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Asynchrone
+ a| 
+Valeur de poignée utilisée pour obtenir le résultat de l'opération.
+ a| 
+entier
+
+
+
+ a| 
+Identifiant cloneID
+ a| 
+CloneID du volume nouvellement cloné.
+ a| 
+entier
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "CopyVolume",
+   "params": {
+      "volumeID" : 3,
+      "dstVolumeID" : 2
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "asyncHandle": 9,
+    "cloneID": 5
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_getasyncresult.adoc[GetAsyncResult]
+* xref:reference_element_api_listsyncjobs.adoc[ListSyncJobs]
+

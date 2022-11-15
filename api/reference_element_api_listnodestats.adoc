@@ -1,0 +1,92 @@
+---
+permalink: api/reference_element_api_listnodestats.html 
+sidebar: sidebar 
+keywords: node,nodes,stats,list,listing,listnodestats 
+summary: 'Vous pouvez utiliser la méthode ListNodeStats pour afficher les mesures d"activité générales pour tous les nœuds de stockage d"un cluster de stockage.' 
+---
+= ListNodeStats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ListNodeStats` méthode d'affichage des mesures d'activité générales pour tous les nœuds de stockage d'un cluster de stockage.
+
+
+NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+Statistiques du nœud
+ a| 
+Informations d'activité du nœud de stockage.
+ a| 
+xref:reference_element_api_nodestats.adoc[Statistiques du nœud]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "ListNodeStats",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+     "nodeStats": {
+       "nodes": [
+         {
+         "cBytesIn": 46480366124,
+         "cBytesOut": 46601523187,
+         "cpu": 0,
+         "mBytesIn": 59934129,
+         "mBytesOut": 41620976,
+         "networkUtilizationCluster": 0,
+         "networkUtilizationStorage": 0,
+         "nodeID": 1,
+         "sBytesIn": 46480366124,
+         "sBytesOut": 46601523187,
+         "timestamp": 1895558254814,
+         "usedMemory": 31608135680
+         }
+       ]
+     }
+ }
+----
+
+
+== Nouveau depuis la version
+
+9.6

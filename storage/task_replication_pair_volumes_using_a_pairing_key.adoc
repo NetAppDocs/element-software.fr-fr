@@ -1,0 +1,74 @@
+---
+permalink: storage/task_replication_pair_volumes_using_a_pairing_key.html 
+sidebar: sidebar 
+keywords: volume pairings, pairing key, replication 
+summary: 'Si vous ne disposez pas d"informations d"identification administrateur de cluster pour un cluster distant, vous pouvez coupler un volume à un autre volume d"un cluster distant à l"aide d"une clé de couplage.' 
+---
+= Couplez des volumes à l'aide d'une clé de couplage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous ne disposez pas d'informations d'identification administrateur de cluster pour un cluster distant, vous pouvez coupler un volume à un autre volume d'un cluster distant à l'aide d'une clé de couplage.
+
+.Ce dont vous avez besoin, 8217;ll
+* Assurez-vous que les clusters contenant les volumes sont appariés.
+* Assurez-vous qu'il y a un volume sur le cluster distant à utiliser pour le couplage.
++
+
+NOTE: Vous pouvez affecter une source et une cible de réplication après le processus de couplage. Une source ou une cible de réplication peut être un volume dans une paire de volumes. Vous devez créer un volume cible qui ne contient aucune donnée et qui présente les caractéristiques exactes du volume source, comme la taille, la taille de bloc pour les volumes (512 octets ou 4 ko) et la configuration de la qualité de service. Si vous attribuez un volume existant comme cible de réplication, les données de ce volume sont écrasées. Le volume cible peut être supérieur ou égal au volume source, mais il ne peut pas être plus petit.
+
+
+
+.Étapes
+. Sélectionnez *Management* > *volumes*.
+. Cliquez sur l'icône *actions* pour le volume que vous souhaitez coupler.
+. Cliquez sur *paire*.
+. Dans la boîte de dialogue *pair Volume*, sélectionnez *Start couplage*.
+. Sélectionnez *Je ne* pas pour indiquer que vous n'avez pas accès au cluster distant.
+. Sélectionnez un *mode de réplication* dans la liste :
++
+** *Temps réel (asynchrone)* : les écritures sont reconnues au client après leur validation sur le cluster source.
+** *Temps réel (synchrone)* : les écritures sont reconnues au client après leur validation sur les clusters source et cible.
+** *Snapshots uniquement* : seuls les snapshots créés sur le cluster source sont répliqués. Les écritures actives du volume source ne sont pas répliquées.
+
+
+. Cliquez sur *générer clé*.
++
+
+NOTE: Cette action génère une clé de texte pour le couplage et crée une paire de volumes non configurés sur le cluster local. Si vous n'avez pas terminé la procédure, vous devrez supprimer manuellement la paire de volumes.
+
+. Copiez la clé de couplage dans le presse-papiers de votre ordinateur.
+. Mettez la clé de couplage à la disposition de l'administrateur du cluster sur le site distant du cluster.
++
+
+NOTE: La clé de couplage de volume doit être traitée de manière sécurisée et ne pas être utilisée de manière à permettre un accès accidentel ou non sécurisé.
+
++
+
+IMPORTANT: Ne modifiez aucun des caractères de la clé de couplage. La clé devient non valide si elle est modifiée.
+
+. Dans l'interface utilisateur de l'élément de cluster distant, sélectionnez *Management* > *volumes*.
+. Cliquez sur l'icône actions du volume à coupler.
+. Cliquez sur *paire*.
+. Dans la boîte de dialogue *pair Volume*, sélectionnez *Complete couplage*.
+. Collez la clé de couplage de l'autre groupe dans la case *clé de couplage*.
+. Cliquez sur *Terminer le couplage*.
++
+Après avoir confirmé le couplage, les deux clusters commencent à connecter les volumes pour le couplage. Pendant le processus de couplage, vous pouvez afficher les messages dans la colonne *Volume Status* de la fenêtre *Volume paires*. La paire de volumes s'affiche `PausedMisconfigured` jusqu'à ce que la source et la cible de la paire de volumes soient affectées.
+
++
+Une fois le couplage terminé, il est recommandé d'actualiser la table volumes pour supprimer l'option *pair* de la liste *actions* du volume apparié. Si vous n'actualisez pas la table, l'option *paire* reste disponible pour la sélection. Si vous sélectionnez à nouveau l'option *paire*, un nouvel onglet s'ouvre et comme le volume est déjà couplé, le système signale un `StartVolumePairing Failed: xVolumeAlreadyPaired` Message d'erreur dans la fenêtre *pair Volume* de la page de l'interface utilisateur de l'élément.
+
+
+
+
+
+== Trouvez plus d'informations
+
+* xref:reference_replication_volume_pairing_messages.adoc[Messages de couplage de volume]
+* xref:reference_replication_volume_pairing_warnings.adoc[Avertissements de couplage de volume]
+* xref:task_replication_assign_replication_source_and_target_to_paired_volumes.adoc[Attribuez une source et une cible de réplication aux volumes couplés]
+

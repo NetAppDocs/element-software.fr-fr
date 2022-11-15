@@ -1,0 +1,125 @@
+---
+permalink: api/reference_element_api_listclusteradmins.html 
+sidebar: sidebar 
+keywords: admin,admins,cluster,list,listing,listclusteradmins 
+summary: Vous pouvez utiliser la méthode ListClusterAdmins pour renvoyer la liste de tous les administrateurs de cluster pour le cluster. 
+---
+= ListClusterAdmins
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ListClusterAdmins` méthode permettant de renvoyer la liste de tous les administrateurs de cluster pour le cluster.
+
+Il peut y avoir plusieurs comptes d'administrateur de cluster avec différents niveaux d'autorisations. Il ne peut y avoir qu'un seul administrateur de cluster principal dans le système. L'administrateur principal du cluster est l'administrateur qui a été créé au moment de la création du cluster. Les administrateurs LDAP peuvent également être créés lors de la configuration d'un système LDAP sur le cluster.
+
+
+
+== Paramètres
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+ShowHidden
+ a| 
+Affiche les utilisateurs cachés de l'administrateur de cluster, tels que SNMP admin.
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+ClusterAdmins
+ a| 
+Informations sur tous les administrateurs LDAP et de cluster existant pour un cluster.
+ a| 
+xref:reference_element_api_clusteradmin.adoc[ClusterAdmin] baie
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "ListClusterAdmins",
+   "params": {},
+    "showHidden": true
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+"id":1,
+"result":{
+  "clusterAdmins":[
+     {
+       "access":[
+           "administrator"
+       ],
+       "attributes":null,
+       "authMethod":"Cluster",
+       "clusterAdminID":1,
+       "username":"admin"
+   },
+   {
+       "access":[
+           "read",
+           "administrator"
+       ],
+       "attributes":{
+       },
+       "authMethod":"Ldap",
+       "clusterAdminID":7,
+       "username":"john.smith"
+   },
+   {
+       "access":[
+           "read",
+           "administrator"
+       ],
+       "attributes":{},
+       "authMethod":"Ldap",
+       "clusterAdminID":6,
+       "username":"cn=admin1 jones,ou=ptusers,c=prodtest,dc=solidfire,dc=net"
+       }
+     ]
+   }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

@@ -1,0 +1,90 @@
+---
+permalink: api/reference_element_api_startclusterpairing.html 
+sidebar: sidebar 
+keywords: cluster,pair,pairing,start,starting,startclusterpairing 
+summary: 'Vous pouvez utiliser la méthode de couplage StartClusterPairing pour créer une clé codée à partir d"un cluster qui est utilisé pour se coupler à un autre cluster. La clé créée à partir de cette méthode API est utilisée dans la méthode CompleteClusterPairing pour établir un couplage de cluster. Vous pouvez associer un cluster à quatre autres clusters au maximum.' 
+---
+= Couplage StartClusterPairing
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `StartClusterPairing` méthode de création d'une clé codée à partir d'un cluster utilisé pour être couplé à un autre cluster. La clé créée à partir de cette méthode API est utilisée dans le `CompleteClusterPairing` méthode d'établissement d'un couplage de cluster. Vous pouvez associer un cluster à quatre autres clusters au maximum.
+
+
+
+== Paramètre
+
+Cette méthode n'a pas de paramètre d'entrée.
+
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ClusterPairingKey
+ a| 
+Chaîne de caractères utilisée par le xref:reference_element_api_completeclusterpairing.adoc[Couplage CompleteClusterPairing] Méthode API.
+ a| 
+chaîne
+
+
+
+ a| 
+ClusterPairID
+ a| 
+Identificateur unique de la paire de clusters.
+ a| 
+entier
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "StartClusterPairing",
+   "params": {
+      },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+     "clusterPairID": 1,
+     "clusterPairingKey": "7b22636c7573746572506169724944223a312c22636c75737465725061697255554944223a2231636561313336322d346338662d343631612d626537322d373435363661393533643266222c22636c7573746572556e697175654944223a2278736d36222c226d766970223a223139322e3136382e3133392e313232222c226e616d65223a224175746f54657374322d63307552222c2270617373776f7264223a22695e59686f20492d64774d7d4c67614b222c22727063436f6e6e656374696f6e4944223a3931333134323634392c22757365726e616d65223a225f5f53465f706169725f50597a796647704c7246564432444a42227d"
+   }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_completeclusterpairing.adoc[Couplage CompleteClusterPairing]

@@ -1,0 +1,299 @@
+---
+permalink: api/reference_element_api_clonevolume.html 
+sidebar: sidebar 
+keywords: volumes,volume,cloning,clone,CloneVolume 
+summary: 'Vous pouvez utiliser la méthode CloneVolume pour créer une copie d"un volume. Cette méthode est asynchrone et peut prendre un temps variable.' 
+---
+= Volume en CloneVolume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `CloneVolume` méthode de création d'une copie d'un volume. Cette méthode est asynchrone et peut prendre un temps variable.
+
+Le processus de clonage commence immédiatement lorsque vous faites le `CloneVolume` La requête et est représentative de l'état du volume lorsque la méthode d'API est émise. Vous pouvez utiliser le xref:reference_element_api_getasyncresult.adoc[GetAsyncResult] méthode pour déterminer une fois le processus de clonage terminé et le nouveau volume disponible pour les connexions. Vous pouvez utiliser xref:reference_element_api_listsyncjobs.adoc[ListSyncJobs] pour afficher la progression de la création du clone. Les attributs initiaux et les paramètres de qualité de service du volume sont hérités du volume cloné. Vous pouvez modifier ces paramètres avec xref:reference_element_api_modifyvolume.adoc[Modification du volume].
+
+
+NOTE: Les volumes clonés n'héritent pas de l'appartenance des groupes d'accès aux volumes à partir du volume source.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+l'accès
+ a| 
+Accès autorisé pour le nouveau volume. Si aucune valeur n'est spécifiée, la valeur d'accès ne change pas. Valeurs possibles :
+
+* `readOnly`: (Facultatif) seules les opérations de lecture sont autorisées.
+* `readWrite`: (Facultatif) les lectures et écritures sont autorisées.
+* `locked`: (Facultatif) aucune lecture ou écriture n'est autorisée. Si ce n'est pas spécifié, la valeur d'accès du volume cloné est utilisée.
+* `replicationTarget`: (Facultatif) identifier un volume comme volume cible pour un ensemble de volumes appariés. Si le volume n'est pas couplé, l'état d'accès est verrouillé.
+
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+enable512e
+ a| 
+Spécifie si le nouveau volume doit utiliser l'émulation de secteur de 512 octets. Si ce n'est pas spécifié, le réglage du volume en cours de clonage est utilisé.
+ a| 
+booléen
+ a| 
+Réglage du volume d'origine
+ a| 
+Non
+
+
+
+ a| 
+EnableSnapMirror orReplication
+ a| 
+Détermine si le volume peut être utilisé pour la réplication avec les terminaux SnapMirror. Valeurs possibles :
+
+* vrai
+* faux
+
+ a| 
+booléen
+ a| 
+faux
+ a| 
+Non
+
+
+
+ a| 
+nom
+ a| 
+Nom du nouveau volume cloné ; doit comporter entre 1 et 64 caractères.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+NewAccountID
+ a| 
+ID compte pour le propriétaire du nouveau volume. S'il n'est pas spécifié, l'ID comptable du propriétaire du volume en cours de clonage est utilisé.
+ a| 
+entier
+ a| 
+ID comptable du propriétaire du volume d'origine
+ a| 
+Non
+
+
+
+ a| 
+Nouvelle taille
+ a| 
+Nouvelle taille du volume, en octets. Peut être supérieure ou inférieure à la taille du volume cloné. Si ce n'est pas le cas, la taille du volume n'est pas modifiée. La taille est arrondie à 1 Mo le plus proche.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+ID de snapshot
+ a| 
+ID du snapshot utilisé comme source du clone. Si aucun ID n'est fourni, le volume actif actuel est utilisé.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+ID de volume
+ a| 
+VolumeID du volume à cloner.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Asynchrone
+ a| 
+Valeur de poignée utilisée pour obtenir le résultat de l'opération.
+ a| 
+entier
+
+
+
+ a| 
+Identifiant cloneID
+ a| 
+ID de cloneID pour le volume récemment cloné.
+ a| 
+entier
+
+
+
+ a| 
+d'adoption
+ a| 
+Valeurs de courbe QoS appliquées au clone.
+ a| 
+Objet JSON
+
+
+
+ a| 
+volumétrie
+ a| 
+Objet contenant des informations sur le nouveau volume cloné
+ a| 
+xref:reference_element_api_volume.adoc[volumétrie]
+
+
+
+ a| 
+ID de volume
+ a| 
+VolumeID du nouveau volume cloné.
+ a| 
+entier
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "CloneVolume",
+   "params": {
+      "volumeID" : 5,
+      "name"  : "mysqldata-snapshot1",
+      "access" : "readOnly"
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+      "asyncHandle": 42,
+      "cloneID": 37,
+      "volume": {
+          "access": "readOnly",
+          "accountID": 1,
+          "attributes": {},
+          "blockSize": 4096,
+          "createTime": "2016-03-31T22:26:03Z",
+          "deleteTime": "",
+          "enable512e": true,
+          "iqn": "iqn.2010-01.com.solidfire:jyay.mysqldata-snapshot1.680",
+          "name": "mysqldata-snapshot1",
+          "purgeTime": "",
+          "qos": {
+              "burstIOPS": 100,
+              "burstTime": 60,
+              "curve": {
+                  "4096": 100,
+                  "8192": 160,
+                  "16384": 270,
+                  "32768": 500,
+                  "65536": 1000,
+                  "131072": 1950,
+                  "262144": 3900,
+                  "524288": 7600,
+                  "1048576": 15000
+              },
+              "maxIOPS": 100,
+              "minIOPS": 50
+          },
+          "scsiEUIDeviceID": "6a796179000002a8f47acc0100000000",
+          "scsiNAADeviceID": "6f47acc1000000006a796179000002a8",
+          "sliceCount": 0,
+          "status": "init",
+          "totalSize": 1000341504,
+          "virtualVolumeID": null,
+          "volumeAccessGroups": [],
+          "volumeID": 680,
+          "volumePairs": []
+      },
+      "volumeID": 680
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_getasyncresult.adoc[GetAsyncResult]
+* xref:reference_element_api_listsyncjobs.adoc[ListSyncJobs]
+* xref:reference_element_api_modifyvolume.adoc[Modification du volume]
+

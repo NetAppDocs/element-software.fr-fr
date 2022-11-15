@@ -1,0 +1,42 @@
+---
+permalink: api/reference_element_api_snapmirrorpolicyrule.html 
+sidebar: sidebar 
+keywords: object,objects,snapMirrorPolicyRule 
+summary: 'L"objet MirrorsnapvaultRule contient des informations sur les règles d"une politique SnapMirror.' 
+---
+= SnapMirrorPolicyRule
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet MirrorsnapvaultRule contient des informations sur les règles d'une politique SnapMirror.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+SnapMirrorLabel
+ a| 
+Étiquette de copie Snapshot, utilisée pour la sélection de copie Snapshot dans les relations de protection étendue des données.
+ a| 
+chaîne
+
+
+
+ a| 
+Nombre de keepCount
+ a| 
+Spécifie le nombre maximal de copies snapshot conservées sur le volume de destination SnapMirror pour une règle.
+ a| 
+entier
+
+|===

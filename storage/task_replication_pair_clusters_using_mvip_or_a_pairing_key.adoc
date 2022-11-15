@@ -1,0 +1,30 @@
+---
+permalink: storage/task_replication_pair_clusters_using_mvip_or_a_pairing_key.html 
+sidebar: sidebar 
+keywords: pair cluster, mvip, pairing key, cluster pairing 
+summary: 'Vous pouvez coupler un cluster source et cible à l"aide du MVIP du cluster cible si un administrateur de cluster a accès aux deux clusters. Si l"accès à l"administrateur de cluster n"est disponible que sur un seul cluster d"une paire de clusters, une clé de couplage peut être utilisée sur le cluster cible pour terminer le couplage du cluster.' 
+---
+= Couplez des clusters à l'aide de MVIP ou d'une clé de couplage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez coupler un cluster source et cible à l'aide du MVIP du cluster cible si un administrateur de cluster a accès aux deux clusters. Si l'accès à l'administrateur de cluster n'est disponible que sur un seul cluster d'une paire de clusters, une clé de couplage peut être utilisée sur le cluster cible pour terminer le couplage du cluster.
+
+. Sélectionnez l'une des méthodes suivantes pour coupler les clusters :
++
+** Coupler les clusters à l'aide de MVIP : utilisez cette méthode si l'administrateur de cluster a accès aux deux clusters. Cette méthode utilise le MVIP du cluster distant pour coupler deux clusters.
+** Couplez des clusters à l'aide d'une clé de couplage : utilisez cette méthode si l'administrateur de cluster n'a accès qu'à un seul cluster. Cette méthode génère une clé de couplage qui peut être utilisée sur le cluster cible pour terminer le couplage du cluster.
+
+
+
+
+
+
+== Trouvez plus d'informations
+
+* xref:task_replication_pair_cluster_using_mvip.adoc[Couplez des clusters à l'aide de MVIP]
+* xref:task_replication_pair_cluster_using_pairing_key.adoc[Couplez des clusters à l'aide d'une clé de couplage]
+

@@ -1,0 +1,21 @@
+---
+permalink: storage/task_data_manage_vol_access_group_delete.html 
+sidebar: sidebar 
+keywords: access group, delete 
+summary: 'Vous pouvez supprimer un groupe d"accès lorsqu"il n"est plus nécessaire. Il n"est pas nécessaire de supprimer les ID d"initiateur et de volume du groupe d"accès au volume avant de supprimer ce groupe. Après avoir supprimé le groupe d"accès, l"accès de groupe aux volumes est interrompu.' 
+---
+= Supprimer un groupe d'accès
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer un groupe d'accès lorsqu'il n'est plus nécessaire. Il n'est pas nécessaire de supprimer les ID d'initiateur et de volume du groupe d'accès au volume avant de supprimer ce groupe. Après avoir supprimé le groupe d'accès, l'accès de groupe aux volumes est interrompu.
+
+. Cliquez sur *Management* > *Access Groups*.
+. Cliquez sur l'icône *actions* du groupe d'accès à supprimer.
+. Dans le menu qui s'affiche, cliquez sur *Supprimer*.
+. Pour supprimer également les initiateurs associés à ce groupe d'accès, cochez la case *Supprimer les initiateurs dans ce groupe d'accès*.
+. Confirmez l'action.
+

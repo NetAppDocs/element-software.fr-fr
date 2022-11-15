@@ -1,0 +1,117 @@
+---
+permalink: api/reference_element_api_getclustercapacity.html 
+sidebar: sidebar 
+keywords: cluster,capacity,getting,get,measurements,measure,deduplication,GetClusterCapacity 
+summary: 'Vous pouvez utiliser GetClusterCapacity pour renvoyer des mesures de capacité élevées pour l"intégralité d"un cluster de stockage. Cette méthode renvoie les champs que vous pouvez utiliser pour calculer les taux d"efficacité affichés dans l"interface utilisateur Web d"Element. Vous pouvez utiliser les calculs relatifs à l"efficacité dans des scripts pour renvoyer les taux d"efficacité relatifs au provisionnement fin, à la déduplication, à la compression et à l"efficacité globale.' 
+---
+= GetClusterCapacity
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetClusterCapacity` renvoyer des mesures de capacité générales pour l'intégralité d'un cluster de stockage. Cette méthode renvoie les champs que vous pouvez utiliser pour calculer les taux d'efficacité affichés dans l'interface utilisateur Web d'Element. Vous pouvez utiliser les calculs relatifs à l'efficacité dans des scripts pour renvoyer les taux d'efficacité relatifs au provisionnement fin, à la déduplication, à la compression et à l'efficacité globale.
+
+
+
+== Calculs de l'efficacité
+
+Utilisez les équations suivantes pour calculer le provisionnement fin, la déduplication et la compression. Ces équations s'appliquent à l'élément 8.2 et ultérieur.
+
+* ThinprovisionnoningFactor = (non ZeroBylocks + zeroBolocks) / non ZeroBylocks
+* Facteur de déduplicationfacteur = (nonZeroBLocks + snapshotNonZeroBLocks) / uniqueBLocks
+* Facteur de compression = (uniqueBLocks * 4096) / (uniqueBlocksUsedSpace * 0.93)
+
+
+
+
+== Calcul du taux d'efficacité global
+
+Utilisez l'équation suivante pour calculer l'efficacité globale du cluster à l'aide des résultats des calculs relatifs à l'efficacité du provisionnement fin, de la déduplication et de la compression.
+
+* EfficientFactor = thinoningFactor * deDuplicLa facteur de compressibilité *
+
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ClusterCapacity
+ a| 
+Mesures de la capacité du cluster de stockage.
+ a| 
+xref:reference_element_api_clustercapacity.adoc[ClusterCapacity]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "GetClusterCapacity",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "clusterCapacity": {
+      "activeBlockSpace": 236015557096,
+      "activeSessions": 20,
+      "averageIOPS": 0,
+      "clusterRecentIOSize": 0,
+      "currentIOPS": 0,
+      "maxIOPS": 150000,
+      "maxOverProvisionableSpace": 259189767127040,
+      "maxProvisionedSpace": 51837953425408,
+      "maxUsedMetadataSpace": 404984011161,
+      "maxUsedSpace": 12002762096640,
+      "nonZeroBlocks": 310080350,
+      "peakActiveSessions": 20,
+      "peakIOPS": 0,
+      "provisionedSpace": 1357931085824,
+      "snapshotNonZeroBlocks": 0,
+      "timestamp": "2016-10-17T21:24:36Z",
+      "totalOps": 1027407650,
+      "uniqueBlocks": 108180156,
+      "uniqueBlocksUsedSpace": 244572686901,
+      "usedMetadataSpace": 8745762816,
+      "usedMetadataSpaceInSnapshots": 8745762816,
+      "usedSpace": 244572686901,
+      "zeroBlocks": 352971938
+    }
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

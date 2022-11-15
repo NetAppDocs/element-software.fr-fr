@@ -1,0 +1,243 @@
+---
+permalink: api/reference_element_api_snapmirrorrelationship.html 
+sidebar: sidebar 
+keywords: object,objects,snapMirrorRelationship 
+summary: 'L"objet MirrorsnapRelationship contient des informations sur la relation SnapMirror entre un volume Element et un volume ONTAP.' 
+---
+= SnapMirrorRelationship
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet MirrorsnapRelationship contient des informations sur la relation SnapMirror entre un volume Element et un volume ONTAP.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+ID du système ONTAP de destination.
+ a| 
+entier
+
+
+
+ a| 
+SnapMirrorRelationshipID
+ a| 
+L'identifiant unique de chaque objet snapMirrorRelationship d'une baie tel qu'il serait renvoyé dans ListeSnapMirror orRelationships. Cet UUID est créé et renvoyé par le système ONTAP.
+ a| 
+chaîne
+
+
+
+ a| 
+Volume source
+ a| 
+Objet décrivant le volume source.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeInfo]
+
+
+
+ a| 
+Volume desestinationVolume
+ a| 
+Objet décrivant le volume de destination
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeInfo]
+
+
+
+ a| 
+ActuelMaxTransferRate
+ a| 
+Taux de transfert maximal actuel entre les volumes source et de destination, en kilo-octets par seconde.
+ a| 
+entier
+
+
+
+ a| 
+Santé
+ a| 
+Indique si la relation est saine ou non. Valeurs possibles :
+
+* Vrai : la relation est saine.
+* Faux : la relation n'est pas saine. Cela peut être dû à l'échec ou à l'abandon d'une mise à jour manuelle ou programmée ou à la date de la dernière mise à jour programmée.
+
+ a| 
+booléen
+
+
+
+ a| 
+durée du lagtime
+ a| 
+Temps en secondes pour lequel les données du volume de destination sont en retard par rapport aux données du volume source.
+ a| 
+entier
+
+
+
+ a| 
+LastTransferDuration
+ a| 
+Durée en secondes pendant laquelle le dernier transfert a été effectué.
+ a| 
+entier
+
+
+
+ a| 
+LastTransferError
+ a| 
+Un message décrivant la cause de l'échec du dernier transfert.
+ a| 
+chaîne
+
+
+
+ a| 
+LastTransferSize
+ a| 
+Nombre total d'octets transférés au cours du dernier transfert.
+ a| 
+entier
+
+
+
+ a| 
+LastTransferEndTimestamp
+ a| 
+Horodatage de la fin du dernier transfert.
+ a| 
+Chaîne de date ISO 8601
+
+
+
+ a| 
+LastTransferType
+ a| 
+Type du transfert précédent dans la relation.
+ a| 
+chaîne
+
+
+
+ a| 
+Taux de transfert maximal
+ a| 
+Spécifie le taux de transfert de données maximal entre les volumes en kilo-octets par seconde. La valeur par défaut, 0, est illimitée et permet à la relation SnapMirror d'exploiter pleinement la bande passante réseau disponible.
+ a| 
+entier
+
+
+
+ a| 
+MirrorState
+ a| 
+État en miroir de la relation SnapMirror. Valeurs possibles :
+
+* Non initialisé : le volume de destination n'a pas été initialisé.
+* Snapmiroité : le volume de destination a été initialisé et prêt à recevoir les mises à jour SnapMirror.
+* Broken-off : le volume de destination est en lecture/écriture et des snapshots sont présents.
+
+ a| 
+chaîne
+
+
+
+ a| 
+NewestSnapshot
+ a| 
+Nom de la copie Snapshot la plus récente sur le volume de destination.
+ a| 
+chaîne
+
+
+
+ a| 
+Nom de la police
+ a| 
+Spécifie le nom de la règle ONTAP SnapMirror pour la relation. Une liste des politiques disponibles peut être récupérée à l'aide des ListorPolicies SnapMirror. Les valeurs d'exemple sont "irritorLatest" et "irritorAndVault".
+ a| 
+chaîne
+
+
+
+ a| 
+Type de politique
+ a| 
+Type de la règle SnapMirror ONTAP pour la relation. Voir les politiques de ListorPolicies SnapMirror. Voici quelques exemples : « async_mirror » ou « mirror_vault ».
+ a| 
+chaîne
+
+
+
+ a| 
+RelationshipProgess
+ a| 
+Nombre total d'octets traités jusqu'à présent pour l'activité actuelle de la relation comme retourné dans l'état de la relation. Ce paramètre est défini uniquement lorsque le membre "relationshipStatus" indique qu'une activité est en cours.
+ a| 
+entier
+
+
+
+ a| 
+RelationshipStatus
+ a| 
+État de la relation SnapMirror. Valeurs possibles :
+
+* inactif
+* transfert
+* vérification
+* mise au repos
+* suspendu
+* en file d'attente
+* préparation
+* finalisation
+* abandon
+* une rupture
+
+ a| 
+chaîne
+
+
+
+ a| 
+Type relationarpType
+ a| 
+Le type de la relation SnapMirror. Sur les clusters de stockage exécutant le logiciel Element, cette valeur est toujours « Extended_Data_protection ».
+ a| 
+chaîne
+
+
+
+ a| 
+ScheduleName
+ a| 
+Nom de la planification cron pré-existante sur le système ONTAP utilisé pour mettre à jour la relation SnapMirror. Une liste des planifications disponibles peut être récupérée à l'aide de ListorSchedules SnapMirror.
+ a| 
+chaîne
+
+
+
+ a| 
+UnhealthyReason
+ a| 
+La raison pour laquelle la relation n'est pas saine.
+ a| 
+chaîne
+
+|===

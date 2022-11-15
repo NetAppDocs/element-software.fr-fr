@@ -1,0 +1,83 @@
+---
+permalink: concepts/concept_intro_clusters.html 
+sidebar: sidebar 
+keywords: element, solidfire, cluster, what is, authoritative  cluster, rule of thirds, stranded capacity, storage efficiency, storage cluster quorum 
+summary: 'Un cluster est le moyeu d"un système de stockage SolidFire et il est composé d"un ensemble de nœuds. Pour réaliser les fonctionnalités d"efficacité du stockage SolidFire, vous devez disposer d"au moins quatre nœuds dans un cluster. Un cluster apparaît sur le réseau comme un seul groupe logique, qui est ensuite accessible en tant que stockage bloc.' 
+---
+= Clusters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un cluster est le moyeu d'un système de stockage SolidFire et il est composé d'un ensemble de nœuds. Pour réaliser les fonctionnalités d'efficacité du stockage SolidFire, vous devez disposer d'au moins quatre nœuds dans un cluster. Un cluster apparaît sur le réseau comme un seul groupe logique, qui est ensuite accessible en tant que stockage bloc.
+
+La création d'un nouveau cluster initialise un nœud en tant que propriétaire des communications pour un cluster et établit des communications réseau pour chaque nœud du cluster. Ce processus n'est effectué qu'une seule fois pour chaque nouveau cluster. La création d'un cluster peut s'effectuer à l'aide de l'interface utilisateur Element ou de l'API.
+
+Vous pouvez faire évoluer horizontalement un cluster en ajoutant des nœuds supplémentaires. Lorsque vous ajoutez un nouveau nœud, aucune interruption de service n'est constatée, et le cluster utilise automatiquement les performances et la capacité du nouveau nœud.
+
+Les administrateurs et les hôtes peuvent accéder au cluster à l'aide d'adresses IP virtuelles. Tout nœud du cluster peut héberger les adresses IP virtuelles. L'adresse IP virtuelle de gestion (MVIP) permet la gestion des clusters via une connexion 1 GbE, tandis que l'adresse IP virtuelle de stockage (SVIP) permet l'accès de l'hôte au stockage via une connexion 10 GbE. Ces adresses IP virtuelles permettent des connexions cohérentes, quelle que soit la taille ou la composition d'un cluster SolidFire. Si un nœud hébergeant une adresse IP virtuelle échoue, un autre nœud du cluster commence à héberger l'adresse IP virtuelle.
+
+
+NOTE: À partir de la version 11.0 de l'élément, les nœuds peuvent être configurés avec IPv4, IPv6 ou les deux adresses pour leur réseau de gestion. Cela s'applique à la fois aux nœuds de stockage et aux nœuds de gestion, à l'exception du nœud de gestion 11.3 et versions ultérieures qui ne prennent pas en charge IPv6. Lors de la création d'un cluster, seule une seule adresse IPv4 ou IPv6 peut être utilisée pour le MVIP et le type d'adresse correspondant doit être configuré sur tous les nœuds.
+
+.Plus d'informations sur les clusters
+*  storage clusters
+*  of thirds
+*  capacity
+*  efficiency
+*  cluster quorum
+
+
+
+
+== Clusters de stockage faisant autorité
+
+Le cluster de stockage faisant autorité est le cluster de stockage que NetApp Hybrid Cloud Control utilise pour authentifier les utilisateurs.
+
+Si votre nœud de gestion ne dispose que d'un seul cluster de stockage, il fait autorité. Si votre nœud de gestion dispose de deux ou plusieurs clusters de stockage, un de ces clusters est désigné comme cluster qui fait autorité, et seuls les utilisateurs de ce cluster peuvent se connecter au contrôle de cloud hybride NetApp. Pour déterminer le cluster faisant autorité, vous pouvez utiliser le `GET /mnode/about` API. Dans la réponse, l'adresse IP dans `token_url` Champ est l'adresse IP virtuelle de gestion (MVIP) du cluster de stockage faisant autorité. Si vous tentez de vous connecter à NetApp Hybrid Cloud Control en tant qu'utilisateur qui ne se trouve pas sur le cluster qui fait autorité, la tentative de connexion échoue.
+
+De nombreuses fonctionnalités NetApp Hybrid Cloud Control sont conçues pour fonctionner avec plusieurs clusters de stockage, mais l'authentification et l'autorisation disposent de limites. L'authentification et l'autorisation sont limités par le fait que l'utilisateur du cluster qui fait autorité peut exécuter des actions sur d'autres clusters liés à NetApp Hybrid Cloud Control, même s'ils ne sont pas un utilisateur sur les autres clusters de stockage.
+
+Avant d'administrer plusieurs clusters de stockage, veillez à ce que les utilisateurs définis sur les clusters qui font autorité soient définis sur tous les autres clusters de stockage avec les mêmes autorisations. Vous pouvez gérer les utilisateurs à partir de link:../storage/concept_system_manage_manage_cluster_administrator_users.html["Interface utilisateur du logiciel Element"].
+
+Voir link:../mnode/task_mnode_manage_storage_cluster_assets.html["créer et gérer les ressources du cluster de stockage"] pour plus d'informations sur l'utilisation des ressources du cluster de stockage du nœud de gestion.
+
+
+
+== Règle des tiers
+
+Lorsque vous combinez des types de nœuds de stockage dans un cluster de stockage NetApp SolidFire, aucun nœud de stockage ne peut contenir plus de 33 % de la capacité totale du cluster de stockage.
+
+
+
+== La capacité inutilisée
+
+Si un nouveau nœud ajouté augmente la capacité totale du cluster de plus de 50 %, une partie de cette capacité devient inutilisable (« bloqué »), afin de lui conformer à la règle de capacité. Ce qui reste le cas jusqu'à ce que de la capacité de stockage supplémentaire soit ajoutée. Si un nœud très volumineux est ajouté qui obéit également à la règle de capacité, le nœud précédemment bloqué ne sera plus bloqué, tandis que le nouveau nœud ajouté est bloqué. La capacité doit toujours être ajoutée par paires pour éviter ce problème. Lorsqu'un nœud est bloqué, une défaillance de cluster appropriée est déclenchée.
+
+
+
+== Efficacité du stockage
+
+Les clusters de stockage NetApp SolidFire utilisent la déduplication, la compression et le provisionnement fin pour réduire la quantité de stockage physique nécessaire au stockage d'un volume.
+
+* *Compression*
++
+La compression réduit la quantité de stockage physique nécessaire pour un volume en combinant des blocs de données dans des groupes de compression, chacun étant stocké sous forme de bloc unique.
+
+* *Déduplication*
++
+La déduplication réduit le volume de stockage physique requis pour un volume en abandonnant des blocs de données dupliqués.
+
+* *Provisionnement fin*
++
+Une LUN ou un volume à provisionnement fin est un volume pour lequel le stockage n'est pas réservé à l'avance. Au contraire, le stockage est alloué de manière dynamique, selon les besoins. L'espace libre est relibéré dans le système de stockage lorsque les données du volume ou de la LUN sont supprimées
+
+
+
+
+
+== Quorum du cluster de stockage
+
+Le logiciel Element crée un cluster de stockage à partir de nœuds sélectionnés, qui tient à jour une base de données répliquée de la configuration du cluster. Un minimum de trois nœuds sont nécessaires pour participer à l'ensemble de groupe afin de maintenir le quorum nécessaire pour la résilience du cluster.

@@ -1,0 +1,123 @@
+---
+permalink: api/reference_element_api_modifyclusteradmin.html 
+sidebar: sidebar 
+keywords: modify,modifying,edit,editing,change,changing,cluster,admin,settings,modifyclusteradmin 
+summary: 'Vous pouvez utiliser la méthode ModityClusterAdmin pour modifier les paramètres d"un administrateur de cluster, d"un administrateur de cluster LDAP ou d"un administrateur de cluster tiers Identity Provider \(IDP\). Vous ne pouvez pas modifier l"accès au compte admin du cluster administrateur.' 
+---
+= ModityClusterAdmin
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ModifyClusterAdmin` Méthode de modification des paramètres d'un administrateur de cluster, d'un administrateur de cluster LDAP ou d'un administrateur de cluster tiers Identity Provider (IDP). Vous ne pouvez pas modifier l'accès au compte admin du cluster administrateur.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+l'accès
+ a| 
+Contrôle les méthodes que cet administrateur du cluster peut utiliser.
+ a| 
+tableau de chaînes
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+ClusterAdminID
+ a| 
+ClusterAdminID pour l'administrateur du cluster, l'administrateur du cluster LDAP ou l'administrateur du cluster IDP à modifier.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+mot de passe
+ a| 
+Mot de passe utilisé pour authentifier cet administrateur du cluster. Ce paramètre ne s'applique pas à un administrateur de cluster LDAP ou IDP.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "ModifyClusterAdmin",
+   "params": {
+     "clusterAdminID"  : 2,
+     "password"   : "7925Brc429a"
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+ "id" : 1
+ "result" : { }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_app_b_access_control.adoc[Contrôle d'accès]

@@ -1,0 +1,104 @@
+---
+permalink: api/reference_element_api_node_shutdown.html 
+sidebar: sidebar 
+keywords: cluster,shutdown,node,shutting,down,shut,restart 
+summary: 'Vous pouvez utiliser la méthode Shutdown pour redémarrer ou arrêter les nœuds d"un cluster. Vous pouvez arrêter un seul nœud, plusieurs nœuds ou tous les nœuds du cluster à l"aide de cette méthode.' 
+---
+= Arrêt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `Shutdown` méthode permettant de redémarrer ou d'arrêter les nœuds d'un cluster. Vous pouvez arrêter un seul nœud, plusieurs nœuds ou tous les nœuds du cluster à l'aide de cette méthode.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+nœuds
+ a| 
+Liste des ID de nœud pour les nœuds à redémarrer ou à arrêter.
+ a| 
+tableau entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+option
+ a| 
+Mesure à prendre pour le cluster. Valeurs possibles :
+
+* Redémarrer : redémarre le cluster.
+* Arrêter : éteint complètement.
+
+ a| 
+chaîne
+ a| 
+redémarrez
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode n'a pas de valeur de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "Shutdown",
+   "params": {
+     "nodes": [
+       2,
+       3,
+       4
+     ],
+     "option": "halt"
+   },
+   "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {
+     "failed": [],
+     "successful": [
+          6
+      [
+   }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

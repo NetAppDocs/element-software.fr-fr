@@ -1,0 +1,42 @@
+---
+permalink: api/reference_element_api_fipsreport.html 
+sidebar: sidebar 
+keywords: object,objects,fipsReport,FIPS,140-2 
+summary: 'L"objet fipsReport contient des informations sur la prise en charge de FIPS 140-2 pour tous les nœuds du cluster de stockage. Vous pouvez récupérer ces informations à l"aide de la méthode GetFipsReport.' 
+---
+= FipsReport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet fipsReport contient des informations sur la prise en charge de FIPS 140-2 pour tous les nœuds du cluster de stockage. Vous pouvez récupérer ces informations à l'aide de `GetFipsReport` méthode.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+nœuds
+ a| 
+Rapport sur l'état de prise en charge de la norme FIPS 140-2 pour chaque nœud du cluster de stockage.
+ a| 
+FipsNodeReport
+
+
+
+ a| 
+Nœuds d'erreur
+ a| 
+Informations d'erreur pour chaque nœud qui n'a pas répondu avec l'état de prise en charge de FIPS 140-2
+ a| 
+FipsErrorNodeReport
+
+|===

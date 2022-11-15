@@ -1,0 +1,46 @@
+---
+permalink: storage/reference_data_manage_vvol_bindings_details.html 
+sidebar: sidebar 
+keywords: bindings details, vvols, for each virtual volume, endpoints, 
+summary: 'La page liaisons de l"onglet VVol fournit des informations de liaison sur chaque volume virtuel.' 
+---
+= Détails des liaisons
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La page liaisons de l'onglet VVol fournit des informations de liaison sur chaque volume virtuel.
+
+Les informations suivantes s'affichent :
+
+* *ID hôte*
++
+UUID de l'hôte ESXi qui héberge les volumes virtuels et qui est connu du cluster.
+
+* *ID point final du protocole*
++
+ID de terminal du protocole qui correspondent à chaque nœud du cluster SolidFire.
+
+* *Point final de protocole dans ID de bande*
++
+ID de périphérique SCSI NAA du noeud final du protocole.
+
+* *Type de point final de protocole*
++
+Type de noeud final du protocole.
+
+* *ID liaison VVol*
++
+UUID de liaison du volume virtuel.
+
+* *ID VVol*
++
+L'identifiant unique universel (UUID) du volume virtuel.
+
+* *ID secondaire VVol*
++
+ID secondaire du volume virtuel qui est un ID de LUN SCSI de second niveau.
+
+

@@ -1,0 +1,158 @@
+---
+permalink: api/reference_element_api_resetnode.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez utiliser la méthode ResetNode pour réinitialiser un nœud aux paramètres d"usine. Toutes les données, les packages \(mises à jour logicielles, etc\), les configurations et les fichiers journaux sont supprimés du nœud lorsque vous appelez cette méthode. Toutefois, les paramètres réseau du nœud sont conservés lors de cette opération. Les nœuds qui participent à un cluster ne peuvent pas être réinitialisés sur les paramètres d"usine.' 
+---
+= ResetNode
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ResetNode` méthode pour réinitialiser les paramètres d'usine d'un nœud. Toutes les données, les packages (mises à jour logicielles, etc.), les configurations et les fichiers journaux sont supprimés du nœud lorsque vous appelez cette méthode. Toutefois, les paramètres réseau du nœud sont conservés lors de cette opération. Les nœuds qui participent à un cluster ne peuvent pas être réinitialisés sur les paramètres d'usine.
+
+
+NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
+
+
+
+== Paramètres
+
+L'API ResetNode ne peut être utilisée que sur les nœuds qui sont en état « disponible ». Elle ne peut pas être utilisée sur des nœuds « actifs » dans un cluster ou à l'état « en attente ».
+
+AVERTISSEMENT :
+
+Cette méthode efface toutes les données client présentes sur le nœud.
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+création
+ a| 
+Permet de spécifier l'URL d'une image logicielle d'élément distant vers laquelle le nœud va être réinitialisé.
+ a| 
+URL
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+de force
+ a| 
+Défini sur true pour réinitialiser le nœud.
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+options
+ a| 
+Permet d'entrer les spécifications pour l'exécution des opérations de réinitialisation. Les informations sont fournies par le support NetApp, le cas échéant.
+ a| 
+Objet JSON
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "ResetNode",
+   "params": {
+      "build" : "file:///sf/rtfi/image/filesystem.squashfs",
+      "force" : true
+              },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": null,
+  "result": {
+    "rtfiInfo": {
+      "build": "file:///sf/rtfi/image/filesystem.squashfs",
+      "generation": "9",
+      "options": {
+        "edebug": "",
+        "sf_auto": "0",
+        "sf_bond_mode": "ActivePassive",
+        "sf_check_hardware": "0",
+        "sf_disable_otpw": "0",
+        "sf_fa_host": "",
+        "sf_hostname": "SF-FA18",
+        "sf_inplace": "1",
+        "sf_inplace_die_action": "kexec",
+        "sf_inplace_safe": "0",
+        "sf_keep_cluster_config": "0",
+        "sf_keep_data": "0",
+        "sf_keep_hostname": "0",
+        "sf_keep_network_config": "0",
+        "sf_keep_paths": "\"/var/log/hardware.xml\"",
+        "sf_max_archives": "5",
+        "sf_nvram_size": "",
+        "sf_oldroot": "",
+        "sf_postinst_erase_root_drive": "0",
+        "sf_root_drive": "",
+        "sf_rtfi_cleanup_state": "",
+        "sf_secure_erase": "1",
+        "sf_secure_erase_retries": "5",
+        "sf_slice_size": "",
+        "sf_ssh_key": "1",
+        "sf_ssh_root": "1",
+        "sf_start_rtfi": "1",
+        "sf_status_httpserver": "1",
+        "sf_status_httpserver_stop_delay": "5m",
+        "sf_status_inject_failure": "",
+        "sf_status_json": "0",
+        "sf_support_host": "sfsupport.solidfire.com",
+        "sf_test_hardware": "0",
+        "sf_upgrade": "0",
+        "sf_upgrade_firmware": "0",
+        "sf_upload_logs_url": ""
+     },
+      "statusUrlAll": "http://192.168.130.20/status/all.json",
+      "statusUrlCurrent": "http://192.168.130.20/status/current.json"
+    }
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

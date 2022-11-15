@@ -1,0 +1,217 @@
+---
+permalink: api/reference_element_api_syncjob.html 
+sidebar: sidebar 
+keywords: object,objects,syncjob 
+summary: 'L"objet syncJob contient des informations sur les travaux de clonage, de réplication à distance ou de synchronisation par tranche qui sont exécutés sur un cluster.' 
+---
+= SyncJob
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet syncJob contient des informations sur les travaux de clonage, de réplication à distance ou de synchronisation par tranche qui sont exécutés sur un cluster.
+
+Vous pouvez récupérer les informations de synchronisation avec `ListSyncJobs` Méthode API.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+Blocs PerDeuxièmement
+ a| 
+Le nombre de blocs de données transférés par seconde du cluster source vers le cluster cible. Présent uniquement si le membre de type est défini sur distant.
+ a| 
+flottement
+
+
+
+ a| 
+Type de branche
+ a| 
+Renvoyé uniquement pour les tâches de synchronisation de réplication distante. Valeurs possibles :
+
+* snapshot
+* volumétrie
+
+ a| 
+chaîne
+
+
+
+ a| 
+BytesPerDeuxièmement
+ a| 
+Le nombre d'octets traités par seconde par le clone. Présent uniquement si le membre de type est défini sur clone ou tranche.
+ a| 
+flottement
+
+
+
+ a| 
+Identifiant cloneID
+ a| 
+Identificateur de l'opération de clonage en cours. Présent uniquement si le type membre est défini sur clone.
+ a| 
+entier
+
+
+
+ a| 
+ActuelBytes
+ a| 
+Le nombre d'octets traités par le clone dans le volume source. Présent uniquement si le membre de type est défini sur clone ou tranche.
+ a| 
+entier
+
+
+
+ a| 
+DstServiceID
+ a| 
+Identifiant de service hébergeant le réplica primaire du volume. Présent uniquement si le membre de type est défini sur distant.
+ a| 
+entier
+
+
+
+ a| 
+DstVolumeID
+ a| 
+ID du volume de destination. Présent uniquement si le membre de type est défini sur clone ou remote.
+ a| 
+entier
+
+
+
+ a| 
+SedTime
+ a| 
+Temps écoulé, en secondes, depuis le démarrage de la tâche de synchronisation.
+ a| 
+flottement
+
+
+
+ a| 
+ID de groupe
+ a| 
+ID de l'opération de clonage de groupe en cours.
+ a| 
+entier
+
+
+
+ a| 
+ID de nœud
+ a| 
+Spécifie le nœud sur lequel le clone se produit. Présent uniquement si le type membre est défini sur clone.
+ a| 
+entier
+
+
+
+ a| 
+Pourcentage complet
+ a| 
+Pourcentage d'achèvement de la tâche de synchronisation.
+ a| 
+entier
+
+
+
+ a| 
+RemainingTime
+ a| 
+Temps estimé, en secondes, pour terminer l'opération.
+ a| 
+entier
+
+
+
+ a| 
+ID de licence
+ a| 
+ID de l'entraînement de coupe en cours de synchronisation.
+ a| 
+entier
+
+
+
+ a| 
+étape
+ a| 
+Présent uniquement si le membre de type est défini sur distant ou sur clone. Valeurs possibles :
+
+* Métadonnées : la réplication consiste à déterminer les données à transférer vers le cluster distant. L'état n'est pas signalé pour cette étape du processus de réplication.
+* Données : la réplication consiste à transférer le bloc de données vers le cluster distant.
+* Entier : indique la compatibilité descendante de la coupe pour les travaux de synchronisation de coupe.
+
+ a| 
+chaîne
+
+
+
+ a| 
+ID de snapshot
+ a| 
+L'ID du snapshot à partir de lequel le clone a été créé. Présent uniquement si le type membre est défini sur clone.
+ a| 
+entier
+
+
+
+ a| 
+SrcServiceID
+ a| 
+ID service source.
+ a| 
+entier
+
+
+
+ a| 
+SrcVolumeID
+ a| 
+ID du volume source.
+ a| 
+entier
+
+
+
+ a| 
+TotalBytes
+ a| 
+Nombre total d'octets du clone. Présent uniquement si le membre de type est défini sur clone ou tranche.
+ a| 
+entier
+
+
+
+ a| 
+type
+ a| 
+Type d'opération de synchronisation. Valeurs possibles :
+
+* clonage
+* coupe
+* bloc
+* à distance
+
+ a| 
+chaîne
+
+|===
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_listsyncjobs.adoc[ListSyncJobs]

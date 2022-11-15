@@ -1,0 +1,93 @@
+---
+permalink: api/reference_element_api_getfipsreport.html 
+sidebar: sidebar 
+keywords: fips,report,get,getting,getfipsreport,feature,support 
+summary: 'Vous pouvez utiliser la méthode GetFipsReport pour vérifier l"état de prise en charge de la fonctionnalité de cryptage FIPS 140-2 pour tous les nœuds du cluster de stockage.' 
+---
+= GetFipsReport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetFipsReport` Méthode de vérification de l'état de prise en charge de la fonctionnalité de chiffrement FIPS 140-2 pour tous les nœuds du cluster de stockage.
+
+
+
+== Paramètre
+
+Cette méthode n'a pas de paramètre d'entrée.
+
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+résultat
+ a| 
+Un objet JSON contenant l'état de la fonctionnalité FIPS 140-2 prend en charge chaque nœud, ainsi que les informations d'erreur pour chaque nœud qui n'a pas répondu à la requête.
+ a| 
+xref:reference_element_api_fipsreport.adoc[FipsReport]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "GetFipsReport",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+    "nodes": [
+        {
+           "nodeID": 1,
+		   "fipsDrives": "None",
+           "httpsEnabled": true
+        },
+        {
+           "nodeID": 3,
+		   "fipsDrives": "None",
+           "httpsEnabled": true
+        }
+    ],
+    "errorNodes": [
+        {
+           "nodeID": 2,
+           "error": {
+               "message": "The RPC timed out.",
+               "name": "xRpcTimeout"
+               }
+        }
+    ]
+    }
+}
+----
+
+
+== Nouveau depuis la version
+
+10.3

@@ -1,0 +1,132 @@
+---
+permalink: api/reference_element_api_createqospolicy.html 
+sidebar: sidebar 
+keywords: QoS,policy,policies,create,creating 
+summary: Vous pouvez utiliser la méthode CreateQoSPolicy pour créer un objet QoSPolicy que vous pourrez appliquer ultérieurement à un volume lors de sa création ou de sa modification. Une politique de QoS possède un ID unique, un nom et des paramètres de QoS. 
+---
+= CreateQoSPolicy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `CreateQoSPolicy` Méthode de création d'un objet QoSPolicy que vous pourrez ensuite appliquer à un volume lors de sa création ou de sa modification. Une politique de QoS possède un ID unique, un nom et des paramètres de QoS.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+nom
+ a| 
+Nom de la politique de qualité de service, par exemple Gold, Platinum ou Silver.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+la qos
+ a| 
+Paramètres de QoS associés à cette règle.
+ a| 
+xref:reference_element_api_qos.adoc[La QoS]
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+QosPolicy
+ a| 
+Objet QoSPolicy nouvellement créé.
+ a| 
+xref:reference_element_api_qospolicy.adoc[QoSPolicy]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 68,
+  "method": "CreateQoSPolicy",
+  "params": {
+    "name": "bronze",
+    "qos": {
+      "minIOPS": 50,
+      "maxIOPS": 15000,
+      "burstIOPS": 15000
+    }
+  }
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 68,
+  "result": {
+    "qosPolicy": {
+      "name": "bronze",
+      "qos": {
+        "burstIOPS": 15000,
+        "burstTime": 60,
+        "curve": {
+          "4096": 100,
+          "8192": 160,
+          "16384": 270,
+          "32768": 500,
+          "65536": 1000,
+          "131072": 1950,
+          "262144": 3900,
+          "524288": 7600,
+          "1048576": 15000
+        },
+        "maxIOPS": 15000,
+        "minIOPS": 50
+      },
+      "qosPolicyID": 2,
+      "volumeIDs": []
+    }
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+10.0

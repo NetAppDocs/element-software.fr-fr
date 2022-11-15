@@ -1,0 +1,44 @@
+---
+permalink: storage/task_system_manage_nodes_view_individual_node_details.html 
+sidebar: sidebar 
+keywords: nodes, view, details, vlan, mip, cip, sip, virtual id 
+summary: 'Vous pouvez afficher les détails de chaque nœud, notamment les balises de service, les détails de disque et les graphiques de l"utilisation et des statistiques de disque. La page nœuds de l"onglet Cluster fournit la colonne version dans laquelle vous pouvez afficher la version logicielle de chaque nœud.' 
+---
+= Afficher les détails du nœud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher les détails de chaque nœud, notamment les balises de service, les détails de disque et les graphiques de l'utilisation et des statistiques de disque. La page nœuds de l'onglet Cluster fournit la colonne version dans laquelle vous pouvez afficher la version logicielle de chaque nœud.
+
+.Étapes
+. Cliquez sur *Cluster* > *Nodes*.
+. Pour afficher les détails d'un nœud spécifique, cliquez sur l'icône *actions* d'un nœud.
+. Cliquez sur *Afficher les détails*.
+. Vérifiez les détails du nœud :
++
+** *ID de nœud* : ID généré par le système pour le nœud.
+** *Nom de noeud* : nom d'hôte du noeud.
+** *4K IOPS* disponibles : le nombre d'IOPS configuré pour le nœud.
+** *Rôle de nœud* : rôle dont dispose le nœud dans le cluster. Valeurs possibles :
++
+*** Cluster Master : nœud qui effectue des tâches administratives à l'échelle du cluster et qui contient MVIP et SVIP.
+*** Nœud ensemble : nœud qui participe au cluster. Il y a 3 ou 5 nœuds d'ensemble en fonction de la taille du groupe.
+*** Fibre Channel : nœud du cluster.
+
+
+** *Type de nœud* : type de modèle du nœud.
+** *Disques actifs* : nombre de disques actifs dans le nœud.
+** *IP de gestion* : adresse IP de gestion (MIP) attribuée au nœud pour les tâches d'administration réseau 1 GbE ou 10 GbE.
+** *IP du cluster* : adresse IP du cluster (CIP) attribuée au nœud utilisé pour la communication entre les nœuds du même cluster.
+** *Adresse IP de stockage* : adresse IP de stockage (SIP) attribuée au nœud utilisé pour la découverte du réseau iSCSI et tout le trafic du réseau de données.
+** *ID VLAN de gestion* : ID virtuel pour le réseau local de gestion.
+** *ID du VLAN de stockage* : ID virtuel pour le réseau local de stockage.
+** *Version* : la version du logiciel s'exécutant sur chaque nœud.
+** *Port de réplication* : port utilisé sur les nœuds pour la réplication à distance.
+** *Service Tag* : numéro de numéro de service unique attribué au nœud.
+
+
+

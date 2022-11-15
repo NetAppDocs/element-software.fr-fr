@@ -1,0 +1,45 @@
+---
+permalink: storage/task_data_manage_vol_access_group_delete_an_initiator.html 
+sidebar: sidebar 
+keywords: initiator delete, deleted multiple initiators 
+summary: 'Vous pouvez supprimer un initiateur après celui-ci n"est plus nécessaire. Lorsque vous supprimez un initiateur, le système le supprime de tout groupe d"accès de volume associé. Toutes les connexions utilisant l"initiateur restent valides jusqu"à ce que la connexion soit réinitialisée.' 
+---
+= Supprimer un initiateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer un initiateur après celui-ci n'est plus nécessaire. Lorsque vous supprimez un initiateur, le système le supprime de tout groupe d'accès de volume associé. Toutes les connexions utilisant l'initiateur restent valides jusqu'à ce que la connexion soit réinitialisée.
+
+.Étapes
+. Cliquez sur *Management* > *Initiators*.
+. Effectuez les étapes de suppression d'un ou plusieurs initiateurs :
++
+[cols="25,75"]
+|===
+| Option | Étapes 
+
+
+ a| 
+Supprimer un initiateur unique
+ a| 
+.. Cliquez sur l'icône *actions* de l'initiateur que vous souhaitez supprimer.
+.. Cliquez sur *Supprimer*.
+.. Confirmez l'action.
+
+
+
+
+ a| 
+Supprimez plusieurs initiateurs
+ a| 
+.. Cochez les cases en regard des initiateurs à supprimer.
+.. Cliquez sur le bouton *actions groupées*.
+.. Dans le menu qui s'affiche, sélectionnez *Supprimer*.
+.. Confirmez l'action.
+
+
+|===
+

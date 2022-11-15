@@ -1,0 +1,93 @@
+---
+permalink: api/reference_element_api_modifyclusterinterfacepreference.html 
+sidebar: sidebar 
+keywords: modify,modifying,edit,editing,change,changing,cluster,interface,preference,modifyclusterinterfacepreference 
+summary: 'La méthode ModityClusterInterfacePreference permet aux systèmes intégrés aux clusters de stockage exécutant le logiciel Element de modifier une préférence d"interface de cluster existante. Cette méthode est destinée à un usage interne.' 
+---
+= ModityClusterInterfacePreference
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le `ModifyClusterInterfacePreference` Méthode qui permet aux systèmes intégrés avec des clusters de stockage exécutant le logiciel Element de changer de préférence d'interface de cluster. Cette méthode est destinée à un usage interne.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+
+
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+nom
+ a| 
+Nom de la préférence d'interface de cluster à modifier.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+valeur
+ a| 
+Nouvelle valeur des préférences de l'interface de cluster.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+	"method": "ModifyClusterInterfacePreference",
+	"params": {
+	"name": "testname",
+	"value": "newvalue"
+},
+	"id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {}
+}
+----
+
+
+== Nouveau depuis la version
+
+11.0

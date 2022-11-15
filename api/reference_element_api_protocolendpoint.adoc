@@ -1,0 +1,93 @@
+---
+permalink: api/reference_element_api_protocolendpoint.html 
+sidebar: sidebar 
+keywords: object,objects,protocolEndpoint 
+summary: 'L"objet ProtocolEndpoint contient les attributs d"un noeud final de protocole. Vous pouvez extraire ces informations pour tous les noeuds finaux de protocole du cluster à l"aide de la méthode API ListProtocolEndpoints.' 
+---
+= ProtocolEndpoint
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet ProtocolEndpoint contient les attributs d'un noeud final de protocole. Vous pouvez extraire ces informations pour tous les terminaux de protocole du cluster à l'aide de `ListProtocolEndpoints` Méthode API.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ID primaires
+ a| 
+ID de l'objet principal du fournisseur de points de terminaison de protocole pour le noeud final de protocole.
+ a| 
+entier
+
+
+
+ a| 
+ProtocolEndpointID
+ a| 
+ID unique du point final du protocole.
+ a| 
+UUID
+
+
+
+ a| 
+ProtocolEndpointState
+ a| 
+État du noeud final du protocole. Valeurs possibles :
+
+* Active : le noeud final du protocole est en cours d'utilisation.
+* Démarrage : le point final du protocole démarre.
+* Basculement : le point final du protocole a échoué.
+* Réservé : le terminal protocole est réservé.
+
+ a| 
+chaîne
+
+
+
+ a| 
+Type de providerType
+ a| 
+Type de fournisseur du terminal de protocole. Valeurs possibles :
+
+* Primaire
+* Secondaire
+
+ a| 
+chaîne
+
+
+
+ a| 
+SciNAADeviceID
+ a| 
+Identifiant de périphérique SCSI unique au niveau mondial pour le point de terminaison de protocole dans le format étendu enregistré NAA IEEE.
+ a| 
+chaîne
+
+
+
+ a| 
+ID secondaire de ProviderID
+ a| 
+ID de l'objet du fournisseur de points de terminaison de protocole secondaire pour le point de terminaison de protocole.
+ a| 
+entier
+
+|===
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_listprotocolendpoints.adoc[ListProtocolEndpoints]

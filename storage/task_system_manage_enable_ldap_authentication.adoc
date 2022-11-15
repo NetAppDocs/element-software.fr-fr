@@ -1,0 +1,66 @@
+---
+permalink: storage/task_system_manage_enable_ldap_authentication.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez configurer l"intégration du système de stockage avec un serveur LDAP existant. Les administrateurs LDAP peuvent ainsi gérer de façon centralisée l"accès au système de stockage pour les utilisateurs.' 
+---
+= Activez l'authentification LDAP à l'aide de l'interface utilisateur Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer l'intégration du système de stockage avec un serveur LDAP existant. Les administrateurs LDAP peuvent ainsi gérer de façon centralisée l'accès au système de stockage pour les utilisateurs.
+
+Vous pouvez configurer LDAP à l'aide de l'interface utilisateur Element ou de l'API Element. Cette procédure explique comment configurer LDAP à l'aide de l'interface utilisateur Element.
+
+Cet exemple montre comment configurer l'authentification LDAP sur SolidFire et qu'elle utilise `SearchAndBind` comme type d'authentification. L'exemple utilise un seul serveur Active Directory Windows Server 2012 R2.
+
+. Cliquez sur *Cluster* > *LDAP*.
+. Cliquez sur *Oui* pour activer l'authentification LDAP.
+. Cliquez sur *Ajouter un serveur*.
+. Saisissez *Nom d'hôte/adresse IP*.
++
+
+NOTE: Un numéro de port personnalisé facultatif peut également être saisi.
+
++
+Par exemple, pour ajouter un numéro de port personnalisé, entrez <nom d'hôte ou adresse ip> :<numéro de port>
+
+. Sélectionnez *utiliser le protocole LDAPS*.
+. Entrez les informations requises dans *Paramètres généraux*.
++
+link:reference_system_manage_ldap_details.md#["Détails LDAP"]
+
++
+image::../media/element_new_ldap_servers.jpg[element pour les nouveaux serveurs ldap]
+
+. Cliquez sur *Activer LDAP*.
+. Cliquez sur *Tester l'authentification utilisateur* si vous souhaitez tester l'accès au serveur pour un utilisateur.
+. Copiez le nom distinctif et les informations sur le groupe d'utilisateurs qui s'affichent pour une utilisation ultérieure lors de la création d'administrateurs de cluster.
+. Cliquez sur *Enregistrer les modifications* pour enregistrer les nouveaux paramètres.
+. Pour créer un utilisateur dans ce groupe afin que tout le monde puisse se connecter, procédez comme suit :
++
+.. Cliquez sur *User* > *View*.
++
+image::../media/element_new_cluster_admin.jpg[nouvel administrateur de cluster element]
+
+.. Pour le nouvel utilisateur, cliquez sur *LDAP* pour le Type d'utilisateur et collez le groupe que vous avez copié dans le champ Nom unique.
+.. Sélectionnez les autorisations, généralement toutes les autorisations.
+.. Faites défiler jusqu'au contrat de licence utilisateur final et cliquez sur *J'accepte*.
+.. Cliquez sur *Créer un administrateur de cluster*.
++
+Maintenant, vous avez un utilisateur avec la valeur d'un groupe Active Directory.
+
+
+
+
+
+Pour tester cette méthode, déconnectez-vous de l'interface utilisateur d'Element et reconnectez-vous en tant qu'utilisateur dans ce groupe.
+
+*Informations connexes*
+
+xref:task_system_manage_create_a_cluster_administrator_account.adoc[Créez un compte d'administrateur de cluster]
+
+xref:reference_system_manage_ldap_details.adoc[Détails LDAP]

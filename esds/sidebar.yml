@@ -1,0 +1,45 @@
+---
+section: esds
+title: Installez et utilisez le SDS de SolidFire Enterprise
+url: "/esds/index.html"
+entries:
+- title: Lancez-vous avec SolidFire ESDS
+  url: "/esds/concept_get_started_esds.html"
+- title: Effectuez les tâches préalables à l'installation
+  url: "/esds/concept_esds_prerequisite_tasks.html"
+  entries:
+  - title: Considérations relatives à la configuration réseau
+    url: "/esds/concept_esds_networking_best_practices.html"
+  - title: Configurer la mise en réseau de l'hôte
+    url: "/esds/task_esds_configure_the_interface_config_files.html"
+- title: Installez SolidFire ESDS
+  url: "/esds/task_esds_install_using_ansible.html"
+- title: Effectuer les tâches post-installation
+  url: "/esds/task_esds_postinstallation.html"
+- title: Mettre à niveau les clusters
+  url: "/esds/task_esds_upgrade_cluster.html"
+- title: Surveiller les clusters
+  url: "/esds/concept_esds_monitor_clusters.html"
+- title: Gérez le stockage SolidFire ESDS
+  url: "/esds/reference_esds_element_links.html"
+- title: Désinstallez SolidFire ESDS
+  url: "/esds/task_esds_uninstall.html"
+- title: Maintenir SolidFire ESDS
+  url: "/esds/concept_esds_maintain.html"
+  entries:
+  - title: Obtenir la clé de licence
+    url: "/esds/task_esds_get_license_key.html"
+  - title: Utiliser le mode de maintenance sur les clusters SolidFire ESDS
+    url: "/esds/reference_esds_use_maintenance_mode.html"
+  - title: Remplacer les disques par des disques HPE DL380
+    url: "/esds/task_esds_dl380_drive_repl.html"
+  - title: Remplacement des disques par HPE DL360
+    url: "/esds/task_esds_dl360_drive_repl.html"
+  - title: Remplacez les lecteurs pour Dell R640
+    url: "/esds/task_esds_r640_drive_repl.html"
+  - title: Collecte des journaux de conteneur
+    url: "/esds/reference_esds_containerlogs.html"
+  - title: Liens vers les articles de la base de connaissances de dépannage
+    url: "/esds/reference_esds_troubleshoot_links.html"
+  - title: Contenu du fichier sf_sds_config.yaml
+    url: "/esds/reference_esds_sf_sds_config_file.html"

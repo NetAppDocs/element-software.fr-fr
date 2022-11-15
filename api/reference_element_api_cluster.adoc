@@ -1,0 +1,295 @@
+---
+permalink: api/reference_element_api_cluster.html 
+sidebar: sidebar 
+keywords: objects,object,cluster 
+summary: 'L"objet cluster contient des informations que le nœud utilise pour communiquer avec le cluster. Vous pouvez récupérer ces informations à l"aide de la méthode de l"API GetClusterConfig.' 
+---
+= cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet cluster contient des informations que le nœud utilise pour communiquer avec le cluster. Vous pouvez récupérer ces informations à l'aide de la méthode de l'API GetClusterConfig.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+cipi
+ a| 
+Interface réseau utilisée pour la communication avec le cluster.
+ a| 
+chaîne
+
+
+
+ a| 
+cluster
+ a| 
+Nom unique de cluster.
+ a| 
+chaîne
+
+
+
+ a| 
+Chiffrement
+ a| 
+Indique si le nœud prend en charge le cryptage de disque.
+ a| 
+booléen
+
+
+
+ a| 
+ensemble
+ a| 
+Les nœuds qui participent au cluster
+ a| 
+tableau de chaînes
+
+
+
+ a| 
+FipsDriveConfiguration
+ a| 
+Indique si le nœud prend en charge les disques certifiés FIPS 140-2-2.
+ a| 
+booléen
+
+
+
+ a| 
+mipi
+ a| 
+Interface réseau utilisée pour le node management.
+ a| 
+chaîne
+
+
+
+ a| 
+nom
+ a| 
+Nom du cluster.
+ a| 
+chaîne
+
+
+
+ a| 
+ID de nœud
+ a| 
+ID de nœud du nœud dans le cluster.
+ a| 
+chaîne
+
+
+
+ a| 
+PendentionNodeID
+ a| 
+ID du nœud en attente dans le cluster.
+ a| 
+entier
+
+
+
+ a| 
+rôle
+ a| 
+Identifie le rôle du nœud.
+ a| 
+entier
+
+
+
+ a| 
+sipi
+ a| 
+Interface réseau utilisée pour le trafic de stockage.
+ a| 
+chaîne
+
+
+
+ a| 
+état
+ a| 
+État actuel du nœud. Valeurs possibles :
+
+* Disponible : le nœud n'a pas été configuré avec un nom de cluster.
+* En attente : le nœud est en attente pour un cluster nommé spécifique et peut être ajouté.
+* Active : le nœud est membre actif d'un cluster et ne peut pas être ajouté à un autre cluster.
+* PendingActive : le nœud est actuellement renvoyé à l'image logicielle d'usine et n'est pas encore membre actif d'un cluster. Une fois l'opération terminée, elle passe à l'état actif.
+
+ a| 
+chaîne
+
+
+
+ a| 
+version
+ a| 
+Version du logiciel exécutée sur le nœud.
+ a| 
+chaîne
+
+|===
+
+
+== Modification du membre et état du nœud
+
+Ce tableau indique si les paramètres de l'objet peuvent être modifiés à chaque état de nœud possible.
+
+|===
+
+
+| Nom du paramètre | État disponible | État en attente | État actif 
+
+
+ a| 
+cipi
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+cluster
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Chiffrement
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+ensemble
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+mipi
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+nom
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+ID de nœud
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+PendentionNodeID
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+rôle
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+sipi
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+état
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+version
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+|===
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_getclusterconfig.adoc[GetClusterConfig]

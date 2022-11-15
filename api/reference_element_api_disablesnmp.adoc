@@ -1,0 +1,59 @@
+---
+permalink: api/reference_element_api_disablesnmp.html 
+sidebar: sidebar 
+keywords: SNMP,disable,disabling,DisableSnmp 
+summary: Vous pouvez utiliser la méthode DisableSnmp pour désactiver SNMP sur les nœuds du cluster. 
+---
+= DisableSnmp
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `DisableSnmp` Méthode de désactivation du protocole SNMP sur les nœuds du cluster.
+
+
+
+== Paramètre
+
+Cette méthode n'a pas de paramètre d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode n'a pas de valeur de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "DisableSnmp",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "result" : {},
+  "id" : 1
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

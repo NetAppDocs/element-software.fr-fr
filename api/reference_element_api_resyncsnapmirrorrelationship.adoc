@@ -1,0 +1,101 @@
+---
+permalink: api/reference_element_api_resyncsnapmirrorrelationship.html 
+sidebar: sidebar 
+keywords: SnapMirror,relationship,resync,resyncing,ResyncSnapMirrorRelationship 
+summary: 'L"interface utilisateur Web du logiciel Element utilise la méthode ResyncSnapMirror orRelationship pour établir ou rétablir une relation en miroir entre un terminal source et un terminal de destination. Lorsque vous resynchroniser une relation, le système supprime les snapshots sur le volume de destination qui sont plus récents que la copie Snapshot commune. Il monte ensuite le volume de destination en tant que volume de protection des données avec la copie Snapshot commune lors de l"exportation de la copie Snapshot.' 
+---
+= Réyncrelation SnapMirrorCet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'interface utilisateur Web du logiciel Element utilise le `ResyncSnapMirrorRelationship` méthode permettant d'établir ou de rétablir une relation de miroir entre un point final source et un point final de destination. Lorsque vous resynchroniser une relation, le système supprime les snapshots sur le volume de destination qui sont plus récents que la copie Snapshot commune. Il monte ensuite le volume de destination en tant que volume de protection des données avec la copie Snapshot commune lors de l'exportation de la copie Snapshot.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+L'ID de terminal du système de stockage ONTAP distant communique avec le cluster de stockage Element.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+Volume desestinationVolume
+ a| 
+Volume de destination dans la relation SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeinfo]
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+Taux de transfert maximal
+ a| 
+Spécifie le taux de transfert de données maximal entre les volumes en kilo-octets par seconde. La valeur par défaut, 0, est illimitée et permet à la relation SnapMirror d'exploiter pleinement la bande passante réseau disponible.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+Volume source
+ a| 
+Volume source dans la relation SnapMirror
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeinfo]
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+SnapMirrorRelationship
+ a| 
+Objet contenant des informations sur la relation SnapMirror resynchronée.
+ a| 
+xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelationship]
+
+|===
+
+
+== Nouveau depuis la version
+
+10.1

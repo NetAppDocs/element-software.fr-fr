@@ -1,0 +1,22 @@
+---
+permalink: storage/task_system_manage_fips_create_a_cluster_supporting_fips_drives.html 
+sidebar: sidebar 
+keywords: fips, security, federal information processing standards, 140-2, cluster, create 
+summary: 'La sécurité devient de plus en plus cruciale pour le déploiement de solutions dans de nombreux environnements clients. Les normes fédérales de traitement de l"information \(FIPS\) sont des normes relatives à la sécurité et à l"interopérabilité des ordinateurs. Le chiffrement certifié FIPS 140-2 pour les données au repos est un composant de la solution de sécurité globale.' 
+---
+= Créez un cluster prenant en charge les disques FIPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sécurité devient de plus en plus cruciale pour le déploiement de solutions dans de nombreux environnements clients. La norme FIPS (Federal information Processing Standards) est une norme en matière de sécurité et d'interopérabilité des ordinateurs. Le chiffrement certifié FIPS 140-2 pour les données au repos est un composant de la solution de sécurité globale.
+
+* link:task_system_manage_fips_avoid_mixing_nodes_for_fips_drives.html["Évitez de mélanger les nœuds pour les disques FIPS"]
+* link:task_system_manage_fips_enable_encryption_at_rest.html["Activation du chiffrement des données au repos"]
+* link:task_system_manage_fips_identify_nodes_ready_for_fips_drives["Identifiez si les nœuds sont prêts pour la fonctionnalité disques FIPS"]
+* link:task_system_manage_fips_enable_the_fips_drives_feature.html["Activez la fonctionnalité disques FIPS"]
+* link:task_system_manage_fips_check_the_fips_drive_status.html["Vérifiez l'état du lecteur FIPS"]
+* link:task_system_manage_fips_troubleshoot_the_fips_drive_feature["Dépannez la fonctionnalité de lecteur FIPS"]
+

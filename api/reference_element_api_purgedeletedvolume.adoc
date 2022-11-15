@@ -1,0 +1,75 @@
+---
+permalink: api/reference_element_api_purgedeletedvolume.html 
+sidebar: sidebar 
+keywords: volume,volumes,purging,purge,deleted,purgedeletedvolume 
+summary: 'Vous pouvez utiliser la méthode PurgeDeletedVolume pour purger immédiatement et définitivement un volume supprimé. Vous devez supprimer un volume à l"aide de DeleteVolume avant de pouvoir le purger.' 
+---
+= PurgeDeletedVolume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `PurgeDeletedVolume` méthode permettant de purger immédiatement et définitivement un volume supprimé. Vous devez supprimer un volume à l'aide de `DeleteVolume` avant de pouvoir être purgé.
+
+Les volumes sont purgés automatiquement après un certain temps ; l'utilisation de cette méthode n'est donc pas requise en général.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+| ID de volume | ID du volume à purger. | entier | Non | Oui. 
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "PurgeDeletedVolume",
+   "params": {
+      "volumeID"  : 5
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id" : 1,
+  "result": {}
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_deletevolume.adoc[DeleteVolume]

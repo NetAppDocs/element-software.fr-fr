@@ -1,0 +1,212 @@
+---
+permalink: api/reference_element_api_modifyvirtualnetwork.html 
+sidebar: sidebar 
+keywords: virtual,network,modify,modifying,change,changing,edit,editing,modifyvirtualnetwork 
+summary: 'Vous pouvez utiliser la méthode ModilyVirtualNetwork pour modifier les attributs d"un réseau virtuel existant.' 
+---
+= ModilyVirtualNetwork
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ModifyVirtualNetwork` méthode permettant de modifier les attributs d'un réseau virtuel existant.
+
+Cette méthode vous permet d'ajouter ou de supprimer des blocs d'adresse, de modifier le masque de réseau ou de modifier le nom ou la description du réseau virtuel. Vous pouvez également l'utiliser pour activer ou désactiver les espaces de noms, ainsi qu'ajouter ou supprimer une passerelle si les espaces de noms sont activés sur le réseau virtuel.
+
+
+NOTE: Cette méthode nécessite soit l'ID virtualNetworkTag soit la virtualNetworkTag comme paramètre, mais pas les deux.
+
+AVERTISSEMENT :
+
+L'activation ou la désactivation de la fonctionnalité VLAN de stockage routable pour un réseau virtuel existant en modifiant le paramètre d'espace de noms interrompt tout le trafic géré par le réseau virtuel. Il est préférable de modifier le paramètre d'espace de noms lors d'une fenêtre de maintenance planifiée.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+
+
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+VirtualNetworkID
+ a| 
+Identificateur unique du réseau virtuel à modifier. Il s'agit de l'ID réseau virtuel attribué par le cluster.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+VirtualNetworkTag
+ a| 
+Balise réseau qui identifie le réseau virtuel à modifier.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+Verrous d'adresse
+ a| 
+Le nouveau bloc d'adresses à définir pour ce réseau virtuel. Cela peut inclure de nouveaux blocs d'adresse à ajouter à l'objet existant ou ignorer les blocs d'adresse inutilisés qui doivent être supprimés. Vous pouvez également augmenter ou réduire la taille des blocs d'adresse existants. Vous pouvez uniquement augmenter la taille des verrous d'adresse de départ pour un objet réseau virtuel ; vous ne pouvez jamais le réduire. Membres requis pour cet objet :
+
+* Début : début de la plage d'adresses IP. (chaîne)
+* Taille : nombre d'adresses IP à inclure dans le bloc. (entier)
+
+ a| 
+Objet JSON
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+passerelle
+ a| 
+L'adresse IP d'une passerelle du réseau virtuel. Ce paramètre n'est valide que si le paramètre d'espace de noms est défini sur vrai.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+nom
+ a| 
+Nouveau nom pour le réseau virtuel.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+espace de noms
+ a| 
+Lorsque la valeur true est définie sur, active la fonctionnalité des VLAN de stockage routables en recréant le réseau virtuel et en configurant un espace de noms pour le contenir. Lorsqu'elle est définie sur FALSE, désactive la fonctionnalité VRF pour le réseau virtuel. La modification de cette valeur interrompt le trafic en cours d'exécution sur ce réseau virtuel.
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+masque de réseau
+ a| 
+Nouveau masque de réseau pour ce réseau virtuel.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+vit
+ a| 
+Adresse IP virtuelle de stockage pour ce réseau virtuel. Le SVIP d'un réseau virtuel ne peut pas être modifié. Vous devez créer un nouveau réseau virtuel pour utiliser une autre adresse SVIP.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "ModifyVirtualNetwork",
+  "params": {
+    "virtualNetworkID": 2,
+    "name": "ESX-VLAN-3112",
+    "addressBlocks": [
+     {
+      "start": "10.1.112.1",
+      "size": 20
+     },
+     {
+      "start": "10.1.112.100",
+      "size": 20
+     }
+   ],
+    "netmask": "255.255.255.0",
+    "gateway": "10.0.1.254",
+    "svip": "10.1.112.200",
+    "attributes": {}
+  },
+  "id":1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

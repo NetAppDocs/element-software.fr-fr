@@ -1,0 +1,136 @@
+---
+permalink: api/reference_element_api_modifyvolumeaccessgrouplunassignments.html 
+sidebar: sidebar 
+keywords: volumes,volume,defining,define,modify,modifying,edit,editing,change,changing,modifyvolumeaccessgrouplunassignments,access,group,lun,assignment 
+summary: Vous pouvez utiliser la méthode ModityVolumeAccessGroupLunasaffectations pour définir des affectations de LUN personnalisées pour des volumes spécifiques. 
+---
+= ModityVolumeAccessGroupLunasaffectations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ModifyVolumeAccessGroupLunAssignments` Méthode de définition des affectations de LUN personnalisées pour des volumes spécifiques.
+
+Cette méthode ne modifie que les valeurs LUN définies pour le paramètre lunaffectations dans le groupe d'accès de volume. Toutes les autres affectations de LUN restent inchangées.
+
+Les valeurs d'affectation de LUN doivent être uniques pour les volumes d'un groupe d'accès aux volumes. Vous ne pouvez pas définir de valeurs de LUN dupliquées au sein d'un groupe d'accès de volume. Toutefois, vous pouvez à nouveau utiliser les mêmes valeurs de LUN dans différents groupes d'accès de volume.
+
+
+NOTE: Les valeurs de LUN valides sont 0 à 16383. Le système génère une exception si vous transmettez une valeur de LUN en dehors de cette plage. Aucune des affectations de LUN spécifiées n'est modifiée en cas d'exception.
+
+AVERTISSEMENT :
+
+Si vous modifiez un affectation de LUN pour un volume avec des E/S actives, les E/S peuvent être interrompues. Vous devez modifier la configuration du serveur avant de modifier les attributions de LUN de volume.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+
+
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+Volume AccessGroupID
+ a| 
+ID de groupe d'accès de volume unique pour lequel les affectations de LUN seront modifiées.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+Affectations lunaires
+ a| 
+ID de volume avec de nouvelles valeurs de LUN attribuées.
+ a| 
+tableau entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Volume AccessGroupLunassignations
+ a| 
+Objet contenant les détails des affectations de LUN du groupe d'accès au volume modifié.
+ a| 
+Objet JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "ModifyVolumeAccessGroupLunAssignments",
+   "params": {
+       "volumeAccessGroupID" : 218,
+       "lunAssignments" : [
+           {"volumeID" : 832, "lun" : 0},
+           {"volumeID" : 834, "lun" : 1}
+        ]
+    },
+    "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "volumeAccessGroupLunAssignments": {
+      "deletedLunAssignments": [],
+      "lunAssignments": [
+        {
+          "lun": 0,
+          "volumeID": 832
+        },
+        {
+          "lun": 1,
+          "volumeID": 834
+        }
+      ],
+      "volumeAccessGroupID": 218
+    }
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

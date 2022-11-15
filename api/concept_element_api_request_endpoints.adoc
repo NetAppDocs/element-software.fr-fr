@@ -1,0 +1,54 @@
+---
+permalink: api/concept_element_api_request_endpoints.html 
+sidebar: sidebar 
+keywords: request,endpoints 
+summary: 'Il existe trois types de terminaux de demande utilisés dans l"API \(cluster de stockage, création de cluster de stockage et par nœud\). Vous devez toujours utiliser le dernier noeud final pris en charge par votre version du logiciel Element.' 
+---
+= Demander des terminaux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il existe trois types de terminaux de demande utilisés dans l'API (cluster de stockage, création de cluster de stockage et par nœud). Vous devez toujours utiliser le dernier noeud final pris en charge par votre version du logiciel Element.
+
+Les trois terminaux de demande dans l'API sont désignés comme suit :
+
+
+
+== Méthodes d'API du cluster
+
+Le terminal HTTPS pour les requêtes API au niveau du cluster de stockage est de `+https://<mvip>/json-rpc/<api-version>+`, où :
+
+* `<mvip>` Est l'adresse IP virtuelle de gestion du cluster de stockage.
+* `<api-version>` Est la version de l'API que vous utilisez.
+
+
+
+
+== Méthodes de création de clusters et d'API d'amorçage
+
+Le terminal HTTPS pour la création d'un cluster de stockage et l'accès aux requêtes de l'API bootstrap est `+https://<nodeIP>/json-rpc/<api-version>+`, où :
+
+* `<nodeIP>` Est l'adresse IP du nœud que vous ajoutez au cluster.
+* `<api-version>` Est la version de l'API que vous utilisez.
+
+
+
+
+== Méthodes API par nœud
+
+Le terminal HTTPS pour les requêtes API de nœuds de stockage individuels est `+https://<nodeIP>:442/json-rpc/<api-version>+`, où :
+
+* `<nodeIP>` Est l'adresse IP de gestion du nœud de stockage ; 442 est le port sur lequel le serveur HTTPS est exécuté.
+* `<api-version>` Est la version de l'API que vous utilisez.
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

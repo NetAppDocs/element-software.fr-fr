@@ -1,0 +1,184 @@
+---
+permalink: api/reference_element_api_updatebulkvolumestatus.html 
+sidebar: sidebar 
+keywords: updatebulkvolumestatus,update,updating,bulk,volume,status,job 
+summary: 'Vous pouvez utiliser la méthode UpdateBulkVolumeStatus pour mettre à jour l"état d"un travail de volume en bloc que vous avez démarré avec les méthodes StartBulkVolumeRead ou StartBulkVolumeWrite.' 
+---
+= UpdateBulkVolumeStatus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `UpdateBulkVolumeStatus` méthode de mise à jour de l'état d'un travail en volume en bloc que vous avez démarré avec le `StartBulkVolumeRead` ou `StartBulkVolumeWrite` méthodes.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+clé
+ a| 
+Clé affectée lors de l'initialisation d'un xref:reference_element_api_startbulkvolumeread.adoc[StartBulkVolumeRead] ou xref:reference_element_api_startbulkvolumewrite.adoc[StartBulkVolumeWrite] gestion.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+état
+ a| 
+Le système définit l'état du travail de volume en bloc donné. Valeurs possibles :
+
+* En cours d'exécution : travaux toujours actifs.
+* Terminé : tâches effectuées.
+* Echec : travaux qui ont échoué.
+
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+Pourcentage complet
+ a| 
+La progression du travail en volume en bloc terminée sous forme de pourcentage.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+messagerie
+ a| 
+Renvoie l'état de la tâche de volume en bloc lorsque la tâche est terminée.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+attributs
+ a| 
+Attributs JSON ; met à jour la tâche de volume en bloc.
+ a| 
+Objet JSON
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+état
+ a| 
+État de la session demandée. État renvoyé :
+
+* préparation
+* actif
+* l'a fait
+* échec
+
+ a| 
+chaîne
+
+
+
+ a| 
+attributs
+ a| 
+Renvoie les attributs spécifiés dans l'appel de méthode. Les valeurs sont renvoyées, qu'elles aient été modifiées ou non.
+ a| 
+chaîne
+
+
+
+ a| 
+url
+ a| 
+URL permettant d'accéder au serveur Web du nœud ; disponible uniquement si la session est toujours active.
+ a| 
+chaîne
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "UpdateBulkVolumeStatus",
+   "params": {
+          "key": "0b2f532123225febda2625f55dcb0448",
+	      "status": "running"
+      },
+   "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id" : 1,
+   "result": {
+	  "status" : "running",
+	  "url" : "https://10.10.23.47:8443/"
+    }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_startbulkvolumeread.adoc[StartBulkVolumeRead]
+* xref:reference_element_api_startbulkvolumewrite.adoc[StartBulkVolumeWrite]
+

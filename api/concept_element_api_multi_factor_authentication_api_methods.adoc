@@ -1,0 +1,36 @@
+---
+permalink: api/concept_element_api_multi_factor_authentication_api_methods.html 
+sidebar: sidebar 
+keywords: multi-factor,MFA,idp,authentication,methods 
+summary: 'Vous pouvez utiliser l"authentification multifacteur \(MFA\) pour gérer les sessions utilisateur à l"aide d"un fournisseur d"identité tiers \(IDP\) via le langage de marquage d"assertion de sécurité \(SAML\).' 
+---
+= Méthodes d'API d'authentification multifacteur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser l'authentification multifacteur (MFA) pour gérer les sessions utilisateur à l'aide d'un fournisseur d'identité tiers via le langage SAML (Security assertion Markup Language).
+
+* xref:reference_element_api_addidpclusteradmin.adoc[AddIdpClusterAdmin]
+* xref:reference_element_api_createidpconfiguration.adoc[CreateIdpConfiguration]
+* xref:reference_element_api_deleteauthsession.adoc[DeleteAuthsession]
+* xref:reference_element_api_deleteauthsessionsbyclusteradmin.adoc[DeleteAuthSessionsByClusterAdmin]
+* xref:reference_element_api_deleteauthsessionsbyusername.adoc[DeleteAuthSessionsByUsername]
+* xref:reference_element_api_deleteidpconfiguration.adoc[DeleteIdpConfiguration]
+* xref:reference_element_api_disableidpauthentication.adoc[DisableIdpAuthentication]
+* xref:reference_element_api_enableidpauthentication.adoc[EnableIdpAuthentication]
+* xref:reference_element_api_getidpauthenticationstate.adoc[GetIdpAuthenticationState]
+* xref:reference_element_api_listactiveauthsessions.adoc[ActiveListences]
+* xref:reference_element_api_listidpconfigurations.adoc[ListIdpconfigurations]
+* xref:reference_element_api_updateidpconfiguration.adoc[UpdateIdpConfiguration]
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

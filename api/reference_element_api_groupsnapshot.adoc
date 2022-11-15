@@ -1,0 +1,118 @@
+---
+permalink: api/reference_element_api_groupsnapshot.html 
+sidebar: sidebar 
+keywords: object,objects,groupSnapshot 
+summary: 'L"objet groupSnapshot contient des informations sur un instantané pour un groupe de volumes. Vous pouvez utiliser la méthode de l"API ListGroupsnapshots pour récupérer les informations de snapshot de groupe.' 
+---
+= GroupSnapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet groupSnapshot contient des informations sur un instantané pour un groupe de volumes. Vous pouvez utiliser le `ListGroupSnapshots` Méthode API pour récupérer les informations de snapshot de groupe.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+
+
+
+ a| 
+CREATETIME
+ a| 
+Le jour et l'heure de formatage de l'UTC+0 pour lesquels le snapshot de groupe a été créé.
+ a| 
+Chaîne de date ISO 8601
+
+
+
+ a| 
+EnableRemoteReplication
+ a| 
+Identifie si le snapshot est activé pour la réplication à distance.
+ a| 
+booléen
+
+
+
+ a| 
+GroupSnapshotID
+ a| 
+ID unique du snapshot de groupe.
+ a| 
+entier
+
+
+
+ a| 
+GroupSnapshotUUID
+ a| 
+UUID du snapshot de groupe.
+ a| 
+chaîne
+
+
+
+ a| 
+membres
+ a| 
+Tableau d'objets contenant des informations sur chaque membre du snapshot de groupe.
+ a| 
+xref:reference_element_api_snapshot.adoc[snapshot] baie
+
+
+
+ a| 
+nom
+ a| 
+Le nom de l'instantané de groupe ou, si aucun n'a été donné, le jour et l'heure du format UTC sur lesquels l'instantané a été créé.
+ a| 
+Chaîne ou chaîne de date ISO 8601
+
+
+
+ a| 
+RemoteStatats
+ a| 
+Matrice contenant l'identifiant universel et l'état de réplication de chaque snapshot distant sur le cluster cible, tel qu'il est visible depuis le cluster source.
+ a| 
+xref:reference_element_api_remoteclustersnapshotstatus.adoc[RemoteClusterSnapshotStatus] baie
+
+
+
+ a| 
+état
+ a| 
+État actuel du snapshot. Valeurs possibles :
+
+* Inconnu : une erreur s'est produite lors de l'obtention de l'état du snapshot.
+* Préparation : ce snapshot est en cours de préparation et n'est pas encore accessible en écriture.
+* RemoteSyncing : cet instantané est répliqué à partir d'un cluster distant.
+* Terminé : ce snapshot a terminé la préparation ou la réplication et est maintenant utilisable.
+* Active : cet instantané est la branche active.
+* Clonage : ce snapshot est impliqué dans une opération CopyVolume.
+
+ a| 
+chaîne
+
+|===
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_listgroupsnapshots.adoc[ListGroupsnapshots]

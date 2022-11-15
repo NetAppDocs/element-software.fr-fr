@@ -1,0 +1,181 @@
+---
+permalink: esds/concept_get_started_esds.html 
+sidebar: sidebar 
+keywords: solidfire esds,software-defined storage, dynamic node rating 
+summary: 'Le service NetApp SolidFire Enterprise SDS (ESDS) offre les avantages de la technologie scale-out SolidFire et des services de données logiciels NetApp Element sur le matériel de votre choix correspondant à la configuration de référence pour SolidFire ESDS. SolidFire ESDS fournit le logiciel NetApp Element indépendamment du matériel sous-jacent. Ainsi, vous pouvez utiliser toutes les fonctionnalités d"Element sur une appliance NetApp ou sur un serveur générique, conforme à la configuration de référence NetApp.' 
+---
+= Découvrez le SDS d'entreprise NetApp SolidFire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le service NetApp SolidFire Enterprise SDS (ESDS) offre les avantages de la technologie scale-out SolidFire et des services de données logiciels NetApp Element sur le matériel de votre choix correspondant à la configuration de référence pour SolidFire ESDS. SolidFire ESDS fournit le logiciel NetApp Element indépendamment du matériel sous-jacent. Ainsi, vous pouvez utiliser toutes les fonctionnalités d'Element sur une appliance NetApp ou sur un serveur générique, conforme à la configuration de référence NetApp.
+
+
+
+== Principales fonctionnalités de SolidFire ESDS
+
+* Vous permet d'installer et d'exécuter le logiciel Element via des conteneurs.
+* Offre des fonctionnalités de stockage haute performance et une fiabilité optimale grâce à des plateformes de serveurs génériques prévalidées. Vous pouvez exécuter des charges de travail de production après avoir installé le logiciel SolidFire ESDS sur la plate-forme de serveurs x86 prescrite et les composants sous-jacents (CPU, mémoire, disques SSD, cache, mise en réseau, firmware), selon la configuration de référence publiée dans https://mysupport.netapp.com/matrix/imt.jsp?components=97283;&solution=1757&isHWU&src=IMT["Matrice d'interopérabilité NetApp (IMT)"].
+* Assure le chiffrement logiciel au repos. Le chiffrement logiciel au repos permet le chiffrement de toutes les données écrites sur les disques SSD d'un cluster de stockage. Ceci fournit une couche principale de chiffrement dans les nœuds ESDS SolidFire qui n'incluent pas les disques à autocryptage (SED).
+* Fournit des performances prévisibles au niveau du cluster à l'aide de règles de QoS.
+* Prend en charge les clusters de quatre à 40 nœuds.
+* Sous licence avec le modèle de licence de capacité terme.
+* Repose sur un nouveau modèle de support pour la fourniture de services de support avec des accords de support avec nos partenaires technologiques.
+
+
+Avec SolidFire ESDS, NetApp propose des conteneurs pour Element que vous puissiez exécuter sur du matériel générique qui répond aux exigences requises. Vous apportez votre propre serveur avec un système d'exploitation déjà installé. Vous utilisez un outil d'automatisation, tel qu'Ansible, pour exécuter le contrôle de conformité de préinstallation et installer SolidFire ESDS. Dans le cadre de vos tâches de configuration préalables à l'installation, vous devez installer le nœud de gestion pour prendre en charge la collecte de bundle de journaux, ainsi que d'autres services, comme SolidFire AIQ. Voici une présentation architecturale qui présente les différents composants de l'environnement ESDS de SolidFire :
+
+image::../media/esds_architecture_overview.png[La présente la vue d'ensemble de l'environnement ESDS.]
+
+
+NOTE: Vous êtes responsable de la configuration, de la surveillance et de la gestion du cycle de vie de la plate-forme ainsi que de la configuration des interfaces réseau et des tables de routage.
+
+Certaines fonctionnalités du logiciel NetApp Element ne sont pas applicables à SolidFire ESDS. Les fonctionnalités natives d'éléments pour les nœuds de stockage SolidFire classiques, comme la surveillance matérielle, les mises à jour de firmware, le chiffrement au repos avec les disques à autocryptage (SED) et le protocole Fibre Channel sont désactivés pour SolidFire ESDS.
+
+* Gestion externe des clés (EKM)
+* Chiffrement matériel
+* Service de tranche multidisques (MDSS)
+* Surveillance du matériel, mises à jour de la plateforme hôte (pilotes, micrologiciels et packages du système d'exploitation, par exemple) et Fibre Channel
+
+
+
+
+== Informations de démarrage rapide
+
+Vous trouverez un ensemble condensé d'instructions pour installer SolidFire ESDS link:../media/SDS_Quick_Start_Guide.pdf["ici"^].
+
+
+
+== Règles de licence
+
+SolidFire ESDS est régi par le modèle de licence de capacité pour terme de NetApp.
+
+Voici une présentation générale des politiques de ce modèle :
+
+* Les coûts logiciels sont basés sur la capacité brute (taille du disque multipliée par le nombre de disques du nœud ou du cluster), ce qui permet de prévoir facilement les coûts logiciels de ce modèle.
+* Vous n'avez pas besoin d'une clé de licence logicielle. Vous recevrez un numéro de série principal pour le logiciel sur la commande, qui est inclus avec le kit de documents que vous recevez après la commande. Vous devez conserver ce numéro de série principal car il sera utilisé pour le support technique.
+
+
+Pour plus d'informations, voir https://www.netapp.com/us/media/sb-4059.pdf["Modèles d'achat pour NetApp HCI et SolidFire"].
+
+
+
+== Interfaces pour l'installation et l'utilisation de SolidFire ESDS
+
+Voici la liste des outils et interfaces utilisés pour l'installation, la surveillance et la gestion de SolidFire ESDS :
+
+[cols="3*"]
+|===
+| Outil/interface | Qui l'utilise | Description 
+
+
+ a| 
+Rôle de vérification de conformité Ansible
+ a| 
+Client
+ a| 
+Pour vérifier que la plate-forme correspond à la configuration de référence indiquée dans le https://mysupport.netapp.com/matrix/imt.jsp?components=97283;&solution=1757&isHWU&src=IMT["Matrice d'interopérabilité NetApp (connexion requise)"^]. Vous devez le faire avant d'installer SolidFire ESDS.
+
+
+
+ a| 
+Rôle d'installation Ansible
+ a| 
+Client
+ a| 
+Pour installer SolidFire ESDS.
+
+
+
+ a| 
+Nœud de gestion
+ a| 
+Client
+ a| 
+Pour accéder aux packs de journalisation et aux services de gestion, tels que AIQ.
+
+
+
+ a| 
+Le contrôle des clouds hybrides NetApp
+ a| 
+Customer, support NetApp
+ a| 
+Pour la création de clusters et la gestion par nœud, ainsi que les collections de journaux à partir du nœud de gestion.
+
+
+
+ a| 
+Hewlett Packard Enterprise (HPE) Integrated Lights Out (iLO)
+ a| 
+Client, HPE support
+ a| 
+Pour collecter des données sur les événements et les statuts pour l'analyse des causes profondes.
+
+
+
+ a| 
+Contrôleur Dell Integrated Dell Remote Access Controller (iDRAC)
+ a| 
+Client, support Dell
+ a| 
+Pour collecter des données sur les événements et les statuts pour l'analyse des causes profondes.
+
+
+
+ a| 
+Interface utilisateur du logiciel NetApp Element
+ a| 
+Client
+ a| 
+Pour gérer les clusters de stockage SolidFire ESDS.
+
+
+
+ a| 
+Active IQ
+ a| 
+Customer, support NetApp
+ a| 
+Pour contrôler l'état de santé du cluster.
+
+
+
+ a| 
+Un seul recouvrement
+ a| 
+Support NetApp
+ a| 
+Pour une collecte de journaux supplémentaire.
+
+|===
+
+
+== Présentation de l'installation
+
+Vous pouvez installer SolidFire ESDS à l'aide d'un outil d'automatisation, tel qu'Ansible.
+
+Voici la présentation générale de l'installation avec Ansible :
+
+image::../media/esds_installation_workflow.png[Affiche le flux de travail d'installation.]
+
+
+
+== Classification dynamique des nœuds
+
+L'évaluation dynamique des nœuds introduite dans Element 12.3.1 vous permet d'exploiter 24 processeurs pris en charge par plate-forme ESDS plutôt que le modèle actuel d'un processeur unique par plate-forme.
+
+L'évaluation dynamique des nœuds est prise en charge sur toutes les plates-formes actuellement prises en charge sur ESDS : DL360, DL380 et R640.
+
+Pour la première version de la classification dynamique des nœuds, la note maximale pour un nœud est de 100 000 IOPS.
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

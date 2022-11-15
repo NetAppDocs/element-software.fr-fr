@@ -1,0 +1,44 @@
+---
+permalink: storage/reference_replication_volume_pairing_messages.html 
+sidebar: sidebar 
+keywords: volume pairing, messages, replication, data protection 
+summary: 'Vous pouvez afficher les messages de couplage de volume pendant le processus de couplage initial à partir de la page paires de volumes sous l"onglet protection des données. Ces messages peuvent s"afficher aux extrémités source et cible de la paire dans la vue liste volumes de réplication.' 
+---
+= Messages de couplage de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher les messages de couplage de volume pendant le processus de couplage initial à partir de la page paires de volumes sous l'onglet protection des données. Ces messages peuvent s'afficher aux extrémités source et cible de la paire dans la vue liste volumes de réplication.
+
+* *PausedDisconnected*
++
+Expiration de la réplication source ou de la synchronisation des RPC. La connexion au cluster distant a été perdue. Vérifiez les connexions réseau au cluster.
+
+* *ResumingConnected*
++
+La synchronisation de réplication distante est maintenant active. Début du processus de synchronisation et attente des données.
+
+* *ResuminingRRSync*
++
+Une seule copie Helix des métadonnées du volume est créée dans le cluster couplée.
+
+* *ResumingLocalSync*
++
+Une copie double hélice des métadonnées du volume est créée dans le cluster associé.
+
+* *ResumingDataTransfer*
++
+Le transfert des données a repris.
+
+* *Actif*
++
+Les volumes sont appariés et les données sont envoyées depuis la source vers le volume cible. Les données sont en cours de synchronisation.
+
+* *Ralenti*
++
+Aucune activité de réplication n'a lieu.
+
+

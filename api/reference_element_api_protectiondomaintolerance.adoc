@@ -1,0 +1,42 @@
+---
+permalink: api/reference_element_api_protectiondomaintolerance.html 
+sidebar: sidebar 
+keywords: object,objects,protectionDomainTolerance 
+summary: 'L"objet protectionDomainTolerance contient des informations sur la capacité du cluster de stockage à continuer la lecture et l"écriture des données en cas d"une ou plusieurs défaillances, toutes dans un seul domaine de protection de type de domaine de protection associé.' 
+---
+= ProtectionDomainTolerance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet protectionDomainTolerance contient des informations sur la capacité du cluster de stockage à continuer la lecture et l'écriture des données en cas d'une ou plusieurs défaillances, toutes dans un seul domaine de protection de type de domaine de protection associé.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ProtectionSchemeTolérances
+ a| 
+Liste d'objets (un pour chaque schéma de protection) contenant des informations de tolérance de défaillance pour le type de domaine de protection associé.
+ a| 
+xref:reference_element_api_protectionschemetolerance.adoc[ProtectionSchemetolérance] baie
+
+
+
+ a| 
+SubleFairForsemble
+ a| 
+Nombre d'échecs simultanés dans le type de domaine de protection associé qui peuvent survenir sans perdre le quorum de l'ensemble.
+ a| 
+entier
+
+|===

@@ -1,0 +1,26 @@
+---
+permalink: storage/task_data_manage_vol_access_group_edit_an_initiator.html 
+sidebar: sidebar 
+keywords: initiator, edit, change alias, chap, credentials 
+summary: 'Vous pouvez modifier l"alias d"un initiateur existant ou ajouter un alias s"il n"existe pas déjà.' 
+---
+= Modifier un initiateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier l'alias d'un initiateur existant ou ajouter un alias s'il n'existe pas déjà.
+
+Pour ajouter un nom de compte CHAP et des informations d'identification par initiateur, vous devez utiliser le `ModifyInitiator` Appel API pour supprimer et ajouter un accès CHAP et des attributs.
+
+Voir link:../api/index.html["Gérez le stockage avec l'API Element"].
+
+.Étapes
+. Cliquez sur *Management* > *Initiators*.
+. Cliquez sur l'icône actions de l'initiateur que vous souhaitez modifier.
+. Cliquez sur *Modifier*.
+. Saisissez un nouvel alias pour l'initiateur dans le champ *alias*.
+. Cliquez sur *Enregistrer les modifications*.
+

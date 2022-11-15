@@ -1,0 +1,121 @@
+---
+permalink: api/reference_element_api_setconfig.html 
+sidebar: sidebar 
+keywords: config,configuration,set,setting,node,setconfig,network,cluster 
+summary: Vous pouvez utiliser la méthode setconfig pour définir les informations sur le réseau et le cluster du nœud. Cette méthode inclut les mêmes paramètres dans une méthode API unique qui sont disponibles avec les méthodes SetClusterConfig et SetNetworkConfig. Seuls les champs que vous souhaitez modifier doivent être inclus avec cette méthode. 
+---
+= Setconfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `SetConfig` méthode de définition des informations sur le réseau et le cluster du nœud. Cette méthode inclut les mêmes paramètres dans une méthode API unique qui sont disponibles à l'aide des deux `SetClusterConfig` et `SetNetworkConfig` méthodes. Seuls les champs que vous souhaitez modifier doivent être inclus avec cette méthode.
+
+
+NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
+
+
+
+== Paramètre
+
+AVERTISSEMENT :
+
+La modification du mode bond sur un nœud peut entraîner une perte temporaire de connectivité réseau.
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+cluster
+ a| 
+Informations de cluster qui identifie la communication entre le nœud de stockage et le cluster de stockage avec lequel il est associé.
+ a| 
+xref:reference_element_api_cluster.adoc[cluster]
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+le réseau
+ a| 
+Types de connexion réseau et paramètres actuels pour chaque interface réseau du nœud.
+ a| 
+xref:reference_element_api_network_all_interfaces.adoc[réseau (toutes les interfaces)]
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+gstn de la
+ a| 
+La configuration actuelle et la nouvelle pour le nœud. Cet objet contient :
+
+* xref:reference_element_api_cluster.adoc[cluster]: Informations sur le cluster qui identifie la façon dont le nœud de stockage communique avec le cluster de stockage auquel il est associé.
+* xref:reference_element_api_network_all_interfaces.adoc[réseau (toutes les interfaces)]: Types de connexion réseau et paramètres actuels pour chaque interface réseau du nœud.
+
+ a| 
+Objet JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+	"method": "SetConfig",
+	"params": {
+		"cluster": {
+			"name": "MyHostname"
+		},
+		"network": {
+			"Bond10G": {
+				"bond-mode": "ALB"
+			}
+		}
+	}
+}
+----
+
+
+== Exemple de réponse
+
+La réponse de cette méthode est la même que celle de la méthode getconfig. Tous les champs de l'affichage de l'objet et des valeurs mises à jour sont affichés lorsque setconfig est utilisé.
+
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_setclusterconfig.adoc[SetClusterConfig]
+* xref:reference_element_api_setnetworkconfig.adoc[SetNetworkConfig]
+* xref:reference_element_api_response_example_getconfig.adoc[Getconfig]
+

@@ -1,0 +1,101 @@
+---
+permalink: api/reference_element_api_testdrives.html 
+sidebar: sidebar 
+keywords: drive,drives,test,testing,validating,hardware,testdrives 
+summary: Vous pouvez utiliser la méthode TestDrives pour exécuter une validation matérielle sur tous les lecteurs du nœud. Cette méthode détecte les défaillances matérielles sur les lecteurs et signale les résultats des tests de validation. 
+---
+= Essais routiers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `TestDrives` méthode d'exécution d'une validation matérielle sur tous les lecteurs du nœud. Cette méthode détecte les défaillances matérielles sur les lecteurs et signale les résultats des tests de validation.
+
+
+
+== Paramètres
+
+Vous pouvez uniquement utiliser le `TestDrives` Méthode sur les nœuds qui ne sont pas « actifs » dans un cluster.
+
+
+NOTE: Ce test prend environ 10 minutes.
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+de force
+ a| 
+Définissez sur true pour tester les disques sur le nœud.
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+quelques minutes
+ a| 
+Spécifie le nombre de minutes pendant lesquelles le test doit être exécuté.
+ a| 
+entier
+ a| 
+10
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+détails
+ a| 
+Informations sur le succès ou l'échec de l'opération de test.
+ a| 
+Objet JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "TestDrives",
+   "params": {
+              "force": true,
+              "minutes" : 10
+             },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie un tableau contenant les résultats de test pour chaque lecteur du nœud.
+
+
+
+== Nouveau depuis la version
+
+9.6

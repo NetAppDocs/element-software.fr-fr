@@ -1,0 +1,79 @@
+---
+permalink: api/reference_element_api_removeclusteradmin.html 
+sidebar: sidebar 
+keywords: cluster,admin,remove,removing,removeclusteradmin 
+summary: 'Vous pouvez utiliser la méthode RemoveClusterAdmin pour supprimer un administrateur de cluster, un administrateur de cluster LDAP ou un administrateur de cluster tiers Identity Provider \(IDP\). Vous ne pouvez pas supprimer le compte d"administrateur de cluster « admin ».' 
+---
+= RemoveClusterAdmin
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `RemoveClusterAdmin` Méthode de suppression d'un administrateur de cluster, d'un administrateur de cluster LDAP ou d'un administrateur de cluster IDP tiers. Vous ne pouvez pas supprimer le compte d'administrateur de cluster « admin ».
+
+
+
+== Paramètre
+
+Lorsqu'un administrateur de cluster IDP est supprimé et que des sessions authentifiées sont associées à un IDP tiers Identity Provider, ces sessions se déconnectent ou subissent éventuellement une perte de droits d'accès au sein de leur session actuelle. La perte des droits d'accès dépendra du fait que l'administrateur de cluster IDP supprimé correspond à l'un des administrateurs de cluster IDP multiples des attributs SAML d'un utilisateur donné. Le reste des administrateurs de clusters IDP correspondants entraîne une réduction des droits d'accès globaux. Les autres types d'utilisateurs administrateur de cluster sont déconnectés lorsqu'ils sont supprimés de leurs administrateurs de cluster.
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+ClusterAdminID
+ a| 
+ClusterAdminID pour l'administrateur du cluster à supprimer.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "RemoveClusterAdmin",
+   "params": {
+     "clusterAdminID"  : 2
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+ "id" : 1
+ "result" : { }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

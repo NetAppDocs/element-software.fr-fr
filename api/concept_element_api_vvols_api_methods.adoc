@@ -1,0 +1,35 @@
+---
+permalink: api/concept_element_api_vvols_api_methods.html 
+sidebar: sidebar 
+keywords: virtual,volume,vvol,API,method 
+summary: 'Les méthodes de l"API de volume virtuel du logiciel Element vous permettent de gérer les volumes virtuels \(VVol\). Vous pouvez afficher les VVol existants avec ces méthodes d"API ainsi que créer, modifier et supprimer des conteneurs de stockage de volume virtuel. Bien que ces méthodes ne puissent pas fonctionner sur les volumes normaux, vous pouvez utiliser les méthodes d"API du volume normales pour lister les informations sur les VVol.' 
+---
+= Méthodes d'API de volume virtuel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avec les méthodes de l'API des volumes virtuels du logiciel Element, vous pouvez gérer les volumes virtuels (VVol). Vous pouvez afficher les VVol existants avec ces méthodes d'API ainsi que créer, modifier et supprimer des conteneurs de stockage de volume virtuel. Bien que ces méthodes ne puissent pas fonctionner sur les volumes normaux, vous pouvez utiliser les méthodes d'API du volume normales pour lister les informations sur les VVol.
+
+* xref:reference_element_api_createstoragecontainer.adoc[CreateStorageContainer]
+* xref:reference_element_api_deletestoragecontainers.adoc[DeleteStorageContainers]
+* xref:reference_element_api_getstoragecontainerefficiency.adoc[GetStorageConatencience]
+* xref:reference_element_api_getvirtualvolumecount.adoc[GetVirtualVolumeCount]
+* xref:reference_element_api_listprotocolendpoints.adoc[ListProtocolEndpoints]
+* xref:reference_element_api_liststoragecontainers.adoc[Listecontainers]
+* xref:reference_element_api_listvirtualvolumebindings.adoc[ListVirtualVolumeBindings]
+* xref:reference_element_api_listvirtualvolumehosts.adoc[ListVirtualVolumeHots]
+* xref:reference_element_api_listvirtualvolumes.adoc[LisVirtualvolumes]
+* xref:reference_element_api_listvirtualvolumetasks.adoc[Tâches ListVirtualVolume]
+* xref:reference_element_api_modifystoragecontainer.adoc[Conteneur de stockage Modifier]
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

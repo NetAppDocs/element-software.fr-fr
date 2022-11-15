@@ -1,0 +1,146 @@
+---
+permalink: api/reference_element_api_testaddressavailability.html 
+sidebar: sidebar 
+keywords: ip,address,availability,test,testing,ensemble,cluster,testaddressavailability 
+summary: Vous pouvez utiliser la méthode TestAddressAvailability pour vérifier si une certaine adresse IP est utilisée sur une interface du cluster de stockage. 
+---
+= Disponibilité de TestAddress
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `TestAddressAvailability` Méthode pour vérifier si une certaine adresse IP est utilisée sur une interface du cluster de stockage.
+
+
+NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+interface
+ a| 
+Interface réseau cible (par exemple, eth0, Bond10G, etc.).
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+adresse
+ a| 
+Adresse IP à rechercher sur l'interface cible.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+VirtualNetworkTag
+ a| 
+ID du VLAN cible.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+délai dépassé
+ a| 
+Délai en secondes pour le test de l'adresse cible.
+ a| 
+entier
+ a| 
+5
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+adresse
+ a| 
+L'adresse IP testée.
+ a| 
+chaîne
+
+
+
+ a| 
+disponibilité
+ a| 
+Vrai si l'adresse IP demandée est utilisée, et faux si ce n'est pas le cas.
+ a| 
+booléen
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+	"method": "TestAddressAvailability",
+	"params": {
+		"interface": "Bond10G",
+		"address": "10.0.0.1",
+		"virtualNetworkTag": 1234
+	}
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+	"id": 1,
+	"result": {
+		"address":"10.0.0.1",
+		"available": true
+	}
+}
+----
+
+
+== Nouveau depuis la version
+
+11.0

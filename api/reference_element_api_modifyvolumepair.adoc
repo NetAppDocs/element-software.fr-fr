@@ -1,0 +1,118 @@
+---
+permalink: api/reference_element_api_modifyvolumepair.html 
+sidebar: sidebar 
+keywords: volume,pair,pairs,modify,modifying,edit,editing,changing,change,modifyvolumepair,paired 
+summary: 'Vous pouvez utiliser la méthode ModityVolumepair pour mettre en pause ou redémarrer la réplication entre deux volumes. Cette méthode est définie sur le volume source \(le volume avec accès en lecture/écriture\).' 
+---
+= ModityVolumepair
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ModifyVolumePair` méthode permettant de mettre en pause ou de redémarrer la réplication entre deux volumes. Cette méthode est définie sur le volume source (volume avec accès en lecture/écriture).
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+
+
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+ID de volume
+ a| 
+Numéro d'identification du volume à modifier.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+Manuel pausedManuel
+ a| 
+La réplication à distance peut être mise en pause ou redémarrée sur le volume source (lecture/écriture). Valeurs possibles :
+
+* True : interrompre la réplication du volume.
+* Faux : redémarrez la réplication du volume.
+
+
+Si aucune valeur n'est spécifiée, aucune modification n'est apportée à la réplication.
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+mode
+ a| 
+Mode de réplication de volume. Valeurs possibles :
+
+* Asynchrone : les écritures sont reconnues lorsqu'elles s'écrivent localement. Le cluster n'attend pas que les écritures soient répliquées sur le cluster cible.
+* Synchrone : la source reconnaît l'écriture lorsque les données sont stockées localement et sur le cluster distant.
+* SnapshotsOnly : seuls les snapshots créés sur le cluster source sont répliqués. Les écritures actives du volume source ne sont pas répliquées.
+
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode n'a pas de valeur de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "ModifyVolumePair",
+  "params": {
+    "pausedManual": false,
+    "volumeID": 5,
+    "mode": "sync"
+   },
+  "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {}
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

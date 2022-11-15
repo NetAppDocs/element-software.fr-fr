@@ -1,0 +1,81 @@
+---
+permalink: storage/task_snapmirror_create_snapmirror_relationship.html 
+sidebar: sidebar 
+keywords: relationships, create, snapmirror, ui 
+summary: 'Vous devez créer une relation SnapMirror dans l"interface utilisateur NetApp Element.' 
+---
+= Créer une relation SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez créer une relation SnapMirror dans l'interface utilisateur NetApp Element.
+
+
+NOTE: Lorsqu'un volume n'est pas encore activé pour SnapMirror et que vous sélectionnez de créer une relation dans l'interface utilisateur d'Element, SnapMirror est automatiquement activé sur ce volume.
+
+SnapMirror est activé sur le volume.
+
+.Étapes
+. Cliquez sur *Management* > *volumes*.
+. Cliquez sur l'icône *actions* pour le volume qui doit faire partie de la relation.
+. Cliquez sur *Créer une relation SnapMirror*.
+. Dans la boîte de dialogue *Créer une relation SnapMirror*, sélectionnez un noeud final dans la liste *Endpoint*.
+. Sélectionnez si la relation sera créée à l'aide d'un nouveau volume ONTAP ou d'un volume ONTAP existant.
+. Pour créer un nouveau volume ONTAP dans l'interface utilisateur Element, cliquez sur *Créer un nouveau volume*.
++
+.. Sélectionnez *Storage Virtual machine* pour cette relation.
+.. Sélectionnez *Aggregate* dans la liste déroulante.
+.. Dans le champ *Nom du volume suffixe*, entrez un suffixe.
++
+
+NOTE: Le système détecte le nom du volume source et le copie dans le champ *Nom du volume*. Le suffixe que vous entrez ajoute le nom.
+
+.. Cliquez sur *Créer un volume de destination*.
+
+
+. Pour utiliser un volume ONTAP existant, cliquez sur *utiliser un volume existant*.
++
+.. Sélectionnez *Storage Virtual machine* pour cette relation.
+.. Sélectionnez le volume cible de cette nouvelle relation.
+
+
+. Dans la section *Détails de la relation*, sélectionnez une stratégie. Si la stratégie sélectionnée possède des règles de conservation, la table règles affiche les règles et les étiquettes associées.
+. *Facultatif* : sélectionnez un programme.
++
+Cette valeur détermine la fréquence à laquelle la relation crée des copies.
+
+. *Facultatif* : dans le champ *Limit Bandwidth to*, entrez la quantité maximale de bande passante qui peut être utilisée par les transferts de données associés à cette relation.
+. Consultez les informations complémentaires :
++
+** *État* : état de relation actuel du volume de destination. Les valeurs possibles sont :
++
+*** Non initialisé : le volume de destination n'a pas été initialisé.
+*** Snapmiroité : le volume de destination a été initialisé et prêt à recevoir les mises à jour SnapMirror.
+*** Broken-off : le volume de destination est en lecture/écriture et des instantanés sont présents.
+
+
+** *Statut* : état actuel de la relation. Les valeurs possibles sont inactive, transférer, vérifier, suspendre, suspendre, en file d'attente, préparation, finalisation, abandon et interruption.
+** *Temps de décalage* : durée en secondes pendant laquelle le système de destination est en retard derrière le système source. Le temps de décalage ne doit pas dépasser l'intervalle de planification de transfert.
+** *Limite de bande passante* : la quantité maximale de bande passante qui peut être consommée par les transferts de données associés à cette relation.
+** *Dernier transfert* : horodatage du dernier instantané transféré. Cliquez pour plus d'informations.
+** *Nom de la politique* : nom de la règle ONTAP SnapMirror pour la relation.
+** *Type de politique* : type de règle ONTAP SnapMirror sélectionnée pour la relation. Les valeurs possibles sont :
++
+*** async_mirror
+*** coffre-fort_miroir
+
+
+** *Nom de l'horaire* : nom de l'horaire préexistant sur le système ONTAP sélectionné pour cette relation.
+
+
+. Pour ne pas s'initialiser à ce stade, assurez-vous que la case *Initialize* n'est pas cochée.
++
+
+NOTE: L'initialisation peut prendre beaucoup de temps. Il peut être préférable de l'exécuter pendant les heures creuses. L'initialisation effectue un transfert de base ; elle effectue une copie Snapshot du volume source, puis transfère cette copie ainsi que tous les blocs de données qu'elle référence au volume de destination. Vous pouvez initialiser manuellement ou utiliser une planification pour démarrer le processus d'initialisation (et les mises à jour suivantes) en fonction du planning.
+
+. Cliquez sur *Créer relation*.
+. Cliquez sur *Data protection* > *SnapMirror Relationship* pour afficher cette nouvelle relation SnapMirror.
+

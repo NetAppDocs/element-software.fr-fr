@@ -1,0 +1,26 @@
+---
+permalink: storage/task_troubleshoot_power_down_a_cluster.html 
+sidebar: sidebar 
+keywords: cluster, power down, mvip 
+summary: Vous pouvez mettre hors tension un cluster entier après avoir contacté le support NetApp et avoir effectué les étapes préliminaires. 
+---
+= Mettez un cluster hors tension
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez mettre hors tension un cluster entier après avoir contacté le support NetApp et avoir effectué les étapes préliminaires.
+
+Préparer le cluster à l'arrêt en procédant comme suit :
+
+* Arrête toutes les E/S.
+* Déconnectez toutes les sessions iSCSI.
++
+.. Accédez à l'adresse IP virtuelle de gestion (MVIP) du cluster pour ouvrir l'interface utilisateur Element.
+.. Notez les nœuds répertoriés dans la liste nœuds.
+.. Exécutez la méthode de l'API Shutdown avec l'option halt spécifiée sur chaque ID de noeud du cluster.
+
+
+

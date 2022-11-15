@@ -1,0 +1,40 @@
+---
+permalink: storage/reference_data_manage_volumes_qos_policies_details.html 
+sidebar: sidebar 
+keywords: qos policies 
+summary: 'Vous pouvez afficher les détails des stratégies de qualité de service à partir de l"onglet gestion.' 
+---
+= Détails des règles de QoS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher les détails des stratégies de qualité de service à partir de l'onglet gestion.
+
+* *ID*
++
+ID généré par le système pour la règle de QoS.
+
+* *Nom*
++
+Nom défini par l'utilisateur pour la politique de QoS.
+
+* *IOPS min*
++
+Le nombre minimal d'IOPS garanti pour le volume.
+
+* *IOPS max*
++
+Le nombre maximal d'IOPS autorisé pour le volume.
+
+* *IOPS en rafale*
++
+Le nombre maximal d'IOPS autorisé sur une courte période pour le volume. Valeur par défaut = 15,000.
+
+* *Volumes*
++
+Affiche le nombre de volumes utilisant la règle. Ce nombre est lié à une table des volumes pour lesquels la règle est appliquée.
+
+

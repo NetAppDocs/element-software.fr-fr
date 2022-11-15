@@ -1,0 +1,43 @@
+---
+permalink: setup/task_setup_create_a_volume_access_group_for_fibre_channel_clients.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les groupes d"accès aux volumes permettent la communication entre les clients Fibre Channel et les volumes d"un système de stockage SolidFire. Le mappage des initiateurs clients Fibre Channel \(WWPN\) sur les volumes d"un groupe d"accès de volume permet d"obtenir des E/S de données sécurisées entre un réseau Fibre Channel et un volume SolidFire.' 
+---
+= Créez un groupe d'accès de volume pour les clients Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les groupes d'accès aux volumes permettent la communication entre les clients Fibre Channel et les volumes d'un système de stockage SolidFire. Le mappage des initiateurs clients Fibre Channel (WWPN) sur les volumes d'un groupe d'accès de volume permet d'obtenir des E/S de données sécurisées entre un réseau Fibre Channel et un volume SolidFire.
+
+Vous pouvez également ajouter des initiateurs iSCSI à un groupe d'accès de volume. Les initiateurs accèdent aux mêmes volumes du groupe d'accès de volume.
+
+.Étapes
+. Cliquez sur *Management* > *Access Groups*.
+. Cliquez sur *Créer un groupe d'accès*.
+. Entrez un nom pour le groupe d'accès au volume dans le champ *Nom*.
+. Sélectionnez et ajoutez les initiateurs Fibre Channel dans la liste *initiateurs Fibre Channel*.
++
+
+NOTE: Vous pouvez ajouter ou supprimer des initiateurs ultérieurement.
+
+. *Facultatif:* sélectionnez et ajoutez un initiateur iSCSI dans la liste *initiateurs*.
+. Pour connecter des volumes au groupe d'accès, effectuez les opérations suivantes :
++
+.. Sélectionnez un volume dans la liste *volumes*.
+.. Cliquez sur *attacher un volume*.
+
+
+. Cliquez sur *Créer un groupe d'accès*.
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+

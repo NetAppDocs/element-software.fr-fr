@@ -1,0 +1,107 @@
+---
+permalink: api/reference_element_api_clusterpair.html 
+sidebar: sidebar 
+keywords: objects,object,clusterPair 
+summary: 'L"objet clusterpair contient des informations sur les clusters associés au cluster local. Vous pouvez récupérer la liste des objets clusterpair pour le cluster local avec la méthode ListClusterpair.' 
+---
+= Clusterpair
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet clusterpair contient des informations sur les clusters associés au cluster local. Vous pouvez récupérer la liste des objets clusterpair pour le cluster local avec la méthode ListClusterpair.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+Nom du cluster
+ a| 
+Nom de l'autre cluster de la paire.
+ a| 
+chaîne
+
+
+
+ a| 
+ClusterPairID
+ a| 
+ID unique attribué à chaque cluster de la paire.
+ a| 
+entier
+
+
+
+ a| 
+ClusterPairUUID
+ a| 
+ID universel unique de la paire de clusters.
+ a| 
+chaîne
+
+
+
+ a| 
+UUID
+ a| 
+Identificateur unique du cluster distant dans la paire de clusters.
+ a| 
+entier
+
+
+
+ a| 
+latence
+ a| 
+La latence, en millisecondes, entre clusters.
+ a| 
+entier
+
+
+
+ a| 
+mvip
+ a| 
+Adresse IP de la connexion de gestion pour les clusters jumelés.
+ a| 
+chaîne
+
+
+
+ a| 
+état
+ a| 
+L'état de la connexion entre les clusters jumelés. Valeurs possibles :
+
+* Non configuré
+* Connecté
+* Mal configuré
+* Déconnecté
+
+ a| 
+chaîne
+
+
+
+ a| 
+version
+ a| 
+Version d'élément de l'autre cluster de la paire.
+ a| 
+chaîne
+
+|===
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_listclusterpairs.adoc[ListClusterpairs]

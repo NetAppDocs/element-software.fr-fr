@@ -1,0 +1,56 @@
+---
+permalink: api/reference_element_api_protectiondomainlevel.html 
+sidebar: sidebar 
+keywords: object,objects,protectionDomainLevel 
+summary: 'L"objet protectionDomainLevel contient des informations sur la tolérance actuelle et les niveaux de résilience du cluster de stockage. Les niveaux de tolérance indiquent la capacité du cluster à continuer la lecture et l"écriture des données en cas de défaillance, et les niveaux de résilience indiquent la capacité du cluster à se réparer automatiquement à partir d"une ou plusieurs défaillances dans son domaine de protection associé.' 
+---
+= ProtectionDomainLevel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet protectionDomainLevel contient des informations sur les niveaux de tolérance et de résilience actuels du cluster de stockage. Les niveaux de tolérance indiquent la capacité du cluster à continuer la lecture et l'écriture des données en cas de défaillance, tandis que les niveaux de résilience indiquent la capacité du cluster à se réparer automatiquement après une ou plusieurs défaillances du type de domaine de protection associé.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ProtectionDomainType
+ a| 
+Le type du domaine de protection qui possède la tolérance et la résilience associées. Valeurs possibles :
+
+* Nœud : nœuds individuels.
+* Châssis : n'importe quel nœud ou nœud de stockage dans un seul châssis.
+* Personnalisée : tous les nœuds de stockage dans un domaine de protection défini par le client unique.
+
+ a| 
+chaîne
+
+
+
+ a| 
+résilience
+ a| 
+La résilience actuelle de ce cluster du point de vue de ce type de domaine de protection.
+ a| 
+xref:reference_element_api_protectiondomainresiliency.adoc[ProtectionDomainrésilience]
+
+
+
+ a| 
+tolérance
+ a| 
+Tolérance actuelle de ce cluster du point de vue de ce type de domaine de protection.
+ a| 
+xref:reference_element_api_protectiondomaintolerance.adoc[ProtectionDomainTolerance]
+
+|===

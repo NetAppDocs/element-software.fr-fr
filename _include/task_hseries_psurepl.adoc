@@ -1,0 +1,106 @@
+= Trouvez plus d'informations
+:allow-uri-read: 
+
+
+Chaque châssis comprend deux blocs d'alimentation pour la redondance de l'alimentation. Si un bloc d'alimentation est défectueux, remplacez-le dès que possible pour vous assurer que le châssis dispose d'une source d'alimentation redondante.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez déterminé que l'unité d'alimentation est défectueuse.
+* Vous avez une unité d'alimentation de remplacement.
+* Vous avez vérifié que le second bloc d'alimentation fonctionne.
+* Vous avez un bracelet antistatique (ESD), ou vous avez pris d'autres précautions antistatiques.
+
+
+La procédure de remplacement s'applique aux modèles de nœuds suivants :
+
+* Châssis NetApp HCI à deux unités de rack (2U) à quatre nœuds
+* Un châssis de stockage H610S (1U
++
+
+NOTE: Dans le cas des H610S, les termes « nœud » et « châssis » sont utilisés de manière interchangeable, parce que les nœuds et les châssis ne sont pas des composants distincts, contrairement au châssis 2U à quatre nœuds.
+
+
+
+Les alarmes de l'interface utilisateur de l'élément fournissent des informations sur l'unité d'alimentation défectueuse, en se référant à elle en tant que PS1 ou PS2. Dans un châssis NetApp HCI 2U à quatre nœuds, PS1 fait référence à l'unité située sur la ligne supérieure du châssis et PS2 à l'unité située sur la ligne inférieure du châssis. Vous pouvez remplacer l'unité d'alimentation défectueuse pendant que votre châssis est sous tension et opérationnel, tant que l'unité d'alimentation redondante fonctionne.
+
+
+NOTE: Si vous remplacez les deux blocs d'alimentation d'un nœud, les blocs d'alimentation doivent avoir le même numéro de pièce et la même puissance. Un non-concordance des blocs d'alimentation peut endommager le système.
+
+.Étapes
+. Localisez l'unité d'alimentation défectueuse dans le châssis. Le voyant de l'unité défectueuse s'allume en orange.
++
+
+NOTE: Les unités d'alimentation sont situées différemment en fonction du type de châssis.
+
++
+Reportez-vous aux images ci-dessous pour connaître l'emplacement des blocs d'alimentation :
+
++
+[cols="2*"]
+|===
+| Modèle | Emplacement des unités d'alimentation 
+
+
+| Châssis de stockage NetApp HCI 2U à quatre nœuds  a| 
+image::storage_chassis_psu.png[La montre les unités d'alimentation en 2U]
+
+
+NOTE: Les nœuds de votre châssis peuvent paraître différents selon le type de nœuds (stockage ou calcul) dont vous disposez.
+
+
+
+| Châssis H610S  a| 
+image::h610s_psu.png[Affiche les unités d'alimentation dans un châssis H610S.]
+
+|===
+. Identifiez le nœud approprié à l'aide de la balise bleue de retrait ou du numéro de série. La balise bleue indique le numéro de série (S/N) et la disposition des disques. Vérifiez le numéro de série du nœud à réparer.
++
+** Si vous remplacez les deux blocs d'alimentation, passez à l'étape 3.
+** Si vous remplacez une seule unité d'alimentation, passez à l'étape 4.
+
+
+. Vérifiez que le nœud a été hors tension ou prêt à être mis hors tension pour le service. Notez ce qui suit :
++
+** Un nœud qui a été mis hors tension n'affiche aucune LED d'alimentation bleue sur les disques ou le bouton d'alimentation.
+** Un nœud qui n'a pas encore été arrêté affiche les LED bleues sur les disques et le bouton d'alimentation.
+** Un nœud arrêté et prêt pour le service affiche une LED d'unité d'alimentation clignotante qui clignote pour être allumée (vert) et éteinte (pas de couleur).
+** Un nœud qui n'a pas encore été arrêté affiche des LED vertes relatives aux alimentations.
+
+
+. Débranchez le cordon d'alimentation de l'unité d'alimentation ou des deux cordons d'alimentation en cas de remplacement des deux unités.
+. Soulevez la poignée de came et appuyez sur le loquet bleu pour faire glisser l'unité d'alimentation.
++
+image::psu-remove.gif[Montre la poignée de came soulevée et l'unité d'alimentation glissée hors du châssis.]
+
++
+
+NOTE: L'illustration en est un exemple. L'emplacement des unités d'alimentation dans le châssis et la couleur du bouton de déverrouillage varient en fonction du type de châssis que vous avez.
+
++
+
+IMPORTANT: Veillez à utiliser les deux mains pour supporter le poids de l'unité d'alimentation.
+
++
+Répétez les étapes 3, 4 et 5 en cas de remplacement d'une seconde unité d'alimentation.
+
+. Repérez l'étiquette sur l'unité d'alimentation que vous avez retirée du châssis. L'étiquette contient des détails sur le fabricant et la puissance de sortie.
++
+
+NOTE: Ne remplacez pas le bloc d'alimentation si la puissance de l'alimentation de votre RMA ne correspond pas à la puissance de l'alimentation supprimée. Contactez le support NetApp pour les étapes suivantes.
+
+. À l'aide des deux mains, alignez les bords de l'unité d'alimentation avec l'ouverture du châssis, poussez doucement l'unité dans le châssis à l'aide de la poignée de came jusqu'à ce qu'elle s'enclenche et remettez la poignée de came en position verticale.
++
+image::psu-install.gif[La illustre l'unité d'alimentation en cours d'installation dans le châssis.]
+
+. Branchez un ou les deux cordons d'alimentation.
+. Si vous avez remplacé les deux blocs d'alimentation, accédez à l'avant du nœud et appuyez sur le bouton d'alimentation pour mettre les nœuds sous tension. Après la mise sous tension, le voyant du bouton d'alimentation s'allume en bleu fixe. Les voyants bleus des lecteurs et le bouton d'identification clignotent.
+. Retournez l'unité défectueuse à NetApp en suivant les instructions dans la boîte qui vous a été expédiée.
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

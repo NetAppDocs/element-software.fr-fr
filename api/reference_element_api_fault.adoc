@@ -1,0 +1,174 @@
+---
+permalink: api/reference_element_api_fault.html 
+sidebar: sidebar 
+keywords: object,objects,fault 
+summary: 'L"objet de panne contient des informations sur les défaillances détectées dans le cluster. La méthode ListClusterFaults renvoie les informations de défaillance du cluster.' 
+---
+= erreur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet de panne contient des informations sur les défaillances détectées dans le cluster. Le `ListClusterFaults` la méthode renvoie les informations d'erreur du cluster.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ClusterFaultID
+ a| 
+ID unique associé à chaque panne du cluster.
+ a| 
+entier
+
+
+
+ a| 
+code
+ a| 
+Le code inconvénient correspondant à l'anomalie spécifique détectée. Pour plus de détails, voir codes d'anomalie du tableau de bord.
+ a| 
+chaîne
+
+
+
+ a| 
+les données
+ a| 
+Informations supplémentaires sur les erreurs.
+ a| 
+Objet JSON
+
+
+
+ a| 
+date
+ a| 
+Heure actuelle au format UTC+0.
+ a| 
+Chaîne ISO 8601
+
+
+
+ a| 
+détails
+ a| 
+La description du défaut avec des détails supplémentaires.
+ a| 
+chaîne
+
+
+
+ a| 
+ID de conduite
+ a| 
+Le premier ID de disque dans la liste des ID de disque. Si la liste des ID de conduite est vide (ce qui signifie qu'aucune anomalie n'a été renvoyée pour traiter les lecteurs), cette valeur est 0.
+ a| 
+entier
+
+
+
+ a| 
+Identifiants de transmission
+ a| 
+Liste des valeurs d'ID de conduite pour les entraînements auxquelles cette anomalie se rapporte. Inclus pour les pannes liées aux entraînements. S'il n'y en a pas, il s'agit d'un tableau vide.
+ a| 
+tableau entier
+
+
+
+ a| 
+ID denoeud HardwareFaultID
+ a| 
+Identifiant attribué à une défaillance matérielle sur le cluster.
+ a| 
+entier
+
+
+
+ a| 
+ID de nœud
+ a| 
+ID de nœud du nœud auquel cette anomalie se rapporte. Inclus pour les pannes de nœud et de disque, sinon réglé sur 0.
+ a| 
+entier
+
+
+
+ a| 
+résolu
+ a| 
+L'état résolu de l'anomalie. Valeurs possibles :
+
+* True : le défaut n'est plus détecté.
+* Faux : le défaut est toujours présent.
+
+ a| 
+booléen
+
+
+
+ a| 
+Date de résolution
+ a| 
+Date et heure de résolution de l'anomalie.
+ a| 
+Chaîne ISO 8601
+
+
+
+ a| 
+Service
+ a| 
+Service associé à l'anomalie. Cette valeur est « 0 » (zéro) si le défaut n'est pas associé à un service.
+ a| 
+entier
+
+
+
+ a| 
+gravité
+ a| 
+Gravité de l'anomalie. Valeurs possibles :
+
+* Avertissement : un problème mineur. Le cluster fonctionne et les mises à niveau sont autorisées à ce niveau de sévérité.
+* Erreur : défaillance qui ne devrait généralement pas affecter le service (sauf dégradation possible des performances ou perte de la haute disponibilité). Certaines fonctions peuvent être désactivées.
+* Critique : une défaillance grave qui affecte le service. Le système ne peut pas traiter les demandes d'API ou les E/S client et risque de perte de données.
+* BEST Practice : anomalies déclenchées par une configuration sous-optimale du système.
+
+ a| 
+chaîne
+
+
+
+ a| 
+type
+ a| 
+Le type de défaut. Valeurs possibles :
+
+* Nœud : erreur affectant un nœud entier.
+* Lecteur : défaut affectant un lecteur individuel.
+* Cluster : une panne affectant l'ensemble du cluster.
+* Service : une panne affectant un service sur le cluster.
+* Volume : erreur affectant un volume individuel.
+
+ a| 
+chaîne
+
+|===
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_listclusterfaults.adoc[ListClusterFaults]
+* link:../storage/reference_monitor_cluster_fault_codes.html["Codes d'anomalie du bloc d'instruments"]
+

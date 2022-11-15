@@ -1,0 +1,44 @@
+---
+permalink: storage/concept_troubleshoot_nodes.html 
+sidebar: sidebar 
+keywords: troubleshoot, nodes removing 
+summary: 'Vous pouvez supprimer des nœuds d"un cluster à des fins de maintenance ou de remplacement. Vous devez utiliser l"interface ou l"API NetApp Element pour supprimer les nœuds avant de les mettre hors ligne.' 
+---
+= Résoudre les problèmes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer des nœuds d'un cluster à des fins de maintenance ou de remplacement. Vous devez utiliser l'interface ou l'API NetApp Element pour supprimer les nœuds avant de les mettre hors ligne.
+
+La procédure à suivre pour supprimer les nœuds de stockage est la suivante :
+
+* Assurez-vous que la capacité du cluster est suffisante pour créer une copie des données sur le nœud.
+* Supprimez des disques du cluster à l'aide de l'interface utilisateur ou de la méthode API RemoveDrives.
++
+Ainsi, le système est-il en mesure de migrer les données des disques du nœud vers d'autres disques du cluster. Le temps nécessaire à ce processus dépend de la quantité de données à migrer.
+
+* Ne supprime pas du cluster le nœud.
+
+
+Avant de mettre un nœud hors tension ou sous tension, gardez les points suivants à l'esprit :
+
+* La mise hors tension des nœuds et des clusters comporte des risques s'ils ne sont pas correctement effectués.
++
+Mettre un nœud hors tension doit s'effectuer sous la direction du support NetApp.
+
+* Si un nœud a été arrêté plus de 5.5 minutes sous n'importe quel type de condition d'arrêt, la protection des données Double Helix débute la tâche d'écrire des blocs répliqués sur un autre nœud afin de répliquer les données. Dans ce cas, contactez le support NetApp pour obtenir de l'aide sur l'analyse du nœud défaillant.
+* Pour redémarrer ou mettre un nœud hors tension en toute sécurité, vous pouvez utiliser la commande Shutdown API.
+* Si un nœud est en panne ou hors ligne, vous devez contacter le support NetApp avant de le remettre en ligne.
+* Une fois qu'un nœud est remis en ligne, vous devez réintégrer les disques dans le cluster, selon sa durée de mise hors service.
+
+
+
+
+== Pour en savoir plus
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2844772["Remplacement d'un châssis SolidFire défectueux"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2846861["Remplacement d'un nœud de la série H600S défectueux"]

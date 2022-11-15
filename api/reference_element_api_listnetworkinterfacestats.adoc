@@ -1,0 +1,84 @@
+---
+permalink: api/reference_element_api_listnetworkinterfacestats.html 
+sidebar: sidebar 
+keywords: network,interface,stats,statistics,interfaces,list,listing,listnetworkinterfacestats 
+summary: 'Vous pouvez utiliser la méthode ListNetworkInterfaceStats pour lister les statistiques relatives à chaque interface réseau sur un nœud. Cette méthode d"API est destinée à être utilisée sur des nœuds individuels. L"authentification par ID utilisateur et mot de passe est requise pour l"accès aux nœuds individuels. Cependant, vous pouvez utiliser cette méthode sur le cluster si la force du paramètre reçoit la valeur true dans l"appel de méthode. Lorsque le paramètre est utilisé sur le cluster, toutes les interfaces sont répertoriées.' 
+---
+= ListeInterfaceStats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ListNetworkInterfaceStats` méthode permettant de répertorier des statistiques telles que le nombre de paquets abandonnés et les différents types d'erreurs pour chaque interface réseau d'un nœud. Cette méthode d'API est destinée à être utilisée sur des nœuds individuels. L'authentification par ID utilisateur et mot de passe est requise pour l'accès aux nœuds individuels. Cependant, vous pouvez utiliser cette méthode sur le cluster si la force du paramètre reçoit la valeur true dans l'appel de méthode. Lorsque le paramètre est utilisé sur le cluster, les statistiques réseau de toutes les interfaces sont répertoriées.
+
+
+
+== Paramètre
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+| NetworkInterfaceStats | Une liste d'informations statistiques réseau, telles que le nombre de paquets abandonnés et de divers types d'erreurs réseau, pour chaque interface réseau d'un noeud de stockage. | xref:reference_element_api_networkinterfacestats.adoc[NetworkInterfaceStats] baie 
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+"method": "ListNetworkInterfaceStats",
+"params": {},
+"id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "networkInterfaceStats": [
+        {
+            "rxErrors": 1,
+            "rxPackets": 1,
+            "txErrors": 1,
+            "rxDropped": 1,
+            "txCarrierErrors": 1,
+            "rxOverErrors": 1,
+            "rxMissedErrors": 1,
+            "txPackets": 1,
+            "name": "if_name",
+            "rxLengthErrors": 1,
+            "collisions": 1,
+            "rxFifoErrors": 1,
+            "txBytes": 1,
+            "rxBytes": 1,
+            "rxFrameErrors": 1,
+            "rxCrcErrors": 1,
+            "txFifoErrors": 1
+        }
+    ]
+}
+----
+
+
+== Nouveau depuis la version
+
+12.3

@@ -1,0 +1,42 @@
+---
+permalink: api/reference_element_api_fipserrornodereport.html 
+sidebar: sidebar 
+keywords: objects,object,fipsErrorNodeReport 
+summary: 'L"objet fipsErrorNodeReport contient des informations d"erreur pour chaque noeud qui ne répond pas avec des informations sur le support FIPS 140-2 lorsque vous le interrogez avec la méthode GetFipsReport.' 
+---
+= FipsErrorNodeReport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet fipsErrorNodeReport contient des informations d'erreur pour chaque noeud qui ne répond pas avec des informations sur le support FIPS 140-2 lorsque vous l'interrogez avec le `GetFipsReport` méthode.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ID de nœud
+ a| 
+ID du nœud qui n'a pas répondu.
+ a| 
+entier
+
+
+
+ a| 
+erreur
+ a| 
+Objet JSON contenant les informations d'erreur.
+ a| 
+Objet JSON
+
+|===

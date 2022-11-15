@@ -1,0 +1,91 @@
+---
+permalink: api/reference_element_api_setremotelogginghosts.html 
+sidebar: sidebar 
+keywords: remote,logging,host,hosts,set,setting,setremotelogginghosts 
+summary: 'Vous pouvez utiliser la méthode SetRemoteLoggingids pour configurer la journalisation à distance des nœuds du cluster de stockage vers un serveur de journaux centralisé ou des serveurs. La journalisation à distance est effectuée via TCP à l"aide du port par défaut 514. Cette API ne s"ajoute pas aux hôtes de journalisation existants. Elle remplace ce qui existe actuellement par de nouvelles valeurs spécifiées par cette méthode API. Vous pouvez utiliser GetRemoteLoggingigs pour déterminer ce que sont les hôtes de consignation actuels, puis utiliser SetRemoteLoggingits pour définir la liste désirée des hôtes de consignation actuels et nouveaux.' 
+---
+= SetRemoteLoggingids
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `SetRemoteLoggingHosts` méthode de configuration de la journalisation à distance à partir des nœuds du cluster de stockage vers un ou plusieurs serveurs de journaux centralisés. La journalisation à distance est effectuée via TCP à l'aide du port par défaut 514. Cette API ne s'ajoute pas aux hôtes de journalisation existants. Elle remplace ce qui existe actuellement par de nouvelles valeurs spécifiées par cette méthode API. Vous pouvez utiliser `GetRemoteLoggingHosts` pour déterminer ce que sont les hôtes de journalisation actuels, puis utilisez `SetRemoteLoggingHosts` pour définir la liste souhaitée des hôtes de journalisation actuels et nouveaux.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+Distanciles
+ a| 
+Liste des hôtes qui sont des destinataires de messages de journal.
+ a| 
+xref:reference_element_api_loggingserver.adoc[Serveur de consignation] baie
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "id": 1,
+   "method": "SetRemoteLoggingHosts",
+   "params": {
+     "remoteHosts": [
+        {
+          "host": "172.16.1.20",
+          "port": 10514
+        },
+        {
+          "host": "172.16.1.25"
+        }
+      ]
+   }
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "id" : 1,
+    "result" : {}
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_getremotelogginghosts.adoc[GetRemoteLoggingits]

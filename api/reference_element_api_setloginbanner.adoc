@@ -1,0 +1,125 @@
+---
+permalink: api/reference_element_api_setloginbanner.html 
+sidebar: sidebar 
+keywords: terms,use,banner,configure,set,setting,setloginbanner,login 
+summary: 'Vous pouvez utiliser la méthode SetLoginBanner pour configurer la bannière Conditions d"utilisation que les utilisateurs voient lorsqu"ils se connectent à l"interface Web d"Element.' 
+---
+= SetLoginBanner
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `SetLoginBanner` Méthode de configuration de la bannière Conditions d'utilisation que les utilisateurs voient lorsqu'ils se connectent à l'interface Web d'Element.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+bannière
+ a| 
+Texte souhaité de la bannière Conditions d'utilisation. La longueur maximale autorisée est de 4,096 caractères.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+activé
+ a| 
+Statut de la bannière Conditions d'utilisation. Valeurs possibles :
+
+* `true`: La bannière Conditions d'utilisation s'affiche lors de la connexion à l'interface Web.
+* `false`: La bannière Conditions d'utilisation ne s'affiche pas lors de la connexion à l'interface Web.
+
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+bannière
+ a| 
+Texte actuel de la bannière Conditions d'utilisation. Cette valeur peut contenir du texte même lorsque la bannière est désactivée.
+ a| 
+chaîne
+
+
+
+ a| 
+activé
+ a| 
+Statut de la bannière Conditions d'utilisation. Valeurs possibles :
+
+* True : la bannière Conditions d'utilisation s'affiche lors de la connexion à l'interface Web.
+* FALSE : la bannière Conditions d'utilisation ne s'affiche pas lors de la connexion à l'interface Web.
+
+ a| 
+booléen
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 3920,
+  "method": "SetLoginBanner",
+  "params": {
+    "banner": "Welcome to NetApp!",
+    "enabled": true
+  }
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 3920,
+  "result": {
+    "loginBanner": {
+      "banner": "Welcome to NetApp!",
+      "enabled": true
+    }
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+10.0

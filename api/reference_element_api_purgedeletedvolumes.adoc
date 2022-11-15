@@ -1,0 +1,86 @@
+---
+permalink: api/reference_element_api_purgedeletedvolumes.html 
+sidebar: sidebar 
+keywords: volume,volumes,purge,purging,multiple,deleted,purgedeletedvolumes 
+summary: 'Vous pouvez utiliser la méthode PurgeDeletedvolumes pour purger immédiatement et définitivement les volumes qui ont été supprimés ; vous pouvez utiliser cette méthode pour purger jusqu"à 500 volumes à la fois.' 
+---
+= PurgeDeletedvolumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `PurgeDeletedVolumes` méthode permettant de purger immédiatement et définitivement les volumes qui ont été supprimés ; vous pouvez utiliser cette méthode pour purger jusqu'à 500 volumes à la fois.
+
+Vous devez supprimer des volumes à l'aide de `DeleteVolumes` avant de pouvoir être purgé. Les volumes sont purgés automatiquement après un certain temps ; l'utilisation de cette méthode n'est donc pas requise en général.
+
+
+NOTE: Si vous purgez un grand nombre de volumes à la fois, ou si les volumes que vous purgez ont chacun plusieurs snapshots associés, la méthode risque d'échouer et de renvoyer l'erreur "xDBConnectionLoss". Si cela se produit, relancez l'appel de méthode avec moins de volumes.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+| ID de volume | Liste des ID de volumes à purger du système. | tableau entier | Non | Non 
+
+
+| ID compte | Liste des ID de compte. Tous les volumes de tous les comptes spécifiés sont purgés du système. | tableau entier | Non | Non 
+
+
+| ID groupe d'accès Volume | Liste des ID de groupe Volume AccessGroup. Tous les volumes de tous les groupes d'accès de volume spécifiés sont supprimés du système. | tableau entier | Non | Non 
+|===
+*Remarque :* vous ne pouvez spécifier qu'un des paramètres ci-dessus par appel de méthode. La spécification de plusieurs, ou aucune, entraîne une erreur.
+
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "PurgeDeletedVolumes",
+   "params": {
+      "accountIDs" : [1, 2, 3]
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id" : 1,
+  "result": {}
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_deletevolumes.adoc[Deletevolumes]

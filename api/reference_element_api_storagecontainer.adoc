@@ -1,0 +1,105 @@
+---
+permalink: api/reference_element_api_storagecontainer.html 
+sidebar: sidebar 
+keywords: object,objects,storagecontainer 
+summary: 'L"objet StorageContainer contient les attributs d"un conteneur de stockage de volume virtuel. Vous pouvez récupérer ces informations pour chaque conteneur de stockage du cluster à l"aide de la méthode ListStorageContainers API.' 
+---
+= Conteneur de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet StorageContainer contient les attributs d'un conteneur de stockage de volume virtuel. Vous pouvez récupérer ces informations pour chaque conteneur de stockage du cluster à l'aide de `ListStorageContainers` Méthode API.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ID compte
+ a| 
+ID du compte du système de stockage associé au conteneur de stockage.
+ a| 
+entier
+
+
+
+ a| 
+InitiatorSecret
+ a| 
+Code secret d'authentification CHAP pour l'initiateur associé au conteneur de stockage.
+ a| 
+chaîne
+
+
+
+ a| 
+nom
+ a| 
+Nom du conteneur de stockage.
+ a| 
+chaîne
+
+
+
+ a| 
+ProtocolEndpointType
+ a| 
+Le type de terminal de protocole du conteneur de stockage. SCSI est la seule valeur valide.
+ a| 
+chaîne
+
+
+
+ a| 
+état
+ a| 
+L'état du conteneur de stockage. Valeurs possibles :
+
+* Active : le conteneur de stockage est en cours d'utilisation.
+* Verrouillé : le conteneur de stockage est verrouillé.
+
+ a| 
+chaîne
+
+
+
+ a| 
+StorageautoreID
+ a| 
+ID unique du conteneur de stockage.
+ a| 
+UUID
+
+
+
+ a| 
+TargetSecret
+ a| 
+Le secret d'authentification CHAP pour la cible associée au conteneur de stockage.
+ a| 
+chaîne
+
+
+
+ a| 
+Virtualvolumes
+ a| 
+Liste des ID des volumes virtuels associés au conteneur de stockage.
+ a| 
+Matrice UUID
+
+|===
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_liststoragecontainers.adoc[Listecontainers]

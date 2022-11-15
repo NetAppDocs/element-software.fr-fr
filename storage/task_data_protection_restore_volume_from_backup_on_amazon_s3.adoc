@@ -1,0 +1,36 @@
+---
+permalink: storage/task_data_protection_restore_volume_from_backup_on_amazon_s3.html 
+sidebar: sidebar 
+keywords: volume restore, amazon s3 object store 
+summary: 'Vous pouvez restaurer un volume à partir d"une sauvegarde sur un magasin d"objets Amazon S3.' 
+---
+= Restauration d'un volume à partir d'une sauvegarde sur un magasin d'objets Amazon S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez restaurer un volume à partir d'une sauvegarde sur un magasin d'objets Amazon S3.
+
+. Cliquez sur *Rapport* > *Journal des événements*.
+. Recherchez l'événement de sauvegarde qui a créé la sauvegarde à restaurer.
+. Dans la colonne *Détails* de l'événement, cliquez sur *Afficher les détails*.
+. Copiez les informations du manifeste dans le presse-papiers.
+. Cliquez sur *Management* > *volumes*.
+. Cliquez sur l'icône actions du volume à restaurer.
+. Dans le menu résultant, cliquez sur *Restaurer depuis*.
+. Dans la boîte de dialogue *Integrated Restore* sous *Restore from*, sélectionnez *S3*.
+. Sélectionnez l'option correspondant à la sauvegarde sous *format de données* :
++
+** *Natif* : format compressé lisible uniquement par les systèmes de stockage SolidFire.
+** *Non compressé* : format non compressé compatible avec d'autres systèmes.
+
+
+. Entrez un nom d'hôte à utiliser pour accéder au magasin d'objets dans le champ *Nom d'hôte*.
+. Saisissez un ID de clé d'accès pour le compte dans le champ *ID de clé d'accès*.
+. Saisissez la clé secrète pour le compte dans le champ *clé d'accès secrète*.
+. Saisissez le compartiment S3 dans lequel stocker la sauvegarde dans le champ *compartiment S3*.
+. Collez les informations du manifeste dans le champ *manifest*.
+. Cliquez sur *Start Write*.
+

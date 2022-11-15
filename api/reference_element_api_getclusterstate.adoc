@@ -1,0 +1,85 @@
+---
+permalink: api/reference_element_api_getclusterstate.html 
+sidebar: sidebar 
+keywords: cluster,state,getting,get,getclusterstate 
+summary: 'Vous pouvez utiliser la méthode de l"API GetClusterState pour indiquer si un nœud fait partie d"un cluster ou non.' 
+---
+= GetClusterState
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetClusterState` Méthode d'API pour indiquer si un nœud fait partie d'un cluster ou non.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+cluster
+ a| 
+Nom du cluster.
+ a| 
+chaîne
+
+
+
+ a| 
+état
+ a| 
+* Disponible : le nœud n'a pas été configuré avec un nom de cluster.
+* En attente : le nœud est en attente pour un cluster nommé spécifique et peut être ajouté.
+* Active : le nœud est membre actif d'un cluster et ne peut pas être ajouté à un autre cluster.
+
+ a| 
+chaîne
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "GetClusterState",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" :
+      "cluster" :  "Cluster101"
+      "state" : "Active"
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

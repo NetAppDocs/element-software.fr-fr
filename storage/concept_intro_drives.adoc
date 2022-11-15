@@ -1,0 +1,30 @@
+---
+permalink: storage/concept_intro_drives.html 
+sidebar: sidebar 
+keywords: drives, physical drives, cluster data, storage node, volume metadata, block drives, clusters 
+summary: Un nœud de stockage contient un ou plusieurs disques physiques utilisés pour stocker une partie des données du cluster. Le cluster utilise la capacité et les performances du disque une fois le disque ajouté au cluster. 
+---
+= Disques
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un nœud de stockage contient un ou plusieurs disques physiques utilisés pour stocker une partie des données du cluster. Le cluster utilise la capacité et les performances du disque une fois le disque ajouté au cluster.
+
+Un nœud de stockage contient deux types de disques :
+
+* *Lecteurs de métadonnées de volume*
++
+Ces disques stockent des informations compressées qui définissent chaque volume, clone ou snapshot au sein d'un cluster. La capacité totale du disque de métadonnées dans le système détermine la quantité maximale de stockage pouvant être provisionnée comme des volumes. La quantité maximale de stockage pouvant être provisionnée est indépendante de la quantité de données réellement stockées sur les disques de bloc du cluster. Quant aux disques de métadonnées, ils stockent les données sur un cluster reposant sur la protection des données Helix à deux niveaux.
+
++
+
+NOTE: Certains messages d'erreur et de journal d'événements système font référence aux lecteurs de métadonnées de volume en tant que lecteurs de tranche.
+
+* *Lecteurs de blocs*
++
+Ces disques stockent les blocs de données compressés et dupliqués pour les volumes d'applications de serveur. Les disques de type bloc constituent la majeure partie de la capacité de stockage du système. La majorité des demandes de lecture de données déjà stockées sur le cluster SolidFire et des demandes d'écriture de données s'effectuent sur les disques de bloc. La capacité totale du disque bloc du système détermine la quantité maximale de données pouvant être stockées, en tenant compte des effets de la compression, du provisionnement fin et de la déduplication.
+
+

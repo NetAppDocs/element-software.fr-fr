@@ -1,0 +1,54 @@
+---
+permalink: storage/task_replication_assign_replication_source_and_target_to_paired_volumes.html 
+sidebar: sidebar 
+keywords: volume pairings, paired volumes, replication source, assign 
+summary: 'Une fois les volumes couplés, vous devez affecter un volume source et son volume cible de réplication. Une source ou une cible de réplication peut être un volume dans une paire de volumes. Vous pouvez également utiliser cette procédure pour rediriger les données envoyées vers un volume source vers un volume cible distant en cas d"indisponibilité du volume source.' 
+---
+= Attribuez une source et une cible de réplication aux volumes couplés
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois les volumes couplés, vous devez affecter un volume source et son volume cible de réplication. Une source ou une cible de réplication peut être un volume dans une paire de volumes. Vous pouvez également utiliser cette procédure pour rediriger les données envoyées vers un volume source vers un volume cible distant en cas d'indisponibilité du volume source.
+
+Vous avez accès aux clusters contenant les volumes source et cible.
+
+.Étapes
+. Préparation du volume source :
++
+.. Dans le cluster contenant le volume que vous souhaitez attribuer en tant que source, sélectionnez *Management* > *volumes*.
+.. Cliquez sur l'icône *actions* du volume que vous souhaitez attribuer en tant que source et cliquez sur *Modifier*.
+.. Dans la liste déroulante *Access*, sélectionnez *Read/Write*.
++
+
+IMPORTANT: Si vous inversez l'affectation source et cible, cette action entraîne l'affichage du message suivant par la paire de volumes jusqu'à ce qu'une nouvelle cible de réplication soit affectée : `PausedMisconfigured`
+
++
+La modification de l'accès interrompt la réplication du volume et entraîne l'arrêt de la transmission des données. Assurez-vous d'avoir coordonné ces changements sur les deux sites.
+
+.. Cliquez sur *Enregistrer les modifications*.
+
+
+. Préparation du volume cible :
++
+.. Dans le cluster contenant le volume que vous souhaitez attribuer en tant que cible, sélectionnez *Management* > *volumes*.
+.. Cliquez sur l'icône actions du volume que vous souhaitez attribuer en tant que cible et cliquez sur *Modifier*.
+.. Dans la liste déroulante *Access*, sélectionnez *cible de réplication*.
++
+
+IMPORTANT: Si vous attribuez un volume existant comme cible de réplication, les données de ce volume sont écrasées. Vous devez utiliser un nouveau volume cible qui ne contient aucune donnée et qui présente les caractéristiques exactes du volume source, comme la taille, le paramètre 512 et la configuration de la qualité de service. Le volume cible peut être supérieur ou égal au volume source, mais il ne peut pas être plus petit.
+
+.. Cliquez sur *Enregistrer les modifications*.
+
+
+
+
+
+
+== Trouvez plus d'informations
+
+* xref:task_replication_pair_volumes_using_a_volume_id.adoc[Couplez des volumes à l'aide d'un ID de volume]
+* xref:task_replication_pair_volumes_using_a_pairing_key.adoc[Couplez des volumes à l'aide d'une clé de couplage]
+

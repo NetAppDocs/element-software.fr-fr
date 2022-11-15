@@ -1,0 +1,22 @@
+---
+permalink: storage/concept_intro_fibre_channel_nodes.html 
+sidebar: sidebar 
+keywords: fibre channel nodes, fibre channel switch, clients, protcols, iSCSi protocols, clusters, interconnections, fc, FC, connectivity, fibre channel connectivity, fibre channel nodes, fibre channel protocol 
+summary: 'Les nœuds Fibre Channel SolidFire assurent la connectivité avec un commutateur Fibre Channel, que vous pouvez connecter aux clients Fibre Channel. Les nœuds Fibre Channel agissent comme un convertisseur de protocole entre les protocoles Fibre Channel et iSCSI. Cela vous permet d"ajouter une connectivité Fibre Channel à tout cluster SolidFire existant ou nouveau.' 
+---
+= Nœuds Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les nœuds Fibre Channel SolidFire assurent la connectivité avec un commutateur Fibre Channel, que vous pouvez connecter aux clients Fibre Channel. Les nœuds Fibre Channel agissent comme un convertisseur de protocole entre les protocoles Fibre Channel et iSCSI. Cela vous permet d'ajouter une connectivité Fibre Channel à tout cluster SolidFire existant ou nouveau.
+
+Caractéristiques des nœuds Fibre Channel :
+
+* Les commutateurs Fibre Channel permettent de gérer l'état de la structure, assurant ainsi des interconnexions optimisées.
+* Le trafic entre deux ports traverse uniquement les commutateurs ; il n'est transmis à aucun autre port.
+* La défaillance d'un port est isolée et n'affecte pas le fonctionnement des autres ports.
+* Plusieurs paires de ports peuvent communiquer simultanément dans une structure.
+

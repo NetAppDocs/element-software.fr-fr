@@ -1,0 +1,48 @@
+---
+permalink: setup/index.html 
+sidebar: sidebar 
+keywords: set up storage, storage system, set up, configure node, configuring storage node, add drives, fibre channel, create cluster 
+summary: Découvrez comment configurer le système de stockage pour votre environnement. 
+---
+= Configurer le stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Découvrez comment configurer le système de stockage pour votre environnement.
+
+* xref:concept_setup_overview.adoc[Configurer le stockage]
++
+** xref:task_setup_cluster_with_storage_nodes.adoc[Configurez un cluster avec des nœuds de stockage]
++
+*** xref:concept_setup_configure_a_storage_node.adoc[Configurez un nœud de stockage]
+*** xref:task_setup_create_a_storage_cluster.adoc[Créer un cluster de stockage]
+*** xref:task_post_deploy_access_the_element_software_user_interface.adoc[Connectez-vous à l'interface utilisateur du logiciel Element]
+*** xref:task_setup_add_drives_to_a_cluster.adoc[Ajout de disques au cluster]
+
+
+** xref:task_setup_cluster_with_fibre_channel_nodes.adoc[Configurez un cluster avec des nœuds Fibre Channel]entrées :
++
+*** xref:concept_setup_fc_configure_a_fibre_channel_node.adoc[Configurez un nœud Fibre Channel]
+*** xref:task_setup_fc_add_fibre_channel_nodes_to_a_cluster.adoc[Ajout de nœuds Fibre Channel à un cluster]
+*** xref:task_setup_fc_create_a_new_cluster_with_fibre_channel_nodes.adoc[Créez un nouveau cluster avec des nœuds Fibre Channel]
+*** xref:concept_setup_fc_set_up_zones_for_fibre_channel_nodes.adoc[Configurez des zones pour les nœuds Fibre Channel]
+*** xref:task_setup_create_a_volume_access_group_for_fibre_channel_clients.adoc[Créez un groupe d'accès de volume pour les clients Fibre Channel]
+
+
+** xref:task_setup_determine_which_solidfire_components_to_install.adoc[Déterminez les composants SolidFire à installer]
+** xref:/task_setup_gh_redirect_set_up_a_management_node.adoc[Configurez un nœud de gestion]
+** xref:concept_setup_whats_next.adoc[Et la suite ?]
+
+
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/["Présentation du stockage 100 % Flash de SolidFire"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+

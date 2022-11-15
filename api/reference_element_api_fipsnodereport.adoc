@@ -1,0 +1,60 @@
+---
+permalink: api/reference_element_api_fipsnodereport.html 
+sidebar: sidebar 
+keywords: objects,object,fipsNodeReport 
+summary: 'L"objet fipsNodeReport contient des informations sur la prise en charge de FIPS 140-2 pour un seul nœud du cluster de stockage. Vous pouvez récupérer ces informations à l"aide de la méthode GetFipsReport.' 
+---
+= FipsNodeReport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet fipsNodeReport contient des informations sur la prise en charge de FIPS 140-2 pour un seul nœud du cluster de stockage. Vous pouvez récupérer ces informations à l'aide de `GetFipsReport` méthode.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ID de nœud
+ a| 
+ID du nœud signalant les informations.
+ a| 
+entier
+
+
+
+ a| 
+Entraînements par cinq
+ a| 
+Indique si le chiffrement de disque FIPS 140-2 est activé ou non pour ce nœud. Valeurs possibles :
+
+* Aucun : ce nœud ne prend pas en charge le chiffrement de disque FIPS.
+* Partiel : le nœud prend en charge le chiffrement de disque FIPS, mais tous les disques ne sont pas compatibles avec la norme FIPS.
+* Prêt : le nœud est capable de chiffrer les disques FIPS et tous les disques présents sont compatibles FIPS, ou aucun disque n'est présent.
+
+ a| 
+FipsDriveStatusType
+
+
+
+ a| 
+HttpsEnabled
+ a| 
+Indique si le chiffrement FIPS 140-2 HTTPS est activé ou non pour ce nœud. Valeurs possibles :
+
+* true : activé
+* faux : désactivé
+
+ a| 
+booléen
+
+|===

@@ -1,0 +1,76 @@
+---
+permalink: api/reference_element_api_disablebmccoldreset.html 
+sidebar: sidebar 
+keywords: BMC cold reset,BMC reset,disable BMC 
+summary: 'Vous pouvez utiliser la méthode DisableBmcColdReset pour désactiver la tâche d"arrière-plan qui réinitialise régulièrement le contrôleur de gestion de la carte mère \(BMC\) pour tous les nœuds du cluster.' 
+---
+= DisableBmcColdReset
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `DisableBmcColdReset` Méthode pour désactiver la tâche d'arrière-plan qui réinitialise régulièrement le contrôleur BMC (Baseboard Management Controller) pour tous les nœuds du cluster.
+
+
+NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
+
+
+
+== Paramètre
+
+Cette méthode n'a pas de paramètre d'entrée.
+
+
+
+== Valeurs de retour
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+CBmcResetDurationMinutes
+ a| 
+Renvoie la durée entre les intervalles de réinitialisation. L'intervalle doit toujours être 0 une fois la commande terminée.
+ a| 
+entier
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "DisableBmcColdReset",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "cBmcResetDurationMinutes": 0
+    }
+}
+----
+
+
+== Nouveau depuis la version
+
+12.0

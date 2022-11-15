@@ -1,0 +1,36 @@
+---
+permalink: storage/task_monitor_volume_performance.html 
+sidebar: sidebar 
+keywords: volume performance, view, view alerts 
+summary: Vous pouvez afficher des informations détaillées de performances pour tous les volumes du cluster. Vous pouvez trier les informations par ID de volume ou par colonne de performance. Vous pouvez également filtrer les informations en fonction de certains critères. 
+---
+= Afficher les performances des volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher des informations détaillées de performances pour tous les volumes du cluster. Vous pouvez trier les informations par ID de volume ou par colonne de performance. Vous pouvez également filtrer les informations en fonction de certains critères.
+
+Vous pouvez modifier la fréquence à laquelle le système actualise les informations de performances sur la page en cliquant sur la liste *Actualiser chaque* et en choisissant une valeur différente. L'intervalle d'actualisation par défaut est de 10 secondes si le cluster possède moins de 1000 volumes ; sinon, la valeur par défaut est de 60 secondes. Si vous choisissez une valeur jamais, l'actualisation automatique de la page est désactivée.
+
+Vous pouvez réactiver l'actualisation automatique en cliquant sur *Activer l'actualisation automatique*.
+
+. Dans l'interface utilisateur de l'élément, sélectionnez *Reporting* > *Volume Performance*.
+. Dans la liste de volumes, cliquez sur l'icône actions d'un volume.
+. Cliquez sur *Afficher les détails*.
++
+Un bac s'affiche en bas de la page contenant des informations générales sur le volume.
+
+. Pour plus d'informations sur le volume, cliquez sur *Voir plus de détails*.
++
+Le système affiche des informations détaillées ainsi que les graphiques de performance du volume.
+
+
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_monitor_volume_performance_details.adoc[Détails des performances des volumes]

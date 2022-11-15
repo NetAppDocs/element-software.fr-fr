@@ -1,0 +1,14 @@
+---
+permalink: storage/concept_system_manage_mfa_enable_multi_factor_authentication.html 
+sidebar: sidebar 
+keywords: saml, idp, mfa, enable 
+summary: 'L"authentification multifacteur \(MFA\) utilise un fournisseur d"identité tiers \(IDP\) via le langage de marquage d"assertion de sécurité \(SAML\) pour gérer les sessions utilisateur. L"authentification multifacteur permet aux administrateurs de configurer d"autres facteurs d"authentification, tels que le mot de passe et l"e-mail, ainsi que le mot de passe et l"e-mail.' 
+---
+= Activez l'authentification multifacteur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'authentification multifacteur (MFA) fait appel à un fournisseur d'identités tiers via le langage SAML pour gérer les sessions utilisateur. L'authentification multifacteur permet aux administrateurs de configurer d'autres facteurs d'authentification, tels que le mot de passe et l'e-mail, ainsi que le mot de passe et l'e-mail.

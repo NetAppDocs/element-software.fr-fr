@@ -1,0 +1,38 @@
+---
+permalink: api/reference_element_api_cluster_pairing_order_of_operations.html 
+sidebar: sidebar 
+keywords: cluster,pairing,pair,order,operations,clusters 
+summary: 'Vous devez établir une connexion entre une paire de clusters de stockage exécutant le logiciel Element avant d"utiliser la réplication à distance.' 
+---
+= Ordre des opérations de jumelage des clusters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez établir une connexion entre une paire de clusters de stockage exécutant le logiciel Element avant d'utiliser la réplication à distance.
+
+Utiliser l'ensemble suivant de méthodes API pour établir une connexion au cluster :
+
+* xref:reference_element_api_startclusterpairing.adoc[Couplage StartClusterPairing]:
++
+Cette méthode d'API crée et renvoie une clé de couplage utilisée pour établir une paire de clusters. La clé est codée et contient des informations utilisées pour établir des communications entre les clusters. Un seul cluster peut être associé à quatre autres clusters au maximum. Cependant, une nouvelle clé doit être générée pour chaque association de cluster. Le xref:reference_element_api_startclusterpairing.adoc[Couplage StartClusterPairing] la méthode génère une nouvelle clé chaque fois que la méthode est appelée. Utilisez chaque clé unique avec le xref:reference_element_api_completeclusterpairing.adoc[Couplage CompleteClusterPairing] méthode de couplage de chaque cluster supplémentaire.
+
++
+
+NOTE: Pour des raisons de sécurité, la clé de couplage ne doit pas être envoyée à d'autres utilisateurs par e-mail. La clé contient un nom d'utilisateur et un mot de passe.
+
+* xref:reference_element_api_completeclusterpairing.adoc[Couplage CompleteClusterPairing]:
++
+Cette méthode utilise la clé de couplage créée avec le xref:reference_element_api_startclusterpairing.adoc[Couplage StartClusterPairing] Méthode API pour créer une paire de clusters Émettez le xref:reference_element_api_completeclusterpairing.adoc[Couplage CompleteClusterPairing] Méthode API avec le paramètre clusterPairingKey vers la destination. Le cluster d'origine est le cluster qui a créé la clé.
+
+
+
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_startclusterpairing.adoc[Couplage StartClusterPairing]
+* xref:reference_element_api_completeclusterpairing.adoc[Couplage CompleteClusterPairing]
+

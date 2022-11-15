@@ -1,0 +1,28 @@
+---
+permalink: storage/task_data_protection_edit_snapshot_retention.html 
+sidebar: sidebar 
+keywords: snapshot retention, edit, set a retention period, edit retention period 
+summary: 'Vous pouvez modifier la période de conservation d"un instantané pour contrôler quand ou si le système supprime des instantanés. La période de rétention que vous spécifiez commence lorsque vous entrez le nouvel intervalle. Lorsque vous définissez une période de conservation, vous pouvez sélectionner une période qui commence à l"heure actuelle \(la conservation n"est pas calculée à partir de l"heure de création du snapshot\). Vous pouvez spécifier des intervalles en minutes, heures et jours.' 
+---
+= Modifier la conservation des snapshots
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier la période de conservation d'un instantané pour contrôler quand ou si le système supprime des instantanés. La période de rétention que vous spécifiez commence lorsque vous entrez le nouvel intervalle. Lorsque vous définissez une période de rétention, vous pouvez sélectionner une période qui commence à l'heure actuelle (la conservation n'est pas calculée à partir de l'heure de création de l'instantané). Vous pouvez spécifier des intervalles en minutes, heures et jours.
+
+.Étapes
+. Cliquez sur *Data protection* > *snapshots*.
+. Cliquez sur l'icône *actions* pour le snapshot que vous souhaitez modifier.
+. Dans le menu qui s'affiche, cliquez sur *Modifier*.
+. *Facultatif:* cochez la case** inclure l'instantané dans la réplication lorsqu'il est couplé** pour vous assurer que l'instantané est capturé dans la réplication lorsque le volume parent est couplé.
+. *Facultatif :* sélectionnez une option de rétention pour l'instantané :
++
+** Cliquez sur *conserver indéfiniment* pour conserver indéfiniment l'instantané sur le système.
+** Cliquez sur *Set Retention Period* et utilisez les zones de spin de date pour sélectionner une durée pour le système de conservation de l'instantané.
+
+
+. Cliquez sur *Enregistrer les modifications*.
+

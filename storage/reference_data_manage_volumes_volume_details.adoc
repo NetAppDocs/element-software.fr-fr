@@ -1,0 +1,88 @@
+---
+permalink: storage/reference_data_manage_volumes_volume_details.html 
+sidebar: sidebar 
+keywords: volume, size of volume 
+summary: 'La page volumes de l"onglet gestion fournit des informations sur les volumes actifs tels que le nom, le compte, les groupes d"accès associés au volume et la taille du volume.' 
+---
+= Détails du volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La page volumes de l'onglet gestion fournit des informations sur les volumes actifs tels que le nom, le compte, les groupes d'accès associés au volume et la taille du volume.
+
+* *ID*
++
+ID généré par le système pour le volume.
+
+* *Nom*
++
+Nom donné au volume lors de sa création.
+
+* *Compte*
++
+Nom du compte attribué au volume.
+
+* *Groupes d'accès*
++
+Nom du ou des groupes d'accès de volume auxquels appartient le volume.
+
+* *Accès*
++
+Type d'accès attribué au volume lors de sa création. Valeurs possibles :
+
++
+** Lecture/écriture : toutes les lectures et écritures sont acceptées.
+** Lecture seule : toutes les activités de lecture sont autorisées ; aucune écriture n'est autorisée.
+** Verrouillé : seul l'accès administrateur est autorisé.
+** ReplicationTarget : désigné comme volume cible dans une paire de volumes répliqués.
+
+
+* *Utilisé*
++
+Pourcentage d'espace utilisé dans le volume.
+
+* *Taille*
++
+Taille totale (en Go) du volume.
+
+* *Snapshots*
++
+Nombre de snapshots créés pour le volume.
+
+* *Politique de qualité de service*
++
+Nom et lien vers la politique de QoS définie par l'utilisateur.
+
+* *IOPS min*
++
+Le nombre minimal d'IOPS garanti pour le volume.
+
+* *IOPS max*
++
+Le nombre maximal d'IOPS autorisé pour le volume.
+
+* *IOPS en rafale*
++
+Le nombre maximal d'IOPS autorisé sur une courte période pour le volume. Valeur par défaut = 15,000.
+
+* *Attributs*
++
+Attributs affectés au volume en tant que paire clé/valeur via une méthode API.
+
+* *512e*
++
+Indique si 512e est activé sur un volume. Valeurs possibles :
+
++
+** Oui.
+** Non
+
+
+* *Créé le*
++
+Date et heure de création du volume.
+
+

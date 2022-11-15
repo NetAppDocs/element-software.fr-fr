@@ -1,0 +1,51 @@
+---
+permalink: api/reference_element_api_protectiondomainresiliency.html 
+sidebar: sidebar 
+keywords: object,objects,protectionDomainResiliency 
+summary: 'L"objet protectionDomainRerésilience contient l"état de résilience de ce cluster de stockage. La résilience indique la capacité du cluster de stockage à se réparer automatiquement après une ou plusieurs défaillances dans un domaine de protection unique de son type de domaine de protection associé. Un cluster de stockage est considéré comme réparé lorsqu"il peut continuer à lire et à écrire des données lors de la défaillance d"un seul nœud de stockage \(un état connu sous le nom de tolérance de nœud\).' 
+---
+= ProtectionDomainrésilience
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet protectionDomainRerésilience contient l'état de résilience de ce cluster de stockage. La résilience indique la capacité du cluster de stockage à se corriger automatiquement après une ou plusieurs défaillances dans un domaine de protection unique de son type de domaine de protection associé. Un cluster de stockage est considéré comme guéri lorsqu'il peut continuer à lire et à écrire les données lors de la défaillance d'un nœud de stockage unique (état connu sous le nom de tolérance au nœud).
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ProtectionSchematiesKMIPRésilices
+ a| 
+Liste d'objets (un pour chaque schéma de protection) contenant des informations sur la résilience des défaillances pour le type de domaine de protection associé.
+ a| 
+xref:reference_element_api_protectionschemeresiliency.adoc[ProtectionSchemerésilience] baie
+
+
+
+ a| 
+SingleFaileurThresholdBytesForBlockData
+ a| 
+Le nombre maximal d'octets pouvant être stockés sur le cluster de stockage avant de perdre la capacité à rétablir automatiquement l'état de tolérance du nœud.
+ a| 
+entier
+
+
+
+ a| 
+SubleFairForsemble
+ a| 
+Nombre prévu d'échecs simultanés qui peuvent survenir sans perdre la capacité de guérir automatiquement à un état de tolérance de nœud pour le quorum d'ensemble.
+ a| 
+entier
+
+|===

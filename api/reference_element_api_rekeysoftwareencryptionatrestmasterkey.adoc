@@ -1,0 +1,86 @@
+---
+permalink: api/reference_element_api_rekeysoftwareencryptionatrestmasterkey.html 
+sidebar: sidebar 
+keywords: system, api, element, security, rekey, software encryption at rest 
+summary: 'Vous pouvez utiliser la méthode RekeySoftSoftwareEncryptionAtResMasterKey pour reKey la clé principale de chiffrement logiciel au repos utilisée pour chiffrer les clés de chiffrement de données (clés de chiffrement de données).' 
+---
+= RekeySoftwareEncryptionAtResteMasterKey
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `RekeySoftwareEncryptionAtRestMasterKey` Méthode permettant de reKey la clé principale de chiffrement logiciel au repos utilisée pour chiffrer les clés de chiffrement des données (clés de chiffrement des données). Lors de la création du cluster, le chiffrement logiciel au repos est configuré pour utiliser la gestion interne des clés (IKM). Cette méthode de renouvellement peut être utilisée après la création du cluster pour utiliser IKM ou External Key Management (EKM).
+
+
+
+== Paramètres
+
+Cette méthode dispose des paramètres d'entrée suivants. Si le `keyManagementType` le paramètre n'est pas spécifié, l'opération de renouvellement de clés est effectuée à l'aide de la configuration existante de gestion des clés. Si le `keyManagementType` est spécifié et le fournisseur clé est externe, le `keyProviderID` le paramètre doit également être utilisé.
+
+[cols="4*"]
+|===
+| Paramètre | Description | Type | Facultatif 
+
+
+| Type de gestion de clés | Type de gestion des clés utilisé pour gérer la clé principale. Les valeurs possibles sont :
+`Internal`: Rekey utilisation de la gestion interne des clés.
+`External`: Rekey utilisation de la gestion externe des clés. Si ce paramètre n'est pas spécifié, l'opération de renouvellement de clés est effectuée à l'aide de la configuration existante de gestion des clés. | chaîne | Vrai 
+
+
+| KeyProviderID | ID du fournisseur de clés à utiliser. Il s'agit d'une valeur unique renvoyée dans le cadre de l'un des `CreateKeyProvider` méthodes. L'ID n'est requis que lorsque `keyManagementType` est `External` et n'est pas valide. | entier | Vrai 
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+[cols="4*"]
+|===
+| Paramètre | Description | Type | Facultatif 
+
+
+| Asynchrone | Déterminer l'état de l'opération de renouvellement de clé à l'aide de ce bouton `asyncHandle` valeur avec `GetAsyncResult`. `GetAsyncResult` la sortie inclura un `newKey` champ qui contient des informations sur la nouvelle clé principale et un `keyToDecommission` champ contenant des informations sur l'ancienne clé. | entier | Faux 
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+ "method": "rekeysoftwareencryptionatrestmasterkey",
+ "params": {
+   "keyManagementType": "external",
+   "keyProviderID": "<ID number>"
+ }
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "asyncHandle": 1
+}
+----
+
+
+== Nouveau depuis la version
+
+12.3
+
+[discrete]
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

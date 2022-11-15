@@ -1,0 +1,95 @@
+---
+permalink: api/reference_element_api_disableclusterssh.html 
+sidebar: sidebar 
+keywords: SSH,disable,disabling,cluster,DisableClusterSsh 
+summary: 'Vous pouvez utiliser la méthode DisableClusterSsh pour désactiver le service SSH de l"ensemble du cluster de stockage. Lorsque vous ajoutez des nœuds au cluster de stockage, ce paramètre hérite de ce paramètre au niveau du cluster.' 
+---
+= DisableClusterSsh
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `DisableClusterSsh` Méthode de désactivation du service SSH pour l'ensemble du cluster de stockage. Lorsque vous ajoutez des nœuds au cluster de stockage, ce paramètre hérite de ce paramètre au niveau du cluster.
+
+
+NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
+
+
+
+== Paramètre
+
+Cette méthode n'a pas de paramètre d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+résultat
+ a| 
+Objet JSON contenant l'état du service SSH du cluster de stockage, le temps restant jusqu'à la désactivation de SSH et l'état du service SSH de chaque nœud.
+ a| 
+Objet JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "DisableClusterSsh",
+  "params": {
+      },
+  "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+	"id": 1,
+	"result" : {
+    "enabled": true,
+    "timeRemaining": "00:43:21",
+    "nodes": [
+    {
+        "nodeID": 1,
+        "enabled": true
+    },
+    {
+        "nodeID": 2,
+        "enabled": true
+    },
+    {
+        "nodeID": 3,
+        "enabled": false
+    },
+    {
+        "nodeID": 4,
+        "enabled": false
+    } ]
+			}
+	}
+----
+
+
+== Nouveau depuis la version
+
+10.3

@@ -1,0 +1,94 @@
+---
+permalink: api/reference_element_api_listdrives.html 
+sidebar: sidebar 
+keywords: drives,drive,list,listing,listdrives,cluster 
+summary: 'Vous pouvez utiliser la méthode ListenDrives pour lister les lecteurs qui existent dans les nœuds actifs du cluster. Cette méthode renvoie les disques qui ont été ajoutés sous forme de métadonnées de volume ou de lecteurs de bloc, ainsi que les disques qui n"ont pas été ajoutés et qui ne sont pas disponibles.' 
+---
+= Lecteurs de listes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ListDrives` méthode permettant de lister les disques qui existent dans les nœuds actifs du cluster. Cette méthode renvoie les disques qui ont été ajoutés sous forme de métadonnées de volume ou de lecteurs de bloc, ainsi que les disques qui n'ont pas été ajoutés et qui ne sont pas disponibles.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+disques
+ a| 
+Liste des disques dans le cluster.
+ a| 
+xref:reference_element_api_drive.adoc[lecteur] baie
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "ListDrives",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {
+     "drives" : [
+       {
+         "attributes" : {},
+         "capacity" : 299917139968,
+         "driveID" : 35,
+         "nodeID" : 5,
+         "serial" : "scsi-SATA_INTEL_SSDSA2CW6CVPR141502R3600FGN-part2",
+         "slot" : 0,
+         "status" : "active",
+         "type" : "volume"
+       },
+       {
+         "attributes" : {},
+         "capacity" : 600127266816,
+         "driveID" : 36,
+         "nodeID" : 5,
+         "serial" : "scsi-SATA_INTEL_SSDSA2CW6CVPR1415037R600FGN",
+         "slot" : 6,
+         "status" : "active",
+         "type" : "block"
+       }
+     }
+   ]
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

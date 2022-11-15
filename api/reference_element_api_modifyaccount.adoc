@@ -1,0 +1,188 @@
+---
+permalink: api/reference_element_api_modifyaccount.html 
+sidebar: sidebar 
+keywords: modify,modifying,edit,editing,change,changing,accounts,settings,modifyaccount 
+summary: Vous pouvez utiliser la méthode Modify yAccount pour modifier un compte existant. 
+---
+= Compte Modifier
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ModifyAccount` méthode de modification d'un compte existant.
+
+Lorsque vous verrouillez un compte, toutes les connexions existantes de ce compte sont immédiatement résiliées. Lorsque vous modifiez les paramètres CHAP d'un compte, toutes les connexions existantes restent actives et les nouveaux paramètres CHAP sont utilisés pour les connexions ou les connexions suivantes. Pour effacer les attributs d'un compte, spécifiez {} pour le paramètre attributs.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+ID compte
+ a| 
+ID compte à modifier.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+EnableChap
+ a| 
+Indique si les informations d'identification de compte CHAP peuvent être utilisées par un initiateur pour accéder aux volumes.
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+InitiatorSecret
+ a| 
+Le secret CHAP à utiliser pour l'initiateur. Ce secret doit comporter 12-16 caractères et être impénétrable. Le secret CHAP de l'initiateur doit être unique et ne peut pas être identique au secret CHAP de la cible.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+état
+ a| 
+Statut du compte. Valeurs possibles :
+
+* Active : le compte est actif et les connexions sont autorisées.
+* Verrouillé : le compte est verrouillé et les connexions sont refusées.
+
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+TargetSecret
+ a| 
+Le secret CHAP à utiliser pour la cible (authentification CHAP mutuelle). Ce secret doit comporter 12-16 caractères et être impénétrable. Le secret CHAP de la cible doit être unique et ne peut pas être identique au secret CHAP de l'initiateur.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+nom d'utilisateur
+ a| 
+Permet de modifier le nom d'utilisateur associé au compte. (Doit comporter entre 1 et 64 caractères).
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+compte
+ a| 
+Objet contenant des informations sur le compte modifié.
+ a| 
+xref:reference_element_api_account.adoc[compte]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes de cette méthode sont similaires à l'exemple suivant. Dans cet exemple, les attributs sont effacés en spécifiant {} pour eux :
+
+[listing]
+----
+{
+   "method": "ModifyAccount",
+   "params": {
+     "accountID"  : 25,
+     "status"   : "locked",
+     "attributes" : {}
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "account": {
+        "storageContainerID": "abcdef01-1234-5678-90ab-cdef01234567",
+        "username": "user1",
+        "accountID": 1,
+        "volumes": [
+        ],
+        "enableChap": true,
+        "initiatorSecret": "txz123456q890",
+        "attributes": {
+        },
+        "status": active",
+        "targetSecret": "rxe123b567890"
+    }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

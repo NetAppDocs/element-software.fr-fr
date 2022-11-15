@@ -1,0 +1,131 @@
+---
+permalink: api/reference_element_api_getaccountefficiency.html 
+sidebar: sidebar 
+keywords: accounts,account,efficiency,get,getting,GetAccountEfficiency 
+summary: 'Vous pouvez utiliser GetAccountEfficiency pour obtenir des statistiques d"efficacité sur un compte de volume. Cette méthode renvoie des informations d"efficacité uniquement pour le compte que vous avez donné comme paramètre.' 
+---
+= Efficacité GetAccountEfficacience
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser `GetAccountEfficiency` pour obtenir des statistiques d'efficacité sur un compte de volume. Cette méthode renvoie des informations d'efficacité uniquement pour le compte que vous avez donné comme paramètre.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+ID compte
+ a| 
+Spécifie le compte de volume pour lequel les statistiques d'efficacité sont renvoyées.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+compression
+ a| 
+Quantité d'espace économisée par la compression des données pour tous les volumes du compte. Par rapport avec la valeur « 1 », les données ont été stockées sans compression.
+ a| 
+flottement
+
+
+
+ a| 
+déduplication
+ a| 
+Quantité d'espace économisé en ne dupliquant pas les données de tous les volumes du compte. Exprimé sous forme de ratio.
+ a| 
+flottement
+
+
+
+ a| 
+Volumes mal singularisés
+ a| 
+Volumes qui n'ont pas pu être interrogés pour des données d'efficacité. Les volumes manquants peuvent être causés par le cycle de collecte des déchets (GC) vieux d'une heure, la perte temporaire de connectivité réseau ou les services redémarrés depuis le cycle GC.
+ a| 
+tableau entier
+
+
+
+ a| 
+Provisionnement fin
+ a| 
+Rapport entre l'espace utilisé et la quantité d'espace alloué au stockage des données. Exprimé sous forme de ratio.
+ a| 
+flottement
+
+
+
+ a| 
+horodatage
+ a| 
+La dernière fois que les données d'efficacité ont été recueillies après Garbage Collection (GC), au format UTC+0.
+ a| 
+Chaîne de date ISO 8601
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "GetAccountEfficiency",
+   "params": {
+     "accountID": 3
+   },
+   "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+       "compression": 2.020468042933262,
+       "deduplication": 2.042488619119879,
+       "missingVolumes": [],
+       "thinProvisioning": 1.010087163391013,
+       "timestamp": "2014-03-10T14:06:02Z"
+   }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

@@ -1,0 +1,128 @@
+---
+permalink: api/reference_element_api_listschedules.html 
+sidebar: sidebar 
+keywords: snapshot,snapshots,list,listing,information,schedule,schedules,listschedules 
+summary: Vous pouvez utiliser ListSchedules pour obtenir des informations sur tous les instantanés programmés qui ont été créés. 
+---
+= Listes de diffusion
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser `ListSchedules` pour obtenir des informations sur tous les instantanés programmés qui ont été créés.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+planifications
+ a| 
+Liste des planifications actuellement sur le cluster.
+ a| 
+xref:reference_element_api_schedule.adoc[planification] baie
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "ListSchedules",
+    "params": {},
+"id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "schedules": [
+      {
+       "attributes": {
+         "frequency": "Days Of Week"
+       },
+       "hasError": false,
+       "hours": 0,
+       "lastRunStatus": "Success",
+       "lastRunTimeStarted": null,
+       "minutes": 1,
+       "monthdays": [],
+       "paused": false,
+       "recurring": false,
+       "runNextInterval": false,
+       "scheduleID": 3,
+       "scheduleInfo": {
+            "name": "Wednesday Schedule",
+            "retention": "00:02:00",
+            "volumeID": "2"
+      },
+      "scheduleName": "Vol2Schedule",
+      "scheduleType": "Snapshot",
+      "startingDate": "2015-03-23T20:08:33Z",
+      "toBeDeleted": false,
+      "weekdays": [
+          {
+            "day": 3,
+            "offset": 1
+          }
+     ]
+   },
+   {
+      "attributes": {
+          "frequency": "Time Interval"
+      },
+       "hasError": false,
+       "hours": 0,
+       "lastRunStatus": "Success",
+       "lastRunTimeStarted": "2015-03-23T21:40:00Z",
+       "minutes": 2,
+       "monthdays": [],
+       "paused": false,
+       "recurring": true,
+       "runNextInterval": false,
+       "scheduleID": 2,
+       "scheduleInfo": {
+            "name": "MCA2",
+            "volumeID": "3"
+       },
+       "scheduleName": "MCAsnapshot2",
+       "scheduleType": "Snapshot",
+       "startingDate": "2015-03-23T19:28:57Z",
+       "toBeDeleted": false,
+       "weekdays": []
+       }
+     ]
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

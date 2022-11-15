@@ -1,0 +1,18 @@
+---
+permalink: storage/concept_snapmirror_labels.html 
+sidebar: sidebar 
+keywords: labels, snapmirror, retention rules 
+summary: Une étiquette SnapMirror sert de marqueur pour transférer un snapshot spécifié selon les règles de conservation de la relation. 
+---
+= Étiquettes SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une étiquette SnapMirror sert de marqueur pour transférer un snapshot spécifié selon les règles de conservation de la relation.
+
+L'application d'une étiquette à un Snapshot la marque en tant que cible de la réplication SnapMirror. Le rôle de la relation est d'appliquer les règles lors du transfert de données en sélectionnant l'instantané étiqueté correspondant, en le copiant vers le volume de destination, et en veillant à ce que le nombre correct de copies soit conservé. Il se réfère à la politique pour déterminer le nombre de conserver et la période de conservation. La police peut avoir un nombre illimité de règles et chaque règle a un libellé unique. Cette étiquette sert de lien entre l'instantané et la règle de conservation.
+
+Il s'agit de l'étiquette SnapMirror qui indique la règle appliquée au snapshot sélectionné, au snapshot de groupe ou à la planification.

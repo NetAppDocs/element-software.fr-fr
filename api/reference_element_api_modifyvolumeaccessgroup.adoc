@@ -1,0 +1,199 @@
+---
+permalink: api/reference_element_api_modifyvolumeaccessgroup.html 
+sidebar: sidebar 
+keywords: volume,access,group,modify,modifying,updating,changing,change,update,edit,editing,modifyvolumeaccessgroup 
+summary: 'Vous pouvez utiliser la méthode ModityVolumeAccessGroup pour mettre à jour les initiateurs et ajouter ou supprimer des volumes d"un groupe d"accès de volume.' 
+---
+= ModityVolumeAccessGroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ModifyVolumeAccessGroup` méthode de mise à jour des initiateurs et d'ajout ou de suppression de volumes d'un groupe d'accès de volume.
+
+Si un initiateur ou un volume spécifié est un doublon de ce qui existe actuellement, le groupe d'accès de volume est conservé tel quel. Si vous ne spécifiez pas de valeur pour les volumes ou les initiateurs, la liste actuelle des initiateurs et des volumes n'est pas modifiée.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+
+
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+Volume AccessGroupID
+ a| 
+ID du groupe d'accès de volume à modifier.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+nom
+ a| 
+Nouveau nom de ce groupe d'accès de volume.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+initiateurs
+ a| 
+Liste des ID ou noms d'initiateurs (IQN et WWPN) à inclure dans le groupe d'accès aux volumes. Si vous transmettez une liste de noms initiateurs, les initiateurs sont créés s'ils n'existent pas déjà. Si vous transmettez une liste d'ID initiateurs, la méthode renvoie une erreur si l'un des initiateurs n'existe pas. Le fait de transmettre des noms d'initiateurs est obsolète. Vous devez utiliser dans la mesure du possible les ID d'initiateurs.
+ a| 
+tableau entier (recommandé) ou matrice de chaînes (obsolète)
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+DeleteOrphaninitiateurs
+ a| 
+Spécifie s'il faut supprimer des objets initiateurs après leur suppression d'un groupe d'accès de volume ou non. Valeurs possibles :
+
+* True : supprimez des objets initiateurs après leur suppression d'un groupe d'accès de volume.
+* FALSE : ne supprimez pas les objets initiateurs lorsqu'ils sont supprimés d'un groupe d'accès de volume. Il s'agit de la valeur par défaut.
+
+ a| 
+booléen
+ a| 
+faux
+ a| 
+Non
+
+
+
+ a| 
+volumes
+ a| 
+Liste des ID de volumes à modifier.
+ a| 
+tableau entier
+ a| 
+Aucune
+ a| 
+xref:reference_element_api_volumeaccessgroup.adoc[Volume AccessGroup]
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Volume AccessGroup
+ a| 
+Objet contenant des informations sur le groupe d'accès de volume qui vient d'être modifié.
+ a| 
+xref:reference_element_api_volumeaccessgroup.adoc[Volume AccessGroup]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "ModifyVolumeAccessGroup",
+   "params": {
+      "volumeAccessGroupID": 96,
+      "name": "accessgrouptest",
+      "initiators": [115,114],
+      "volumes": [
+         346
+    ],
+      "attributes": {}
+   }
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": null,
+  "result": {
+    "volumeAccessGroup": {
+      "attributes": {},
+      "deletedVolumes": [
+        327
+      ],
+      "initiatorIDs": [
+        114,
+        115
+      ],
+      "initiators": [
+        "iqn.1998-01.com.vmware:desk1-esx1-577b283a",
+        "iqn.1998-01.com.vmware:donesq-esx1-421b281b"
+      ],
+      "name": "accessgrouptest",
+      "volumeAccessGroupID": 96,
+      "volumes": [
+        346
+      ]
+    }
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_addinitiatorstovolumeaccessgroup.adoc[AddInitiatorsToVolumeAccessGroup]
+* xref:reference_element_api_addvolumestovolumeaccessgroup.adoc[AddVolumesToVolumeAccessGroup]
+* xref:reference_element_api_removeinitiatorsfromvolumeaccessgroup.adoc[RemoveInitiatorsFromVolumeAccessGroup]
+* xref:reference_element_api_removevolumesfromvolumeaccessgroup.adoc[RemoveVolumesFromVolumeAccessGroup]
+

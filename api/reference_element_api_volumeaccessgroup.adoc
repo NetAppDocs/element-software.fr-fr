@@ -1,0 +1,92 @@
+---
+permalink: api/reference_element_api_volumeaccessgroup.html 
+sidebar: sidebar 
+keywords: object,objects,volumeAccessGroup 
+summary: 'L"objet Volume AccessGroup contient des informations sur un groupe d"accès de volume spécifique. Vous pouvez récupérer une liste de ces informations pour tous les groupes d"accès avec la méthode API ListVolumeAccessGroups.' 
+---
+= Volume AccessGroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet Volume AccessGroup contient des informations sur un groupe d'accès de volume spécifique. Vous pouvez récupérer une liste de ces informations pour tous les groupes d'accès à l'aide de la méthode API `ListVolumeAccessGroups`.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+
+
+
+ a| 
+Deletedvolumes
+ a| 
+Matrice de volumes qui ont été supprimés du groupe d'accès aux volumes qui n'ont pas encore été purgés du système.
+ a| 
+tableau entier
+
+
+
+ a| 
+InitiatorID
+ a| 
+Liste des ID d'initiateurs mappés sur le groupe d'accès de volume.
+ a| 
+tableau entier
+
+
+
+ a| 
+initiateurs
+ a| 
+Matrice d'initiateurs IQN/WWPN uniques mappés au groupe d'accès de volume.
+ a| 
+tableau de chaînes
+
+
+
+ a| 
+nom
+ a| 
+Nom du groupe d'accès de volume.
+ a| 
+chaîne
+
+
+
+ a| 
+Volume AccessGroupID
+ a| 
+ID VolumeAccessGroupID unique pour le groupe d'accès de volume.
+ a| 
+entier
+
+
+
+ a| 
+volumes
+ a| 
+Liste des ID VolumeCas appartenant au groupe d'accès de volume.
+ a| 
+tableau entier
+
+|===
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_listvolumeaccessgroups.adoc[Groupes d'accès ListVolume]

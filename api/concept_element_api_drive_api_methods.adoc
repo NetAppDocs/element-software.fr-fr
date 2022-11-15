@@ -1,0 +1,31 @@
+---
+permalink: api/concept_element_api_drive_api_methods.html 
+sidebar: sidebar 
+keywords: drive,API,methods,method 
+summary: 'Vous pouvez utiliser des méthodes d"API de disque pour ajouter et gérer des lecteurs disponibles pour un cluster de stockage. Lorsque vous ajoutez un nœud de stockage au cluster de stockage ou que vous installez de nouveaux disques dans un nœud de stockage existant, vous pouvez ajouter les disques au cluster de stockage.' 
+---
+= Méthodes d'API de lecteur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser des méthodes d'API de disque pour ajouter et gérer des lecteurs disponibles pour un cluster de stockage. Lorsque vous ajoutez un nœud de stockage au cluster de stockage ou que vous installez de nouveaux disques dans un nœud de stockage existant, vous pouvez ajouter les disques au cluster de stockage.
+
+* xref:reference_element_api_adddrives.adoc[AddDrives]
+* xref:reference_element_api_getdrivehardwareinfo.adoc[GetDriveHardwareInfo]
+* xref:reference_element_api_getdrivestats.adoc[GetDriveStats]
+* xref:reference_element_api_listdrives.adoc[Lecteurs de listes]
+* xref:reference_element_api_listdrivestats.adoc[ListDriveStats]
+* xref:reference_element_api_removedrives.adoc[Retirer les disques]
+* xref:reference_element_api_secureerasedrives.adoc[SecureEraseDrives]
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

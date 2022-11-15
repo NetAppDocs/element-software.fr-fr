@@ -1,0 +1,106 @@
+---
+permalink: storage/task_monitor_system_alerts.html 
+sidebar: sidebar 
+keywords: system alerts, view, cluster faults, system errors 
+summary: Vous pouvez afficher les alertes pour obtenir des informations sur les défaillances ou les erreurs de cluster dans le système. Les alertes peuvent être des informations, des avertissements ou des erreurs et constituent un bon indicateur de leur fonctionnement. La plupart des erreurs se résolvent automatiquement. 
+---
+= Afficher les alertes système
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher les alertes pour obtenir des informations sur les défaillances ou les erreurs de cluster dans le système. Les alertes peuvent être des informations, des avertissements ou des erreurs et constituent un bon indicateur de leur fonctionnement. La plupart des erreurs se résolvent automatiquement.
+
+Vous pouvez utiliser la méthode ListClusterFaults API pour automatiser la surveillance des alertes. Vous serez ainsi informé de toutes les alertes qui se produisent.
+
+. Dans l'interface utilisateur de l'élément, sélectionnez *Rapport* > *alertes*.
++
+Le système actualise les alertes de la page toutes les 30 secondes.
+
++
+Pour chaque événement, les informations suivantes s'affichent :
+
++
+|===
+
+
+| Élément | Description 
+
+
+ a| 
+ID
+ a| 
+ID unique associé à une alerte de cluster.
+
+
+
+ a| 
+Gravité
+ a| 
+Le degré d'importance de l'alerte. Valeurs possibles :
+
+** Avertissement : un problème mineur qui peut bientôt nécessiter une attention particulière. Les mises à niveau du système sont toujours autorisées.
+** Erreur : défaillance pouvant entraîner une dégradation des performances ou une perte de la haute disponibilité. Les erreurs ne doivent généralement pas affecter le service.
+** Critique : une défaillance grave qui affecte le service. Le système ne peut pas traiter les demandes d'E/S de l'API ou du client. L'utilisation de cet état peut entraîner une perte potentielle de données.
+** BEST Practice : aucune pratique recommandée pour la configuration des systèmes n'est en cours d'utilisation.
+
+
+
+
+ a| 
+Type
+ a| 
+Composant affecté par le défaut. Peut être un nœud, un disque, un cluster, un service ou un volume.
+
+
+
+ a| 
+Nœud
+ a| 
+ID de nœud du nœud auquel cette erreur fait référence. Inclus pour les défaillances de nœud et de lecteur, sinon réglé sur - (tableau de bord).
+
+
+
+ a| 
+ID de disque
+ a| 
+ID du lecteur auquel cette anomalie fait référence. Inclus pour les défauts de conduite, sinon réglé à - (tableau de bord).
+
+
+
+ a| 
+Code d'erreur
+ a| 
+Code descriptif indiquant la cause du défaut.
+
+
+
+ a| 
+Détails
+ a| 
+Une description du défaut avec des détails supplémentaires.
+
+
+
+ a| 
+Date
+ a| 
+La date et l'heure auxquelles le défaut a été enregistré.
+
+|===
+. Cliquez sur *Afficher les détails* pour une alerte individuelle afin d'afficher des informations sur l'alerte.
+. Pour afficher les détails de toutes les alertes sur la page, cliquez sur la colonne Détails.
++
+Une fois que le système a résolu une alerte, toutes les informations concernant l'alerte, y compris la date à laquelle elle a été résolue, sont déplacées vers la zone résolue.
+
+
+
+
+
+== Trouvez plus d'informations
+
+* xref:reference_monitor_cluster_fault_codes.adoc[Codes d'anomalie du bloc d'instruments]
+* link:api/index.html["Gérez le stockage avec l'API Element"]
+

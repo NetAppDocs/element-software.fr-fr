@@ -1,0 +1,36 @@
+---
+permalink: storage/task_data_manage_vvol_create_a_storage_container.html 
+sidebar: sidebar 
+keywords: storage container, create 
+summary: 'Vous pouvez créer des conteneurs de stockage dans l"interface utilisateur Element et les découvrir dans vCenter. Vous devez créer au moins un conteneur de stockage pour commencer à provisionner des machines virtuelles sauvegardées par VVol.' 
+---
+= Créer un conteneur de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer des conteneurs de stockage dans l'interface utilisateur Element et les découvrir dans vCenter. Vous devez créer au moins un conteneur de stockage pour commencer à provisionner des machines virtuelles sauvegardées par VVol.
+
+Vous avez activé les VVol dans l'interface d'Element pour le cluster.
+
+. Sélectionnez *VVol* > *conteneurs de stockage*.
+. Cliquez sur le bouton *Créer des conteneurs de stockage*.
+. Entrez les informations relatives au conteneur de stockage dans la boîte de dialogue *Créer un nouveau conteneur de stockage* :
++
+.. Entrez un nom pour le conteneur de stockage.
+.. Configurer les secrets d'initiateur et de cible pour CHAP.
++
+
+TIP: Laissez les champs Paramètres CHAP vides pour générer automatiquement des secrets.
+
+.. Cliquez sur le bouton *Créer un conteneur de stockage*.
+
+
+. Vérifiez que le nouveau conteneur de stockage apparaît dans la liste de l'onglet *conteneurs de stockage*.
++
+
+NOTE: Un ID de compte NetApp Element créé automatiquement et attribué au conteneur de stockage permet donc de créer manuellement un compte.
+
+

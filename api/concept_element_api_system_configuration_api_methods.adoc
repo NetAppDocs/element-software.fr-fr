@@ -1,0 +1,61 @@
+---
+permalink: api/concept_element_api_system_configuration_api_methods.html 
+sidebar: sidebar 
+keywords: system,config,configuration,methods,api 
+summary: 'Les méthodes de l"API de configuration du système vous permettent d"obtenir et de définir des valeurs de configuration qui s"appliquent à tous les nœuds du cluster.' 
+---
+= Méthodes API de configuration du système
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les méthodes de l'API de configuration du système vous permettent d'obtenir et de définir des valeurs de configuration qui s'appliquent à tous les nœuds du cluster.
+
+* xref:reference_element_api_disablebmccoldreset.adoc[DisableBmcColdReset]
+* xref:reference_element_api_disableclusterssh.adoc[DisableClusterSsh]
+* xref:reference_element_api_disablesnmp.adoc[DisableSnmp]
+* xref:reference_element_api_enablebmccoldreset.adoc[EnableBmcColdReset]
+* xref:reference_element_api_enableclusterssh.adoc[EnableClusterSsh]
+* xref:reference_element_api_enablesnmp.adoc[EnableSnmp]
+* xref:reference_element_api_getbinassignmentproperties.adoc[GetBinAssignmentProperties]
+* xref:reference_element_api_getclustersshinfo.adoc[GetClusterSshInfo]
+* xref:reference_element_api_getclusterstructure.adoc[GetClusterStructure]
+* xref:reference_element_api_getfipsreport.adoc[GetFipsReport]
+* xref:reference_element_api_getlldpconfig.adoc[GetLldpConfig]
+* xref:reference_element_api_getlldpinfo.adoc[GetLldpInfo]
+* xref:reference_element_api_system_configuration_getnodefipsdrivesreport.adoc[GetNodeFipsDriveReport]
+* xref:reference_element_api_getntpinfo.adoc[GetNtpInfo]
+* xref:reference_element_api_getnvraminfo.adoc[GetNvramInfo]
+* xref:reference_element_api_getprotectiondomainlayout.adoc[GetProtectionDomainLayout]
+* xref:reference_element_api_getremotelogginghosts.adoc[GetRemoteLoggingits]
+* xref:reference_element_api_getsnmpacl.adoc[GetSmpACL]
+* xref:reference_element_api_getsnmpinfo.adoc[GetSmpInfo]
+* xref:reference_element_api_getsnmpstate.adoc[GetSmpState]
+* xref:reference_element_api_getsnmptrapinfo.adoc[GetSmpTrapInfo]
+* xref:reference_element_api_getsslcertificate.adoc[GetSSLCertificate]
+* xref:reference_element_api_listprotectiondomainlevels.adoc[ListProtectionDomainLevels]
+* xref:reference_element_api_removesslcertificate.adoc[Retirer le certificat SSLCertificate]
+* xref:reference_element_api_resetnetworkconfig.adoc[ResetNetworkConfig]
+* xref:reference_element_api_resetsupplementaltlsciphers.adoc[ResetSupplementalTlsCiphers]
+* xref:reference_element_api_setclusterstructure.adoc[SetClusterStructure]
+* xref:reference_element_api_setlldpconfig.adoc[Config. Déf]
+* xref:reference_element_api_setntpinfo.adoc[SetNtpInfo]
+* xref:reference_element_api_setprotectiondomainlayout.adoc[SetProtectionDomainLayout]
+* xref:reference_element_api_setremotelogginghosts.adoc[SetRemoteLoggingids]
+* xref:reference_element_api_setsnmpacl.adoc[SetSMPACL]
+* xref:reference_element_api_setsnmpinfo.adoc[SetSmpInfo]
+* xref:reference_element_api_setsnmptrapinfo.adoc[SetSmpTrapInfo]
+* xref:reference_element_api_setsslcertificate.adoc[SetSSLCertificate]
+* xref:reference_element_api_snmpsendtesttraps.adoc[SnmpSendTestTraps]
+* xref:reference_element_api_testaddressavailability.adoc[Disponibilité de TestAddress]
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

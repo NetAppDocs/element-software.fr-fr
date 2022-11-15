@@ -1,0 +1,98 @@
+---
+permalink: storage/task_system_manage_rekey_software_ear_master_key.html 
+sidebar: sidebar 
+keywords: element, rekey, encryption at rest, rekey master, replace key 
+summary: 'Vous pouvez utiliser l"API Element pour re-saisir une clé existante. Ce processus crée une nouvelle clé principale de remplacement pour votre serveur de gestion de clés externe.' 
+---
+= Chiffrement logiciel de nouvelle clé pour la clé principale REST
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser l'API Element pour re-saisir une clé existante. Ce processus crée une nouvelle clé principale de remplacement pour votre serveur de gestion de clés externe. Les clés principales sont toujours remplacées par de nouvelles clés principales et ne sont jamais dupliquées ou remplacées.
+
+Vous devrez peut-être procéder à une nouvelle clé dans le cadre de l'une des procédures suivantes :
+
+* Créez une nouvelle clé dans le cadre d'un changement de gestion interne des clés à gestion externe des clés.
+* Créez une nouvelle clé comme réaction ou comme protection contre un événement lié à la sécurité.
+
+
+
+NOTE: Ce processus est asynchrone et renvoie une réponse avant la fin de l'opération de renouvellement de clé. Vous pouvez utiliser le link:../api/reference_element_api_getasyncresult.html["GetAsyncResult"] méthode d'interrogation du système pour voir quand le processus est terminé.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez activé le chiffrement logiciel au repos à l'aide du link:../api/reference_element_api_createcluster.html["CreateCluster"] D'une nouvelle méthode située sur un nouveau cluster, qui ne contient pas de volumes et n'a pas d'E/S. Utilisez le lien :../api/reference_element_api_getsoftwareencryptionatrestinfo.html[`GetSoftwareEncryptionatRestInfo`] pour confirmer que l'état est `enabled` avant de continuer.
+* Vous avez link:../storage/task_system_manage_key_set_up_external_key_management.html["établissement d'une relation de confiance"] Entre le cluster SolidFire et un serveur de clés externe (EKS). Exécutez le link:../api/reference_element_api_testkeyserverkmip.html["TestKeyProviderKmip"] méthode permettant de vérifier qu'une connexion au fournisseur de clés est établie.
+
+
+.Étapes
+. Exécutez le link:../api/reference_element_api_listkeyserverskmip.html["ListeKeyProvidersKmip"] Commande et copie l'ID du fournisseur de clés (`keyProviderID`).
+. Exécutez le link:../api/reference_element_api_rekeysoftwareencryptionatrestmasterkey.html["RekeySoftwareEncryptionAtResteMasterKey"] avec le `keyManagementType` ens. paramètre `external` et `keyProviderID` Comme numéro d'ID du fournisseur de clés de l'étape précédente :
++
+[listing]
+----
+{
+ "method": "rekeysoftwareencryptionatrestmasterkey",
+ "params": {
+   "keyManagementType": "external",
+   "keyProviderID": "<ID number>"
+ }
+}
+----
+. Copiez le `asyncHandle` valeur du `RekeySoftwareEncryptionAtRestMasterKey` réponse de la commande.
+. Exécutez le link:../api/reference_element_api_getasyncresult.html["GetAsyncResult"] commande avec `asyncHandle` valeur de l'étape précédente pour confirmer le changement de configuration. À partir de la réponse de commande, vous devriez voir que l'ancienne configuration de clé principale a été mise à jour avec de nouvelles informations de clé. Copiez le nouvel ID de fournisseur de clés pour l'utiliser ultérieurement.
++
+[listing]
+----
+{
+   "id": null,
+   "result": {
+     "createTime": "2021-01-01T22:29:18Z",
+     "lastUpdateTime": "2021-01-01T22:45:51Z",
+     "result": {
+       "keyToDecommission": {
+         "keyID": "<value>",
+         "keyManagementType": "internal"
+     },
+     "newKey": {
+       "keyID": "<value>",
+       "keyManagementType": "external",
+       "keyProviderID": <value>
+     },
+     "operation": "Rekeying Master Key. Master Key management being transferred from Internal Key Management to External Key Management with keyProviderID=<value>",
+     "state": "Ready"
+   },
+   "resultType": "RekeySoftwareEncryptionAtRestMasterKey",
+   "status": "complete"
+}
+----
+. Exécutez le `GetSoftwareEncryptionatRestInfo` commande pour confirmer que les nouveaux détails de clé, y compris le `keyProviderID`, ont été mis à jour.
++
+[listing]
+----
+{
+   "id": null,
+   "result": {
+     "masterKeyInfo": {
+       "keyCreatedTime": "2021-01-01T22:29:18Z",
+       "keyID": "<updated value>",
+       "keyManagementType": "external",
+       "keyProviderID": <value>
+     },
+     "rekeyMasterKeyAsyncResultID": <value>
+     "status": "enabled",
+     "version": 1
+   },
+}
+----
+
+
+[discrete]
+== Trouvez plus d'informations
+
+* link:../api/concept_element_api_about_the_api.html["Gérez le stockage avec l'API Element"]
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

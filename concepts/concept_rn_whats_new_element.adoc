@@ -1,0 +1,141 @@
+---
+permalink: concepts/concept_rn_whats_new_element.html 
+sidebar: sidebar 
+keywords: netapp, solidfire, element, storage, solidfire enterprise sds 
+summary: NetApp met régulièrement à jour les logiciels SolidFire et Element pour vous apporter de nouvelles fonctionnalités, des améliorations et des correctifs. 
+---
+= Nouveautés du logiciel Element 12.5 et versions ultérieures
+:allow-uri-read: 
+:url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/Element_Software_-_Apache_Log4j_Vulnerability_-_Workaround
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp met régulièrement à jour les logiciels SolidFire et Element pour vous apporter de nouvelles fonctionnalités, des améliorations et des correctifs. La dernière version d'Element 12.7 comprend des mises à jour des composants système et de sécurité, des améliorations opérationnelles et des problèmes résolus.
+
+
+NOTE: Les mises à jour cumulatives logicielles et micrologicielles sont installées dans le cadre d'une mise à niveau d'Element 12.7 basée sur la version actuelle d'élément exécutée sur un cluster de stockage. Par exemple, si un cluster exécute actuellement Element 12.3.x, vous pouvez effectuer la mise à niveau directement vers Element 12.7 pour obtenir les mises à jour cumulatives à partir d'Element 12.5 et 12.7. Pour les chemins de mise à niveau pris en charge, voir ceci https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_is_the_upgrade_matrix_for_storage_clusters_running_NetApp_Element_software["Article de la base de connaissances"^]
+
+
+
+== Élément 12.7
+
+Découvrez les nouveautés d'Element 12.7.
+
+
+
+=== Algorithmes CHAP sécurisés
+
+Element 12.7 inclut la prise en charge des algorithmes CHAP (Challenge-Handshake Authentication Protocol) sécurisés conformes FIPS SHA1, SHA-256 et SHA3-256. link:../storage/task_data_manage_accounts_work_with_accounts_task.html["En savoir plus >>"].
+
+
+
+=== Taux de synchronisation du bloc dynamique (bin)
+
+Les opérations de cluster telles que l'ajout, la mise à niveau ou la maintenance de nœuds, ou l'ajout de disques, déclenchent la synchronisation du bloc (bin) pour distribuer les données de bloc aux nœuds nouveaux ou mis à jour d'une disposition de cluster. Si l'on utilise une seule vitesse lente comme taux de synchronisation par défaut, ces opérations prennent du temps et ne tire pas parti de la puissance de traitement supérieure des nœuds plus volumineux. À partir de la version Element 12.7, la vitesse de synchronisation est réglée de manière dynamique en fonction du nombre de cœurs sur le nœud de stockage, ce qui permet d'accélérer considérablement ces opérations.
+
+Par exemple, si vous ajoutez de grands nœuds de stockage à 28 cœurs (H610S, SF19210 et SF38410) exécutant Element 12.7 dans un cluster existant, le taux de synchronisation des données se maintient automatiquement à 110 Mbit/s au lieu de 60 Mbit/s. En outre, lorsque vous exploitez le mode de maintenance des nœuds pour ces nœuds de stockage volumineux, par exemple lors d'une mise à niveau d'Element 12.3.x ou version ultérieure vers Element 12.7 avec NetApp Hybrid Cloud Control, le taux de synchronisation du débit de données de bloc modifié est automatiquement réglé sur 110 Mbit/s au lieu de 20 Mbit/s.
+
+Si vous ajoutez des nœuds de stockage à 16 cœurs (H410S) et des petits nœuds de stockage à 12 cœurs (SF4805) à un cluster Element 12.7, le taux de synchronisation pour les données reste à 60 Mbit/s. Toutefois, pour la synchronisation des blocs modifiés lorsque vous les sortez du mode de maintenance des nœuds lors des mises à niveau d'Element 12.3.x vers Element 12.7, le taux de synchronisation est automatiquement synchronisé de 20 Mbit/s à 60 Mbit/s pour les nœuds de stockage moyens et de 40 Mbit/s pour les nœuds de stockage plus petits.
+
+Lorsque vous supprimez des nœuds de stockage, aucun impact sur le taux de synchronisation des blocs, ce qui évite l'impact sur les performances des E/S client
+
+
+
+=== Amélioration de la collecte des données superflues
+
+Pour les clusters avec des nœuds de stockage plus grands, par exemple, une H610S-4, qui dispose de 1 po d'espace utilisé, exécutent des charges de travail très élevées avec des écrasements, Dotés de fonctions de déduplication et de compression élevées, le processus Garbage Collection peut désormais tenir le rythme, car la taille du filtre de floraison par défaut a été augmentée pour les nœuds plus volumineux, passant de 700 Go ou plus de mémoire à 1048576 bits. Cette modification est automatiquement appliquée après la mise à niveau des nœuds de stockage vers Element 12.7, sans impact sur les nœuds plus petits.
+
+
+
+=== Amélioration de l'échelle
+
+Avec Element 12.7, vous n'avez plus besoin de suivre un séquençage spécifique lors de l'ajout de plusieurs nœuds de stockage de disques de bloc et de métadonnées à un cluster existant. Il vous suffit de sélectionner tous les disques disponibles et de les ajouter en bloc à l'aide de l'interface utilisateur et de l'API d'Element. Element 12.7 gère automatiquement la synchronisation des données de manière à ce que tous les services de bloc soient synchronisés simultanément. Les services de bloc de chaque nœud étant synchronisés, le disque de métadonnées de ce nœud devient assignable aux volumes hôtes. Cette amélioration de l'évolutivité réduit considérablement le temps de réponse en lecture et empêche toute dégradation des performances pendant la synchronisation des données sur les nœuds de stockage nouvellement ajoutés.
+
+
+
+=== Mises à jour du firmware des nœuds de stockage
+
+Le logiciel Element 12.7 inclut un bundle de firmware du stockage version 2.164.0, qui prend notamment en charge les nouveaux composants système. link:https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.164.0.html["En savoir plus >>"].
+
+
+NOTE: Il n'y a pas de nouvelle mise à jour du firmware dans la version Element 12.7. Toutefois, en fonction du bundle de firmware actuel exécuté sur les nœuds de stockage, les mises à jour cumulatives sont installées lors de la mise à niveau vers Element 12.7.
+
+
+
+=== Documentation SolidFire Active IQ
+
+Dans l'interface utilisateur de SolidFire Active IQ, vous pouvez désormais accéder à la page de gestion de la QoS pour afficher les recommandations et informations de limitation de nœud pour votre cluster. De plus, le tableau de bord du cluster affiche désormais le nombre total de snapshots. Parmi les autres améliorations récentes, citons l'ajout des informations sur les nœuds principaux et secondaires pour les volumes actifs et le débit moyen, les IOPS et la latence moyenne pendant les 30 dernières minutes sur les volumes primaires d'un nœud.
+
+La documentation SolidFire Active IQ est désormais accessible depuis la documentation du logiciel Element. link:https://docs.netapp.com/us-en/element-software/monitor-storage-active-iq.html["En savoir plus >>"].
+
+
+
+=== NetApp bogues en ligne contient des problèmes résolus et connus
+
+Les problèmes résolus et connus sont répertoriés dans l'outil NetApp bogues en ligne. Vous pouvez rechercher les problèmes liés au logiciel Element et aux autres produits sur https://mysupport.netapp.com/site/products/all/details/element-software/bugsonline-tab["NetApp bogues en ligne"^].
+
+
+
+== Élément 12.5
+
+Element 12.5 offre un accès amélioré aux nœuds de stockage, une gestion simplifiée des domaines de protection personnalisés, des défaillances et des événements de cluster nouveaux et améliorés, une fonctionnalité de création d'interface utilisateur de cluster, une sécurité améliorée et des mises à niveau automatisées via Ansible.
+
+
+
+=== Accès amélioré au nœud de stockage
+
+Element 12.5 améliore l'accès à distance aux nœuds individuels à l'aide de certificats SSH signés. Pour fournir un accès distant sécurisé aux nœuds de stockage, un nouveau compte utilisateur local à privilèges limités appelé `sfreadonly` Est maintenant créé pendant le RTFI d'un noeud de stockage. Le `sfreadonly` le compte permet l'accès au nœud de stockage back-end à des fins de maintenance de base ou de dépannage. Vous pouvez maintenant configurer le `supportAdmin` Type d'accès d'un utilisateur administrateur de cluster pour autoriser l'accès du support NetApp au cluster si nécessaire.
+
+
+
+=== Gestion améliorée des domaines de protection personnalisés
+
+Element 12.5 est doté d'une nouvelle interface utilisateur qui vous permet d'afficher rapidement et facilement les domaines de protection personnalisés existants et de configurer de nouveaux domaines de protection personnalisés.
+
+
+
+=== Amélioration des défaillances, événements et alertes du cluster
+
+L'élément 12.5 améliore le dépannage de votre système avec l'introduction des nouveaux codes inconvénient du tableau de bord `BmcSelfTestFailed` et `CpuThermalEventThreshold`. Le logiciel Element 12.5 comprend également des améliorations de robustesse pour les événements et les alertes de cluster existants, comme `nodeOffline`, `volumeOffline`, `driveHealthFault`, `networkEvent`, et	`cSumEvent`.
+
+
+
+=== Activez le chiffrement logiciel au repos à partir de l'interface de création du cluster
+
+Outre une nouvelle case à cocher dans l'interface de création de cluster, Element 12.5 permet d'activer le chiffrement logiciel au repos pour les clusters de stockage 100 % Flash SolidFire lors de la création du cluster.
+
+
+
+=== Mises à jour du firmware des nœuds de stockage
+
+Le logiciel Element 12.5 inclut des mises à jour de firmware pour les nœuds de stockage. link:../concepts/concept_rn_relatedrn_element.html#storage-firmware["En savoir plus >>"].
+
+
+
+=== Sécurité renforcée
+
+L'élément 12.5 contient l'atténuation qui ferme l'exposition du logiciel Element à la vulnérabilité Apache Log4j. Les clusters de stockage NetApp SolidFire avec la fonctionnalité de volumes virtuels (VVol) activée sont exposés à la vulnérabilité Apache Log4j. Pour plus d'informations sur la solution de contournement concernant la vulnérabilité Apache Log4j dans le logiciel NetApp Element, consultez {url-Peak}[Article de la base de connaissances^].
+
+Si vous utilisez Element 11.x, 12.0 ou 12.2, ou si votre cluster de stockage se trouve déjà au niveau d'Element 12.3 ou 12.3.1 avec la fonctionnalité VVols activée, vous devez effectuer une mise à niveau vers la version 12.5.
+
+Element 12.5 inclut également plus de 120 résolutions de vulnérabilité dans la sécurité CVE.
+
+
+
+=== Mises à niveau automatisées avec Ansible
+
+Avec Element 12.5, vous pouvez automatiser le workflow de mise à niveau du logiciel Element en utilisant Ansible afin d'effectuer une mise à niveau propagée de l'ensemble du cluster de stockage. Pour commencer, accédez au https://github.com/NetApp-Automation["Référentiel NetApp Ansible"^] Sur GitHub et téléchargez le `nar_solidfire_sds_upgrade` rôle et documentation.
+
+[discrete]
+== Trouvez plus d'informations
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["Notes de version des services de contrôle et de gestion de cloud hybride NetApp"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"^]
+* http://docs.netapp.com/sfe-122/index.jsp["Centre de documentation des logiciels SolidFire et Element pour les versions précédentes"^]
+* https://www.netapp.com/us/documentation/hci.aspx["Page Ressources NetApp HCI"^]
+* https://docs.netapp.com/us-en/hci/docs/fw_storage_nodes.html["Versions de firmware de stockage prises en charge pour les nœuds de stockage SolidFire"^]
+

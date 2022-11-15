@@ -1,0 +1,41 @@
+---
+permalink: storage/concept_data_manage_vvol_work_virtual_volumes.html 
+sidebar: sidebar 
+keywords: virtual volume, configure vvols, use UI to manage 
+summary: 'Vous pouvez afficher des informations et effectuer des tâches pour les volumes virtuels et leurs conteneurs de stockage associés, les points de terminaison de protocole, les liaisons et les hôtes à l"aide de l"interface utilisateur Element.' 
+---
+= Utilisation des volumes virtuels
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher des informations et effectuer des tâches pour les volumes virtuels et leurs conteneurs de stockage associés, les points de terminaison de protocole, les liaisons et les hôtes à l'aide de l'interface utilisateur Element.
+
+Le système de stockage logiciel NetApp Element est livré avec la fonctionnalité de volumes virtuels (VVol) désactivée. Vous devez effectuer une tâche ponctuelle pour activer manuellement la fonctionnalité VVol vSphere via l'interface utilisateur Element.
+
+Une fois que vous avez activé la fonctionnalité VVol, un onglet VVol apparaît dans l'interface utilisateur avec laquelle offre une surveillance liée aux VVol et des options de gestion limitées. De plus, un composant logiciel côté stockage appelé VASA Provider sert de service de sensibilisation du stockage pour vSphere. La plupart des commandes VVol, comme la création, le clonage et la modification de VVol, sont lancées par un hôte vCenter Server ou ESXi et traduites par le fournisseur VASA en API Element pour le système de stockage du logiciel Element. Les commandes de création, de suppression et de gestion de conteneurs de stockage et de suppression de volumes virtuels peuvent être lancées à l'aide de l'interface utilisateur Element.
+
+La majorité des configurations nécessaires à l'utilisation de la fonctionnalité Virtual volumes avec les systèmes de stockage logiciels Element sont effectuées dans vSphere. Consultez le _VMware vSphere Virtual volumes pour le stockage SolidFire_ pour enregistrer le fournisseur VASA dans vCenter, créer et gérer des datastores VVol, et gérer le stockage conformément aux règles.
+
+
+NOTE: N'enregistrez pas plusieurs fournisseurs NetApp Element VASA vers une seule instance de vCenter. Ainsi, lorsqu'un deuxième fournisseur NetApp Element VASA est ajouté, tous les data stores VVOL sont inaccessibles.
+
+
+NOTE: La prise en charge de VASA pour plusieurs vCenters est disponible en tant que correctif de mise à niveau si vous avez déjà enregistré un fournisseur VASA auprès de votre vCenter. Pour installer, téléchargez le fichier VASA39 .tar.gz à partir du https://mysupport.netapp.com/products/element_software/VASA39/index.html["Téléchargements de logiciels NetApp"] et suivez les instructions dans le manifeste. Le fournisseur NetApp Element VASA utilise un certificat NetApp. Avec ce correctif, le certificat est utilisé non modifié par vCenter pour prendre en charge plusieurs vCenters pour VASA et VVol. Ne modifiez pas le certificat. Les certificats SSL personnalisés ne sont pas pris en charge par VASA.
+
+
+
+== Trouvez plus d'informations
+
+* xref:task_data_manage_vvol_enable_virtual_volumes.adoc[Activer les volumes virtuels]
+* xref:task_data_manage_vvol_view_virtual_volume_details.adoc[Afficher les détails des volumes virtuels]
+* xref:task_data_manage_vvol_delete_a_virtual_volume.adoc[Supprimer un volume virtuel]
+* xref:concept_data_manage_vvol_manage_storage_containers.adoc[Créer un conteneur de stockage]
+* xref:concept_data_manage_vvol_manage_storage_containers.adoc[Modifiez un conteneur de stockage]
+* xref:concept_data_manage_vvol_manage_storage_containers.adoc[Supprime un conteneur de stockage]
+* xref:concept_data_manage_vvol_protocol_endpoints.adoc[Terminaux PE]
+* xref:concept_data_manage_vvol_bindings.adoc[Liaisons]
+* xref:reference_data_manage_vvol_host_details.adoc[Détails sur l'hôte]
+

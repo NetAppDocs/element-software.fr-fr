@@ -1,0 +1,143 @@
+---
+permalink: api/reference_element_api_getbinassignmentproperties.html 
+sidebar: sidebar 
+keywords: bin assignment,assignment properties,retrieve assignment properties 
+summary: 'Vous pouvez utiliser la méthode GetBinAssignmentProperties pour récupérer les propriétés d"affectation de bin dans la base de données.' 
+---
+= GetBinAssignmentProperties
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetBinAssignmentProperties` méthode permettant de récupérer les propriétés d'affectation de bac dans la base de données.
+
+
+
+== Paramètre
+
+Cette méthode ne contient aucun paramètre d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+propriétés
+ a| 
+Détaille les propriétés de toutes les affectations de bac en cours dans la base de données.
+ a| 
+Tableau de propriétés de binassigner
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+    "method": "GetBinAssignmentProperties",
+    "params": {
+    },
+    "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "properties": {
+            "algorithmRuntimeMS": 1105,
+            "areReplicasValid": true,
+            "binCount": 65536,
+            "isBalanced": true,
+            "isStable": true,
+            "isWellCoupled": false,
+            "layout": [
+                {
+                    "protectionDomainName": "1",
+                    "services": [
+                        {
+                            "budget": 7281,
+                            "serviceID": 16
+                        },
+                        {
+                            "budget": 7281,
+                            "serviceID": 19
+                        },
+                        {
+                            "budget": 7281,
+                            "serviceID": 24
+                        }
+                    ]
+                },
+                {
+                    "protectionDomainName": "2",
+                    "services": [
+                        {
+                            "budget": 7281,
+                            "serviceID": 17
+                        },
+                        {
+                            "budget": 7281,
+                            "serviceID": 20
+                        },
+                        {
+                            "budget": 7281,
+                            "serviceID": 22
+                        }
+                    ]
+                },
+                {
+                    "protectionDomainName": "3",
+                    "services": [
+                        {
+                            "budget": 7281,
+                            "serviceID": 18
+                        },
+                        {
+                            "budget": 7281,
+                            "serviceID": 21
+                        },
+                        {
+                            "budget": 7281,
+                            "serviceID": 23
+                        }
+                    ]
+                }
+            ],
+            "numSwaps": 0,
+            "numUpdatingBins": 0,
+            "protectionDomainType": "node",
+            "reason": "Final",
+            "replicationCount": 2,
+            "requestRebalance": false,
+            "serviceStrandedCapacities": [],
+            "timePublished": "2020-04-02T18:34:07.807681Z",
+            "validSchemes": []
+        }
+    }
+}
+----
+
+
+== Nouveau depuis la version
+
+12.0

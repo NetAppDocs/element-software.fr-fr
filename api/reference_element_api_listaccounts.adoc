@@ -1,0 +1,142 @@
+---
+permalink: api/reference_element_api_listaccounts.html 
+sidebar: sidebar 
+keywords: account,accounts,list,listing,all,listaccounts 
+summary: 'Vous pouvez utiliser ListAccounts pour obtenir la liste complète des comptes de tenant du stockage, avec la prise en charge de la pagination facultative. Les comptes Element permettent l"accès aux volumes.' 
+---
+= Comptes ListAccounts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser `ListAccounts` pour obtenir la liste complète des comptes de tenant du stockage, avec la prise en charge de la pagination facultative. Les comptes Element permettent l'accès aux volumes.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+Y compris les conteneurs de stockage
+ a| 
+Des conteneurs de stockage de volumes virtuels sont inclus dans la réponse par défaut. Pour exclure les conteneurs de stockage, définissez sur FALSE.
+ a| 
+booléen
+ a| 
+vrai
+ a| 
+Non
+
+
+
+ a| 
+StartAccountID
+ a| 
+Début ID compte à renvoyer. Si aucun compte n'existe avec cet ID comptable, l'ordre de compte suivant par ID comptable est utilisé comme début de la liste. Pour parcourir la liste, passez l'ID comptable du dernier compte dans la réponse précédente + 1.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+limite
+ a| 
+Nombre maximal d'objets de compte à renvoyer.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+comptes
+ a| 
+La liste des comptes.
+ a| 
+xref:reference_element_api_account.adoc[compte] baie
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "ListAccounts",
+   "params": {
+     "startAccountID"  : 0,
+     "limit" : 1000
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "result" : {
+    "accounts": [
+	{
+        "attributes": {},
+        "username": "jamesw",
+        "targetSecret": "168#5A757ru268)",
+        "volumes": [],
+        "enableChap": false,
+        "status": "active",
+        "accountID": 16,
+        "storageContainerID": "abcdef01-1234-5678-90ab-cdef01234567",
+        "initiatorSecret": "168#5A757ru268)"
+    },
+    {
+        "attributes": {},
+        "username": "jimmyd",
+        "targetSecret": "targetsecret",
+        "volumes": [],
+        "enableChap": true,
+        "status": "active",
+        "accountID": 5,
+        "storageContainerID": "abcdef01-1234-5678-90ab-cdef01234567",
+        "initiatorSecret": "initiatorsecret"
+    }
+  ]
+}
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

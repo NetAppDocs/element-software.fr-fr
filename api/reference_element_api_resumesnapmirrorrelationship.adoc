@@ -1,0 +1,73 @@
+---
+permalink: api/reference_element_api_resumesnapmirrorrelationship.html 
+sidebar: sidebar 
+keywords: ResumeSnapMirrorRelationship,resume,SnapMirror,relationship,resuming 
+summary: 'L"interface utilisateur Web du logiciel Element utilise la méthode ResumeSnapMirror orRelationship pour activer les transferts ultérieurs concernant une relation SnapMirror mise en veille.' 
+---
+= RédumeSnapMirror relation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'interface utilisateur Web du logiciel Element utilise le `ResumeSnapMirrorRelationship` Méthode d'activation des transferts futurs pour une relation SnapMirror mise en veille.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+L'ID de terminal du système de stockage ONTAP distant communique avec le cluster de stockage Element.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+Volume desestinationVolume
+ a| 
+Volume de destination dans la relation SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeinfo]
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+SnapMirrorRelationship
+ a| 
+Objet contenant des informations relatives à la relation SnapMirror reprise.
+ a| 
+xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelationship]
+
+|===
+
+
+== Nouveau depuis la version
+
+10.1

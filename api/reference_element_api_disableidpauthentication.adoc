@@ -1,0 +1,57 @@
+---
+permalink: api/reference_element_api_disableidpauthentication.html 
+sidebar: sidebar 
+keywords: IdP,idp,authentication,disable 
+summary: 'Vous pouvez utiliser la méthode DisableIdpAuthentication pour désactiver la prise en charge de l"authentification à l"aide d"IDPS tiers pour le cluster. Une fois désactivés, les utilisateurs authentifiés par des PDI tiers ne peuvent plus accéder au cluster et toutes les sessions authentifiées actives sont invalifiées/déconnectées. Les administrateurs LDAP et du cluster peuvent accéder au cluster via des interfaces utilisateur prises en charge.' 
+---
+= DisableIdpAuthentication
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `DisableIdpAuthentication` Méthode permettant de désactiver la prise en charge de l'authentification à l'aide d'IDPS tiers pour le cluster. Une fois désactivés, les utilisateurs authentifiés par des PDI tiers ne peuvent plus accéder au cluster et toutes les sessions authentifiées actives sont invalifiées/déconnectées. Les administrateurs LDAP et du cluster peuvent accéder au cluster via des interfaces utilisateur prises en charge.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "DisableIdpAuthentication",
+  "params": {}
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+"result": {}
+}
+----
+
+
+== Nouveau depuis la version
+
+12.0

@@ -1,0 +1,70 @@
+---
+permalink: api/reference_element_api_getnetworkconfig.html 
+sidebar: sidebar 
+keywords: network,config,configuration,get,getting,getnetworkconfig 
+summary: 'Vous pouvez utiliser la méthode GetNetworkConfig pour afficher les informations de configuration réseau d"un nœud.' 
+---
+= GetNetworkConfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetNetworkConfig` méthode d'affichage des informations de configuration réseau d'un nœud.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+le réseau
+ a| 
+Types de connexion réseau et paramètres actuels pour chaque interface réseau du nœud.
+ a| 
+xref:reference_element_api_network_all_interfaces.adoc[réseau (toutes les interfaces)]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "GetNetworkConfig",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+En raison de la longueur de cet exemple de réponse, il est documenté dans un sujet supplémentaire.
+
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_response_example_getnetworkconfig.adoc[GetNetworkConfig]

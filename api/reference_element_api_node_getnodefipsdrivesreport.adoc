@@ -1,0 +1,78 @@
+---
+permalink: api/reference_element_api_node_getnodefipsdrivesreport.html 
+sidebar: sidebar 
+keywords: individual,fips,feature,support,info,report,get,getting,getnodefipsdrivesreport,drive 
+summary: 'Vous pouvez utiliser la méthode GetNodeFipsDriveReport pour vérifier l"état des fonctionnalités de chiffrement de disque FIPS 140-2 d"un seul nœud du cluster de stockage. Vous devez exécuter cette méthode sur un nœud de stockage individuel.' 
+---
+= GetNodeFipsDriveReport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetNodeFipsDrivesReport` Méthode de vérification de l'état de la fonctionnalité de chiffrement de disque FIPS 140-2-2 d'un seul nœud du cluster de stockage. Vous devez exécuter cette méthode sur un nœud de stockage individuel.
+
+
+
+== Paramètre
+
+Cette méthode n'a pas de paramètre d'entrée.
+
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+Entraînements par cinq
+ a| 
+Objet JSON contenant l'état de la prise en charge de la fonctionnalité FIPS 140-2 pour ce nœud. Valeurs possibles :
+
+* Aucun : le nœud ne prend pas en charge FIPS.
+* Partiel : les nœuds sont compatibles FIPS, mais tous les disques du nœud ne sont pas des disques FIPS.
+* Prêt : le nœud est compatible FIPS et tous les disques du nœud sont des disques FIPS (ou aucun disque n'est présent).
+
+ a| 
+chaîne
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "GetNodeFipsDrivesReport",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "fipsDrives": "None"
+    }
+}
+----
+
+
+== Nouveau depuis la version
+
+11.5

@@ -1,0 +1,162 @@
+---
+permalink: api/reference_element_api_createclustersupportbundle.html 
+sidebar: sidebar 
+keywords: CreateClusterSupportBundle,create,cluster,support,bundle,creating 
+summary: 'Vous pouvez utiliser CreateClusterSupportBundle sur le nœud de gestion pour rassembler des bundles de support à partir de tous les nœuds d"un cluster. Lorsqu"un bundle est créé, il est stocké sur le nœud sous la forme d"un fichier .tar.gz. Vous pouvez exécuter cette méthode uniquement sur un nœud de gestion. Elle ne fonctionne pas lorsqu"elle est exécutée sur un nœud de stockage.' 
+---
+= Offre CreateClusterSupportBundle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `CreateClusterSupportBundle` sur le nœud de gestion, afin de recueillir les bundles de support sur tous les nœuds d'un cluster. Les bundles de prise en charge de nœuds individuels sont compressés en tant que tar.gz fichiers. Le bundle de support de cluster est un fichier tar contenant les bundles de support de nœud. Vous pouvez exécuter cette méthode uniquement sur un nœud de gestion. Elle ne fonctionne pas lorsqu'elle est exécutée sur un nœud de stockage.
+
+
+
+== Paramètres
+
+
+NOTE: Vous devez appeler cette méthode sur le nœud de gestion. Par exemple :
+
+[listing]
+----
+https://<management node IP>:442/json-rpc/10.0
+----
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+AllowInComplete
+ a| 
+Permet au script de continuer à s'exécuter si les bundles ne peuvent pas être rassemblés à partir d'un ou de plusieurs nœuds.
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+Nom du gigollName
+ a| 
+Nom unique pour chaque bundle de support créé. Si aucun nom n'est fourni, « supportbundle » et le nom du nœud sont utilisés comme nom de fichier
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+mvip
+ a| 
+Le MVIP du cluster. Des bundles sont collectés sur tous les nœuds du cluster. Ce paramètre est requis si le paramètre nœuds n'est pas spécifié.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+nœuds
+ a| 
+Les adresses IP des nœuds à partir desquels collecter des bundles. Utilisez soit des nœuds, soit un mvip, mais pas les deux pour spécifier les nœuds à partir desquels les modules doivent être réunis. Ce paramètre est requis si mvip n'est pas spécifié.
+ a| 
+tableau de chaînes
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+mot de passe
+ a| 
+Mot de passe d'administration du cluster. *Remarque :* ce mot de passe est visible sous forme de texte lors de sa saisie.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+nom d'utilisateur
+ a| 
+Nom d'utilisateur admin du cluster.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+"method": "CreateClusterSupportBundle",
+"params": {
+          "bundlename": "clusterbundle",
+          "mvip": "132.119.120.100"
+     }
+   },
+ "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id":1,
+  "result":{
+   "details":{
+      "bundleName":"clusterbundle",
+      "extraArgs":"",
+      "files":[
+          "/tmp/supportbundles/clusterbundle.cl-4SD5.tar"
+      ],
+      "output":"timeout -s KILL 1790s /usr/local/bin/sfclustersupportbundle --quiet --name=\"clusterbundle\" --target-directory=\"/tmp/solidfire-dtemp.MM7f0m\" --user=\"admin\" --pass=\"admin\" --mvip=132.119.120.100"
+       },
+       "duration":"00:00:24.938127",
+       "result":"Passed"
+    }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

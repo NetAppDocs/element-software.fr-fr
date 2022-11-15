@@ -1,0 +1,227 @@
+---
+permalink: api/reference_element_api_clustercapacity.html 
+sidebar: sidebar 
+keywords: objects,object,clusterCapacity 
+summary: 'L"objet clusterCapacity contient des mesures de capacité de haut niveau pour le cluster. Vous pouvez obtenir des informations sur la capacité du cluster en utilisant la méthode GetClusterCapacity API. Les mesures d"espace dans les membres de l"objet sont calculées en octets.' 
+---
+= ClusterCapacity
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet clusterCapacity contient des mesures de capacité de haut niveau pour le cluster. Vous pouvez obtenir des informations sur la capacité du cluster en utilisant la méthode GetClusterCapacity API. Les mesures d'espace dans les membres de l'objet sont calculées en octets.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ActiveBlockSpace
+ a| 
+Quantité d'espace sur les lecteurs de blocs. Cela inclut des informations supplémentaires, telles que les entrées de métadonnées et l'espace qui peut être nettoyé.
+ a| 
+entier
+
+
+
+ a| 
+Activations
+ a| 
+Le nombre de sessions iSCSI actives communiquer avec le cluster.
+ a| 
+entier
+
+
+
+ a| 
+AverageIOPS
+ a| 
+Nombre d'opérations d'entrée/sortie par seconde moyen pour le cluster depuis minuit, temps universel coordonné (UTC).
+ a| 
+entier
+
+
+
+ a| 
+ClusterRecentIOSize
+ a| 
+Taille moyenne des IOPS sur tous les volumes du cluster.
+ a| 
+entier
+
+
+
+ a| 
+IOPS en cours
+ a| 
+Nombre moyen d'IOPS pour tous les volumes du cluster au cours des 5 dernières secondes.
+ a| 
+entier
+
+
+
+ a| 
+Max IOPS
+ a| 
+Capacité en IOPS maximale estimée pour le cluster actuel.
+ a| 
+entier
+
+
+
+ a| 
+MaxOverProvisibleSpace
+ a| 
+Quantité maximale d'espace pouvant être provisionne. Il s'agit d'une valeur calculée. Vous ne pouvez pas créer de nouveaux volumes si l'espace provisionné actuel associé à la nouvelle taille de volume dépasserait ce nombre. La valeur est calculée comme suit : `maxOverProvisionableSpace = maxProvisionedSpace * maxMetadataOverProvisionFactor`
+ a| 
+entier
+
+
+
+ a| 
+MaxprovisionnéSpace
+ a| 
+Quantité totale d'espace provisionné si tous les volumes sont remplis à 100 % (aucune métadonnées provisionnée dynamique).
+ a| 
+entier
+
+
+
+ a| 
+MaxUsedMetadaSpace
+ a| 
+Nombre d'octets utilisés sur les lecteurs de volume pour stocker les métadonnées.
+ a| 
+entier
+
+
+
+ a| 
+MaxUsedSpace
+ a| 
+Quantité totale d'espace sur tous les disques de bloc actifs.
+ a| 
+entier
+
+
+
+ a| 
+Non ZeroBlock
+ a| 
+Le nombre total de blocs 4Kio contenant des données après la dernière opération de collecte des déchets.
+ a| 
+entier
+
+
+
+ a| 
+PeakActiveSessions
+ a| 
+Le nombre maximal de connexions iSCSI depuis minuit UTC.
+ a| 
+entier
+
+
+
+ a| 
+PeakIOPS
+ a| 
+Valeur la plus élevée pour les IOPS en cours depuis minuit UTC.
+ a| 
+entier
+
+
+
+ a| 
+Provisionne un espace
+ a| 
+Quantité totale d'espace provisionné dans tous les volumes du cluster.
+ a| 
+entier
+
+
+
+ a| 
+horodatage
+ a| 
+Date et heure, au format UTC+0, à laquelle cet échantillon de capacité du cluster a été pris.
+ a| 
+Chaîne ISO 8601
+
+
+
+ a| 
+Opérations totalOps
+ a| 
+Nombre total d'opérations d'E/S réalisées tout au long de la durée de vie du cluster.
+ a| 
+entier
+
+
+
+ a| 
+UniqueBocks
+ a| 
+Nombre total de blocs stockés sur les lecteurs de bloc. La valeur inclut les blocs répliqués.
+ a| 
+entier
+
+
+
+ a| 
+UniqueBlocksUsedSpace
+ a| 
+Volume total de données que les uniqueBLocks s'élèvent sur les disques en mode bloc. Consultez la méthode GetclusterCapacity pour plus d'informations sur la relation de ce nombre avec la valeur uniqueBLocks.
+ a| 
+entier
+
+
+
+ a| 
+UsedMetadaSpace
+ a| 
+Nombre total d'octets utilisés sur les lecteurs de volume pour stocker les métadonnées.
+ a| 
+entier
+
+
+
+ a| 
+UsedMetataSpaceInsnapshots
+ a| 
+Nombre d'octets utilisés sur les lecteurs de volume pour stocker des données uniques dans les instantanés. Ce nombre fournit une estimation de la quantité d'espace de métadonnées à récupérer en supprimant tous les snapshots du système.
+ a| 
+entier
+
+
+
+ a| 
+UsedSpace
+ a| 
+Quantité totale d'espace utilisé par tous les disques de blocs du système.
+ a| 
+entier
+
+
+
+ a| 
+ZeroBLocks
+ a| 
+Le nombre total de blocs de 4 Ko vides sans données après la dernière opération de collecte des déchets.
+ a| 
+entier
+
+|===
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_getclustercapacity.adoc[GetClusterCapacity]

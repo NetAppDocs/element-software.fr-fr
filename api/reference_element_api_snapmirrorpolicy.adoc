@@ -1,0 +1,113 @@
+---
+permalink: api/reference_element_api_snapmirrorpolicy.html 
+sidebar: sidebar 
+keywords: object,objects,snapMirrorPolicy 
+summary: 'L"objet Mirrorsnapvaulpolitiques contient des informations sur une politique SnapMirror stockée sur un système ONTAP.' 
+---
+= Politique de snapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet Mirrorsnapvaulpolitiques contient des informations sur une politique SnapMirror stockée sur un système ONTAP.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+ID du système ONTAP de destination.
+ a| 
+entier
+
+
+
+ a| 
+Nom de la police
+ a| 
+Nom unique attribué à la règle.
+ a| 
+chaîne
+
+
+
+ a| 
+Type de politique
+ a| 
+Type de règle. Valeurs possibles :
+
+* async_mirror
+* coffre-fort_miroir
+
+ a| 
+chaîne
+
+
+
+ a| 
+commentaire
+ a| 
+Description lisible par l'homme associé à la règle SnapMirror.
+ a| 
+chaîne
+
+
+
+ a| 
+Priorité au transfert
+ a| 
+Priorité à laquelle un transfert SnapMirror s'exécute. Valeurs possibles :
+
+* Normal : priorité par défaut. Ces transferts sont programmés avant la plupart des transferts à faible priorité.
+* Faible : ces transferts ont la priorité la plus faible et sont planifiés après la plupart des transferts prioritaires normaux.
+
+ a| 
+chaîne
+
+
+
+ a| 
+Règles de police
+ a| 
+Liste d'objets décrivant les règles de règle.
+ a| 
+xref:reference_element_api_snapmirrorpolicyrule.adoc[SnapMirrorPolicyRule] baie
+
+
+
+ a| 
+Total KeepCount
+ a| 
+Le nombre total de rétention pour toutes les règles de la police.
+ a| 
+entier
+
+
+
+ a| 
+TotalRules
+ a| 
+Nombre total de règles dans la police.
+ a| 
+entier
+
+
+
+ a| 
+Vserver
+ a| 
+Nom du Vserver pour la règle SnapMirror.
+ a| 
+chaîne
+
+|===

@@ -1,0 +1,39 @@
+---
+permalink: api/concept_element_api_volume_snapshot_api_methods.html 
+sidebar: sidebar 
+keywords: volume,snapshot,API,method 
+summary: 'Les méthodes de l"API Snapshot de volume du logiciel Element vous permettent de gérer les snapshots de volumes. Vous pouvez créer, modifier, cloner et supprimer des snapshots de volumes à l"aide des méthodes de l"API de snapshot de volumes.' 
+---
+= Méthodes d'API de snapshot de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les méthodes de l'API Snapshot de volume du logiciel Element vous permettent de gérer les snapshots de volumes. Vous pouvez créer, modifier, cloner et supprimer des snapshots de volumes à l'aide des méthodes de l'API de snapshot de volumes.
+
+* xref:concept_element_api_snapshots_overview.adoc[Présentation des snapshots]
+* xref:reference_element_api_creategroupsnapshot.adoc[CreateGroupSnapshot]
+* xref:reference_element_api_createschedule.adoc[CreateSchedule]
+* xref:reference_element_api_createsnapshot.adoc[CreateSnapshot]
+* xref:reference_element_api_deletegroupsnapshot.adoc[DeleteGroupSnapshot]
+* xref:reference_element_api_deletesnapshot.adoc[DeleteSnapshot]
+* xref:reference_element_api_getschedule.adoc[GetSchedule]
+* xref:reference_element_api_listgroupsnapshots.adoc[ListGroupsnapshots]
+* xref:reference_element_api_listschedules.adoc[Listes de diffusion]
+* xref:reference_element_api_listsnapshots.adoc[Listsnapshots]
+* xref:reference_element_api_modifygroupsnapshot.adoc[ModityGroupSnapshot]
+* xref:reference_element_api_modifyschedule.adoc[Programme de modification]
+* xref:reference_element_api_modifysnapshot.adoc[Modificateur]
+* xref:reference_element_api_rollbacktogroupsnapshot.adoc[RollbackToGroupSnapshot]
+* xref:reference_element_api_rollbacktosnapshot.adoc[RollbackToSnapshot]
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

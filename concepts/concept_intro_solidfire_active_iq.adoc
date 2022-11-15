@@ -1,0 +1,33 @@
+---
+permalink: concepts/concept_intro_solidfire_active_iq.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, activeiq, tool, aiq 
+summary: 'Active IQ est un outil web qui propose des vues d"historique des données mises à jour en continu. Vous pouvez définir des alertes pour des événements, des seuils ou des metrics spécifiques. Active IQ vous permet de surveiller les performances et la capacité du système, ainsi que de rester informé de l"état du cluster.' 
+---
+= SolidFire Active IQ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+https://activeiq.solidfire.com["SolidFire Active IQ"^] est un outil en ligne qui offre des vues historiques mises à jour en permanence des données au niveau du cluster. Vous pouvez définir des alertes pour des événements, des seuils ou des metrics spécifiques. SolidFire Active IQ vous permet de surveiller les performances et la capacité du système, ainsi que de rester informé de l'état du cluster.
+
+Les informations suivantes concernant votre système sont disponibles dans SolidFire Active IQ :
+
+* Nombre de nœuds et état des nœuds : sain, hors ligne ou panne
+* Représentation graphique du processeur, de l'utilisation de la mémoire et de l'accélération des nœuds
+* Détails sur le nœud, par exemple le numéro de série, l'emplacement du slot dans le châssis, le modèle et la version du logiciel NetApp Element s'exécutant sur le nœud de stockage
+* Informations relatives aux processeurs et au stockage sur les machines virtuelles
+
+
+Pour plus d'informations sur SolidFire Active IQ, consultez le https://docs.netapp.com/us-en/solidfire-active-iq/index.html["Documentation SolidFire Active IQ"^].
+
+
+
+== Pour en savoir plus
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+* https://mysupport.netapp.com/site/tools/tool-eula/5ddb829ebd393e00015179b2["Site de support NetApp etgt ; outils pour Active IQ"^]
+

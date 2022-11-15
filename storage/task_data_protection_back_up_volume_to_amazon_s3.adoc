@@ -1,0 +1,32 @@
+---
+permalink: storage/task_data_protection_back_up_volume_to_amazon_s3.html 
+sidebar: sidebar 
+keywords: volume backup, amazon s3 object store 
+summary: 'Vous pouvez sauvegarder des volumes dans des magasins d"objets externes compatibles avec Amazon S3.' 
+---
+= Sauvegarde d'un volume dans un magasin d'objets Amazon S3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez sauvegarder des volumes dans des magasins d'objets externes compatibles avec Amazon S3.
+
+. Cliquez sur *Management* > *volumes*.
+. Cliquez sur l'icône actions correspondant au volume à sauvegarder.
+. Dans le menu qui s'affiche, cliquez sur *Sauvegarder sur*.
+. Dans la boîte de dialogue *Integrated Backup* sous *Backup to*, sélectionnez *S3*.
+. Sélectionnez une option sous *format de données* :
++
+** *Natif* : format compressé lisible uniquement par les systèmes de stockage SolidFire.
+** *Non compressé* : format non compressé compatible avec d'autres systèmes.
+
+
+. Entrez un nom d'hôte à utiliser pour accéder au magasin d'objets dans le champ *Nom d'hôte*.
+. Saisissez un ID de clé d'accès pour le compte dans le champ *ID de clé d'accès*.
+. Saisissez la clé secrète pour le compte dans le champ *clé d'accès secrète*.
+. Saisissez le compartiment S3 dans lequel stocker la sauvegarde dans le champ *compartiment S3*.
+. Entrez un nom à ajouter au préfixe dans le champ *nametag*.
+. Cliquez sur *Démarrer lecture*.
+

@@ -1,0 +1,51 @@
+---
+permalink: api/reference_element_api_protectionschemetolerance.html 
+sidebar: sidebar 
+keywords: object,objects,protectionSchemeTolerance 
+summary: 'L"objet protectionSchemeTolerance contient des informations sur la façon dont un cluster de stockage, pour un schéma de protection spécifique, peut continuer à lire et à écrire des données après des défaillances.' 
+---
+= ProtectionSchemetolérance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet protectionSchemeTolerance contient des informations sur la façon dont un cluster de stockage, pour un schéma de protection spécifique, peut continuer à lire et à écrire des données après des défaillances.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+Schéma de protection
+ a| 
+Schéma de protection actuel de ce cluster de stockage. La seule valeur possible est doubleHelix.
+ a| 
+chaîne
+
+
+
+ a| 
+Assure le suableFailresBloc données
+ a| 
+Le nombre actuel de défaillances simultanées qui peuvent se produire sans perdre la disponibilité des données du bloc pour le schéma de protection associé.
+ a| 
+entier
+
+
+
+ a| 
+SulableFailresForMetadata
+ a| 
+Le nombre actuel de défaillances simultanées qui peuvent se produire sans perdre la disponibilité des métadonnées pour le schéma de protection associé.
+ a| 
+entier
+
+|===

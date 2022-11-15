@@ -1,0 +1,103 @@
+---
+permalink: api/reference_element_api_modifysnapmirrorendpoint.html 
+sidebar: sidebar 
+keywords: modify,modifying,edit,editing,change,changing,snapmirror,endpoint,modifysnapmirrorendpoint 
+summary: 'L"interface utilisateur Web du logiciel Element utilise la méthode ModitySnapMirror orEndpoint pour modifier les attributs de nom et de gestion d"un terminal SnapMirror.' 
+---
+= ModifiySnapMirror orEndpoint
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'interface utilisateur Web du logiciel Element utilise le `ModifySnapMirrorEndpoint` Méthode permettant de modifier le nom et les attributs de gestion d'un terminal SnapMirror.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+
+
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+SnapMirror nomdepointe
+ a| 
+SnapMirror terminal à modifier.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+IP de gestion
+ a| 
+Nouvelle adresse IP de gestion du système ONTAP.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+nom d'utilisateur
+ a| 
+Nouveau nom d'utilisateur de gestion du système ONTAP.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+mot de passe
+ a| 
+Nouveau mot de passe de gestion pour le système ONTAP.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+SnapMirrorEndpoint
+ a| 
+Informations sur le terminal SnapMirror modifié.
+ a| 
+xref:reference_element_api_snapmirrorendpoint.adoc[SnapMirrorEndpoint]
+
+|===
+
+
+== Nouveau depuis la version
+
+10.0

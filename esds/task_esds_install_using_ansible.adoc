@@ -1,0 +1,178 @@
+---
+permalink: esds/task_esds_install_using_ansible.html 
+sidebar: sidebar 
+keywords: solidfire esds, installing solidfire esds, ansible role 
+summary: 'Vous pouvez installer SolidFire ESDS à l"aide d"un outil d"automatisation, tel qu"Ansible. Si vous connaissez bien Ansible, vous pouvez créer un PlayBook Ansible qui regroupe plusieurs tâches, telles que l"installation de SolidFire ESDS et la création d"un cluster.' 
+---
+= Installez SolidFire ESDS à l'aide d'Ansible
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez installer SolidFire ESDS à l'aide d'un outil d'automatisation, tel qu'Ansible. Si vous connaissez bien Ansible, vous pouvez créer un PlayBook Ansible qui regroupe plusieurs tâches, telles que l'installation de SolidFire ESDS et la création d'un cluster.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez installé Ansible sur votre serveur local en suivant les instructions fournies https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installation-guide["ici"^].
+* Vous vous êtes familiarisé avec les rôles Ansible. Voir https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html["ici"^].
+* Vous avez effectué toutes les tâches préalables répertoriées link:concept_esds_prerequisite_tasks.html["ici"^].
+* Vous avez exécuté une vérification de conformité pour SolidFire ESDS. Pour obtenir des instructions sur l'exécution de la vérification de conformité, reportez-vous à la section link:concept_esds_prerequisite_tasks.html["ici"^].
+
+
+Utilisez Ansible Vault pour les informations sensibles, telles que les mots de passe, plutôt que d'utiliser du texte brut. Pour plus d'informations, consultez les liens suivants :
+
+* https://docs.ansible.com/ansible/latest/user_guide/playbooks_vault.html["Utilisation d'Ansible Vault"^]
+* https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html["Comment construire votre stock"^]
+
+
+
+IMPORTANT: Vous devez spécifier toutes les variables requises dans votre fichier d'inventaire et non dans le manuel de vente.
+
+.Étapes
+. Exécutez le `ansible-galaxy install` pour installer le `nar_solidfire_sds_install` rôle.
++
+[listing]
+----
+ansible-galaxy install git+https://github.com/NetApp-Automation/nar_solidfire_sds_install.git
+----
++
+Vous pouvez également installer le rôle manuellement en le copiant à partir du https://github.com/NetApp-Automation["Référentiel NetApp GitHub"^] et placer le rôle dans le `~/.ansible/roles` répertoire. NetApp fournit un fichier README, qui inclut des informations sur l'exécution d'un rôle.
+
++
+
+NOTE: Assurez-vous de toujours télécharger les dernières versions des rôles.
+
+. Déplacez les rôles que vous avez téléchargés vers le haut d'un répertoire à partir duquel ils ont été installés.
++
+[listing]
+----
+ $ mv ~/.ansible/roles/ansible/nar_solidfire_sds_* ~/.ansible/roles/
+----
+. Exécutez le `ansible-galaxy role list` Commande permettant de s'assurer qu'Ansible est configuré pour utiliser les nouveaux rôles.
++
+[listing]
+----
+ $ ansible-galaxy role list
+ # ~/.ansible/roles
+ - nar_solidfire_sds_install, (unknown version)
+ - nar_solidfire_sds_upgrade, (unknown version)
+ - ansible, (unknown version)
+ - nar_solidfire_sds_compliance, (unknown version)
+ - nar_solidfire_cluster_config, (unknown version)
+ - nar_solidfire_sds_uninstall, (unknown version)
+----
++
+
+NOTE: Le fichier README associé aux rôles comprend une liste de toutes les variables obligatoires et facultatives que vous devez définir comme indiqué ci-dessous :
+
++
+image::../media/esds_sample_playbook.png[La présente un exemple de PlayBook.]
+
++
+Vous devez définir ces variables dans le fichier d'inventaire que vous allez créer à l'étape suivante.
+
+. Créez le fichier d'inventaire dans votre répertoire de travail Ansible.
++
+
+TIP: Dans le fichier d'inventaire, vous devez inclure tous les hôtes (nœuds) sur lesquels vous souhaitez installer SolidFire ESDS. Le fichier d'inventaire permet au PlayBook (que vous créez à l'étape suivante) de gérer plusieurs hôtes à l'aide d'une seule commande. Vous devez également définir des variables, telles que les noms d'utilisateur et de mot de passe pour vos nœuds de stockage, les noms de l'interface de gestion et de l'interface de stockage, etc.
+
++
+[IMPORTANT]
+====
+Assurez-vous de suivre les directives suivantes pour le fichier d'inventaire : ** utilisez les orthographe correctes pour les noms d'appareil. ** Utiliser la mise en forme correcte dans le fichier. ** Assurez-vous qu'il n'y a qu'un seul périphérique de mise en cache. ** Utilisez une liste pour spécifier les périphériques de stockage.
+
+====
++
+
+NOTE: Les exemples fournis ici portent les noms des interfaces de gestion et de stockage des serveurs HPE. Si vous possédez un serveur Dell, le nom du périphérique de cache est nvme1n1. Pour les serveurs Dell, mgmt_iface est team1G et Storage_iface est team10G.
+
++
+Un exemple de fichier d'inventaire est présenté ci-dessous. Elle comprend quatre nœuds de stockage. Dans cet exemple, remplacez *le noeud de stockage MIP* par les adresses MIP de vos nœuds de stockage et remplacez ***** avec le nom d'utilisateur et le mot de passe de vos nœuds de stockage.
+
++
+[listing]
+----
+all:
+    hosts:
+        storage node MIP:
+        storage node MIP:
+        storage node MIP:
+        storage node MIP:
+    vars:
+        ansible_connection: ssh
+        ansible_ssh_common_args: -o StrictHostKeyChecking=no
+        ansible_user: *****
+        ansible_ssh_pass: *****
+        solidfire_element_rpm: http://sf-artifactory.solidfire.net/artifactory/crux/solidfire-element-**.*.*.***-*.***.x86_64.rpm
+        mgmt_iface: "team0"
+        storage_iface: "team1"
+        storage_devices:
+          - "/dev/nvme0n1"
+          - "/dev/nvme1n1"
+          - "/dev/nvme2n1"
+          - "/dev/nvme3n1"
+          - "/dev/nvme4n1"
+          - "/dev/nvme5n1"
+          - "/dev/nvme6n1"
+          - "/dev/nvme7n1"
+          - "/dev/nvme8n1"
+        cache_devices:
+          - "/dev/nvme9n1"
+----
+. Envoyez une requête ping aux hôtes (nœuds) que vous avez définis dans le fichier d'inventaire pour vérifier qu'Ansible peut communiquer avec eux.
+. Téléchargez le fichier Red Hat Package Manager (RPM) dans le répertoire de fichiers d'un serveur Web local accessible à partir du serveur exécutant Ansible et des nœuds de stockage.
+. Créez le PlayBook Ansible. Si vous disposez déjà d'un PlayBook, vous pouvez le modifier. Vous pouvez utiliser les exemples fournis par NetApp dans le fichier README.
+. Installez SolidFire ESDS en exécutant le PlayBook que vous avez créé à l'étape précédente :
++
+[listing]
+----
+ $ ansible-playbook -i inventory.yaml sample_playbook.yaml
+----
++
+Remplacez *sample_PlayBook.yaml* par le nom de votre manuel de vente et *Inventory.yaml* avec le nom de votre fichier d'inventaire. L'exécution du manuel de vente crée le `sf_sds_config.yaml` fichier sur chaque nœud répertorié dans votre fichier d'inventaire. Il installe et démarre également le service SolidFire sur chaque nœud de stockage. Pour plus d'informations sur `sf_sds_config.yaml`, voir link:reference_esds_sf_sds_config_file.html["ici"^].
+
+. Vérifiez la sortie Ansible dans la console pour vous assurer que le service SolidFire a été démarré sur chaque nœud.
++
+Voici un exemple de résultat :
+
++
+[listing]
+----
+
+TASK [nar_solidfire_sds_install : Ensure the SolidFire eSDS service is started] *********************************************************************************************
+
+changed: [10.61.68.52]
+
+changed: [10.61.68.54]
+
+changed: [10.61.68.51]
+
+changed: [10.61.68.53]
+
+
+
+PLAY RECAP ******************************************************************************************************************************************************************
+
+10.61.68.51                : ok=12   changed=3    unreachable=0
+failed=0    skipped=10   rescued=0    ignored=0
+
+10.61.68.52                : ok=12   changed=3    unreachable=0
+failed=0    skipped=10   rescued=0    ignored=0
+
+10.61.68.53                : ok=12   changed=3    unreachable=0
+failed=0    skipped=10   rescued=0    ignored=0
+
+10.61.68.54                : ok=12   changed=3    unreachable=0
+failed=0    skipped=10   rescued=0    ignored=0
+----
+. Pour vérifier que le service SolidFire a été correctement démarré, exécutez le `systemctl status solidfire` et vérifiez `Active:active (exited)...` dans la sortie.
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

@@ -1,0 +1,31 @@
+---
+permalink: storage/concept_system_manage_key_get_started_with_external_key_management.html 
+sidebar: sidebar 
+keywords: kmip, master key, key management, encryption at rest, software encryption at rest, ekm, ak, eks, seds 
+summary: 'La gestion externe des clés \(EKM\) assure la gestion de la clé d"authentification sécurisée \(AK\) en association avec un serveur de clés externe hors cluster \(EKS\). Les clés de verrouillage sont utilisées pour verrouiller et déverrouiller les disques à autocryptage (SED) lorsque le chiffrement au repos est activé sur le cluster.' 
+---
+= Commencez par une gestion externe des clés
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La gestion externe des clés (EKM) assure la gestion de la clé d'authentification sécurisée (AK) en association avec un serveur de clés externe hors cluster (EKS). Les clés de verrouillage sont utilisées pour verrouiller et déverrouiller les disques à autocryptage (SED) lorsque link:../concepts/concept_solidfire_concepts_security.html["chiffrement des données au repos"] est activé sur le cluster. Le EKS fournit une génération et un stockage sécurisés des clés de sécurité. Le cluster utilise le protocole KMIP (Key Management Interoperability Protocol), un protocole standard défini PAR OASIS, pour communiquer avec le EKS.
+
+
+NOTE: Seul le chiffrement logiciel au repos est disponible pour les clusters SolidFire Enterprise SDS.
+
+* link:task_system_manage_key_set_up_external_key_management.html["Configurer la gestion externe"]
+* link:task_system_manage_rekey_software_ear_master_key.html["Chiffrement logiciel de nouvelle clé pour la clé principale REST"]
+* link:concept_system_manage_key_recover_inaccessible_or_invalid_authentication_keys["Récupérer les clés d'authentification inaccessibles ou non valides"]
+* link:concept_system_manage_key_external_key_management_api_commands.html["Commandes d'API de gestion externe des clés"]
+
+
+[discrete]
+== Trouvez plus d'informations
+
+* link:../api/reference_element_api_createcluster.html["CreateCluster API pouvant être utilisée pour activer le chiffrement logiciel au repos"]
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

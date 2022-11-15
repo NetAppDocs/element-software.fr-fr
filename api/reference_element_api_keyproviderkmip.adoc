@@ -1,0 +1,69 @@
+---
+permalink: api/reference_element_api_keyproviderkmip.html 
+sidebar: sidebar 
+keywords: key provider,KMIP,keys 
+summary: 'L"objet keyProviderKmip décrit un fournisseur de clés KMIP (Key Management Interoperability Protocol). Un fournisseur clé est un mécanisme et un emplacement pour récupérer les clés d"authentification et les utiliser avec les fonctionnalités du cluster telles que le chiffrement au repos.' 
+---
+= KeyProviderKmip
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet keyProviderKmip décrit un fournisseur de clés KMIP (Key Management Interoperability Protocol). Un fournisseur clé est un mécanisme et un emplacement pour récupérer les clés d'authentification et les utiliser avec les fonctionnalités du cluster telles que le chiffrement au repos.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+KeyProviderID
+ a| 
+ID du fournisseur de clés KMIP. Il s'agit d'une valeur unique attribuée par le cluster lors de la création du fournisseur de clés, qui ne peut pas être modifiée.
+ a| 
+entier
+
+
+
+ a| 
+KeyProviderIsActive
+ a| 
+Vrai si le fournisseur de clés KMIP est actif. Un fournisseur est considéré comme actif s'il existe des clés en attente qui ont été créées mais qui n'ont pas encore été supprimées et qui sont donc considérées comme toujours en cours d'utilisation.
+ a| 
+booléen
+
+
+
+ a| 
+KeyProviderName
+ a| 
+Nom du fournisseur de clés KMIP.
+ a| 
+chaîne
+
+
+
+ a| 
+KeyServerID
+ a| 
+ID de serveur clé associé à ce fournisseur. Le serveur doit être ajouté avant que ce fournisseur ne puisse devenir actif. Le serveur ne peut pas être supprimé alors que ce fournisseur est actif. Un seul ID de serveur est pris en charge par chaque fournisseur.
+ a| 
+tableau entier
+
+
+
+ a| 
+KmipCapCapability
+ a| 
+Les fonctionnalités de ce fournisseur de clés KMIP incluent des informations détaillées sur la bibliothèque sous-jacente, la conformité FIPS, le fournisseur SSL, etc
+ a| 
+chaîne
+
+|===

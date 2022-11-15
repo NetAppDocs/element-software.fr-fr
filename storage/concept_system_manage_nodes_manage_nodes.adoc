@@ -1,0 +1,22 @@
+---
+permalink: storage/concept_system_manage_nodes_manage_nodes.html 
+sidebar: sidebar 
+keywords: nodes, manage, cluster, capacity rule, pairs, stranded nodes 
+summary: 'Vous pouvez gérer le stockage SolidFire et les nœuds Fibre Channel depuis la page nœuds de l"onglet Cluster.' 
+---
+= Gérer des nœuds
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez gérer le stockage SolidFire et les nœuds Fibre Channel depuis la page nœuds de l'onglet Cluster.
+
+Si un nouveau nœud ajouté augmente la capacité totale du cluster de plus de 50 %, une partie de cette capacité devient inutilisable (« bloqué »), afin de lui conformer à la règle de capacité. Cela reste le cas jusqu'à l'ajout de stockage supplémentaire. Si un nœud très volumineux est ajouté qui obéit également à la règle de capacité, le nœud précédemment bloqué ne sera plus bloqué, tandis que le nouveau nœud ajouté est bloqué. La capacité doit toujours être ajoutée par paires pour éviter ce problème. Lorsqu'un nœud est bloqué, une défaillance de cluster appropriée est déclenchée.
+
+
+
+== Trouvez plus d'informations
+
+xref:task_system_manage_nodes_adding_a_node_to_a_cluster.adoc[Ajout d'un nœud à un cluster]

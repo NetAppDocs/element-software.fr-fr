@@ -1,0 +1,360 @@
+---
+permalink: esds/task_esds_r640_drive_repl.html 
+sidebar: sidebar 
+keywords: solidfire esds, replace drive, proactive drive replacement, cache drive replacement, faulty drive replacement, r640 
+summary: 'Effectuez cette procédure si vous souhaitez remplacer de manière proactive un lecteur de métadonnées ou un lecteur de bloc dans votre cluster ESDS SolidFire. La page Element UI Cluster > disques affiche les informations sur l"usure des disques.' 
+---
+= Remplacez les lecteurs pour Dell R640
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Choisissez parmi les procédures indiquées ci-dessous pour remplacer un disque de manière proactive, remplacer un disque après sa panne et remplacer un lecteur de cache. Remplacez un lecteur de métadonnées ou un lecteur de bloc dans votre cluster ESDS SolidFire. La page Element UI *Cluster > lecteurs* affiche les informations sur l'usure du disque.
+
+*  a drive proactively
+*  a faulty drive
+*  a cache drive
+
+
+
+
+== Remplacez un disque de manière proactive
+
+Effectuez cette procédure si vous souhaitez remplacer de manière proactive un lecteur de métadonnées ou un lecteur de bloc dans votre cluster ESDS SolidFire. La page Element UI *Cluster* > *Drives* affiche les informations d'usure du lecteur.
+
+.Ce dont vous avez besoin, 8217;ll
+* Dans l'interface utilisateur du logiciel NetApp Element, assurez-vous que le cluster est en bon état et qu'il n'y a aucun avertissement ni défaillance de cluster. Vous pouvez accéder à l'interface utilisateur d'Element à l'aide de l'adresse IP virtuelle de gestion (MVIP) du nœud de cluster principal.
+* Assurez-vous qu'aucune tâche n'est en cours d'exécution sur le cluster.
+* Assurez-vous de vous familiariser avec toutes les étapes.
+* Veillez à prendre les précautions nécessaires pour éviter les décharges électrostatiques (ESD) lors de la manipulation des lecteurs.
+
+
+.Étapes
+. Effectuez les opérations suivantes dans l'interface utilisateur Element :
++
+.. Dans l'interface utilisateur de l'élément, sélectionnez *Cluster* > *Drives* > *Active*.
+.. Sélectionnez le lecteur à remplacer.
+.. Notez le numéro de série du disque. Cela vous aidera à localiser le numéro de logement correspondant du lecteur dans le contrôleur d'accès à distance intégré Dell (iDRAC).
+.. Sélectionnez *actions groupées* > *Supprimer*. Après avoir retiré le lecteur, celui-ci passe à l'état *retrait*. Il reste à l'état *Suppression* pendant un certain temps, en attente de synchronisation ou de redistribution des données du disque sur les disques restants du cluster. Une fois le retrait terminé, le lecteur passe à l'état *disponible*.
+
+
+. Procédez comme suit pour localiser le logement du lecteur que vous remplacez :
++
+.. Connectez-vous à l'interface IPMI du nœud (iDRAC dans ce cas).
+.. Sélectionnez *stockage* dans le menu, puis *disques physiques*.
+.. Pour trouver le numéro de série du lecteur, sélectionnez l'icône *+* en regard de chaque unité SSD PCIe.
+.. Faites correspondre le numéro de série qui s'affiche à l'écran avec ce que vous avez indiqué dans l'interface utilisateur Element.
+.. Recherchez le numéro de slot indiqué par rapport au numéro de série.
++
+Il s'agit de l'emplacement physique dans lequel vous devez retirer le lecteur.
+
+
+
+. Maintenant que vous avez identifié le lecteur, retirez-le physiquement comme suit :
++
+.. Identifiez le numéro du slot de lecteur dans le châssis.
++
+L'image suivante montre l'avant du serveur avec la numérotation des logements indiquée pour chaque lecteur :
+
++
+image::../media/esds-dell.png[La illustre l'avant du serveur R640 avec la numérotation des logements indiquée pour chaque lecteur.]
+
+.. Appuyez sur le bouton du lecteur.
++
+Le loquet s'affiche.
+
+.. Retirez physiquement le lecteur de son logement.
++
+
+NOTE: Veillez à manipuler les disques avec précaution.
+
++
+Après avoir retiré physiquement le lecteur, l'état du lecteur devient *FAILED* dans l'interface utilisateur de l'élément.
+
+
+
+. Dans l'interface utilisateur de l'élément, sélectionnez *Cluster* > *Drives* > *failed*.
+. Sélectionnez l'icône sous *actions*, puis *Supprimer*.
++
+Vous pouvez maintenant installer le nouveau disque dans le nœud.
+
+. Notez le numéro de série du nouveau disque.
+. Insérez le lecteur de remplacement en poussant doucement le lecteur dans la baie à l'aide du loquet et en fermant le loquet. Le lecteur s'allume lorsqu'il est correctement inséré.
+. Procédez comme suit pour vérifier les détails du nouveau lecteur dans iDRAC :
++
+.. Connectez-vous à iDRAC.
+.. Sélectionnez *Maintenance* > *Journal des événements système*.
++
+Un événement est enregistré pour le lecteur que vous avez ajouté.
+
+.. Sélectionnez *stockage* dans le menu, puis *disques physiques*.
+.. Vérifiez que le nouveau lecteur inséré s'affiche dans le logement correspondant de l'interface utilisateur.
+.. Pour trouver le numéro de série du lecteur, sélectionnez l'icône *+* en regard de chaque unité SSD PCIe.
+
+
+. Ajoutez les nouvelles informations de lecteur dans le `sf_sds_config.yaml` fichier du nœud dans lequel vous avez remplacé le disque.
++
+Le `sf_sds_config.yaml` le fichier est stocké dans `/opt/sf/`. Ce fichier inclut toutes les informations relatives aux disques du nœud. Chaque fois que vous remplacez un lecteur, vous devez entrer les informations relatives au lecteur de remplacement dans ce fichier. Pour plus d'informations sur ce fichier, reportez-vous à la section link:reference_esds_sf_sds_config_file.html["Contenu du fichier sf_sds_config.yaml"^].
+
++
+.. Établissez une connexion SSH au nœud à l'aide de PuTTY.
+.. Dans la fenêtre de configuration PuTTY, entrez le noeud MIP dans le champ *Nom d'hôte (ou adresse IP)*.
+.. Sélectionnez *Ouvrir*.
+.. Dans la fenêtre du terminal qui s'ouvre, connectez-vous avec votre nom d'utilisateur et votre mot de passe.
+.. Exécutez le `# cat /opt/sf/sf_sds_config.yaml` commande permettant de lister le contenu du fichier.
+.. Remplacer les entrées dans le `dataDevices` ou `cacheDevices` listes pour le lecteur que vous avez remplacé avec les nouvelles informations de lecteur.
+.. Courez `# systemctl start solidfire-update-drives`.
++
+L'invite de Bash s'affiche après l'exécution de cette commande. Vous devez ensuite accéder à l'interface utilisateur Element pour ajouter le disque au cluster. L'interface utilisateur d'Element affiche une alerte pour le nouveau disque disponible.
+
+
+
+. Sélectionnez *Cluster* > *Drives* > *Available*.
++
+Le numéro de série du nouveau disque que vous avez installé s'affiche.
+
+. Sélectionnez l'icône sous *actions*, puis *Ajouter*.
+. Actualisez l'interface utilisateur d'Element une fois la tâche de synchronisation des blocs terminée. Vous voyez que l'alerte concernant le lecteur disponible a été effacée si vous accédez à la page *tâches en cours d'exécution* à partir de l'onglet *Reporting* de l'interface utilisateur de l'élément.
+
+
+
+
+== Remplacer un lecteur défectueux
+
+Si le lecteur de votre cluster SolidFire ESDS est défectueux, l'interface utilisateur de l'élément affiche une alerte. Avant de retirer le disque du cluster, vérifiez la raison de la défaillance en consultant les informations de l'interface IPMI de votre nœud/serveur. Ces étapes s'appliquent si vous remplacez un disque de bloc ou un lecteur de métadonnées.
+
+.Ce dont vous avez besoin, 8217;ll
+* Dans l'interface utilisateur du logiciel NetApp Element, vérifiez que le disque est défectueux. L'élément affiche une alerte en cas de panne d'un disque. Vous pouvez accéder à l'interface utilisateur d'Element à l'aide de l'adresse IP virtuelle de gestion (MVIP) du nœud de cluster principal.
+* Assurez-vous de vous familiariser avec toutes les étapes.
+* Veillez à prendre les précautions nécessaires pour éviter les décharges électrostatiques (ESD) lors de la manipulation des lecteurs.
+
+
+.Étapes
+. Supprimez le disque défectueux du cluster comme suit à l'aide de l'interface utilisateur Element :
++
+.. Sélectionnez *Cluster* > *Drives* > *FAILED*.
+.. Notez le nom du nœud et le numéro de série associés au disque défaillant.
+.. Sélectionnez l'icône sous *actions*, puis *Supprimer*. Si vous voyez des avertissements concernant le service associé au lecteur, attendez la fin de la synchronisation du bac, puis retirez le lecteur.
+
+
+. Procédez comme suit pour vérifier la panne du disque et afficher les événements associés à la panne du disque :
++
+.. Connectez-vous à l'interface IPMI du nœud (IDRAC dans ce cas).
+.. Sélectionnez *Maintenance* > *Journal des événements système* pour voir la raison de la défaillance du lecteur (par exemple, SSDWearOut ou lecteur mal inséré).
++
+Vous pouvez également voir un événement indiquant l'état du lecteur.
+
+.. Sélectionnez *stockage* dans le menu, puis *disques physiques*.
+.. Recherchez le numéro de slot du disque défectueux à l'aide du numéro de série que vous avez indiqué dans l'interface utilisateur d'Element.
+
+
+. Retirez physiquement le lecteur comme suit :
++
+.. Identifiez le numéro du slot de lecteur dans le châssis.
++
+L'image suivante montre l'avant du serveur avec la numérotation des logements indiquée pour chaque lecteur :
+
++
+image::../media/esds-dell.png[La illustre l'avant du serveur R640 avec la numérotation des logements indiquée pour chaque lecteur.]
+
+.. Appuyez sur le bouton du lecteur.
++
+Le loquet s'affiche.
+
+.. Retirez physiquement le lecteur de son logement.
++
+
+NOTE: Veillez à manipuler les disques avec précaution.
+
+
+
+. Insérez le disque de remplacement en poussant doucement le disque dans le slot à l'aide du loquet et en fermant le loquet.
++
+Le lecteur s'allume lorsqu'il est correctement inséré.
+
+. Vérifiez les détails du nouveau lecteur dans iDRAC :
++
+.. Sélectionnez *Maintenance* > *Journal des événements système*. Un événement est enregistré pour le lecteur que vous avez ajouté.
+.. Sélectionnez *stockage* dans le menu, puis *disques physiques*.
+.. Vérifiez que le nouveau lecteur inséré s'affiche dans le logement correspondant de l'interface utilisateur.
+.. Pour trouver le numéro de série du lecteur, sélectionnez l'icône *+* en regard de chaque unité SSD PCIe.
+
+
+. Ajoutez les nouvelles informations de lecteur dans le `sf_sds_config.yaml` fichier du nœud dans lequel vous avez remplacé le disque.
++
+Le `sf_sds_config.yaml` le fichier est stocké dans `/opt/sf/`. Ce fichier inclut toutes les informations relatives aux disques du nœud. Chaque fois que vous remplacez un lecteur, vous devez entrer les informations relatives au lecteur de remplacement dans ce fichier. Pour plus d'informations sur ce fichier, reportez-vous à la section link:reference_esds_sf_sds_config_file.html["Contenu du fichier sf_sds_config.yaml"^].
+
++
+.. Établissez une connexion SSH au nœud à l'aide de PuTTY.
+.. Dans la fenêtre de configuration PuTTY, entrez le noeud MIP dans le champ *Nom d'hôte (ou adresse IP)*.
+.. Sélectionnez *Ouvrir*.
+.. Dans la fenêtre du terminal qui s'ouvre, connectez-vous avec votre nom d'utilisateur et votre mot de passe.
+.. Exécutez le `# cat /opt/sf/sf_sds_config.yaml` commande permettant de lister le contenu du fichier.
+.. Remplacer les entrées dans le `dataDevices` ou `cacheDevices` listes pour le lecteur que vous avez remplacé avec les nouvelles informations de lecteur.
+.. Courez `# systemctl start solidfire-update-drives`.
++
+L'invite de Bash s'affiche après l'exécution de cette commande. Vous devez ensuite accéder à l'interface utilisateur Element pour ajouter le disque au cluster. L'interface utilisateur d'Element affiche une alerte pour le nouveau disque disponible.
+
+
+
+. Sélectionnez *Cluster* > *Drives* > *Available*.
++
+Le numéro de série du nouveau disque que vous avez installé s'affiche.
+
+. Sélectionnez l'icône sous *actions*, puis *Ajouter*.
+. Actualisez l'interface utilisateur d'Element une fois la tâche de synchronisation des blocs terminée. Vous voyez que l'alerte concernant le lecteur disponible a été effacée si vous accédez à la page *tâches en cours d'exécution* à partir de l'onglet *Reporting* de l'interface utilisateur de l'élément.
+
+
+
+
+== Remplacer un lecteur de cache
+
+Effectuez cette procédure si vous souhaitez remplacer le lecteur de cache de votre cluster SolidFire ESDS. Le lecteur de cache est associé aux services de métadonnées. La page Element UI *Cluster* > *Drives* affiche les informations d'usure du lecteur.
+
+.Ce dont vous avez besoin, 8217;ll
+* Dans l'interface utilisateur du logiciel NetApp Element, assurez-vous que le cluster est en bon état et qu'il n'y a aucun avertissement ni défaillance de cluster. Vous pouvez accéder à l'interface utilisateur d'Element à l'aide de l'adresse IP virtuelle de gestion (MVIP) du nœud de cluster principal.
+* Assurez-vous qu'aucune tâche n'est en cours d'exécution sur le cluster.
+* Assurez-vous de vous familiariser avec toutes les étapes.
+* Assurez-vous de supprimer les services de métadonnées de l'interface utilisateur Element.
+* Veillez à prendre les précautions nécessaires pour éviter les décharges électrostatiques (ESD) lors de la manipulation des lecteurs.
+
+
+.Étapes
+. Effectuez les opérations suivantes dans l'interface utilisateur Element :
++
+.. Dans l'interface utilisateur de l'élément, sélectionnez *Cluster* > *Nodes* > *Active*.
+.. Notez l'ID de nœud et l'adresse IP de gestion du nœud dans lequel vous remplacez le lecteur de cache.
+.. Si le lecteur de cache est en bon état et que vous le remplacez proactivement, sélectionnez *disques actifs*, localisez le lecteur de métadonnées et supprimez-le de l'interface utilisateur.
++
+Après la suppression, le lecteur de métadonnées passe d'abord à l'état *Suppression*, puis à *disponible*.
+
+.. Si vous effectuez le remplacement après l'échec du lecteur de cache, le lecteur de métadonnées est à l'état *disponible* et répertorié sous *Cluster* > *disques* > *disponibles*.
+.. Dans l'interface utilisateur de l'élément, sélectionnez *Cluster* > *Drives* > *Active*.
+.. Sélectionnez le disque de métadonnées associé au nom du nœud, dans lequel vous souhaitez procéder au remplacement du disque cache.
+.. Sélectionnez *actions groupées* > *Supprimer*. Après avoir retiré le lecteur, celui-ci passe à l'état *retrait*. Il reste à l'état *Suppression* pendant un certain temps, en attente de synchronisation ou de redistribution des données du disque sur les disques restants du cluster. Une fois le retrait terminé, le lecteur passe à l'état *disponible*.
+
+
+. Procédez comme suit pour localiser le logement de lecteur du lecteur de cache que vous remplacez :
++
+.. Connectez-vous à l'interface IPMI du nœud (iDRAC dans ce cas).
+.. Sélectionnez *stockage* dans le menu, puis *disques physiques*.
+.. Localisez le lecteur de cache.
++
+
+NOTE: Les disques en cache ont une capacité moindre (375 Go) que les disques de stockage et sont des SSD PCIe.
+
+.. Recherchez le numéro de logement indiqué pour le lecteur de cache.
++
+Il s'agit de l'emplacement physique dans lequel vous devez retirer le lecteur.
+
+
+
+. Maintenant que vous avez identifié le lecteur, retirez-le physiquement comme suit :
++
+.. Identifiez le numéro du slot de lecteur dans le châssis.
++
+L'image suivante montre l'avant du serveur avec la numérotation des logements indiquée pour chaque lecteur :
+
++
+image::../media/esds-dell.png[La illustre l'avant du serveur R640 avec la numérotation des logements indiquée pour chaque lecteur.]
+
+.. Appuyez sur le bouton du lecteur.
++
+Le loquet s'affiche.
+
+.. Retirez physiquement le lecteur de son logement.
++
+
+NOTE: Veillez à manipuler les disques avec précaution.
+
++
+Après avoir retiré physiquement le lecteur, l'état du lecteur devient *FAILED* dans l'interface utilisateur de l'élément.
+
+
+
+. Notez le numéro de modèle et l'ISN (numéro de série) du nouveau lecteur de cache.
+. Insérez le disque de remplacement en poussant doucement le disque dans le slot à l'aide du loquet et en fermant le loquet.
++
+Le lecteur s'allume lorsqu'il est correctement inséré.
+
+. Procédez comme suit pour vérifier les détails du nouveau lecteur dans iDRAC :
++
+.. Sélectionnez *Maintenance* > *Journal des événements système*. Un événement est enregistré pour le lecteur que vous avez ajouté.
+.. Sélectionnez *stockage* dans le menu, puis *disques physiques*.
+.. Vérifiez que le nouveau lecteur inséré s'affiche dans le logement correspondant de l'interface utilisateur.
+.. Pour trouver le numéro de série du lecteur, sélectionnez l'icône *+* en regard de chaque unité SSD PCIe.
+
+
+. Ajoutez les nouvelles informations de lecteur de cache dans le `sf_sds_config.yaml` fichier du nœud dans lequel vous avez remplacé le disque.
++
+Le `sf_sds_config.yaml` le fichier est stocké dans `/opt/sf/`. Ce fichier inclut toutes les informations relatives aux disques du nœud. Chaque fois que vous remplacez un lecteur, vous devez entrer les informations relatives au lecteur de remplacement dans ce fichier. Pour plus d'informations sur ce fichier, reportez-vous à la section link:reference_esds_sf_sds_config_file.html["Contenu du fichier sf_sds_config.yaml"^].
+
++
+.. Établissez une connexion SSH au nœud à l'aide de PuTTY.
+.. Dans la fenêtre de configuration PuTTY, entrez l'adresse MIP du nœud (que vous avez pris une note de à partir de l'interface utilisateur de l'élément précédemment) dans le champ *Host Name (ou adresse IP)*.
+.. Sélectionnez *Ouvrir*.
+.. Dans la fenêtre du terminal qui s'ouvre, connectez-vous avec votre nom d'utilisateur et votre mot de passe.
+.. Exécutez le `nvme list` Commande pour répertorier les périphériques NMVe.
++
+Vous pouvez voir le numéro de modèle et le numéro de série du nouveau lecteur de cache. Voir l'exemple de sortie suivant :
+
++
+image::../media/esds_nvme_list_r640.png[Affiche le numéro de modèle et le numéro de série du nouveau lecteur de cache.]
+
+.. Ajoutez les nouvelles informations de lecteur de cache dans `/opt/sf/sf_sds_config.yaml`.
++
+Vous devez remplacer le numéro de modèle et le numéro de série du lecteur de cache existant par les informations correspondantes pour le nouveau lecteur de cache. Voir l'exemple suivant :
+
++
+image::../media/esds_cache_drive_info_r640.png[Indique le numéro de modèle et le numéro de série.]
+
+.. Enregistrez le `/opt/sf/sf_sds_config.yaml` fichier.
+
+
+. Suivez les étapes du scénario qui s'applique à vous :
++
+[cols="2*"]
+|===
+| Scénario | Étapes 
+
+
+| Le nouveau lecteur de cache inséré s'affiche une fois que vous avez exécuté le `nvme list` commande  a| 
+.. Courez `# systemctl restart solidfire`. Cela prend environ trois minutes.
+.. Vérifier le `solidfire` état en cours d'exécution `system status solidfire`.
+.. Passez à l'étape 9.
+
+
+
+
+| Le nouveau lecteur de cache inséré n'apparaît pas après l'exécution du `nvme list` commande  a| 
+.. Redémarrez le nœud.
+.. Une fois le nœud redémarré, vérifiez que `solidfire` Les services sont en cours d'exécution en se connectant au nœud (à l'aide de PuTTY) et en exécutant le `system status solidfire` commande.
+.. Passez à l'étape 9.
+
+
+|===
++
+
+NOTE: Redémarrage `solidfire` ou le redémarrage du nœud provoque des défaillances du cluster, qui finissent par effacer environ cinq minutes.
+
+. Dans l'interface utilisateur Element, ajoutez le lecteur de métadonnées que vous avez supprimé :
++
+.. Sélectionnez *Cluster* > *Drives* > *Available*.
+.. Sélectionnez l'icône sous actions et sélectionnez *Ajouter*.
+
+
+. Actualisez l'interface utilisateur d'Element une fois la tâche de synchronisation des blocs terminée.
++
+Vous pouvez constater que l'alerte concernant le disque disponible s'est effacée et d'autres pannes du cluster.
+
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

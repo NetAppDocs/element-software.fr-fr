@@ -1,0 +1,26 @@
+---
+permalink: storage/task_data_protection_delete_a_snapshot.html 
+sidebar: sidebar 
+keywords: snapshot, delete, volume snapshot, storage cluster, remove snapshot 
+summary: 'Vous pouvez supprimer un snapshot de volume d"un cluster de stockage exécutant le logiciel Element. Lorsque vous supprimez un instantané, le système le supprime immédiatement.' 
+---
+= Supprime un snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer un snapshot de volume d'un cluster de stockage exécutant le logiciel Element. Lorsque vous supprimez un instantané, le système le supprime immédiatement.
+
+Vous pouvez supprimer les snapshots en cours de réplication à partir du cluster source. Si un snapshot est en cours de synchronisation avec le cluster cible lorsque vous le supprimez, la réplication de synchronisation est terminée et l'instantané est supprimé du cluster source. Le snapshot n'est pas supprimé du cluster cible.
+
+Vous pouvez également supprimer les snapshots qui ont été répliqués sur la cible du cluster cible. L'instantané supprimé est conservé dans une liste de snapshots supprimés sur la cible jusqu'à ce que le système détecte que vous avez supprimé l'instantané sur le cluster source. Lorsque la cible détecte que vous avez supprimé le snapshot source, la cible arrête la réplication du snapshot.
+
+Lorsque vous supprimez un snapshot du cluster source, le snapshot de cluster cible n'est pas affecté (l'inverse est également vrai).
+
+. Cliquez sur *Data protection* > *snapshots*.
+. Cliquez sur l'icône *actions* pour le snapshot que vous souhaitez supprimer.
+. Dans le menu qui s'affiche, sélectionnez *Supprimer*.
+. Confirmez l'action.
+

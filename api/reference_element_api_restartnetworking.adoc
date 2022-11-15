@@ -1,0 +1,83 @@
+---
+permalink: api/reference_element_api_restartnetworking.html 
+sidebar: sidebar 
+keywords: node,restarting,restart,networking,network,service,services,restartnetworking 
+summary: Vous pouvez utiliser la méthode RestartNetworking pour redémarrer les services réseau sur un nœud. 
+---
+= RestartNetworking
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `RestartNetworking` méthode de redémarrage des services réseau sur un noeud.
+
+
+NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
+
+AVERTISSEMENT :
+
+Cette méthode redémarre tous les services réseau d'un nœud, ce qui entraîne une perte temporaire de connectivité réseau.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+de force
+ a| 
+Défini sur vrai pour redémarrer les services réseau sur un nœud.
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "RestartNetworking",
+   "params": {
+              "force" : true
+             },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{ "id" : 1,
+  "result" : {}
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

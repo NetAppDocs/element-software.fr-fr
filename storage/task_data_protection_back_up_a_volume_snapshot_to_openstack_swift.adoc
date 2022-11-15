@@ -1,0 +1,32 @@
+---
+permalink: storage/task_data_protection_back_up_a_volume_snapshot_to_openstack_swift.html 
+sidebar: sidebar 
+keywords: volume snapshot, backup, openstack swift S3 object store 
+summary: 'Vous pouvez sauvegarder des snapshots SolidFire dans des magasins d"objets secondaires compatibles avec OpenStack Swift.' 
+---
+= Sauvegardez un snapshot de volume dans un magasin d'objets OpenStack Swift
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez sauvegarder des snapshots SolidFire dans des magasins d'objets secondaires compatibles avec OpenStack Swift.
+
+. Cliquez sur *Data protection* > *snapshots*.
+. Cliquez sur l'icône *actions* pour le snapshot que vous souhaitez sauvegarder.
+. Dans le menu qui s'affiche, cliquez sur *Sauvegarder sur*.
+. Dans la boîte de dialogue *Integrated Backup*, sous *Backup to*, sélectionnez *Swift*.
+. Sélectionnez une option sous *format de données* :
++
+** *Natif* : format compressé lisible uniquement par les systèmes de stockage SolidFire.
+** *Non compressé* : format non compressé compatible avec d'autres systèmes.
+
+
+. Saisissez une *URL* à utiliser pour accéder au magasin d'objets.
+. Saisissez un *Nom d'utilisateur* pour le compte.
+. Saisissez la *clé d'authentification* pour le compte.
+. Saisissez le *conteneur* dans lequel stocker la sauvegarde.
+. *Facultatif* : saisissez un *nom*.
+. Cliquez sur *Démarrer lecture*.
+

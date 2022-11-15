@@ -1,0 +1,172 @@
+---
+permalink: api/reference_element_api_addaccount.html 
+sidebar: sidebar 
+keywords: addaccount,add,adding,account,accounts 
+summary: 'Vous pouvez utiliser AddAccount pour ajouter un nouveau compte au système. Vous pouvez également utiliser cette méthode pour créer de nouveaux volumes sous le nouveau compte au fur et à mesure de la création du compte. Les paramètres Protocole d"authentification Challenge-Handshake \(CHAP\) que vous spécifiez pour le compte s"appliquent à tous les volumes appartenant au compte.' 
+---
+= Compte adpAccount
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser `AddAccount` pour ajouter un nouveau compte au système. Vous pouvez également utiliser cette méthode pour créer de nouveaux volumes sous le nouveau compte au fur et à mesure de la création du compte. Les paramètres CHAP (Challenge-Handshake Authentication Protocol) spécifiés pour le compte s'appliquent à tous les volumes appartenant au compte.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+`attributes`
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+`enableChap`
+ a| 
+Indique si les informations d'identification de compte CHAP peuvent être utilisées par un initiateur pour accéder aux volumes.
+ a| 
+booléen
+ a| 
+vrai
+ a| 
+Non
+
+
+
+ a| 
+`initiatorSecret`
+ a| 
+Le secret CHAP à utiliser pour l'initiateur. Ce secret doit comporter entre 12 et 16 caractères et être impénétrable. Le secret CHAP de l'initiateur doit être unique et ne peut pas être identique au secret CHAP de la cible. S'il n'est pas spécifié, un secret aléatoire est créé.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+`targetSecret`
+ a| 
+Le secret CHAP à utiliser pour la cible (authentification CHAP mutuelle). Ce secret doit comporter entre 12 et 16 caractères et être impénétrable. Le secret CHAP de la cible doit être unique et ne peut pas être identique au secret CHAP de l'initiateur. S'il n'est pas spécifié, un secret aléatoire est créé.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+`username`
+ a| 
+Nom d'utilisateur unique pour ce compte. (Doit comporter entre 1 et 64 caractères).
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+compte
+ a| 
+Objet contenant des informations sur le nouveau compte.
+ a| 
+xref:reference_element_api_account.adoc[compte]
+
+
+
+ a| 
+ID compte
+ a| 
+ID de l'objet compte créé.
+ a| 
+entier
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+	"method": "AddAccount",
+    "params": {
+     "username"  : "bobsmith",
+     "initiatorSecret" : "168[#5A757ru268)",
+     "targetSecret" : "tlt&lt;,8TUYa7bC",
+     "attributes" : {
+       "billingcode" : 2345
+     }
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "account": {
+      "accountID": 90,
+      "attributes": {
+        "billingcode": 2345
+      },
+      "initiatorSecret": "168[#5A757ru268)",
+      "status": "active",
+      "storageContainerID": "00000000-0000-0000-0000-000000000000",
+      "targetSecret": "tlt&lt;,8TUYa7bC",
+      "username": "bobsmith",
+      "volumes": [],
+      "enableChap": true
+    },
+    "accountID": 90
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

@@ -1,0 +1,116 @@
+---
+permalink: api/reference_element_api_resetdrives.html 
+sidebar: sidebar 
+keywords: drive,drives,remove,removing,data,reset,resetting,resetdrives,erase 
+summary: Vous pouvez utiliser la méthode ResetDrives pour initialiser proactivement les lecteurs et supprimer toutes les données résidant actuellement sur un lecteur. Le disque peut ensuite être réutilisé dans un nœud existant ou utilisé dans un nœud mis à niveau. 
+---
+= Réentraînement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ResetDrives` méthode d'initialisation proactive des disques et de suppression de toutes les données qui résident actuellement sur un disque. Le disque peut ensuite être réutilisé dans un nœud existant ou utilisé dans un nœud mis à niveau.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+disques
+ a| 
+Liste des noms de périphériques (et non des identifiants de transmission) à réinitialiser.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+de force
+ a| 
+Réglez sur TRUE pour réinitialiser le lecteur.
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+détails
+ a| 
+Détails des lecteurs en cours de réinitialisation.
+ a| 
+Baie d'objets JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "ResetDrives",
+   "params": {
+      "drives" : "slot3",
+      "force" : true
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+   "details": {
+    "drives": [
+    {
+      "drive": "slot3",
+      "returnCode": 0,
+      "stderr": " * Unlocking /dev/slot9 .[ ok ]\ * Setting master password /dev/slot9 .[ ok ]\ * Secure erasing /dev/slot9 (hdparm) [tries=0/1] ...........................[ ok ]",
+      "stdout": ""
+    }
+   ]
+  },
+  "duration": "00:00:28.501269",
+  "result": "Passed"
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

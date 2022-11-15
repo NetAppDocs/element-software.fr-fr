@@ -1,0 +1,48 @@
+---
+permalink: storage/task_snapmirror_performing_failback_when_source_volume_no_longer_exists.html 
+sidebar: sidebar 
+keywords: failback, perform, source volume, snapmirror, dr, disaster recovery 
+summary: 'Vous pouvez resynchroniser le volume source d"origine et revenir en arrière à l"aide de l"interface utilisateur de NetApp Element. Cette section s"applique aux scénarios dans lesquels le volume source d"origine a été perdu, mais le cluster d"origine est toujours intact. Pour obtenir des instructions sur la restauration vers un nouveau cluster, consultez la documentation disponible sur le site de support NetApp.' 
+---
+= Effectuez une restauration lorsque le volume source n'existe plus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez resynchroniser le volume source d'origine et revenir en arrière à l'aide de l'interface utilisateur de NetApp Element. Cette section s'applique aux scénarios dans lesquels le volume source d'origine a été perdu, mais le cluster d'origine est toujours intact. Pour obtenir des instructions sur la restauration vers un nouveau cluster, consultez la documentation disponible sur le site de support NetApp.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous disposez d'une relation de réplication rompue entre les volumes Element et ONTAP.
+* Le volume de l'élément est irrémédiablement perdu.
+* Le nom du volume d'origine apparaît comme INTROUVABLE.
+
+
+.Étapes
+. Dans l'interface utilisateur Element, recherchez la relation que vous avez rompue le basculement.
++
+*Meilleure pratique :* notez les détails de la règle SnapMirror et du calendrier de la relation initiale interrompue. Ces informations seront nécessaires lors de la recréation de la relation.
+
+. Cliquez sur l'icône *actions* et cliquez sur *Reverse Resync*.
+. Confirmez l'action.
++
+
+NOTE: L'opération Reverse Resync crée une nouvelle relation dans laquelle les rôles du volume source d'origine et du volume de destination sont inversés (cela entraîne deux relations comme la relation d'origine persiste). Comme le volume d'origine n'existe plus, le système crée un nouveau volume Element avec le même nom de volume et la même taille de volume que le volume source d'origine. Le nouveau volume se voit attribuer une politique de QoS par défaut appelée sm-Recovery et est associé à un compte par défaut appelé sm-Recovery. Vous devrez modifier manuellement le compte et la règle de qualité de services pour tous les volumes créés par SnapMirror pour remplacer les volumes source d'origine qui ont été détruits.
+
++
+Les données du dernier snapshot sont transférées vers le nouveau volume dans le cadre de l'opération de resynchronisation inverse. Vous pouvez continuer à accéder aux données et à les écrire sur le volume actif du côté de la destination, mais vous devez déconnecter tous les hôtes du volume actif et effectuer une mise à jour de SnapMirror avant de réintégrer la relation principale d'origine dans une étape ultérieure. Une fois la resynchronisation inverse terminée et assurez-vous qu'aucune session active n'est connectée au volume côté destination et que les données les plus récentes se trouvent sur le volume principal d'origine, poursuivez avec les étapes suivantes pour terminer le retour arrière et réactiver le volume principal d'origine :
+
+. Cliquez sur l'icône *actions* de la relation inverse créée pendant l'opération Reverse Resync et cliquez sur *Break*.
+. Cliquez sur l'icône *actions* de la relation d'origine, dans laquelle le volume source n'existe pas, puis cliquez sur *Supprimer*.
+. Cliquez sur l'icône *actions* de la relation inverse que vous avez rompue à l'étape 4, puis cliquez sur *Inverser la resynchronisation*.
+. La source et la destination sont ainsi inversés et la relation avec la même source de volume et la même destination de volume que la relation d'origine s'effectue.
+. Cliquez sur l'icône *actions* et sur *Modifier* pour mettre à jour cette relation avec la stratégie de QoS d'origine et les paramètres de planification que vous avez pris en compte.
+. Maintenant, vous pouvez supprimer la relation inverse que vous avez resynchronisés à l'étape 6.
+
+
+
+
+== Trouvez plus d'informations
+
+xref:concept_snapmirror_failback_scenarios.adoc[Scénarios de restauration SnapMirror]

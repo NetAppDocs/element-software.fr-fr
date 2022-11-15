@@ -1,0 +1,24 @@
+---
+permalink: storage/task_replication_validate_volume_replication.html 
+sidebar: sidebar 
+keywords: volume pairings, replication, validate volume replication 
+summary: 'Après la réplication d"un volume, assurez-vous que les volumes source et cible sont actifs. Dans un état actif, les volumes sont jumelés, les données sont envoyées de la source au volume cible et les données sont synchronisées.' 
+---
+= Validation de la réplication de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après la réplication d'un volume, assurez-vous que les volumes source et cible sont actifs. Dans un état actif, les volumes sont jumelés, les données sont envoyées de la source au volume cible et les données sont synchronisées.
+
+. Dans les deux clusters, sélectionnez *Data protection* > *Volume paires*.
+. Vérifiez que l'état du volume est actif.
+
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_replication_volume_pairing_warnings.adoc[Avertissements de couplage de volume]

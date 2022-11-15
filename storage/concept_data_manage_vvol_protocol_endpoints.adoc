@@ -1,0 +1,18 @@
+---
+permalink: storage/concept_data_manage_vvol_protocol_endpoints.html 
+sidebar: sidebar 
+keywords: protocol endpoint, access, cluster, storage node, iscsi supported 
+summary: 'Les terminaux PE sont des points d"accès utilisés par un hôte pour gérer le stockage sur un cluster exécutant le logiciel NetApp Element. Les terminaux de protocole ne peuvent pas être supprimés ou modifiés par un utilisateur, ne sont pas associés à un compte et ne peuvent pas être ajoutés à un groupe d"accès de volume.' 
+---
+= Terminaux PE
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les terminaux PE sont des points d'accès utilisés par un hôte pour gérer le stockage sur un cluster exécutant le logiciel NetApp Element. Les terminaux de protocole ne peuvent pas être supprimés ou modifiés par un utilisateur, ne sont pas associés à un compte et ne peuvent pas être ajoutés à un groupe d'accès de volume.
+
+Un cluster exécutant le logiciel Element crée automatiquement un terminal de protocole par nœud de stockage dans le cluster. Par exemple, un cluster de stockage à six nœuds comporte six terminaux de protocole mappés à chaque hôte ESXi. Les terminaux PE sont gérés de manière dynamique par le logiciel Element et sont créés, déplacés ou supprimés en fonction des besoins, sans aucune intervention. Les terminaux PE constituent la cible des chemins d'accès multiples et servent de proxy d'E/S pour les LUN secondaires. Chaque terminal PE utilise une adresse SCSI disponible, comme une cible iSCSI standard. Les terminaux Protocol apparaissent comme un périphérique de stockage à bloc unique (512 octets) dans le client vSphere, mais ce périphérique de stockage n'est pas disponible pour être formaté ou utilisé comme stockage.
+
+ISCSI est le seul protocole pris en charge. Le protocole Fibre Channel n'est pas pris en charge.

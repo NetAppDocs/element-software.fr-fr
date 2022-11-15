@@ -1,0 +1,14 @@
+---
+permalink: setup/task_setup_set_up_an_element_storage_system.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La configuration d"un système de stockage logiciel NetApp Element implique la configuration d"un nœud de stockage, la création d"un cluster de stockage et l"ajout de disques au cluster. Si vous utilisez un réseau Fibre Channel, vous pouvez configurer un nœud Fibre Channel.' 
+---
+= Configurez un système de stockage Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La configuration d'un système de stockage logiciel NetApp Element implique la configuration d'un nœud de stockage, la création d'un cluster de stockage et l'ajout de disques au cluster. Si vous utilisez un réseau Fibre Channel, vous pouvez configurer un nœud Fibre Channel.

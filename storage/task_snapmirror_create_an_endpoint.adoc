@@ -1,0 +1,42 @@
+---
+permalink: storage/task_snapmirror_create_an_endpoint.html 
+sidebar: sidebar 
+keywords: endpoints, create, snapmirror, ui 
+summary: 'Vous devez créer un terminal SnapMirror dans l"interface utilisateur NetApp Element avant de pouvoir créer une relation.' 
+---
+= Créer un terminal SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez créer un terminal SnapMirror dans l'interface utilisateur NetApp Element avant de pouvoir créer une relation.
+
+Un terminal SnapMirror est un cluster ONTAP qui sert de cible de réplication pour un cluster exécutant le logiciel Element. Avant de créer une relation SnapMirror, vous devez d'abord créer un terminal SnapMirror.
+
+Vous pouvez créer et gérer jusqu'à quatre terminaux SnapMirror dans un cluster de stockage exécutant le logiciel Element.
+
+
+NOTE: Si un noeud final existant a été créé à l'origine à l'aide de l'API et que les informations d'identification n'ont pas été enregistrées, vous pouvez voir le noeud final dans l'interface utilisateur d'Element et vérifier son existence, mais il ne peut pas être géré à l'aide de l'interface utilisateur d'Element. Ce noeud final ne peut alors être géré qu'à l'aide de l'API Element.
+
+Pour plus de détails sur les méthodes API, voir link:../api/index.html["Gérez le stockage avec l'API Element"].
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez avoir activé SnapMirror dans l'interface utilisateur Element pour le cluster de stockage.
+* Vous connaissez les informations d'identification ONTAP pour le noeud final.
+
+
+.Étapes
+. Cliquez sur *Data protection* > *SnapMirror Endpoints*.
+. Cliquez sur *Créer un point final*.
+. Dans la boîte de dialogue *Créer un nouveau point final*, entrez l'adresse IP de gestion de cluster du système ONTAP.
+. Entrez les informations d'identification de l'administrateur ONTAP associées au noeud final.
+. Consultez les informations complémentaires :
++
+** LIFs : liste les interfaces logiques ONTAP intercluster utilisées pour communiquer avec Element.
+** Status : affiche l'état actuel du noeud final SnapMirror. Les valeurs possibles sont : connecté, déconnecté et non géré.
+
+
+. Cliquez sur *Créer un point final*.
+

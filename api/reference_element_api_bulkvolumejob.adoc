@@ -1,0 +1,155 @@
+---
+permalink: api/reference_element_api_bulkvolumejob.html 
+sidebar: sidebar 
+keywords: bulkVolumeJob,object,objects,read,write,clones,snapshots,clone,snapshot 
+summary: 'L"objet bulkVolumeJob contient des informations sur les opérations de lecture ou d"écriture de volume en bloc, telles que le clonage ou la création de snapshots.' 
+---
+= BulkVolumeJob
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet bulkVolumeJob contient des informations sur les opérations de lecture ou d'écriture de volume en bloc, telles que le clonage ou la création de snapshots.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+attributs
+ a| 
+Attribut JSON du travail de volume en bloc.
+ a| 
+Objet JSON
+
+
+
+ a| 
+ID bulkVolume
+ a| 
+ID du travail du volume en bloc interne.
+ a| 
+entier
+
+
+
+ a| 
+CREATETIME
+ a| 
+Horodatage créé pour le travail de volume en bloc au format UTC+0.
+ a| 
+Chaîne de date ISO 8601
+
+
+
+ a| 
+SedTime
+ a| 
+Nombre de secondes depuis le début du travail.
+ a| 
+chaîne
+
+
+
+ a| 
+format
+ a| 
+Format de l'opération de volume en bloc. Valeurs possibles :
+
+* compressé
+* natif
+
+ a| 
+chaîne
+
+
+
+ a| 
+clé
+ a| 
+Clé unique créée par la session de volume en bloc.
+ a| 
+chaîne
+
+
+
+ a| 
+Pourcentage complet
+ a| 
+Pourcentage terminé signalé par l'opération.
+ a| 
+entier
+
+
+
+ a| 
+RemainingTime
+ a| 
+Temps restant estimé en secondes.
+ a| 
+entier
+
+
+
+ a| 
+SrcVolumeID
+ a| 
+ID du volume source.
+ a| 
+entier
+
+
+
+ a| 
+état
+ a| 
+État de l'opération. Valeurs possibles :
+
+* préparation
+* actif
+* l'a fait
+* échec
+
+ a| 
+chaîne
+
+
+
+ a| 
+script
+ a| 
+Nom du script fourni.
+ a| 
+chaîne
+
+
+
+ a| 
+ID de snapshot
+ a| 
+ID du snapshot si un snapshot est à la source du travail de volume en bloc.
+ a| 
+entier
+
+
+
+ a| 
+type
+ a| 
+Type d'opération en bloc. Valeurs possibles :
+
+* lecture
+* écriture
+
+ a| 
+chaîne
+
+|===

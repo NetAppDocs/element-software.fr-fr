@@ -1,0 +1,80 @@
+---
+permalink: storage/task_data_manage_vol_access_group_create_a_volume_access_group.html 
+sidebar: sidebar 
+keywords: volume access group, create, initiators 
+summary: 'Vous pouvez créer des groupes d"accès de volume en mappant les initiateurs à une collection de volumes pour assurer l"accès sécurisé. Vous pouvez ensuite accorder l"accès aux volumes du groupe avec un secret d"initiateur CHAP de compte et un secret cible.' 
+---
+= Créer un groupe d'accès de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer des groupes d'accès de volume en mappant les initiateurs à une collection de volumes pour assurer l'accès sécurisé. Vous pouvez ensuite accorder l'accès aux volumes du groupe avec un secret d'initiateur CHAP de compte et un secret cible.
+
+Si vous utilisez le protocole CHAP basé sur un initiateur, vous pouvez ajouter des informations d'identification CHAP pour un seul initiateur dans un groupe d'accès de volume, offrant ainsi une sécurité accrue. Cela vous permet d'appliquer cette option aux groupes d'accès aux volumes qui existent déjà.
+
+.Étapes
+. Cliquez sur *Management* > *Access Groups*.
+. Cliquez sur *Créer un groupe d'accès*.
+. Entrez un nom pour le groupe d'accès au volume dans le champ *Nom*.
+. Ajoutez un initiateur au groupe d'accès de volume de l'une des manières suivantes :
++
+[cols="25,75"]
+|===
+| Option | Description 
+
+
+ a| 
+Ajout d'un initiateur Fibre Channel
+ a| 
+.. Sous Ajouter des initiateurs, sélectionnez un initiateur Fibre Channel existant dans la liste initiateurs Fibre Channel.
+.. Cliquez sur *Ajouter initiateur FC*.
++
+
+NOTE: Vous pouvez créer un initiateur au cours de cette étape si vous cliquez sur le lien *Créer un initiateur*, saisissez un nom d'initiateur et cliquez sur *Créer*. Une fois que vous avez créé, le système ajoute automatiquement l'initiateur à la liste des initiateurs.
+
+
+
+Voici un exemple de format :
+
+[listing]
+----
+5f:47:ac:c0:5c:74:d4:02
+----
+
+
+ a| 
+Ajout d'un initiateur iSCSI
+ a| 
+Sous Ajouter des initiateurs, sélectionnez un initiateur existant dans la liste initiateurs. *Remarque :* vous pouvez créer un initiateur au cours de cette étape si vous cliquez sur le lien *Créer un initiateur*, saisissez un nom d'initiateur et cliquez sur *Créer*. Une fois que vous avez créé, le système ajoute automatiquement l'initiateur à la liste des initiateurs.
+
+Voici un exemple de format :
+
+[listing]
+----
+iqn.2010-01.com.solidfire:c2r9.fc0.2100000e1e09bb8b
+----
+
+TIP: Vous pouvez trouver l'IQN de l'initiateur pour chaque volume en sélectionnant *View Details* dans le menu actions du volume dans la liste *Management* > *volumes* > *Active*.
+
+Lorsque vous modifiez un initiateur, vous pouvez basculer l'attribut requiredCHAP sur vrai, ce qui vous permet de définir le secret de l'initiateur cible. Pour plus d'informations, reportez-vous à la section informations sur l'API relative à la méthode ModilyInitiator.
+
+link:../api/index.html["Gérez le stockage avec l'API Element"]
+
+|===
+. *Facultatif:* Ajouter d'autres initiateurs si nécessaire.
+. Sous Ajouter des volumes, sélectionnez un volume dans la liste *volumes*.
++
+Le volume apparaît dans la liste *volumes attachés*.
+
+. *Facultatif:* Ajouter plus de volumes selon les besoins.
+. Cliquez sur *Créer un groupe d'accès*.
+
+
+
+
+== Trouvez plus d'informations
+
+xref:task_data_manage_vol_access_group_add_volumes.adoc[Ajout de volumes à un groupe d'accès]

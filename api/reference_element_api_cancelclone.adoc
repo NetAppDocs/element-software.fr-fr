@@ -1,0 +1,77 @@
+---
+permalink: api/reference_element_api_cancelclone.html 
+sidebar: sidebar 
+keywords:  
+summary: Vous pouvez utiliser la méthode CancelClone pour arrêter un clonage de volume ou un processus de copie de volume en cours. Lorsque vous annulez une opération de clonage de groupe, le système termine et supprime l’opération asynchrone associée. 
+---
+= CancelClone
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `CancelClone` méthode d'arrêt d'un clone de volume ou d'un processus de copie de volume. Lorsque vous annulez une opération de clonage de groupe, le système termine et supprime l'opération associée à EasycHandle.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+Identifiant cloneID
+ a| 
+ID de clone dans le cadre du processus de clonage en cours.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "CancelClone",
+   "params": {
+      "cloneID" : 5,
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {}
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

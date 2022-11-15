@@ -1,0 +1,52 @@
+---
+permalink: storage/reference_data_manage_vvol_protocol_endpoints_details.html 
+sidebar: sidebar 
+keywords: protocol endpoints, details, vvols, state, type, id 
+summary: 'La page Protocol Endpoints de l"onglet VVols fournit des informations sur le terminal de protocole.' 
+---
+= Détails des terminaux de protocole
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La page Protocol Endpoints de l'onglet VVols fournit des informations sur le terminal de protocole.
+
+* *ID fournisseur principal*
++
+ID du fournisseur de point final du protocole principal.
+
+* *ID fournisseur secondaire*
++
+ID du fournisseur de point final du protocole secondaire.
+
+* *ID point final du protocole*
++
+UUID du noeud final du protocole.
+
+* *Protocole Etat du noeud final*
++
+État du noeud final du protocole. Les valeurs possibles sont les suivantes :
+
++
+** Active : le noeud final du protocole est en cours d'utilisation.
+** Démarrage : le point final du protocole démarre.
+** Basculement : le point final du protocole a échoué.
+** Réservé : le terminal protocole est réservé.
+
+
+* *Type de fournisseur*
++
+Type de fournisseur du terminal de protocole. Les valeurs possibles sont les suivantes :
+
++
+** Primaire
+** Secondaire
+
+
+* *ID PÉRIPHÉRIQUE NAA SCSI*
++
+Identifiant de périphérique SCSI unique au niveau mondial pour le point de terminaison de protocole dans le format étendu enregistré NAA IEEE.
+
+

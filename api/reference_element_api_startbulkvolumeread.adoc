@@ -1,0 +1,191 @@
+---
+permalink: api/reference_element_api_startbulkvolumeread.html 
+sidebar: sidebar 
+keywords: volume,read,session,start,starting,bulk,startbulkvolumeread 
+summary: Vous pouvez utiliser la méthode StartBulkVolumeRead pour démarrer une session de lecture de volume en bloc sur un volume spécifié. 
+---
+= StartBulkVolumeRead
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `StartBulkVolumeRead` méthode permettant de démarrer une session de lecture de volume en bloc sur un volume spécifié.
+
+Seuls deux processus en bloc peuvent être exécutés simultanément sur un volume. Lorsque vous initialisez la session, les données sont lues à partir d'un volume de stockage SolidFire et stockées sur une source de sauvegarde externe. Les données externes sont accessibles par un serveur web s'exécutant sur un nœud de stockage Element. Les informations d'interaction du serveur pour l'accès aux données externes sont transmises par un script exécuté sur le système de stockage.
+
+Au début d'une opération de lecture de volume en bloc, un snapshot du volume est créé et l'instantané est supprimé lorsque la lecture est terminée. Vous pouvez également lire un instantané du volume en entrant l'ID de l'instantané en tant que paramètre. Lorsque vous lisez un instantané précédent, le système ne crée pas de nouveau snapshot du volume et ne supprime pas le snapshot précédent une fois la lecture terminée.
+
+
+NOTE: Ce processus crée un nouvel instantané si l'ID d'un snapshot existant n'est pas fourni. Des snapshots peuvent être créés si la plénitude du cluster est à l'étape 2 ou 3. Les snapshots ne sont pas créés lorsque la plénitude de cluster est à l'étape 4 ou 5.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+format
+ a| 
+Le format des données de volume. Peut être :
+
+* `uncompressed`: Chaque octet du volume est renvoyé sans compression.
+* `native`: Les données opaques sont renvoyées qui sont plus petites et plus efficaces stockées et écrites sur une écriture de volume en bloc suivante.
+
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+ID de volume
+ a| 
+ID du volume à lire.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+ID de snapshot
+ a| 
+ID d'un snapshot créé précédemment, utilisé pour les lectures de volume en bloc. Si aucun ID n'est saisi, un instantané de l'image de volume active actuelle est créé.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+script
+ a| 
+Nom d'un script exécutable. Si aucun nom de script n'est indiqué, la clé et l'URL sont nécessaires pour accéder aux nœuds de stockage Element. Le script est exécuté sur le nœud principal, et la clé et l'URL sont renvoyées au script afin que le serveur Web local puisse être contacté.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+ScriptParameters
+ a| 
+Paramètres JSON à transmettre au script.
+ a| 
+Objet JSON
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+attributs
+ a| 
+Attributs JSON pour la tâche de volume en bloc.
+ a| 
+Objet JSON
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Asynchrone
+ a| 
+ID du processus asynchrone à vérifier pour l'achèvement.
+ a| 
+entier
+
+
+
+ a| 
+clé
+ a| 
+Clé opaque identifiant la session de manière unique.
+ a| 
+chaîne
+
+
+
+ a| 
+url
+ a| 
+URL d'accès au serveur Web du nœud.
+ a| 
+chaîne
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "StartBulkVolumeRead",
+   "params": {
+      "volumeID" : 5,
+      "format"  : "native",
+      "snapshotID" : 2
+   },
+   "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+      "id" : 1,
+   "result" : {
+      "asyncHandle" : 1,
+      "key" : "11eed8f086539205beeaadd981aad130",
+      "url" : "https://127.0.0.1:44000/"
+   }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

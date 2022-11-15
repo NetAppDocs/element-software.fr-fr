@@ -1,0 +1,28 @@
+---
+permalink: storage/task_data_protection_delete_a_group_snapshot.html 
+sidebar: sidebar 
+keywords: group snapshot, delete 
+summary: Vous pouvez supprimer un instantané de groupe du système. Lorsque vous supprimez le snapshot de groupe, vous pouvez choisir de supprimer ou de conserver tous les instantanés associés au groupe en tant que snapshots individuels. 
+---
+= Suppression d'un snapshot de groupe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer un instantané de groupe du système. Lorsque vous supprimez le snapshot de groupe, vous pouvez choisir de supprimer ou de conserver tous les instantanés associés au groupe en tant que snapshots individuels.
+
+Si vous supprimez un volume ou un snapshot membre d'un snapshot de groupe, vous ne pouvez plus revenir au snapshot de groupe. Toutefois, vous pouvez restaurer chaque volume individuellement.
+
+. Cliquez sur *protection des données* > *snapshots de groupe*.
+. Cliquez sur l'icône actions du snapshot que vous souhaitez supprimer.
+. Dans le menu qui s'affiche, cliquez sur *Supprimer*.
+. Sélectionnez l'une des options suivantes dans la boîte de dialogue de confirmation :
++
+** Cliquez sur *Supprimer l'instantané de groupe ET tous les membres de l'instantané de groupe* pour supprimer l'instantané de groupe et tous les snapshots membres.
+** Cliquez sur *conserver les membres de snapshot de groupe en tant que snapshots individuels* pour supprimer l'instantané de groupe, mais conserver tous les snapshots membres.
+
+
+. Confirmez l'action.
+

@@ -1,0 +1,27 @@
+---
+permalink: storage/task_data_protection_roll_back_a_volume_to_a_snapshot.html 
+sidebar: sidebar 
+keywords: volume to snapshot roll back, snapshot roll back, revert changes 
+summary: Vous pouvez restaurer un volume à un instantané précédent à tout moment. Cette opération rétablit les modifications apportées au volume depuis la création du snapshot. 
+---
+= Restaurer un volume vers un snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez restaurer un volume à un instantané précédent à tout moment. Cette opération rétablit les modifications apportées au volume depuis la création du snapshot.
+
+.Étapes
+. Cliquez sur *Data protection* > *snapshots*.
+. Cliquez sur l'icône *actions* de l'instantané que vous souhaitez utiliser pour la restauration du volume.
+. Dans le menu qui s'affiche, sélectionnez *Restaurer le volume à l'instantané*.
+. *Facultatif:* pour enregistrer l'état actuel du volume avant de revenir à l'instantané :
++
+.. Dans la boîte de dialogue *revenir à l'instantané*, sélectionnez *Enregistrer l'état actuel du volume en tant qu'instantané*.
+.. Entrez un nom pour le nouvel instantané.
+
+
+. Cliquez sur *Restaurer instantané*.
+

@@ -1,0 +1,80 @@
+---
+permalink: esds/task_esds_get_license_key.html 
+sidebar: sidebar 
+keywords: solidfire esds, capacity model, license key, get license key 
+summary: 'Pour obtenir de l"aide sur les problèmes de dépannage, vous devez obtenir les informations relatives aux clés de licence de votre cluster ESDS SolidFire avant de contacter le support NetApp. La clé de licence pour le cluster ESDS de SolidFire est constituée du numéro de commande du cluster associé au numéro de série.' 
+---
+= Obtenir la clé de licence
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour obtenir de l'aide sur les problèmes de dépannage, vous devez obtenir les informations relatives aux clés de licence de votre cluster ESDS SolidFire avant de contacter le support NetApp. La clé de licence pour le cluster ESDS de SolidFire est constituée du numéro de commande du cluster associé au numéro de série.
+
+Vous pouvez utiliser le `GetLicenseKey` Méthode d'obtention des informations de clé de licence pour le cluster de stockage SolidFire ESDS. Le `GetLicenseKey` la méthode n'a pas de paramètres d'entrée. Cette méthode a les valeurs de retour suivantes :
+
+[cols="3*"]
+|===
+| Nom | Description | Type 
+
+
+ a| 
+`orderNumber`
+ a| 
+Le nouveau numéro de bon de commande du cluster de stockage.
+ a| 
+chaîne
+
+
+
+ a| 
+`serialNumber`
+ a| 
+Le nouveau numéro de série du cluster de stockage.
+ a| 
+chaîne
+
+|===
+.Étape
+. Exécutez le `GetLicenseKey` Méthode API comme indiqué dans l'exemple suivant :
++
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
++
+[listing]
+----
+
+{
+   "method": "GetLicenseKey",
+   "params": {
+   },
+   "id": 1
+}
+----
++
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
++
+[listing]
+----
+
+{
+   "id" : 1,
+   "result" : {
+      "serialNumber": "30G56E3WV",
+      "orderNumber": "33601"
+     }
+   }
+}
+----
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

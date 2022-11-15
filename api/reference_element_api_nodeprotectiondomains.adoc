@@ -1,0 +1,42 @@
+---
+permalink: api/reference_element_api_nodeprotectiondomains.html 
+sidebar: sidebar 
+keywords: object,objects,node,protection domains 
+summary: 'L"objet nodeProtectionDomains contient des informations sur l"identification d"un nœud et des domaines de protection associés à ce nœud.' 
+---
+= Domaines de protection des noeuds
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet nodeProtectionDomains contient des informations sur l'identification d'un nœud et des domaines de protection associés à ce nœud.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ID de nœud
+ a| 
+Identificateur unique du nœud.
+ a| 
+entier
+
+
+
+ a| 
+ProtectionDomains
+ a| 
+Liste des domaines de protection dont le nœud est membre.
+ a| 
+link:reference_element_api_protectiondomain.md#GUID-96388C5C-ACA2-44D9-86CE-19FEF0825A11["ProtectionDomain"]
+
+|===

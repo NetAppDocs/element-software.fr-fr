@@ -1,0 +1,34 @@
+---
+permalink: storage/task_data_protection_clone_multiple_volumes_from_a_group_snapshot.html 
+sidebar: sidebar 
+keywords: multiple volumes, group snapshot, clone, create, data protection 
+summary: 'Vous pouvez cloner un groupe de volumes à partir d"un snapshot de groupe instantané. Cette opération nécessite qu"un snapshot de groupe des volumes existe déjà, car l"instantané de groupe est utilisé comme base pour créer les volumes. Une fois les volumes créés, vous pouvez les utiliser comme n"importe quel autre volume du système.' 
+---
+= Clonage de plusieurs volumes à partir d'un snapshot de groupe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez cloner un groupe de volumes à partir d'un snapshot de groupe instantané. Cette opération nécessite qu'un snapshot de groupe des volumes existe déjà, car l'instantané de groupe est utilisé comme base pour créer les volumes. Une fois les volumes créés, vous pouvez les utiliser comme n'importe quel autre volume du système.
+
+La taille du volume et la charge actuelle du cluster affectent le temps nécessaire à une opération de clonage.
+
+. Cliquez sur *protection des données* > *snapshots de groupe*.
+. Cliquez sur l'icône actions correspondant au snapshot de groupe que vous souhaitez utiliser pour les clones de volume.
+. Dans le menu qui s'affiche, sélectionnez *Cloner volumes à partir de l'instantané de groupe*.
+. Entrez un *Nouveau préfixe de nom de volume* dans la boîte de dialogue *Cloner volumes à partir de l'instantané de groupe*.
++
+Le préfixe est appliqué à tous les volumes créés à partir du snapshot de groupe.
+
+. *Facultatif:* sélectionnez un autre compte auquel le clone appartient.
++
+Si vous ne sélectionnez pas de compte, le système attribue les nouveaux volumes au compte de volume actuel.
+
+. *Facultatif:* sélectionnez une autre méthode d'accès pour les volumes du clone.
++
+Si vous ne sélectionnez pas de méthode d'accès, le système utilise l'accès actuel au volume.
+
+. Cliquez sur *Démarrer le clonage*.
+

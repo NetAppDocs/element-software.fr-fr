@@ -1,0 +1,130 @@
+---
+permalink: api/reference_element_api_listidpconfigurations.html 
+sidebar: sidebar 
+keywords: configs configurations,idp configs,list 
+summary: 'Vous pouvez utiliser la méthode ListIdpconfigurations pour lister les configurations des PDI tiers. Vous pouvez également fournir l"indicateur enabledOnly pour récupérer la configuration IDP actuellement activée ou un nom UUID ou IDP pour demander des informations pour une configuration IDP spécifique.' 
+---
+= ListIdpconfigurations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ListIdpConfigurations` Méthode permettant de lister les configurations des PDI tiers. Vous pouvez également fournir l'un ou l'autre `enabledOnly` Indicateur permettant de récupérer la configuration IDP actuellement activée ou un nom UUID ou IDP de métadonnées IDP pour demander des informations pour une configuration IDP spécifique.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+EnabledOnly
+ a| 
+Filtre le résultat pour renvoyer la configuration IDP actuellement activée.
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+ID de configuration idpConfigurationID
+ a| 
+UUID pour la configuration IDP tierce.
+ a| 
+UUID
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+IdpName
+ a| 
+Récupère les informations de configuration IDP pour un nom d'IDP spécifique.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Infographies d'idpConfig
+ a| 
+Informations sur la ou les configurations IDP tierces.
+ a| 
+link:reference_element_api_idpconfiginfo.md#GUID-7DAF8B5D-7803-417F-822B-F5B1A4E3EA93["IdpConfigInfo"] baie
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "ListIdpConfigurations",
+  "params": {}
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "result": {
+        "idpConfigInfo": {
+        "enabled": true,
+        "idpConfigurationID": "f983c602-12f9-4c67-b214-bf505185cfed",
+        "idpMetadata": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n
+        <EntityDescriptor xmlns=\"urn:oasis:names:tc:SAML:2.0:metadata\"\r\n
+        xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\"\r\n
+        xmlns:shibmd=\"urn:mace:shibboleth:metadata:1.0\"\r\n
+        xmlns:xml=\"http://www.w3.org/XML/1998/namespace\"\r\n
+        ...</Organization>\r\n
+        </EntityDescriptor>",
+        "idpName": "https://privider.name.url.com",
+        "serviceProviderCertificate": "-----BEGIN CERTIFICATE-----\n
+        MI...BHi\n
+        -----END CERTIFICATE-----\n",
+        "spMetadataUrl": "https://10.193.100.100/auth/ui/saml2"
+        }
+    }
+}
+----
+
+
+== Nouveau depuis la version
+
+12.0

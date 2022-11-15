@@ -1,0 +1,198 @@
+---
+permalink: api/reference_element_api_rollbacktosnapshot.html 
+sidebar: sidebar 
+keywords: rollbacktosnapshot,snapshot,creating,create,roll,back,rollback,roll back,existing 
+summary: 'Vous pouvez utiliser la méthode RollbackToSnapshot pour créer un snapshot existant de l"image de volume active. Cette méthode crée un nouvel instantané à partir d"un instantané existant.' 
+---
+= RollbackToSnapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `RollbackToSnapshot` méthode permettant de créer un snapshot existant de l'image de volume active. Cette méthode crée un nouvel instantané à partir d'un instantané existant.
+
+Le nouveau snapshot est activé et le snapshot existant est conservé jusqu'à sa suppression manuelle. Le snapshot précédemment actif est supprimé, sauf si vous définissez le paramètre saveCurrentState sur true.
+
+*CLUSTER_PLÉNITUDE*
+
+
+NOTE: Vous pouvez créer des instantanés si la plénitude de cluster est aux étapes 1, 2 ou 3. Vous ne pouvez pas créer de snapshots lorsque la plénitude de cluster atteint l'étape 4 ou 5.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+ID de volume
+ a| 
+VolumeID du volume.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Attributs JSON
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+nom
+ a| 
+Nom du snapshot. Si aucun nom n'est donné, le nom du snapshot restauré à est utilisé avec la mention « - copie » ajouté à la fin du nom.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+ID de snapshot
+ a| 
+ID d'un snapshot précédemment créé sur le volume donné.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+SaveCurrentState
+ a| 
+Indique s'il faut enregistrer ou non l'image de volume active précédente. Valeurs valides :
+
+* True : l'image de volume active précédente est conservée.
+* FALSE : l'image de volume active précédente est supprimée.
+
+ a| 
+booléen
+ a| 
+faux
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+somme de contrôle
+ a| 
+Une petite représentation des données dans le snapshot stocké.
+ a| 
+chaîne
+
+
+
+ a| 
+ID de snapshot
+ a| 
+Si saveCurrentState a été défini sur FALSE, cette valeur est nulle.
+
+Si saveCurrentState a été défini sur true, l'ID unique du snapshot nouvellement créé.
+ a| 
+entier
+
+
+
+ a| 
+snapshot
+ a| 
+Si saveCurrentState a été défini sur FALSE, cette valeur est nulle.
+
+Si saveCurrentState a été défini sur true, un objet contenant des informations sur le nouvel instantané créé.
+ a| 
+xref:reference_element_api_snapshot.adoc[snapshot]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+ "method": "RollbackToSnapshot",
+ "params": {
+    "volumeID": 1,
+    "snapshotID": 3114,
+    "saveCurrentState": true
+  },
+  "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "checksum": "0x0",
+    "snapshot": {
+      "attributes": {},
+      "checksum": "0x0",
+      "createTime": "2016-04-04T17:27:32Z",
+      "enableRemoteReplication": false,
+      "expirationReason": "None",
+      "expirationTime": null,
+      "groupID": 0,
+      "groupSnapshotUUID": "00000000-0000-0000-0000-000000000000",
+      "name": "test1-copy",
+      "snapshotID": 1,
+      "snapshotUUID": "30d7e3fe-0570-4d94-a8d5-3cc8097a6bfb",
+      "status": "done",
+      "totalSize": 5000658944,
+      "virtualVolumeID": null,
+      "volumeID": 1
+    },
+    "snapshotID": 1
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

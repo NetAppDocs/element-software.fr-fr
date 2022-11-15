@@ -1,0 +1,141 @@
+---
+permalink: api/reference_element_api_restartservices.html 
+sidebar: sidebar 
+keywords: restart,service,services,restartservices,restarting,node 
+summary: Vous pouvez utiliser la méthode RestartServices pour redémarrer les services sur un nœud. 
+---
+= RestartServices
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `RestartServices` méthode de redémarrage des services sur un noeud.
+
+
+
+== Paramètres
+
+AVERTISSEMENT :
+
+Cette méthode provoque une interruption temporaire des services des nœuds.
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+de force
+ a| 
+Défini sur vrai pour redémarrer les services sur un nœud.
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+services
+ a| 
+Nom de service à redémarrer.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+action
+ a| 
+Action à effectuer sur le service (démarrage, arrêt, redémarrage).
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+détails
+ a| 
+Sortie de la procédure de redémarrage du service, y compris les erreurs (le cas échéant).
+ a| 
+Objet JSON
+
+
+
+ a| 
+durée
+ a| 
+En quelques secondes, il fallait redémarrer les services sur le nœud.
+ a| 
+chaîne
+
+
+
+ a| 
+résultat
+ a| 
+Résultats du redémarrage.
+ a| 
+chaîne
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "RestartServices",
+   "params": {
+              "force" : true
+              "action" : restart,
+             }
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "details": "solidfire stop/waiting\nsolidfire start/running, process 7284\n",
+    "duration": "00:00:02.541594",
+    "result": "Passed"
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

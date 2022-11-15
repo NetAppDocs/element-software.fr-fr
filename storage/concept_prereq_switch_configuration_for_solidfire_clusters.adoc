@@ -1,0 +1,76 @@
+---
+permalink: storage/concept_prereq_switch_configuration_for_solidfire_clusters.html 
+sidebar: sidebar 
+keywords: cluster switch configuration, best practices for switch configuration, optimal storage performance, node hardware, traffic, cluster, Element software, best practices, switches, switch requirements, storage, performance, storage performance 
+summary: Le logiciel NetApp Element présente certaines exigences de commutation et les meilleures pratiques pour optimiser la performance du stockage. 
+---
+= Configuration de switch pour les clusters exécutant le logiciel Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le logiciel NetApp Element présente certaines exigences de commutation et les meilleures pratiques pour optimiser la performance du stockage.
+
+Les nœuds de stockage nécessitent 10 ou 25 GbE de switchs Ethernet, en fonction du matériel spécifique, pour les services de stockage iSCSI et la communication des services intra-cluster des nœuds. Les commutateurs 1GbE peuvent être utilisés pour ces types de trafic :
+
+* Gestion du cluster et des nœuds
+* Trafic de gestion au sein du cluster entre les nœuds
+* Trafic entre les nœuds de cluster et la machine virtuelle du nœud de gestion
+
+
+|===
+
+
+ a| 
+*Meilleure pratique :* vous devez mettre en œuvre les meilleures pratiques suivantes lors de la configuration des commutateurs Ethernet pour le trafic de cluster :
+
+* Pour le trafic non lié au stockage dans le cluster, déployez une paire de commutateurs 1 GbE pour assurer la haute disponibilité et le partage de charge.
+* Sur les commutateurs du réseau de stockage, déployez les commutateurs par paires et configurez et utilisez des trames Jumbo (une taille MTU de 9 9216 octets). Cela garantit une installation réussie et élimine les erreurs de réseau de stockage dues à la fragmentation des paquets.
+
+
+|===
+Le déploiement d'éléments nécessite au moins deux segments de réseau, un pour chacun des types de trafic suivants :
+
+* Gestion
+* Stockage/données
+
+
+En fonction des modèles de nœuds de stockage NetApp H-Series et de la configuration de câblage planifiée, vous pouvez séparer physiquement ces réseaux à l'aide de commutateurs distincts ou les séparer logiquement en utilisant des VLAN. Dans la plupart des déploiements, cependant, il est nécessaire de séparer logiquement ces réseaux à l'aide de VLAN.
+
+Les nœuds de stockage doivent pouvoir communiquer avant, pendant et après le déploiement.
+
+Si vous implémentez des réseaux de gestion distincts pour les nœuds de stockage, assurez-vous que ces réseaux de gestion disposent de routes réseau entre ces nœuds. Ces réseaux doivent avoir des passerelles attribuées et il doit y avoir une route entre les passerelles. Assurez-vous que chaque nouveau nœud dispose d'une passerelle attribuée pour faciliter la communication entre les nœuds et les réseaux de gestion.
+
+NetApp Element requiert les éléments suivants :
+
+* Tous les ports de commutation connectés aux nœuds de stockage NetApp H-Series doivent être configurés comme des ports de périphérie Spanning Tree.
++
+** Sur les commutateurs Cisco, en fonction du modèle du commutateur, de la version logicielle et du type de port, vous pouvez effectuer cette opération à l'aide de l'une des commandes suivantes :
++
+*** `spanning-tree port type edge`
+*** `spanning-tree port type edge trunk`
+*** `spanning-tree portfast`
+*** `spanning-tree portfast trunk`
+
+
+** Sur les switchs Mellanox, vous pouvez le faire avec `spanning-tree port type edge` commande.
+
+
+* Les commutateurs qui gèrent le trafic de stockage doivent prendre en charge des débits d'au moins 10 GbE par port (jusqu'à 25 GbE par port est pris en charge).
+* Les commutateurs qui gèrent le trafic de gestion doivent prendre en charge des vitesses d'au moins 1 GbE par port.
+* Vous devez configurer des trames Jumbo sur les ports du commutateur en gérant le trafic de stockage. Les hôtes doivent pouvoir envoyer des paquets de 9000 octets de bout en bout pour une installation réussie.
+* La latence réseau aller-retour entre tous les nœuds de stockage ne doit pas dépasser 2 ms.
+
+
+Certains nœuds offrent des fonctionnalités de gestion hors bande supplémentaires par le biais d'un port de gestion dédié. Les nœuds NetApp H300S, H500S et H700S permettent également l'accès IPMI via le port A. Il est recommandé de simplifier la gestion à distance en configurant la gestion hors bande pour tous les nœuds de votre environnement.
+
+
+
+== Pour en savoir plus
+
+* https://docs.netapp.com/us-en/hci/docs/hci_prereqs_network_switch.html["Configuration requise pour le réseau et les commutateurs NetApp HCI"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+

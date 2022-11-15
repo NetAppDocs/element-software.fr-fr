@@ -1,0 +1,232 @@
+---
+permalink: api/reference_element_api_node.html 
+sidebar: sidebar 
+keywords: object,objects,node 
+summary: 'L"objet nœud contient des informations sur chaque nœud du cluster. Vous pouvez récupérer ces informations à l"aide des méthodes ListenActiveNodes et ListenAllNodes.' 
+---
+= nœud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet nœud contient des informations sur chaque nœud du cluster. Vous pouvez récupérer ces informations à l'aide de `ListActiveNodes` et `ListAllNodes` méthodes.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+AssociateFServiceID
+ a| 
+ID du service Fibre Channel pour le nœud. « 0 » si le nœud n'est pas un nœud Fibre Channel.
+ a| 
+entier
+
+
+
+ a| 
+AssociateMasterServiceID
+ a| 
+ID de service maître du nœud.
+ a| 
+entier
+
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+
+
+
+ a| 
+ChassisName
+ a| 
+Identifie de manière unique un châssis ; identique pour tous les nœuds d'un même châssis.
+ a| 
+chaîne
+
+
+
+ a| 
+cip
+ a| 
+Adresse IP du cluster attribuée au nœud.
+ a| 
+chaîne
+
+
+
+ a| 
+cipi
+ a| 
+Interface réseau utilisée pour la communication avec le cluster.
+ a| 
+chaîne
+
+
+
+ a| 
+ClientProtectionDomainName
+ a| 
+Identifie de manière unique un domaine de protection personnalisé. Ce nom est identique pour tous les nœuds de stockage de tous les châssis dans un domaine de protection personnalisé donné.
+ a| 
+chaîne
+
+
+
+ a| 
+Groupe de fibres ChannelTargetPortGroup
+ a| 
+Groupe cible associé à ce nœud. « Null » si le nœud n'est pas un nœud Fibre Channel.
+ a| 
+entier
+
+
+
+ a| 
+Mode Maintenance
+ a| 
+Indique le mode de maintenance d'un nœud.
+ a| 
+s/o
+
+
+
+ a| 
+mip
+ a| 
+Adresse IP utilisée pour le node management.
+ a| 
+chaîne
+
+
+
+ a| 
+mipi
+ a| 
+Interface réseau utilisée pour le node management.
+ a| 
+chaîne
+
+
+
+ a| 
+nom
+ a| 
+Nom d'hôte du nœud.
+ a| 
+chaîne
+
+
+
+ a| 
+ID de nœud
+ a| 
+ID de nœud pour ce nœud.
+ a| 
+entier
+
+
+
+ a| 
+Emplacement de nœud
+ a| 
+Pour les plateformes HCI, la lettre correspondant au slot de châssis ce nœud est la (« A », « B », « C » ou « D »). Pour les plates-formes de stockage, cette valeur est nulle.
+ a| 
+chaîne
+
+
+
+ a| 
+Infos plateforme
+ a| 
+Informations matérielles pour le nœud. Membres :
+
+* ChassisType : la plate-forme matérielle du nœud.
+* CpuModel : le modèle CPU de la plate-forme matérielle.
+* NodeMemoryGB : quantité de mémoire installée sur la plate-forme physique en Go.
+* Nodeype : nom du modèle de nœud.
+* Plate-forme ConfigVersion : version du logiciel configurée pour ce nœud matériel.
+
+ a| 
+Objet JSON
+
+
+
+ a| 
+rôle
+ a| 
+Rôle du nœud dans le cluster. Valeurs possibles :
+
+* Gestion
+* Stockage
+* Calcul
+* Témoin
+
+ a| 
+
+
+
+ a| 
+sip
+ a| 
+Adresse IP de stockage attribuée au nœud.
+ a| 
+chaîne
+
+
+
+ a| 
+sipi
+ a| 
+Interface réseau utilisée pour le trafic de stockage.
+ a| 
+chaîne
+
+
+
+ a| 
+Version logicielle
+ a| 
+Renvoie la version actuelle du logiciel Element s'exécutant sur le nœud.
+ a| 
+chaîne
+
+
+
+ a| 
+uuid
+ a| 
+ID universel unique associé à ce nœud.
+ a| 
+chaîne
+
+
+
+ a| 
+VirtualNetworks
+ a| 
+Objet contenant des ID et des adresses IP du réseau virtuel.
+ a| 
+xref:reference_element_api_virtualnetwork.adoc[VirtualNetwork] baie
+
+|===
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_listactivenodes.adoc[ListenActiveNodes]
+* xref:reference_element_api_listallnodes.adoc[ListAllNodes]
+

@@ -1,0 +1,95 @@
+---
+permalink: api/reference_element_api_getpatchinfo.html 
+sidebar: sidebar 
+keywords: get,patch,info,patches,getpatchinfo 
+summary: Vous pouvez utiliser la méthode GetPatchInfo pour obtenir des informations sur les correctifs installés sur un nœud. 
+---
+= GetPatchInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetPatchInfo` Méthode d'obtention d'informations sur les correctifs logiciels Element installés sur un nœud de stockage.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+| `force`  a| 
+Forcer l'exécution de la méthode sur tous les nœuds du cluster de stockage. Ce n'est nécessaire que si vous émettez l'API vers une adresse IP de cluster au lieu d'un seul nœud. Valeurs possibles :
+
+* `true`
+* `false`
+
+| booléen | `false` | Non 
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+| correctifs | Objet contenant des informations sur les correctifs installés sur ce nœud. | Objet JSON 
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "GetPatchInfo",
+   "params": {
+      "force": false,
+      },
+   "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "patches": {
+          "SUST936": {
+          "date": "Wed 09 Dec 2020 10:41:59 PM UTC",
+          "description": "BMC fixes",
+          "newFiles": [
+              "None"
+          ],
+          "patchedFiles": [
+              "Patched_file_1.bin",
+              "Patched_file_2.dat",
+              "Patched_file_3.tgz"
+          ]
+          }
+        }
+    }
+}
+
+----
+
+
+== Nouveau depuis la version
+
+12.3

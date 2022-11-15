@@ -1,0 +1,94 @@
+---
+permalink: api/reference_element_api_enablebmccoldreset.html 
+sidebar: sidebar 
+keywords: BMC cold reset,BMC reset,enable BMC 
+summary: 'Vous pouvez utiliser la méthode EnableBmcColdReset pour activer une tâche d"arrière-plan qui réinitialise régulièrement le contrôleur de gestion de la carte mère \(BMC\) pour tous les nœuds du cluster.' 
+---
+= EnableBmcColdReset
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `EnableBmcColdReset` Méthode permettant d'activer une tâche d'arrière-plan qui réinitialise régulièrement le contrôleur BMC (Baseboard Management Controller) pour tous les nœuds du cluster.
+
+
+NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+délai dépassé
+ a| 
+Durée entre les opérations de réinitialisation du BMC, en quelques minutes.
+ a| 
+entier
+ a| 
+20160 minutes
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+CBmcResetDurationMinutes
+ a| 
+Renvoie la durée entre les intervalles de réinitialisation. L'intervalle doit toujours être 0 une fois la commande terminée.
+ a| 
+entier
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+    "method": "EnableBmcColdReset",
+    "params": {
+                "timeout": 36000
+    },
+    "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "cBmcResetDurationMinutes": 36000
+    }
+}
+----
+
+
+== Nouveau depuis la version
+
+12.0

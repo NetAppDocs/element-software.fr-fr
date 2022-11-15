@@ -1,0 +1,117 @@
+---
+permalink: api/reference_element_api_getfeaturestatus.html 
+sidebar: sidebar 
+keywords: feature,status,cluster,get,getting,getfeaturestatus 
+summary: 'Vous pouvez utiliser la méthode GetFeatureStatus pour récupérer l"état d"une fonction de cluster.' 
+---
+= Etat GetFeatureStatus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetFeatureStatus` méthode permettant de récupérer l'état d'une fonction de cluster.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+fonction
+ a| 
+L'état d'une fonctionnalité de cluster. Si aucune valeur n'est fournie, le système renvoie un état de toutes les fonctions. Valeurs possibles :
+
+* Vvol : récupération de l'état pour la fonctionnalité de cluster VVols.
+* SnapMirror : récupère l'état de la fonctionnalité de cluster de réplication SnapMirror.
+* FIPS : permet de récupérer l'état du chiffrement FIPS 140-2 pour la fonction de communication HTTPS.
+* FipsDrives : Récupère l'état de la fonction de cryptage de lecteur FIPS 140-2.
+
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+caractéristiques
+ a| 
+Tableau d'objets composant indiquant le nom de la fonction et son état. Membres de l'objet :
+
+* Fonction : (chaîne) Nom de la fonction.
+* Activé : (booléen) si le composant est activé ou non.
+
+ a| 
+Baie d'objets JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "GetFeatureStatus",
+    "params": {
+    },
+    "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "features": [
+            {
+                "enabled": true,
+                "feature": "Vvols"
+            },
+            {
+                "enabled": true,
+                "feature": "SnapMirror"
+            },
+            {
+                "enabled": true,
+                "feature": "Fips"
+            },
+            {
+                "enabled": true,
+                "feature": "FipsDrives"
+            }
+        ]
+    }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

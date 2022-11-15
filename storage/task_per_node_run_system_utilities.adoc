@@ -1,0 +1,103 @@
+---
+permalink: storage/task_per_node_run_system_utilities.html 
+sidebar: sidebar 
+keywords: storage nodes, running system utilities, system utilities, network settings, testing changes, reboot the node, power cycle, shuts down the node 
+summary: 'Vous pouvez utiliser l"interface utilisateur par nœud de stockage pour créer ou supprimer des bundles de support, réinitialiser les paramètres de configuration des disques et redémarrer les services réseau ou de cluster.' 
+---
+= Exécutez les utilitaires système à l'aide de l'interface utilisateur par nœud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser l'interface utilisateur par nœud de stockage pour créer ou supprimer des bundles de support, réinitialiser les paramètres de configuration des disques et redémarrer les services réseau ou de cluster.
+
+Vous avez ouvert une session sur l'interface utilisateur par nœud pour le nœud de stockage.
+
+. Cliquez sur *Utilitaires système*.
+. Cliquez sur le bouton de l'utilitaire système que vous souhaitez exécuter.
++
+** *Puissance de contrôle*
++
+Redémarre ou arrête le nœud.
+
++
+
+IMPORTANT: Cette opération entraîne une perte temporaire de la connectivité réseau.
+
++
+Spécifiez les paramètres suivants :
+
++
+*** Action : les options incluent redémarrage et arrêt (arrêt).
+*** Délai d'activation : tout délai supplémentaire avant la remise en ligne du nœud.
+
+
+** *Recueillir les journaux de noeud*
++
+Crée un bundle de support sous le répertoire /tmp/bundles du nœud.
+
++
+Spécifiez les paramètres suivants :
+
++
+*** Nom du bundle : nom unique pour chaque bundle de support créé. Si aucun nom n'est fourni, « supportbundle » et le nom du nœud sont utilisés comme nom de fichier.
+*** Args supplémentaires : ce paramètre est envoyé au script sf_marque_support_bundle. Ce paramètre doit être utilisé uniquement à la demande du support NetApp.
+*** Timeout sec : spécifiez le nombre de secondes d'attente pour chaque réponse ping individuelle.
+
+
+** *Supprimer les journaux de nœud*
++
+Supprime tous les packs de support en cours sur le nœud créés à l'aide de la méthode de création de bundle de support de cluster* ou de l'API CreateSupportBundle.
+
+** *Réinitialiser les lecteurs*
++
+Initialise les lecteurs et supprime toutes les données qui se trouvent actuellement sur le lecteur. Vous pouvez réutiliser le disque dans un nœud existant ou dans un nœud mis à niveau.
+
++
+Spécifiez le paramètre suivant :
+
++
+*** Lecteurs : liste des noms de périphériques (et non des identifiants de transmission) à réinitialiser.
+
+
+** *Réinitialiser la configuration réseau*
++
+Permet de résoudre les problèmes de configuration réseau d'un nœud individuel et de rétablir les paramètres d'usine par défaut d'un nœud individuel.
+
+** *Réinitialiser le noeud*
++
+Réinitialise les paramètres d'usine d'un nœud. Toutes les données sont supprimées, mais les paramètres réseau du nœud sont conservés pendant cette opération. Les nœuds ne peuvent être réinitialisés que s'ils sont non assignés à un cluster et sont en état disponible.
+
++
+
+IMPORTANT: Toutes les données, les packages (mises à niveau logicielles), les configurations et les fichiers journaux sont supprimés du nœud lorsque vous utilisez cette option.
+
+** *Redémarrer le réseau*
++
+Redémarre tous les services réseau sur un nœud.
+
++
+
+IMPORTANT: Cette opération peut entraîner une perte temporaire de la connectivité réseau.
+
+** *Redémarrer les services*
++
+Redémarre les services logiciels Element sur un nœud.
+
++
+
+IMPORTANT: Cette opération peut entraîner une interruption temporaire du service des nœuds. Vous devez effectuer cette opération uniquement selon la direction du support NetApp.
+
++
+Spécifiez les paramètres suivants :
+
++
+*** Service : nom du service à redémarrer.
+*** Action : action à effectuer sur le service. Les options possibles sont le démarrage, l'arrêt et le redémarrage.
+
+
+
+
+

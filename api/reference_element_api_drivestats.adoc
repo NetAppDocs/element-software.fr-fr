@@ -1,0 +1,191 @@
+---
+permalink: api/reference_element_api_drivestats.html 
+sidebar: sidebar 
+keywords: object,objects,driveStats 
+summary: 'L"objet driveStats contient des mesures d"activité de haut niveau pour un seul lecteur. Vous pouvez récupérer les informations de mesure à l"aide de la méthode API GetDriveStats.' 
+---
+= Statistiques de conduite
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet driveStats contient des mesures d'activité de haut niveau pour un seul lecteur. Vous pouvez récupérer des informations de mesure avec la méthode API `GetDriveStats`.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+Activations
+ a| 
+Nombre de sessions iSCSI utilisant actuellement ce lecteur (uniquement présent pour les lecteurs de métadonnées).
+ a| 
+entier
+
+
+
+ a| 
+ID de conduite
+ a| 
+ID unique du disque au sein du cluster.
+ a| 
+entier
+
+
+
+ a| 
+Nombre de diététistes incomte
+ a| 
+Nombre d'éléments matériels de disque défectueux.
+ a| 
+entier
+
+
+
+ a| 
+VieRemainingPercent
+ a| 
+Indicateur d'usure du support d'entraînement.
+ a| 
+entier
+
+
+
+ a| 
+LitimeReadBytes
+ a| 
+Nombre total d'octets lus depuis ce lecteur pendant toute la durée de vie du lecteur.
+ a| 
+entier
+
+
+
+ a| 
+LifetimeWriteBytes
+ a| 
+Nombre total d'octets écrits sur ce lecteur pendant toute la durée de vie du disque.
+ a| 
+entier
+
+
+
+ a| 
+PowerOnHours
+ a| 
+Nombre d'heures pendant lesquelles ce lecteur a été mis sous tension.
+ a| 
+entier
+
+
+
+ a| 
+Octets
+ a| 
+Nombre total d'octets lus à partir du lecteur en raison des opérations client.
+ a| 
+entier
+
+
+
+ a| 
+Opérations de lecture
+ a| 
+Nombre total d'opérations de lecture sur le disque en raison des opérations client.
+ a| 
+entier
+
+
+
+ a| 
+RéallocatedSectors
+ a| 
+Nombre de secteurs défectueux remplacés dans ce lecteur.
+ a| 
+entier
+
+
+
+ a| 
+RéservésPercent
+ a| 
+Capacité de réserve disponible du disque.
+ a| 
+entier
+
+
+
+ a| 
+horodatage
+ a| 
+Heure actuelle au format UTC+0.
+ a| 
+Chaîne de date ISO 8601
+
+
+
+ a| 
+Capacité totale
+ a| 
+Capacité totale du lecteur, en octets.
+ a| 
+entier
+
+
+
+ a| 
+Erreurs incorrigibles
+ a| 
+Valeur des erreurs non corrigibles signalées dans le système de surveillance de l'auto-surveillance, de l'analyse et de la technologie de création de rapports (SMART) dans le lecteur.
+ a| 
+entier
+
+
+
+ a| 
+UsedCapacity
+ a| 
+Capacité utilisée du lecteur, en octets.
+ a| 
+entier
+
+
+
+ a| 
+UsedMemory
+ a| 
+Quantité de mémoire actuellement utilisée par le nœud hébergeant ce lecteur.
+ a| 
+entier
+
+
+
+ a| 
+Octets
+ a| 
+Nombre total d'octets écrits sur le lecteur en raison de l'activité du client.
+ a| 
+entier
+
+
+
+ a| 
+WriteOps
+ a| 
+Total des opérations d'écriture sur le disque en raison de l'activité du client.
+ a| 
+entier
+
+|===
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_getdrivestats.adoc[GetDriveStats]

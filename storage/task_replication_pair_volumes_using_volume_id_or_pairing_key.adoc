@@ -1,0 +1,34 @@
+---
+permalink: storage/task_replication_pair_volumes_using_volume_id_or_pairing_key.html 
+sidebar: sidebar 
+keywords: volume pairings, pairing key, volume id, replication 
+summary: 'Le processus de couplage implique le couplage de deux volumes à l"aide d"un ID de volume ou d"une clé de couplage.' 
+---
+= Couplez des volumes à l'aide d'un ID de volume ou d'une clé de couplage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le processus de couplage implique le couplage de deux volumes à l'aide d'un ID de volume ou d'une clé de couplage.
+
+. Couplez les volumes en sélectionnant l'une des méthodes suivantes :
++
+** Utilisation d'un ID de volume : utilisez cette méthode si vous avez accès des administrateurs du cluster aux deux clusters sur lesquels les volumes doivent être appariés. Cette méthode utilise l'ID du volume du cluster distant pour établir une connexion.
+** Utilisation d'une clé de couplage : utilisez cette méthode si l'administrateur de cluster n'a accès qu'au cluster source. Cette méthode génère une clé de couplage qui peut être utilisée sur le cluster distant pour terminer la paire de volumes.
++
+
+NOTE: La clé de couplage de volume contient une version chiffrée des informations relatives au volume et peut contenir des informations sensibles. Partagez cette clé de manière sécurisée uniquement.
+
+
+
+
+
+
+
+== Trouvez plus d'informations
+
+* xref:task_replication_pair_volumes_using_a_volume_id.adoc[Couplez des volumes à l'aide d'un ID de volume]
+* xref:task_replication_pair_volumes_using_a_pairing_key.adoc[Couplez des volumes à l'aide d'une clé de couplage]
+

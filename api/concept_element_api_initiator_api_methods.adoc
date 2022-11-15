@@ -1,0 +1,28 @@
+---
+permalink: api/concept_element_api_initiator_api_methods.html 
+sidebar: sidebar 
+keywords: initiator,method,methods,API,managing,manage 
+summary: 'Les méthodes des initiateurs vous permettent d"ajouter, de supprimer, d"afficher et de modifier des objets initiateurs iSCSI, qui gèrent la communication entre le système de stockage et les clients de stockage externes.' 
+---
+= Méthodes de l'API de l'initiateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les méthodes des initiateurs vous permettent d'ajouter, de supprimer, d'afficher et de modifier des objets initiateurs iSCSI, qui gèrent la communication entre le système de stockage et les clients de stockage externes.
+
+* xref:reference_element_api_createinitiators.adoc[CreateInitiators]
+* xref:reference_element_api_deleteinitiators.adoc[DeleteInitiators]
+* xref:reference_element_api_listinitiators.adoc[Initiateurs]
+* xref:reference_element_api_modifyinitiators.adoc[Modificateurs]
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

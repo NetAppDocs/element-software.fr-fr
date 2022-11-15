@@ -1,0 +1,66 @@
+---
+permalink: storage/task_data_manage_vol_access_group_add_a_single_initiator.html 
+sidebar: sidebar 
+keywords: initiator, add to volume access group, access groups, add single initiator, create initiator 
+summary: 'Vous pouvez ajouter un initiateur à un groupe d"accès de volume existant.' 
+---
+= Ajout d'un seul initiateur à un groupe d'accès de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ajouter un initiateur à un groupe d'accès de volume existant.
+
+Lorsque vous ajoutez un initiateur à un groupe d'accès de volume, celui-ci a accès à tous les volumes de ce groupe.
+
+
+TIP: Vous pouvez trouver l'initiateur pour chaque volume en cliquant sur l'icône actions, puis en sélectionnant *Afficher les détails* du volume dans la liste volumes actifs.
+
+Si vous utilisez le protocole CHAP basé sur un initiateur, vous pouvez ajouter des informations d'identification CHAP pour un seul initiateur dans un groupe d'accès de volume, offrant ainsi une sécurité accrue. Cela vous permet d'appliquer cette option aux groupes d'accès aux volumes qui existent déjà.
+
+.Étapes
+. Cliquez sur *Management* > *Access Groups*.
+. Cliquez sur l'icône *actions* du groupe d'accès que vous souhaitez modifier.
+. Cliquez sur *Modifier*.
+. Pour ajouter un initiateur Fibre Channel au groupe d'accès de volume, effectuez les opérations suivantes :
++
+.. Sous Ajouter des initiateurs, sélectionnez un initiateur Fibre Channel existant dans la liste *initiateurs Fibre Channel*.
+.. Cliquez sur *Ajouter initiateur FC*.
++
+
+NOTE: Vous pouvez créer un initiateur au cours de cette étape si vous cliquez sur le lien *Créer un initiateur*, saisissez un nom d'initiateur et cliquez sur *Créer*. Après avoir créé l'initiateur, le système ajoute automatiquement l'initiateur à la liste *Initiators*.
+
++
+Voici un exemple de format :
+
+
+
++
+[listing]
+----
+5f:47:ac:c0:5c:74:d4:02
+----
+. Pour ajouter un initiateur iSCSI au groupe d'accès de volume, sous Ajouter des initiateurs, sélectionnez un initiateur existant dans la liste *initiateurs*.
++
+
+NOTE: Vous pouvez créer un initiateur au cours de cette étape si vous cliquez sur le lien *Créer un initiateur*, saisissez un nom d'initiateur et cliquez sur *Créer*. Après avoir créé l'initiateur, le système ajoute automatiquement l'initiateur à la liste *Initiators*.
+
++
+Le format accepté d'un IQN initiateur est le suivant : iqn.aaaa-mm, dans lequel y et m sont des chiffres, suivi d'un texte qui ne doit contenir que des chiffres, des caractères alphabétiques minuscules, un point (.), deux points (:) ou un tiret (-).
+
++
+Voici un exemple de format :
+
++
+[listing]
+----
+iqn.2010-01.com.solidfire:c2r9.fc0.2100000e1e09bb8b
+----
++
+
+TIP: Vous pouvez trouver l'IQN de l'initiateur pour chaque volume à partir de la page *Management* > *volumes* Active volumes en cliquant sur l'icône actions, puis en sélectionnant *View Details* pour le volume.
+
+. Cliquez sur *Enregistrer les modifications*.
+

@@ -1,0 +1,195 @@
+---
+permalink: api/reference_element_api_listvirtualvolumes.html 
+sidebar: sidebar 
+keywords: virtual,volume,volumes,vvol,list,listing,listvirtualvolumes 
+summary: Vous pouvez utiliser la méthode ListVirtualvolumes pour lister les volumes virtuels actuellement dans le système. Vous pouvez utiliser cette méthode pour répertorier tous les volumes virtuels ou uniquement un sous-ensemble. 
+---
+= LisVirtualvolumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ListVirtualVolumes` méthode permettant de lister les volumes virtuels actuellement dans le système. Vous pouvez utiliser cette méthode pour répertorier tous les volumes virtuels ou uniquement un sous-ensemble.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+détails
+ a| 
+Niveau de détail dans la réponse. Valeurs possibles :
+
+* Vrai : ajoutez plus de détails sur chaque VVol dans la réponse.
+* Faux : ajoutez le niveau de détail standard de chaque VVol dans la réponse.
+
+ a| 
+booléen
+ a| 
+Faux
+ a| 
+Non
+
+
+
+ a| 
+limite
+ a| 
+Nombre maximal de volumes virtuels à lister.
+ a| 
+entier
+ a| 
+10000
+ a| 
+Non
+
+
+
+ a| 
+récursif
+ a| 
+Spécifie s'il faut inclure ou non les informations concernant les enfants de chaque VVol dans la réponse. Valeurs possibles :
+
+* Vrai : incluez les informations concernant les enfants de chaque VVol dans la réponse.
+* Faux : n'incluez pas d'informations sur les enfants de chaque VVol dans la réponse.
+
+ a| 
+booléen
+ a| 
+Faux
+ a| 
+Non
+
+
+
+ a| 
+StartVirtualVolumeID
+ a| 
+ID du volume virtuel sur lequel commencer la liste de la réponse.
+ a| 
+UIDType
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+VirtualVolumeID
+ a| 
+Liste des ID de volume virtuel pour lesquels récupérer des informations. Si vous omettez ce paramètre, la méthode renvoie des informations sur ces volumes virtuels uniquement.
+ a| 
+Matrice UUID virtualVolumeID
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+NextVirtualVolumeID
+ a| 
+ID du volume virtuel suivant dans la liste.
+ a| 
+UUID
+
+
+
+ a| 
+Virtualvolumes
+ a| 
+Liste d'objets décrivant les volumes virtuels actuellement dans le système.
+ a| 
+xref:reference_element_api_virtualvolume.adoc[VirtualVolume] baie
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "ListVirtualVolumes",
+    "params": {
+    },
+    "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "nextVirtualVolumeID": "00000000-0000-0000-0000-000000000000",
+    "virtualVolumes": [
+      {
+        "bindings": [
+          177
+        ],
+        "children": [],
+        "metadata": {
+          "SFProfileId": "f4e5bade-15a2-4805-bf8e-52318c4ce443",
+          "SFgenerationId": "0",
+          "VMW_ContainerId": "abaab415-bedc-44cd-98b8-f37495884db0",
+          "VMW_VVolName": "asdf",
+          "VMW_VVolType": "Config",
+          "VMW_VmID": "502e0676-e510-ccdd-394c-667f6867fcdf",
+          "VMW_VvolProfile": "f4e5bade-15a2-4805-bf8e-52318c4ce443:0"
+        },
+        "parentVirtualVolumeID": "00000000-0000-0000-0000-000000000000",
+        "snapshotID": 0,
+        "snapshotInfo": null,
+        "status": "done",
+        "storageContainer": {
+          "accountID": 1,
+          "initiatorSecret": "B5)D1y10K)8IDN58",
+          "name": "test",
+          "protocolEndpointType": "SCSI",
+          "status": "active",
+          "storageContainerID": "abaab415-bedc-44cd-98b8-f37495884db0",
+          "targetSecret": "qgae@{o{~8\"2U)U^"
+        },
+        "virtualVolumeID": "269d3378-1ca6-4175-a18f-6d4839e5c746",
+        "virtualVolumeType": "config",
+        "volumeID": 166,
+        "volumeInfo": null
+      }
+    ]
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

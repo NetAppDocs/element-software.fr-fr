@@ -1,0 +1,19 @@
+---
+permalink: storage/reference_monitor_status_of_running_tasks.html 
+sidebar: sidebar 
+keywords: running tasks, view progress of 
+summary: 'Vous pouvez afficher la progression et l"état d"exécution des tâches exécutées dans l"interface utilisateur Web qui sont signalées par les méthodes API ListSyncJobs et ListBulkVolumeJobs. Vous pouvez accéder à la page tâches en cours d"exécution à partir de l"onglet Rapports de l"interface utilisateur de l"élément.' 
+---
+= Afficher l'état des tâches en cours d'exécution
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher la progression et l'état d'exécution des tâches exécutées dans l'interface utilisateur Web qui sont signalées par les méthodes API ListSyncJobs et ListBulkVolumeJobs. Vous pouvez accéder à la page tâches en cours d'exécution à partir de l'onglet Rapports de l'interface utilisateur de l'élément.
+
+S'il existe un grand nombre de tâches, le système peut les mettre en file d'attente et les exécuter par lots. La page tâches en cours affiche les services en cours de synchronisation. Lorsqu'une tâche est terminée, elle est remplacée par la tâche de synchronisation en file d'attente suivante. La synchronisation des tâches peut continuer à apparaître sur la page tâches en cours d'exécution jusqu'à ce qu'il n'y ait plus de tâches à effectuer.
+
+
+NOTE: Vous pouvez voir les données de synchronisation de réplication des volumes en cours de réplication sur la page tâches en cours du cluster contenant le volume cible.

@@ -1,0 +1,133 @@
+---
+permalink: api/reference_element_api_getvolumeaccessgroupefficiency.html 
+sidebar: sidebar 
+keywords: volume,volumes,get,getting,access,group,efficiency,GetVolumeAccessGroupEfficiency 
+summary: 'Vous pouvez utiliser la méthode GetVolumeAccessGroupEfficiency pour obtenir des informations d"efficacité sur un groupe d"accès de volume. Seul le groupe d"accès aux volumes que vous fournissez comme paramètre dans cette méthode API est utilisé pour calculer la capacité.' 
+---
+= Efficacité GetVolumeAccessGroupacité
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetVolumeAccessGroupEfficiency` méthode d'obtention d'informations d'efficacité sur un groupe d'accès de volume. Seul le groupe d'accès aux volumes que vous fournissez comme paramètre dans cette méthode API est utilisé pour calculer la capacité.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+Volume AccessGroupID
+ a| 
+Spécifie le groupe d'accès de volume pour lequel la capacité est calculée.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+compression
+ a| 
+Quantité d'espace économisé par la compression des données pour tous les volumes du groupe d'accès de volume. Le pourcentage indiqué par une valeur de 1 signifie que les données ont été stockées sans compression.
+ a| 
+flottement
+
+
+
+ a| 
+déduplication
+ a| 
+Quantité d'espace économisé en ne dupliquant pas les données de tous les volumes du groupe d'accès au volume. Exprimé sous forme de ratio.
+ a| 
+flottement
+
+
+
+ a| 
+Provisionnement fin
+ a| 
+Rapport entre l'espace utilisé et la quantité d'espace alloué au stockage des données. Exprimé sous forme de ratio.
+ a| 
+flottement
+
+
+
+ a| 
+horodatage
+ a| 
+La dernière fois que des données sur l'efficacité ont été recueillies après la collecte des données superflues.
+ a| 
+Chaîne de données ISO 8601
+
+
+
+ a| 
+Volumes mal singularisés
+ a| 
+Volumes qui n'ont pas pu être interrogés pour des données d'efficacité. Les volumes manquants peuvent être causés par une collecte de déchets récente, une perte temporaire du réseau ou des services redémarrés depuis le cycle de collecte des déchets.
+ a| 
+tableau entier
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "GetVolumeAccessGroupEfficiency",
+   "params": {
+      "volumeAccessGroupID": 1
+   },
+   "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+       "compression": 2.006012925331075,
+       "deduplication": 1,
+       "missingVolumes": [],
+       "thinProvisioning": 1.009861932938856,
+       "timestamp": "2014-03-10T17:05:27Z"
+   }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

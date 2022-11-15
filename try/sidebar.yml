@@ -1,0 +1,8 @@
+---
+section: try
+title: Essayez-le
+url: "/try/task_try_overview.html"
+entries:
+- title: Essayez les fonctionnalités de stockage à l'aide du nœud de démonstration
+    Element
+  url: "/try/task_use_demonode.html"

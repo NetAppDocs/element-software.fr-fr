@@ -1,0 +1,77 @@
+---
+permalink: api/reference_element_api_getconfig.html 
+sidebar: sidebar 
+keywords: node,get,getting,info,config,configuration,getconfig 
+summary: 'Vous pouvez utiliser la méthode getconfig API pour obtenir toutes les informations de configuration d"un noeud. Cette méthode d"API inclut les mêmes informations disponibles dans les méthodes GetClusterConfig et GetNetworkConfig API.' 
+---
+= Getconfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetConfig` Méthode d'API pour obtenir toutes les informations de configuration d'un nœud. Cette méthode API inclut les mêmes informations disponibles dans les deux `GetClusterConfig` et `GetNetworkConfig` Méthodes API
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Valeurs de retour
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+gstn de la
+ a| 
+Les détails de configuration du cluster. Cet objet contient :
+
+* xref:reference_element_api_cluster.adoc[cluster]: Informations sur le cluster qui identifie la façon dont le nœud de stockage communique avec le cluster de stockage auquel il est associé.
+* xref:reference_element_api_network_all_interfaces.adoc[réseau (toutes les interfaces)]: Types de connexion réseau et paramètres actuels pour chaque interface réseau du nœud.
+
+ a| 
+Objet JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "GetConfig",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+En raison de la longueur de cet exemple de réponse, il est documenté dans un sujet supplémentaire.
+
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_getclusterconfig.adoc[GetClusterConfig]
+* xref:reference_element_api_getnetworkconfig.adoc[GetNetworkConfig]
+* xref:reference_element_api_response_example_getconfig.adoc[Getconfig]
+

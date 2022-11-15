@@ -1,0 +1,84 @@
+---
+permalink: api/reference_element_api_listbackuptargets.html 
+sidebar: sidebar 
+keywords: backup,target,targets,info,list,listing,listbackuptargets 
+summary: Vous pouvez utiliser la méthode ListBackupTargets pour obtenir des informations sur toutes les cibles de sauvegarde qui ont été créées. 
+---
+= BackupTargets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ListBackupTargets` méthode permettant d'obtenir des informations sur toutes les cibles de sauvegarde qui ont été créées.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+BackupTargets
+ a| 
+Objets renvoyés pour chaque cible de sauvegarde Objets inclus :
+
+* Attributs : liste des paires nom-valeur au format objet JSON. (Objet JSON)
+* BackupTargetID : identifiant unique attribué à la cible de sauvegarde. (entier)
+* Nom : nom de la cible de sauvegarde. (chaîne)
+
+ a| 
+Objet JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "ListBackupTargets",
+   "params": {},
+   "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+     "backupTargets": [
+       {
+        "attributes" : {},
+        "backupTargetID" : 1,
+        "name" : "mytargetbackup"
+       }
+    ]
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

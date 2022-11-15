@@ -1,0 +1,185 @@
+---
+permalink: api/reference_element_api_getclusterversioninfo.html 
+sidebar: sidebar 
+keywords: cluster,version,info,get,getting,getclusterversioninfo 
+summary: 'Vous pouvez utiliser la méthode GetClusterVersionInfo pour extraire des informations sur la version du logiciel Element s"exécutant sur chaque nœud du cluster. Cette méthode renvoie également des informations sur les nœuds actuellement en cours de mise à niveau du logiciel.' 
+---
+= GetClusterVersionInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetClusterVersionInfo` Méthode d'extraction d'informations sur la version du logiciel Element exécutée sur chaque nœud du cluster. Cette méthode renvoie également des informations sur les nœuds actuellement en cours de mise à niveau du logiciel.
+
+
+
+== Membres de l'objet d'information de la version du cluster
+
+Cette méthode comporte les membres d'objet suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ID de nœud
+ a| 
+ID du nœud.
+ a| 
+entier
+
+
+
+ a| 
+Révision nodeInternalRevision
+ a| 
+Version logicielle interne du nœud.
+ a| 
+chaîne
+
+
+
+ a| 
+Version du nœud
+ a| 
+Version logicielle du nœud.
+ a| 
+chaîne
+
+|===
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ClusterAPIversion
+ a| 
+Version actuelle de l'API sur le cluster.
+ a| 
+chaîne
+
+
+
+ a| 
+Clusterversion
+ a| 
+Version du logiciel Element s'exécutant actuellement sur le cluster.
+ a| 
+chaîne
+
+
+
+ a| 
+ClusterVersionInfo
+ a| 
+Liste des nœuds du cluster avec informations de version pour chaque nœud.
+ a| 
+Baie d'objets JSON
+
+
+
+ a| 
+Version pendentionClusterMode
+ a| 
+Si elle est présente, il s'agit de la version sur laquelle le logiciel de cluster est en cours de mise à niveau ou de nouveau.
+ a| 
+chaîne
+
+
+
+ a| 
+Version du logiciel
+ a| 
+État d'une mise à niveau. Membres de l'objet :
+
+* Version actuelle :
++
+Version logicielle actuelle sur un nœud.
+
+* Nodeid : ID du nœud en cours de mise à niveau de CurrentVersion vers PendingVersion. Ce champ est 0 (zéro) s'il n'y a pas de mise à niveau en cours.
+* Nom du progiciel : nom du progiciel en cours d'installation.
+* Pendingversion : version du logiciel en cours d'installation.
+* StartTime : date et heure de démarrage de l'installation au format UTC+0.
+
+ a| 
+Objet JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "GetClusterVersionInfo",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+ "id": 1,
+ "result": {
+   "clusterAPIVersion": "6.0",
+   "clusterVersion": "6.1382",
+   "clusterVersionInfo": [
+   {
+      "nodeID": 1,
+      "nodeInternalRevision": "BuildType=Release Element=carbon Release=carbon ReleaseShort=carbon Version=6.1382 sfdev=6.28 Repository=dev Revision=061511b1e7fb BuildDate=2014-05-28T18:26:45MDT",
+      "nodeVersion": "6.1382"
+   },
+   {
+      "nodeID": 2,
+      "nodeInternalRevision": "BuildType=Release Element=carbon Release=carbon ReleaseShort=carbon Version=6.1382 sfdev=6.28 Repository=dev Revision=061511b1e7fb BuildDate=2014-05-28T18:26:45MDT",
+      "nodeVersion": "6.1382"
+   },
+   {
+      "nodeID": 3,
+      "nodeInternalRevision": "BuildType=Release Element=carbon Release=carbon ReleaseShort=carbon Version=6.1382 sfdev=6.28 Repository=dev Revision=061511b1e7fb BuildDate=2014-05-28T18:26:45MDT",
+      "nodeVersion": "6.1382"
+   },
+   {
+      "nodeID": 4,
+      "nodeInternalRevision": "BuildType=Release Element=carbon Release=carbon ReleaseShort=carbon Version=6.1382 sfdev=6.28 Repository=dev Revision=061511b1e7fb BuildDate=2014-05-28T18:26:45MDT",
+      "nodeVersion": "6.1382"
+   }
+ ],
+   "softwareVersionInfo": {
+      "currentVersion": "6.1382",
+      "nodeID": 0,
+      "packageName": "",
+      "pendingVersion": "6.1382",
+      "startTime": ""
+    }
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

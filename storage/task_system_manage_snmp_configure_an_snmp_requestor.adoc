@@ -1,0 +1,35 @@
+---
+permalink: storage/task_system_manage_snmp_configure_an_snmp_requestor.html 
+sidebar: sidebar 
+keywords: SNMP requestor, config, enable, disable, snmp requests 
+summary: 'Lorsque SNMP version 2 est activé, vous pouvez activer ou désactiver un demandeur et configurer les demandeurs pour qu"ils reçoivent les requêtes SNMP autorisées.' 
+---
+= Configurez un demandeur SNMP
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque SNMP version 2 est activé, vous pouvez activer ou désactiver un demandeur et configurer les demandeurs pour qu'ils reçoivent les requêtes SNMP autorisées.
+
+. Cliquez sur Menu:Cluster[SNMP].
+. Sous *Paramètres SNMP généraux*, cliquez sur *Oui* pour activer SNMP.
+. Dans la liste *version*, sélectionnez *version 2*.
+. Dans la section *Requetors*, saisissez les informations *Community String* et *Network*.
++
+
+NOTE: Par défaut, la chaîne de communauté est publique, et le réseau est localhost. Vous pouvez modifier ces paramètres par défaut.
+
+. *Facultatif:* pour ajouter un autre demandeur, cliquez sur *Ajouter un demandeur* et entrez les informations *chaîne de communauté* et *réseau*.
+. Cliquez sur *Enregistrer les modifications*.
+
+
+
+
+== Trouvez plus d'informations
+
+* xref:task_system_manage_snmp_configure_snmp_traps.adoc[Configurer les traps SNMP]
+* xref:task_system_manage_snmp_view_managed_object_data.adoc[Affichez les données d'objet géré à l'aide des fichiers de base d'informations de gestion]
+

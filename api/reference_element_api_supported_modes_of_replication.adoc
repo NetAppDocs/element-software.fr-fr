@@ -1,0 +1,19 @@
+---
+permalink: api/reference_element_api_supported_modes_of_replication.html 
+sidebar: sidebar 
+keywords: supported,replication,modes,clusters,paired,pair,pairs 
+summary: 'Les modes de réplication suivants sont pris en charge sur les clusters jumelés :' 
+---
+= Modes de réplication pris en charge pour les clusters jumelés
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les modes de réplication suivants sont pris en charge sur les clusters jumelés :
+
+* Réplication asynchrone de données : les données envoyées vers le volume cible de réplication sont envoyées de manière asynchrone. Le système n'attend pas qu'un accusé de réception soit envoyé avant d'écrire des données.
+* Réplication synchrone des données : les données envoyées vers le volume cible de réplication sont envoyées de manière synchrone. Lorsque les opérations d'E/S envoyées depuis l'hôte sont acquittées par le système, l'accusé de réception du système est renvoyé à l'hôte et les données sont envoyées au volume cible de réplication.
+* Réplication des données basée sur des copies Snapshot uniquement : seuls les snapshots de volume sont répliqués sur le cluster cible.
+

@@ -1,0 +1,53 @@
+---
+permalink: storage/task_data_manage_vol_access_group_create_an_initiator.html 
+sidebar: sidebar 
+keywords: initiator, create, fc, iscsi, aliases, chap 
+summary: Vous pouvez créer des initiateurs iSCSI ou Fibre Channel et éventuellement leur attribuer des alias. 
+---
+= Créer un initiateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer des initiateurs iSCSI ou Fibre Channel et éventuellement leur attribuer des alias.
+
+Vous pouvez également attribuer des attributs CHAP basés sur initator à l'aide d'un appel d'API. Pour ajouter un nom de compte CHAP et des informations d'identification par initiateur, vous devez utiliser le `CreateInitiator` Appel API pour supprimer et ajouter un accès CHAP et des attributs. L'accès des initiateurs peut être limité à un ou plusieurs VLAN en spécifiant un ou plusieurs virtualNetworkID via le `CreateInitiators` et `ModifyInitiators` Appels API. Si aucun réseau virtuel n'est spécifié, l'initiateur peut accéder à tous les réseaux.
+
+Pour plus de détails, reportez-vous aux informations de référence de l'API.link:../api/index.html["Gérez le stockage avec l'API Element"]
+
+.Étapes
+. Cliquez sur *Management* > *Initiators*.
+. Cliquez sur *Créer initiateur*.
+. Effectuez les étapes de création d'un ou plusieurs initiateurs :
++
+[cols="25,75"]
+|===
+| Option | Étapes 
+
+
+ a| 
+Créer un seul initiateur
+ a| 
+.. Cliquez sur *Créer un seul initiateur*.
+.. Saisissez l'IQN ou le WWPN de l'initiateur dans le champ *IQN/WWPN*.
+.. Saisissez un nom convivial pour l'initiateur dans le champ *alias*.
+.. Cliquez sur *Créer initiateur*.
+
+
+
+
+ a| 
+Créer plusieurs initiateurs
+ a| 
+.. Cliquez sur *Bulk Create Initiators*.
+.. Entrez une liste d'IQN ou de WWPN dans la zone de texte.
+.. Cliquez sur *Ajouter initiateurs*.
+.. Choisissez un initiateur dans la liste des résultats et cliquez sur l'icône Ajouter correspondante dans la colonne *alias* pour ajouter un alias à l'initiateur.
+.. Cliquez sur la coche pour confirmer le nouvel alias.
+.. Cliquez sur *Créer initiateurs*.
+
+
+|===
+

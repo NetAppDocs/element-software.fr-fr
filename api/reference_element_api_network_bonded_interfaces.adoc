@@ -1,0 +1,609 @@
+---
+permalink: api/reference_element_api_network_bonded_interfaces.html 
+sidebar: sidebar 
+keywords: object,objects,network 
+summary: 'L"objet réseau \(interfaces liées\) contient des informations de configuration pour les interfaces réseau liées sur un nœud de stockage. Vous pouvez utiliser les méthodes getconfig et GetNetworkConfig pour obtenir ces informations pour un nœud de stockage.' 
+---
+= réseau (interfaces liées)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet réseau (interfaces liées) contient des informations de configuration pour les interfaces réseau liées sur un nœud de stockage. Vous pouvez utiliser le `GetConfig` et `GetNetworkConfig` méthodes d'obtention de ces informations pour un nœud de stockage.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+adresse
+ a| 
+Adresse IPv4 attribuée à cette interface sur le nœud.
+ a| 
+chaîne
+
+
+
+ a| 
+AdresseV6
+ a| 
+Adresse de gestion IPv6 attribuée à l'interface Bond1G sur le nœud.
+ a| 
+chaîne
+
+
+
+ a| 
+délai de réduction des obligations
+ a| 
+Temps d'attente, en millisecondes, avant de désactiver un esclave après qu'une panne de liaison ait été détectée.
+ a| 
+chaîne
+
+
+
+ a| 
+bond-fail_over_mac
+ a| 
+La configuration de l'adresse MAC de l'interface réseau.
+ a| 
+chaîne
+
+
+
+ a| 
+miimon
+ a| 
+Fréquence, en millisecondes, à laquelle l'état de la liaison MII est vérifié pour détecter les défaillances de liaison.
+ a| 
+chaîne
+
+
+
+ a| 
+mode bond
+ a| 
+Le mode de liaison. Valeurs possibles :
+
+* Activepassive (par défaut)
+* ALB
+* LACP (recommandé)
+
+ a| 
+chaîne
+
+
+
+ a| 
+lien primaire_resélectionner
+ a| 
+Spécifie quand l'esclave de liaison primaire est choisi comme esclave actif. Valeurs possibles :
+
+* Toujours
+* Mieux
+* Panne
+
+ a| 
+chaîne
+
+
+
+ a| 
+esclaves de liaison
+ a| 
+La liste des interfaces esclaves pour la liaison.
+ a| 
+chaîne
+
+
+
+ a| 
+bond-lacp_rate
+ a| 
+Lorsque Bond mode est LACP, le taux peut être modifié pour l'un des éléments suivants :
+
+* LACP rapide (par défaut)
+* LACP lent
+
+ a| 
+chaîne
+
+
+
+ a| 
+délai de remontée des obligations
+ a| 
+Temps d'attente, en millisecondes, avant d'activer un esclave après détection d'une liaison.
+ a| 
+chaîne
+
+
+
+ a| 
+serveurs de noms dns
+ a| 
+Liste des adresses utilisées pour les services de noms de domaine, séparées par une virgule ou un espace.
+ a| 
+chaîne
+
+
+
+ a| 
+dns-recherche
+ a| 
+Liste des domaines de recherche DNS séparés par un espace ou une virgule.
+ a| 
+chaîne
+
+
+
+ a| 
+famille
+ a| 
+Famille d'adresses que l'interface est configurée pour utiliser. Actuellement, l'option « inet » pour IPv4 est prise en charge.
+ a| 
+chaîne
+
+
+
+ a| 
+passerelle
+ a| 
+Adresse réseau du routeur IPv4 utilisée pour envoyer le trafic à partir du réseau local.
+ a| 
+chaîne
+
+
+
+ a| 
+GatewayV6
+ a| 
+Adresse réseau du routeur IPv6 utilisée pour envoyer le trafic à partir du réseau local Bond1G.
+ a| 
+chaîne
+
+
+
+ a| 
+IpV6PrefixLength
+ a| 
+Longueur du préfixe de sous-réseau pour les routes statiques de type « net » pour le trafic IPv6 sur le réseau Bond1G.
+ a| 
+chaîne
+
+
+
+ a| 
+Adresse MAC
+ a| 
+Adresse MAC réelle attribuée à l'interface et observée par le réseau.
+ a| 
+chaîne
+
+
+
+ a| 
+MacAddresspermanent
+ a| 
+Adresse MAC immuable attribuée par le fabricant à l'interface.
+ a| 
+chaîne
+
+
+
+ a| 
+méthode
+ a| 
+Méthode utilisée pour configurer l'interface. Valeurs possibles :
+
+* Bouclage : permet de définir l'interface de bouclage IPv4.
+* Manual : permet de définir les interfaces qui ne sont pas configurées automatiquement.
+* dhcp : peut être utilisé pour obtenir une adresse IP via DHCP.
+* Statique : permet de définir des interfaces Ethernet avec des adresses IPv4 allouées de manière statique.
+
+ a| 
+chaîne
+
+
+
+ a| 
+mtu
+ a| 
+La plus grande taille de paquet (en octets) que l'interface peut transmettre. Doit être supérieur ou égal à 1500 ; jusqu'à 9000 est pris en charge.
+ a| 
+chaîne
+
+
+
+ a| 
+masque de réseau
+ a| 
+Masque binaire qui spécifie le sous-réseau de l'interface.
+ a| 
+chaîne
+
+
+
+ a| 
+le réseau
+ a| 
+Indique où commence la plage d'adresses IP en fonction du masque de réseau.
+ a| 
+chaîne
+
+
+
+ a| 
+itinéraires
+ a| 
+Tableau de chaînes de routage séparé par des virgules à appliquer à la table de routage.
+ a| 
+tableau de chaînes
+
+
+
+ a| 
+état
+ a| 
+État de l'interface. Valeurs possibles :
+
+* Down : l'interface est inactive.
+* Up : l'interface est prête, mais n'a pas de lien.
+* UpAndRunning : l'interface est prête et un lien est établi.
+
+ a| 
+chaîne
+
+
+
+ a| 
+Règles symétricRouteRules
+ a| 
+Règles de routage symétriques configurées sur le nœud.
+ a| 
+tableau de chaînes
+
+
+
+ a| 
+UpAndRunning
+ a| 
+Indique si l'interface est prête et possède un lien.
+ a| 
+booléen
+
+
+
+ a| 
+VirtualNetworkTag
+ a| 
+L'identifiant réseau virtuel de l'interface (balise VLAN).
+ a| 
+chaîne
+
+|===
+
+
+== Modification du membre et état du nœud
+
+Ce tableau indique si les paramètres de l'objet peuvent être modifiés à chaque état de nœud possible.
+
+|===
+
+
+| Nom de membre | État disponible | État en attente | État actif 
+
+
+ a| 
+adresse
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+AdresseV6
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+délai de réduction des obligations
+ a| 
+Configuré par le système
+ a| 
+S/O
+ a| 
+S/O
+
+
+
+ a| 
+bond-fail_over_mac
+ a| 
+Configuré par le système
+ a| 
+S/O
+ a| 
+S/O
+
+
+
+ a| 
+miimon
+ a| 
+Configuré par le système
+ a| 
+S/O
+ a| 
+S/O
+
+
+
+ a| 
+mode bond
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+lien primaire_resélectionner
+ a| 
+Configuré par le système
+ a| 
+S/O
+ a| 
+S/O
+
+
+
+ a| 
+esclaves de liaison
+ a| 
+Configuré par le système
+ a| 
+S/O
+ a| 
+S/O
+
+
+
+ a| 
+bond-lacp_rate
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+délai de remontée des obligations
+ a| 
+Configuré par le système
+ a| 
+S/O
+ a| 
+S/O
+
+
+
+ a| 
+serveurs de noms dns
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+dns-recherche
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+famille
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+passerelle
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+GatewayV6
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+IpV6PrefixLength
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Adresse MAC
+ a| 
+Configuré par le système
+ a| 
+S/O
+ a| 
+S/O
+
+
+
+ a| 
+MacAddresspermanent
+ a| 
+Configuré par le système
+ a| 
+S/O
+ a| 
+S/O
+
+
+
+ a| 
+méthode
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+mtu
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+masque de réseau
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+le réseau
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+itinéraires
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+état
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Règles symétricRouteRules
+ a| 
+Configuré par le système
+ a| 
+S/O
+ a| 
+S/O
+
+
+
+ a| 
+UpAndRunning
+ a| 
+Configuré par le système
+ a| 
+S/O
+ a| 
+S/O
+
+
+
+ a| 
+VirtualNetworkTag
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+|===
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_getconfig.adoc[Getconfig]
+* xref:reference_element_api_getnetworkconfig.adoc[GetNetworkConfig]
+

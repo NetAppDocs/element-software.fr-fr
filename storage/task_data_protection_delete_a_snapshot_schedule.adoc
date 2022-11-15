@@ -1,0 +1,20 @@
+---
+permalink: storage/task_data_protection_delete_a_snapshot_schedule.html 
+sidebar: sidebar 
+keywords: snapshot schedule, delete 
+summary: 'Vous pouvez supprimer un planning de snapshots. Une fois que vous avez supprimé le planning, il n"exécute pas de snapshots planifiés futurs. Tous les snapshots créés par la planification restent sur le système de stockage.' 
+---
+= Supprime une planification de snapshots
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer un planning de snapshots. Une fois que vous avez supprimé le planning, il n'exécute pas de snapshots planifiés futurs. Tous les snapshots créés par la planification restent sur le système de stockage.
+
+. Cliquez sur *Data protection* > *Schedules*.
+. Cliquez sur l'icône *actions* pour le programme que vous souhaitez supprimer.
+. Dans le menu qui s'affiche, cliquez sur *Supprimer*.
+. Confirmez l'action.
+

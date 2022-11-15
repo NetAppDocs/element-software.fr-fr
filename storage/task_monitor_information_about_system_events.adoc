@@ -1,0 +1,88 @@
+---
+permalink: storage/task_monitor_information_about_system_events.html 
+sidebar: sidebar 
+keywords: system events, monitor, view event log 
+summary: 'Vous pouvez afficher des informations sur les différents événements détectés dans le système. Le système actualise les messages d"événement toutes les 30 secondes. Le journal des événements affiche les principaux événements du cluster.' 
+---
+= Affiche des informations relatives aux événements système
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher des informations sur les différents événements détectés dans le système. Le système actualise les messages d'événement toutes les 30 secondes. Le journal des événements affiche les principaux événements du cluster.
+
+. Dans l'interface utilisateur de l'élément, sélectionnez *Rapport* > *Journal des événements*.
++
+Pour chaque événement, les informations suivantes s'affichent :
+
++
+|===
+
+
+| Élément | Description 
+
+
+ a| 
+ID
+ a| 
+ID unique associé à chaque événement.
+
+
+
+ a| 
+Type d'événement
+ a| 
+Type d'événement consigné, par exemple, des événements d'API ou des événements de clonage.
+
+
+
+ a| 
+Messagerie
+ a| 
+Message associé à l'événement.
+
+
+
+ a| 
+Détails
+ a| 
+Informations permettant d'identifier la raison de l'événement.
+
+
+
+ a| 
+ID de service
+ a| 
+Service qui a signalé l'incident (le cas échéant).
+
+
+
+ a| 
+Nœud
+ a| 
+Nœud ayant signalé l'événement (le cas échéant).
+
+
+
+ a| 
+ID de disque
+ a| 
+Le lecteur qui a signalé l'incident (le cas échéant).
+
+
+
+ a| 
+Heure de l'événement
+ a| 
+Heure à laquelle l'événement s'est produit.
+
+|===
+
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_monitor_event_types.adoc[Types d'événement]

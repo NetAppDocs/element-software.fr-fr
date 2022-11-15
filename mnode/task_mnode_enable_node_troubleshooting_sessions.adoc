@@ -1,0 +1,239 @@
+---
+sidebar: sidebar 
+permalink: mnode/task_mnode_enable_node_troubleshooting_sessions.html 
+summary: 'Depuis la version 12.5, vous pouvez activer le compte utilisateur sfreadonly sur le nœud de gestion pour dépanner les composants système sans l"aide du support NetApp. Vous pouvez également activer et ouvrir l"accès au tunnel de support à distance pour le support NetApp afin de réaliser un dépannage avancé.' 
+keywords: netapp, sfreadonly, connect to support, support tunnel, rst, mnode, management node 
+---
+= Accès aux nœuds de stockage à l'aide de SSH pour le dépannage de base
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depuis l'Element 12.5, vous pouvez utiliser le compte système sfreadonly sur les nœuds de stockage pour un dépannage de base. Vous pouvez également activer et ouvrir l'accès au tunnel de support à distance pour le support NetApp afin de réaliser un dépannage avancé.
+
+Le compte système sfrefonly permet d'accéder à l'exécution des commandes de dépannage de base du système Linux et du réseau, y compris `ping`.
+
+
+WARNING: Sauf avis du support NetApp, toute modification de ce système n'est pas prise en charge, annulation de votre contrat de support et risque d'entraîner une instabilité ou une inaccessibilité des données.
+
+.Avant de commencer
+* *Autorisations d'écriture* : vérifiez que vous disposez des autorisations d'écriture sur le répertoire de travail actuel.
+* *(Facultatif) générez votre propre paire de clés*: Exécutez `ssh-keygen` Depuis Windows 10, MacOS ou Linux. Il s'agit d'une action unique pour créer une paire de clés utilisateur et peut être réutilisée pour les sessions de dépannage futures. Vous pouvez utiliser des certificats associés aux comptes d'employés, qui fonctionneront également dans ce modèle.
+* *Activer la fonctionnalité SSH sur le nœud de gestion* : pour activer la fonctionnalité d'accès à distance en mode de gestion, voir link:task_mnode_ssh_management.html["cette rubrique"]. Pour les services de gestion version 2.18 ou ultérieure, la fonctionnalité d'accès à distance est désactivée par défaut sur le nœud de gestion.
+* *Activer la fonctionnalité SSH sur le cluster de stockage* : pour activer la fonctionnalité d'accès à distance sur les nœuds du cluster de stockage, voir link:https://docs.netapp.com/us-en/element-software/storage/task_system_manage_cluster_enable_and_disable_support_access.html["cette rubrique"].
+* *Configuration du pare-feu* : si votre nœud de gestion est derrière un serveur proxy, les ports TCP suivants sont requis dans le fichier sshd.config :
++
+[cols="15,25,60"]
+|===
+| Port TCP | Description | Direction de la connexion 
+
+
+| 443 | Appels API/HTTPS pour le transfert du port inversé via le tunnel de support ouvert vers l'interface utilisateur Web | Nœud de gestion vers nœuds de stockage 
+
+
+| 22 | Accès connexion SSH | Nœud de gestion, vers nœuds de stockage ou depuis les nœuds de stockage vers le nœud de gestion 
+|===
+
+
+.Options de dépannage
+*  a cluster node
+*  a cluster node with NetApp Support
+*  a node that is not part of cluster
+
+
+
+
+== Dépanner un nœud de cluster
+
+Vous pouvez effectuer un dépannage de base à l'aide du compte système sfreadonly :
+
+.Étapes
+. SSH vers le nœud de gestion à l'aide des informations d'identification de compte que vous avez sélectionnées lors de l'installation de la machine virtuelle du nœud de gestion.
+. Sur le nœud de gestion, accédez à `/sf/bin`.
+. Recherchez le script approprié pour votre système :
++
+** SignSshKeys.ps1
+** SignSshKeys.py
+** SignSshKeys.sh
++
+[NOTE]
+====
+SignSshKeys.ps1 dépend de PowerShell 7 ou ultérieur et SignSshKeys.py dépend de Python 3.6.0 ou ultérieur et de https://docs.python-requests.org/["module requêtes"^].
+
+Le `SignSshKeys` écritures de script `user`, `user.pub`, et `user-cert.pub` fichiers dans le répertoire de travail actuel, qui sont ensuite utilisés par le `ssh` commande. Cependant, lorsqu'un fichier de clé publique est fourni au script, seule une `<public_key>` fichier (avec `<public_key>` remplacé par le préfixe du fichier de clé publique transmis dans le script) est écrit dans le répertoire.
+
+====
+
+
+. Exécutez le script sur le nœud de gestion pour générer le trousseau SSH. Le script active l'accès SSH à l'aide du compte système sfreadonly sur tous les nœuds du cluster.
++
+[listing]
+----
+SignSshKeys --ip [ip address] --user [username] --duration [hours] --publickey [public key path]
+----
++
+.. Remplacer la valeur entre crochets [ ] (y compris les crochets) pour chacun des paramètres suivants :
++
+
+NOTE: Vous pouvez utiliser le paramètre de forme abrégée ou complète.
+
++
+*** *--ip | -i [adresse ip]* : adresse IP du nœud cible pour que l'API s'exécute.
+*** *--user | -u [username]* : utilisateur de cluster utilisé pour exécuter l'appel d'API.
+*** *(Facultatif) --duration | -d [heures]* : la durée pendant laquelle une clé signée doit rester valide comme un entier en heures. La valeur par défaut est de 24 heures.
+*** *(Facultatif) --publickey | -k [chemin de clé publique]* : le chemin d'accès à une clé publique, si l'utilisateur choisit d'en fournir une.
+
+
+.. Comparez votre entrée à l'exemple de commande suivant. Dans cet exemple, `10.116.139.195` Est l'IP du nœud de stockage, `admin` est le nom d'utilisateur du cluster, et la durée de validité de la clé est de deux heures :
++
+[listing]
+----
+sh /sf/bin/SignSshKeys.sh --ip 10.116.139.195 --user admin --duration 2
+----
+.. Lancer la commande.
+
+
+. SSH vers les adresses IP de nœud :
++
+[listing]
+----
+ssh -i user sfreadonly@[node_ip]
+----
++
+Vous pourrez exécuter des commandes de dépannage de base du système Linux et du réseau, telles que `ping`, et d'autres commandes en lecture seule.
+
+. (Facultatif) Désactiver link:task_mnode_ssh_management.html["fonctionnalité d'accès à distance"] une fois le dépannage terminé.
++
+
+NOTE: Si vous ne désactivez pas SSH, l'option SSH reste activée sur le nœud de gestion. La configuration SSH activée persiste sur le nœud de gestion via des mises à jour et des mises à niveau jusqu'à ce qu'elle soit désactivée manuellement.
+
+
+
+
+
+== Dépanner un nœud de cluster avec le support NetApp
+
+Le support NetApp peut effectuer un dépannage avancé après un compte système qui permet au technicien d'exécuter des diagnostics plus approfondis des éléments.
+
+.Étapes
+. SSH vers le nœud de gestion à l'aide des informations d'identification de compte que vous avez sélectionnées lors de l'installation de la machine virtuelle du nœud de gestion.
+. Exécutez la commande rst avec le numéro de port envoyé par le support NetApp pour ouvrir le tunnel de support :
++
+`rst -r  sfsupport.solidfire.com -u element -p <port_number>`
+
++
+Le support NetApp se connecte à votre nœud de gestion via le tunnel de support.
+
+. Sur le nœud de gestion, accédez à `/sf/bin`.
+. Recherchez le script approprié pour votre système :
++
+** SignSshKeys.ps1
+** SignSshKeys.py
+** SignSshKeys.sh
++
+[NOTE]
+====
+SignSshKeys.ps1 dépend de PowerShell 7 ou ultérieur et SignSshKeys.py dépend de Python 3.6.0 ou ultérieur et de https://docs.python-requests.org/["module requêtes"^].
+
+Le `SignSshKeys` écritures de script `user`, `user.pub`, et `user-cert.pub` fichiers dans le répertoire de travail actuel, qui sont ensuite utilisés par le `ssh` commande. Cependant, lorsqu'un fichier de clé publique est fourni au script, seule une `<public_key>` fichier (avec `<public_key>` remplacé par le préfixe du fichier de clé publique transmis dans le script) est écrit dans le répertoire.
+
+====
+
+
+. Exécutez le script pour générer le trousseau SSH avec le `--sfadmin` drapeau. Le script active SSH sur tous les nœuds.
++
+[listing]
+----
+SignSshKeys --ip [ip address] --user [username] --duration [hours] --sfadmin
+----
++
+[NOTE]
+====
+Vers SSH AS `--sfadmin` Pour un nœud en cluster, vous devez générer le trousseau SSH à l'aide d'un `--user` avec `supportAdmin` accès sur le cluster.
+
+À configurer `supportAdmin` Accès aux comptes d'administrateur du cluster, vous pouvez utiliser l'interface utilisateur ou les API Element :
+
+** link:../storage/concept_system_manage_manage_cluster_administrator_users.html#view-cluster-admin-details["Configurez l'accès « supportAdmin » à l'aide de l'interface utilisateur Element"]
+** Configurer `supportAdmin` Accès via des API et l'ajout `"supportAdmin"` comme le `"access"` Saisissez la requête API :
++
+*** link:../api/reference_element_api_addclusteradmin.html["Configurez l'accès « supportAdmin » pour un nouveau compte"]
+*** link:../api/reference_element_api_modifyclusteradmin.html["Configurez l'accès « supportAdmin » pour un compte existant"]
++
+Pour obtenir le `clusterAdminID`, vous pouvez utiliser l' link:../api/reference_element_api_listclusteradmins.html["ListClusterAdmins"] API.
+
+
+
+
+
+À ajouter `supportAdmin` accès, vous devez disposer des privilèges d'administrateur du cluster ou d'administrateur.
+
+====
++
+.. Remplacer la valeur entre crochets [ ] (y compris les crochets) pour chacun des paramètres suivants :
++
+
+NOTE: Vous pouvez utiliser le paramètre de forme abrégée ou complète.
+
++
+*** *--ip | -i [adresse ip]* : adresse IP du nœud cible pour que l'API s'exécute.
+*** *--user | -u [username]* : utilisateur de cluster utilisé pour exécuter l'appel d'API.
+*** *(Facultatif) --duration | -d [heures]* : la durée pendant laquelle une clé signée doit rester valide comme un entier en heures. La valeur par défaut est de 24 heures.
+
+
+.. Comparez votre entrée à l'exemple de commande suivant. Dans cet exemple, `192.168.0.1` Est l'IP du nœud de stockage, `admin` est le nom d'utilisateur du cluster, la durée de validité des clés est de deux heures et `--sfadmin` Permet l'accès au nœud de support NetApp pour le dépannage :
++
+[listing]
+----
+sh /sf/bin/SignSshKeys.sh --ip 192.168.0.1 --user admin --duration 2 --sfadmin
+----
+.. Lancer la commande.
+
+
+. SSH vers les adresses IP de nœud :
++
+[listing]
+----
+ssh -i user sfadmin@[node_ip]
+----
+. Pour fermer le tunnel de support à distance, entrez ce qui suit :
++
+`rst --killall`
+
+. (Facultatif) Désactiver link:task_mnode_ssh_management.html["fonctionnalité d'accès à distance"] une fois le dépannage terminé.
++
+
+NOTE: Si vous ne désactivez pas SSH, l'option SSH reste activée sur le nœud de gestion. La configuration SSH activée persiste sur le nœud de gestion via des mises à jour et des mises à niveau jusqu'à ce qu'elle soit désactivée manuellement.
+
+
+
+
+
+== Dépannez un nœud qui ne fait pas partie du cluster
+
+Vous pouvez effectuer le dépannage de base d'un nœud qui n'a pas encore été ajouté à un cluster. Vous pouvez utiliser le compte système sfreadonly pour utiliser ce compte avec ou sans l'aide du support NetApp. Si un nœud de gestion est configuré, vous pouvez l'utiliser pour SSH et exécuter le script fourni pour cette tâche.
+
+. Depuis un ordinateur Windows, Linux ou Mac sur lequel un client SSH est installé, exécutez le script approprié pour votre système fourni par le support NetApp.
+. SSH sur l'IP du nœud :
++
+[listing]
+----
+ssh -i user sfreadonly@[node_ip]
+----
+. (Facultatif) Désactiver link:task_mnode_ssh_management.html["fonctionnalité d'accès à distance"] une fois le dépannage terminé.
++
+
+NOTE: Si vous ne désactivez pas SSH, l'option SSH reste activée sur le nœud de gestion. La configuration SSH activée persiste sur le nœud de gestion via des mises à jour et des mises à niveau jusqu'à ce qu'elle soit désactivée manuellement.
+
+
+
+[discrete]
+== Trouvez plus d'informations
+
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["Page Ressources NetApp HCI"^]
+

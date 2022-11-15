@@ -1,0 +1,147 @@
+---
+permalink: api/reference_element_api_getdrivestats.html 
+sidebar: sidebar 
+keywords: drive,drives,stats,get,getting,getdrivestats 
+summary: 'Vous pouvez utiliser la méthode GetDriveStats pour obtenir des mesures d"activité de haut niveau pour un seul lecteur. Les valeurs sont cumulatives à partir de l"ajout du disque au cluster. Certaines valeurs sont spécifiques aux lecteurs de bloc. Lors de l"exécution de cette méthode, les données statistiques sont renvoyées pour les types de lecteurs de blocs ou de métadonnées.' 
+---
+= GetDriveStats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetDriveStats` méthode permettant d'obtenir des mesures d'activité de haut niveau pour un seul trajet. Les valeurs sont cumulatives à partir de l'ajout du disque au cluster. Certaines valeurs sont spécifiques aux lecteurs de bloc. Lors de l'exécution de cette méthode, les données statistiques sont renvoyées pour les types de lecteurs de blocs ou de métadonnées.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+ID de conduite
+ a| 
+ID du lecteur pour la demande.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+Statistiques de conduite
+ a| 
+Informations sur l'activité de conduite pour l'ID de conduite spécifié.
+ a| 
+xref:reference_element_api_drivestats.adoc[Statistiques de conduite]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "GetDriveStats",
+   "params": {
+     "driveID": 3
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse (disque en mode bloc)
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant pour un lecteur de bloc :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "driveStats": {
+      "driveID": 10,
+      "failedDieCount": 0,
+      "lifeRemainingPercent": 99,
+      "lifetimeReadBytes": 26471661830144,
+      "lifetimeWriteBytes": 13863852441600,
+      "powerOnHours": 33684,
+      "readBytes": 10600432105,
+      "readOps": 5101025,
+      "reallocatedSectors": 0,
+      "reserveCapacityPercent": 100,
+      "timestamp": "2016-10-17T20:23:45.456834Z",
+      "totalCapacity": 300069052416,
+      "usedCapacity": 6112226545,
+      "usedMemory": 114503680,
+      "writeBytes": 53559500896,
+      "writeOps": 25773919
+    }
+  }
+}
+----
+
+
+== Exemple de réponse (disque de métadonnées volume)
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant pour un disque de métadonnées de volume :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "driveStats": {
+      "activeSessions": 8,
+      "driveID": 12,
+      "failedDieCount": 0,
+      "lifeRemainingPercent": 100,
+      "lifetimeReadBytes": 2308544921600,
+      "lifetimeWriteBytes": 1120986464256,
+      "powerOnHours": 16316,
+      "readBytes": 1060152152064,
+      "readOps": 258826209,
+      "reallocatedSectors": 0,
+      "reserveCapacityPercent": 100,
+      "timestamp": "2016-10-17T20:34:52.456130Z",
+      "totalCapacity": 134994670387,
+      "usedCapacity": null,
+      "usedMemory": 22173577216,
+      "writeBytes": 353346510848,
+      "writeOps": 86266238
+    }
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_listdrives.adoc[Lecteurs de listes]

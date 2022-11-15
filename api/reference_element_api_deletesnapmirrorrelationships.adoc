@@ -1,0 +1,75 @@
+---
+permalink: api/reference_element_api_deletesnapmirrorrelationships.html 
+sidebar: sidebar 
+keywords: SnapMirror,relationship,relationships,delete,deleting,DeleteSnapMirrorRelationships 
+summary: 'L"interface utilisateur Web Element utilise la méthode DeleteSnapMirror orRelationship pour supprimer une ou plusieurs relations SnapMirror entre un terminal source et un terminal de destination.' 
+---
+= DeleteSnapMirrorRelationships
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'interface utilisateur Web d'Element utilise le `DeleteSnapMirrorRelationships` Méthode de suppression d'une ou plusieurs relations SnapMirror entre un terminal source et un terminal de destination
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+L'ID de terminal du système de stockage ONTAP distant communique avec le cluster de stockage Element.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+Desvolumes
+ a| 
+Volume ou volumes de destination dans la relation SnapMirror
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeInfo] baie
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+résultat
+ a| 
+Si l'action de suppression a réussi, cet objet contient un message de réussite. Si l'action a échoué, elle contient un message d'erreur.
+ a| 
+Objet JSON
+
+|===
+
+
+== Nouveau depuis la version
+
+10.1

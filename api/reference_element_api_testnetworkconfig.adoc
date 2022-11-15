@@ -1,0 +1,135 @@
+---
+permalink: api/reference_element_api_testnetworkconfig.html 
+sidebar: sidebar 
+keywords: test,testing,network,config,configuration,testnetworkconfig 
+summary: Vous pouvez utiliser la méthode TestNetworkConfig pour vérifier que les paramètres réseau configurés correspondent aux paramètres réseau utilisés sur le système. 
+---
+= TestNetworkConfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `TestNetworkConfig` méthode de test permettant de vérifier que les paramètres réseau configurés correspondent aux paramètres réseau utilisés sur le système.
+
+
+
+== Paramètres
+
+Lorsque vous configurez un nœud avec la méthode SetNetworkConfig, dans l’interface utilisateur ou dans l’interface utilisateur, la configuration est validée et stockée. Le test de l'API TestNetworkConfig utilise la configuration stockée pour la logique de post-validation. Par exemple, en cas de panne de courant ou de réseau, vous pouvez utiliser cette méthode d'API pour vous assurer que le nœud fonctionne avec la configuration réseau la plus stockée. Ceci permet de vérifier qu'il n'y a aucune erreur dans la configuration et que la configuration actuelle est utilisée.
+
+Ce test est conçu pour ne montrer que les échecs dans la sortie de réponse. S'il n'y a pas d'erreur, ce test ne renvoie aucune sortie. Voir les exemples de réponse suivants.
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+détails
+ a| 
+Contient les erreurs détectées lors de la validation des paramètres réseau actuellement stockés avec la configuration réseau en cours d'exécution.
+ a| 
+Objet JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "TestNetworkConfig",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse 1
+
+Si aucune erreur n'est détectée, aucune réponse n'est renvoyée.
+
+[listing]
+----
+{
+   "id" : 1,
+   "result": {
+   "details": {
+   "network": {...}
+  },
+   "duration": "00:00:00.144514",
+   "result": "Passed"
+  }
+}
+----
+
+
+== Exemple de réponse 2
+
+Exemple de discordance MTU.
+
+[listing]
+----
+{
+  "id" : 1,
+  "result":
+  {
+	 "details" :
+	 {
+		"error":
+		{
+		   "message" : "Network configuration mismatch on Bond10G: Incorrect MTU expectedMTU=[1500]  actualMTU=[9600]", name: "xAssertionFailure"
+		}
+	 },
+	 "duration": "0.125213sec",
+	 "result": "Failed"
+  }
+}
+----
+
+
+== Exemple de réponse 3
+
+Exemple de route statique manquante.
+
+[listing]
+----
+{
+  "id": 1,
+  "result":
+  {
+	 "details" :
+	 {
+	 "error":
+		{
+		"message" : "Network configuration mismatch on Bond1G: Routing table missing route=[192.168.137.2 via 192.168.159.254 dev Bond1G]", name: "xAssertionFailure"
+		}
+	 },
+	 "duration" : "0.128547sec",
+	 "result" : "Failed"
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_setnetworkconfig.adoc[SetNetworkConfig]

@@ -1,0 +1,149 @@
+---
+permalink: api/reference_element_api_listclusterfaults.html 
+sidebar: sidebar 
+keywords: cluster,list,listing,fault,faults,listclusterfaults,error,errors 
+summary: Vous pouvez utiliser la méthode ListClusterFaults pour lister les informations relatives aux pannes détectées sur le cluster. Avec cette méthode, vous pouvez répertorier à la fois les défauts actuels et les défauts qui ont été résolus. Le système met en cache les défauts toutes les 30 secondes. 
+---
+= ListClusterFaults
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ListClusterFaults` méthode permettant de lister les informations relatives aux défaillances détectées sur le cluster. Avec cette méthode, vous pouvez répertorier à la fois les défauts actuels et les défauts qui ont été résolus. Le système met en cache les défauts toutes les 30 secondes.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+Meilleures pratiques
+ a| 
+Inclure les défauts déclenchés par une configuration système sous-optimale. Valeurs possibles :
+
+* vrai
+* faux
+
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+Types de défauts
+ a| 
+Détermine les types de pannes renvoyées. Valeurs possibles :
+
+* Courant : liste des anomalies actives non résolues.
+* Résolu : répertorie les anomalies qui ont été détectées et résolues précédemment.
+* Tous : répertorier les anomalies actuelles et résolues. Vous pouvez voir l'état des défauts dans le membre "résolu" de l'objet de panne.
+
+ a| 
+chaîne
+ a| 
+tous
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+défauts
+ a| 
+Objet décrivant les défaillances de cluster demandées.
+ a| 
+xref:reference_element_api_fault.adoc[erreur]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "ListClusterFaults",
+    "params": {
+      "faultTypes": "current",
+      "bestPractices": true
+    },
+    "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "faults": [
+      {
+        "clusterFaultID": 1,
+        "code": "notUsingLACPBondMode",
+        "data": null,
+        "date": "2016-04-26T14:57:04.275286Z",
+        "details": "Bond1G interfaces found not using LACP bond mode. Nodes not set to LACP bond mode: {1,2,4,5}",
+        "driveID": 0,
+        "driveIDs": [],
+        "nodeHardwareFaultID": 0,
+        "nodeID": 0,
+        "resolved": false,
+        "resolvedDate": "",
+        "serviceID": 0,
+        "severity": "bestPractice",
+        "type": "cluster"
+      },
+      {
+        "clusterFaultID": 9,
+        "code": "disconnectedClusterPair",
+        "data": null,
+        "date": "2016-04-26T20:40:08.736597Z",
+        "details": "One of the clusters in a pair may have become misconfigured or disconnected.  Remove the local pairing and retry pairing the clusters. Disconnected Cluster Pairs: []. Misconfigured Cluster Pairs: [3]",
+        "driveID": 0,
+        "driveIDs": [],
+        "nodeHardwareFaultID": 0,
+        "nodeID": 0,
+        "resolved": false,
+        "resolvedDate": "",
+        "serviceID": 0,
+        "severity": "warning",
+        "type": "cluster"
+      }
+    ]
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

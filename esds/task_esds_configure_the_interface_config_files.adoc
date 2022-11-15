@@ -1,0 +1,184 @@
+---
+permalink: esds/task_esds_configure_the_interface_config_files.html 
+sidebar: sidebar 
+keywords: solidfire esds, host network, networking 
+summary: 'Utilisez les exemples et les conseils fournis pour configurer la mise en réseau de l"hôte avant d"installer SolidFire ESDS.' 
+---
+= Configurer la mise en réseau de l'hôte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilisez les exemples et les conseils fournis pour configurer la mise en réseau de l'hôte avant d'installer SolidFire ESDS.
+
+Voici un exemple de configuration réseau :
+
+image::../media/esds_network_config_example.png[La présente un exemple de configuration réseau.]
+
+Dans cet exemple, deux interfaces sur le nœud de stockage sont réseau https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/ch-configure_network_teaming#sec-Understanding_Network_Teaming["associés"^] et connecté au réseau de gestion à des fins de redondance. De même, deux interfaces supplémentaires sont associées et connectées au réseau de stockage.
+
+
+NOTE: Chaque interface dispose d'un fichier de configuration nommé ifcfg-<nom-interface> X, où X est le numéro de l'interface, commençant par zéro ou 1 selon la convention de nommage utilisée. Les fichiers de configuration sont créés lorsque vous créez les interfaces pour la première fois. Un fichier de configuration doit déjà exister pour chacune des deux interfaces physiques connectées au réseau de stockage. Un fichier de configuration doit également exister pour chacune des deux interfaces physiques connectées au réseau de gestion. Les fichiers de configuration de l'interface sont placés dans le répertoire /etc/sysconfig/network-scripts. Voir https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/getting_started_with_networkmanager["Fichiers de configuration de l'interface"^].
+
+
+TIP: Les exemples fournis ici portent les noms des interfaces de gestion et de stockage des serveurs HPE. Si vous disposez d'un serveur Dell, les noms d'interface sont différents. Les noms d'interface de stockage du serveur Dell sont em1 et em2. Les noms d'interface de gestion du serveur Dell sont p3p1 et p3p2.
+
+.Étapes
+. Installer `NetworkManager-dispatcher-routing-rules` et assurez-vous que les référentiels appropriés sont configurés.
+. Configurez votre commutateur réseau à l'aide de la documentation du fournisseur du commutateur. Pour obtenir des instructions spécifiques sur la configuration du protocole MLAG (Multi-Chassis Link Aggregation Group) et du protocole LACP (Link Aggregation Control Protocol), consultez la documentation de votre fournisseur de commutateurs.
++
+
+NOTE: Il est recommandé de configurer les options de secours de LACP et de désactiver le comportement de suspension de port individuel de LACP en cours d'exécution `no lacp suspend-individual`. Cela permet d'afficher la liaison AccessPoint même en l'absence de diffusion des paquets LACP en cas de mauvaise configuration.
+
+. Modifiez les deux fichiers de configuration des interfaces physiques connectées au réseau de stockage à l'aide de l'exemple suivant. Le paramètre des trames Jumbo est fortement recommandé sur le réseau de stockage, mais pas obligatoire. Dans cet exemple ci-dessous, le nom de l'interface de stockage est sent2f0 et le nom de l'équipe de stockage est team10G :
++
+
+IMPORTANT: Dans toutes les configurations d'exemple répertoriées ici, LE NOM et LE PÉRIPHÉRIQUE utilisent les mêmes valeurs. Vous pouvez utiliser des valeurs différentes si vous le souhaitez.
+
++
+[listing]
+----
+# cat /etc/sysconfig/network-scripts/ifcfg-ens2f0
+# 10G Team Physical Port to Storage Network
+NAME=ens2f0
+DEVICE=ens2f0
+ONBOOT=yes
+TEAM_MASTER=team10G
+DEVICETYPE=TeamPort
+MTU=9000
+----
+. Modifiez les deux fichiers de configuration des interfaces connectées au réseau de gestion à l'aide de l'exemple suivant. Dans cet exemple, le nom de l'interface de gestion est eno5 et le nom de l'équipe de gestion est team1G :
++
+[listing]
+----
+# cat ifcfg-eno5
+# 1G Team Physical Port to Management Network
+NAME=eno5
+DEVICE=eno5
+ONBOOT=yes
+TEAM_MASTER=team1G
+DEVICETYPE=TeamPort
+----
+. Créez le fichier d'interface TEAM pour l'équipe de stockage à l'aide de l'exemple suivant. Dans cet exemple, l'équipe s'appelle team10G. Il se trouve sur le réseau de stockage exécutant le canal de regroupement du réseau lacp.
++
+
+NOTE: La configuration active/active est recommandée pour les interfaces de stockage. Cette configuration nécessite la configuration du protocole MLAG (Link Aggregation Group) multi-châssis actif/actif supplémentaire et du protocole LACP (Link Aggregation Control Protocol) sur les commutateurs. Cette configuration nécessite le https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/sec-Understanding_the_Network_Teaming_Daemon_and_the_Runners["canal de regroupement réseau lacp"^].
+
++
+[listing]
+----
+# cat /etc/sysconfig/network-scripts/ifcfg-team10G
+# IPADDR= "SIP"
+# GATEWAY= "SIP_GATEWAY"
+# Pick one TEAM_CONFIG, activebackup or lacp
+# note that lacp require changing switch port to lacp as well
+
+TEAM_CONFIG="{\"runner\": {\"name\": \"lacp\"}, \"link_watch\": {\"name\": \"ethtool\"}}"
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=none
+DEFROUTE=no
+IPV4_FAILURE_FATAL=no
+IPV6INIT=no
+NAME=team10G
+DEVICE=team10G
+ONBOOT=yes
+DEVICETYPE=Team
+IPADDR=192.0.2.2
+PREFIX=24
+GATEWAY=192.0.2.1
+NM_CONTROLLED=yes
+MTU=9000
+----
+. Créez le fichier d'interface TEAM pour l'équipe de gestion à l'aide de l'exemple suivant. Dans cet exemple, l'équipe est appelée team1G. Il se trouve sur le réseau de gestion exécutant le canal d'activation de sauvegarde du regroupement réseau.
++
+
+NOTE: La configuration active/passive est recommandée pour les interfaces de gestion, même si vous pouvez également utiliser la configuration active/active. Cela ne nécessite pas de configuration supplémentaire sur les interrupteurs à lames. Cette configuration utilise le https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/sec-Understanding_the_Network_Teaming_Daemon_and_the_Runners["canal de sauvegarde activébackup de réseau"].
+
++
+[listing]
+----
+# cat /etc/sysconfig/network-scripts/ifcfg-team1G
+# IPADDR= "MIP"
+# GATEWAY= "MIP_GATEWAY"
+# DNS1= "DNS"
+# Pick one TEAM_CONFIG, activebackup or lacp
+# note that lacp require changing switch port to lacp as well
+
+TEAM_CONFIG="{\"runner\": {\"name\": \"activebackup\"}, \"link_watch\": {\"name\": \"ethtool\"}}"
+#TEAM_CONFIG=”{ \”runner\”: {\”name\”: \”lacp\”, \”active\”: true, \”fast_rate\”: true }}”
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=none
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=no
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=team1G
+DEVICE=team1G
+ONBOOT=yes
+DEVICETYPE=Team
+IPADDR=198.51.100.2
+PREFIX=24
+GATEWAY=198.51.100.1
+DNS1=198.51.100.250
+NM_CONTROLLED=yes
+----
+. Modifiez le `/etc/iproute2/rt_tables` fichier permettant d'activer une nouvelle table de routage à l'aide de l'exemple suivant. Ce fichier définit les mappages pour utiliser les noms des tables de routage au lieu des numéros d'index pour faire référence à une table spécifique. Dans l'exemple suivant, la nouvelle table de routage de stockage appelée team10G peut être appelée par son index (20) ou son nom (team10G) :
++
+[listing]
+----
+# cat /etc/iproute2/rt_tables
+#
+# reserved values
+#
+255local
+254main
+253default
+0unspec
+
+20   team10G
+----
+. Ajoutez des routes à la table de routage pour le trafic de stockage à l'aide de l'exemple suivant. Cette table de routage pointe vers le réseau de stockage comme passerelle par défaut et doit être utilisée pour le trafic iSCSI. Dans l'exemple suivant, le nom de l'interface groupée est team10G.
++
+
+NOTE: Vous devez remplacer `$storage_network`, `$storage_if_name src`, `$SIP table`, `$routing_table_name`, `$storage_default_gw dev`, `$storage_if_name src`, `$SIP table`, et `$routing_table_name` avec vos propres valeurs.
+
++
+[listing]
+----
+# cat /etc/sysconfig/network-scripts/route-team10G
+$storage_network/24 dev $storage_if_name src $SIP table $routing_table_name
+default via $storage_default_gw dev $storage_if_name src $SIP table \
+$routing_table_name
+----
+. Ajoutez le routage basé sur des stratégies pour utiliser la nouvelle table de routage que vous avez créée, si le trafic provient du SIP ou du SVIP. Utilisez l'exemple suivant et remplacez-le par vos propres valeurs :
++
+[listing]
+----
+# cat /etc/sysconfig/network-scripts/rule-team10G
+from $SIP table
+$routing_table_name
+----
+. Redémarrez la mise en réseau pour appliquer toutes les modifications.
++
+[listing]
+----
+# systemctl restart network.service
+----
+. Pour vérifier les règles de routage basées sur des règles, exécutez le `ip rule show` commande.
+. Pour vérifier la table de routage, exécutez l' `ip route show table` commande.
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

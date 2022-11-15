@@ -1,0 +1,24 @@
+---
+permalink: storage/task_troubleshoot_remove_mdss_drives.html 
+sidebar: sidebar 
+keywords: mdss, remove, multi-drive slice service 
+summary: 'Vous pouvez supprimer les lecteurs de service de tranche multi-disques \(MDSS\). Cette procédure s"applique uniquement si le nœud possède plusieurs unités de coupe.' 
+---
+= Retirez les lecteurs MDSS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer les lecteurs MDSS (Multi-Drive Slice Service). Cette procédure s'applique uniquement si le nœud possède plusieurs unités de coupe.
+
+
+NOTE: Si le lecteur de tranche du système et le lecteur de logement 2 tombent en panne, le système arrête les services de tranche et supprime les lecteurs. En l'absence de panne et si vous retirez les lecteurs, les deux lecteurs doivent être retirés en même temps.
+
+. Cliquez sur *Cluster* > *Drives*.
+. Dans l'onglet *lecteurs disponibles*, cochez la case correspondant aux lecteurs de tranche en cours de retrait.
+. Cliquez sur *actions groupées*.
+. Cliquez sur *Supprimer*.
+. Confirmez l'action.
+

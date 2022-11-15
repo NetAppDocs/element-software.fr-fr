@@ -1,0 +1,83 @@
+---
+permalink: concepts/concept_solidfire_concepts_security.html 
+sidebar: sidebar 
+keywords: solidfire security, element security, encryption at rest, software encryption at rest, external key management, fips 140-2, mfa 
+summary: Lorsque vous utilisez le logiciel NetApp Element, vos données sont protégées par des protocoles de sécurité standard. 
+---
+= Sécurité
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous utilisez votre système de stockage 100 % Flash SolidFire, vos données sont protégées par des protocoles de sécurité standard.
+
+
+
+== Chiffrement des données au repos (matériel)
+
+Tous les disques des nœuds de stockage sont capables de chiffrer le chiffrement AES 256 bits au niveau du disque. Chaque lecteur dispose de sa propre clé de cryptage, qui est créée lors de l'initialisation initiale du lecteur. Lorsque vous activez la fonctionnalité de cryptage, un mot de passe à l'échelle du cluster est créé et des segments de mot de passe sont ensuite distribués à tous les nœuds du cluster. Aucun nœud ne stocke la totalité du mot de passe. Le mot de passe est alors utilisé pour protéger par mot de passe tous les accès aux lecteurs. Le mot de passe est nécessaire pour déverrouiller le lecteur et ne l'est pas tant que l'alimentation n'est pas coupée du lecteur ou que le lecteur n'est pas verrouillé.
+
+link:../storage/task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.html["Activation de la fonctionnalité de chiffrement matériel au repos"^] n'affecte pas les performances ou l'efficacité sur le cluster. Si un disque ou un nœud compatible avec le chiffrement est retiré de la configuration du cluster avec l'API Element ou l'interface utilisateur d'Element, le chiffrement au repos est désactivé sur les disques. Une fois le lecteur retiré, vous pouvez le supprimer en utilisant le `SecureEraseDrives` Méthode API. Si un disque physique ou un nœud est supprimé de force, les données restent protégées par le mot de passe de l'ensemble du cluster et par les clés de cryptage individuelles du disque.
+
+
+
+== Chiffrement des données au repos (logiciel)
+
+Un autre type de chiffrement logiciel au repos permet de chiffrer toutes les données écrites sur les SSD du cluster de stockage. link:../storage/task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.html["Lorsque cette option est activée"^], il crypte toutes les données écrites et décrypte toutes les données lues automatiquement dans le logiciel. Le chiffrement logiciel au repos assure la mise en miroir de l'implémentation du lecteur SED (Self-Encrypting Drive) dans le matériel pour assurer la sécurité des données en l'absence de SED.
+
+
+NOTE: Le chiffrement logiciel au repos est activé par défaut dans tous les nœuds SolidFire Enterprise SDS. Le chiffrement logiciel au repos fournit une couche logicielle principale de chiffrement de sécurité des données dans les nœuds SDS d'entreprise SolidFire, qui n'incluent pas les disques à autocryptage (SED).
+
+
+WARNING: Pour les clusters de stockage 100 % Flash SolidFire, le chiffrement logiciel au repos doit être activé au cours de la création du cluster et ne peut pas être désactivé une fois le cluster créé.
+
+Les solutions logicielles et matérielles de chiffrement au repos peuvent être utilisées de manière indépendante ou en association.
+
+
+
+== Gestion externe des clés
+
+Vous pouvez configurer le logiciel Element pour qu'il gère les clés de chiffrement du cluster de stockage à l'aide d'un service tiers de gestion des clés conforme KMIP. Lorsque vous activez cette fonctionnalité, la clé de chiffrement de mot de passe d'accès au disque au niveau du cluster est gérée par un KMS que vous spécifiez.
+
+Element peut utiliser les services de gestion des clés suivants :
+
+* Gemalto SafeNet KeySecure
+* SAFENET CHEZ KeySecure
+* KeyControl HyTrust
+* Gestionnaire de sécurité des données Vormetric
+* IBM Security Key Lifecycle Manager
+
+
+Pour plus d'informations sur la configuration de la gestion externe des clés, reportez-vous à la section link:../storage/concept_system_manage_key_get_started_with_external_key_management.html["vous lancez dans une mise en œuvre externe de la gestion des clés"] documentation :
+
+
+
+== Authentification multifacteur
+
+L'authentification multifacteur (MFA) vous permet de présenter plusieurs types de preuves à l'utilisateur lors NetApp Element de la connexion. Vous pouvez configurer Element pour qu'il accepte uniquement l'authentification multi-facteurs pour les connexions intégrant votre système de gestion des utilisateurs et votre fournisseur d'identités. Vous pouvez configurer Element pour qu'il s'intègre à un fournisseur d'identités SAML 2.0 existant qui peut appliquer plusieurs schémas d'authentification, tels que les mots de passe et les messages texte, les mots de passe et les e-mails, ou d'autres méthodes.
+
+Vous pouvez coupler l'authentification multi-facteurs avec des fournisseurs d'identité compatibles SAML 2.0 (IDP) courants, tels que Microsoft Active Directory Federation Services (ADFS) et Shiboleeth.
+
+Pour configurer MFA, voir link:../storage/concept_system_manage_mfa_enable_multi_factor_authentication.html["le système active l'authentification multifacteur"] documentation :
+
+
+
+== FIPS 140-2 pour le chiffrement HTTPS et des données au repos
+
+Les clusters de stockage NetApp SolidFire prennent en charge le chiffrement conforme à la norme FIPS 140-2 (Federal information Processing Standard) pour les modules cryptographiques. Vous pouvez activer la conformité FIPS 140-2 sur votre cluster SolidFire pour les communications HTTPS et le chiffrement de disques.
+
+Lorsque vous activez le mode d'exploitation FIPS 140-2 sur votre cluster, le cluster active NetApp Cryptographic Security module (NCSM) et exploite le chiffrement certifié FIPS 140-2 niveau 1 pour toutes les communications via HTTPS vers l'interface utilisateur et l'API de NetApp Element. Vous utilisez le `EnableFeature` API d'Element avec le `fips` Paramètre pour activer le chiffrement FIPS 140-2 HTTPS. Sur les clusters de stockage avec du matériel compatible FIPS, vous pouvez également activer le chiffrement de disque FIPS pour les données au repos à l'aide du `EnableFeature` API d'Element avec le `FipsDrives` paramètre.
+
+Pour plus d'informations sur la préparation d'un nouveau cluster de stockage à des fins de chiffrement FIPS 140-2, reportez-vous à la section link:../storage/task_system_manage_fips_create_a_cluster_supporting_fips_drives.html["Créez un cluster prenant en charge les disques FIPS"].
+
+Pour plus d'informations sur l'activation de FIPS 140-2 sur un cluster existant préparé, reportez-vous à la section link:../api/reference_element_api_enablefeature.html["L'API d'élément EnableFeature"].
+
+
+
+== Pour en savoir plus
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+

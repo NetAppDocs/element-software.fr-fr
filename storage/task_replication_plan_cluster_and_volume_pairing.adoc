@@ -1,0 +1,34 @@
+---
+permalink: storage/task_replication_plan_cluster_and_volume_pairing.html 
+sidebar: sidebar 
+keywords: cluster, volume pairing, plan for, real-time replication 
+summary: La réplication à distance en temps réel implique de coupler deux clusters de stockage exécutant le logiciel Element, de coupler des volumes sur chaque cluster et de valider la réplication. Une fois la réplication terminée, vous devez supprimer la relation de volume. 
+---
+= Planifiez l'association des clusters et des volumes pour la réplication en temps réel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La réplication à distance en temps réel implique de coupler deux clusters de stockage exécutant le logiciel Element, de coupler des volumes sur chaque cluster et de valider la réplication. Une fois la réplication terminée, vous devez supprimer la relation de volume.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez disposer des privilèges d'administrateur de cluster sur un ou les deux clusters en cours d'association.
+* Toutes les adresses IP de nœud à la fois sur les réseaux de stockage et de gestion des clusters jumelés sont acheminées les unes aux autres.
+* La MTU de tous les nœuds jumelés doit être identique et prise en charge de bout en bout entre les clusters.
+* Les deux clusters de stockage doivent avoir des noms de cluster uniques, des adresses MVIP, des adresses IP de nœud et toutes les adresses IP de nœud.
+* La différence entre les versions des logiciels Element sur les clusters est supérieure à une version principale. Si la différence est supérieure, l'un des clusters doit être mis à niveau pour effectuer la réplication des données.
+
+
+
+NOTE: Les appliances WAN Accelerator n'ont pas été qualifiées par NetApp pour la réplication des données. Ces appliances peuvent interférer avec la compression et la déduplication si elles sont déployées entre deux clusters qui répliquant les données. Assurez-vous de bien qualifier les effets de tout accélérateur WAN avant de le déployer dans un environnement de production.
+
+
+
+== Trouvez plus d'informations
+
+* xref:task_replication_pair_clusters.adoc[Coupler les clusters pour la réplication]
+* xref:task_replication_pair_volumes.adoc[Coupler les volumes]
+* xref:task_replication_assign_replication_source_and_target_to_paired_volumes.adoc[Attribuez une source et une cible de réplication aux volumes couplés]
+

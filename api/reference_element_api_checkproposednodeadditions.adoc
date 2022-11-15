@@ -1,0 +1,121 @@
+---
+permalink: api/reference_element_api_checkproposednodeadditions.html 
+sidebar: sidebar 
+keywords: proposed,node,additions,CheckProposedNodeAdditions,storage,checking 
+summary: Vous pouvez utiliser la méthode CheckPropositionNodeAddiations pour tester un ensemble de nœuds de stockage afin de voir si vous pouvez les ajouter à un cluster de stockage sans erreur ni violation des meilleures pratiques. 
+---
+= CheckPropositionNodeAdditions
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `CheckProposedNodeAdditions` méthode de test d'un ensemble de nœuds de stockage afin de voir si vous pouvez les ajouter à un cluster de stockage sans erreur ni violation des meilleures pratiques.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+nœuds
+ a| 
+Liste des adresses IP de stockage de nœuds de stockage prêts à être ajoutés à un cluster de stockage.
+ a| 
+tableau de chaînes
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+ProposedClusterValid
+ a| 
+Indique si les nœuds de stockage proposés constituent ou non un cluster de stockage valide. Valeurs possibles :
+
+* vrai
+* faux
+
+ a| 
+booléen
+
+
+
+ a| 
+ProposedClusterErrors
+ a| 
+Erreurs qui se produisent lors de la création d'un cluster de stockage à l'aide des nœuds de stockage proposés. Codes d'erreur possibles :
+
+* `nodesNoCapacity`: Les nœuds n'avaient pas de capacité utilisable.
+* `nodesTooLarge`: Les nœuds constituent une partie trop grande de la capacité du cluster pour le schéma de protection actif.
+* `nodesConnectFailed`: Impossible de se connecter aux nœuds pour interroger la configuration matérielle.
+* `nodesQueryFailed`: Impossible d'interroger les nœuds pour la configuration matérielle.
+* `nodesClusterMember`: Les adresses IP des nœuds sont déjà utilisées dans le cluster.
+* `nonFipsNodeCapable`: Impossible d'ajouter un nœud non compatible FIPS au cluster de stockage alors que la fonctionnalité de chiffrement de lecteur FIPS 140-2 est activée.
+* `nonFipsDrivesCapable`: Impossible d'ajouter un nœud avec des lecteurs non compatibles FIPS au cluster alors que la fonctionnalité de chiffrement de lecteur FIPS 140-2 est activée.
+
+ a| 
+tableau de chaînes
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+	"method": "CheckProposedNodeAdditions",
+	"params": {
+	"nodes": [
+		"192.168.1.11",
+		"192.168.1.12",
+		"192.168.1.13",
+		"192.168.1.14"
+	]
+},
+	"id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+	"id": 1,
+	"result": {
+		"proposedClusterValid": true,
+		"proposedClusterErrors": [ ]
+	}
+}
+----
+
+
+== Nouveau depuis la version
+
+11.0

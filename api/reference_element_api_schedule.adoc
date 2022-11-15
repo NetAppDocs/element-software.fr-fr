@@ -1,0 +1,220 @@
+---
+permalink: api/reference_element_api_schedule.html 
+sidebar: sidebar 
+keywords: object,objects,schedule 
+summary: 'L"objet de planification contient des informations sur un planning créé pour créer un snapshot autonome d"un volume. Vous pouvez récupérer les informations de planification pour tous les horaires à l"aide de la méthode ListSchedules API.' 
+---
+= planification
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet de planification contient des informations sur un planning créé pour créer un snapshot autonome d'un volume. Vous pouvez récupérer les informations d'horaires pour tous les horaires avec le `ListSchedules` Méthode API.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+attributs
+ a| 
+Indique la fréquence de l'occurrence d'horaire. Valeurs possibles :
+
+* Jour de la semaine
+* Jour du mois
+* Intervalle de temps
+
+ a| 
+Objet JSON
+
+
+
+ a| 
+HasError
+ a| 
+Indique si la planification comporte des erreurs. Valeurs possibles :
+
+* vrai
+* faux
+
+ a| 
+booléen
+
+
+
+ a| 
+heures
+ a| 
+Affiche les heures qui s'écoulent avant la création du prochain snapshot. Les valeurs possibles sont 0 à 24.
+ a| 
+entier
+
+
+
+ a| 
+Etat de la dernière course
+ a| 
+Indique l'état du dernier instantané planifié. Valeurs possibles :
+
+* Réussite
+* Échec
+
+ a| 
+chaîne
+
+
+
+ a| 
+LastRunTimeStart
+ a| 
+Indique la dernière fois que la planification a démarré.
+ a| 
+Chaîne de date ISO 8601
+
+
+
+ a| 
+quelques minutes
+ a| 
+Affiche les minutes qui s'écoulent avant la création du prochain snapshot. Les valeurs possibles sont 0 à 59.
+ a| 
+entier
+
+
+
+ a| 
+monthdays
+ a| 
+Indique les jours du mois où un instantané sera effectué.
+ a| 
+baie
+
+
+
+ a| 
+en pause
+ a| 
+Indique si l'horaire est mis en pause ou non. Valeurs possibles :
+
+* vrai
+* faux
+
+ a| 
+booléen
+
+
+
+ a| 
+récurrent
+ a| 
+Indique si la planification est récurrente ou non. Valeurs possibles :
+
+* vrai
+* faux
+
+ a| 
+booléen
+
+
+
+ a| 
+RunNextInterval
+ a| 
+Indique si la planification est exécutée lors de la prochaine activation du planificateur. Lorsque la valeur est true, la planification est exécutée la prochaine fois que le planificateur est actif, puis cette valeur est redéfinie sur false. Valeurs possibles :
+
+* vrai
+* faux
+
+ a| 
+booléen
+
+
+
+ a| 
+ID planiche
+ a| 
+ID unique du planning.
+ a| 
+entier
+
+
+
+ a| 
+ScheduleInfo
+ a| 
+Inclut le nom unique donné au planning, la période de conservation du snapshot créé et l'ID du volume à partir duquel le snapshot a été créé.
+ a| 
+Objet JSON
+
+
+
+ a| 
+ScheduleName
+ a| 
+Nom unique attribué au planning.
+ a| 
+chaîne
+
+
+
+ a| 
+Type planicheType
+ a| 
+Seuls les types de planification des snapshots sont pris en charge pour le moment.
+ a| 
+chaîne
+
+
+
+ a| 
+SnapMirrorLabel
+ a| 
+Le snapvaultLabel à appliquer au snapshot créé ou au snapshot de groupe, contenu dans le scheduleInfo. Si elle n'est pas définie, cette valeur est nulle.
+ a| 
+chaîne
+
+
+
+ a| 
+Date de début
+ a| 
+Indique la date à laquelle l'horaire a commencé ou commencera pour la première fois ; formaté en heure UTC.
+ a| 
+Chaîne de date ISO 8601
+
+
+
+ a| 
+Avec livraison
+ a| 
+Indique si le planning est marqué pour suppression. Valeurs possibles :
+
+* vrai
+* faux
+
+ a| 
+booléen
+
+
+
+ a| 
+jours de semaine
+ a| 
+Indique les jours de la semaine où un instantané sera effectué.
+ a| 
+baie
+
+|===
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_listschedules.adoc[Listes de diffusion]

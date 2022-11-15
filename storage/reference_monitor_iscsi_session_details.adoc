@@ -1,0 +1,62 @@
+---
+permalink: storage/reference_monitor_iscsi_session_details.html 
+sidebar: sidebar 
+keywords: iscsi sessions, monitor 
+summary: Vous pouvez afficher des informations concernant les sessions iSCSI connectées au cluster. 
+---
+= Détails de la session iSCSI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher des informations concernant les sessions iSCSI connectées au cluster.
+
+La liste suivante décrit les informations que vous trouverez sur les sessions iSCSI :
+
+* *Nœud*
++
+Nœud hébergeant la partition de métadonnées primaire du volume.
+
+* *Compte*
++
+Nom du compte qui détient le volume. Si la valeur est vide, un tiret (-) s'affiche.
+
+* *Volume*
++
+Nom du volume identifié sur le nœud.
+
+* *ID de volume*
++
+ID du volume associé à l'IQN cible.
+
+* *ID initiateur*
++
+ID généré par le système pour l'initiateur.
+
+* *Alias initiateur*
++
+Nom facultatif de l'initiateur qui permet de trouver plus facilement l'initiateur lorsque cette liste est longue.
+
+* *IP de l'Initator*
++
+Adresse IP du noeud final qui initie la session.
+
+* *IQN de l'initiateur*
++
+IQN du noeud final qui initie la session.
+
+* *IP cible*
++
+Adresse IP du nœud hébergeant le volume.
+
+* *IQN cible*
++
+L'IQN du volume.
+
+* *Créé le*
++
+Date à laquelle la session a été établie.
+
+

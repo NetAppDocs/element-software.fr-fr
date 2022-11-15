@@ -1,0 +1,35 @@
+---
+permalink: storage/task_system_manage_cluster_ntp_configure_to_listen_for_ntp_broadcasts.html 
+sidebar: sidebar 
+keywords: ntp, broadcasts, server, config, server list, broadcast client 
+summary: 'En utilisant le mode broadcast, vous pouvez demander à chaque nœud d"un cluster d"écouter sur le réseau les messages de diffusion du Network Time Protocol \(NTP\) d"un serveur particulier.' 
+---
+= Configurez le cluster pour écouter les diffusions NTP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En utilisant le mode de diffusion, vous pouvez demander à chaque nœud d'un cluster d'écouter sur le réseau les messages de diffusion NTP (Network Time Protocol) d'un serveur particulier.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez disposer des privilèges d'administrateur de cluster pour configurer ce paramètre.
+* Vous devez configurer un serveur NTP sur votre réseau en tant que serveur de diffusion.
+
+
+.Étapes
+. Cliquez sur *Cluster* > *Paramètres*.
+. Saisissez le ou les serveurs NTP qui utilisent le mode de diffusion dans la liste de serveurs.
+. Sous Paramètres du protocole d'heure du réseau, sélectionnez *Oui* pour utiliser un client de diffusion.
+. Pour définir le client de diffusion, dans le champ *Server*, saisissez le serveur NTP que vous avez configuré en mode diffusion.
+. Cliquez sur *Enregistrer les modifications*.
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+

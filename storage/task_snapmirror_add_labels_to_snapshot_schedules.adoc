@@ -1,0 +1,55 @@
+---
+permalink: storage/task_snapmirror_add_labels_to_snapshot_schedules.html 
+sidebar: sidebar 
+keywords: snapmirror labels, add labels to snapshot schedules, snapmirror policies 
+summary: 'Vous pouvez ajouter des étiquettes SnapMirror aux planifications Snapshot afin de vous assurer qu"une règle SnapMirror est appliquée. Vous pouvez afficher les étiquettes disponibles dans la boîte de dialogue correspondante ou dans NetAppONTAP System Manager.' 
+---
+= Ajoutez des étiquettes SnapMirror aux planifications de snapshots
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ajouter des étiquettes SnapMirror aux planifications Snapshot afin de vous assurer qu'une règle SnapMirror est appliquée. Vous pouvez afficher les étiquettes disponibles dans la boîte de dialogue correspondante ou dans NetAppONTAP System Manager.
+
+.Ce dont vous avez besoin, 8217;ll
+* SnapMirror doit être activé au niveau du cluster.
+* L'étiquette que vous souhaitez ajouter existe déjà dans ONTAP.
+
+
+.Étapes
+. Cliquez sur *Data protection* > *Schedules*.
+. Ajoutez une étiquette SnapMirror à une planification de l'une des manières suivantes :
++
+[cols="25,75"]
+|===
+| Option | Étapes 
+
+
+ a| 
+Création d'une planification
+ a| 
+.. Sélectionnez *Créer un programme*.
+.. Entrez tous les autres détails pertinents.
+.. Sélectionnez *Créer un programme*.
+
+
+
+
+ a| 
+Modification d'un planning existant
+ a| 
+.. Cliquez sur l'icône *actions* pour le programme auquel vous souhaitez ajouter un libellé et sélectionnez *Modifier*.
+.. Dans la boîte de dialogue qui s'affiche, entrez du texte dans le champ *libellé SnapMirror*.
+.. Sélectionnez *Enregistrer les modifications*.
+
+
+|===
+
+
+
+
+== Trouvez plus d'informations
+
+xref:task_data_protection_create_a_snapshot_schedule.adoc[Créer un planning de snapshots]

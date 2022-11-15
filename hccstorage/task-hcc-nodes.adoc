@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: hccstorage/task-hcc-nodes.html 
+summary: Vous pouvez afficher les ressources de stockage de votre système à partir de la page nœuds de contrôle dans le cloud hybride. 
+keywords: netapp, element, cluster, inventory, nodes, storage 
+---
+= Affichez votre inventaire sur la page nœuds
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher vos ressources de stockage dans votre système et déterminer leurs adresses IP, noms et versions logicielles.
+
+Vous pouvez afficher les informations de stockage de vos systèmes à plusieurs nœuds. Si link:../concepts/concept_solidfire_concepts_data_protection.html#custom_pd["domaines de protection personnalisés"] vous pouvez voir les domaines de protection affectés à des nœuds spécifiques.
+
+Pour les nœuds SolidFire Enterprise SDS, vous pouvez surveiller l'inventaire dans l'onglet stockage.
+
+.Étapes
+. Ouvrez l'adresse IP du nœud de gestion dans un navigateur Web. Par exemple :
++
+[listing]
+----
+https://[management node IP address]
+----
+. Connectez-vous au contrôle de cloud hybride NetApp en utilisant les identifiants de l'administrateur du cluster de stockage 100 % Flash SolidFire.
+. Dans le menu de navigation de gauche, sélectionnez *noeuds*.
++
+image::hcc_nodes_storage_2nodes.png[Image de la page nœuds de contrôle dans le cloud hybride]
+
++
+
+NOTE: Lorsque vous lancez une nouvelle session NetApp Hybrid Cloud Control pour la première fois, le chargement de la page des nœuds de contrôle dans le cloud hybride NetApp peut retarder le chargement de la page des nœuds de contrôle dans le cloud hybride lorsque le nœud de gestion gère de nombreux clusters. La durée de chargement varie en fonction du nombre de clusters gérés activement par le nœud de gestion. Pour les lancements suivants, vous aurez des temps de chargement plus courts.
+
+. Dans l'onglet *Storage* de la page noeuds, vérifiez les informations suivantes :
++
+.. Clusters à deux nœuds : une étiquette « deux nœuds » apparaît sur l'onglet stockage et les nœuds témoins associés sont répertoriés.
+.. Clusters à trois nœuds : les nœuds de stockage et les nœuds Witness associés sont répertoriés. Dans les clusters à trois nœuds, un nœud témoin est déployé en veille pour maintenir une haute disponibilité en cas de panne du nœud.
+.. Clusters avec quatre nœuds ou plus : les informations concernant les clusters avec quatre nœuds ou plus s'affichent. Les nœuds témoins ne s'appliquent pas. Si vous avez commencé avec deux ou trois nœuds de stockage et si vous avez ajouté d'autres nœuds, Witness Nodes s'affiche toujours. Sinon, le tableau des nœuds témoins ne s'affiche pas.
+.. Version du bundle de firmware : à partir de la version 2.14 des services de gestion, si vous utilisez des clusters Element 12.0 ou version ultérieure, vous pouvez voir la version du bundle de firmware pour ces clusters. Si les nœuds d'un cluster ont des versions de micrologiciel différentes, vous pouvez voir *multiple* dans la colonne *Firmware Bundle version*.
+.. Domaines de protection personnalisés : si des domaines de protection personnalisés sont utilisés sur le cluster, vous pouvez voir des attributions de domaine de protection personnalisées pour chaque nœud du cluster. Si les domaines de protection personnalisés ne sont pas activés, cette colonne n'apparaît pas.
+
+
+. Vous pouvez manipuler les informations de ces pages de plusieurs façons :
++
+.. Pour filtrer la liste des éléments dans les résultats, sélectionnez l'icône *Filter* et sélectionnez les filtres. Vous pouvez également saisir du texte pour le filtre.
+.. Pour afficher ou masquer des colonnes, sélectionnez l'icône *Afficher/Masquer les colonnes*.
+.. Pour télécharger le tableau, sélectionnez l'icône *Download*.
+
+
+
+
+
+TIP: Pour afficher le nombre de solutions de stockage, consultez le tableau de bord NetApp Hybrid Cloud Control (HCC). Voir link:task-hcc-dashboard.html["Surveiller les ressources de stockage à l'aide du tableau de bord HCC"].
+
+[discrete]
+== Trouvez plus d'informations
+
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+

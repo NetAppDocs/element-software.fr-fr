@@ -1,0 +1,124 @@
+---
+permalink: api/reference_element_api_deleteauthsessionsbyusername.html 
+sidebar: sidebar 
+keywords: auth sessions,username,delete,authentication sessions 
+summary: 'Vous pouvez utiliser la méthode DeleteAuthSessionsByUsername pour supprimer toutes les sessions d"authentification pour un ou plusieurs utilisateurs. Un appelant qui ne se trouve pas dans Access Group ClusterAdmins/Administrator peut uniquement supprimer ses propres sessions. Un appelant disposant des privilèges ClusterAdmins/Administrateur peut supprimer des sessions appartenant à n"importe quel utilisateur. Pour afficher la liste des sessions qui pourraient être supprimées, utilisez ListeAuthSessionsByUsername avec les mêmes paramètres. Pour afficher une liste de sessions pouvant être supprimées, utilisez la méthode ListeAuthSessionsByUsername avec le même paramètre.' 
+---
+= DeleteAuthSessionsByUsername
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `DeleteAuthSessionsByUsername` méthode permettant de supprimer toutes les sessions d'authentification pour un ou plusieurs utilisateurs donnés. Un appelant qui ne se trouve pas dans Access Group ClusterAdmins/Administrator peut uniquement supprimer ses propres sessions. Un appelant disposant des privilèges ClusterAdmins/Administrateur peut supprimer des sessions appartenant à n'importe quel utilisateur. Pour afficher la liste des sessions pouvant être supprimées, utilisez `ListAuthSessionsByUsername` avec les mêmes paramètres. Pour afficher la liste des sessions à supprimer possible, utilisez le `ListAuthSessionsByUsername` méthode avec le même paramètre.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+Méthode d'authentification
+ a| 
+Méthode d'authentification des sessions utilisateur à supprimer. Seul un appelant du groupe d'accès ClusterAdmins/Administrateur peut fournir ce paramètre. Les valeurs possibles sont :
+
+* *AuthMethod=Cluster* spécifie le nom d'utilisateur ClusterAdmin.
+* *AuthMethod=LDAP* spécifie le DN LDAP de l'utilisateur.
+* *AuthMethod=IDP* spécifie l'UUID ou le NameID de l'utilisateur. Si l'IDP n'est pas configuré pour renvoyer l'une ou l'autre des options, cela spécifie un UUID aléatoire émis lors de la création de la session.
+
+ a| 
+Méthode d'authentification
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+nom d'utilisateur
+ a| 
+Identifiant unique de l'utilisateur.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+sessions
+ a| 
+Informations de session pour les sessions d'authentification supprimées.
+ a| 
+link:reference_element_api_authsessioninfo.md#GUID-FF0CE38C-8F99-4F23-8A6F-F6EA4487E808["AuthSessionInfo"]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "DeleteAuthSessionsByUsername",
+  "params": {
+    "authMethod": "Cluster",
+    "username": "admin"
+  }
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+"sessions": [
+      {
+        "accessGroupList": [
+          "administrator"
+        ],
+        "authMethod": "Cluster",
+        "clusterAdminIDs": [
+          1
+        ],
+        "finalTimeout": "2020-03-14T19:21:24Z",
+        "idpConfigVersion": 0,
+        "lastAccessTimeout": "2020-03-11T19:51:24Z",
+        "sessionCreationTime": "2020-03-11T19:21:24Z",
+        "sessionID": "b12bfc64-f233-44df-8b9f-6fb6c011abf7",
+        "username": "admin"
+      }
+    ]
+}
+----
+
+
+== Nouveau depuis la version
+
+12.0

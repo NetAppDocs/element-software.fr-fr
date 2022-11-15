@@ -1,0 +1,222 @@
+---
+permalink: api/reference_element_api_createcluster.html 
+sidebar: sidebar 
+keywords: CreateCluster,cluster,create,creating,initialize,initializing 
+summary: 'Vous pouvez utiliser la méthode CreateCluster pour initialiser le nœud d"un cluster ayant la propriété des adresses "mvip" et "svip". Chaque nouveau cluster est initialisé à l"aide de l"IP de gestion \(MIP\) du premier nœud du cluster. Cette méthode ajoute également automatiquement tous les nœuds configurés au cluster. Vous ne devez utiliser cette méthode qu"une fois par initialisation d"un nouveau cluster.' 
+---
+= CreateCluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `CreateCluster` méthode permettant d'initialiser le nœud d'un cluster ayant la propriété des adresses "mvip" et "svip". Chaque nouveau cluster est initialisé à l'aide de l'IP de gestion (MIP) du premier nœud du cluster. Cette méthode ajoute également automatiquement tous les nœuds configurés au cluster. Vous ne devez utiliser cette méthode qu'une fois par initialisation d'un nouveau cluster.
+
+
+NOTE: Une fois connecté au nœud maître du cluster et exécuté le xref:reference_element_api_getbootstrapconfig.adoc[GetBootStrapConfig] Méthode pour obtenir les adresses IP des autres nœuds que vous souhaitez inclure dans le cluster, vous pouvez exécuter la méthode CreateCluster par rapport au nœud maître du cluster.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+AcceptEula
+ a| 
+Indiquez votre acceptation du contrat de licence de l'utilisateur final lors de la création de ce cluster. Pour accepter le CLUF, définissez ce paramètre sur true.
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+EnableSoftwareEncryptionAtRest
+ a| 
+Activez ce paramètre pour utiliser le chiffrement logiciel au repos. Valeur par défaut définie sur true dans les clusters SolidFire Enterprise SDS. Par défaut, sur false dans tous les autres clusters. Une fois le chiffrement logiciel au repos activé, ce dernier ne peut pas être désactivé sur le cluster.
+ a| 
+booléen
+ a| 
+vrai
+ a| 
+Non
+
+
+
+ a| 
+mvip
+ a| 
+Adresse IP flottante (virtuelle) pour le cluster sur le réseau de gestion.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+nœuds
+ a| 
+Adresses CIP/SIP de l'ensemble initial de nœuds faisant partie du cluster. L'adresse IP de ce nœud doit figurer dans la liste.
+ a| 
+tableau de chaînes
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+Numéro d'ordre
+ a| 
+Numéro de commande alphanumérique. Requises sur les plateformes logicielles.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non (plateformes matérielles)
+
+Oui (plateformes logicielles)
+
+
+
+ a| 
+mot de passe
+ a| 
+Mot de passe initial du compte admin du cluster.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+Numéro de série
+ a| 
+Numéro de série alphanumérique à neuf chiffres. Elle peut être requise sur des plateformes logicielles.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non (plateformes matérielles)
+
+Oui (plateformes logicielles)
+
+
+
+ a| 
+vit
+ a| 
+Adresse IP flottante (virtuelle) pour le cluster sur le réseau de stockage (iSCSI).
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+nom d'utilisateur
+ a| 
+Nom d'utilisateur pour l'administrateur du cluster.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "CreateCluster",
+  "params": {
+    "acceptEula": true,
+    "mvip": "10.0.3.1",
+    "svip": "10.0.4.1",
+    "username": "Admin1",
+    "password": "9R7ka4rEPa2uREtE",
+    "attributes": {
+      "clusteraccountnumber": "axdf323456"
+    },
+    "nodes": [
+      "10.0.2.1",
+      "10.0.2.2",
+      "10.0.2.3",
+      "10.0.2.4"
+    ]
+  },
+  "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+"id" : 1,
+"result" : {}
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+[discrete]
+== Trouvez plus d'informations
+
+* link:reference_element_api_getbootstrapconfig.html["GetBootstrapConfig"]
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

@@ -1,0 +1,293 @@
+---
+permalink: api/reference_element_api_clusterstats.html 
+sidebar: sidebar 
+keywords: objects,clusterStats 
+summary: 'L"objet clusterStats contient des données statistiques pour un cluster. La plupart des statistiques relatives au volume contenues dans l"objet sont moyennées pour tous les volumes du cluster. Vous pouvez utiliser la méthode GetClusterStats pour récupérer ces informations pour un cluster.' 
+---
+= ClusterStats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet clusterStats contient des données statistiques pour un cluster. La plupart des statistiques relatives au volume contenues dans l'objet sont moyennées pour tous les volumes du cluster. Vous pouvez utiliser la méthode GetClusterStats pour récupérer ces informations pour un cluster.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Calcul | Type 
+
+
+ a| 
+IOPS d'actualIOPS
+ a| 
+IOPS réelles actuelles pour l'ensemble du cluster au cours des 500 dernières millisecondes.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+AverageIOPSize
+ a| 
+Taille moyenne en octets des E/S récentes au cluster au cours des 500 dernières millisecondes.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+ClientDepth
+ a| 
+Nombre d'opérations de lecture et d'écriture en attente vers le cluster.
+ a| 
+S/O
+ a| 
+entier
+
+
+
+ a| 
+Utilisation des clusters
+ a| 
+Pourcentage du nombre maximal d'IOPS du cluster actuellement utilisé Ce calcul est calculé en tant que clusterUtilizedIOPS / maxIOPS (à partir de GetClusterCapacity).
+ a| 
+S/O
+ a| 
+flottement
+
+
+
+ a| 
+LacycyUsec
+ a| 
+Temps moyen, en microsecondes, pour traiter les opérations sur un cluster au cours des 500 dernières millisecondes.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+IOPS normales
+ a| 
+Nombre moyen d'IOPS pour l'ensemble du cluster au cours des 500 dernières millisecondes.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+Octets
+ a| 
+Le total des octets cumulatifs lus par le cluster depuis la création du cluster.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+AdBytesLastSample
+ a| 
+Nombre total d'octets lus par le cluster au cours de la dernière période d'échantillonnage.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+ReadLatencyUsec
+ a| 
+Temps moyen, en microsecondes, pour effectuer les opérations de lecture sur le cluster au cours des 500 dernières millisecondes.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+ReadLatcyUSecTotal
+ a| 
+Temps total consacré aux opérations de lecture depuis la création du cluster.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+Opérations de lecture
+ a| 
+Total des opérations de lecture cumulées au cluster depuis la création du cluster.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+ReadOpsLastSample
+ a| 
+Nombre total d'opérations de lecture au cours de la dernière période d'échantillonnage.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+SamplePeriodMsec
+ a| 
+Longueur de la période d'échantillonnage, en millisecondes.
+ a| 
+S/O
+ a| 
+entier
+
+
+
+ a| 
+ServicesCount
+ a| 
+Nombre de services exécutés sur le cluster. Si elle est égale à Services Total, cela indique que des statistiques valides ont été collectées à partir de tous les nœuds.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+ServicesTotal
+ a| 
+Nombre total de services attendus s'exécutant sur le cluster.
+ a| 
+S/O
+ a| 
+entier
+
+
+
+ a| 
+horodatage
+ a| 
+Heure actuelle au format UTC+0.
+ a| 
+S/O
+ a| 
+Chaîne de date ISO 8601
+
+
+
+ a| 
+Les reads sans alignement
+ a| 
+Total cumulé des opérations de lecture non alignées sur un cluster depuis la création du cluster.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+Non-aligneWrites
+ a| 
+Total cumulé des opérations d'écriture non alignées sur un cluster depuis la création du cluster.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+Octets
+ a| 
+Total des octets cumulés écrits sur le cluster depuis la création du cluster.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+WriteBytesLastSample
+ a| 
+Nombre total d'octets écrits sur le cluster au cours de la dernière période d'échantillonnage.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+WriteLatencyUsec
+ a| 
+Temps moyen, en microsecondes, pour traiter les opérations d'écriture sur un cluster au cours des 500 dernières millisecondes.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+
+
+ a| 
+WriteLatencyUSecTotal
+ a| 
+Temps total consacré aux opérations d'écriture depuis la création du cluster.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+WriteOps
+ a| 
+Total des opérations d'écriture cumulatives au cluster depuis la création du cluster.
+ a| 
+Augmentation monotoniquement
+ a| 
+entier
+
+
+
+ a| 
+WriteLastOpsSample
+ a| 
+Nombre total d'opérations d'écriture au cours de la dernière période d'échantillonnage.
+ a| 
+Point dans le temps
+ a| 
+entier
+
+|===
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_getclusterstats.adoc[GetClusterStats]

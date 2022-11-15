@@ -1,0 +1,54 @@
+---
+permalink: storage/task_system_manage_nodes_adding_a_node_to_a_cluster.html 
+sidebar: sidebar 
+keywords: nodes, add, config, cluster, pending, pairs, capacity, rule 
+summary: 'Vous pouvez ajouter des nœuds à un cluster lorsque plus de stockage est nécessaire ou après sa création. Les nœuds requièrent la configuration initiale lors de la première mise sous tension. Une fois le nœud configuré, il apparaît dans la liste des nœuds en attente et vous pouvez l"ajouter à un cluster.' 
+---
+= Ajout d'un nœud à un cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ajouter des nœuds à un cluster lorsque plus de stockage est nécessaire ou après sa création. Les nœuds requièrent la configuration initiale lors de la première mise sous tension. Une fois le nœud configuré, il apparaît dans la liste des nœuds en attente et vous pouvez l'ajouter à un cluster.
+
+La version logicielle de chaque nœud d'un cluster doit être compatible. Lorsque vous ajoutez un nœud à un cluster, le cluster installe la version cluster du logiciel NetApp Element sur le nouveau nœud, si nécessaire.
+
+Vous pouvez ajouter des nœuds de plus petite ou plus grande capacité à un cluster existant. Vous pouvez ajouter de plus grandes capacités à un cluster afin d'adapter la capacité. Des nœuds plus grands ajoutés à un cluster avec des nœuds plus petits doivent être ajoutés par paires. Ainsi, l'espace nécessaire à la double Helix est suffisant pour déplacer les données en cas de panne de l'un des nœuds les plus importants. Vous pouvez ajouter des nœuds de moins grandes capacités à un cluster de nœuds afin d'améliorer les performances.
+
+
+NOTE: Si un nouveau nœud ajouté augmente la capacité totale du cluster de plus de 50 %, une partie de cette capacité devient inutilisable (« bloqué »), afin de lui conformer à la règle de capacité. Cela reste le cas jusqu'à l'ajout de stockage supplémentaire. Si un nœud très volumineux est ajouté qui obéit également à la règle de capacité, le nœud précédemment bloqué ne sera plus bloqué, tandis que le nouveau nœud ajouté est bloqué. La capacité doit toujours être ajoutée par paires pour éviter ce problème. Lorsqu'un nœud est bloqué, la défaillance du cluster strandeCapacity est déclenchée.
+
+https://www.youtube.com/embed/2smVHWkikXY?rel=0["Vidéo NetApp : l'évolutivité à votre rythme : développement d'un cluster SolidFire"]
+
+Vous pouvez ajouter des nœuds aux clusters SolidFire Enterprise SDS (SolidFire ESDS) ou aux appliances NetApp HCI.
+
+Les nœuds ESDS SolidFire sont signalés par un préfixe de type noeud « `CFC`, par exemple, « `S FNc100.` ».
+
+.Étapes
+. Sélectionnez *Cluster* > *Nodes*.
+. Cliquez sur *en attente* pour afficher la liste des nœuds en attente.
++
+Lorsque le processus d'ajout de nœuds (nœuds ESDS SolidFire ou ESDS non SolidFire) est terminé, ils apparaissent dans la liste noeuds actifs. Les nœuds en attente apparaissent alors dans la liste en attente active.
+
++
+Pour les nœuds qui ne sont pas des nœuds ESDS SolidFire, SolidFire installe la version logicielle Element du cluster sur les nœuds en attente lorsque vous les ajoutez à un cluster. Cette opération peut prendre quelques minutes.
+
+. Effectuez l'une des opérations suivantes :
++
+** Pour ajouter des nœuds individuels, cliquez sur l'icône *actions* du noeud que vous souhaitez ajouter.
+** Pour ajouter plusieurs nœuds, cochez la case des nœuds à ajouter, puis *actions groupées*. *Remarque :* si le nœud que vous ajoutez possède une version différente du logiciel Element que la version exécutée sur le cluster, le cluster met à jour de manière asynchrone le nœud vers la version du logiciel Element qui s'exécute sur le maître de cluster. Une fois le nœud mis à jour, il s'ajoute automatiquement au cluster. Au cours de ce processus asynchrone, le nœud sera à l'état suspendu actif.
+
+
+. Cliquez sur *Ajouter*.
++
+Le nœud apparaît dans la liste des nœuds actifs.
+
+
+
+
+
+== Trouvez plus d'informations
+
+xref:concept_system_manage_nodes_node_versioning_and_compatibility.adoc[Gestion des versions de nœud et compatibilité]

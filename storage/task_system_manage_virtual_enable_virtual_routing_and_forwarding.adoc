@@ -1,0 +1,33 @@
+---
+permalink: storage/task_system_manage_virtual_enable_virtual_routing_and_forwarding.html 
+sidebar: sidebar 
+keywords: virtual routing, forwarding, enable, vrf, storage networks, create a vlan 
+summary: 'Vous pouvez activer le routage et le transfert virtuels \(VRF\), ce qui permet à plusieurs instances d"une table de routage d"exister dans un routeur et de fonctionner simultanément. Cette fonctionnalité est disponible uniquement pour les réseaux de stockage.' 
+---
+= Activer le routage et le transfert virtuels
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez activer le routage et le transfert virtuels (VRF), ce qui permet à plusieurs instances d'une table de routage d'exister dans un routeur et de travailler simultanément. Cette fonctionnalité est disponible uniquement pour les réseaux de stockage.
+
+Vous ne pouvez activer VRF qu'au moment de la création d'un VLAN. Si vous souhaitez revenir à une fonction non VRF, vous devez supprimer et recréer le VLAN.
+
+. Cliquez sur *Cluster* > *Network*.
+. Pour activer VRF sur un nouveau VLAN, sélectionnez *Create VLAN*.
++
+.. Entrez les informations pertinentes pour le nouveau VRF/VLAN. Voir Ajout d'un réseau virtuel.
+.. Cochez la case *Activer VRF*.
+.. *Facultatif* : saisissez une passerelle.
+
+
+. Cliquez sur *Create VLAN*.
+
+
+
+
+== Trouvez plus d'informations
+
+xref:task_system_manage_virtual_add_a_virtual_network.adoc[Ajouter un réseau virtuel]

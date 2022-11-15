@@ -1,0 +1,28 @@
+---
+permalink: storage/reference_system_manage_snmp_snmp_details.html 
+sidebar: sidebar 
+keywords: snmp, overview, reference, mib, settings, trap 
+summary: 'Sur la page SNMP de l"onglet Cluster, vous pouvez afficher les informations suivantes.' 
+---
+= Détails SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sur la page SNMP de l'onglet Cluster, vous pouvez afficher les informations suivantes.
+
+* *MIB SNMP*
++
+Les fichiers MIB qui sont disponibles pour vous à visualiser ou télécharger.
+
+* *Paramètres SNMP généraux*
++
+Vous pouvez activer ou désactiver SNMP. Après avoir activé SNMP, vous pouvez choisir la version à utiliser. Si vous utilisez la version 2, vous pouvez ajouter des requestors et, si vous utilisez la version 3, vous pouvez configurer des utilisateurs USM.
+
+* *Paramètres de déroutement SNMP*
++
+Vous pouvez identifier les recouvrements que vous souhaitez capturer. Vous pouvez définir l'hôte, le port et la chaîne de communauté pour chaque destinataire de l'interruption.
+
+

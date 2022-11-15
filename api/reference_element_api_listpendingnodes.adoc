@@ -1,0 +1,106 @@
+---
+permalink: api/reference_element_api_listpendingnodes.html 
+sidebar: sidebar 
+keywords: cluster,list,listing,pending,nodes,node,listpendingnodes 
+summary: 'Vous pouvez utiliser la méthode ListPendingNodes pour lister les nœuds de stockage en attente dans le système. Les nœuds en attente sont des nœuds de stockage exécutés et configurés pour joindre le cluster de stockage, mais qui n"ont pas encore été ajoutés à l"aide de la méthode AddNodes API.' 
+---
+= ListPendingNodes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ListPendingNodes` méthode permettant d'afficher la liste des nœuds de stockage en attente dans le système. Les nœuds en attente sont des nœuds de stockage exécutés et configurés pour joindre le cluster de stockage, mais qui n'ont pas encore été ajoutés à l'aide de la méthode AddNodes API.
+
+
+
+== Adresses de gestion IPv4 et IPv6
+
+Notez bien que `ListPendingNodes` Ne répertorie pas les nœuds en attente ayant des types d'adresse différents pour l'adresse IP de gestion (MIP) et l'adresse IP virtuelle de gestion (MVIP). Par exemple, si un nœud en attente possède un MVIP IPv6 et une MIP IPv4, `ListPendingNodes` n'inclura pas le nœud dans le résultat.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+Nœuds suspendus
+ a| 
+Liste des nœuds en attente dans le cluster.
+ a| 
+xref:reference_element_api_pendingnode.adoc[Noeud suspendu] baie
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "ListPendingNodes",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 3,
+  "result": {
+    "pendingNodes": [
+      {
+        "assignedNodeID": 0,
+        "cip": "10.26.65.101",
+        "cipi": "Bond10G",
+        "compatible": true,
+        "mip": "172.26.65.101",
+        "mipi": "Bond1G",
+        "name": "VWC-EN101",
+        "pendingNodeID": 1,
+        "platformInfo": {
+          "chassisType": "R620",
+          "cpuModel": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
+          "nodeMemoryGB": 72,
+          "nodeType": "SF3010"
+        },
+        "sip": "10.26.65.101",
+        "sipi": "Bond10G",
+        "softwareVersion": "9.0.0.1554",
+        "uuid": "4C4C4544-0048-4410-8056-C7C04F395931"
+      }
+    ]
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_addnodes.adoc[Nœuds supplémentaires]

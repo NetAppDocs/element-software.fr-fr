@@ -1,0 +1,109 @@
+---
+permalink: api/reference_element_api_setsnmptrapinfo.html 
+sidebar: sidebar 
+keywords: snmp,trap,information,info,setting,set,setsnmptrapinfo 
+summary: 'Vous pouvez utiliser la méthode SetSmpTrapInfo pour activer et désactiver la génération de notifications SNMP de cluster \(traps\) et pour spécifier l"ensemble des hôtes qui reçoivent les notifications. Les valeurs que vous transmettez à chaque appel de méthode SetSmpTrapInfo remplacent toutes les valeurs définies lors d"un appel précédent.' 
+---
+= SetSmpTrapInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `SetSnmpTrapInfo` Méthode permettant d'activer et de désactiver la génération de notifications SNMP de cluster (traps) et de spécifier l'ensemble d'hôtes qui reçoivent les notifications. Les valeurs que vous transmettez `SetSnmpTrapInfo` appel de méthode remplacer toutes les valeurs définies lors d'un appel précédent.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+Trapadestinataires
+ a| 
+Liste des hôtes qui doivent recevoir les traps générés par le cluster de stockage. Au moins un objet est requis si l'un des types de déroutement est activé. Ce paramètre est requis uniquement si les paramètres booléens sont définis sur true. (Aucune valeur par défaut. Non requis.)
+ a| 
+xref:reference_element_api_snmptraprecipient.adoc[SnmpRecipient] baie
+
+
+
+ a| 
+ClusterFaultTrapEnabled
+ a| 
+Si la valeur est définie sur true, une notification de défaillance de cluster correspondante est envoyée à la liste configurée des destinataires de déroutement lorsqu'une panne de cluster est consignée. (Valeur par défaut : FALSE. Non requis.)
+ a| 
+booléen
+
+
+
+ a| 
+ClusterFaultResolvedTrapsEnabled
+ a| 
+Si la valeur est définie sur true, une notification de panne de cluster résolue correspondante est envoyée à la liste configurée des destinataires d'interruption lorsqu'une défaillance de cluster est résolue. (Valeur par défaut : FALSE. Non requis.)
+ a| 
+booléen
+
+
+
+ a| 
+ClusterEventTrapsEnabled
+ a| 
+Si la valeur est true, une notification d'événement de cluster correspondante est envoyée à la liste configurée des destinataires d'interruption lorsqu'un événement de cluster est consigné. (Valeur par défaut : FALSE. Non requis.)
+ a| 
+booléen
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+"method":"SetSnmpTrapInfo",
+"params":{
+    "clusterFaultTrapsEnabled":true,
+    "clusterFaultResolvedTrapsEnabled":true,
+    "clusterEventTrapsEnabled":true,
+    "trapRecipients":[
+    {
+      "host":"192.30.0.10",
+      "port":162,
+      "community":"public"
+    }
+   ]
+  },
+  "id":1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "id" : 1,
+    "result" : {}
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

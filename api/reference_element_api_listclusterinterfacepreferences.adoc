@@ -1,0 +1,82 @@
+---
+permalink: api/reference_element_api_listclusterinterfacepreferences.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La méthode ListClusterInterfacePreference permet aux systèmes intégrés avec les clusters de stockage exécutant le logiciel Element pour lister les préférences d"interface de cluster existantes stockées sur le système. Cette méthode est destinée à un usage interne.' 
+---
+= ListerInterfacePreferences
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le `ListClusterInterfacePreference` Méthode permet aux systèmes intégrés avec des clusters de stockage exécutant le logiciel Element de lister les préférences d'interface de cluster existantes stockées sur le système. Cette méthode est destinée à un usage interne.
+
+
+NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+préférences
+ a| 
+Liste d'objets d'interface de cluster actuellement stockés sur le cluster de stockage, chacun contenant le nom et la valeur de la préférence.
+ a| 
+Baie d'objets JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+	"method": "ListClusterInterfacePreferences",
+    "params": {
+    },
+    "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+	"id": 1,
+	"result": {
+		"preferences": [
+			{
+				"name": "prefname",
+				"value": "testvalue"
+			}
+		]
+	}
+}
+----
+
+
+== Nouveau depuis la version
+
+11.0

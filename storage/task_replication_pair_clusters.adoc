@@ -1,0 +1,33 @@
+---
+permalink: storage/task_replication_pair_clusters.html 
+sidebar: sidebar 
+keywords: pair clusters, replication, connect clusters, data protection 
+summary: 'Vous devez coupler deux clusters pour utiliser la fonctionnalité de réplication en temps réel. Une fois que vous avez couplé et connecté deux clusters, vous pouvez configurer des volumes actifs sur un cluster pour qu"ils soient répliqués en continu sur un second cluster, ce qui assure la protection continue des données \(CDP\).' 
+---
+= Coupler les clusters pour la réplication
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez coupler deux clusters pour utiliser la fonctionnalité de réplication en temps réel. Une fois que vous avez couplé et connecté deux clusters, vous pouvez configurer des volumes actifs sur un cluster pour qu'ils soient répliqués en continu sur un second cluster, assurant ainsi la protection continue des données (CDP).
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez disposer des privilèges d'administrateur de cluster sur un ou les deux clusters en cours d'association.
+* Tous les MIP et SIP de nœud sont acheminés les uns vers les autres.
+* Moins de 2000 ms de latence aller-retour entre les clusters.
+* Les deux clusters de stockage doivent avoir des noms de cluster uniques, des adresses MVIP, des adresses SVIP et toutes les adresses IP de nœud.
+* La différence entre les versions des logiciels Element sur les clusters est supérieure à une version principale. Si la différence est supérieure, l'un des clusters doit être mis à niveau pour effectuer la réplication des données.
+
+
+
+NOTE: L'association de cluster requiert une connectivité complète entre les nœuds du réseau de gestion. La réplication nécessite une connectivité entre les différents nœuds du réseau de cluster de stockage.
+
+Vous pouvez coupler un cluster avec quatre autres clusters au maximum pour répliquer des volumes. Vous pouvez également coupler les clusters au sein du groupe de clusters.
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_prereq_network_port_requirements.adoc[Configuration requise pour les ports réseau]

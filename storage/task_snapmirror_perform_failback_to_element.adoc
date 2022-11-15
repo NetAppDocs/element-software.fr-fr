@@ -1,0 +1,23 @@
+---
+permalink: storage/task_snapmirror_perform_failback_to_element.html 
+sidebar: sidebar 
+keywords: failback, perform a failbacl, Element, snapmirror 
+summary: 'Lorsque le problème du côté principal a été réduit, vous devez resynchroniser le volume source d"origine et revenir au logiciel NetApp Element. Les étapes que vous effectuez varient selon que le volume source d"origine existe toujours ou si vous devez revenir à un volume nouvellement créé.' 
+---
+= Effectuez un rétablissement de l'élément
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque le problème du côté principal a été réduit, vous devez resynchroniser le volume source d'origine et revenir au logiciel NetApp Element. Les étapes que vous effectuez varient selon que le volume source d'origine existe toujours ou si vous devez revenir à un volume nouvellement créé.
+
+
+
+== Trouvez plus d'informations
+
+* xref:task_snapmirror_perform_failback_when_source_volume_exists.adoc[Effectuez une restauration lorsque le volume source existe toujours]
+* xref:task_snapmirror_performing_failback_when_source_volume_no_longer_exists.adoc[Effectuez une restauration lorsque le volume source n'existe plus]
+* xref:concept_snapmirror_failback_scenarios.adoc[Scénarios de restauration SnapMirror]
+

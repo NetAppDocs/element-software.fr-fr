@@ -1,0 +1,25 @@
+---
+permalink: storage/task_replication_create_a_target_volume_with_read_write_access.html 
+sidebar: sidebar 
+keywords: target volume, create, read, write access 
+summary: 'Le processus de réplication implique deux terminaux : la source et le volume cible. Lorsque vous créez le volume cible, celui-ci est automatiquement défini en mode lecture/écriture pour accepter les données pendant la réplication.' 
+---
+= Créez un volume cible avec un accès en lecture ou en écriture
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le processus de réplication implique deux terminaux : la source et le volume cible. Lorsque vous créez le volume cible, celui-ci est automatiquement défini en mode lecture/écriture pour accepter les données pendant la réplication.
+
+. Sélectionnez *Management* > *volumes*.
+. Cliquez sur *Créer un volume*.
+. Dans la boîte de dialogue Créer un nouveau volume, entrez le Nom du volume.
+. Entrez la taille totale du volume, sélectionnez une taille de bloc pour le volume, puis sélectionnez le compte qui doit avoir accès au volume.
+. Cliquez sur *Créer un volume*.
+. Dans la fenêtre active, cliquez sur l'icône actions du volume.
+. Cliquez sur *Modifier*.
+. Modifiez le niveau d'accès du compte en cible de réplication.
+. Cliquez sur *Enregistrer les modifications*.
+

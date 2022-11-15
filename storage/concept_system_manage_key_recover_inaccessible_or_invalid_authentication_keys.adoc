@@ -1,0 +1,35 @@
+---
+permalink: storage/concept_system_manage_key_recover_inaccessible_or_invalid_authentication_keys.html 
+sidebar: sidebar 
+keywords: slice drive error, cluster fault, authentication keys 
+summary: 'Parfois, une erreur peut se produire et nécessiter l"intervention de l"utilisateur. En cas d"erreur, une panne du cluster est générée. Les deux cas les plus probables sont décrits ici.' 
+---
+= Récupérer les clés d'authentification inaccessibles ou non valides
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Parfois, une erreur peut se produire et nécessiter l'intervention de l'utilisateur. En cas d'erreur, un défaut du bloc d'instruments (appelé code inconvénient du bloc d'instruments) est généré. Les deux cas les plus probables sont décrits ici.
+
+
+
+== Le cluster ne parvient pas à déverrouiller les lecteurs en raison d'une défaillance du cluster KmipServerFault.
+
+Cela peut se produire lorsque le cluster démarre et que le serveur de clés est inaccessible ou que la clé requise n'est pas disponible.
+
+. Suivre les étapes de récupération des codes inconvénient du tableau de bord (le cas échéant).
+
+
+
+
+== Il est possible de définir une défaillance sliceServiceIsain, car les lecteurs de métadonnées ont été marqués comme défectueux et placés dans l'état « disponible ».
+
+Étapes à supprimer :
+
+. Ajoutez à nouveau les lecteurs.
+. Au bout de 3 à 4 minutes, vérifier que le `sliceServiceUnhealthy` le défaut a disparu.
+
+
+Voir link:reference_monitor_cluster_fault_codes.html["codes d'anomalie du bloc d'instruments"] pour en savoir plus.

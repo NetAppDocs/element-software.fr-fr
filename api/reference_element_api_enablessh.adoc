@@ -1,0 +1,70 @@
+---
+permalink: api/reference_element_api_enablessh.html 
+sidebar: sidebar 
+keywords: SSH,enable,enabling,single,node,EnableSSH 
+summary: 'Vous pouvez utiliser la méthode EnableSsh pour activer le service SSH pour un seul nœud. Cette méthode n"affecte pas la durée du délai d"expiration SSH à l"échelle du cluster, et ne dispense pas que le nœud ait la désactivation de SSH par le délai SSH global.' 
+---
+= EnableSsh
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `EnableSsh` Méthode permettant d'activer le service Secure Shell (SSH) pour un seul nœud. Cette méthode n'affecte pas la durée du délai d'expiration SSH à l'échelle du cluster, et ne dispense pas que le nœud ait la désactivation de SSH par le délai SSH global.
+
+
+NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
+
+
+
+== Paramètre
+
+Cette méthode n'a pas de paramètre d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+activé
+ a| 
+L'état du service SSH pour ce nœud.
+ a| 
+booléen
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "EnableSsh",
+  "params": {
+     },
+  "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {"enabled": true}
+}
+----

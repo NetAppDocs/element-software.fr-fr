@@ -1,0 +1,132 @@
+---
+permalink: api/reference_element_api_ldapconfiguration.html 
+sidebar: sidebar 
+keywords: object,objects,ldapConfiguration 
+summary: 'L"objet ldapConfiguration contient des informations sur la configuration LDAP sur le système de stockage. Vous pouvez récupérer des informations LDAP à l"aide de la méthode GetLdapConfiguration API.' 
+---
+= LdapConfiguration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet ldapConfiguration contient des informations sur la configuration LDAP sur le système de stockage. Vous pouvez récupérer des informations LDAP à l'aide de `GetLdapConfiguration` Méthode API.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+Type d'autorisation
+ a| 
+Identifie la méthode d'authentification utilisateur à utiliser. Valeurs possibles :
+
+* DirectBind
+* SearchAndBind
+
+ a| 
+chaîne
+
+
+
+ a| 
+activé
+ a| 
+Indique si le système est configuré pour LDAP ou non. Valeurs possibles :
+
+* vrai
+* faux
+
+ a| 
+booléen
+
+
+
+ a| 
+GroupSearchBaseDN
+ a| 
+Le DN de base de l'arborescence pour lancer la recherche de groupe (le système effectue une recherche de sous-arborescence à partir d'ici).
+ a| 
+chaîne
+
+
+
+ a| 
+GroupSearchCustomFilter
+ a| 
+Le filtre de recherche personnalisé utilisé.
+ a| 
+chaîne
+
+
+
+ a| 
+GroupSearchType
+ a| 
+Contrôle le filtre de recherche de groupe utilisé par défaut. Valeurs possibles :
+
+* Aucun groupe : pas de prise en charge de groupe.
+* ActiveDirectory : appartenance imbriquée de tous les groupes AD d'un utilisateur.
+* MemberDN : groupes de style MemberDN (niveau unique).
+
+ a| 
+chaîne
+
+
+
+ a| 
+SearchBindDN
+ a| 
+Un DN complet qualifié pour se connecter avec pour effectuer une recherche LDAP pour l'utilisateur (accès en lecture requis pour l'annuaire LDAP).
+ a| 
+chaîne
+
+
+
+ a| 
+URI de serveur
+ a| 
+Une liste séparée par des virgules d'URI de serveur LDAP (par exemple, `ldap://1.2.3.4` et `ldaps://1.2.3.4:123`.)
+ a| 
+chaîne
+
+
+
+ a| 
+UserDNTemplate
+ a| 
+Chaîne utilisée pour former un NA utilisateur complet.
+ a| 
+chaîne
+
+
+
+ a| 
+UserSearchBaseDN
+ a| 
+Le DN de base de l'arborescence utilisée pour lancer la recherche (effectue une recherche dans une sous-arborescence à partir d'ici).
+ a| 
+chaîne
+
+
+
+ a| 
+UserSearchFilter
+ a| 
+Filtre LDAP utilisé.
+ a| 
+chaîne
+
+|===
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_getldapconfiguration.adoc[GetLdapConfiguration]

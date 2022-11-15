@@ -1,0 +1,29 @@
+---
+permalink: storage/task_replication_pair_volumes.html 
+sidebar: sidebar 
+keywords: volume pairings, replication, cluster, cluster pair 
+summary: 'Une fois la connexion entre les clusters d"une paire de clusters établie, vous pouvez coupler un volume sur un cluster avec un volume sur l"autre cluster de la paire. Lorsqu"une relation de couplage de volume est établie, vous devez identifier le volume cible de réplication.' 
+---
+= Coupler les volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois la connexion entre les clusters d'une paire de clusters établie, vous pouvez coupler un volume sur un cluster avec un volume sur l'autre cluster de la paire. Lorsqu'une relation de couplage de volume est établie, vous devez identifier le volume cible de réplication.
+
+Vous pouvez coupler deux volumes pour une réplication en temps réel stockée sur différents clusters de stockage dans une paire de clusters connectée. Une fois que vous associez deux clusters, vous pouvez configurer des volumes actifs sur un cluster pour qu'ils soient répliqués en continu sur un second cluster, assurant ainsi la protection continue des données (CDP). Vous pouvez également attribuer un volume à la source ou à la cible de la réplication.
+
+Les demandes de volume sont toujours une à une. Lorsqu'un volume fait partie d'une association avec un volume d'un autre cluster, vous ne pouvez plus le coupler avec un autre volume.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez établi une connexion entre les clusters dans une paire de clusters.
+* Vous disposez des privilèges d'administrateur de cluster sur un ou les deux clusters en cours d'association.
+
+
+.Étapes
+. xref:task_replication_create_a_target_volume_with_read_write_access.adoc[Créez un volume cible avec un accès en lecture ou en écriture]
+. xref:task_replication_pair_volumes_using_volume_id_or_pairing_key.adoc[Couplez des volumes à l'aide d'un ID de volume ou d'une clé de couplage]
+. xref:task_replication_assign_replication_source_and_target_to_paired_volumes.adoc[Attribuez une source et une cible de réplication aux volumes couplés]
+

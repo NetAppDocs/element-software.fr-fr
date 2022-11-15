@@ -1,0 +1,108 @@
+---
+permalink: api/reference_element_api_testhardwareconfig.html 
+sidebar: sidebar 
+keywords: node,test,testing,hardware,config,configuration,testhardwareconfig 
+summary: Vous pouvez utiliser la méthode TestHardwareConfig pour effectuer des tests matériels sur un noeud. Les options de test incluent la vérification des configurations matérielles, des versions de micrologiciel et de la présence de tous les lecteurs. 
+---
+= TestHardwareConfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `TestHardwareConfig` méthode d'exécution de tests matériels sur un nœud. Les options de test incluent la vérification des configurations matérielles, des versions de micrologiciel et de la présence de tous les lecteurs.
+
+
+
+== Paramètres
+
+
+NOTE: Ces tests ne sont pas destinés à détecter les défaillances matérielles.
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+propre
+ a| 
+Démarre le test de configuration matérielle avec un cache propre. Valeurs possibles :
+
+* True : supprime le fichier de résultats de test mis en cache et revérifie les tests.
+* FALSE : récupère les résultats d'un test mis en cache.
+
+ a| 
+booléen
+ a| 
+faux
+ a| 
+Non
+
+
+
+ a| 
+de force
+ a| 
+Le paramètre de force doit être inclus dans cette méthode pour réinitialiser le nœud avec succès.
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+détails
+ a| 
+Détails de la configuration du matériel.
+ a| 
+Objet JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "TestHardwareConfig",
+   "params": {
+      "force": true
+     },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+En raison de la longueur de cet exemple de réponse, il est documenté dans un sujet supplémentaire.
+
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_response_example_testhardwareconfig.adoc[TestHardwareConfig]

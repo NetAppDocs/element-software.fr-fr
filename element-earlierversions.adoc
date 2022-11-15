@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: element-earlierversions.html 
+keywords: earlier versions, element versions 
+summary: La documentation des versions précédentes est disponible au cas où vous n’exécutiez pas la dernière version. 
+---
+= Versions antérieures de la documentation du logiciel SolidFire et NetApp Element
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La documentation relative aux versions précédentes est disponible dans nos centres de documentation.
+
+* https://docs.netapp.com/us-en/element-software-123/index.html["Documentation Element 12.3.x."^]
+* https://docs.netapp.com/sfe-122/index.jsp["Documentation relative à l'élément 12.2"^]
+* https://docs.netapp.com/sfe-120/index.jsp["Documentation relative à l'élément 12.0"^]
+* https://docs.netapp.com/sfe-118/index.jsp["Documentation relative à l'élément 11.8"^]
+* https://docs.netapp.com/sfe-117/index.jsp["Documentation relative à l'élément 11.7"^]
+* https://docs.netapp.com/sfe-115/index.jsp["Documentation relative à l'élément 11.5"^]
+* https://docs.netapp.com/sfe-113/index.jsp["Documentation relative à l'élément 11.3"^]
+
+
+
+
+== Pour en savoir plus
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+

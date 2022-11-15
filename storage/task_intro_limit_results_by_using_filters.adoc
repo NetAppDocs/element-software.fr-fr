@@ -1,0 +1,27 @@
+---
+permalink: storage/task_intro_limit_results_by_using_filters.html 
+sidebar: sidebar 
+keywords: filter, filtering, sorting information, viewing lists, unfiltered list 
+summary: 'Vous pouvez filtrer les informations de liste des pages de l"interface utilisateur Element. Lors de l"affichage des listes \(comme les volumes et les instantanés\), vous pouvez ajouter un ou plusieurs filtres pour concentrer les informations et les rendre plus facilement sur la page.' 
+---
+= Limitez les résultats en utilisant des filtres
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez filtrer les informations de liste des pages de l'interface utilisateur Element. Lorsque vous affichez des listes (comme des volumes et des instantanés), vous pouvez ajouter un ou plusieurs filtres pour concentrer les informations et les rendre plus faciles à ajuster sur la page.
+
+. Lorsque vous affichez les informations de la liste, cliquez sur *Filter*.
+. Développez le champ *Filter by*.
+. Choisissez une colonne à filtrer à partir de l'élément le plus à gauche du champ.
+. Choisissez une contrainte pour la colonne.
+. Saisissez le texte à filtrer par.
+. Cliquez sur *Ajouter*.
++
+Le système exécute le nouveau filtre sur les informations de la liste et stocke temporairement le nouveau filtre dans le champ Filtrer par.
+
+. Pour ajouter un autre filtre, cliquez sur *Ajouter* et choisissez de nouveau le filtre.
+. Cliquez sur *Effacer tout* pour supprimer la liste des filtres et afficher les informations de la liste non filtrée.
+

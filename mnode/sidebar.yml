@@ -1,0 +1,60 @@
+---
+section: mnode
+title: Travaillez avec le nœud de gestion
+entries:
+- title: Présentation du nœud de gestion
+  url: "/mnode/task_mnode_work_overview.html"
+- title: Installez ou restaurez un nœud de gestion
+  entries:
+  - title: Installez un nœud de gestion
+    url: "/mnode/task_mnode_install.html"
+  - title: Créez un rôle NetApp HCC dans vCenter
+    url: "/mnode/task_mnode_create_netapp_hcc_role_vcenter.html"
+  - title: Configuration d'une carte réseau de stockage (NIC)
+    url: "/mnode/task_mnode_install_add_storage_NIC.html"
+  - title: Restaurez un nœud de gestion
+    url: "/mnode/task_mnode_recover.html"
+- title: Accédez au nœud de gestion
+  url: "/mnode/task_mnode_access_ui.html"
+- title: Utilisation de l'interface du nœud de gestion
+  entries:
+  - title: Présentation de l'interface du nœud de gestion
+    url: "/mnode/task_mnode_work_overview_UI.html"
+  - title: Configurez le contrôle des alertes
+    url: "/mnode/task_mnode_enable_alerts.html"
+  - title: Modifiez et testez les paramètres réseau, cluster et système du nœud de
+      gestion
+    url: "/mnode/task_mnode_settings.html"
+  - title: Exécutez les utilitaires du système à partir du nœud de gestion
+    url: "/mnode/task_mnode_run_system_utilities.html"
+- title: Utilisation de l'API REST du nœud de gestion
+  entries:
+  - title: Présentation de l'interface de l'API REST du nœud de gestion
+    url: "/mnode/task_mnode_work_overview_API.html"
+  - title: Obtenez l'autorisation d'utiliser les API REST
+    url: "/mnode/task_mnode_api_get_authorizationtouse.html"
+  - title: Surveillance Active IQ et NetApp
+    url: "/mnode/task_mnode_enable_activeIQ.html"
+  - title: Configuration du contrôle du cloud hybride NetApp pour plusieurs datacenters
+    url: "/mnode/task_mnode_multi_vcenter_config.html"
+  - title: Ajoutez une ressource de contrôleur au nœud de gestion
+    url: "/mnode/task_mnode_add_assets.html"
+  - title: Créer et gérer les ressources du cluster de stockage
+    url: "/mnode/task_mnode_manage_storage_cluster_assets.html"
+  - title: Afficher ou modifier des actifs de contrôleur existants
+    url: "/mnode/task_mnode_edit_vcenter_assets.html"
+  - title: Configurez un serveur proxy
+    url: "/mnode/task_mnode_configure_proxy_server.html"
+  - title: Vérifiez les versions du système d'exploitation du nœud de gestion et des
+      services
+    url: "/mnode/task_mnode_api_find_mgmt_svcs_version.html"
+  - title: Obtention de journaux des services de gestion
+    url: "/mnode/task_mnode_logs.html"
+- title: Gérer les connexions de prise en charge
+  entries:
+  - title: Accès aux nœuds de stockage à l'aide de SSH pour le dépannage de base
+    url: "/mnode/task_mnode_enable_node_troubleshooting_sessions.html"
+  - title: Démarrer une session de support NetApp à distance
+    url: "/mnode/task_mnode_enable_remote_support_connections.html"
+  - title: Gérez la fonctionnalité SSH sur le nœud de gestion
+    url: "/mnode/task_mnode_ssh_management.html"

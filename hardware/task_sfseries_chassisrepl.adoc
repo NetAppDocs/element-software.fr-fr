@@ -1,0 +1,126 @@
+---
+permalink: hardware/task_sfseries_chassisrepl.html 
+sidebar: sidebar 
+keywords: solidfire chassis, chassis replacement, sf-series nodes 
+summary: 'Vous devrez peut-être remplacer le châssis si le ventilateur, l"unité de traitement centrale (CPU) ou le module de mémoire DIMM (Dual Inline Memory module) tombe en panne, ou si vous devez résoudre les problèmes de surchauffe ou de démarrage. Les pannes de cluster dans l"interface utilisateur du logiciel NetApp Element et le voyant orange clignotant à l"avant du châssis indiquent qu"un remplacement de châssis est possible. Contactez le support NetApp avant de continuer.' 
+---
+= Remplacez un châssis
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devrez peut-être remplacer le châssis si le ventilateur, l'unité de traitement centrale (CPU) ou le module de mémoire DIMM (Dual Inline Memory module) tombe en panne, ou si vous devez résoudre les problèmes de surchauffe ou de démarrage. Les pannes de cluster dans l'interface utilisateur du logiciel NetApp Element et le voyant orange clignotant à l'avant du châssis indiquent qu'un remplacement de châssis est possible. Contactez le support NetApp avant de continuer.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez contacté le service de support NetApp.
++
+Si vous commandez une pièce de rechange, vous devez avoir ouvert un dossier auprès du support NetApp.
+
+* Vous avez obtenu le châssis de remplacement.
+* Vous avez un bracelet antistatique (ESD) ou vous avez pris une autre protection antistatique.
+* Si vous devez effectuer le processus de retour à l'image d'usine (RTFI), vous avez obtenu la clé USB.
++
+Le support NetApp vous aidera à choisir si le modèle de gestion des données client est nécessaire. Voir https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_create_an_RTFI_key_to_re-image_a_SolidFire_storage_node["Cet article de la base de connaissances (connexion requise)"].
+
+* Vous avez un clavier et un moniteur.
+
+
+Les instructions de ce document s'appliquent si vous disposez d'un châssis à une unité de rack (1U) avec l'un des nœuds suivants :
+
+* SF2405
+* SF4805
+* SF9605
+* SF9608
+* SF19210
+* SF38410
+* SF-FCN-01
+* FC0025
+
+
+[NOTE]
+====
+Les nœuds suivants ne sont pas pris en charge en fonction de la version du logiciel Element :
+
+* À partir des nœuds de stockage Element 12.7, SF2405 et SF9608, ainsi que des nœuds FC FC0025 et SF-FCN-01.
+* À partir des nœuds de stockage Element 12.0, SF3010, SF6010 et SF9010.
+
+
+====
+.Étapes
+. Recherchez le numéro de service du châssis défaillant et vérifiez que le numéro de série correspond au numéro de dossier que vous avez ouvert avec le support NetApp lors de la commande de remplacement.
++
+Vous pouvez localiser le numéro de service à l'avant du châssis.
+
++
+La figure suivante est un exemple de numéro de service :
+
++
+image::../media/sf_series_chassis_service_tag.gif[Cette figure illustre le numéro de service d'un châssis SolidFire.]
+
++
+
+NOTE: La figure ci-dessus est un exemple. L'emplacement exact du numéro de service peut varier en fonction du modèle de votre matériel.
+
+. Branchez le clavier et le moniteur à l'arrière du châssis défectueux.
+. Vérifiez les informations relatives au châssis avec le support NetApp.
+. Mettez le châssis hors tension.
+. Etiqueter les lecteurs à l'avant du châssis et les câbles à l'arrière.
++
+
+NOTE: Les nœuds Fibre Channel n'ont pas de disques à l'avant.
+
+. Retirez les blocs d'alimentation et les câbles.
+. Retirez soigneusement les disques et placez-les sur une surface plane et antistatique.
++
+
+NOTE: Si vous disposez d'un nœud Fibre Channel, vous pouvez ignorer cette étape.
+
+. Retirez le châssis en appuyant sur le loquet ou en dévissant la vis moletée, en fonction de votre modèle de matériel.
++
+Vous devez emballer le châssis défectueux et renvoyer à NetApp.
+
+. *Facultatif* : retirez les rails et installez les nouveaux rails fournis avec votre châssis de remplacement.
++
+Vous pouvez choisir de réutiliser les rails existants. Si vous réutilisez les rails existants, vous pouvez ignorer cette étape.
+
+. Faites glisser le châssis de remplacement sur les rails.
+. Pour les nœuds de stockage, insérez les disques du châssis défectueux dans le châssis de remplacement.
++
+
+NOTE: Vous devez insérer les lecteurs dans les emplacements où ils se trouvaient dans le châssis défectueux.
+
+. Installer les unités d'alimentation.
+. Insérez les câbles du bloc d'alimentation et les câbles 1 GbE et 10 GbE dans leurs ports d'origine.
++
+Des émetteurs-récepteurs SFP (Small form-factor pluggable) peuvent être insérés dans les ports 10GbE du châssis de remplacement. Vous devez les retirer avant de brancher les ports 10GbE.
+
+. Si vous avez déterminé qu'il n'est pas nécessaire d'exécuter le processus RTFI sur le nœud, démarrez le nœud et attendez que l'interface utilisateur du terminal (TUI) s'affiche. Passez à l'étape 16 et laissez le cluster repasser une image automatique du nœud lorsque vous l'ajoutez à l'aide de l'interface utilisateur.
+. *Facultatif* : si le support NetApp vous recommande de recréer un examen d'imagerie du nœud à l'aide d'une clé USB, effectuez les opérations suivantes :
++
+.. Mettez le châssis sous tension. Il démarre avec l'image clé RTFI.
+.. À la première invite, tapez *y* pour afficher l'image du nœud de stockage.
+.. À la deuxième invite, tapez *N* pour les vérifications de l'état du matériel.
++
+Si le script RTFI détecte un problème avec un composant matériel, il affiche une erreur dans la console. Si vous voyez une erreur, contactez le support NetApp. Une fois le processus RTFI terminé, le nœud s'arrête.
+
+.. Retirez la clé USB du logement USB.
+.. Démarrez le nœud nouvellement imagé et attendez que la TUI apparaisse.
+
+
+. Configurez les informations sur le réseau et le cluster à partir de l'interface utilisateur TUI.
++
+Vous pouvez contacter le support NetApp pour obtenir de l'aide.
+
+. Ajoutez le nouveau nœud au cluster à l'aide de la TUI du cluster.
+. Emballez et renvoyez le châssis défectueux.
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

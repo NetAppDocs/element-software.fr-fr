@@ -1,0 +1,215 @@
+---
+permalink: api/reference_element_api_enableldapauthentication.html 
+sidebar: sidebar 
+keywords: LDAP,auth,authentication,enable,enabling,EnableLdapAuthentication 
+summary: 'Vous pouvez utiliser la méthode EnableLdapAuthentication pour configurer une connexion d"annuaire LDAP pour l"authentification LDAP à un cluster. Les utilisateurs membres de l"annuaire LDAP peuvent ensuite se connecter au système de stockage à l"aide de leurs informations d"identification LDAP.' 
+---
+= EnableLdapAuthentication
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `EnableLdapAuthentication` Méthode de configuration de la connexion d'un annuaire LDAP à un cluster pour l'authentification LDAP. Les utilisateurs membres de l'annuaire LDAP peuvent ensuite se connecter au système de stockage à l'aide de leurs informations d'identification LDAP.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+Type d'autorisation
+ a| 
+Identifie la méthode d'authentification utilisateur à utiliser. Valeurs possibles :
+
+* `DirectBind`
+* `SearchAndBind`
+
+ a| 
+chaîne
+ a| 
+SearchAndBind
+ a| 
+Non
+
+
+
+ a| 
+GroupSearchBaseDN
+ a| 
+Le DN de base de l'arborescence pour lancer la recherche dans la sous-arborescence du groupe.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+GroupSearchType
+ a| 
+Contrôle le filtre de recherche de groupe utilisé par défaut. Valeurs possibles :
+
+* Aucun groupe : pas de prise en charge de groupe.
+* ActiveDirectory : appartenance imbriquée de tous les groupes Active Directory d'un utilisateur.
+* MemberDN : groupes de style MemberDN (niveau unique).
+
+ a| 
+chaîne
+ a| 
+ActiveDirectory
+ a| 
+Non
+
+
+
+ a| 
+URI de serveur
+ a| 
+Liste séparée par des virgules d'URI de serveur LDAP ou LDAPS. Vous pouvez ajouter un port personnalisé à la fin d'un URI LDAP ou LDAPS en utilisant un point-virgule suivi du numéro de port. Par exemple, l'URI "ldap://1.2.3.4" utilise le port par défaut et l'URI "ldaps://1.2.3.4:123" utilise le port personnalisé 123.
+ a| 
+tableau de chaînes
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+UserSearchBaseDN
+ a| 
+Le DN de base de l'arborescence pour lancer la recherche dans la sous-arborescence. Ce paramètre est requis lors de l'utilisation d'un AuthType de SearchAndBind.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+SearchBindDN
+ a| 
+Un DN complet qualifié pour se connecter avec pour effectuer une recherche LDAP pour l'utilisateur. Le DN requiert un accès en lecture au répertoire LDAP. Ce paramètre est requis lors de l'utilisation d'un AuthType de SearchAndBind.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+SearchBindPassword
+ a| 
+Mot de passe du compte searchBindDN utilisé pour la recherche. Ce paramètre est requis lors de l'utilisation d'un AuthType de SearchAndBind.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+UserSearchFilter
+ a| 
+Le filtre de recherche LDAP à utiliser lors de l'interrogation du serveur LDAP. La chaîne doit comporter le texte de l'espace réservé « %USERNAME% » qui est remplacé par le nom d'utilisateur de l'utilisateur d'authentification. Par exemple, (&(objectClass=personne)(sAMAccountName=%USERNAME%)) utilisera le champ sAMAccountName dans Active Directory pour qu'il corresponde au nom d'utilisateur entré lors de la connexion au cluster. Ce paramètre est requis lors de l'utilisation d'un AuthType de SearchAndBind.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+UserDNTemplate
+ a| 
+Modèle de chaîne utilisé pour définir un motif pour la construction d'un nom unique (DN) utilisateur complet. La chaîne doit comporter le texte de l'espace réservé « %USERNAME% » qui est remplacé par le nom d'utilisateur de l'utilisateur d'authentification. Ce paramètre est requis lors de l'utilisation d'un AuthType de DirectBind.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+GroupSearchCustomFilter
+ a| 
+À utiliser avec le type de recherche CustomFilter, un filtre LDAP à utiliser pour renvoyer le DNS des groupes d'un utilisateur. La chaîne peut avoir un texte de marque de réservation de %USERNAME% et %USERDN% à remplacer par son nom d'utilisateur et son nom d'utilisateur complet si nécessaire.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "EnableLdapAuthentication",
+  "params": {
+     "authType": "SearchAndBind",
+     "groupSearchBaseDN": "dc=prodtest,dc=solidfire,dc=net",
+     "groupSearchType": "ActiveDirectory",
+     "searchBindDN": "SFReadOnly@prodtest.solidfire.net",
+     "searchBindPassword": "zsw@#edcASD12",
+     "sslCert": "",
+     "userSearchBaseDN": "dc=prodtest,dc=solidfire,dc=net",
+     "userSearchFilter": "(&(objectClass=person)(sAMAccountName=%USERNAME%))",
+     "serverURIs":[
+           "ldaps://111.22.333.444",
+           "ldap://555.66.777.888"
+           ]
+       },
+  "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+"id": 1,
+"result": {
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

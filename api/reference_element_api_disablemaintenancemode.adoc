@@ -1,0 +1,136 @@
+---
+permalink: api/reference_element_api_disablemaintenancemode.html 
+sidebar: sidebar 
+keywords: disable,maintenance,mode 
+summary: Vous pouvez utiliser la méthode DisableMaintenanceMode pour mettre un nœud de stockage hors mode de maintenance. Vous devez désactiver le mode de maintenance uniquement après avoir terminé la maintenance et que le nœud est en ligne. 
+---
+= Mode DisableMaintenanceMode
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `DisableMaintenanceMode` méthode permettant de mettre un nœud de stockage hors mode de maintenance. Vous devez désactiver le mode de maintenance uniquement après avoir terminé la maintenance et que le nœud est en ligne.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+nœuds
+ a| 
+Liste des ID de nœud de stockage à sortir du mode de maintenance.
+ a| 
+tableau entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Asynchrone
+ a| 
+Vous pouvez utiliser la méthode GetAsyncResult pour récupérer ce asyncHandle et déterminer à quel moment la transition du mode de maintenance est terminée.
+ a| 
+entier
+
+
+
+ a| 
+Mode en cours
+ a| 
+État actuel du mode de maintenance du nœud. Valeurs possibles :
+
+* Désactivé : aucune maintenance n'a été demandée.
+* FailedToRecover : le nœud n'a pas pu récupérer du mode de maintenance.
+* Inattendu : le nœud a été trouvé hors ligne, mais il était en mode désactivé.
+* Recovery ingFromMaintenance: Le nœud est en cours de récupération à partir du mode maintenance.
+* PréparationForMaintenance : des actions sont en cours pour préparer un noeud pour que la maintenance soit effectuée.
+* ReadyForMaintenance : le nœud est prêt pour la maintenance.
+
+ a| 
+Mode maintenance (chaîne)
+
+
+
+ a| 
+Mode requested
+ a| 
+L'état du mode maintenance requis du nœud. Valeurs possibles :
+
+* Désactivé : aucune maintenance n'a été demandée.
+* FailedToRecover : le nœud n'a pas pu récupérer du mode de maintenance.
+* Inattendu : le nœud a été trouvé hors ligne, mais il était en mode désactivé.
+* Recovery ingFromMaintenance: Le nœud est en cours de récupération à partir du mode maintenance.
+* PréparationForMaintenance : des actions sont en cours pour préparer un noeud pour que la maintenance soit effectuée.
+* ReadyForMaintenance : le nœud est prêt pour la maintenance.
+
+ a| 
+Mode maintenance (chaîne)
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "DisableMaintenanceMode",
+  "params": {
+    "nodes": [6]
+  },
+"id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id": 1,
+   "result":
+      {
+        "requestedMode": "Disabled",
+        "asyncHandle": 1,
+        "currentMode": "Enabled"
+    }
+}
+----
+
+
+== Nouveau depuis la version
+
+12.2
+
+
+
+== Trouvez plus d'informations
+
+http://docs.netapp.com/us-en/hci/docs/concept_hci_storage_maintenance_mode.html["Concepts relatifs au mode de maintenance du stockage NetApp HCI"^]

@@ -1,0 +1,67 @@
+---
+permalink: storage/concept_troubleshoot_basic_mdss_drive_troubleshooting.html 
+sidebar: sidebar 
+keywords: mdss drives, troubleshoot, multi-drive slice service 
+summary: 'Vous pouvez restaurer les disques de métadonnées \(ou tranche\) en les ajoutant au cluster en cas de panne d"un ou des deux disques de métadonnées. Vous pouvez effectuer l"opération de récupération dans l"interface utilisateur NetApp Element si la fonction MDSS est déjà activée sur le nœud.' 
+---
+= Dépannage de base du lecteur MDSS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez récupérer des disques de métadonnées (ou de tranche) en les ajoutant au cluster en cas de panne d'un ou des deux disques de métadonnées. Vous pouvez effectuer l'opération de récupération dans l'interface utilisateur NetApp Element si la fonction MDSS est déjà activée sur le nœud.
+
+En cas de défaillance de l'un des disques de métadonnées ou des deux disques d'un nœud, le service de tranche s'arrête et les données des deux disques sont sauvegardées sur différents disques du nœud.
+
+Les scénarios suivants présentent les scénarios de défaillance possibles et fournissent des recommandations de base pour corriger le problème :
+
+
+
+== Le disque de coupe du système est défaillant
+
+* Dans ce scénario, l'emplacement 2 est vérifié et renvoyé à un état disponible.
+* Le lecteur de tranche système doit être rempli à nouveau avant que le service de tranche puisse être remis en ligne.
+* Vous devez remplacer le lecteur de tranche système, lorsque le lecteur de tranche système devient disponible, ajoutez le lecteur et le lecteur de logement 2 en même temps.
+
+
+
+NOTE: Vous ne pouvez pas ajouter le lecteur dans l'emplacement 2 en tant que lecteur de métadonnées. Vous devez ajouter les deux disques simultanément au nœud.
+
+
+
+== Le slot 2 est défaillant
+
+* Dans ce scénario, le lecteur de tranche système est vérifié et renvoyé à un état disponible.
+* Vous devez remplacer le logement 2 par un logement de rechange, lorsque le logement 2 devient disponible, ajoutez simultanément le lecteur de tranche système et le lecteur de logement 2.
+
+
+
+
+== Le lecteur de tranche système et le logement 2 sont défectueux
+
+* Vous devez remplacer le lecteur de tranche système et le logement 2 par un lecteur de rechange. Lorsque les deux lecteurs deviennent disponibles, ajoutez simultanément le lecteur de tranche système et le lecteur de logement 2.
+
+
+
+
+== Ordre des opérations
+
+* Remplacez le lecteur matériel défectueux par un lecteur de rechange (remplacez les deux disques en cas de défaillance des deux disques).
+* Ajoutez des disques au cluster une fois qu'ils ont été reremplis et qu'ils sont disponibles.
+
+
+
+
+== Vérifiez les opérations
+
+* Vérifiez que les lecteurs du logement 0 (ou interne) et du logement 2 sont identifiés comme des lecteurs de métadonnées dans la liste lecteurs actifs.
+* Vérifiez que l'équilibrage des coupes est terminé (il n'y a plus de messages de tranches mobiles dans le journal des événements pendant au moins 30 minutes).
+
+
+
+
+== Pour en savoir plus
+
+xref:task_troubleshoot_add_mdss_drives.adoc[Ajouter des lecteurs MDSS]

@@ -1,0 +1,20 @@
+---
+permalink: storage/task_replication_delete_volume_relationship_after_replication.html 
+sidebar: sidebar 
+keywords: volume pair, delete, replication 
+summary: 'Une fois la réplication terminée et vous n"avez plus besoin de la relation de paire de volumes, vous pouvez supprimer la relation de volume.' 
+---
+= Supprime une relation de volume après la réplication
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois la réplication terminée et vous n'avez plus besoin de la relation de paire de volumes, vous pouvez supprimer la relation de volume.
+
+. Sélectionnez *Data protection* > *Volume paires*.
+. Cliquez sur l'icône *actions* de la paire de volumes à supprimer.
+. Cliquez sur *Supprimer*.
+. Confirmez le message.
+

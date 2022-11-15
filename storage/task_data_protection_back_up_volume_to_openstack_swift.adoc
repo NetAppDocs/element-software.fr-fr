@@ -1,0 +1,32 @@
+---
+permalink: storage/task_data_protection_back_up_volume_to_openstack_swift.html 
+sidebar: sidebar 
+keywords: volume backup, openstack swift object store 
+summary: 'Vous pouvez sauvegarder des volumes dans des magasins d"objets externes compatibles avec OpenStack Swift.' 
+---
+= Sauvegardez un volume dans un magasin d'objets OpenStack Swift
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez sauvegarder des volumes dans des magasins d'objets externes compatibles avec OpenStack Swift.
+
+. Cliquez sur *Management* > *volumes*.
+. Cliquez sur l'icône actions du volume à sauvegarder.
+. Dans le menu qui s'affiche, cliquez sur *Sauvegarder sur*.
+. Dans la boîte de dialogue *Integrated Backup* sous *Backup to*, sélectionnez *Swift*.
+. Sélectionnez un format de données sous *format de données* :
++
+** *Natif* : format compressé lisible uniquement par les systèmes de stockage SolidFire.
+** *Non compressé* : format non compressé compatible avec d'autres systèmes.
+
+
+. Saisissez une URL à utiliser pour accéder au magasin d'objets dans le champ *URL*.
+. Entrez un nom d'utilisateur pour le compte dans le champ *Nom d'utilisateur*.
+. Saisissez la clé d'authentification du compte dans le champ *clé d'authentification*.
+. Saisissez le conteneur dans lequel stocker la sauvegarde dans le champ *Container*.
+. *Facultatif* : saisissez un nom à ajouter au préfixe dans le champ *nametag*.
+. Cliquez sur *Démarrer lecture*.
+

@@ -1,0 +1,29 @@
+---
+permalink: storage/task_data_manage_volumes_deleting_a_qos_policy.html 
+sidebar: sidebar 
+keywords: qos policy, delete, volumes 
+summary: 'Vous pouvez supprimer une règle QoS s"il n"est plus nécessaire. Lorsque vous supprimez une policy de QoS, tous les volumes associés à la règle gèrent les paramètres de QoS mais ne sont plus associés à une policy.' 
+---
+= Suppression d'une règle QoS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer une règle QoS s'il n'est plus nécessaire. Lorsque vous supprimez une policy de QoS, tous les volumes associés à la règle gèrent les paramètres de QoS mais ne sont plus associés à une policy.
+
+
+NOTE: Si vous tentez de dissocier un volume d'une règle de QoS, vous pouvez modifier les paramètres de QoS de ce volume sur personnalisé.
+
+. Sélectionnez *Management* > *QoS Policies*.
+. Cliquez sur l'icône actions de la stratégie QoS que vous souhaitez supprimer.
+. Dans le menu qui s'affiche, sélectionnez *Supprimer*.
+. Confirmez l'action.
+
+
+
+
+== Trouvez plus d'informations
+
+xref:task_data_manage_volumes_remove_a_qos_policy_association_of_a_volume.adoc[Ne supprime pas l'association de la policy QoS d'un volume]

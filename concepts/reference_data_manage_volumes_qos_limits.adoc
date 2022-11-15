@@ -1,0 +1,104 @@
+---
+permalink: concepts/reference_data_manage_volumes_qos_limits.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous trouverez des informations sur les valeurs minimum et maximum possibles pour la qualité de service \(QoS\).' 
+---
+= Limites de valeur de QoS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Des informations concernant les valeurs minimales et maximales possibles pour la qualité de service (QoS) sont disponibles.
+
+|===
+
+
+|  | Valeur maximale de la taille d'E/S. 
+
+
+| Paramètres | Valeur minimale 
+
+
+| Valeur par défaut | 4 KO 
+
+
+| 8 KO | 16 KO 
+
+
+| 262KO  a| 
+IOPS min
+
+
+
+ a| 
+50
+ a| 
+50
+
+
+
+ a| 
+15,000
+ a| 
+9,375*
+
+
+
+ a| 
+5556*
+ a| 
+385*
+
+
+
+ a| 
+IOPS max
+ a| 
+100
+
+
+
+ a| 
+15,000
+ a| 
+200,000**
+
+
+
+ a| 
+125,000
+ a| 
+74,074
+
+
+
+ a| 
+5128
+ a| 
+IOPS en rafale
+
+
+
+ a| 
+100
+ a| 
+15,000
+
+
+
+ a| 
+200,000**
+ a| 
+125,000
+
+
+
+ a| 
+74,074
+ a| 
+5128
+
+|===

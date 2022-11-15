@@ -1,0 +1,236 @@
+---
+permalink: api/reference_element_api_createsnapshot.html 
+sidebar: sidebar 
+keywords: volume,volumes,create,creating,snapshot,snapshots,CreateSnapshot 
+summary: 'Vous pouvez utiliser CreateSnapshot pour créer une copie ponctuelle d"un volume. Vous pouvez créer un snapshot à partir de n"importe quel volume ou d"un snapshot existant.' 
+---
+= CreateSnapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser `CreateSnapshot` pour créer une copie instantanée d'un volume. Vous pouvez créer un snapshot à partir de n'importe quel volume ou d'un snapshot existant.
+
+Si vous ne fournissez pas de SnapshotID avec cette méthode API, un snapshot est créé à partir de la branche active du volume. Si le volume à partir duquel le snapshot est créé est répliqué sur un cluster distant, le snapshot peut également être répliqué sur la même cible. Utilisez le paramètre enableRemoteReplication pour activer la réplication de snapshot.
+
+
+NOTE: Vous pouvez créer des instantanés si la plénitude de cluster est aux étapes 1, 2 ou 3. Vous ne pouvez pas créer de snapshots lorsque la plénitude de cluster atteint l'étape 4 ou 5.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+`attributes`
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+`enableRemoteReplication`
+ a| 
+Indique si le snapshot sera répliqué sur le stockage distant ou non. Valeurs possibles :
+
+* `true`: Le snapshot sera répliqué sur le stockage distant.
+* `false`: Le snapshot ne sera pas répliqué sur le stockage distant.
+
+ a| 
+booléen
+ a| 
+faux
+ a| 
+Non
+
+
+
+| `ensureSerialCreation`  a| 
+Indique que le snapshot ne doit pas être créé si une réplication de snapshot précédente est en cours. Les valeurs possibles sont :
+
+* `true`: Cela garantit qu'un seul snapshot est répliqué à la fois. La création d'un nouvel instantané échoue si une réplication de snapshot précédente est toujours en cours.
+* `false`: Par défaut. La création de ce snapshot est autorisée si une autre réplication de snapshot est en cours.
+
+| booléen | `false` | Non 
+
+
+| Heure d'expiration  a| 
+Spécifiez l'heure après laquelle le snapshot peut être supprimé. Ne peut pas être utilisé avec `retention`. Si aucune date d'expiration ou de conservation n'est spécifiée, le snapshot n'expire pas. Le format d'heure est une chaîne de date ISO 8601 pour l'expiration basée sur le temps, sinon elle n'expire pas. Valeur de `null` entraîne la conservation permanente de l'instantané. Valeur de `fifo` Provoque la conservation de l'instantané sur la base du premier entré, par rapport aux autres instantanés FIFO sur le volume. L'API échoue si aucun espace FIFO n'est disponible.
+| chaîne | Aucune | Non 
+
+
+ a| 
+`name`
+ a| 
+Nom du snapshot. Si aucun nom n'est saisi, la date et l'heure de prise de l'instantané sont utilisées. La longueur maximale autorisée pour le nom est de 255 caractères.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+`retention`
+ a| 
+Ce paramètre est le même que le `expirationTime` Paramètre, à l'exception du format de temps HH:mm:ss Si aucun de ces deux cas `expirationTime` ni `retention` le snapshot n'expire pas.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+`snapMirrorLabel`
+ a| 
+Étiquette utilisée par le logiciel SnapMirror pour spécifier la règle de conservation des snapshots sur un terminal SnapMirror.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+`snapshotID`
+ a| 
+ID unique d'un snapshot à partir duquel le nouvel instantané est créé. L'ID de snapshot réussi doit être un snapshot sur le volume donné.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+`volumeID`
+ a| 
+ID unique de l'image de volume à copier.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+somme de contrôle
+ a| 
+Chaîne qui représente les chiffres corrects du snapshot stocké. Cette somme de contrôle peut être utilisée ultérieurement pour comparer d'autres instantanés afin de détecter des erreurs dans les données.
+ a| 
+chaîne
+
+
+
+ a| 
+ID de snapshot
+ a| 
+ID unique du nouvel instantané.
+ a| 
+ID de snapshot
+
+
+
+ a| 
+snapshot
+ a| 
+Objet contenant des informations sur le nouveau snapshot.
+ a| 
+xref:reference_element_api_snapshot.adoc[snapshot]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "CreateSnapshot",
+   "params": {
+      "volumeID": 1
+   },
+   "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "checksum": "0x0",
+      "snapshot": {
+        "attributes": {},
+        "checksum": "0x0",
+        "createTime": "2016-04-04T17:14:03Z",
+        "enableRemoteReplication": false,
+        "expirationReason": "None",
+        "expirationTime": null,
+        "groupID": 0,
+        "groupSnapshotUUID": "00000000-0000-0000-0000-000000000000",
+        "name": "2016-04-04T17:14:03Z",
+        "snapshotID": 3110,
+        "snapshotUUID": "6f773939-c239-44ca-9415-1567eae79646",
+        "status": "done",
+        "totalSize": 5000658944,
+        "virtualVolumeID": null,
+        "volumeID": 1
+      },
+        "snapshotID": 3110
+  }
+}
+----
+
+
+== Exception
+
+Une exception xNotPrimary s'affiche lorsque `CreateSnapshot` L'API est appelée et le snapshot ne peut pas être créé. Il s'agit d'un comportement attendu. Réessayez `CreateSnapshot` Appel d'API.
+
+
+
+== Nouveau depuis la version
+
+9.6

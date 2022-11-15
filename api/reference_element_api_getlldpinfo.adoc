@@ -1,0 +1,69 @@
+---
+permalink: api/reference_element_api_getlldpinfo.html 
+sidebar: sidebar 
+keywords: lldp,info,get,getting,getlldpinfo,storage 
+summary: 'Vous pouvez utiliser la méthode GetLldpInfo pour obtenir la configuration Link Layer Discovery Protocol \(LLDP\) pour chaque nœud d"un cluster de stockage ou un nœud de stockage individuel.' 
+---
+= GetLldpInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetLldpInfo` Méthode d'obtention de la configuration LLDP (Link Layer Discovery Protocol) pour chaque nœud d'un cluster de stockage ou un nœud de stockage individuel.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+LldpInfo
+ a| 
+Informations sur les paramètres LLDP du châssis, de l'interface et du voisin pour chaque nœud d'un cluster de stockage.
+ a| 
+Objet JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "GetLldpInfo",
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+En raison de la longueur de cet exemple de réponse, il est documenté dans un sujet supplémentaire.
+
+
+
+== Nouveau depuis la version
+
+11.0
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_response_example_getlldpinfo.adoc[GetLldpInfo]

@@ -1,0 +1,99 @@
+---
+permalink: api/reference_element_api_volumepair.html 
+sidebar: sidebar 
+keywords: object,objects,volumePair 
+summary: 'L"objet Volume pair contient des informations sur un volume associé à un autre volume d"un autre cluster. Si le volume n"est pas couplé, cet objet est vide. Vous pouvez utiliser les méthodes API ListActivePairedvolumes et ListActivevolumes pour renvoyer des informations sur les volumes couplés.' 
+---
+= Volume par paire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet Volume pair contient des informations sur un volume associé à un autre volume d'un autre cluster. Si le volume n'est pas couplé, cet objet est vide. Vous pouvez utiliser le `ListActivePairedVolumes` et `ListActiveVolumes` Méthodes d'API pour renvoyer des informations sur les volumes couplés.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+ClusterPairID
+ a| 
+Cluster sur lequel le volume est apparié.
+ a| 
+entier
+
+
+
+ a| 
+Réplication à distance
+ a| 
+Détails sur la réplication de volume. Membres :
+
+* Mode : (chaîne) l'un des modes "asynchrone", "Sync" ou "SnapshotsOnly".
+* Limite de pauseLimit : (entier) usage interne uniquement.
+* RemoteServiceID : (entier) ID de service de tranche distante.
+* ResumeDetails: (Chaîne) réservé pour une utilisation ultérieure.
+* Réplication de snapshots (objet JSON)
++
+** État : (chaîne) état de la réplication snapshot en cours, si une d'entre elles est en cours.
+** Détails de l'état : (chaîne) réservé pour une utilisation ultérieure.
+
+
+* État : (chaîne) état de la réplication du volume.
+* Détails de l'état : (chaîne) réservé pour une utilisation ultérieure.
+
+ a| 
+Objet JSON
+
+
+
+ a| 
+RemoteSliceID
+ a| 
+ID de tranche défini par le cluster sur le cluster distant.
+ a| 
+entier
+
+
+
+ a| 
+ID de volume distant
+ a| 
+ID du volume du cluster distant auquel le volume local est associé.
+ a| 
+entier
+
+
+
+ a| 
+Nom VolumeName
+ a| 
+Nom du volume distant.
+ a| 
+chaîne
+
+
+
+ a| 
+Volume PairUUID
+ a| 
+Identifiant unique universel défini par le cluster pour ce couplage dans un format canonique.
+ a| 
+chaîne
+
+|===
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_listactivepairedvolumes.adoc[ListeActivePairedvolumes]
+* xref:reference_element_api_listactivevolumes.adoc[ActivéNon]
+

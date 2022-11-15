@@ -1,0 +1,176 @@
+---
+permalink: api/reference_element_api_enablemaintenancemode.html 
+sidebar: sidebar 
+keywords: maintenance,enable,mode 
+summary: Vous pouvez utiliser la méthode EnableMaintenanceMode pour préparer un noeud de stockage à des fins de maintenance. Les scénarios de maintenance incluent toutes les tâches qui requièrent la mise hors tension ou le redémarrage du nœud. 
+---
+= EnableMaintenanceMode
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `EnableMaintenanceMode` méthode pour préparer un nœud de stockage à des fins de maintenance. Les scénarios de maintenance incluent toutes les tâches qui requièrent la mise hors tension ou le redémarrage du nœud.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+ForceWithUnresovedFagressions
+ a| 
+Forcer l'activation du mode maintenance pour ce nœud même en cas de blocage des pannes de cluster.
+ a| 
+booléen
+ a| 
+Faux
+ a| 
+Non
+
+
+
+ a| 
+nœuds
+ a| 
+Liste des ID de nœud à placer en mode maintenance. Un seul nœud à la fois est pris en charge.
+ a| 
+tableau entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+PerMinutePrimarySwapLimit
+ a| 
+Nombre de coupes primaires à échanger par minute. Si ce n'est pas le cas, toutes les coupes primaires seront permutées à la fois.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+délai dépassé
+ a| 
+Spécifie la durée pendant laquelle le mode de maintenance doit rester activé avant qu'il ne soit automatiquement désactivé. Formaté comme une chaîne de temps (par exemple, HH:mm:ss). Si ce n'est pas le cas, le mode de maintenance reste activé jusqu'à ce qu'il soit explicitement désactivé.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Asynchrone
+ a| 
+Vous pouvez utiliser la méthode GetAsyncResult pour récupérer ce asyncHandle et déterminer à quel moment la transition du mode de maintenance est terminée.
+ a| 
+entier
+
+
+
+ a| 
+Mode en cours
+ a| 
+État actuel du mode de maintenance du nœud. Valeurs possibles :
+
+* Désactivé : aucune maintenance n'a été demandée.
+* FailedToRecover : le nœud n'a pas pu récupérer du mode de maintenance.
+* Recovery ingFromMaintenance: Le nœud est en cours de récupération à partir du mode maintenance.
+* PréparationForMaintenance : des actions sont en cours pour préparer un noeud pour que la maintenance soit effectuée.
+* ReadyForMaintenance : le nœud est prêt pour la maintenance.
+
+ a| 
+Mode maintenance (chaîne)
+
+
+
+ a| 
+Mode requested
+ a| 
+L'état du mode maintenance requis du nœud. Valeurs possibles :
+
+* Désactivé : aucune maintenance n'a été demandée.
+* FailedToRecover : le nœud n'a pas pu récupérer du mode de maintenance.
+* Recovery ingFromMaintenance: Le nœud est en cours de récupération à partir du mode maintenance.
+* PréparationForMaintenance : des actions sont en cours pour préparer un noeud pour que la maintenance soit effectuée.
+* ReadyForMaintenance : le nœud est prêt pour la maintenance.
+
+ a| 
+Mode maintenance (chaîne)
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "EnableMaintenanceMode",
+  "params": {
+    "forceWithUnresolvedFaults": False,
+    "nodes": [6],
+    "perMinutePrimarySwapLimit" : 40,
+    "timeout" : "01:00:05"
+  },
+"id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id": 1,
+   "result":
+      {
+        "requestedMode": "ReadyForMaintenance",
+        "asyncHandle": 1,
+        "currentMode": "Disabled"
+    }
+}
+----
+
+
+== Nouveau depuis la version
+
+12.2
+
+
+
+== Trouvez plus d'informations
+
+http://docs.netapp.com/us-en/hci/docs/concept_hci_storage_maintenance_mode.html["Concepts relatifs au mode de maintenance du stockage NetApp HCI"^]

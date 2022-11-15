@@ -1,0 +1,45 @@
+---
+permalink: storage/reference_post_deploy_change_default_ssl_certificate.html 
+sidebar: sidebar 
+keywords: ssl certificate, SSL, private key, self-signed, cluster, nodes, user-defined certificate, API, change default certificate, certificate, Element API 
+summary: 'Vous pouvez modifier le certificat SSL par défaut et la clé privée du nœud de stockage du cluster à l"aide de l"API NetApp Element.' 
+---
+= Modifiez le certificat SSL par défaut du logiciel Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier le certificat SSL par défaut et la clé privée du nœud de stockage du cluster à l'aide de l'API NetApp Element.
+
+Lors de la création d'un cluster logiciel NetApp Element, le cluster crée un certificat SSL unique et une clé privée auto-signés qui sont utilisés pour toutes les communications HTTPS via l'interface utilisateur d'Element, l'interface utilisateur par nœud ou les API. Le logiciel Element prend en charge les certificats auto-signés ainsi que les certificats émis et vérifiés par une autorité de certification (AC) de confiance.
+
+Vous pouvez utiliser les méthodes d'API suivantes pour obtenir plus d'informations sur le certificat SSL par défaut et apporter des modifications.
+
+Pour plus d'informations sur chaque méthode, reportez-vous à la section link:../api/index.html["Référence de l'API du logiciel NetApp Element"].
+
+* *GetSSLCertificate*
++
+Vous pouvez utiliser cette méthode pour récupérer des informations sur le certificat SSL actuellement installé, y compris tous les détails du certificat.
+
+* *SetSSLCertificate*
++
+Vous pouvez utiliser cette méthode pour définir les certificats SSL de cluster et par nœud sur le certificat et la clé privée que vous fournissez. Le système valide le certificat et la clé privée pour empêcher l'application d'un certificat non valide.
+
+* *RemoveSSLCertificate*
++
+Cette méthode supprime le certificat SSL et la clé privée actuellement installés. Le cluster génère alors un nouveau certificat auto-signé et une nouvelle clé privée.
+
+
+
+
+NOTE: Le certificat SSL de cluster est automatiquement appliqué à tous les nouveaux nœuds ajoutés au cluster. Tout nœud supprimé du cluster revient à un certificat auto-signé et toutes les informations de certificat et de clé définies par l'utilisateur sont supprimées du nœud.
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+

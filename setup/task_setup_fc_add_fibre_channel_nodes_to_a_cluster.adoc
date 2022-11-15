@@ -1,0 +1,43 @@
+---
+permalink: setup/task_setup_fc_add_fibre_channel_nodes_to_a_cluster.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Vous pouvez ajouter des nœuds Fibre Channel à un cluster lorsque davantage de stockage est nécessaire ou lors de la création du cluster. Les nœuds Fibre Channel requièrent la configuration initiale lors de la première mise sous tension. Une fois le nœud configuré, il apparaît dans la liste des nœuds en attente et vous pouvez l"ajouter à un cluster.' 
+---
+= Ajout de nœuds Fibre Channel à un cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ajouter des nœuds Fibre Channel à un cluster lorsque davantage de stockage est nécessaire ou lors de la création du cluster. Les nœuds Fibre Channel requièrent la configuration initiale lors de la première mise sous tension. Une fois le nœud configuré, il apparaît dans la liste des nœuds en attente et vous pouvez l'ajouter à un cluster.
+
+La version logicielle de chaque nœud Fibre Channel d'un cluster doit être compatible. Lorsque vous ajoutez un nœud Fibre Channel à un cluster, le cluster installe la version cluster d'Element sur le nouveau nœud, le cas échéant.
+
+.Étapes
+. Sélectionnez *Cluster* > *Nodes*.
+. Cliquez sur *en attente* pour afficher la liste des nœuds en attente.
+. Effectuez l'une des opérations suivantes :
++
+** Pour ajouter des nœuds individuels, cliquez sur l'icône *actions* du noeud que vous souhaitez ajouter.
+** Pour ajouter plusieurs nœuds, cochez la case des nœuds à ajouter, puis *actions groupées*.
++
+
+NOTE: Si le nœud que vous ajoutez dispose d'une version d'Element différente de celle exécutée sur le cluster, le cluster met à jour de manière asynchrone le nœud vers la version d'élément qui s'exécute sur le maître de cluster. Une fois le nœud mis à jour, il s'ajoute automatiquement au cluster. Au cours de ce processus asynchrone, le nœud sera à l'état suspendu actif.
+
+
+
+. Cliquez sur *Ajouter*.
++
+Le nœud apparaît dans la liste des nœuds actifs.
+
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+

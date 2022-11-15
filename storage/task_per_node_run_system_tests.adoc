@@ -1,0 +1,67 @@
+---
+permalink: storage/task_per_node_run_system_tests.html 
+sidebar: sidebar 
+keywords: storage nodes, running system tests,s ystem tests, network settings, testing changes 
+summary: Vous pouvez tester les modifications apportées aux paramètres réseau après les avoir configurées sur le réseau. Vous pouvez exécuter les tests pour vous assurer que le nœud de stockage est stable et que celui-ci peut être mis en ligne sans aucun problème. 
+---
+= Exécutez les tests système à l'aide de l'interface utilisateur par nœud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez tester les modifications apportées aux paramètres réseau après les avoir configurées sur le réseau. Vous pouvez exécuter les tests pour vous assurer que le nœud de stockage est stable et que celui-ci peut être mis en ligne sans aucun problème.
+
+Vous avez ouvert une session sur l'interface utilisateur par nœud pour le nœud de stockage.
+
+. Cliquez sur *tests système*.
+. Cliquez sur *Exécuter le test* en regard du test à exécuter ou sélectionnez *Exécuter tous les tests*.
++
+
+NOTE: L'exécution de toutes les opérations de test peut prendre du temps et doit être effectuée uniquement selon les directives du support NetApp.
+
++
+** *Test ensemble connecté*
++
+Teste et vérifie la connectivité à un ensemble de base de données. Par défaut, le test utilise l'ensemble du cluster auquel le nœud est associé. Vous pouvez également fournir un ensemble différent pour tester la connectivité.
+
+** *Test Connect MVIP*
++
+Envoie un ping à l'adresse MVIP (Management Virtual IP) spécifiée, puis exécute un appel d'API simple vers le MVIP pour vérifier la connectivité. Par défaut, le test utilise le MVIP pour le cluster auquel le nœud est associé.
+
+** *Test connexion Svip*
++
+Ping adresse IP virtuelle de stockage (SVIP) spécifiée à l'aide de paquets ICMP (Internet Control message Protocol) qui correspondent à la taille MTU (maximum transmission Unit) définie sur la carte réseau. Il se connecte ensuite au SVIP en tant qu'initiateur iSCSI. Par défaut, le test utilise le SVIP pour le cluster auquel le nœud est associé.
+
+** *Tester la configuration matérielle*
++
+Vérifie que toutes les configurations matérielles sont correctes, valide les versions de firmware correctes et vérifie que tous les disques sont installés et fonctionnent correctement. Ceci est le même que les tests d'usine.
+
++
+
+NOTE: Ce test consomme beaucoup de ressources et doit être exécuté uniquement sur demande du support NetApp.
+
+** *Tester la connectivité locale*
++
+Teste la connectivité à tous les autres nœuds du cluster en envoyant une commande ping à l'adresse IP (CIP) du cluster sur chaque nœud. Ce test s'affiche uniquement sur un nœud si ce dernier fait partie d'un cluster actif.
+
+** *Tester le cluster de localisation*
++
+Confirme que le nœud peut localiser le cluster spécifié dans la configuration du cluster
+
+** *Tester la configuration réseau*
++
+Vérifie que les paramètres réseau configurés correspondent aux paramètres réseau utilisés sur le système. Ce test n'est pas destiné à détecter les défaillances matérielles lorsqu'un nœud participe activement à un cluster.
+
+** *Test Ping*
++
+Ping une liste d'hôtes spécifiée ou, si aucun n'est spécifié, génère dynamiquement une liste de tous les nœuds enregistrés dans le cluster et envoie des commandes ping à chacun pour une connectivité simple.
+
+** *Tester la connectivité distante*
++
+Teste la connectivité sur tous les nœuds des clusters couplés à distance en envoyant une requête ping à l'adresse IP du cluster (CIP) sur chaque nœud. Ce test s'affiche uniquement sur un nœud si ce dernier fait partie d'un cluster actif.
+
+
+
+

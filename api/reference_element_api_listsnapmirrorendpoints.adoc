@@ -1,0 +1,62 @@
+---
+permalink: api/reference_element_api_listsnapmirrorendpoints.html 
+sidebar: sidebar 
+keywords: snapmirror,endpoint,endpoints,list,listing,listsnapmirrorendpoints 
+summary: 'L"interface utilisateur Web du logiciel Element utilise la méthode ListeSnapMirror orEndpoints pour lister tous les terminaux SnapMirror avec lesquels le cluster de stockage Element communique.' 
+---
+= ListeEndpoints SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'interface utilisateur Web du logiciel Element utilise le `ListSnapMirrorEndpoints` Méthode permettant de lister tous les terminaux SnapMirror avec lesquels le cluster de stockage Element communique.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+SnapMirrorEndpointIDS
+ a| 
+Renvoie uniquement les objets associés à ces ID. Si aucun ID n'est fourni ou si la matrice est vide, la méthode renvoie tous les ID de point de terminaison SnapMirror.
+ a| 
+tableau entier
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Points d'extrémité snapMirror
+ a| 
+Liste des terminaux SnapMirror existants.
+ a| 
+xref:reference_element_api_snapmirrorendpoint.adoc[SnapMirrorEndpoint] baie
+
+|===
+
+
+== Nouveau depuis la version
+
+10.0

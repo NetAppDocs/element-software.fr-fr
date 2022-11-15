@@ -1,0 +1,21 @@
+---
+permalink: storage/task_system_manage_virtual_edit_vrf_vlans.html 
+sidebar: sidebar 
+keywords: vrf vlans edit, vrf vlan attributes, change 
+summary: 'Vous pouvez modifier les attributs VLAN VRF, tels que le nom du VLAN, le masque de réseau, la passerelle et les blocs d"adresse IP.' 
+---
+= Modifier les VLAN VRF
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier les attributs VLAN VRF, tels que le nom du VLAN, le masque de réseau, la passerelle et les blocs d'adresse IP.
+
+. Cliquez sur *Cluster* > *Network*.
+. Cliquez sur l'icône actions du VLAN que vous souhaitez modifier.
+. Cliquez sur *Modifier*.
+. Entrez les nouveaux attributs pour le VLAN VRF dans la boîte de dialogue *Edit VLAN*.
+. Cliquez sur *Enregistrer les modifications*.
+

@@ -1,0 +1,46 @@
+---
+permalink: storage/task_replication_pair_cluster_using_pairing_key.html 
+sidebar: sidebar 
+keywords: remote replication, pairing key, pairing clusters 
+summary: 'Si un administrateur de cluster a accès à un cluster local, mais pas au cluster distant, vous pouvez coupler les clusters à l"aide d"une clé de couplage. Une clé de couplage est générée sur un cluster local, puis envoyée en toute sécurité à un administrateur de cluster sur un site distant pour établir une connexion et réaliser l"association du cluster pour une réplication en temps réel.' 
+---
+= Couplez des clusters à l'aide d'une clé de couplage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si un administrateur de cluster a accès à un cluster local, mais pas au cluster distant, vous pouvez coupler les clusters à l'aide d'une clé de couplage. Une clé de couplage est générée sur un cluster local, puis envoyée en toute sécurité à un administrateur de cluster sur un site distant pour établir une connexion et réaliser l'association du cluster pour une réplication en temps réel.
+
+. Sur le cluster local, sélectionnez *Data protection* > *Cluster paires*.
+. Cliquez sur *pair Cluster*.
+. Cliquez sur *Démarrer le couplage* et cliquez sur *non* pour indiquer que vous n'avez pas accès au cluster distant.
+. Cliquez sur *générer clé*.
++
+
+NOTE: Cette action génère une clé de texte pour le couplage et crée une paire de clusters non configurée sur le cluster local. Si vous ne terminez pas la procédure, vous devez supprimer manuellement la paire de clusters.
+
+. Copiez la clé de couplage du cluster dans le presse-papiers.
+. Rendez la clé de couplage accessible à l'administrateur du cluster sur le site distant du cluster.
++
+
+NOTE: La clé de couplage de cluster contient une version du MVIP, le nom d'utilisateur, le mot de passe et les informations de base de données permettant les connexions de volume pour la réplication à distance. Cette clé doit être traitée de manière sécurisée et ne doit pas être stockée de manière à permettre un accès accidentel ou non sécurisé au nom d'utilisateur ou au mot de passe.
+
++
+
+IMPORTANT: Ne modifiez aucun des caractères de la clé de couplage. La clé devient non valide si elle est modifiée.
+
+. Sur le cluster distant, sélectionnez *Data protection* > *Cluster paires*.
+. Cliquez sur *pair Cluster*.
+. Cliquez sur *Terminer le couplage* et entrez la clé de couplage dans le champ *touche de couplage* (le collage est la méthode recommandée).
+. Cliquez sur *Terminer le couplage*.
+
+
+
+
+== Trouvez plus d'informations
+
+* xref:task_replication_pair_cluster_using_mvip.adoc[Couplez des clusters à l'aide de MVIP]
+* https://www.youtube.com/watch?v=1ljHAd1byC8&feature=youtu.be["Association de clusters à l'aide d'une clé de couplage de cluster (vidéo)"]
+

@@ -1,0 +1,104 @@
+---
+permalink: api/reference_element_api_listiscsisessions.html 
+sidebar: sidebar 
+keywords: iscsi,connection,list,listing,session,info,cluster,listiscsisessions 
+summary: Vous pouvez utiliser la méthode ListISCSISessions pour lister les informations de connexion iSCSI pour les volumes du cluster. 
+---
+= ListISCSISessions
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ListISCSISessions` Méthode permettant de lister les informations de connexion iSCSI pour les volumes du cluster.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+sessions
+ a| 
+Informations sur chaque session iSCSI.
+ a| 
+xref:reference_element_api_session_iscsi.adoc[gestion]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "ListISCSISessions",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+ {
+  "id": 1,
+  "result": {
+    "sessions": [
+      {
+        "accountID": 1,
+        "accountName": "account1",
+        "authentication": {
+            "authMethod": "CHAP",
+            "chapAlgorithm": "SHA3_256",
+            "chapUsername": "iqn.1994-05.com."redhat:1cf11f3eed3",
+            "direction": "two-way"
+        },
+        "createTime": "2022-10-03T22:02:49.121723Z",
+        "driveID": 23,
+        "driveIDs": [23],
+        "initiator": null,
+        "initiatorIP": "10.1.1.1:37138",
+        "initiatorName": "iqn.2010-01.net.solidfire.eng:c",
+        "initiatorPortName": "iqn.2010-01.net.solidfire.eng:c,i,0x23d860000",
+        "initiatorSessionID": 9622126592,
+        "msSinceLastIscsiPDU": 243,
+        "msSinceLastScsiCommand": 141535021,
+        "nodeID": 3,
+        "serviceID": 6,
+        "sessionID": 25769804943,
+        "targetIP": "10.1.1.2:3260",
+        "targetName": "iqn.2010-01.com.solidfire:a7sd.3",
+        "targetPortName": "iqn.2010-01.com.solidfire:a7sd.3,t,0x1",
+        "virtualNetworkID": 0,
+        "volumeID": 3,
+        "volumeInstance": 140327214758656
+      }
+     ...
+    ]
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

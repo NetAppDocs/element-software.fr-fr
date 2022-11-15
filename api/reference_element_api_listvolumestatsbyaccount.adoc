@@ -1,0 +1,125 @@
+---
+permalink: api/reference_element_api_listvolumestatsbyaccount.html 
+sidebar: sidebar 
+keywords: volumes,volume,stats,list,listing,account,listvolumestatsbyaccount,activity 
+summary: 'Vous pouvez utiliser la méthode ListVolumeStatsByAccount pour répertorier les mesures d"activité de volume de haut niveau pour chaque compte. Les valeurs sont additionnées de tous les volumes appartenant au compte.' 
+---
+= ListVolumeStatsByAccount
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ListVolumeStatsByAccount` méthode permettant de répertorier les mesures d'activité de volume de haut niveau pour chaque compte. Les valeurs sont additionnées de tous les volumes appartenant au compte.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+Y compris Virtualvolumes
+ a| 
+Des volumes virtuels sont inclus dans la réponse par défaut. Pour exclure des volumes virtuels, définissez sur false.
+ a| 
+booléen
+ a| 
+vrai
+ a| 
+Non
+
+
+
+ a| 
+comptes
+ a| 
+Liste des ID de compte pour lesquels renvoyer des statistiques de volume. Si elles sont omises, les statistiques de tous les comptes sont renvoyées.
+ a| 
+tableau entier
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Statistiques volume
+ a| 
+Liste des informations d'activité de volume pour chaque compte.*Note:* le membre de volume est 0 pour chaque entrée, car les valeurs représentent la somme de tous les volumes appartenant au compte.
+ a| 
+xref:reference_element_api_volumestats.adoc[Statistiques volume] baie
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+"method": "ListVolumeStatsByAccount",
+  "params": {"accounts": [3]},
+  "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "volumeStats": [
+      {
+        "accountID": 3,
+        "nonZeroBlocks": 155040175,
+        "readBytes": 3156273328128,
+        "readBytesLastSample": 0,
+        "readOps": 770574543,
+        "readOpsLastSample": 0,
+        "samplePeriodMSec": 500,
+        "timestamp": "2016-10-17T20:42:26.231661Z",
+        "unalignedReads": 0,
+        "unalignedWrites": 0,
+        "volumeAccessGroups": [],
+        "volumeID": 0,
+        "volumeSize": 1127428915200,
+        "writeBytes": 1051988406272,
+        "writeBytesLastSample": 0,
+        "writeOps": 256833107,
+        "writeOpsLastSample": 0,
+        "zeroBlocks": 120211025
+      }
+    ]
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

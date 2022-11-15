@@ -1,0 +1,98 @@
+---
+permalink: api/reference_element_api_getaccountbyid.html 
+sidebar: sidebar 
+keywords: accounts,account,get,getting,GetAccountByID,ID 
+summary: Vous pouvez utiliser GetAccountByID pour obtenir des détails sur un compte spécifique, compte tenu de son ID comptable. 
+---
+= GetAccountByID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser `GetAccountByID` Pour obtenir des détails sur un compte spécifique, compte tenu de son ID comptable.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+ID compte
+ a| 
+ID du compte pour lequel obtenir des informations.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+compte
+ a| 
+Détails du compte.
+ a| 
+xref:reference_element_api_account.adoc[compte]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "GetAccountByID",
+   "params": {
+     "accountID"  : 3
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+    "account": {
+        "attributes": {},
+        "username": "account3",
+        "targetSecret": "targetsecret",
+        "volumes": [],
+        "enableChap": true,
+        "status": "active",
+        "accountID": 3,
+        "storageContainerID": "abcdef01-1234-5678-90ab-cdef01234567",
+        "initiatorSecret": "initiatorsecret"
+    }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

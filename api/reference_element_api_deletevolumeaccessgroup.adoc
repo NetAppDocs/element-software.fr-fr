@@ -1,0 +1,112 @@
+---
+permalink: api/reference_element_api_deletevolumeaccessgroup.html 
+sidebar: sidebar 
+keywords: volume,access,group,groups,delete,deleting,DeleteVolumeAccessGroup 
+summary: 'Vous pouvez utiliser DeleteVolumeAccessGroup pour supprimer un groupe d"accès de volume.' 
+---
+= DeleteVolumeAccessGroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser `DeleteVolumeAccessGroup` pour supprimer un groupe d'accès de volume.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+Volume AccessGroupID
+ a| 
+ID du groupe d'accès du volume à supprimer.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+DeleteOrphaninitiateurs
+ a| 
+Indique si vous souhaitez supprimer ou non des objets initiateurs. Valeurs possibles :
+
+* True : supprimez des objets initiateurs après leur suppression d'un groupe d'accès de volume.
+* FALSE : ne supprimez pas les objets initiateurs lorsqu'ils sont supprimés d'un groupe d'accès de volume. Il s'agit de la valeur par défaut.
+
+ a| 
+booléen
+ a| 
+faux
+ a| 
+Non
+
+
+
+ a| 
+de force
+ a| 
+L'ajout de cet indicateur forcera le groupe d'accès au volume à être supprimé même s'il possède un ID de réseau virtuel ou un tag. Valeurs possibles :
+
+* True : le groupe d'accès aux volumes sera supprimé.
+* FALSE : par défaut. Ne supprimez pas le groupe d'accès au volume s'il possède un ID de réseau virtuel ou un tag.
+
+ a| 
+booléen
+ a| 
+faux
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "DeleteVolumeAccessGroup",
+   "params": {
+          "force": true,
+	  "volumeAccessGroupID"  : 3
+   },
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id" : 1,
+   "result": {}
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

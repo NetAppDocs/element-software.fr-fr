@@ -1,0 +1,41 @@
+---
+permalink: storage/task_system_manage_virtual_edit_a_virtual_network.html 
+sidebar: sidebar 
+keywords: virtual network, edit, ip address block, vlan attributes 
+summary: 'Vous pouvez modifier les attributs VLAN, tels que le nom du VLAN, le masque de réseau et la taille des blocs d"adresse IP. La balise VLAN et SVIP ne peuvent pas être modifiés pour un VLAN. L"attribut de passerelle n"est pas un paramètre valide pour les VLAN non VRF.' 
+---
+= Modifier un réseau virtuel
+:allow-uri-read: 
+:url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_determine_which_VLAN_IP%27s_are_in_use_and_which_nodes_those_IP%27s_are_assigned_to_in_Element
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier les attributs VLAN, tels que le nom du VLAN, le masque de réseau et la taille des blocs d'adresse IP. La balise VLAN et SVIP ne peuvent pas être modifiés pour un VLAN. L'attribut de passerelle n'est pas un paramètre valide pour les VLAN non VRF.
+
+Si des sessions iSCSI, de réplication à distance ou d'autres sessions réseau existent, la modification peut échouer.
+
+Lors de la gestion de la taille des plages d'adresses IP VLAN, notez les limitations suivantes :
+
+* Vous pouvez uniquement supprimer les adresses IP de la plage d'adresses IP initiale attribuée au moment de la création du VLAN.
+* Vous pouvez supprimer un bloc d'adresses IP qui a été ajouté après la plage d'adresses IP initiale, mais vous ne pouvez pas redimensionner un bloc IP en supprimant les adresses IP.
+* Lorsque vous tentez de supprimer les adresses IP, depuis la plage d'adresse IP initiale ou dans un bloc IP, celles utilisées par les nœuds du cluster, l'opération peut échouer.
+* Vous ne pouvez pas réaffecter d'adresses IP utilisées spécifiques à d'autres nœuds du cluster.
+
+
+Vous pouvez ajouter un bloc d'adresses IP en suivant la procédure suivante :
+
+. Sélectionnez *Cluster* > *Network*.
+. Sélectionnez l'icône actions du VLAN que vous souhaitez modifier.
+. Sélectionnez *Modifier*.
+. Dans la boîte de dialogue *Edit VLAN*, entrez les nouveaux attributs du VLAN.
+. Sélectionnez *Ajouter un bloc* pour ajouter un bloc non continu d'adresses IP pour le réseau virtuel.
+. Sélectionnez *Enregistrer les modifications*.
+
+
+Lien vers les articles de la base de connaissances pour obtenir de l'aide pour résoudre les problèmes de gestion de vos plages d'adresses IP de VLAN.
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/Duplicate_IP_warning_after_adding_a_storage_node_in_VLAN_on_Element_cluster["Avertissement IP en double après ajout d'un nœud de stockage dans VLAN sur le cluster Element"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/How_to_determine_which_VLAN_IP%27s_are_in_use_and_which_nodes_those_IP%27s_are_assigned_to_in_Element["Comment déterminer les adresses IP VLAN utilisées et les nœuds auxquels ces adresses IP sont affectées dans l'élément"^]
+

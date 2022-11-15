@@ -1,0 +1,178 @@
+---
+permalink: api/reference_element_api_createvolumeaccessgroup.html 
+sidebar: sidebar 
+keywords: volume,access,groups,group,create,creating,CreateVolumeAccessGroup 
+summary: 'Vous pouvez utiliser CreateVolumeAccessGroup pour créer un nouveau groupe d"accès de volume. Lorsque vous créez le groupe d"accès aux volumes, vous devez lui attribuer un nom et vous pouvez éventuellement entrer des initiateurs et des volumes.' 
+---
+= CreateVolumeAccessGroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser `CreateVolumeAccessGroup` pour créer un nouveau groupe d'accès de volume. Lorsque vous créez le groupe d'accès aux volumes, vous devez lui attribuer un nom et vous pouvez éventuellement entrer des initiateurs et des volumes.
+
+Tout IQN initiateur que vous ajoutez au groupe d'accès de volume peut accéder à n'importe quel volume du groupe sans authentification CHAP.
+
+
+NOTE: Les volumes clonés n'héritent pas de l'appartenance des groupes d'accès aux volumes à partir du volume source.
+
+Lorsque vous créez des groupes d'accès de volume, tenez compte des éléments suivants :
+
+* Un groupe d'accès de volume peut contenir jusqu'à 64 IQN d'initiateur.
+* Un initiateur ne peut appartenir qu'à un seul groupe d'accès au volume.
+* Un groupe d'accès aux volumes peut contenir jusqu'à 2000 volumes.
+* Chaque groupe d'accès aux volumes peut appartenir à quatre groupes d'accès aux volumes au maximum.
+
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+initiateurs
+ a| 
+Liste des ID ou noms d'initiateurs (IQN et WWPN) à inclure dans le groupe d'accès aux volumes. Si vous transmettez une liste de noms initiateurs, les initiateurs sont créés s'ils n'existent pas déjà. Si vous transmettez une liste d'ID initiateurs, la méthode renvoie une erreur si l'un des initiateurs n'existe pas. Le fait de transmettre des noms d'initiateurs est obsolète. Vous devez utiliser dans la mesure du possible les ID d'initiateurs.
+ a| 
+matrice entière ou matrice de chaînes (obsolète)
+ a| 
+ a| 
+Non
+
+
+
+ a| 
+nom
+ a| 
+Nom du groupe d'accès de volume. Non obligatoire pour être unique, mais recommandé. Doit comporter entre 1 et 64 caractères.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+volumes
+ a| 
+Liste des ID de volume à inclure dans le groupe d'accès de volume.
+ a| 
+tableau entier
+ a| 
+ a| 
+Non
+
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+ a| 
+{}
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Volume AccessGroup
+ a| 
+Objet contenant des informations sur le nouveau groupe d'accès de volume.
+ a| 
+xref:reference_element_api_volumeaccessgroup.adoc[Volume AccessGroup]
+
+
+
+ a| 
+Volume AccessGroupID
+ a| 
+L'ID du nouveau groupe d'accès de volume.
+ a| 
+entier
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "CreateVolumeAccessGroup",
+   "params": {
+      "name": "myaccessgroup",
+      "initiators": ["iqn.1993-08.org.debian: 01: a31b1d799d5c"],
+      "volumes": [327],
+      "attributes": {}
+   }
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": null,
+  "result": {
+    "volumeAccessGroup": {
+      "attributes": {},
+      "deletedVolumes": [],
+      "initiatorIDs": [
+        95
+      ],
+      "initiators": [
+        "iqn.1993-08.org.debian: 01: a31b1d799d5c"
+      ],
+      "name": "myaccessgroup",
+      "volumeAccessGroupID": 96,
+      "volumes": [
+        327
+      ]
+    },
+    "volumeAccessGroupID": 96
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_getasyncresult.adoc[GetAsyncResult]
+* xref:reference_element_api_listsyncjobs.adoc[ListSyncJobs]
+* xref:reference_element_api_modifyvolume.adoc[Modification du volume]
+

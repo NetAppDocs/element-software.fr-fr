@@ -1,0 +1,206 @@
+---
+permalink: api/reference_element_api_clonemultiplevolumes.html 
+sidebar: sidebar 
+keywords: volume,volumes,clone,cloning,multiple,CloneMultipleVolumes 
+summary: 'Vous pouvez utiliser la méthode CloneMultipleVolume pour créer un clone d"un groupe de volumes spécifiés. Vous pouvez affecter un ensemble cohérent de caractéristiques à un groupe de volumes multiples lorsqu"ils sont clonés ensemble.' 
+---
+= CloneMultipleVolume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `CloneMultipleVolumes` méthode de création d'un clone de groupe de volumes spécifiés. Vous pouvez affecter un ensemble cohérent de caractéristiques à un groupe de volumes multiples lorsqu'ils sont clonés ensemble.
+
+Avant d'utiliser le paramètre groupSnapshotID pour cloner les volumes d'un snapshot de groupe, vous devez d'abord créer le snapshot de groupe à l'aide de l' xref:reference_element_api_creategroupsnapshot.adoc[CreateGroupSnapshot] La méthode API ou l'interface utilisateur Web. L'utilisation de groupSnapshotID est facultative lors du clonage de plusieurs volumes.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+l'accès
+ a| 
+Nouvelle méthode d'accès par défaut pour les nouveaux volumes si elle n'est pas remplacée par les informations transmises dans la matrice du volume.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+EnableSnapMirror orReplication
+ a| 
+Détermine si le volume peut être utilisé pour la réplication avec les terminaux SnapMirror. Valeurs possibles :
+
+* vrai
+* faux
+
+ a| 
+booléen
+ a| 
+faux
+ a| 
+Non
+
+
+
+ a| 
+GroupSnapshotID
+ a| 
+ID du snapshot de groupe à utiliser comme base pour le clone.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+NewAccountID
+ a| 
+Nouvel ID de compte pour les volumes s'il n'est pas remplacé par les informations transmises dans la matrice de volumes.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+volumes
+ a| 
+Collection de membres que vous spécifiez pour les nouveaux volumes. Membres :
+
+* ID de volume : (requis)
+* Accès : (facultatif) peut être l'une des options suivantes : lecture seule, lecture, verrouillage ou réplication cible.
+* Attributs : (facultatif) liste des paires nom-valeur au format d'objet JSON.
+* Nom : (facultatif) Nouveau nom pour le clone.
+* NewAccountID: (Facultatif) ID de compte pour les nouveaux volumes.
+* NewSize : (facultatif) taille totale du volume, en octets. La taille est arrondie au mégaoctet le plus proche.
+
+
+Si les membres facultatifs ne sont pas spécifiés, les valeurs sont héritées des volumes source.
+ a| 
+Baie d'objets JSON
+ a| 
+Aucune
+ a| 
+Oui (ID de volume)
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Asynchrone
+ a| 
+Valeur renvoyée par un appel de méthode asynchrone.
+ a| 
+entier
+
+
+
+ a| 
+ID de groupe
+ a| 
+ID unique du nouveau clone de groupe.
+ a| 
+entier
+
+
+
+ a| 
+membres
+ a| 
+Liste des ID de volume pour les paires de volumes source et de destination.
+ a| 
+Baie d'objets JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "CloneMultipleVolumes",
+   "params": {
+       "volumes": [
+           {
+              "volumeID": 5
+              "name":"foxhill",
+              "access":"readOnly"
+              },
+           {
+              "volumeID": 18
+              },
+           {
+             "volumeID": 20
+              }
+     ]
+   },
+   "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "asyncHandle": 12,
+    "groupCloneID": 4,
+    "members": [
+     {
+      "srcVolumeID": 5,
+      "volumeID": 29
+     },
+     {
+      "srcVolumeID": 18,
+      "volumeID": 30
+     },
+     {
+      "srcVolumeID": 20,
+      "volumeID": 31
+      }
+    ]
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

@@ -1,0 +1,73 @@
+---
+permalink: api/reference_element_api_quiescesnapmirrorrelationship.html 
+sidebar: sidebar 
+keywords: snapmirror,relationship,relationships,quiesce,quiescing,quiescescnapmirrorrelationship 
+summary: 'L"interface utilisateur Web du logiciel Element utilise la méthode QuiesSnapMirror Relationship pour désactiver les futurs transferts de données pour une relation SnapMirror. Si un transfert est en cours, l"état de la relation devient « suspendu » jusqu"à ce que le transfert soit terminé. Si le transfert en cours est interrompu, il ne redémarre pas. Vous pouvez réactiver les transferts de données pour la relation à l"aide de la méthode API ResumeSnapMirror orRelationship.' 
+---
+= QuiesSnapMirror ® Relationship
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'interface utilisateur Web du logiciel Element utilise le `QuiesceSnapMirrorRelationship` Méthode de désactivation des transferts de données futurs pour une relation SnapMirror. Si un transfert est en cours, l'état de la relation devient « suspendu » jusqu'à ce que le transfert soit terminé. Si le transfert en cours est interrompu, il ne redémarre pas. Vous pouvez réactiver les transferts de données pour la relation à l'aide du `ResumeSnapMirrorRelationship` Méthode API.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+L'ID de terminal du système de stockage ONTAP distant communique avec le cluster de stockage Element.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+Volume desestinationVolume
+ a| 
+Volume de destination dans la relation SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[SnapMirrorVolumeinfo]
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+SnapMirrorRelationship
+ a| 
+Objet contenant des informations relatives à la relation SnapMirror suspendu.
+ a| 
+xref:reference_element_api_snapmirrorrelationship.adoc[SnapMirrorRelationship]
+
+|===
+
+
+== Nouveau depuis la version
+
+10.1

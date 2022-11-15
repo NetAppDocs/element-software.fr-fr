@@ -1,0 +1,40 @@
+---
+permalink: storage/task_data_protection_restore_volume_from_backup_on_solidfire.html 
+sidebar: sidebar 
+keywords: volume restore, solidfire storage cluster 
+summary: 'Vous pouvez restaurer un volume à partir d"une sauvegarde sur un cluster de stockage SolidFire.' 
+---
+= Restaurez un volume à partir d'une sauvegarde sur un cluster de stockage SolidFire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez restaurer un volume à partir d'une sauvegarde sur un cluster de stockage SolidFire.
+
+Lors de la sauvegarde ou de la restauration d'un cluster à un autre, le système génère une clé à utiliser pour l'authentification entre les clusters. Cette clé d'écriture de volume en bloc permet au cluster source de s'authentifier auprès du cluster de destination, offrant un niveau de sécurité lors de l'écriture sur le volume de destination. Dans le cadre du processus de sauvegarde ou de restauration, vous devez générer une clé d'écriture de volume en bloc à partir du volume de destination avant de démarrer l'opération.
+
+. Sur le cluster de destination, cliquez sur *Management* > *volumes*.
+. Cliquez sur l'icône actions du volume à restaurer.
+. Dans le menu résultant, cliquez sur *Restaurer depuis*.
+. Dans la boîte de dialogue *Restauration intégrée*, sous *Restaurer depuis*, sélectionnez *SolidFire*.
+. Sélectionnez l'option correspondant à la sauvegarde sous *format de données* :
++
+** *Natif* : format compressé lisible uniquement par les systèmes de stockage SolidFire.
+** *Non compressé* : format non compressé compatible avec d'autres systèmes.
+
+
+. Cliquez sur *générer clé*.
+. Copiez les informations *clé d'écriture de volume en masse* dans le presse-papiers.
+. Dans le cluster source, cliquez sur *Management* > *volumes*.
+. Cliquez sur l'icône actions du volume que vous souhaitez utiliser pour la restauration.
+. Dans le menu qui s'affiche, cliquez sur *Sauvegarder sur*.
+. Dans la boîte de dialogue *sauvegarde intégrée*, sélectionnez *SolidFire* sous *sauvegarde sur*.
+. Sélectionnez l'option qui correspond à la sauvegarde sous *format de données*.
+. Entrez l'adresse IP virtuelle de gestion du cluster du volume de destination dans le champ *Remote Cluster MVIP*.
+. Entrez le nom d'utilisateur du cluster distant dans le champ *Nom d'utilisateur du cluster distant*.
+. Saisissez le mot de passe du cluster distant dans le champ *Mot de passe du cluster distant*.
+. Collez la clé de votre presse-papiers dans le champ *clé d'écriture de volume en vrac*.
+. Cliquez sur *Démarrer lecture*.
+

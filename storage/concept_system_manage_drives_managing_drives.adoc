@@ -1,0 +1,22 @@
+---
+permalink: storage/concept_system_manage_drives_managing_drives.html 
+sidebar: sidebar 
+keywords: drives, manage, cluster, element ui, remove drives 
+summary: 'Chaque nœud contient un ou plusieurs disques physiques utilisés pour stocker une partie des données pour le cluster. Le cluster utilise la capacité et les performances du disque une fois le disque ajouté au cluster. Vous pouvez gérer les disques à l"aide de l"interface utilisateur Element.' 
+---
+= Gérer les disques
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Chaque nœud contient un ou plusieurs disques physiques utilisés pour stocker une partie des données pour le cluster. Le cluster utilise la capacité et les performances du disque une fois le disque ajouté au cluster. Vous pouvez gérer les disques à l'aide de l'interface utilisateur Element.
+
+
+
+== Pour en savoir plus
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+

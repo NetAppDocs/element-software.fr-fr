@@ -1,0 +1,35 @@
+---
+permalink: storage/task_intro_sort_lists.html 
+sidebar: sidebar 
+keywords: sort lists, sorting on a single column, sorting on multiple columns, sort button, column selections, using sort criteria 
+summary: 'Vous pouvez trier les informations de liste en fonction d"un ou de plusieurs critères sur certaines pages de l"interface utilisateur de l"élément. Cela vous aide à organiser les informations dont vous avez besoin à l"écran.' 
+---
+= Trier les listes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez trier les informations de liste en fonction d'un ou de plusieurs critères sur certaines pages de l'interface utilisateur de l'élément. Cela vous aide à organiser les informations dont vous avez besoin à l'écran.
+
+. Pour effectuer un tri sur une seule colonne, cliquez sur l'en-tête de la colonne jusqu'à ce que les informations soient triées dans l'ordre souhaité.
+. Pour trier à l'aide de plusieurs colonnes, cliquez sur l'en-tête de colonne de chaque colonne à trier jusqu'à ce que les informations de chaque colonne soient triées dans l'ordre souhaité.
++
+Le bouton Trier apparaît lorsque vous triez à l'aide de plusieurs colonnes.
+
+. Pour réorganiser les critères de tri, procédez comme suit :
++
+.. Cliquez sur *Trier*.
++
+Le système remplit le champ Trier par avec vos sélections de colonnes.
+
+.. Organisez les colonnes du champ Trier par dans l'ordre dans lequel vous souhaitez trier la liste.
++
+Le système trie les informations de la liste.
+
+
+
+. Pour supprimer un seul critère de tri, cliquez sur l'icône *Supprimer* en regard du nom d'un critère de tri.
+. Pour supprimer tous les critères de tri, cliquez sur *Effacer tout*.
+

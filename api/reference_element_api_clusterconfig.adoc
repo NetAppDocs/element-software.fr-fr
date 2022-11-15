@@ -1,0 +1,150 @@
+---
+permalink: api/reference_element_api_clusterconfig.html 
+sidebar: sidebar 
+keywords: objects,object,clusterConfig 
+summary: 'L"objet clusterconfig renvoie des informations que le nœud utilise pour communiquer avec le cluster.' 
+---
+= Clusterconfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet clusterconfig renvoie des informations que le nœud utilise pour communiquer avec le cluster.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+cipi
+ a| 
+Interface réseau utilisée pour la communication avec le cluster.
+ a| 
+chaîne
+
+
+
+ a| 
+cluster
+ a| 
+Nom unique du cluster.
+ a| 
+chaîne
+
+
+
+ a| 
+Chiffrement
+ a| 
+Indique si le nœud prend en charge le cryptage.
+ a| 
+booléen
+
+
+
+ a| 
+ensemble
+ a| 
+Nœuds qui participent au cluster.
+ a| 
+tableau de chaînes
+
+
+
+ a| 
+FipsDriveConfiguration
+ a| 
+Indique si le nœud prend en charge les disques certifiés FIPS 140-2-2.
+ a| 
+booléen
+
+
+
+ a| 
+HasLocalAdmin
+ a| 
+Indique si le cluster possède un administrateur local.
+ a| 
+booléen
+
+
+
+ a| 
+mipi
+ a| 
+Interface réseau utilisée pour le management des nœuds.
+ a| 
+chaîne
+
+
+
+ a| 
+nom
+ a| 
+Identificateur unique du cluster.
+ a| 
+chaîne
+
+
+
+ a| 
+ID de nœud
+ a| 
+Identificateur unique du nœud.
+ a| 
+entier
+
+
+
+ a| 
+PendentionNodeID
+ a| 
+Identificateur unique pour le nœud en attente.
+ a| 
+entier
+
+
+
+ a| 
+rôle
+ a| 
+Identifie le rôle du nœud.
+ a| 
+chaîne
+
+
+
+ a| 
+sipi
+ a| 
+Interface réseau utilisée pour le stockage.
+ a| 
+chaîne
+
+
+
+ a| 
+état
+ a| 
+Indique l'état du nœud.
+ a| 
+chaîne
+
+
+
+ a| 
+version
+ a| 
+Indique la version du nœud.
+ a| 
+chaîne
+
+|===

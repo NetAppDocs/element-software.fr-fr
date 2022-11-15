@@ -1,0 +1,18 @@
+---
+permalink: concepts/concept_intro_management_node.html 
+sidebar: sidebar 
+keywords: what is, element mnode, management node, mnode 
+summary: 'Le nœud de gestion \(nœud M\) est une machine virtuelle qui s"exécute en parallèle avec un ou plusieurs clusters de stockage basés sur logiciel Element. Utilisé pour mettre à niveau et fournir des services système comprenant la surveillance et la télémétrie, gérer les ressources et les paramètres du cluster, exécuter des tests système et des utilitaires, et activer l"accès au support NetApp pour la résolution de problèmes.' 
+---
+= Nœud de gestion pour le logiciel Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le link:../mnode/task_mnode_work_overview.html["Nœud de gestion (nœud M)"] Serveur virtuel qui s'exécute en parallèle avec un ou plusieurs clusters de stockage logiciels Element. Utilisé pour mettre à niveau et fournir des services système comprenant la surveillance et la télémétrie, gérer les ressources et les paramètres du cluster, exécuter des tests système et des utilitaires, et activer l'accès au support NetApp pour la résolution de problèmes.
+
+Le nœud de gestion interagit avec un cluster de stockage pour effectuer des actions de gestion, mais il n'est pas membre du cluster de stockage. Les nœuds de gestion recueillent régulièrement des informations sur le cluster via des appels d'API et les signalent à Active IQ à des fins de surveillance à distance (si cette option est activée). Des nœuds de gestion sont également chargés de coordonner les mises à niveau logicielles des nœuds du cluster.
+
+Avec la version 11.3 d'Element, le nœud de gestion fonctionne comme un hôte de microservice, ce qui permet de mettre à jour plus rapidement des services logiciels spécifiques en dehors des versions majeures. Ces microservices ou link:../concepts/concept_intro_management_services_for_afa.html["services de gestion"] sont mises à jour fréquemment sous forme de packs de services.

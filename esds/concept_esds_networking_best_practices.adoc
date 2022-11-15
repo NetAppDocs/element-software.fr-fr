@@ -1,0 +1,65 @@
+---
+permalink: esds/concept_esds_networking_best_practices.html 
+sidebar: sidebar 
+keywords: solidfire esds, software-defined storage, networks, linux host routing, networking 
+summary: 'Avant d"installer SolidFire ESDS, vous devez configurer les réseaux requis sur les nœuds de stockage exécutant RHEL. Vous êtes responsable du routage réseau dans votre environnement. Vous pouvez appliquer les meilleures pratiques fournies comme structure.' 
+---
+= Considérations relatives à la configuration réseau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer SolidFire ESDS, vous devez configurer les réseaux requis sur les nœuds de stockage exécutant RHEL. Vous êtes responsable du routage réseau dans votre environnement. Vous pouvez appliquer les meilleures pratiques fournies comme structure.
+
+[IMPORTANT]
+====
+* Utiliser des interfaces solidaires ou associées.
+* Utilisez les mêmes noms d'interface pour tous les nœuds du cluster (exemple : team-mgt pour l'interface de gestion de chaque nœud et team-stg pour l'interface de stockage de chaque nœud).
+* Assurez-vous que NetworkManager est en cours d'exécution.
+* Assurez-vous que le package NetworkManager-dispatchcher-règles de routage est installé sur tous les nœuds de stockage pour le routage basé sur des règles.
+* Voir https://www.netapp.com/us/media/tr-4763.pdf["Meilleures pratiques relatives à la maintenance réseau et réseau sur les systèmes de stockage NetApp SolidFire"].
+* Configurez les réseaux de stockage et de gestion sur chaque nœud pour utiliser plusieurs interfaces physiques redondantes via des configurations en lien ou en équipe.
+
+
+====
+Pour plus d'informations sur le regroupement réseau, reportez-vous à la section https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/ch-configure_network_teaming["Configurer le regroupement réseau"^]. Par défaut, toutes les interfaces 10GbE des nœuds de stockage sont activées avec une unité de transmission maximale (MTU) de 9 9000 octets. Pour des performances optimales, configurez toutes les interfaces de stockage côté serveur avec le même MTU que les nœuds de stockage NetApp SolidFire. Vous devez configurer des commutateurs réseau pour prendre en charge une MTU d'au moins 9016 octets afin de tenir compte de la surcharge des trames Jumbo et de garantir une transmission appropriée via le réseau. Si vous souhaitez modifier cette configuration pour prendre en charge un paramètre MTU inférieur, contactez le support NetApp.
+
+Pour plus d'informations sur les réseaux de stockage et de gestion requis par SolidFire ESDS pour les différents types de trafic, reportez-vous au tableau suivant :
+
+[cols="2*"]
+|===
+| Type de réseau | Description 
+
+
+ a| 
+Réseau de stockage
+ a| 
+* Inclut l'ensemble du trafic de stockage/iSCSI.
+* Elle peut être routée si vous souhaitez monter à partir d'hôtes situés sur un autre réseau de couche 3 ou si vous prévoyez de répliquer des données entre clusters.
+* Doit être configuré avec des interfaces réseau sur le même domaine de diffusion de couche 2.
+
+
+
+
+ a| 
+Réseau de gestion
+ a| 
+* Inclut tout le trafic de gestion.
+* Peut être routé si vous souhaitez accéder à l'API ou à l'interface utilisateur du cluster à partir d'un autre réseau de couche 3.
+* Doit être configuré avec des interfaces réseau sur le même domaine de diffusion de couche 2.
+* Doit être configuré avec une carte d'interface réseau avec un MTU d'au moins 1500 octets.
+
+
+|===
+
+TIP: Pour des exemples et des conseils sur la configuration du réseau hôte, reportez-vous à la section link:task_esds_configure_the_interface_config_files.adoc["ici"].
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

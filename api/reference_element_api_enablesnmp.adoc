@@ -1,0 +1,77 @@
+---
+permalink: api/reference_element_api_enablesnmp.html 
+sidebar: sidebar 
+keywords: SNMP,enable,enabling,EnableSNMP 
+summary: 'Vous pouvez utiliser la méthode EnableSnmp pour activer SNMP sur les nœuds de cluster. Lorsque vous activez SNMP, l"action s"applique à tous les nœuds du cluster et les valeurs qui sont passées remplacent toutes les valeurs définies dans tout appel précédent à EnableSnmp.' 
+---
+= EnableSnmp
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `EnableSnmp` Méthode d'activation de SNMP sur les nœuds du cluster. Lorsque vous activez SNMP, l'action s'applique à tous les nœuds du cluster et les valeurs qui sont passées remplacent toutes les valeurs définies dans un appel précédent à `EnableSnmp`.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+SnmpV3Enabled
+ a| 
+Si défini sur true, SNMP v3 est activé sur chaque nœud du cluster. Si elle est définie sur FALSE, SNMP v2 est activé.
+ a| 
+booléen
+ a| 
+faux
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode n'a pas de valeur de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "EnableSnmp",
+  "params": {
+      "snmpV3Enabled"  : "true"
+  },
+  "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {}
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

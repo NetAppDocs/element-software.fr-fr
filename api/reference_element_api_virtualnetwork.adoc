@@ -1,0 +1,106 @@
+---
+permalink: api/reference_element_api_virtualnetwork.html 
+sidebar: sidebar 
+keywords: object,objects,virtualNetwork 
+summary: 'L"objet virtualNetwork contient des informations sur un réseau virtuel spécifique. Vous pouvez utiliser la méthode ListVirtualNetworks API pour récupérer une liste de ces informations pour tous les réseaux virtuels du système.' 
+---
+= VirtualNetwork
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet virtualNetwork contient des informations sur un réseau virtuel spécifique. Vous pouvez utiliser le `ListVirtualNetworks` Méthode API pour récupérer une liste de ces informations pour tous les réseaux virtuels du système.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+Verrous d'adresse
+ a| 
+Plage de blocs d'adresse actuellement affectés au réseau virtuel. Membres :
+
+* Disponible : chaîne binaire dans "1" et "0" "1" indique que l'adresse IP est disponible, et "0" indique que l'adresse IP n'est pas disponible. La chaîne est lue de droite à gauche, le chiffre à l'extrême droite étant la première adresse IP dans la liste des blocs d'adresse.
+* Taille : taille de ce bloc d'adresses.
+* Start : première adresse IP du bloc.
+
+ a| 
+Baie d'objets JSON
+
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+
+
+
+ a| 
+nom
+ a| 
+Nom attribué au réseau virtuel.
+ a| 
+chaîne
+
+
+
+ a| 
+masque de réseau
+ a| 
+Adresse IP du masque de réseau du réseau virtuel.
+ a| 
+chaîne
+
+
+
+ a| 
+vit
+ a| 
+Adresse IP de stockage du réseau virtuel.
+ a| 
+chaîne
+
+
+
+ a| 
+passerelle
+ a| 
+Passerelle utilisée pour le réseau virtuel.
+ a| 
+chaîne
+
+
+
+ a| 
+VirtualNetworkID
+ a| 
+Identifiant unique d'un réseau virtuel.
+ a| 
+entier
+
+
+
+ a| 
+VirtualNetworkTag
+ a| 
+Identifiant de balise VLAN.
+ a| 
+entier
+
+|===
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_listvirtualnetworks.adoc[LisVirtualNetworks]

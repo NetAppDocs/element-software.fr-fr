@@ -1,0 +1,59 @@
+---
+permalink: storage/reference_data_protection_group_snapshot_details.html 
+sidebar: sidebar 
+keywords: snapshots, group snapshots, volumes, replication 
+summary: 'La page snapshots de groupe de l"onglet protection des données fournit des informations sur les instantanés de groupe.' 
+---
+= Détails de l'instantané de groupe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La page snapshots de groupe de l'onglet protection des données fournit des informations sur les instantanés de groupe.
+
+* *ID*
++
+ID généré par le système pour l'instantané de groupe.
+
+* *UUID*
++
+ID unique du snapshot de groupe.
+
+* *Nom*
++
+Nom défini par l'utilisateur pour l'instantané de groupe.
+
+* *Créer heure*
++
+Heure à laquelle le snapshot de groupe a été créé.
+
+* *Statut*
++
+État actuel du snapshot. Valeurs possibles :
+
++
+** Préparation : le snapshot est en cours de préparation et n'est pas encore accessible en écriture.
+** Terminé : cet instantané a terminé sa préparation et est maintenant utilisable.
+** Active : l'instantané est la branche active.
+
+
+* *# volumes*
++
+Nombre de volumes dans le groupe.
+
+* * Conserver jusqu'à*
++
+Le jour et l'heure de la suppression du snapshot.
+
+* *Réplication à distance*
++
+Indique si le snapshot est activé ou non pour la réplication vers un cluster SolidFire distant. Valeurs possibles :
+
++
+** Activé : l'instantané est activé pour la réplication à distance.
+** Désactivé : le snapshot n'est pas activé pour la réplication à distance.
+
+
+

@@ -1,0 +1,40 @@
+---
+permalink: concepts/reference_solidfire_element_ug_where_to_find_additional_information.html 
+sidebar: sidebar 
+keywords:  
+summary: Pour en savoir plus sur les tâches relatives au système de stockage SolidFire, consultez le Centre de documentation SolidFire et les ressources disponibles sur la page des ressources NetApp SolidFire. 
+---
+= Où trouver des informations complémentaires
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour en savoir plus sur les tâches relatives au système de stockage SolidFire, consultez le Centre de documentation SolidFire et les ressources disponibles sur la page des ressources NetApp SolidFire.
+
+Dans le Centre de documentation, vous trouverez également des informations sur l'installation et la maintenance du matériel, des ressources de contenu supplémentaires disponibles, des liens vers les problèmes connus et les problèmes résolus, ainsi que les dernières notes de version.
+
+* *Page des ressources NetApp pour SolidFire*
++
+Fournit des ressources sur le logiciel Element, notamment des liens vers du contenu vidéo et des rapports techniques.
+
++
+https://www.netapp.com/us/documentation/solidfire.aspx["Les ressources de stockage SolidFire 100 % Flash"]
+
+* *Centre de documentation NetApp SolidFire*
++
+Fournit des informations sur l'installation et la maintenance du matériel, des ressources de contenu supplémentaires disponibles, des liens vers des problèmes connus et résolus, ainsi que les dernières notes de version.
+
++
+https://docs.netapp.com/sfe-113/index.jsp["Centre de documentation SolidFire et Element 11.3"]
+
+* *https://kb.netapp.com/app/answers/answer_view/a_id/1000941/loc/en_US[NetApp éléments SolidFire problèmes connus]*
++
+Fournit une liste des problèmes connus dans les versions actuelles et antérieures du logiciel Element.
+
+* *https://kb.netapp.com/app/answers/answer_view/a_id/1000933[NetApp questions résolues de l'élément SolidFire]*
++
+Fournit une liste des problèmes résolus dans les versions actuelles et antérieures du logiciel Element.
+
+

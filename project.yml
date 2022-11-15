@@ -1,0 +1,144 @@
+---
+settings:
+  name: Element Software
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: fr-fr,us-en,ja-jp,zh-cn,zh-tw,ko-kr,de-de
+sidebar:
+  entries:
+  - title: SolidFire et Element 12.5 et documentation ultérieure
+    url: "/index.html"
+  - title: Notes de mise à jour
+    url: "/concepts/concept_rn_relatedrn_element.html"
+    entries:
+    - title: Quoi de neuf
+      url: "/concepts/concept_rn_whats_new_element.html"
+  - section: concepts
+  - title: De formation
+    url: "/setup/concept_requirements_overview.html"
+    entries:
+    - title: Configuration réseau requise
+      url: "/storage/concept_prereq_networking.html"
+    - title: Configuration de switch pour les clusters exécutant le logiciel Element
+      url: "/storage/concept_prereq_switch_configuration_for_solidfire_clusters.html"
+    - title: Configuration requise pour les ports réseau
+      url: "/storage/reference_prereq_network_port_requirements.html"
+  - section: try
+  - section: hardware
+  - section: esds
+  - section: setup
+  - section: storage
+  - section: hccstorage
+  - section: api
+  - title: Gérez le stockage avec le plug-in Element pour vCenter Server
+    url: "/element-plug-in-index.html"
+  - title: Surveiller le stockage avec NetApp SolidFire Active IQ
+    url: "/monitor-storage-active-iq.html"
+  - section: mnode
+  - section: upgrade
+  - title: Versions antérieures
+    url: "/element-earlierversions.html"
+  - title: Mentions légales
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: Commencez
+    links:
+    - title: Présentation du produit
+      url: "/concepts/concept_intro_product_overview.html"
+    - title: Notes de mise à jour
+      url: "/concepts/concept_rn_relatedrn_element.html"
+    - title: Quoi de neuf
+      url: "/concepts/concept_rn_whats_new_element.html"
+    - title: De formation
+      url: "/setup/concept_requirements_overview.html"
+    - title: Présentation de l'installation
+      url: "/setup/concept_setup_overview.html"
+  - title: Installer le matériel de maintenance
+    links:
+    - title: Informations sur le matériel H410S et H610S
+      url: "/hardware/concept_h410s_h610s_info.html"
+    - title: Informations sur le matériel SF-Series
+      url: "/hardware/concept_sfseries_info.html"
+    - title: Révisions de firmware prises en charge pour les nœuds de stockage NetApp
+        H-Series
+      url: https://docs.netapp.com/us-en/hci/docs/fw_storage_nodes.html
+  - title: Gérer le stockage
+    links:
+    - title: Utilisez l'interface utilisateur du logiciel Element
+      url: "/storage/index.html"
+    - title: Faites confiance à NetApp Hybrid Cloud Control
+      url: "/hccstorage/index.html"
+    - title: Utilisez l'API du logiciel Element
+      url: "/api/index.html"
+    - title: Utilisez le plug-in Element pour vCenter Server
+      url: https://docs.netapp.com/us-en/vcp/
+    - title: Faites confiance à NetApp SolidFire Active IQ
+      url: https://docs.netapp.com/us-en/solidfire-active-iq/
+    - title: Travaillez avec le nœud de gestion
+      url: "/mnode/task_mnode_work_overview.html"
+  - title: Installez et utilisez le SDS de SolidFire Enterprise
+    links:
+    - title: Présentation de SolidFire ESDS
+      url: "/esds/concept_get_started_esds.html"
+    - title: Démarrage rapide
+      url: https://docs.netapp.com/us-en/element-software/media/SDS_Quick_Start_Guide.pdf
+    - title: Conditions requises pour l'installation
+      url: "/esds/concept_esds_prerequisite_tasks.html"
+    - title: Gérer le stockage
+      url: "/esds/reference_esds_element_links.html"
+    - title: Maintenir SolidFire ESDS
+      url: "/esds/concept_esds_maintain.html"
+  - title: Outils d'intégration (connexion requise)
+    links:
+    - title: Interface de ligne de commandes d'Element
+      url: https://mysupport.netapp.com/site/tools/tool-eula/elem-cli
+    - title: Outils Element PowerShell
+      url: https://mysupport.netapp.com/site/tools/tool-eula/elem-powershell-tools
+    - title: Kits de développement logiciel Element (Java, .NET, Python)
+      url: https://mysupport.netapp.com/site/products/all/details/netapphci-solidfire-elementsoftware/tools-tab
+    - title: Suite de tests API SolidFire Postman
+      url: https://github.com/solidfire/postman
+    - title: Adaptateur de réplication du stockage SolidFire
+      url: https://mysupport.netapp.com/site/products/all/details/elementsra/downloads-tab
+    - title: SolidFire VRO
+      url: https://mysupport.netapp.com/site/products/all/details/solidfire-vro/downloads-tab
+    - title: Fournisseur SolidFire VSS
+      url: https://mysupport.netapp.com/site/products/all/details/solidfire-vss-provider/downloads-tab
+  - title: NetApp
+    links:
+    - title: Page Ressources SolidFire
+      url: https://www.netapp.com/data-storage/solidfire/documentation/
+    - title: Les solutions NetApp
+      url: https://docs.netapp.com/us-en/netapp-solutions/index.html
+  - title: Didacticiels de démonstration
+    links:
+    - title: Formation NetApp University SolidFire (connexion requise)
+      url: https://netapp.sabacloud.com/Saba/Web_spf/NA1PRD0047/common/searchresults/solidfire/LEARNINGEVENT%2COFFERINGTEMPLATE%2CCERTIFICATION%2CCURRICULUM%2COFFERING%2CPACKAGE
+    - title: Comment installer et faire évoluer votre cluster NetApp SolidFire (vidéo)
+      url: http://tv.netapp.com/detail/video/5778540099001?autoStart=true&page=1&q=solidfire
+    - title: Installation de NetApp SolidFire (vidéo)
+      url: https://youtu.be/YKGK5nNSL68
+  - title: Communauté sur les blogs
+    links:
+    - title: Communauté NetApp
+      url: https://community.netapp.com/t5/AFF-NVMe-EF-Series-and-SolidFire-Discussions/bd-p/flash-storage-systems-discussions
+    - title: Où obtenir de l'aide
+      url: https://mysupport.netapp.com/site/products/all/details/element-software/guideme-tab
+  - title: Versions antérieures
+    links:
+    - title: Documentation relative à l'élément 12.3
+      url: https://docs.netapp.com/us-en/element-software-123/
+    - title: Documentation relative à l'élément 12.2
+      url: https://docs.netapp.com/sfe-122/index.jsp
+    - title: Documentation relative à l'élément 12.0
+      url: https://docs.netapp.com/sfe-120/index.jsp
+    - title: Documentation relative à l'élément 11.8
+      url: https://docs.netapp.com/sfe-118/index.jsp
+    - title: Documentation relative à l'élément 11.5
+      url: https://docs.netapp.com/sfe-115/index.jsp
+    - title: Documentation relative à l'élément 11.3
+      url: https://docs.netapp.com/sfe-113/index.jsp

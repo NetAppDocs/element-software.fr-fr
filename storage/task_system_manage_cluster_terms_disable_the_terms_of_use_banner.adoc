@@ -1,0 +1,23 @@
+---
+permalink: storage/task_system_manage_cluster_terms_disable_the_terms_of_use_banner.html 
+sidebar: sidebar 
+keywords: terms of use banner, disable 
+summary: 'Vous pouvez désactiver la bannière Conditions d"utilisation. Lorsque la bannière est désactivée, l"utilisateur n"est plus invité à accepter les conditions d"utilisation lors de l"utilisation de l"interface utilisateur Element.' 
+---
+= Désactivez la bannière Conditions d'utilisation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez désactiver la bannière Conditions d'utilisation. Lorsque la bannière est désactivée, l'utilisateur n'est plus invité à accepter les conditions d'utilisation lors de l'utilisation de l'interface utilisateur Element.
+
+* Vous devez disposer des privilèges d'administrateur de cluster pour configurer les conditions d'utilisation.
+* Assurez-vous que les Conditions d'utilisation sont activées.
++
+.. Cliquez sur *utilisateurs* > *Conditions d'utilisation*.
+.. Cliquez sur *Désactiver*.
+
+
+

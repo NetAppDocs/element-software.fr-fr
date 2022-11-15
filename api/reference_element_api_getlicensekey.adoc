@@ -1,0 +1,85 @@
+---
+permalink: api/reference_element_api_getlicensekey.html 
+sidebar: sidebar 
+keywords: cluster,get,getting,license,key 
+summary: Sur les clusters de stockage SolidFire Enterprise SDS, vous pouvez utiliser la méthode GetLicenseKey pour récupérer la clé de licence actuelle du cluster de stockage. La clé de licence pour un cluster de stockage se compose du numéro de commande du cluster associé au numéro de série et active le modèle de capacité que vous avez acheté pour le logiciel Element. 
+---
+= GetLicenseKey
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sur les clusters de stockage SolidFire Enterprise SDS, vous pouvez utiliser le `GetLicenseKey` méthode permettant de récupérer la clé de licence actuelle pour le cluster de stockage. La clé de licence pour un cluster de stockage se compose du numéro de commande du cluster associé au numéro de série et active le modèle de capacité que vous avez acheté pour le logiciel Element.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+Numéro d'ordre
+ a| 
+Numéro d'ordre de vente du cluster de stockage.
+ a| 
+chaîne
+
+
+
+ a| 
+Numéro de série
+ a| 
+Numéro de série du cluster de stockage.
+ a| 
+chaîne
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "GetLicenseKey",
+   "params": {
+     },
+   "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {
+      "serialNumber": "30G56E3WV",
+      "orderNumber": "33601"
+     }
+   }
+}
+----
+
+
+== Nouveau depuis la version
+
+12.2

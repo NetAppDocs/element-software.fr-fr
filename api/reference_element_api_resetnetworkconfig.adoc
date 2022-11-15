@@ -1,0 +1,55 @@
+---
+permalink: api/reference_element_api_resetnetworkconfig.html 
+sidebar: sidebar 
+keywords: network,config,configuration,reset,restetting,factory,default,resetnetworkconfig 
+summary: 'Vous pouvez utiliser la méthode ResetNetworkConfig pour résoudre les problèmes de configuration réseau d’un nœud individuel. Cette méthode réinitialise la configuration réseau d"un nœud individuel aux paramètres par défaut d"usine.' 
+---
+= ResetNetworkConfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ResetNetworkConfig` méthode permettant de résoudre les problèmes de configuration réseau d'un nœud individuel. Cette méthode réinitialise la configuration réseau d'un nœud individuel sur les paramètres par défaut d'usine.
+
+
+NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "ResetNetworkConfig",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode ne renvoie pas de réponse.
+
+
+
+== Nouveau depuis la version
+
+11.0

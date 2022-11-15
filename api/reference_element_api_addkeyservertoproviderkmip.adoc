@@ -1,0 +1,93 @@
+---
+permalink: api/reference_element_api_addkeyservertoproviderkmip.html 
+sidebar: sidebar 
+keywords: KMIP,key server,assigning to key provider,assign,addkeyservertoproviderkmip 
+summary: 'Vous pouvez utiliser la méthode AddKeyServerToProviderKmip pour affecter un serveur de clés \(KMIP\) de gestion des clés au fournisseur de clés spécifié. Lors de l"affectation, le serveur est contacté pour vérifier la fonctionnalité. Si le serveur de clés spécifié est déjà affecté au fournisseur de clés spécifié, aucune action n"est effectuée et aucune erreur n"est renvoyée. Vous pouvez supprimer l"affectation à l"aide de la méthode RemoveKeyServerFromProviderKmip.' 
+---
+= AddKeyServerToProviderKmip
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `AddKeyServerToProviderKmip` Méthode permettant d'attribuer un serveur de clés KMIP (Key Management Interoperability Protocol) au fournisseur de clés spécifié. Lors de l'affectation, le serveur est contacté pour vérifier la fonctionnalité. Si le serveur de clés spécifié est déjà affecté au fournisseur de clés spécifié, aucune action n'est effectuée et aucune erreur n'est renvoyée. Vous pouvez supprimer l'affectation à l'aide du `RemoveKeyServerFromProviderKmip` méthode.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+KeyProviderID
+ a| 
+ID du fournisseur de clés auquel affecter le serveur de clés.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+KeyServerID
+ a| 
+L'ID du serveur de clés à affecter.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeur de retour. L'affectation est considérée comme réussie tant qu'aucune erreur n'est renvoyée.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "AddKeyServerToProviderKmip",
+  "params": {
+    "keyProviderID": 1,
+    "keyServerID": 15
+    },
+"id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id": 1,
+   "result":
+      {}
+    }
+}
+----
+
+
+== Nouveau depuis la version
+
+11.7

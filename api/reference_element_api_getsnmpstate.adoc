@@ -1,0 +1,101 @@
+---
+permalink: api/reference_element_api_getsnmpstate.html 
+sidebar: sidebar 
+keywords: snmp,state,get,getting,getsnmpstate 
+summary: 'Vous pouvez utiliser la méthode GetSnmpState pour obtenir l"état actuel de la fonction SNMP.' 
+---
+= GetSmpState
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetSnmpState` Méthode d'obtention de l'état actuel de la fonction SNMP.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+activé
+ a| 
+Valeurs possibles :
+
+* vrai
+* faux
+
+
+La valeur par défaut est FALSE. Renvoie true si les nœuds du cluster sont configurés pour SNMP.
+ a| 
+booléen
+
+
+
+ a| 
+SnmpV3Enabled
+ a| 
+Valeurs possibles :
+
+* vrai
+* faux
+
+
+La valeur par défaut est FALSE. Renvoie true si les nœuds du cluster sont configurés pour SNMP v3.
+ a| 
+booléen
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "GetSnmpState",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {
+   "enabled": true,
+   "snmpV3Enabled": false
+   }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_setsnmpacl.adoc[SetSMPACL]

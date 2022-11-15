@@ -1,0 +1,47 @@
+---
+permalink: storage/task_data_protection_create_a_snapshot_schedule.html 
+sidebar: sidebar 
+keywords: snapshot schedule, create, volumes, recurring schedule 
+summary: 'Vous pouvez planifier l"exécution automatique d"un ou de plusieurs volumes à des intervalles spécifiques.' 
+---
+= Créer un planning de snapshots
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez planifier l'exécution automatique d'un ou de plusieurs volumes à des intervalles spécifiques.
+
+Lorsque vous configurez un planning de snapshots, vous pouvez choisir entre des intervalles de temps basés sur des jours de la semaine ou des jours du mois. Vous pouvez également créer un programme récurrent et spécifier les jours, heures et minutes avant la prochaine capture d'écran.
+
+Si vous planifiez l'exécution d'un instantané à une période qui n'est pas divisible d'ici 5 minutes, l'instantané s'exécute à la période suivante divisible d'ici 5 minutes. Par exemple, si vous planifiez l'exécution d'un snapshot à 12:42:00 UTC, il s'exécutera à 12:45:00 UTC. Vous ne pouvez pas programmer l'exécution d'un instantané à des intervalles inférieurs à 5 minutes.
+
+À partir de l'élément 12.5, vous pouvez activer la création de série et sélectionner de conserver les instantanés sur la base du premier entré, premier sorti (FIFO) à partir de l'interface utilisateur.
+
+* L'option *Activer la création série* indique qu'un seul snapshot est répliqué à la fois. La création d'un nouvel instantané échoue lorsqu'une réplication de snapshot précédente est toujours en cours. Si la case n'est pas cochée, la création d'un snapshot est autorisée quand une autre réplication d'instantané est toujours en cours.
+* L'option *FIFO* permet de conserver un nombre cohérent des derniers instantanés. Lorsque la case est cochée, les instantanés sont conservés en FIFO. Une fois que la file d'attente des instantanés FIFO a atteint sa profondeur maximale, l'instantané FIFO le plus ancien est supprimé lorsqu'un nouvel instantané FIFO est inséré.
+
+
+.Étapes
+. Sélectionnez *protection des données* > *programmes*.
+. Sélectionnez *Créer un programme*.
+. Dans le champ *ID de volume CSV*, entrez un ID de volume unique ou une liste d'ID de volume séparée par des virgules à inclure dans l'opération d'instantané.
+. Saisissez un nouveau nom d'horaire.
+. Sélectionnez un type de programme et définissez le programme dans les options proposées.
+. *Facultatif:* sélectionnez *Programme récurrent* pour répéter indéfiniment la programmation d'instantanés.
+. *Facultatif :* Entrez un nom pour le nouvel instantané dans le champ *Nouveau nom d'instantané*.
++
+Si vous laissez le champ vide, le système utilise l'heure et la date de création de l'instantané comme nom.
+
+. *Facultatif:* cochez la case *inclure les instantanés dans la réplication lorsqu'ils sont couplés* pour vous assurer que les instantanés sont capturés en réplication lorsque le volume parent est couplé.
+. *Facultatif:* cochez la case *Activer la création de série* pour vous assurer qu'un seul snapshot est répliqué à la fois.
+. Pour définir la conservation de l'instantané, sélectionnez l'une des options suivantes :
++
+** *Facultatif:* cochez la case *FIFO (Premier entré, premier sorti)* pour conserver un nombre cohérent des derniers instantanés.
+** Sélectionnez *conserver indéfiniment* pour conserver indéfiniment l'instantané sur le système.
+** Sélectionnez *Set Retention Period* et utilisez les champs de spin de date pour choisir une durée pour le système de conservation de l'instantané.
+
+
+. Sélectionnez *Créer un programme*.
+

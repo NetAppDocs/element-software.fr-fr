@@ -1,0 +1,36 @@
+---
+permalink: storage/task_replication_pair_cluster_using_mvip.html 
+sidebar: sidebar 
+keywords: pair clusters, mvip, connection 
+summary: 'Vous pouvez coupler deux clusters pour la réplication en temps réel en utilisant le MVIP d"un cluster pour établir une connexion avec l"autre cluster. Cette méthode doit permettre à l"administrateur du cluster d"accéder aux deux clusters. Le nom d"utilisateur et le mot de passe de l"administrateur du cluster permettent d"authentifier l"accès au cluster avant de pouvoir apparier les clusters.' 
+---
+= Couplez des clusters à l'aide de MVIP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez coupler deux clusters pour la réplication en temps réel en utilisant le MVIP d'un cluster pour établir une connexion avec l'autre cluster. Cette méthode doit permettre à l'administrateur du cluster d'accéder aux deux clusters. Le nom d'utilisateur et le mot de passe de l'administrateur du cluster permettent d'authentifier l'accès au cluster avant de pouvoir apparier les clusters.
+
+. Sur le cluster local, sélectionnez *Data protection* > *Cluster paires*.
+. Cliquez sur *pair Cluster*.
+. Cliquez sur *Démarrer le couplage* et cliquez sur *Oui* pour indiquer que vous avez accès au cluster distant.
+. Saisissez l'adresse MVIP du cluster distant.
+. Cliquez sur *effectuer le couplage sur le cluster distant*.
++
+Dans la fenêtre *Authentication required*, entrez le nom d'utilisateur et le mot de passe de l'administrateur de cluster du cluster distant.
+
+. Sur le cluster distant, sélectionnez *Data protection* > *Cluster paires*.
+. Cliquez sur *pair Cluster*.
+. Cliquez sur *Terminer le couplage*.
+. Cliquez sur le bouton *Terminer le couplage*.
+
+
+
+
+== Trouvez plus d'informations
+
+* xref:task_replication_pair_cluster_using_pairing_key.adoc[Couplez des clusters à l'aide d'une clé de couplage]
+* https://www.youtube.com/watch?v=HbKxPZnNvn4&feature=youtu.be["Couplage de clusters à l'aide de MVIP (vidéo)"]
+

@@ -1,0 +1,223 @@
+---
+permalink: api/reference_element_api_getasyncresult.html 
+sidebar: sidebar 
+keywords: async,asynchronous,results,result,get,getting,GetAsyncResult 
+summary: 'Vous pouvez utiliser GetAsyncResult pour récupérer le résultat des appels de méthode asynchrone. Certains appels de méthode nécessitent un certain temps pour s"exécuter et peuvent ne pas être terminés lorsque le système envoie la réponse initiale. Pour obtenir le statut ou le résultat de l"appel de méthode, utilisez GetAsyncResult pour interroger la valeur asynchrones renvoyée par la méthode.' 
+---
+= GetAsyncResult
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser `GetAsyncResult` pour récupérer le résultat des appels de méthode asynchrone. Certains appels de méthode nécessitent un certain temps pour s'exécuter et peuvent ne pas être terminés lorsque le système envoie la réponse initiale. Pour obtenir le statut ou le résultat de l'appel de méthode, utilisez `GetAsyncResult` Pour interroger la valeur asynchrone renvoyée par la méthode.
+
+`GetAsyncResult` renvoie l'état global de l'opération (en cours, terminée ou erreur) de manière standard, mais les données réelles renvoyées pour l'opération dépendent de l'appel de méthode d'origine et les données de retour sont documentées avec chaque méthode.
+
+Si le paramètre keepResult est manquant ou FALSE, le EasycHandle devient inactif lorsque le résultat est renvoyé, et tente ensuite de demander que asynchrones renvoie une erreur. Vous pouvez maintenir le EasycHandle actif pour de futures requêtes en définissant le paramètre keepResult sur true.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+Asynchrone
+ a| 
+Valeur renvoyée par l'appel de méthode asynchrone d'origine.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+KeepResult
+ a| 
+Si c'est vrai, GetAsyncResult ne supprime pas le résultat asynchrone au moment de le renvoyer, ce qui permet de futurs requêtes à cette asyncHandle.
+ a| 
+booléen
+ a| 
+faux
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+état
+ a| 
+État de l'appel de méthode asynchrone. Valeurs possibles :
+
+* En cours d'exécution : la méthode est toujours en cours d'exécution.
+* Terminé : la méthode est terminée et le résultat ou l'erreur est disponible.
+
+ a| 
+chaîne
+
+
+
+ a| 
+résultat
+ a| 
+Si la méthode asynchrone s'est terminée avec succès, il s'agit du résultat de l'opération asynchrone. Si l'opération asynchrone a échoué, ce membre n'est pas présent.
+ a| 
+chaîne
+
+
+
+ a| 
+erreur
+ a| 
+Si l'état est terminé et que la méthode asynchrone a échoué, ce membre inclut les détails de l'erreur. Si l'opération asynchrone a réussi, ce membre n'est pas présent.
+ a| 
+chaîne
+
+
+
+ a| 
+Type de résultat
+ a| 
+Type d'opération l'appel de méthode asynchrone est ou était en cours d'exécution.
+ a| 
+chaîne
+
+
+
+ a| 
+détails
+ a| 
+Si le statut est en cours d'exécution, ce membre inclut des informations relatives à l'opération en cours de la méthode. Si la méthode asynchrone n'est pas en cours d'exécution, ce membre n'est pas présent.
+ a| 
+Objet JSON
+
+
+
+ a| 
+CREATETIME
+ a| 
+Heure à laquelle la méthode asynchrone a été appelée, au format UTC+0.
+ a| 
+Chaîne de date ISO 8601
+
+
+
+ a| 
+LastUpdateTime
+ a| 
+Heure de la dernière mise à jour de l'état de la méthode asynchrone, au format UTC+0.
+ a| 
+Chaîne de date ISO 8601
+
+|===
+*Remarque :* la valeur de retour de GetAsyncResult est essentiellement une version imbriquée de la réponse JSON standard avec un champ d'état supplémentaire.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "GetAsyncResult",
+  "params": {
+      "asyncHandle" : 389
+},
+"id" : 1
+}
+----
+
+
+== Exemple de réponse : erreur de méthode
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "error": {
+      "code": 500,
+      "message": "DBClient operation requested on a non-existent path at [/asyncresults/1]",
+      "name": "xDBNoSuchPath"
+   },
+   "id": 1
+}
+----
+Si "réponse" était l'objet de réponse JSON de l'appel GetAsyncResult, alors "Response.error" correspondrait à une erreur avec la méthode GetAsyncResult elle-même (par exemple, interroger un EasycHandle inexistant).
+
+
+
+== Exemple de réponse : erreur de tâche asynchrone
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+     "createTime": "2016-01-01T02:05:53Z",
+     "error": {
+       "bvID": 1,
+       "message": "Bulk volume job failed",
+       "name": "xBulkVolumeScriptFailure",
+       "volumeID": 34
+     },
+     "lastUpdateTime": "2016-01-21T02:06:56Z",
+     "resultType": "BulkVolume",
+     "status": "complete"
+   }
+}
+----
+Le terme "reportable.result.error" correspond à une erreur résultant de l'appel de méthode d'origine.
+
+
+
+== Exemple de réponse : réussite de la tâche asynchrone
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id": 1,
+   "result": {
+     "createTime": "2016-01-01T22:29:18Z",
+     "lastUpdateTime": "2016-01-01T22:45:51Z",
+     "result": {
+       "cloneID": 25,
+       "message": "Clone complete.",
+       "volumeID": 47
+     },
+     "resultType": "Clone",
+     "status": "complete"
+   }
+}
+----
+La valeur "rééponse.result.result" est la valeur de retour de l'appel de méthode d'origine si l'appel a été effectué avec succès.
+
+
+
+== Nouveau depuis la version
+
+9.6

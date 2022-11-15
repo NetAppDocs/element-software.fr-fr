@@ -1,0 +1,88 @@
+---
+permalink: api/reference_element_api_createsnapmirrorendpoint.html 
+sidebar: sidebar 
+keywords: SnapMirror,endpoints,endpoint,creating,create,CreateSnapMirrorEndpoint 
+summary: 'L"interface utilisateur Web Element utilise la méthode CreateSnapMirror orEndpoint pour créer une relation avec un terminal SnapMirror distant.' 
+---
+= CreateSnapMirror orEndpoint
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'interface utilisateur Web d'Element utilise le `CreateSnapMirrorEndpoint` Méthode de création d'une relation avec un terminal SnapMirror distant
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+IP de gestion
+ a| 
+Adresse IP de gestion du terminal SnapMirror distant.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+nom d'utilisateur
+ a| 
+Nom d'utilisateur de gestion du système ONTAP.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+mot de passe
+ a| 
+Mot de passe de gestion du système ONTAP.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+SnapMirrorEndpoint
+ a| 
+Nouveau terminal SnapMirror.
+ a| 
+xref:reference_element_api_snapmirrorendpoint.adoc[SnapMirrorEndpoint]
+
+|===
+
+
+== Nouveau depuis la version
+
+10.0

@@ -1,0 +1,47 @@
+---
+permalink: storage/task_system_manage_fips_identify_nodes_ready_for_fips_drives.html 
+sidebar: sidebar 
+keywords: fips, security, federal information processing standards, 140-2 
+summary: 'Vous devez vérifier si tous les nœuds du cluster de stockage sont prêts à prendre en charge les disques FIPS à l"aide de la méthode GetFipsReport API du logiciel NetApp Element.' 
+---
+= Identifiez si les nœuds sont prêts pour la fonctionnalité disques FIPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez vérifier si tous les nœuds du cluster de stockage sont prêts à prendre en charge les disques FIPS à l'aide de la méthode GetFipsReport API du logiciel NetApp Element.
+
+Le rapport obtenu affiche l'un des États suivants :
+
+* Aucun : le nœud ne peut pas prendre en charge la fonctionnalité disques FIPS.
+* Partiel : les nœuds sont compatibles FIPS, mais tous les disques ne sont pas des disques FIPS.
+* Prêt : le nœud est compatible FIPS et tous les disques sont des disques FIPS ou pas de disque.
+
+
+.Étapes
+. Utilisez l'API d'Element pour vérifier si les nœuds et les disques du cluster de stockage peuvent prendre en charge les disques FIPS en saisissant :
++
+`GetFipsReport`
+
+. Examinez les résultats en notant tous les nœuds qui n'ont pas affiché l'état prêt.
+. Pour tous les nœuds n'ayant pas affiché l'état prêt, vérifiez si le disque est capable de prendre en charge la fonctionnalité disques FIPS :
++
+** À l'aide de l'API Element, entrez : `GetHardwareList`
+** Notez la valeur du *DriveEncryptionCapabilityType*. Si c'est le cas avec la norme fips, le matériel peut prendre en charge la fonctionnalité disques FIPS.
++
+Voir les détails `GetFipsReport` ou `ListDriveHardware` dans le link:../api/index.html["Référence de l'API d'élément"].
+
+
+
+. Si le disque ne prend pas en charge la fonctionnalité disques FIPS, remplacez le matériel par du matériel FIPS (soit un nœud, soit des disques).
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+

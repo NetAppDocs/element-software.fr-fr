@@ -1,0 +1,245 @@
+---
+permalink: hardware/task_h410s_repl.html 
+sidebar: sidebar 
+keywords: h410s, replacement, node replacement, maintenance 
+summary: 'Vous devez remplacer un nœud de stockage en cas de défaillance du processeur, de problèmes de carte Radian, d"autres problèmes liés à la carte mère ou s"il ne s"active pas. Les instructions s"appliquent aux nœuds de stockage H410S.' 
+---
+= Remplacer un nœud H410S
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez remplacer un nœud de stockage en cas de défaillance du processeur, de problèmes de carte Radian, d'autres problèmes liés à la carte mère ou s'il ne s'active pas. Les instructions s'appliquent aux nœuds de stockage H410S.
+
+Les alarmes de l'interface utilisateur du logiciel NetApp Element vous avertissent en cas de défaillance d'un nœud de stockage. Vous devez utiliser l'interface utilisateur d'Element pour obtenir le numéro de série (numéro de service) du nœud défaillant. Vous avez besoin de ces informations pour localiser le nœud défectueux dans le cluster.
+
+Voici l'arrière d'un châssis à deux racks (2U) à quatre nœuds avec quatre nœuds de stockage :
+
+image::hci_stornode_rear.gif[Cette figure présente le châssis à quatre nœuds avec quatre nœuds de stockage.]
+
+La vue avant d'un châssis à quatre nœuds avec nœuds H410S présente les baies correspondant à chaque nœud :
+
+image::hci_stor_node_ssd_bays.gif[La présente les baies associées à chaque nœud dans un châssis à quatre nœuds avec des nœuds H410S.]
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez vérifié que votre nœud de stockage est défectueux et doit être remplacé.
+* Vous avez obtenu un nouveau nœud de stockage.
+* Vous avez un bracelet antistatique (ESD) ou vous avez pris une autre protection antistatique.
+* Chaque câble est identifié comme étant connecté au nœud de stockage.
+
+
+Voici une présentation générale des étapes à suivre :
+
+*  to replace the node
+*  the node in the chassis
+*  the node to the cluster
+
+
+
+
+== Préparez-vous à remplacer le nœud
+
+Avant d'installer le nœud de remplacement, vous devez retirer correctement le nœud de stockage défectueux dans l'interface utilisateur du logiciel NetApp Element. Vous pouvez le faire sans interrompre le service. Pour obtenir le numéro de série du nœud de stockage défectueux, utilisez l'interface d'Element et faites-le correspondre au numéro de série indiqué sur l'autocollant à l'arrière du nœud.
+
+.Étapes
+. Dans l'interface utilisateur de l'élément, sélectionnez *Cluster* > *Drives*.
+. Retirez les disques du nœud à l'aide de l'une des méthodes suivantes :
++
+[cols="2*"]
+|===
+| Option | Étapes 
+
+
+ a| 
+Pour supprimer des lecteurs individuels
+ a| 
+.. Cliquez sur *actions* pour le lecteur que vous souhaitez supprimer.
+.. Cliquez sur *Supprimer*.
+
+
+
+
+ a| 
+Pour supprimer plusieurs lecteurs
+ a| 
+.. Sélectionnez tous les lecteurs que vous souhaitez supprimer, puis cliquez sur *actions groupées*.
+.. Cliquez sur *Supprimer*.
+
+
+|===
+. Sélectionnez *Cluster* > *Nodes*.
+. Notez le numéro de série (numéro de service) du nœud défectueux. La correspondance doit être avec le numéro de série indiqué sur l'autocollant à l'arrière du nœud.
+. Une fois le numéro de série spécifié, supprimez le nœud du cluster comme suit :
++
+.. Sélectionnez le bouton *actions* pour le noeud que vous souhaitez supprimer.
+.. Sélectionnez *Supprimer*.
+
+
+
+
+
+
+== Remplacez le nœud dans le châssis
+
+Après avoir retiré le nœud défectueux du cluster à l'aide de l'interface utilisateur du logiciel NetApp Element, vous êtes prêt à retirer physiquement le nœud du châssis. Vous devez installer le nœud de remplacement dans le même slot dans le châssis depuis lequel vous avez retiré le nœud défectueux.
+
+.Étapes
+. Porter une protection antistatique avant de procéder.
+. Déballez le nouveau nœud de stockage et placez-le sur une surface plane à proximité du châssis.
++
+Conservez l'emballage du matériel de retour du nœud défectueux à NetApp.
+
+. Étiquetez chaque câble inséré à l'arrière du nœud de stockage que vous souhaitez supprimer.
++
+Une fois le nouveau nœud de stockage installé, vous devez insérer les câbles dans les ports d'origine.
+
++
+Voici une image montrant l'arrière d'un nœud de stockage :
+
++
+image::../media/hci_isi_storage_cabling.png[Cette figure illustre le câblage du nœud de stockage.]
+
++
+[cols="2*"]
+|===
+| Port | Détails 
+
+
+ a| 
+Orifice A
+ a| 
+Port RJ45 1/10 GbE
+
+
+
+ a| 
+Orifice B
+ a| 
+Port RJ45 1/10 GbE
+
+
+
+ a| 
+Orifice C
+ a| 
+10 GbE SFP+ ou port SFP28
+
+
+
+ a| 
+Orifice D
+ a| 
+10 GbE SFP+ ou port SFP28
+
+
+
+ a| 
+IPMI
+ a| 
+Port RJ45 1/10 GbE
+
+|===
+. Déconnectez tous les câbles du nœud de stockage.
+. Abaissez la poignée de came sur le côté droit du nœud et tirez le nœud vers l'extérieur à l'aide des deux poignées de came.
++
+La poignée de came que vous tirez vers le bas a une flèche sur elle pour indiquer la direction dans laquelle elle se déplace. L'autre poignée de came ne se déplace pas et est là pour vous aider à extraire le nœud.
+
++
+image::../media/hci_stor_node_camhandles.gif[Dans cette figure]
+
++
+[cols="2*"]
+|===
+| Élément | Description 
+
+
+ a| 
+1
+ a| 
+Poignée de came pour vous aider à extraire le nœud.
+
+
+
+ a| 
+2
+ a| 
+Poignée de came que vous tirez vers le bas avant de retirer le nœud.
+
+|===
++
+
+NOTE: Soutenez le nœud avec vos deux mains lorsque vous sortez du châssis.
+
+. Placez le nœud sur une surface plane.
++
+Vous devez pack le nœud et le renvoyer à NetApp.
+
+. Installez le nœud de remplacement dans le même slot dans le châssis.
++
+
+IMPORTANT: Veillez à ne pas exercer de force excessive lors de l'insertion du nœud dans le châssis.
+
+. Déplacez les disques du nœud que vous avez supprimé et insérez-les dans le nouveau nœud.
+. Reconnectez les câbles aux ports à partir desquels vous les avez déconnectés à l'origine.
++
+Les étiquettes que vous aviez sur les câbles lorsque vous les avez débranchées vous guideront.
+
++
+[NOTE]
+====
+.. Si les évents d'aération situés à l'arrière du châssis sont bloqués par des câbles ou des étiquettes, ils peuvent provoquer des défaillances prématurées de composants en raison d'une surchauffe.
+.. Ne forcez pas les câbles dans les ports ; vous risquez d'endommager les câbles, les ports ou les deux.
+
+
+====
++
+
+TIP: Assurez-vous que le nœud de remplacement est câblé de la même manière que les autres nœuds du châssis.
+
+. Appuyez sur le bouton situé à l'avant du nœud pour le mettre sous tension.
+
+
+
+
+== Ajoutez le nœud au cluster
+
+Lorsque vous ajoutez un nœud au cluster ou que vous installez de nouveaux disques dans un nœud existant, les disques s'enregistrent automatiquement comme disponibles. Vous devez ajouter des disques au cluster à l'aide de l'interface utilisateur ou de l'API Element avant qu'ils ne puissent participer au cluster.
+
+La version logicielle de chaque nœud d'un cluster doit être compatible. Lorsque vous ajoutez un nœud à un cluster, le cluster installe la version cluster du logiciel Element sur le nouveau nœud, si nécessaire.
+
+.Étapes
+. Sélectionnez *Cluster* > *Nodes*.
+. Sélectionnez *en attente* pour afficher la liste des nœuds en attente.
+. Effectuez l'une des opérations suivantes :
++
+** Pour ajouter des nœuds individuels, sélectionnez l'icône *actions* pour le nœud que vous souhaitez ajouter.
+** Pour ajouter plusieurs nœuds, cochez la case des nœuds à ajouter, puis *actions groupées*.
++
+
+NOTE: Si le nœud que vous ajoutez dispose d'une version différente de celle du logiciel Element que celle exécutée sur le cluster, le cluster met à jour de manière asynchrone le nœud vers la version du logiciel Element qui s'exécute sur le maître de cluster. Une fois le nœud mis à jour, il s'ajoute automatiquement au cluster. Au cours de ce processus asynchrone, le nœud sera dans un `pendingActive` état.
+
+
+
+. Sélectionnez *Ajouter*.
++
+Le nœud apparaît dans la liste des nœuds actifs.
+
+. Dans l'interface utilisateur de l'élément, sélectionnez *Cluster* > *Drives*.
+. Sélectionnez *disponible* pour afficher la liste des lecteurs disponibles.
+. Effectuez l'une des opérations suivantes :
++
+** Pour ajouter des lecteurs individuels, sélectionnez l'icône *actions* pour le lecteur que vous souhaitez ajouter, puis sélectionnez *Ajouter*.
+** Pour ajouter plusieurs lecteurs, cochez les cases des lecteurs à ajouter, sélectionnez *actions groupées*, puis sélectionnez *Ajouter*.
+
+
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

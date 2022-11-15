@@ -1,0 +1,161 @@
+---
+permalink: api/reference_element_api_createkeyserverkmip.html 
+sidebar: sidebar 
+keywords: KMIP,key server,creating,create 
+summary: 'Vous pouvez utiliser la méthode CreateKeyServerKmip pour créer un serveur de clés \(KMIP\) Key Management Interoperability Protocol avec les attributs spécifiés. Lors de la création, le serveur n"est pas contacté ; il n"a pas besoin d"exister avant d"utiliser cette méthode. Pour les configurations de serveur à clé en cluster, vous devez fournir les noms d"hôte ou les adresses IP de tous les nœuds de serveur dans le paramètre kmipKeyServerHostnames. Vous pouvez utiliser la méthode TestKeyServerKmip pour tester un serveur de clés.' 
+---
+= CreateKeyServerKmip
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `CreateKeyServerKmip` Méthode de création d'un serveur de clés KMIP (Key Management Interoperability Protocol) avec les attributs spécifiés. Lors de la création, le serveur n'est pas contacté ; il n'a pas besoin d'exister avant d'utiliser cette méthode. Pour les configurations de serveur à clé en cluster, vous devez fournir les noms d'hôte ou les adresses IP de tous les nœuds de serveur dans le paramètre kmipKeyServerHostnames. Vous pouvez utiliser le `TestKeyServerKmip` méthode de test d'un serveur de clés.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+KmipCaCertificate
+ a| 
+Certificat de clé publique de l'autorité de certification racine du serveur de clés externe. Cette option permet de vérifier le certificat présenté par le serveur de clés externe dans la communication TLS. Pour les grappes de serveurs de clés où des serveurs individuels utilisent des autorités de certification différentes, fournissez une chaîne concaténée contenant les certificats racine de toutes les autorités de certification.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+KmipClientCertificate
+ a| 
+Certificat PKCS#10 X.509 codé au format PEM utilisé par le client SolidFire KMIP.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+Noms d'hôte kmipKeyServerHostNames
+ a| 
+Tableau des noms d'hôte ou adresses IP associés à ce serveur de clés KMIP. Plusieurs noms d'hôte ou adresses IP ne doivent être fournis que si les serveurs clés sont dans une configuration en cluster.
+ a| 
+tableau de chaînes
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+KmipKeyServerName
+ a| 
+Nom du serveur de clés KMIP. Ce nom est utilisé uniquement à des fins d'affichage et n'a pas besoin d'être unique.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+KmipKeyServerPort
+ a| 
+Numéro de port associé à ce serveur de clés KMIP (généralement 5696).
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+KmipKeyServer
+ a| 
+Objet contenant des détails sur le nouveau serveur de clés créé.
+ a| 
+link:reference_element_api_keyserverkmip.md#["KeyServerKmip"]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "CreateKeyServerKmip",
+  "params": {
+    "kmipCaCertificate": "MIICPDCCAaUCEDyRMcsf9tAbDpq40ES/E...",
+    "kmipClientCertificate": "dKkkirWmnWXbj9T/UWZYB2oK0z5...",
+    "kmipKeyServerHostnames" : ["server1.hostname.com", "server2.hostname.com"],
+    "kmipKeyServerName" : "keyserverName",
+    "kmipKeyServerPort" : 5696
+  },
+"id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id": 1,
+   "result":
+      {
+        "kmipKeyServer": {
+            "kmipCaCertificate":"MIICPDCCAaUCEDyRMcsf9tAbDpq40ES/E...",
+            "kmipKeyServerHostnames":[
+                "server1.hostname.com", "server2.hostname.com"
+            ],
+            "keyProviderID":1,
+            "kmipKeyServerName":"keyserverName",
+            "keyServerID":1
+            "kmipKeyServerPort":1,
+            "kmipClientCertificate":"dKkkirWmnWXbj9T/UWZYB2oK0z5...",
+            "kmipAssignedProviderIsActive":true
+        }
+    }
+}
+----
+
+
+== Nouveau depuis la version
+
+11.7

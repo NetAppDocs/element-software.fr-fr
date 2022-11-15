@@ -1,0 +1,22 @@
+---
+permalink: storage/task_system_manage_fips_avoid_mixing_nodes_for_fips_drives.html 
+sidebar: sidebar 
+keywords: fips, security, federal information processing standards, 140-2, nodes, drives, ear 
+summary: 'Pour préparer l"activation de la fonctionnalité de lecteurs FIPS, évitez de combiner les nœuds où certains prennent en charge des disques FIPS et d"autres non.' 
+---
+= Évitez de mélanger les nœuds pour les disques FIPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour préparer l'activation de la fonctionnalité de lecteurs FIPS, évitez de combiner les nœuds où certains prennent en charge des disques FIPS et d'autres non.
+
+Un cluster est considéré comme étant conforme à la norme FIPS dans les conditions suivantes :
+
+* Tous les disques sont certifiés FIPS.
+* Tous les nœuds sont des nœuds de disques FIPS.
+* Le chiffrement au repos est activé.
+* La fonctionnalité disques FIPS est activée. L'ensemble des disques et nœuds doit être compatible FIPS et le chiffrement au repos doit être activé pour que la fonctionnalité de disque FIPS soit activée.
+

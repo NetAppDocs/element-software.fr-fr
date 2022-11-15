@@ -1,0 +1,60 @@
+---
+permalink: api/reference_element_api_attributes.html 
+sidebar: sidebar 
+keywords: QoS,object,Quality,Service 
+summary: 'Un grand nombre de demandes et de réponses d"API utilisent des objets ainsi que des types simples. Les objets sont un ensemble de paires clé-valeur, où la valeur est un type simple ou peut-être un autre objet. Les attributs sont des paires nom-valeur personnalisées qui peuvent être définies par l"utilisateur dans des objets JSON. Certaines méthodes vous permettent d"ajouter des attributs lors de la création ou de la modification d"objets.' 
+---
+= Attributs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un grand nombre de demandes et de réponses d'API utilisent des objets ainsi que des types simples. Les objets sont un ensemble de paires clé-valeur, où la valeur est un type simple ou peut-être un autre objet. Les attributs sont des paires nom-valeur personnalisées qui peuvent être définies par l'utilisateur dans des objets JSON. Certaines méthodes vous permettent d'ajouter des attributs lors de la création ou de la modification d'objets.
+
+Il existe une limite de 1000 octets sur les objets d'attribut codés.
+
+
+
+== Membre de l'objet
+
+Cet objet contient le membre suivant :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+
+|===
+
+
+== Exemple de demande
+
+L'exemple de requête suivant utilise la méthode AddClusterAdmin :
+
+[listing]
+----
+{
+   "method": "AddClusterAdmin",
+   "params": {
+      "username": "joeadmin",
+      "password": "68!5Aru268)$",
+      "access": [
+         "volume",
+         "reporting"
+      ],
+      "attributes": {
+         "name1": "value1",
+         "name2": "value2",
+         "name3": "value3"
+      }
+   }
+}
+----

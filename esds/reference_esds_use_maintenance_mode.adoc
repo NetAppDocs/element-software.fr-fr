@@ -1,0 +1,235 @@
+---
+permalink: esds/reference_esds_use_maintenance_mode.html 
+sidebar: sidebar 
+keywords: element, solidfire esds, maintenance, maintenance mode 
+summary: 'Si vous devez mettre un nœud de stockage hors ligne pour des opérations de maintenance telles que les mises à niveau logicielles ou la réparation d"hôte, vous pouvez réduire l"impact sur les E/S au reste du cluster de stockage en activant le mode de maintenance pour ce nœud.' 
+---
+= Utiliser le mode de maintenance sur les clusters SolidFire ESDS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous devez mettre un nœud de stockage hors ligne pour des opérations de maintenance telles que les mises à niveau logicielles ou la réparation d'hôte, vous pouvez réduire l'impact sur les E/S au reste du cluster de stockage en activant le mode de maintenance pour ce nœud.
+
+
+TIP: Pour vérifier l'état actuel du mode de maintenance sur votre nœud, utilisez le lien :./api/reference_element_api_listactivenodes.html[`ListActiveNodes`^] méthode API. L'objet nœud inclut un `maintenanceMode` paramètre, qui indique l'état actuel du mode de maintenance sur le nœud.
+
+
+NOTE: Assurez-vous d'effectuer la maintenance dès que le mode de maintenance est activé. Ne laissez pas le nœud en mode maintenance plus que nécessaire.
+
+Vous pouvez passer d'un nœud de stockage en mode maintenance uniquement si le nœud fonctionne correctement (ne présente pas de blocage des défaillances de cluster) et si le cluster de stockage est tolérant à une panne de nœud unique. Une fois que vous avez activé le mode de maintenance pour un nœud sain et tolérant, le nœud n'est pas immédiatement transféré. Il est surveillé jusqu'à ce que les conditions suivantes soient vraies :
+
+* Tous les volumes hébergés sur le nœud ont basculé et le nœud n'héberge plus le nœud primaire pour aucun volume.
+* Un nœud de veille temporaire est attribué pour chaque volume en cours de basculement.
+
+
+Lorsque ces critères sont remplis, le nœud est passé en mode maintenance. Si ces critères ne sont pas remplis au cours d'une période de cinq minutes, le nœud n'entrera pas en mode de maintenance.
+
+Lorsque vous désactivez le mode de maintenance pour un nœud de stockage, le nœud est surveillé jusqu'à ce que les conditions suivantes soient vraies :
+
+* Toutes les données sont entièrement répliquées vers le nœud.
+* Toutes les défaillances de bloc d'instruments de blocage sont résolues.
+* Toutes les affectations de noeuds de secours temporaires pour les volumes hébergés sur le noeud ont été inactivées.
+
+
+Une fois ces critères remplis, le nœud est mis hors mode maintenance. Si ces critères ne sont pas remplis dans une heure, le nœud ne pourra pas basculer en mode de maintenance à partir du nœud.
+
+
+
+== Scénarios possibles lors de l'utilisation du mode de maintenance
+
+* Si un nœud est en mode maintenance, mais qu'il n'a pas encore été redémarré et/ou qu'il n'y a pas eu de maintenance, ou si une maintenance a eu lieu et fonctionne correctement, mais que le mode de maintenance n'a pas été désactivé, un autre nœud tombe en panne, le mode de maintenance du premier nœud est automatiquement désactivé.
+* Si l'un de vos nœuds est en mode maintenance et qu'un autre nœud tombe en panne en même temps, une panne se produit. Vous devez patienter jusqu'à ce que le nœud en mode maintenance revienne en ligne.
+* Si vous placez un nœud membre d'un ensemble en mode maintenance pendant une longue période, le système le supprime automatiquement de l'ensemble, s'il y a d'autres nœuds disponibles à ajouter à sa place.
+
+
+
+
+== Activer le mode maintenance
+
+Vous pouvez activer le mode de maintenance à l'aide du `EnableMaintenanceMode` Méthode API. Cette méthode présente les paramètres d'entrée suivants :
+
+[cols="5*"]
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+`forceWithUnresolvedFaults`
+ a| 
+Forcer l'activation du mode maintenance pour ce nœud même en cas de blocage des pannes de cluster.
+ a| 
+booléen
+ a| 
+Faux
+ a| 
+Non
+
+
+
+ a| 
+`nodes`
+ a| 
+Liste des ID de nœud à placer en mode maintenance. Un seul nœud à la fois est pris en charge.
+ a| 
+tableau entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+`perMinutePrimarySwapLimit`
+ a| 
+Nombre de coupes primaires à échanger par minute. Si ce n'est pas le cas, toutes les coupes primaires seront permutées à la fois.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+`timeout`
+ a| 
+Spécifie la durée pendant laquelle le mode de maintenance doit rester activé avant qu'il ne soit automatiquement désactivé. Formaté comme une chaîne de temps (par exemple, HH:mm:ss). Si ce n'est pas le cas, le mode de maintenance reste activé jusqu'à ce qu'il soit explicitement désactivé.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+Cette méthode a les valeurs de retour suivantes :
+
+[cols="3*"]
+|===
+| Nom | Description | Type 
+
+
+ a| 
+`asyncHandle`
+ a| 
+Vous pouvez utiliser le `GetAsyncResult` Méthode permettant de récupérer ce asyncHandle et de déterminer à quel moment la transition du mode de maintenance est terminée.
+ a| 
+entier
+
+
+
+ a| 
+`currentMode`
+ a| 
+État actuel du mode de maintenance du nœud. Valeurs possibles :
+
+* Désactivé : aucune maintenance n'a été demandée.
+* FailedToRecover : le nœud n'a pas pu récupérer du mode de maintenance.
+* Recovery ingFromMaintenance: Le nœud est en cours de récupération à partir du mode maintenance.
+* PréparationForMaintenance : des actions sont en cours pour préparer un noeud pour que la maintenance soit effectuée.
+* ReadyForMaintenance : le nœud est prêt pour la maintenance.
+
+ a| 
+Mode maintenance (chaîne)
+
+
+
+ a| 
+`requestedMode`
+ a| 
+L'état du mode maintenance requis du nœud. Valeurs possibles :
+
+* Désactivé : aucune maintenance n'a été demandée.
+* FailedToRecover : le nœud n'a pas pu récupérer du mode de maintenance.
+* Recovery ingFromMaintenance: Le nœud est en cours de récupération à partir du mode maintenance.
+* PréparationForMaintenance : des actions sont en cours pour préparer un noeud pour que la maintenance soit effectuée.
+* ReadyForMaintenance : le nœud est prêt pour la maintenance.
+
+ a| 
+Mode maintenance (chaîne)
+
+|===
+
+
+== Désactiver le mode de maintenance
+
+Vous pouvez désactiver le mode de maintenance à l'aide du `DisableMaintenanceMode` Méthode API. Cette méthode dispose du paramètre d'entrée suivant :
+
+[cols="5*"]
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+`nodes`
+ a| 
+Liste des ID de nœud de stockage à sortir du mode de maintenance.
+ a| 
+tableau entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+Cette méthode a les valeurs de retour suivantes :
+
+[cols="3*"]
+|===
+| Nom | Description | Type 
+
+
+ a| 
+`asyncHandle`
+ a| 
+Vous pouvez utiliser le `GetAsyncResult` Méthode permettant de récupérer ce asyncHandle et de déterminer à quel moment la transition du mode de maintenance est terminée.
+ a| 
+entier
+
+
+
+ a| 
+`currentMode`
+ a| 
+État actuel du mode de maintenance du nœud. Valeurs possibles :
+
+* Désactivé : aucune maintenance n'a été demandée.
+* FailedToRecover : le nœud n'a pas pu récupérer du mode de maintenance.
+* Inattendu : le nœud a été trouvé hors ligne, mais il était en mode désactivé.
+* Recovery ingFromMaintenance: Le nœud est en cours de récupération à partir du mode maintenance.
+* PréparationForMaintenance : des actions sont en cours pour préparer un noeud pour que la maintenance soit effectuée.
+* ReadyForMaintenance : le nœud est prêt pour la maintenance.
+
+ a| 
+Mode maintenance (chaîne)
+
+
+
+ a| 
+`requestedMode`
+ a| 
+L'état du mode maintenance requis du nœud. Valeurs possibles :
+
+* Désactivé : aucune maintenance n'a été demandée.
+* FailedToRecover : le nœud n'a pas pu récupérer du mode de maintenance.
+* Inattendu : le nœud a été trouvé hors ligne, mais il était en mode désactivé.
+* Recovery ingFromMaintenance: Le nœud est en cours de récupération à partir du mode maintenance.
+* PréparationForMaintenance : des actions sont en cours pour préparer un noeud pour que la maintenance soit effectuée.
+* ReadyForMaintenance : le nœud est prêt pour la maintenance.
+
+ a| 
+Mode maintenance (chaîne)
+
+|===
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

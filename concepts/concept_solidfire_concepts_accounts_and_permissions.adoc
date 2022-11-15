@@ -1,0 +1,77 @@
+---
+permalink: concepts/concept_solidfire_concepts_accounts_and_permissions.html 
+sidebar: sidebar 
+keywords: solidfire, element, cluster admin, storage, account, authoritative cluster 
+summary: 'Pour administrer et donner l"accès aux ressources de stockage de votre système, vous devez configurer des comptes pour les ressources système.' 
+---
+= Comptes et autorisations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour administrer et donner l'accès aux ressources de stockage de votre système, vous devez configurer des comptes pour les ressources système.
+
+Avec le stockage Element, vous pouvez créer et gérer les types de compte suivants :
+
+*  cluster administrator accounts,L'administrateur compte pour le cluster de stockage
+*  accounts,Les comptes utilisateurs de l'accès au volume de stockage
+*  cluster user accounts,Comptes utilisateurs de cluster faisant autorité pour NetApp Hybrid Cloud Control
+
+
+
+
+== Comptes d'administrateur du cluster de stockage
+
+Deux types de comptes d'administrateur peuvent exister dans un cluster de stockage qui exécute le logiciel NetApp Element :
+
+* *Compte d'administrateur de cluster principal* : ce compte d'administrateur est créé lors de la création du cluster. Il s'agit du compte administratif principal avec le niveau d'accès le plus élevé au cluster. Ce compte est similaire à un utilisateur root dans un système Linux. Vous pouvez modifier le mot de passe de ce compte administrateur.
+* *Compte d'administrateur de cluster* : vous pouvez donner à un compte d'administrateur de cluster une plage limitée d'accès administratif pour effectuer des tâches spécifiques au sein d'un cluster. Les identifiants attribués à chaque compte d'administrateur du cluster sont utilisés pour authentifier les demandes d'interface utilisateur d'API et d'éléments du système de stockage.
+
+
+
+NOTE: Un compte d'administrateur de cluster local (non LDAP) est nécessaire pour accéder aux nœuds actifs d'un cluster via l'interface utilisateur par nœud. Les identifiants de compte ne sont pas nécessaires pour accéder à un nœud qui ne fait pas encore partie d'un cluster.
+
+C'est possible link:../storage/concept_system_manage_manage_cluster_administrator_users.html["gérer les comptes d'administrateur du cluster"] En créant, supprimant et modifiant des comptes d'administrateur du cluster, en modifiant le mot de passe d'administrateur du cluster et en configurant des paramètres LDAP afin de gérer l'accès système pour les utilisateurs.
+
+
+
+== Comptes d'utilisateur
+
+Les comptes utilisateur permettent de contrôler l'accès aux ressources de stockage sur un réseau logiciel NetApp Element. Au moins un compte utilisateur est nécessaire avant la création du volume.
+
+Lorsque vous créez un volume, il est affecté à un compte. Si vous avez créé un volume virtuel, le compte est le conteneur de stockage.
+
+Voici quelques considérations supplémentaires :
+
+* Le compte contient l'authentification CHAP requise pour accéder aux volumes qui lui sont affectés.
+* Un compte peut avoir jusqu'à 2000 volumes qui lui sont attribués, mais un volume ne peut appartenir qu'à un seul compte.
+* Les comptes utilisateur peuvent être gérés à partir du point d'extension NetApp Element Management.
+
+
+
+
+== Comptes d'utilisateur de cluster qui font autorité
+
+Les comptes utilisateurs qui font autorité sur le cluster peuvent s'authentifier sur toutes les ressources de stockage associées à l'instance NetApp de contrôle du cloud hybride de nœuds et de clusters. Ce compte vous permet de gérer des volumes, des comptes, des groupes d'accès et bien plus encore dans tous les clusters.
+
+Les comptes utilisateurs qui font autorité sont gérés depuis le menu supérieur droit de l'option de gestion des utilisateurs du contrôle de cloud hybride NetApp.
+
+Le link:../concepts/concept_intro_clusters.html#authoritative-storage-clusters["cluster de stockage faisant autorité"] Est le cluster de stockage utilisé par NetApp Hybrid Cloud Control pour authentifier les utilisateurs.
+
+Tous les utilisateurs créés sur le cluster de stockage qui fait autorité peuvent se connecter au contrôle de cloud hybride NetApp. Les utilisateurs créés sur d'autres clusters de stockage _ne_ pas se connecter à Cloud Control hybride.
+
+* Si votre nœud de gestion ne dispose que d'un seul cluster de stockage, il fait autorité.
+* Si votre nœud de gestion dispose de deux ou plusieurs clusters de stockage, un de ces clusters est désigné comme cluster qui fait autorité, et seuls les utilisateurs de ce cluster peuvent se connecter au contrôle de cloud hybride NetApp.
+
+
+Alors que de nombreuses fonctionnalités NetApp de cloud hybride Control fonctionnent avec plusieurs clusters de stockage, l'authentification et l'autorisation disposent des limites nécessaires. L'authentification et l'autorisation sont limités par le fait que les utilisateurs du cluster qui fait autorité peuvent exécuter des actions sur d'autres clusters liés à NetApp Hybrid Cloud Control, même s'ils ne sont pas un utilisateur sur les autres clusters de stockage. Avant d'administrer plusieurs clusters de stockage, veillez à ce que les utilisateurs définis sur les clusters qui font autorité soient définis sur tous les autres clusters de stockage avec les mêmes autorisations. Vous pouvez gérer les utilisateurs NetApp Hybrid Cloud Control.
+
+
+
+== Comptes de volume
+
+Les comptes spécifiques aux volumes sont uniquement spécifiques au cluster de stockage sur lequel ils ont été créés. Ces comptes vous permettent de définir des autorisations sur des volumes spécifiques sur le réseau, mais n'ont aucun effet en dehors de ces volumes.
+
+Les comptes de volumes sont gérés dans le tableau NetApp Hybrid Cloud Control volumes.

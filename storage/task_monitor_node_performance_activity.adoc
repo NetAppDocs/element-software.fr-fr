@@ -1,0 +1,23 @@
+---
+permalink: storage/task_monitor_node_performance_activity.html 
+sidebar: sidebar 
+keywords: performance activity, nodes, view 
+summary: 'Vous pouvez afficher les activités de performances de chaque nœud au format graphique. Ces informations fournissent des statistiques en temps réel pour les opérations d"E/S de lecture/écriture par seconde \(IOPS\) pour chaque disque du nœud. Le graphique d"utilisation est mis à jour toutes les cinq secondes et le graphique des statistiques sur les lecteurs est mis à jour toutes les dix secondes.' 
+---
+= Afficher l'activité sur les performances du nœud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher les activités de performances de chaque nœud au format graphique. Ces informations fournissent des statistiques en temps réel pour les opérations d'E/S de lecture/écriture par seconde (IOPS) et pour chaque lecteur du nœud. Le graphique d'utilisation est mis à jour toutes les cinq secondes et le graphique des statistiques sur les lecteurs est mis à jour toutes les dix secondes.
+
+. Cliquez sur *Cluster* > *Nodes*.
+. Cliquez sur *actions* pour le noeud que vous souhaitez afficher.
+. Cliquez sur *Afficher les détails*.
++
+
+NOTE: Vous pouvez voir des points spécifiques dans le temps sur la ligne et les graphiques à barres en positionnant le curseur sur la ligne ou la barre.
+
+

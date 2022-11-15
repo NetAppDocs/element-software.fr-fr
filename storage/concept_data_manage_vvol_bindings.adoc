@@ -1,0 +1,16 @@
+---
+permalink: storage/concept_data_manage_vvol_bindings.html 
+sidebar: sidebar 
+keywords: bindings, vvols, bound virtual volumes 
+summary: 'Pour effectuer des opérations d"E/S avec un volume virtuel, un hôte ESXi doit d"abord lier le volume virtuel.' 
+---
+= Liaisons
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour effectuer des opérations d'E/S avec un volume virtuel, un hôte ESXi doit d'abord lier le volume virtuel.
+
+Le cluster SolidFire choisit un noeud final de protocole optimal, crée une liaison qui associe l'hôte ESXi et le volume virtuel au noeud final du protocole et renvoie la liaison à l'hôte ESXi. Une fois lié, l'hôte ESXi peut effectuer des opérations d'E/S avec le volume virtuel lié.

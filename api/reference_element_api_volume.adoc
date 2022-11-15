@@ -1,0 +1,303 @@
+---
+permalink: api/reference_element_api_volume.html 
+sidebar: sidebar 
+keywords: object,objects,volume 
+summary: 'L"objet volume contient des informations de configuration sur les volumes non appariés ou appariés. Il n"inclut pas les informations d"exécution ou d"utilisation et ne contient pas d"informations sur les volumes virtuels.' 
+---
+= volumétrie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet volume contient des informations de configuration sur les volumes non appariés ou appariés. Il n'inclut pas les informations d'exécution ou d'utilisation et ne contient pas d'informations sur les volumes virtuels.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+l'accès
+ a| 
+Type d'accès autorisé pour le volume. Valeurs possibles :
+
+* `readOnly`: Seules les opérations de lecture sont autorisées.
+* `readWrite`: Les lectures et les écritures sont autorisées.
+* `locked`: Aucune lecture ou écriture n'est autorisée.
+* `replicationTarget`: Désigné comme volume cible dans une paire de volumes répliqués.
+
+ a| 
+chaîne
+
+
+
+ a| 
+ID compte
+ a| 
+ID comptable du compte contenant le volume.
+ a| 
+entier
+
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+
+
+
+ a| 
+Taille de bloc
+ a| 
+Taille des blocs sur le volume.
+ a| 
+entier
+
+
+
+ a| 
+CREATETIME
+ a| 
+Heure au format UTC+0 à laquelle le volume a été créé.
+ a| 
+Chaîne ISO 8601
+
+
+
+ a| 
+ProtectionScheme
+ a| 
+Schéma de protection utilisé pour ce volume. Si un volume est converti d'un système de protection à un autre, ce membre reflète le système de protection auquel le volume est converti.
+ a| 
+chaîne
+
+
+
+ a| 
+DeleteTime
+ a| 
+Heure au format UTC+0 à laquelle le volume a été supprimé.
+ a| 
+Chaîne ISO 8601
+
+
+
+ a| 
+enable512e
+ a| 
+Si la valeur est définie sur true, le volume fournit une émulation de secteur de 512 octets.
+ a| 
+booléen
+
+
+
+ a| 
+EnableSnapMirror orReplication
+ a| 
+Indique si le volume peut être utilisé pour la réplication avec les terminaux SnapMirror.
+ a| 
+booléen
+
+
+
+| Fif50 | Spécifie le nombre maximal d'instantanés du volume à conserver simultanément si vous utilisez le mode de rétention du snapshot de premier entré en premier sorti (FIFO). | entier 
+
+
+ a| 
+iqn
+ a| 
+Nom qualifié iSCSI du volume.
+ a| 
+chaîne
+
+
+
+ a| 
+LastAccessTime
+ a| 
+La dernière fois qu'un accès (E/S comprises) au volume s'est produit (formaté comme UTC+0). Si l'heure du dernier accès n'est pas connue, cette valeur est nulle.
+ a| 
+Chaîne ISO 8601
+
+
+
+ a| 
+LastAccessTimeIO
+ a| 
+La dernière fois que des E/S du volume se sont produites (formatées en UTC+0). Si l'heure du dernier accès n'est pas connue, cette valeur est nulle.
+ a| 
+Chaîne ISO 8601
+
+
+
+| Taille mini | Spécifie le nombre minimum de logements de snapshot de premier entré en premier sorti (FIFO) réservés simultanément par le volume si le mode de rétention de snapshot de premier entré en premier sorti (FIFO) est utilisé. | entier 
+
+
+ a| 
+nom
+ a| 
+Nom du volume indiqué au moment de la création.
+ a| 
+chaîne
+
+
+
+ a| 
+Schéma de protection antérieur
+ a| 
+Si un volume est converti d'un système de protection à un autre, ce membre reflète le système de protection à partir duquel le volume est converti. Ce membre ne change pas tant qu'une conversion n'a pas démarré. Si un volume n'a jamais été converti, ce membre est nul.
+ a| 
+chaîne
+
+
+
+ a| 
+PurgeTime
+ a| 
+Heure au format UTC+0 pendant laquelle le volume a été purgé du système.
+ a| 
+Chaîne ISO 8601
+
+
+
+ a| 
+la qos
+ a| 
+Les paramètres de qualité de service de ce volume.
+ a| 
+xref:reference_element_api_qos.adoc[La QoS]
+
+
+
+ a| 
+QosPolicyID
+ a| 
+ID de la politique de QoS associée au volume. La valeur est nulle si le volume n'est pas associé à une règle.
+ a| 
+entier
+
+
+
+ a| 
+SsciEUIDevceID
+ a| 
+Identificateur de périphérique SCSI unique au niveau mondial pour le volume au format 16 octets basé sur EUI-64.
+ a| 
+chaîne
+
+
+
+ a| 
+SciNAADeviceID
+ a| 
+Identifiant de périphérique SCSI unique au niveau mondial pour le volume au format étendu agréé NAA IEEE.
+ a| 
+chaîne
+
+
+
+ a| 
+SliceCount
+ a| 
+Nombre de coupes sur le volume. Cette valeur est toujours « 1 ».
+ a| 
+entier
+
+
+
+ a| 
+état
+ a| 
+État actuel du volume. Valeurs possibles :
+
+* Init : volume en cours d'initialisation et non prêt pour les connexions.
+* Active : volume actif prêt pour les connexions.
+* Supprimé : volume marqué pour suppression, mais pas encore purgé.
+
+ a| 
+chaîne
+
+
+
+ a| 
+Taille totale
+ a| 
+Nombre total d'octets de capacité provisionnée.
+ a| 
+entier
+
+
+
+ a| 
+ID virtualVolume
+ a| 
+ID unique de volume virtuel associé au volume, le cas échéant.
+ a| 
+UUID
+
+
+
+ a| 
+Groupes d'accès de volume
+ a| 
+Liste des ID groupes d'accès de volume pf auxquels un volume appartient. Cette valeur est une liste vide si un volume n'appartient à aucun groupe d'accès de volume.
+ a| 
+tableau entier
+
+
+
+ a| 
+Volume ConsistencyGroupUUID
+ a| 
+ID universel unique du groupe de cohérence du volume dont le volume est membre.
+ a| 
+UUID
+
+
+
+ a| 
+ID de volume
+ a| 
+ID de volume unique pour le volume.
+ a| 
+entier
+
+
+
+ a| 
+Paires de volume
+ a| 
+Informations sur un volume apparié. Visible uniquement si un volume est couplé. Cette valeur est une liste vide si le volume n'est pas apparié.
+ a| 
+xref:reference_element_api_volumepair.adoc[Volume par paire] baie
+
+
+
+ a| 
+UUID de volume
+ a| 
+ID universel unique du volume.
+ a| 
+UUID
+
+|===
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_listactivevolumes.adoc[ActivéNon]
+* xref:reference_element_api_listdeletedvolumes.adoc[ListeDeletedvolumes]
+* xref:reference_element_api_listvolumes.adoc[Listvolumes]
+* xref:reference_element_api_listvolumesforaccount.adoc[ListVolumesForAccount]
+* xref:reference_element_api_qos.adoc[La QoS]
+

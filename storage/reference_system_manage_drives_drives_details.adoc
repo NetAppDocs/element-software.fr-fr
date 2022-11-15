@@ -1,0 +1,55 @@
+---
+permalink: storage/reference_system_manage_drives_drives_details.html 
+sidebar: sidebar 
+keywords: drives, details, manage, filter, cluster 
+summary: 'La page lecteurs de l"onglet Cluster fournit la liste des lecteurs actifs du cluster. Vous pouvez filtrer la page en sélectionnant dans les onglets actif, disponible, Suppression, Effacement et échec.' 
+---
+= Détails sur le disque
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La page lecteurs de l'onglet Cluster fournit la liste des lecteurs actifs du cluster. Vous pouvez filtrer la page en sélectionnant dans les onglets actif, disponible, Suppression, Effacement et échec.
+
+Lorsque vous initialisez un cluster, la liste des disques actifs est vide. Vous pouvez ajouter des disques non attribués à un cluster et dans l'onglet disponible après la création d'un nouveau cluster SolidFire.
+
+Les éléments suivants apparaissent dans la liste des lecteurs actifs.
+
+* *ID de lecteur*
++
+Numéro séquentiel attribué au disque.
+
+* *ID de nœud*
++
+Numéro de nœud attribué lorsque ce nœud est ajouté au cluster.
+
+* *Nom du noeud*
++
+Nom du nœud qui héberge le disque.
+
+* *Slot*
++
+Numéro de logement où le lecteur est physiquement situé.
+
+* *Capacité*
++
+Taille du lecteur, en Go.
+
+* *Série*
++
+Numéro de série du disque.
+
+* *Usure restante*
++
+L'indicateur de niveau d'usure.
+
++
+Le système de stockage indique l'usure approximative disponible sur chaque disque SSD pour l'écriture et l'effacement des données. Un disque qui a consommé 5 % de ses cycles d'écriture et d'effacement prévus signale l'usure restante de 95 %. Le système n'actualise pas automatiquement les informations relatives à l'usure des disques ; vous pouvez actualiser ou fermer et recharger la page pour actualiser les informations.
+
+* *Type*
++
+Type de disque. Ce type peut être un bloc ou des métadonnées.
+
+

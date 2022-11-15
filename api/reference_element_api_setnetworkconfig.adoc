@@ -1,0 +1,109 @@
+---
+permalink: api/reference_element_api_setnetworkconfig.html 
+sidebar: sidebar 
+keywords: network,config,configuration,set,setting,node,setnetworkconfig 
+summary: 'Vous pouvez utiliser la méthode SetNetworkConfig pour définir la configuration réseau d’un nœud. Pour afficher les paramètres réseau actuels d"un nœud, exécutez la méthode GetNetworkConfig API.' 
+---
+= SetNetworkConfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `SetNetworkConfig` méthode de définition de la configuration réseau d'un nœud. Pour afficher les paramètres réseau actuels d'un nœud, exécutez le `GetNetworkConfig` Méthode API.
+
+
+NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
+
+
+
+== Paramètre
+
+AVERTISSEMENT :
+
+La modification du mode bond sur un nœud peut entraîner une perte temporaire de connectivité réseau.
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+le réseau
+ a| 
+Objet contenant les paramètres réseau du nœud à modifier. Il vous suffit d'ajouter les champs que vous souhaitez modifier à cette méthode en tant qu'attributs dans ce paramètre.
+ a| 
+xref:reference_element_api_network_all_interfaces.adoc[réseau (toutes les interfaces)]
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+le réseau
+ a| 
+La configuration réseau actuelle et nouvelle pour le nœud.
+ a| 
+xref:reference_element_api_network_all_interfaces.adoc[réseau (toutes les interfaces)]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+	"method": "SetNetworkConfig",
+		"params": {
+			"network": {
+				"Bond10G": {
+					"bond-mode": "ALB"
+				},
+				"Bond1G": {
+					"netmask": "255.255.224.0"
+				},
+				"eth0": {
+					"method": "bond"
+				},
+				"lo": {
+					"method": "loopback"
+				}
+			}
+		}
+}
+----
+
+
+== Exemple de réponse
+
+La réponse de cette méthode est la même que celle de la méthode GetNetworkConfig. La méthode affiche tous les membres pour chaque objet et inclut les nouvelles valeurs pour tous les membres modifiés.
+
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_getnetworkconfig.adoc[GetNetworkConfig]
+* xref:reference_element_api_response_example_getnetworkconfig.adoc[GetNetworkConfig]
+

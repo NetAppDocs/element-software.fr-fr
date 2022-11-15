@@ -1,0 +1,69 @@
+---
+permalink: api/reference_element_api_network_all_interfaces.html 
+sidebar: sidebar 
+keywords: object,objects,network 
+summary: 'L"objet réseau \(all interfaces\) collecte des informations sur la configuration de l"interface réseau d"un nœud de stockage. Vous pouvez utiliser les méthodes getconfig et GetNetworkConfig pour obtenir ces informations pour un nœud de stockage.' 
+---
+= réseau (toutes les interfaces)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet réseau (toutes les interfaces) collecte des informations sur la configuration de l'interface réseau d'un nœud de stockage. Vous pouvez utiliser le `GetConfig` et `GetNetworkConfig` méthodes d'obtention de ces informations pour un nœud de stockage.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Bond10G
+ a| 
+Informations de configuration pour l'interface Bond10G liée.
+ a| 
+xref:reference_element_api_network_bonded_interfaces.adoc[réseau (interfaces liées)]
+
+
+
+ a| 
+Bond1G
+ a| 
+Informations de configuration pour l'interface BonBond1G liée.
+ a| 
+xref:reference_element_api_network_bonded_interfaces.adoc[réseau (interfaces liées)]
+
+
+
+ a| 
+eth0-5
+ a| 
+Un objet pour chaque interface Ethernet du nœud de stockage, décrivant les informations de configuration de l'interface. Ces objets sont numérotés de 0 à 5 pour correspondre au nom de l'interface.
+ a| 
+xref:reference_element_api_network_ethernet_interfaces.adoc[Réseau (interfaces Ethernet)]
+
+
+
+ a| 
+bas
+ a| 
+Informations de configuration pour l'interface de bouclage.
+ a| 
+xref:reference_element_api_network_local_interfaces.adoc[réseau (interfaces locales)]
+
+|===
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_getconfig.adoc[Getconfig]
+* xref:reference_element_api_getnetworkconfig.adoc[GetNetworkConfig]
+

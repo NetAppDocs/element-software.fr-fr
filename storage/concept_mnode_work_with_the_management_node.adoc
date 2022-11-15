@@ -1,0 +1,19 @@
+---
+permalink: storage/concept_mnode_work_with_the_management_node.html 
+sidebar: sidebar 
+keywords: management node,mNode 
+summary: 'Vous pouvez utiliser le nœud de gestion \(nœud M\) pour mettre à niveau les services système, gérer les ressources et les paramètres de cluster, exécuter des tests système et des utilitaires, configurer Active IQ pour le contrôle du système et activer l"accès au support NetApp pour le dépannage.' 
+---
+= Travaillez avec le nœud de gestion
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le nœud de gestion (nœud M) pour mettre à niveau les services du système, gérer les ressources et les paramètres du cluster, exécuter des tests et des utilitaires système, configurer Active IQ pour le contrôle du système et activer l'accès au support NetApp pour le dépannage.
+
+
+NOTE: Il est recommandé d'associer un seul nœud de gestion à une instance VMware vCenter et d'éviter de définir les mêmes ressources de stockage et de calcul ou instances vCenter dans plusieurs nœuds de gestion.
+
+Voir link:../mnode/task_mnode_work_overview.html["documentation sur le nœud de gestion"] pour en savoir plus.

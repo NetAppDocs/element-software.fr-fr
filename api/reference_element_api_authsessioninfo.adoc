@@ -1,0 +1,110 @@
+---
+permalink: api/reference_element_api_authsessioninfo.html 
+sidebar: sidebar 
+keywords: objects,object,authSessionInfo 
+summary: 'L"objet authSessionInfo contient des informations sur une session auth.' 
+---
+= AuthSessionInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet authSessionInfo contient des informations sur une session auth.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+Access GroupList
+ a| 
+Liste des groupes d'accès de l'utilisateur.
+ a| 
+tableau de chaînes
+
+
+
+ a| 
+Méthode d'authentification
+ a| 
+Le type d'autorisation dont dispose l'utilisateur admin du cluster. Valeurs possibles :
+
+* LDAP - authentifié via LDAP.
+* Cluster - authentifié via un nom d'utilisateur et un mot de passe stockés dans la base de données du cluster.
+* IDP : authentifié via un fournisseur d'identité tiers.
+
+ a| 
+chaîne
+
+
+
+ a| 
+ClusterAdminID
+ a| 
+Liste des ID administrateur de cluster associés à cette session. Pour les sessions liées à LDAP ou à un fournisseur d'identités tiers, il s'agit d'une liste agrégée d'administrateurs de cluster associés à cette session.
+ a| 
+tableau entier
+
+
+
+ a| 
+Fin du délai d'attente
+ a| 
+Heure à laquelle la session devient non valide.elle est définie lors de la création de la session et ne peut pas être modifiée.
+ a| 
+chaîne
+
+
+
+ a| 
+IdpConfigversion
+ a| 
+Version de configuration IDP lors de la création de la session.
+ a| 
+entier
+
+
+
+ a| 
+Délai d'expiration des accès
+ a| 
+Heure à laquelle la session devient non valide en raison d'une inactivité.elle est définie sur une nouvelle valeur lorsque la session est accédée pour utilisation, jusqu'à l'heure où la session devient non valide en raison du délai d'expiration atteint.
+ a| 
+chaîne
+
+
+
+ a| 
+Session CreationTime
+ a| 
+Heure de création de la session.
+ a| 
+chaîne
+
+
+
+ a| 
+ID de session
+ a| 
+UUID de cette session.
+ a| 
+UUID
+
+
+
+ a| 
+nom d'utilisateur
+ a| 
+Nom d'utilisateur associé à cette session. Pour les sessions liées à LDAP, il s'agit du DN LDAP de l'utilisateur. Pour les sessions liées à un IDP tiers, il s'agit d'une paire nom-valeur arbitraire qui sera utilisée pour les opérations d'audit au sein de la session. Il ne correspond pas nécessairement à un nom d'administrateur de cluster sur le cluster. Par exemple, un nom de sujet SAML, mais cela sera dicté par la configuration du IDP et le contenu résultant de l'assertion SAML.
+ a| 
+chaîne
+
+|===

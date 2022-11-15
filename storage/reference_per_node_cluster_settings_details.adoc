@@ -1,0 +1,77 @@
+---
+permalink: storage/reference_per_node_cluster_settings_details.html 
+sidebar: sidebar 
+keywords: nodes, changing cluster settings, per-node UI 
+summary: 'Vous pouvez vérifier les paramètres du cluster d"un nœud de stockage après la configuration du cluster et modifier le nom d"hôte du nœud.' 
+---
+= Détails des paramètres de cluster depuis l'interface de chaque nœud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez vérifier les paramètres du cluster d'un nœud de stockage après la configuration du cluster et modifier le nom d'hôte du nœud.
+
+La liste suivante décrit les paramètres de cluster d'un nœud de stockage indiqué dans la page *Paramètres de cluster* de l'interface utilisateur par nœud (https://<node[] IP>:442/hcc/node/cluster-settings).
+
+
+NOTE: Si vous exécutez un cluster SolidFire Enterprise SDS, la plupart des paramètres réseau de l'interface utilisateur par nœud ne peuvent pas être modifiés après le déploiement d'un nœud.
+
+* *Rôle*
++
+Rôle qui lui est attribué dans le cluster. Valeurs possibles :
+
++
+** Stockage : nœud de stockage ou Fibre Channel.
+** Gestion : nœud est un nœud de gestion.
+
+
+* *Nom d'hôte*
++
+Nom du nœud.
+
+* *Cluster*
++
+Nom du cluster.
+
+* * Adhésion au groupe*
++
+État du nœud. Valeurs possibles :
+
++
+** Disponible : le nœud ne possède pas de nom de cluster associé et ne fait pas encore partie d'un cluster.
+** En attente : le nœud est configuré et peut être ajouté à un cluster désigné. L'authentification n'est pas requise pour accéder au nœud.
+** PendingActive : le système est en cours d'installation de logiciels compatibles sur le nœud. Une fois l'opération terminée, le nœud passe à l'état actif.
+** Actif : le nœud participe à un cluster. Une authentification est requise pour modifier le nœud.
+
+
+* *Version*
++
+Version du logiciel Element exécutée sur le nœud.
+
+* *Ensemble*
++
+Nœuds faisant partie de l'ensemble de base de données.
+
+* *ID de nœud*
++
+ID attribué lorsqu'un nœud est ajouté au cluster.
+
+* *Interface de cluster*
++
+Interface réseau utilisée pour la communication avec le cluster.
+
+* *Interface de gestion*
++
+Interface de réseau de gestion. Par défaut, il s'agit de Bond1G, mais peut également utiliser Bond10G.
+
+* *Interface de stockage*
++
+Interface de réseau de stockage utilisant Bond10G.
+
+* *Prise en charge du cryptage*
++
+Indique si le nœud prend en charge le chiffrement de disque.
+
+

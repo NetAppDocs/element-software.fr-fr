@@ -1,0 +1,173 @@
+---
+permalink: api/reference_element_api_getbootstrapconfig.html 
+sidebar: sidebar 
+keywords: cluster,getting,bootstrap,information,node,GetBootstrapConfig 
+summary: 'Vous pouvez utiliser la méthode GetBootstrapConfig pour obtenir les informations sur le cluster et le nœud à partir du fichier de configuration bootstrapConfig. Utilisez cette méthode d"API sur un nœud individuel avant d"être associé à un cluster. Informations cette méthode renvoie est utilisée dans l"interface de configuration du cluster lors de la création d"un cluster.' 
+---
+= GetBootstrapConfig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetBootstrapConfig` méthode d'obtention des informations sur le cluster et le nœud à partir du fichier de configuration bootstrap. Utilisez cette méthode d'API sur un nœud individuel avant d'être associé à un cluster. Informations cette méthode renvoie est utilisée dans l'interface de configuration du cluster lors de la création d'un cluster.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+Nom du cluster
+ a| 
+Nom du cluster.
+ a| 
+chaîne
+
+
+
+ a| 
+mvip
+ a| 
+Adresse MVIP du cluster. Vide si le nœud ne fait pas partie d'un cluster.
+ a| 
+chaîne
+
+
+
+ a| 
+Nom de nom
+ a| 
+Nom du nœud.
+ a| 
+chaîne
+
+
+
+ a| 
+nœuds
+ a| 
+Liste des informations concernant chaque nœud en attente de rejoindre le cluster. Valeurs possibles :
+
+* ChassisType: (Chaîne) plate-forme matérielle du nœud.
+* cip : (chaîne) adresse IP du cluster du nœud.
+* Compatible : (booléen) indique si le nœud est compatible avec le nœud sur lequel l'appel d'API a été exécuté.
+* Nom d'hôte : (chaîne) Nom d'hôte du nœud.
+* mip : (chaîne) adresse IP de gestion IPv4 du nœud.
+* MipV6 : (chaîne) adresse IP de gestion IPv6 du nœud.
+* Nodeype : (chaîne)Nom du modèle du nœud.
+* Version : (string)version du logiciel actuellement installé sur le nœud.
+
+ a| 
+Baie d'objets JSON
+
+
+
+ a| 
+vit
+ a| 
+Adresse SVIP du cluster. Null si le nœud ne fait pas partie d'un cluster.
+ a| 
+chaîne
+
+
+
+ a| 
+version
+ a| 
+Version du logiciel Element actuellement installée sur le nœud appelé par cette méthode d'API.
+ a| 
+chaîne
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "GetBootstrapConfig",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+	"id":1,
+	"result":{
+		"clusterName":"testname",
+		"nodeName":"testnode",
+		"svip": "10.117.1.5",
+		"mvip": "10.117.1.6",
+		"nodes":[
+			{
+				"chassisType":"R630",
+				"cip":"10.117.115.16",
+				"compatible":true,
+				"hostname":"NLABP1132",
+				"mip":"10.117.114.16",
+				"mipV6":"fd20:8b1e:b256:45a::16",
+				"nodeType":"SF2405",
+				"role":"Storage",
+				"version":"11.0"
+			},
+			{
+				"chassisType":"R630",
+				"cip":"10.117.115.17",
+				"compatible":true,
+				"hostname":"NLABP1133",
+				"mip":"10.117.114.17",
+				"mipV6":"fd20:8b1e:b256:45a::17",
+				"nodeType":"SF2405",
+				"role":"Storage",
+				"version":"11.0"
+			},
+			{
+				"chassisType":"R630",
+				"cip":"10.117.115.18",
+				"compatible":true,
+				"hostname":"NLABP1134",
+				"mip":"10.117.114.18",
+				"mipV6":"fd20:8b1e:b256:45a::18",
+				"nodeType":"SF2405",
+				"role":"Storage",
+				"version":"11.0"
+			}
+		],
+		"version":"11.0"
+	}
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_createcluster.adoc[CreateCluster]

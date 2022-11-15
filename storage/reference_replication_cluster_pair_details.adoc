@@ -1,0 +1,40 @@
+---
+permalink: storage/reference_replication_cluster_pair_details.html 
+sidebar: sidebar 
+keywords: cluster pairs, replication, data protection 
+summary: 'La page paires de clusters de l"onglet protection des données fournit des informations sur les clusters qui ont été appariés ou en cours de couplage. Le système affiche des messages de couplage et de progression dans la colonne État.' 
+---
+= Détails des paires de clusters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La page paires de clusters de l'onglet protection des données fournit des informations sur les clusters qui ont été appariés ou en cours de couplage. Le système affiche des messages de couplage et de progression dans la colonne État.
+
+* *ID*
++
+ID généré par le système donné à chaque paire du cluster.
+
+* *Nom du cluster distant*
++
+Nom de l'autre cluster de la paire.
+
+* *MVIP à distance*
++
+Adresse IP virtuelle de gestion de l'autre cluster de la paire.
+
+* *Statut*
++
+État de réplication du cluster distant
+
+* *Volumes de réplication*
++
+Nombre de volumes contenus par le cluster jumelés pour la réplication.
+
+* *UUID*
++
+ID unique attribué à chaque cluster de la paire.
+
+

@@ -1,0 +1,51 @@
+---
+permalink: storage/concept_data_manage_vol_access_group_work_with_volume_access_groups_and_initiators.html 
+sidebar: sidebar 
+keywords: volume access groups, initiators, working with, chap, fc, iscsi 
+summary: 'Vous pouvez utiliser des initiateurs iSCSI ou des initiateurs Fibre Channel pour accéder aux volumes définis au sein des groupes d"accès de volume.' 
+---
+= Utilisation des groupes d'accès de volumes et des initiateurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser des initiateurs iSCSI ou des initiateurs Fibre Channel pour accéder aux volumes définis au sein des groupes d'accès de volume.
+
+Vous pouvez créer des groupes d'accès en mappant les IQN des initiateurs iSCSI ou les WWPN Fibre Channel dans une collection de volumes. Chaque IQN que vous ajoutez à un groupe d'accès peut accéder à chaque volume du groupe sans nécessiter d'authentification CHAP.
+
+Il existe deux types de méthodes d'authentification CHAP :
+
+* Authentification CHAP au niveau du compte : vous pouvez attribuer une authentification CHAP au compte.
+* Authentification CHAP au niveau de l'initiateur : vous pouvez attribuer une cible CHAP unique et des secrets à des initiateurs spécifiques sans être lié à un seul CHAP sur un seul compte. Cette authentification CHAP au niveau de l'initiateur remplace les informations d'identification au niveau du compte.
+
+
+Si vous le souhaitez, vous pouvez également appliquer l'autorisation d'initiateur et l'authentification CHAP par initiateur. Ces options peuvent être définies par initiateur et un groupe d'accès peut contenir plusieurs initiateurs avec différentes options.
+
+Chaque WWPN que vous ajoutez à un groupe d'accès active l'accès réseau Fibre Channel aux volumes du groupe d'accès.
+
+
+NOTE: Les groupes d'accès de volume ont les limites suivantes :
+
+* Un maximum de 64 IQN ou WWPN sont autorisés dans un groupe d'accès.
+* Un groupe d'accès peut être composé de 2000 volumes au maximum.
+* Un IQN ou un WWPN ne peut appartenir qu'à un seul groupe d'accès.
+* Un seul volume peut appartenir à quatre groupes d'accès maximum.
+
+
+
+
+== Trouvez plus d'informations
+
+* xref:task_data_manage_vol_access_group_create_a_volume_access_group.adoc[Créer un groupe d'accès de volume]
+* xref:task_data_manage_vol_access_group_add_volumes.adoc[Ajout de volumes à un groupe d'accès]
+* xref:task_data_manage_vol_access_group_remove_volumes.adoc[Supprimer des volumes d'un groupe d'accès]
+* xref:task_data_manage_vol_access_group_create_an_initiator.adoc[Créer un initiateur]
+* xref:task_data_manage_vol_access_group_edit_an_initiator.adoc[Modifier un initiateur]
+* xref:task_data_manage_vol_access_group_add_a_single_initiator.adoc[Ajout d'un seul initiateur à un groupe d'accès de volume]
+* xref:task_data_manage_vol_access_group_add_multiple_initiators.adoc[Ajoutez plusieurs initiateurs à un groupe d'accès de volume]
+* xref:task_data_manage_vol_access_group_remove_initiators_from_an_access_group.adoc[Supprimez des initiateurs d'un groupe d'accès]
+* xref:task_data_manage_vol_access_group_delete.adoc[Supprimer un groupe d'accès]
+* xref:task_data_manage_vol_access_group_delete_an_initiator.adoc[Supprimer un initiateur]
+

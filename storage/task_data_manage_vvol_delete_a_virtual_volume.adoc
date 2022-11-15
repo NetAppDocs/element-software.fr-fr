@@ -1,0 +1,26 @@
+---
+permalink: storage/task_data_manage_vvol_delete_a_virtual_volume.html 
+sidebar: sidebar 
+keywords: virtual volume, delete, vvols, use Element UI to delete a vvol 
+summary: 'Bien que les volumes virtuels doivent toujours être supprimés de la couche de gestion VMware, la fonctionnalité permettant de supprimer des volumes virtuels est activée à partir de l"interface utilisateur Element. Vous devez uniquement supprimer un volume virtuel de l"interface utilisateur Element lorsque cela est absolument nécessaire, par exemple lorsque vSphere ne parvient pas à nettoyer les volumes virtuels sur du stockage SolidFire.' 
+---
+= Supprimer un volume virtuel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bien que les volumes virtuels doivent toujours être supprimés de la couche de gestion VMware, la fonctionnalité permettant de supprimer des volumes virtuels est activée à partir de l'interface utilisateur Element. Vous devez uniquement supprimer un volume virtuel de l'interface utilisateur Element lorsque cela est absolument nécessaire, par exemple lorsque vSphere ne parvient pas à nettoyer les volumes virtuels sur du stockage SolidFire.
+
+. Sélectionnez *VVol* > *volumes virtuels*.
+. Cliquez sur l'icône actions du volume virtuel que vous souhaitez supprimer.
+. Dans le menu qui s'affiche, sélectionnez *Supprimer*.
++
+
+IMPORTANT: Vous devez supprimer un volume virtuel de la couche de gestion VMware pour vous assurer que le volume virtuel est correctement sans limites avant la suppression. Vous devez uniquement supprimer un volume virtuel de l'interface utilisateur Element lorsque cela est absolument nécessaire, par exemple lorsque vSphere ne parvient pas à nettoyer les volumes virtuels sur du stockage SolidFire. Si vous supprimez un volume virtuel de l'interface utilisateur Element, le volume sera immédiatement purgé.
+
+. Confirmez l'action.
+. Actualisez la liste des volumes virtuels pour confirmer que le volume virtuel a été supprimé.
+. *Facultatif* : sélectionnez *Rapport* > *Journal d'événements* pour confirmer que la purge a réussi.
+

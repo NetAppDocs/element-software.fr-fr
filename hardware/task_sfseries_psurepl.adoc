@@ -1,0 +1,69 @@
+---
+permalink: hardware/task_sfseries_psurepl.html 
+sidebar: sidebar 
+keywords: solidfire chassis, power supply replacement, sf-series nodes 
+summary: 'Chaque châssis SolidFire comprend deux unités d"alimentation pour la redondance de l"alimentation. En cas de panne d"un bloc d"alimentation, vous devez le remplacer dès que possible pour vous assurer que le châssis dispose d"une source d"alimentation redondante.' 
+---
+= Remplacez une unité d'alimentation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Chaque châssis SolidFire comprend deux unités d'alimentation pour la redondance de l'alimentation. En cas de panne d'un bloc d'alimentation, vous devez le remplacer dès que possible pour vous assurer que le châssis dispose d'une source d'alimentation redondante.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez déterminé que l'unité d'alimentation doit être remplacée.
+* Vous avez une unité d'alimentation de remplacement.
+* Vous avez vérifié que le second bloc d'alimentation fonctionne.
+* Vous avez un bracelet antistatique (ESD), ou vous avez pris d'autres précautions antistatiques.
+
+
+Ces instructions s'appliquent si vous disposez d'un châssis à une unité de rack (1U) avec l'un des nœuds suivants :
+
+* SF2405
+* SF4805
+* SF9605
+* SF9608
+* SF19210
+* SF38410
+* SF-FCN-01
+* FC0025
+
+
+[NOTE]
+====
+Les nœuds suivants ne sont pas pris en charge en fonction de la version du logiciel Element :
+
+* À partir des nœuds de stockage Element 12.7, SF2405 et SF9608, ainsi que des nœuds FC FC0025 et SF-FCN-01.
+* À partir des nœuds de stockage Element 12.0, SF3010, SF6010 et SF9010.
+
+
+====
+.Étapes
+. Débranchez le cordon d'alimentation de l'unité d'alimentation que vous remplacez.
+. Appuyez sur le bouton de déverrouillage pour faire glisser l'unité d'alimentation hors du châssis.
++
+
+IMPORTANT: Veillez à utiliser les deux mains pour supporter le poids de l'unité d'alimentation.
+
+. À l'aide des deux mains, alignez les bords de l'unité d'alimentation de remplacement avec l'ouverture du châssis, puis poussez doucement l'unité dans le châssis.
++
+
+IMPORTANT: Ne forcez pas trop lorsque vous faites glisser l'unité d'alimentation dans le châssis pour éviter d'endommager le matériel.
+
+. Branchez le cordon d'alimentation.
+. Retournez l'unité défectueuse à NetApp en suivant les instructions dans la boîte qui vous a été expédiée.
++
+Vous pouvez contacter le support NetApp pour obtenir de l'aide sur la procédure de remplacement.
+
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

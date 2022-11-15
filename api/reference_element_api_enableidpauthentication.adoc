@@ -1,0 +1,75 @@
+---
+permalink: api/reference_element_api_enableidpauthentication.html 
+sidebar: sidebar 
+keywords: IdP,idp,authentication,enable 
+summary: 'Vous pouvez utiliser la méthode EnableIdpAuthentication pour activer la prise en charge de l"authentification à l"aide d"IDPS tiers pour le cluster. Une fois l"authentification IDP activée, les administrateurs LDAP et du cluster ne peuvent plus accéder au cluster via des interfaces utilisateur prises en charge, et toutes les sessions authentifiées actives ne sont plus validées/déconnectées. Seuls les utilisateurs authentifiés par des PDI tiers peuvent accéder au cluster via des interfaces utilisateur prises en charge.' 
+---
+= EnableIdpAuthentication
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `EnableIdpAuthentication` Méthode permettant d'activer la prise en charge de l'authentification à l'aide d'IDPS tiers pour le cluster. Une fois l'authentification IDP activée, les administrateurs LDAP et du cluster ne peuvent plus accéder au cluster via des interfaces utilisateur prises en charge, et toutes les sessions authentifiées actives ne sont plus validées/déconnectées. Seuls les utilisateurs authentifiés par des PDI tiers peuvent accéder au cluster via des interfaces utilisateur prises en charge.
+
+
+
+== Paramètres
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+ID de configuration idpConfigurationID
+ a| 
+UUID pour la configuration IDP tierce. Si une seule configuration IDP existe, la configuration par défaut est d'activer cette configuration. Si vous n'avez qu'une seule IdpConfiguration, vous n'avez pas besoin de fournir le paramètre idpConfigurationID.
+ a| 
+UUID
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "EnableIdpAuthentication",
+  "params": {
+    "idpConfigurationID": "f983c602-12f9-4c67-b214-bf505185cfed",
+  }
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+"result": {}
+}
+----
+
+
+== Nouveau depuis la version
+
+12.0

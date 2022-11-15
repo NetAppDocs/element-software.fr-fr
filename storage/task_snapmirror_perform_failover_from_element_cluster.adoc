@@ -1,0 +1,32 @@
+---
+permalink: storage/task_snapmirror_perform_failover_from_element_cluster.html 
+sidebar: sidebar 
+keywords: failover, cluster, perform a failover, snapmirror 
+summary: 'Vous pouvez effectuer un basculement depuis le cluster Element pour rendre le volume de destination accessible en lecture/écriture et aux hôtes côté destination. Avant d"effectuer un basculement à partir du cluster Element, vous devez interrompre la relation SnapMirror.' 
+---
+= Effectuer un basculement à partir d'un cluster Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer un basculement depuis le cluster Element pour rendre le volume de destination accessible en lecture/écriture et aux hôtes côté destination. Avant d'effectuer un basculement à partir du cluster Element, vous devez interrompre la relation SnapMirror.
+
+Utilisez l'interface utilisateur de NetApp Element pour effectuer le basculement. Si l'interface utilisateur Element n'est pas disponible, vous pouvez également utiliser ONTAP System Manager ou l'interface de ligne de commandes ONTAP pour lancer la commande « interrompre la relation ».
+
+.Ce dont vous avez besoin, 8217;ll
+* Une relation SnapMirror existe et possède au moins un snapshot valide sur le volume de destination.
+* Vous devez basculer vers le volume de destination en raison d'une panne ou d'un événement planifié sur le site primaire.
+
+
+.Étapes
+. Dans l'interface utilisateur Element, cliquez sur *Data protection* > *SnapMirror relations*.
+. Recherchez la relation avec le volume source que vous souhaitez basculer.
+. Cliquez sur l'icône *actions*.
+. Cliquez sur *Break*.
+. Confirmez l'action.
++
+Le volume du cluster de destination dispose désormais d'un accès en lecture/écriture et peut être monté sur les hôtes de l'application pour reprendre les workloads de production. Toutes les réplications SnapMirror sont interrompues à la suite de cette opération. La relation montre un état de rupture.
+
+

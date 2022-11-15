@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: hccstorage/index.html 
+summary: 'Avec le stockage 100 % Flash NetApp SolidFire, vous pouvez gérer et contrôler les ressources de stockage avec NetApp Hybrid Cloud Control.' 
+keywords: netapp, element, cluster, element, account, user, volume, hybrid cloud control, hcc 
+---
+= Gérez et contrôlez le stockage avec NetApp Hybrid Cloud Control
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Grâce au stockage 100 % Flash NetApp SolidFire, vous pouvez gérer et surveiller vos ressources de stockage et configurer des composants de votre système de stockage à l'aide du contrôle de cloud hybride NetApp.
+
+* link:task-hcc-manage-storage-clusters.html["Ajouter et gérer des clusters de stockage"]
+* link:task-setup-configure-fqdn-web-ui-access.html["Configurez l'accès à l'interface utilisateur Web du nom de domaine complet"]
+* link:task-hcc-manage-accounts.html["Créer et gérer des comptes utilisateur"]
+* link:task-hcc-manage-vol-management.html["Création et gestion des volumes"]
+* link:task-hcc-manage-vol-access-groups.html["Créez et gérez des groupes d'accès de volume"]
+* link:task-hcc-manage-initiators.html["Création et gestion des initiateurs"]
+* link:task-hcc-qos-policies.html["Création et gestion de règles de QoS pour les volumes"]
+* link:task-hcc-dashboard.html["Surveillez votre système SolidFire avec NetApp Cloud Control"]
+
+
+[discrete]
+== Trouvez plus d'informations
+
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+

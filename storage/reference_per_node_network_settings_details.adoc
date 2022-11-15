@@ -1,0 +1,96 @@
+---
+permalink: storage/reference_per_node_network_settings_details.html 
+sidebar: sidebar 
+keywords: network settings, per-node UI, storage node, ui 
+summary: 'Vous pouvez modifier les paramètres réseau du nœud de stockage pour donner au nœud un nouvel ensemble d"attributs réseau.' 
+---
+= Détails des paramètres réseau à partir de l'interface utilisateur par nœud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier les paramètres réseau du nœud de stockage pour donner au nœud un nouvel ensemble d'attributs réseau.
+
+Vous pouvez voir les paramètres réseau d'un noeud de stockage sur la page *Paramètres réseau* lorsque vous vous connectez au noeud (https://<node[] IP>:442/hcc/node/network-settings). Vous pouvez sélectionner les paramètres *Bond1G* (gestion) ou *Bond10G* (stockage). La liste suivante décrit les paramètres que vous pouvez modifier lorsqu'un nœud de stockage est à l'état disponible, en attente ou actif :
+
+
+NOTE: Si vous exécutez un cluster SolidFire Enterprise SDS, la plupart des paramètres réseau de l'interface utilisateur par nœud ne peuvent pas être modifiés après le déploiement d'un nœud.
+
+* *Méthode*
++
+Méthode utilisée pour configurer l'interface. Méthodes possibles :
+
++
+** Bouclage : permet de définir l'interface de bouclage IPv4.
+** Manual : permet de définir les interfaces pour lesquelles aucune configuration n'est effectuée par défaut.
+** dhcp : permet d'obtenir une adresse IP via DHCP.
+** Statique : permet de définir des interfaces Ethernet avec des adresses IPv4 allouées de manière statique.
+
+
+* *Vitesse de liaison*
++
+Vitesse négociée par la carte réseau virtuelle.
+
+* *Adresse IPv4*
++
+Adresse IPv4 du réseau eth0.
+
+* *Masque de sous-réseau IPv4*
++
+Subdivisions d'adresse du réseau IPv4.
+
+* *Adresse de passerelle IPv4*
++
+Adresse réseau du routeur pour envoyer des paquets hors du réseau local.
+
+* *Adresse IPv6*
++
+Adresse IPv6 du réseau eth0.
+
+* *Adresse de passerelle IPv6*
++
+Adresse réseau du routeur pour envoyer des paquets hors du réseau local.
+
+* *MTU*
++
+La plus grande taille de paquet qu'un protocole réseau peut transmettre. Doit être supérieur ou égal à 1500. Si vous ajoutez une deuxième carte réseau de stockage, la valeur doit être 9000.
+
+* *Serveurs DNS*
++
+Interface réseau utilisée pour la communication avec le cluster.
+
+* *Domaines de recherche*
++
+Recherchez les adresses MAC supplémentaires disponibles pour le système.
+
+* *Mode bond*
++
+Peut être l'un des modes suivants :
+
++
+** Activepassive (par défaut)
+** ALB
+** LACP
+
+
+* *Statut*
++
+Valeurs possibles :
+
++
+** UpAndRunning
+** Vers le bas
+** Haut
+
+
+* *Numéro de réseau virtuel*
++
+Balise attribuée lors de la création du réseau virtuel.
+
+* *Routes*
++
+Routes statiques vers des hôtes ou des réseaux spécifiques via l'interface associée que les routes sont configurées pour utiliser.
+
+

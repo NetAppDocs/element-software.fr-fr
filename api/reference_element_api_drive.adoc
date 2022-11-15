@@ -1,0 +1,176 @@
+---
+permalink: api/reference_element_api_drive.html 
+sidebar: sidebar 
+keywords: objects,object,drive 
+summary: 'L’objet lecteur contient des informations sur les lecteurs individuels des nœuds actifs du cluster. Cet objet contient des détails sur les disques qui ont été ajoutés sous forme de métadonnées de volume ou de lecteurs de bloc, ainsi que sur les disques qui n"ont pas encore été ajoutés et qui sont disponibles. Vous pouvez récupérer ces informations à l"aide de la méthode ListDrives API.' 
+---
+= lecteur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet lecteur contient des informations sur les disques individuels des nœuds actifs du cluster. Cet objet contient des détails sur les disques qui ont été ajoutés sous forme de métadonnées de volume ou de lecteurs de bloc, ainsi que sur les disques qui n'ont pas encore été ajoutés et qui sont disponibles. Vous pouvez récupérer ces informations à l'aide de `ListDrives` Méthode API.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON. Cet objet est toujours nul et ne peut pas être modifié.
+ a| 
+Objet JSON
+
+
+
+ a| 
+puissance
+ a| 
+Capacité totale du lecteur, en octets.
+ a| 
+entier
+
+
+
+ a| 
+ChassisSlot
+ a| 
+Pour les plateformes HCI, cette valeur correspond à la lettre de nœud et au numéro de slot dans le châssis serveur où se trouve ce lecteur. Pour les plates-formes de stockage, le numéro de slot est une représentation de chaîne de l'entier "slot".
+ a| 
+chaîne
+
+
+
+ a| 
+Description détaillée du mode de fonctionnement
+ a| 
+Si l'état d'un disque est « en panne », ce champ fournit plus de détails sur la raison pour laquelle le disque a été marqué comme défectueux.
+ a| 
+chaîne
+
+
+
+ a| 
+ID de conduite
+ a| 
+L'ID de ce lecteur.
+ a| 
+entier
+
+
+
+ a| 
+DeSecurityFaillReason
+ a| 
+En cas d'échec de l'activation ou de la désactivation de la sécurité du lecteur, la raison de son échec. Si la valeur est « none », il n'y a pas eu d'échec.
+ a| 
+chaîne
+
+
+
+ a| 
+KeyID
+ a| 
+ID de clé utilisé par le fournisseur de clés pour acquérir la clé d'authentification permettant de déverrouiller ce lecteur.
+ a| 
+UUID
+
+
+
+ a| 
+KeyProviderID
+ a| 
+Identifie le fournisseur de la clé d'authentification pour déverrouiller ce lecteur.
+ a| 
+entier
+
+
+
+ a| 
+ID de nœud
+ a| 
+ID du nœud contenant ce lecteur.
+ a| 
+entier
+
+
+
+ a| 
+Taille du fichier de segmentation
+ a| 
+Taille du fichier de segment du lecteur, en octets.
+ a| 
+entier
+
+
+
+ a| 
+série
+ a| 
+Numéro de série du disque.
+ a| 
+chaîne
+
+
+
+ a| 
+fente
+ a| 
+Numéro de logement dans le châssis du serveur où se trouve ce lecteur, ou -1 si un périphérique SATADimm est utilisé pour le lecteur de métadonnées interne.
+ a| 
+entier
+
+
+
+ a| 
+état
+ a| 
+L'état du lecteur. Valeurs possibles :
+
+* Disponible : lecteur disponible.
+* Actif : un lecteur actif.
+* Effacement : un lecteur est en cours d'effacement sécurisé. Toutes les données de ce disque sont définitivement supprimées.
+* Echec : lecteur défectueux. Toutes les données précédemment stockées sur le disque ont été migrées vers d'autres lecteurs du cluster.
+* Retrait : un lecteur est en cours de retrait. Toutes les données précédemment stockées sur le disque sont migrées vers d'autres disques du cluster.
+
+ a| 
+chaîne
+
+
+
+ a| 
+type
+ a| 
+Type de disque. Valeurs possibles :
+
+* Volume : stocke les métadonnées de volume.
+* Bloc : stocke les données de bloc.
+* Inconnu : le type de lecteur n'est pas encore actif et doit encore être déterminé.
+
+ a| 
+chaîne
+
+
+
+ a| 
+UStableCapacity
+ a| 
+Capacité utile du lecteur, en octets.
+ a| 
+entier
+
+|===
+
+
+== Trouvez plus d'informations
+
+xref:reference_element_api_listdrives.adoc[Lecteurs de listes]

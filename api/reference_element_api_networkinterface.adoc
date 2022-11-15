@@ -1,0 +1,125 @@
+---
+permalink: api/reference_element_api_networkinterface.html 
+sidebar: sidebar 
+keywords: object,objects,networkInterface 
+summary: 'L"objet Networkinterface contient des informations de configuration pour les interfaces réseau individuelles sur un nœud de stockage.' 
+---
+= Networkinterface
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet Networkinterface contient des informations de configuration pour les interfaces réseau individuelles sur un nœud de stockage.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+adresse
+ a| 
+Adresse de gestion IPv4 de l'interface.
+ a| 
+chaîne
+
+
+
+ a| 
+AdresseV6
+ a| 
+Adresse de gestion IPv6 de l'interface.
+ a| 
+chaîne
+
+
+
+ a| 
+diffusion
+ a| 
+Adresse de diffusion de l'interface.
+ a| 
+chaîne
+
+
+
+ a| 
+Adresse MAC
+ a| 
+Adresse MAC de l'interface.
+ a| 
+chaîne
+
+
+
+ a| 
+mtu
+ a| 
+Unité de transfert maximum, en octets, de l'interface.
+ a| 
+entier
+
+
+
+ a| 
+nom
+ a| 
+Nom de l'interface.
+ a| 
+chaîne
+
+
+
+ a| 
+espace de noms
+ a| 
+Indique si un espace de noms de réseau virtuel est attribué à cette interface.
+ a| 
+booléen
+
+
+
+ a| 
+masque de réseau
+ a| 
+Masque de sous-réseau de l'interface.
+ a| 
+chaîne
+
+
+
+ a| 
+état
+ a| 
+Statut opérationnel de l'interface.
+ a| 
+chaîne
+
+
+
+ a| 
+type
+ a| 
+Type d'interface (maître de liaison, esclave de liaison, etc.).
+ a| 
+chaîne
+
+
+
+ a| 
+VirtualNetworkTag
+ a| 
+ID VLAN attribué à l'interface sur le réseau virtuel.
+ a| 
+entier
+
+|===

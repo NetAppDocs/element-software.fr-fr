@@ -1,0 +1,60 @@
+---
+permalink: api/reference_element_api_getontapversioninfo.html 
+sidebar: sidebar 
+keywords: ontap,version,info,information,get,getting,api,support,getontapversioninfo 
+summary: 'L"interface utilisateur web d"Element utilise GetOntapourVersionInfo pour obtenir des informations sur la prise en charge de la version d"API à partir du cluster ONTAP dans une relation SnapMirror.' 
+---
+= GetOntapourVersionInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'interface utilisateur Web d'Element utilise `GetOntapVersionInfo` Pour obtenir des informations sur la prise en charge de la version d'API depuis le cluster ONTAP dans une relation SnapMirror.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+SnapMirrorEndpointID
+ a| 
+Le cas échéant, le système répertorie les informations de version du noeud final avec le MirrorsnapEndpointID spécifié. S'il n'est pas fourni, le système répertorie les informations de version de tous les terminaux SnapMirror connus.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+OntapVersionInfo
+ a| 
+Informations sur la version logicielle du noeud final ONTAP.
+ a| 
+xref:reference_element_api_ontapversioninfo.adoc[OntapVersionInfo] baie
+
+|===
+
+
+== Nouveau depuis la version
+
+10.1

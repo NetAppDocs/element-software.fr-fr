@@ -1,0 +1,193 @@
+---
+permalink: api/reference_element_api_nodestats.html 
+sidebar: sidebar 
+keywords: object,objects,nodestats 
+summary: 'L"objet nodeStats contient des mesures d"activité de haut niveau pour un nœud. Vous pouvez utiliser les méthodes de l"API GetNodeStats et ListNodeStats pour obtenir tout ou partie des objets nodeStats.' 
+---
+= Statistiques du nœud
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet nodeStats contient des mesures d'activité de haut niveau pour un nœud. Vous pouvez utiliser le `GetNodeStats` et `ListNodeStats` Méthodes API pour obtenir tout ou partie des objets nodeStats.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+nombre
+ a| 
+Nombre total d'échantillons dans l'objet nodeStats.
+ a| 
+entier
+
+
+
+ a| 
+processeur
+ a| 
+Utilisation du processeur, en %.
+ a| 
+entier
+
+
+
+ a| 
+CpuTotal
+ a| 
+Valeur de l'utilisation de l'uc en augmentation monotoniquement.
+ a| 
+entier
+
+
+
+ a| 
+CBytesIn
+ a| 
+Les octets de l'interface du cluster.
+ a| 
+entier
+
+
+
+ a| 
+CBytesOut
+ a| 
+Octets OUT sur l'interface de cluster.
+ a| 
+entier
+
+
+
+ a| 
+SBytesIn
+ a| 
+Octets de l'interface de stockage.
+ a| 
+entier
+
+
+
+ a| 
+SBytesOut
+ a| 
+Octets sortis sur l'interface de stockage.
+ a| 
+entier
+
+
+
+ a| 
+MBytesIn
+ a| 
+Les octets de l'interface de gestion.
+ a| 
+entier
+
+
+
+ a| 
+MBytesOut
+ a| 
+Octets sortis sur l'interface de gestion.
+ a| 
+entier
+
+
+
+ a| 
+NetworkUtiliationCluster
+ a| 
+Utilisation de l'interface réseau (en %) pour l'interface réseau du cluster.
+ a| 
+entier
+
+
+
+ a| 
+Netapphance Storage
+ a| 
+Utilisation de l'interface réseau (en %) pour l'interface réseau de stockage.
+ a| 
+entier
+
+
+
+ a| 
+ReadLatcyUSecTotal
+ a| 
+Valeur de la durée totale passée à effectuer des opérations de lecture sur le nœud par monotoniquement accrue.
+ a| 
+entier
+
+
+
+ a| 
+Opérations de lecture
+ a| 
+Valeur d'augmentation monotoniquement des opérations de lecture totales à un nœud.
+ a| 
+entier
+
+
+
+ a| 
+SsLoadHistogramme
+ a| 
+Histogramme des données illustrant la charge de service de coupe dans le temps.
+ a| 
+Objet JSON
+
+
+
+ a| 
+horodatage
+ a| 
+Heure actuelle au format UTC+0.
+ a| 
+Chaîne de date ISO 8601
+
+
+
+ a| 
+UsedMemory
+ a| 
+Utilisation totale de la mémoire en octets.
+ a| 
+entier
+
+
+
+ a| 
+WriteLatencyUSecTotal
+ a| 
+La valeur du temps total consacré aux opérations d'écriture sur le nœud augmente par monotoniquement.
+ a| 
+entier
+
+
+
+ a| 
+WriteOps
+ a| 
+Valeur d'écriture totale monotoniquement augmentée à un nœud.
+ a| 
+entier
+
+|===
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_getnodestats.adoc[GetNodeStats]
+* xref:reference_element_api_listnodestats.adoc[ListNodeStats]
+

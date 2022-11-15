@@ -1,0 +1,23 @@
+---
+permalink: storage/concept_intro_storage_nodes.html 
+sidebar: sidebar 
+keywords: storage nodes, management nodes, block space, metadata space, data management, storage management, Bond10G, network interface, network, metadata, data storage, storage, drives, network interfaces 
+summary: 'Un nœud de stockage SolidFire est un serveur qui contient un ensemble de disques qui communiquent entre eux via l"interface réseau Bond10G. Les disques du nœud contiennent des espaces de bloc et de métadonnées pour le stockage et la gestion des données.' 
+---
+= Nœuds de stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un nœud de stockage SolidFire est un serveur qui contient un ensemble de disques qui communiquent entre eux via l'interface réseau Bond10G. Les disques du nœud contiennent des espaces de bloc et de métadonnées pour le stockage et la gestion des données.
+
+Les caractéristiques des nœuds de stockage sont les suivantes :
+
+* Chaque nœud porte un nom unique. Si un nom de nœud n'est pas spécifié par un administrateur, il prend par défaut la valeur SF-XXXX, où XXXX correspond à quatre caractères aléatoires générés par le système.
+* Chaque nœud dispose de son propre cache d'écriture NVRAM haute performance pour améliorer les performances globales du système et réduire la latence d'écriture.
+* Chaque nœud est relié à deux réseaux, au stockage et à la gestion, chacun disposant de deux liens indépendants pour la redondance et la performance. Chaque nœud requiert une adresse IP sur chaque réseau.
+* Vous pouvez créer un cluster avec de nouveaux nœuds de stockage ou ajouter des nœuds de stockage à un cluster existant afin d'augmenter la capacité et les performances de stockage.
+* Vous pouvez ajouter ou supprimer des nœuds du cluster à tout moment, sans interruption de service.
+

@@ -1,0 +1,143 @@
+---
+permalink: api/reference_element_api_listvolumeqoshistograms.html 
+sidebar: sidebar 
+keywords: qos,usage,volume,histogram,generate,listvolumeqoshistograms,histograms 
+summary: 'Vous pouvez utiliser la méthode ListVolumeQoSHistogrammes pour générer un histogramme de l"utilisation de la QoS du volume pour un ou plusieurs volumes. Vous pourrez ainsi mieux comprendre comment les volumes utilisent la QoS.' 
+---
+= ListVolumeQoSHistogrammes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ListVolumeQoSHistograms` Méthode de génération d'un histogramme concernant l'utilisation de la QoS des volumes pour un ou plusieurs volumes. Vous pourrez ainsi mieux comprendre comment les volumes utilisent la QoS.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+ID de volume
+ a| 
+Liste facultative d'ID de volume spécifiant les volumes qui doivent avoir des histogrammes QoS générés.
+ a| 
+tableau entier
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Qoshistogrammes
+ a| 
+Liste d'objets décrivant l'utilisation du volume pour un ou plusieurs volumes.
+ a| 
+Baie d'objets JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+	"method": "ListVolumeQoSHistograms",
+		"params": {
+			"volumeIDs": [1]
+		},
+	"id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+	"id": 1,
+	"result": {
+		"qosHistograms": [
+		{
+			"histograms": {
+			"belowMinIopsPercentages": {
+				"Bucket1To19": 2406,
+				"Bucket20To39": 3,
+				"Bucket40To59": 0,
+				"Bucket60To79": 4,
+				"Bucket80To100": 0
+			},
+				"minToMaxIopsPercentages": {
+				"Bucket101Plus": 0,
+				"Bucket1To19": 0,
+				"Bucket20To39": 0,
+				"Bucket40To59": 2,
+				"Bucket60To79": 0,
+				"Bucket80To100": 0
+			},
+				"readBlockSizes": {
+				"Bucket131072Plus": 0,
+				"Bucket16384To32767": 0,
+				"Bucket32768To65535": 0,
+				"Bucket4096To8191": 0,
+				"Bucket65536To131071": 0,
+				"Bucket8192To16383": 0
+			},
+				"targetUtilizationPercentages": {
+				"Bucket0": 134943,
+				"Bucket101Plus": 0,
+				"Bucket1To19": 2409,
+				"Bucket20To39": 4,
+				"Bucket40To59": 0,
+				"Bucket60To79": 2,
+				"Bucket80To100": 0
+			},
+				"throttlePercentages": {
+				"Bucket0": 137358,
+				"Bucket1To19": 0,
+				"Bucket20To39": 0,
+				"Bucket40To59": 0,
+				"Bucket60To79": 0,
+				"Bucket80To100": 0
+			},
+				"writeBlockSizes": {
+				"Bucket131072Plus": 0,
+				"Bucket16384To32767": 0,
+				"Bucket32768To65535": 0,
+				"Bucket4096To8191": 0,
+				"Bucket65536To131071": 0,
+				"Bucket8192To16383": 0
+			}
+		},
+			"timestamp": "2018-06-21T18:45:52.010844Z",
+			"volumeID": 1
+		}
+	]
+}
+}
+----

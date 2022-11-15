@@ -1,0 +1,48 @@
+---
+permalink: storage/task_data_protection_create_a_volume_snapshot.html 
+sidebar: sidebar 
+keywords: volume snapshot, create, active volume, preserve volume 
+summary: 'Vous pouvez créer un snapshot d"un volume actif pour préserver l"image du volume à tout moment. Vous pouvez créer jusqu"à 32 copies Snapshot pour un seul volume.' 
+---
+= Créer un snapshot de volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer un snapshot d'un volume actif pour préserver l'image du volume à tout moment. Vous pouvez créer jusqu'à 32 copies Snapshot pour un seul volume.
+
+. Cliquez sur *Management* > *volumes*.
+. Cliquez sur l'icône *actions* du volume que vous souhaitez utiliser pour l'instantané.
+. Dans le menu qui s'affiche, sélectionnez *instantané*.
+. Dans la boîte de dialogue *Créer un instantané de volume*, entrez le nouveau nom d'instantané.
+. *Facultatif:* cochez la case *inclure l'instantané dans la réplication lorsqu'il est couplé* pour vous assurer que l'instantané est capturé dans la réplication lorsque le volume parent est couplé.
+. Pour définir la conservation de l'instantané, sélectionnez l'une des options suivantes :
++
+** Cliquez sur *conserver indéfiniment* pour conserver indéfiniment l'instantané sur le système.
+** Cliquez sur *Set Retention Period* et utilisez les champs de spin de date pour choisir une durée pour le système de conservation de l'instantané.
+
+
+. Pour créer un seul snapshot immédiat, effectuez les opérations suivantes :
++
+.. Cliquez sur *prendre un instantané maintenant*.
+.. Cliquez sur** Créer un instantané**.
+
+
+. Pour planifier l'exécution ultérieure de l'instantané, effectuez les opérations suivantes :
++
+.. Cliquez sur *Créer une planification d'instantanés*.
+.. Saisissez un *Nouveau nom d'horaire*.
+.. Choisissez un *Type d'horaire* dans la liste.
+.. *Facultatif :* cochez la case *Programme récurrent* pour répéter l'instantané programmé périodiquement.
+.. Cliquez sur *Créer un programme*.
+
+
+
+
+
+
+== Trouvez plus d'informations
+
+xref:task_data_protection_schedule_a_snapshot_task.adoc[Planifier un snapshot]

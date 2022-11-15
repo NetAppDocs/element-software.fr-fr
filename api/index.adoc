@@ -1,0 +1,51 @@
+---
+permalink: api/index.html 
+sidebar: sidebar 
+keywords: element, api, storage, manage, cluster, volumes, json, rpc, https 
+summary: 'Découvrez comment gérer les clusters de stockage NetApp Element à l"aide de l"API Element.' 
+---
+= Gérez le stockage avec l'API Element
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez gérer des clusters de stockage Element à l'aide de l'API du logiciel Element.
+
+L'API Element est basée sur le protocole JSON-RPC sur HTTPS. JSON-RPC est un protocole RPC simple basé sur du texte basé sur le format JSON de données-InterChange léger. Les bibliothèques clientes sont disponibles pour tous les principaux langages de programmation.
+
+* xref:concept_element_api_about_the_api.adoc[À propos de l'API du logiciel Element]
+* xref:concept_element_api_common_objects.adoc[Objets communs]
+* xref:concept_element_api_common_methods.adoc[Méthodes communes]
+* xref:concept_element_api_account_api_methods.adoc[Méthodes d'API de compte]
+* xref:concept_element_api_administrator_api_methods.adoc[Méthodes de l'API de l'administrateur]
+* xref:concept_element_api_cluster_api_methods.adoc[Méthodes d'API du cluster]
+* xref:concept_element_api_create_cluster_api_methods.adoc[Méthodes d'API de création du cluster]
+* xref:concept_element_api_drive_api_methods.adoc[Méthodes d'API de lecteur]
+* xref:concept_element_api_fibre_channel_api_methods.adoc[Méthodes API Fibre Channel]
+* xref:concept_element_api_initiator_api_methods.adoc[Méthodes de l'API de l'initiateur]
+* xref:concept_element_api_ldap_api_methods.adoc[Méthodes d'API LDAP]
+* xref:concept_element_api_multi_factor_authentication_api_methods.adoc[Méthodes d'API d'authentification multifacteur]
+* xref:concept_element_api_session_authentication_api_methods.adoc[Méthodes API d'authentification de session]
+* xref:concept_element_api_node_api_methods.adoc[Méthodes d'API des nœuds]
+* xref:concept_element_api_replication_api_methods.adoc[Méthodes d'API de réplication]
+* xref:concept_element_api_security_api_methods.adoc[Méthodes API de sécurité]
+* xref:concept_element_api_snapmirror_api_methods.adoc[Méthodes d'API SnapMirror]
+* xref:concept_element_api_system_configuration_api_methods.adoc[Méthodes API de configuration du système]
+* xref:concept_element_api_multitenant_networking_api_methods.adoc[Méthodes d'API de mise en réseau mutualisée]
+* xref:concept_element_api_volume_api_methods.adoc[Méthodes d'API de volume]
+* xref:concept_element_api_volume_access_group_api_methods.adoc[Méthodes d'API de groupe d'accès aux volumes]
+* xref:concept_element_api_volume_snapshot_api_methods.adoc[Méthodes d'API de snapshot de volume]
+* xref:concept_element_api_vvols_api_methods.adoc[Méthodes d'API de volume virtuel]
+* xref:reference_element_api_app_b_access_control.adoc[Contrôle d'accès]
+* xref:concept_element_api_response_examples.adoc[Exemples de réponse]
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources de stockage 100 % Flash de SolidFire"^]
+* http://docs.netapp.com/sfe-122/index.jsp["Centre de documentation des logiciels SolidFire et Element"^]
+

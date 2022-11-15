@@ -1,0 +1,38 @@
+---
+permalink: setup/concept_setup_fc_configure_a_fibre_channel_node.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Les nœuds Fibre Channel permettent de connecter le cluster à une structure réseau Fibre Channel. Les nœuds Fibre Channel sont ajoutés par paires et fonctionnent en mode actif-actif \(tous les nœuds traitent activement le trafic pour le cluster\). Les clusters qui exécutent la version 9.0 ou ultérieure du logiciel Element prennent en charge jusqu"à quatre nœuds ; les clusters qui exécutent des versions précédentes prennent en charge jusqu"à deux nœuds.' 
+---
+= Configurez un nœud Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les nœuds Fibre Channel permettent de connecter le cluster à une structure réseau Fibre Channel. Les nœuds Fibre Channel sont ajoutés par paires et fonctionnent en mode actif-actif (tous les nœuds traitent activement le trafic pour le cluster). Les clusters qui exécutent la version 9.0 ou ultérieure du logiciel Element prennent en charge jusqu'à quatre nœuds ; les clusters qui exécutent des versions précédentes prennent en charge jusqu'à deux nœuds.
+
+Avant de configurer un nœud Fibre Channel, vous devez vous assurer que les conditions suivantes sont remplies :
+
+* Au moins deux nœuds Fibre Channel sont connectés aux commutateurs Fibre Channel.
+* Tous les ports Fibre Channel SolidFire doivent être connectés à votre structure Fibre Channel. Les quatre connexions réseau Bond10G SolidFire doivent être connectées par un groupe de liens LACP au niveau du switch. Cela permettra d'optimiser les performances globales des systèmes Fibre Channel.
+* Consultez et vérifiez toutes les meilleures pratiques relatives aux clusters Fibre Channel inclus dans cet article de la base de connaissances NetApp.
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/SolidFire_FC_cluster_best_practice["Meilleures pratiques pour les clusters FC SolidFire"]
+
+
+
+Les étapes de configuration du réseau et du cluster sont les mêmes pour les nœuds de stockage et les nœuds Fibre Channel.
+
+Lorsque vous créez un nouveau cluster avec des nœuds Fibre Channel et des nœuds de stockage SolidFire, les adresses WWPN (World port Name) des nœuds sont disponibles dans l'interface utilisateur d'Element. Vous pouvez utiliser les adresses WWPN pour segmenter le commutateur Fibre Channel.
+
+Les WWPN sont enregistrés dans le système lorsque vous créez un nouveau cluster avec des nœuds. Dans l'interface utilisateur d'Element, vous trouverez les adresses WWPN à partir de la colonne WWPN de l'onglet ports FC, accessible depuis l'onglet Cluster.
+
+
+
+== Trouvez plus d'informations
+
+xref:task_setup_fc_add_fibre_channel_nodes_to_a_cluster.adoc[Ajout de nœuds Fibre Channel à un cluster]
+
+xref:task_setup_fc_create_a_new_cluster_with_fibre_channel_nodes.adoc[Créez un nouveau cluster avec des nœuds Fibre Channel]

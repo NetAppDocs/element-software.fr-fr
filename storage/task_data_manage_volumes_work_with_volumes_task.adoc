@@ -1,0 +1,31 @@
+---
+permalink: storage/task_data_manage_volumes_work_with_volumes_task.html 
+sidebar: sidebar 
+keywords: volumes, work, storage, iscsi, fc, cluster data management, overview of functions 
+summary: 'Le système SolidFire provisionne le stockage à l"aide de volumes. Les volumes sont des périphériques de bloc accessibles sur le réseau par des clients iSCSI ou Fibre Channel. Dans la page volumes de l"onglet gestion, vous pouvez créer, modifier, cloner et supprimer des volumes d"un nœud. Vous pouvez également consulter des statistiques sur la bande passante du volume et sur l"utilisation des E/S.' 
+---
+= Utilisation de volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le système SolidFire provisionne le stockage à l'aide de volumes. Les volumes sont des périphériques de bloc accessibles sur le réseau par des clients iSCSI ou Fibre Channel. Dans la page volumes de l'onglet gestion, vous pouvez créer, modifier, cloner et supprimer des volumes d'un nœud. Vous pouvez également consulter des statistiques sur la bande passante du volume et sur l'utilisation des E/S.
+
+
+
+== Trouvez plus d'informations
+
+* link:concept_data_manage_volumes_quality_of_service_policies.html["Gestion des règles de qualité de service"]
+* link:task_data_manage_volumes.html#create-a-volume["Créer un volume"]
+* link:task_data_manage_volumes.html#view-volume-details["Consultez les détails de performances de chaque volume"]
+* link:task_data_manage_volumes.html#edit-active-volumes["Modifier les volumes actifs"]
+* link:task_data_manage_volumes.html#delete-a-volume["Supprimer un volume"]
+* link:task_data_manage_volumes.html#restore-a-deleted-volume["Restaurer un volume supprimé"]
+* link:task_data_manage_volumes.html#purge-a-volume["Purger un volume"]
+* link:task_data_manage_volumes.html#clone-a-volume["Clonez un volume"]
+* link:task_data_manage_volumes_assign_luns_to_fibre_channel_volumes.html["Attribuez des LUN aux volumes Fibre Channel"]
+* link:task_data_manage_volumes_apply_a_qos_policy.html["Appliquer une policy de QoS aux volumes"]
+* link:task_data_manage_volumes_remove_a_qos_policy_association_of_a_volume.html["Ne supprime pas l'association de la policy QoS d'un volume"]
+

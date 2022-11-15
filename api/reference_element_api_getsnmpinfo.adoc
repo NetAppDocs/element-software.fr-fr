@@ -1,0 +1,127 @@
+---
+permalink: api/reference_element_api_getsnmpinfo.html 
+sidebar: sidebar 
+keywords: snmp,information,info,get,getting 
+summary: 'Vous pouvez utiliser la méthode GetSmpInfo pour obtenir les informations de configuration actuelles du protocole simple de gestion de réseau \(SNMP\).' 
+---
+= GetSmpInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetSnmpInfo` Méthode d'obtention des informations de configuration actuelles sur le protocole SNMP (simple Network Management Protocol).
+
+
+
+== Paramètres
+
+
+NOTE: GetSmpInfo est obsolète pour les versions ultérieures à la version 8.0 d'Element. Le xref:reference_element_api_getsnmpstate.adoc[GetSmpState] et xref:reference_element_api_setsnmpacl.adoc[SetSMPACL] Les méthodes remplacent la méthode GetSnmpInfo.
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+réseaux
+ a| 
+Liste des réseaux et types d'accès activés pour SNMP. *Remarque :* les réseaux ne s'affichent que si SNMP v3 est désactivé.
+ a| 
+xref:reference_element_api_network_snmp.adoc[le réseau]
+
+
+
+ a| 
+activé
+ a| 
+Indique si les nœuds du cluster sont configurés pour SNMP. Valeurs possibles :
+
+* vrai
+* faux
+
+ a| 
+booléen
+
+
+
+ a| 
+SnmpV3Enabled
+ a| 
+Si le nœud du cluster est configuré pour SNMP v3. Valeurs possibles :
+
+* vrai
+* faux
+
+ a| 
+booléen
+
+
+
+ a| 
+Utilisateurs
+ a| 
+Si SNMP v3 est activé, une liste des paramètres d'accès utilisateur pour SNMP est renvoyée du cluster. Cette valeur est renvoyée à la place du paramètre réseaux.
+ a| 
+xref:reference_element_api_usmuser.adoc[Utilisateur]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "GetSnmpInfo",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id" : 1,
+   "result" : {
+      "enabled" : true,
+      "networks" : [
+         {
+            "access" : "rosys",
+            "cidr" : 0,
+            "community" : "public",
+            "network" : "localhost"
+         }
+      ]
+   }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6
+
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_getsnmpstate.adoc[GetSmpState]
+* xref:reference_element_api_setsnmpacl.adoc[SetSMPACL]
+

@@ -1,0 +1,199 @@
+---
+permalink: hardware/task_sfseries_driverepl.html 
+sidebar: sidebar 
+keywords: SSDs, drives, replacement, sf-series, nodes 
+summary: Vous pouvez remplacer à chaud un disque SSD défectueux. 
+---
+= Remplacement de disques par des nœuds de stockage SF-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez remplacer à chaud un disque SSD défectueux.
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous avez un disque de remplacement.
+* Vous avez un bracelet antistatique (ESD), ou vous avez pris d'autres précautions antistatiques.
+* Vous avez contacté le support NetApp afin de vérifier que le disque SSD doit être remplacé et que la procédure de résolution est appropriée.
++
+Lorsque vous appelez le support NetApp, vous aurez besoin du numéro de série ou du numéro de service. L'assistance vous fournira un disque de remplacement conformément à votre contrat de niveau de service.
+
+
+
+Ces instructions s'appliquent aux modèles de nœuds de stockage SolidFire suivants :
+
+* SF2405
+* SF4805
+* SF9605
+* SF9608
+* SF19210
+* SF38410
+
+
+[NOTE]
+====
+Les nœuds suivants ne sont pas pris en charge en fonction de la version du logiciel Element :
+
+* À partir des nœuds de stockage Element 12.7, SF2405 et SF9608.
+* À partir des nœuds de stockage Element 12.0, SF3010, SF6010 et SF9010.
+
+
+====
+La figure suivante montre le positionnement des entraînements dans un châssis SF9605 :
+
+image::../media/sf_drives.gif[Cette figure montre les lecteurs du châssis SolidFire.]
+
+
+NOTE: La figure ci-dessus est un exemple. Le système SF9608 a une disposition de disque différente qui inclut seulement huit disques numérotés de un à huit, de gauche à droite.
+
+Le slot 0 contient le lecteur de métadonnées pour le nœud. Si vous remplacez le disque dans le slot 0, vous devez attacher l'autocollant inclus dans la boîte d'expédition sur le disque de remplacement afin que vous puissiez l'identifier séparément des autres disques.
+
+[NOTE]
+====
+Suivez ces bonnes pratiques lors de la gestion des disques :
+
+* Pour éviter les décharges électrostatiques (ESD), gardez le lecteur dans le sac ESD jusqu'à ce que vous soyez prêt à l'installer.
+* N'insérez pas d'outil métallique ou de couteau dans le sac ESD.
+* Ouvrez le sac ESD à la main ou coupez le dessus avec une paire de ciseaux.
+* Conservez le sac ESD et tous les matériaux d'emballage au cas où vous devrez retourner un disque plus tard.
+* Portez toujours un bracelet antistatique relié à la terre sur une surface non peinte du châssis.
+* Utilisez toujours les deux mains lors du retrait, de l'installation ou du transport d'un lecteur.
+* Ne forcez jamais un lecteur dans le châssis.
+* Ne pas empiler les disques les uns sur les autres.
+* Lors de l'expédition des disques, utilisez toujours l'emballage approuvé.
+
+
+====
+Voici une présentation générale des étapes à suivre :
+
+*  the drive from the cluster
+*  the drive from the chassis
+*  the drive to the cluster
+
+
+
+
+== Retirer le lecteur du cluster
+
+Le système SolidFire met un disque en panne si l'auto-diagnostic du disque indique au nœud qu'il est en panne ou si la communication avec le disque s'arrête pendant cinq minutes et demie au moins. Le système affiche la liste des disques défectueux. Vous devez supprimer un disque défectueux de la liste des disques défectueux dans le logiciel NetApp Element.
+
+.Étapes
+. Dans l'interface utilisateur de l'élément, sélectionnez *Cluster* > *Drives*.
+. Sélectionnez *FAILED* pour afficher la liste des disques défectueux.
+. Notez le numéro de slot du disque défaillant.
++
+Vous avez besoin de ces informations pour localiser le lecteur défectueux dans le châssis.
+
+. Retirez le disque défectueux à l'aide de l'une des méthodes suivantes :
++
+[cols="2*"]
+|===
+| Option | Étapes 
+
+
+ a| 
+Pour supprimer des lecteurs individuels
+ a| 
+.. Sélectionnez *actions* pour le lecteur que vous souhaitez supprimer.
+.. Sélectionnez *Supprimer*.
+
+
+
+
+ a| 
+Pour supprimer plusieurs lecteurs
+ a| 
+.. Sélectionnez tous les lecteurs que vous souhaitez supprimer, puis sélectionnez *actions groupées*.
+.. Sélectionnez *Supprimer*.
+
+
+|===
+
+
+
+
+== Remplacez le lecteur du châssis
+
+Après avoir retiré un disque défectueux de la liste des disques défectueux dans l'interface utilisateur d'Element, vous êtes prêt à remplacer physiquement le disque défectueux du châssis.
+
+.Étapes
+. Déballez le lecteur de remplacement et placez-le sur une surface plane et sans électricité statique près du rack.
++
+Enregistrez les matériaux d'emballage lorsque vous renvoyez le disque défectueux à NetApp.
+
+. Faites correspondre le numéro de slot du disque défectueux dans l'interface utilisateur d'Element avec le numéro sur le châssis.
++
+La figure suivante illustre la numérotation des emplacements de lecteur :
+
++
+image::../media/sf_series_drive_numbers.gif[Cette figure illustre la numérotation des lecteurs pour les nœuds de stockage SolidFire.]
+
++
+[cols="2*"]
+|===
+| Élément | Description 
+
+
+ a| 
+1
+ a| 
+Numéros des connecteurs de lecteur
+
+|===
+. Appuyez sur le cercle rouge du lecteur que vous souhaitez retirer pour libérer le lecteur.
++
+Le loquet s'ouvre.
+
+. Faites glisser le lecteur hors du châssis et placez-le sur une surface plane et non statique.
+. Appuyez sur le cercle rouge du lecteur de remplacement avant de le faire glisser dans le logement.
+. Insérez le lecteur de remplacement et appuyez sur le cercle rouge pour fermer le loquet.
+. Informer le support NetApp sur le remplacement des disques.
++
+Le support NetApp vous fournira des instructions pour renvoyer le disque défectueux.
+
+
+
+
+
+== Ajoutez le lecteur au cluster
+
+Après avoir installé un nouveau lecteur dans le châssis, il s'enregistre comme disponible. Vous devez ajouter le disque au cluster à l'aide de l'interface utilisateur d'Element avant qu'il ne puisse participer au cluster.
+
+.Étapes
+. Dans l'interface utilisateur de l'élément, cliquez sur *Cluster* > *Drives*.
+. Cliquez sur *disponible* pour afficher la liste des lecteurs disponibles.
+. Choisissez l'une des options suivantes pour ajouter des lecteurs :
++
+[cols="2*"]
+|===
+| Option | Étapes 
+
+
+ a| 
+Pour ajouter des lecteurs individuels
+ a| 
+.. Sélectionnez le bouton *actions* pour le lecteur que vous souhaitez ajouter.
+.. Sélectionnez *Ajouter*.
+
+
+
+
+ a| 
+Pour ajouter plusieurs disques
+ a| 
+.. Cochez les cases des lecteurs à ajouter, puis sélectionnez *actions groupées*.
+.. Sélectionnez *Ajouter*.
+
+
+|===
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

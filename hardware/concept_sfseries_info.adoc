@@ -1,0 +1,32 @@
+---
+permalink: hardware/concept_sfseries_info.html 
+sidebar: sidebar 
+keywords: sf-series nodes, hardware installation, hardware maintenance 
+summary: 'Des informations sur l"installation et la maintenance des nœuds de stockage SF-Series sont disponibles.' 
+---
+= Informations sur le matériel SF-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Des informations sur l'installation et la maintenance des nœuds de stockage SF-Series sont disponibles.
+
+Voici les liens vers le contenu de l'installation et de la maintenance :
+
+* link:../media/c-series-isi.pdf["Installez et configurez les nœuds SolidFire C-Series"^]
+* link:../media/fc-getting-started-guide.pdf["Installez et configurez les nœuds Fibre Channel"^]
+* link:../media/solidfire-10-getting-started-guide.pdf["Installez et configurez les nœuds de stockage SF-Series"^]
+* link:task_sfseries_chassisrepl.html["Remplacez un châssis"^]
+* link:task_sfseries_driverepl.html["Remplacez les disques"^]
+* link:task_sfseries_psurepl.html["Remplacez une unité d'alimentation"^]
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

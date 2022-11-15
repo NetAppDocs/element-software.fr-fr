@@ -1,0 +1,158 @@
+---
+permalink: api/reference_element_api_listnetworkinterfaces.html 
+sidebar: sidebar 
+keywords: network,interface,interfaces,list,listing,listnetworkinterfaces 
+summary: 'Vous pouvez utiliser la méthode ListNetworkinterfaces pour lister les informations relatives à chaque interface réseau sur un nœud. Cette méthode d"API est destinée à être utilisée sur des nœuds individuels. L"authentification par ID utilisateur et mot de passe est requise pour l"accès aux nœuds individuels. Cependant, vous pouvez utiliser cette méthode sur le cluster si la force du paramètre reçoit la valeur true dans l"appel de méthode. Lorsque le paramètre est utilisé sur le cluster, toutes les interfaces sont répertoriées.' 
+---
+= ListNetworkinterfaces
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `ListNetworkInterfaces` méthode permettant de lister des informations sur chaque interface réseau sur un nœud. Cette méthode d'API est destinée à être utilisée sur des nœuds individuels. L'authentification par ID utilisateur et mot de passe est requise pour l'accès aux nœuds individuels. Cependant, vous pouvez utiliser cette méthode sur le cluster si la force du paramètre reçoit la valeur true dans l'appel de méthode. Lorsque le paramètre est utilisé sur le cluster, toutes les interfaces sont répertoriées.
+
+
+NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+de force
+ a| 
+Valeurs possibles :
+
+* True : les informations relatives à toutes les interfaces réseau du cluster sont renvoyées.
+* Faux : aucune information n'est renvoyée.
+
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+interfaces
+ a| 
+Une liste d'informations de configuration pour chaque interface réseau du nœud de stockage (ou cluster de stockage entier, si force =) `true`).
+ a| 
+xref:reference_element_api_networkinterface.adoc[Networkinterface] baie
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+"method": "ListNetworkInterfaces",
+"params": {},
+"id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+	"id": 1,
+	"result": {
+		"nodes": [
+			{
+				"nodeID": 1,
+				"result": {
+					"interfaces": [
+						{
+							"address": "10.117.80.32",
+							"addressV6": "::",
+							"broadcast": "10.117.95.255",
+							"macAddress": "90:b1:1c:42:e0:1a",
+							"mtu": 9000,
+							"name": "Bond10G",
+							"namespace": false,
+							"netmask": "255.255.240.0",
+							"status": "UpAndRunning",
+							"type": "BondMaster",
+							"virtualNetworkTag": 0
+						},
+						{
+							"address": "10.117.64.32",
+							"addressV6": "::",
+							"broadcast": "10.117.79.255",
+							"macAddress": "90:b1:1c:42:e0:1e",
+							"mtu": 1500,
+							"name": "Bond1G",
+							"namespace": false,
+							"netmask": "255.255.240.0",
+							"status": "UpAndRunning",
+							"type": "BondMaster",
+							"virtualNetworkTag": 0
+						},
+						{
+							"address": "0.0.0.0",
+							"addressV6": "::",
+							"broadcast": "0.0.0.0",
+							"macAddress": "90:b1:1c:42:e0:1a",
+							"mtu": 9000,
+							"name": "eth0",
+							"namespace": false,
+							"netmask": "0.0.0.0",
+							"status": "UpAndRunning",
+							"type": "BondSlave",
+							"virtualNetworkTag": 0
+						},
+						{
+							"address": "127.0.0.1",
+							"addressV6": "::",
+							"broadcast": "0.0.0.0",
+							"macAddress": "00:00:00:00:00:00",
+							"mtu": 0,
+							"name": "lo",
+							"namespace": false,
+							"netmask": "0.0.0.0",
+							"status": "UpAndRunning",
+							"type": "Loopback",
+							"virtualNetworkTag": 0
+						}
+					]
+				}
+			}
+		]
+	}
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

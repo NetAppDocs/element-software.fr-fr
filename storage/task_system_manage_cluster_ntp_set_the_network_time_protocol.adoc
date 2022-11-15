@@ -1,0 +1,19 @@
+---
+permalink: storage/task_system_manage_cluster_ntp_set_the_network_time_protocol.html 
+sidebar: sidebar 
+keywords: set, ntp, broadcasts, query, updates, clocks, synchronize, 
+summary: 'Configuration du protocole NTP \(NTP\) peut être effectuée de deux façons : demander à chaque nœud d"un cluster d"écouter les diffusions ou demander à chaque nœud d"interroger un serveur NTP pour les mises à jour.' 
+---
+= Définissez le protocole de temps du réseau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La configuration du protocole NTP (Network Time Protocol) peut être effectuée de deux manières : demandez à chaque nœud d'un cluster d'écouter les diffusions ou demandez à chaque nœud d'interroger un serveur NTP pour les mises à jour.
+
+Le NTP est utilisé pour synchroniser les horloges sur un réseau. La connexion à un serveur NTP interne ou externe doit faire partie de la configuration initiale du cluster.
+
+
+NOTE: Cette fonctionnalité est indisponible dans les clusters SolidFire Enterprise SDS.

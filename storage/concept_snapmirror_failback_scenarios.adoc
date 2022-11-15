@@ -1,0 +1,35 @@
+---
+permalink: storage/concept_snapmirror_failback_scenarios.html 
+sidebar: sidebar 
+keywords: failback scenarios, snapmirror, dr, disaster recovery 
+summary: 'La fonctionnalité de reprise sur incident SnapMirror est illustrée dans deux scénarios de restauration. Ceux-ci supposent que la relation d"origine a échoué sur \(rompu\).' 
+---
+= Scénarios de restauration SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fonctionnalité de reprise sur incident SnapMirror est illustrée dans deux scénarios de restauration. Ceux-ci supposent que la relation d'origine a été rompue.
+
+Les étapes des procédures correspondantes sont ajoutées pour référence.
+
+
+NOTE: Dans les exemples ci-dessous, R1 = relation initiale où le cluster exécutant le logiciel NetApp Element est le volume source d'origine (Element) et ONTAP le volume de destination d'origine (ONTAP). R2 et R3 représentent les relations inverses créées via l'opération de resynchronisation inverse.
+
+L'image suivante montre le scénario de retour arrière lorsque le volume source est toujours présent :
+
+image::../media/snapmirror_element_failback1.gif[échec de l'élément snapmirror 1]
+
+L'image suivante montre le scénario de retour arrière lorsque le volume source n'existe plus :
+
+image::../media/snapmirror_element_failback2.png[basculement entre les éléments snapmirror 2]
+
+
+
+== Trouvez plus d'informations
+
+* xref:task_snapmirror_perform_failback_when_source_volume_exists.adoc[Effectuez une restauration lorsque le volume source existe toujours]
+* xref:task_snapmirror_performing_failback_when_source_volume_no_longer_exists.adoc[Effectuez une restauration lorsque le volume source n'existe plus]
+

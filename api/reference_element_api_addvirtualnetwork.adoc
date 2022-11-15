@@ -1,0 +1,206 @@
+---
+permalink: api/reference_element_api_addvirtualnetwork.html 
+sidebar: sidebar 
+keywords: addvirtualnetwork,cluster,add,adding,virtual,network 
+summary: Vous pouvez utiliser la méthode AddVirtualNetwork pour ajouter un nouveau réseau virtuel à une configuration de cluster. 
+---
+= Réseau AddVirtualNetwork
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `AddVirtualNetwork` méthode d'ajout d'un nouveau réseau virtuel à une configuration de cluster.
+
+Lorsque vous ajoutez un réseau virtuel, une interface pour chaque nœud est créée et chaque interface nécessite une adresse IP réseau virtuelle. Le nombre d'adresses IP que vous spécifiez en tant que paramètre de cette méthode d'API doit être égal ou supérieur au nombre de nœuds du cluster. Le système provisionne en bloc les adresses réseau virtuelles et les attribue automatiquement à des nœuds individuels. Il n'est pas nécessaire d'attribuer manuellement des adresses réseau virtuelles aux nœuds.
+
+
+NOTE: La méthode AddVirtualNetwork est utilisée uniquement pour créer un nouveau réseau virtuel. Si vous souhaitez apporter des modifications à un réseau virtuel existant, utilisez le xref:reference_element_api_modifyvirtualnetwork.adoc[ModilyVirtualNetwork] méthode.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+Verrous d'adresse
+ a| 
+Plage unique d'adresses IP à inclure dans le réseau virtuel. Membres requis pour l'objet :
+
+* Début : début de la plage d'adresses IP. (chaîne)
+* Taille : nombre d'adresses IP à inclure dans le bloc. (entier)
+
+ a| 
+Baie d'objets JSON
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+attributs
+ a| 
+Liste des paires nom-valeur au format d'objet JSON.
+ a| 
+Objet JSON
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+passerelle
+ a| 
+L'adresse IP d'une passerelle du réseau virtuel. Ce paramètre n'est valide que si le paramètre d'espace de noms est défini sur vrai.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+nom
+ a| 
+Nom défini par l'utilisateur pour le nouveau réseau virtuel.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+espace de noms
+ a| 
+Lorsque la valeur est définie sur true, active la fonctionnalité des VLAN de stockage routables en créant et en configurant un espace de noms et le réseau virtuel qu'il contient.
+ a| 
+booléen
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+masque de réseau
+ a| 
+Masque de réseau unique pour le réseau virtuel en cours de création.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+vit
+ a| 
+Adresse IP de stockage unique pour le réseau virtuel en cours de création.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+VirtualNetworkTag
+ a| 
+Une balise VLAN unique. Les valeurs prises en charge sont de 1 à 4094.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+*Remarque :* les paramètres de réseau virtuel doivent être uniques à chaque réseau virtuel lorsque vous définissez l'espace de noms sur FALSE.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+VirtualNetworkID
+ a| 
+ID réseau virtuel du nouveau réseau virtuel.
+ a| 
+entier
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "AddVirtualNetwork",
+  "params": {
+    "virtualNetworkTag": 2010,
+    "name": "network1",
+    "addressBlocks" : [
+        { "start": "192.86.5.1", "size": 10 },
+        { "start": "192.86.5.50", "size": 20 }
+    ],
+    "netmask" : "255.255.192.0",
+    "gateway" : "10.0.1.254",
+    "svip" : "192.86.5.200",
+    "attributes" : {}
+    "namespace" : true
+  },
+"id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+   "id": 1,
+   "result":
+      {
+        "virtualNetworkID": 5
+   }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

@@ -1,0 +1,40 @@
+---
+section: concepts
+title: Concepts
+url: "/concepts/index.html"
+entries:
+- title: Présentation du produit
+  url: "/concepts/concept_intro_product_overview.html"
+- title: Architecture et composants
+  url: "/concepts/concept_solidfire_concepts_solidfire_architecture_overview.html"
+  entries:
+  - title: Interfaces logicielles SolidFire
+    url: "/concepts/concept_intro_solidfire_software_interfaces.html"
+  - title: SolidFire Active IQ
+    url: "/concepts/concept_intro_solidfire_active_iq.html"
+  - title: Nœud de gestion pour le logiciel Element
+    url: "/concepts/concept_intro_management_node.html"
+  - title: Services de gestion pour le stockage 100 % Flash de SolidFire
+    url: "/concepts/concept_intro_management_services_for_afa.html"
+- title: Nœuds
+  url: "/concepts/concept_solidfire_concepts_nodes.html"
+- title: Clusters
+  url: "/concepts/concept_intro_clusters.html"
+- title: Sécurité
+  url: "/concepts/concept_solidfire_concepts_security.html"
+- title: Comptes et autorisations
+  url: "/concepts/concept_solidfire_concepts_accounts_and_permissions.html"
+- title: Stockage
+  entries:
+  - title: Volumes
+    url: "/concepts/concept_solidfire_concepts_volumes.html"
+  - title: Volumes virtuels (vvols)
+    url: "/concepts/concept_solidfire_concepts_vvols.html"
+  - title: Groupes d'accès de volume
+    url: "/concepts/concept_solidfire_concepts_volume_access_groups.html"
+  - title: Initiateurs
+    url: "/concepts/concept_solidfire_concepts_initiators.html"
+- title: Protection des données
+  url: "/concepts/concept_solidfire_concepts_data_protection.html"
+- title: La performance et la qualité de service
+  url: "/concepts/concept_data_manage_volumes_solidfire_quality_of_service.html"

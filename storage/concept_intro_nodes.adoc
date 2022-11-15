@@ -1,0 +1,14 @@
+---
+permalink: storage/concept_intro_nodes.html 
+sidebar: sidebar 
+keywords: sf-series nodes, nodes, block storage, storage nodes, fibre channel nodes, fc, FC 
+summary: 'Les nœuds sont les composants matériels individuels regroupés dans un cluster pour être accessibles en tant que stockage en mode bloc. Un système de stockage SolidFire comprend deux types de nœuds : les nœuds de stockage et les nœuds Fibre Channel.' 
+---
+= Nœuds
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les nœuds sont les composants matériels individuels regroupés dans un cluster pour être accessibles en tant que stockage en mode bloc. Un système de stockage SolidFire comprend deux types de nœuds : les nœuds de stockage et les nœuds Fibre Channel.

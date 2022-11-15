@@ -1,0 +1,90 @@
+---
+permalink: api/reference_element_api_modifysnapmirrorendpoint_unmanaged.html 
+sidebar: sidebar 
+keywords: modify,modifying,edit,editing,change,changing,snapmirror,endpoint,modifysnapmirrorendpoint 
+summary: 'Le logiciel Element utilise cette version de la méthode Modify SnapEndpoint pour modifier les attributs de nom de cluster de stockage ou d"adresse IP pour un noeud final SnapMirror non géré. Les terminaux non gérés ne peuvent pas être gérés à l"aide des API SnapMirror d"Element. Elles doivent être gérées à l"aide du logiciel de gestion ONTAP ou d"API.' 
+---
+= ModifiySnapMirror orEndpoint (non géré)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le logiciel Element utilise cette version du `ModifySnapMirrorEndpoint` Méthode de modification des attributs de nom ou d'adresse IP du cluster de stockage pour un noeud final SnapMirror non géré. Les terminaux non gérés ne peuvent pas être gérés à l'aide des API SnapMirror d'Element. Elles doivent être gérées à l'aide du logiciel de gestion ONTAP ou d'API.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+
+
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+SnapMirror nomdepointe
+ a| 
+SnapMirror terminal à modifier.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+Nom du cluster
+ a| 
+Le nouveau nom du noeud final.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+Adresses IP
+ a| 
+La nouvelle liste d'adresses IP d'un cluster de systèmes de stockage ONTAP qui doit communiquer avec ce cluster de stockage Element.
+ a| 
+tableau de chaînes
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+SnapMirrorEndpoint
+ a| 
+Informations sur le terminal SnapMirror modifié.
+ a| 
+xref:reference_element_api_snapmirrorendpoint.adoc[SnapMirrorEndpoint]
+
+|===
+
+
+== Nouveau depuis la version
+
+10.3

@@ -1,0 +1,175 @@
+---
+permalink: api/reference_element_api_network_local_interfaces.html 
+sidebar: sidebar 
+keywords: object,objects,network 
+summary: 'L"objet réseau \(interfaces locales\) contient des informations de configuration pour les interfaces réseau locales, telles que l"interface de bouclage, sur un nœud de stockage. Vous pouvez utiliser les méthodes getconfig et GetNetworkConfig pour obtenir ces informations pour un nœud de stockage.' 
+---
+= réseau (interfaces locales)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet réseau (interfaces locales) contient des informations de configuration pour les interfaces réseau locales, telles que l'interface de bouclage, sur un nœud de stockage. Vous pouvez utiliser le `GetConfig` et `GetNetworkConfig` méthodes d'obtention de ces informations pour un nœud de stockage.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+famille
+ a| 
+Famille d'adresses que l'interface est configurée pour utiliser. Actuellement, l'option « inet » pour IPv4 est prise en charge.
+ a| 
+chaîne
+
+
+
+ a| 
+Adresse MAC
+ a| 
+Adresse MAC réelle attribuée à l'interface et observée par le réseau.
+ a| 
+chaîne
+
+
+
+ a| 
+MacAddresspermanent
+ a| 
+Adresse MAC immuable attribuée par le fabricant à l'interface.
+ a| 
+chaîne
+
+
+
+ a| 
+méthode
+ a| 
+Méthode utilisée pour configurer l'interface. Valeurs possibles :
+
+* Bouclage : permet de définir l'interface de bouclage IPv4.
+* Manual : permet de définir les interfaces qui ne sont pas configurées automatiquement.
+* dhcp : peut être utilisé pour obtenir une adresse IP via DHCP.
+* Statique : permet de définir des interfaces Ethernet avec des adresses IPv4 allouées de manière statique.
+
+ a| 
+chaîne
+
+
+
+ a| 
+état
+ a| 
+État de l'interface. Valeurs possibles :
+
+* Down : l'interface est inactive.
+* Up : l'interface est prête, mais n'a pas de lien.
+* UpAndRunning : l'interface est prête et un lien est établi.
+
+ a| 
+chaîne
+
+
+
+ a| 
+UpAndRunning
+ a| 
+Indique si l'interface est prête et possède un lien.
+ a| 
+booléen
+
+|===
+
+
+== Modification du membre et état du nœud
+
+Ce tableau indique si les paramètres de l'objet peuvent être modifiés à chaque état de nœud possible.
+
+|===
+
+
+| Nom du paramètre | État disponible | État en attente | État actif 
+
+
+ a| 
+famille
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+Adresse MAC
+ a| 
+Configuré par système
+ a| 
+S/O
+ a| 
+S/O
+
+
+
+ a| 
+MacAddresspermanent
+ a| 
+Configuré par système
+ a| 
+S/O
+ a| 
+S/O
+
+
+
+ a| 
+méthode
+ a| 
+Non
+ a| 
+Non
+ a| 
+Non
+
+
+
+ a| 
+état
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+UpAndRunning
+ a| 
+Configuré par système
+ a| 
+S/O
+ a| 
+S/O
+
+|===
+
+
+== Trouvez plus d'informations
+
+* xref:reference_element_api_getconfig.adoc[Getconfig]
+* xref:reference_element_api_getnetworkconfig.adoc[GetNetworkConfig]
+

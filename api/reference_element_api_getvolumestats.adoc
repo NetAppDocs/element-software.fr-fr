@@ -1,0 +1,130 @@
+---
+permalink: api/reference_element_api_getvolumestats.html 
+sidebar: sidebar 
+keywords: volume,volumes,get,getting,stats,measurements,activity,getvolumestats 
+summary: 'Vous pouvez utiliser la méthode GetVolumeStats pour obtenir des mesures d"activité de haut niveau pour un seul volume. Les valeurs sont cumulatives à partir de la création du volume.' 
+---
+= GetVolumeStats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetVolumeStats` méthode permettant d'obtenir des mesures d'activité de haut niveau pour un seul volume. Les valeurs sont cumulatives à partir de la création du volume.
+
+
+
+== Paramètre
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+ID de volume
+ a| 
+Spécifie le volume pour lequel les statistiques sont rassemblées.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Statistiques volume
+ a| 
+Informations sur l'activité de volume.
+ a| 
+xref:reference_element_api_volumestats.adoc[Statistiques volume]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+   "method": "GetVolumeStats",
+   "params": {
+      "volumeID": 32
+   },
+   "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "volumeStats": {
+      "accountID": 1,
+      "actualIOPS": 0,
+      "asyncDelay": null,
+      "averageIOPSize": 0,
+      "burstIOPSCredit": 0,
+      "clientQueueDepth": 0,
+      "desiredMetadataHosts": null,
+      "latencyUSec": 0,
+      "metadataHosts": {
+        "deadSecondaries": [],
+        "liveSecondaries": [
+          32
+        ],
+        "primary": 60
+      },
+      "nonZeroBlocks": 0,
+      "readBytes": 0,
+      "readBytesLastSample": 0,
+      "readLatencyUSec": 0,
+      "readOps": 0,
+      "readOpsLastSample": 0,
+      "samplePeriodMSec": 0,
+      "throttle": 0,
+      "timestamp": "2016-04-01T21:01:39.130840Z",
+      "unalignedReads": 0,
+      "unalignedWrites": 0,
+      "volumeAccessGroups": [],
+      "volumeID": 1,
+      "volumeSize": 5000658944,
+      "volumeUtilization": 0,
+      "writeBytes": 0,
+      "writeBytesLastSample": 0,
+      "writeLatencyUSec": 0,
+      "writeOps": 0,
+      "writeOpsLastSample": 0,
+      "zeroBlocks": 1220864
+    }
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

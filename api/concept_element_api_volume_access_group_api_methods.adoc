@@ -1,0 +1,33 @@
+---
+permalink: api/concept_element_api_volume_access_group_api_methods.html 
+sidebar: sidebar 
+keywords: volume,access,group,method,methods,API,managing,manage 
+summary: 'Les méthodes de groupe d"accès aux volumes vous permettent d"ajouter, de supprimer, d"afficher et de modifier des groupes d"accès aux volumes, qui sont des ensembles de volumes auxquels les utilisateurs peuvent accéder à l"aide d"initiateurs iSCSI ou Fibre Channel.' 
+---
+= Méthodes d'API de groupe d'accès aux volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les méthodes de groupe d'accès aux volumes vous permettent d'ajouter, de supprimer, d'afficher et de modifier des groupes d'accès aux volumes, qui sont des ensembles de volumes auxquels les utilisateurs peuvent accéder à l'aide d'initiateurs iSCSI ou Fibre Channel.
+
+* xref:reference_element_api_addinitiatorstovolumeaccessgroup.adoc[AddInitiatorsToVolumeAccessGroup]
+* xref:reference_element_api_addvolumestovolumeaccessgroup.adoc[AddVolumesToVolumeAccessGroup]
+* xref:reference_element_api_createvolumeaccessgroup.adoc[CreateVolumeAccessGroup]
+* xref:reference_element_api_deletevolumeaccessgroup.adoc[DeleteVolumeAccessGroup]
+* xref:reference_element_api_listvolumeaccessgroups.adoc[Groupes d'accès ListVolume]
+* xref:reference_element_api_removevolumesfromvolumeaccessgroup.adoc[RemoveVolumesFromVolumeAccessGroup]
+* xref:reference_element_api_removeinitiatorsfromvolumeaccessgroup.adoc[RemoveInitiatorsFromVolumeAccessGroup]
+* xref:reference_element_api_modifyvolumeaccessgroup.adoc[ModityVolumeAccessGroup]
+* xref:reference_element_api_getvolumeaccessgroupefficiency.adoc[Efficacité GetVolumeAccessGroupacité]
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

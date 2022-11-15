@@ -1,0 +1,32 @@
+---
+permalink: storage/concept_system_manage_nodes_node_versioning_and_compatibility.html 
+sidebar: sidebar 
+keywords: compatibility, node version, clusters, software version, compatible versions, major, minor, micro 
+summary: 'La compatibilité des nœuds repose sur la version du logiciel Element installée sur un nœud. Si le nœud et le cluster n"exécutent pas de versions compatibles, les clusters de stockage logiciel Element s"Images automatiquement d"un nœud sur la version du logiciel Element.' 
+---
+= Gestion des versions de nœud et compatibilité
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La compatibilité des nœuds repose sur la version du logiciel Element installée sur un nœud. Si le nœud et le cluster n'exécutent pas de versions compatibles, les clusters de stockage logiciel Element s'Images automatiquement d'un nœud sur la version du logiciel Element.
+
+La liste suivante décrit les niveaux de signification de la version du logiciel qui constituent le numéro de version du logiciel Element :
+
+* *Majeur*
++
+Le premier numéro désigne une version logicielle. Un nœud avec un numéro de composant majeur ne peut pas être ajouté à un cluster contenant des nœuds d'un numéro de patch majeur différent, ni un cluster peut être créé avec des nœuds de versions majeures mixtes.
+
+* *Mineur*
++
+Le deuxième nombre désigne les fonctionnalités logicielles plus petites ou les améliorations apportées aux fonctions logicielles existantes qui ont été ajoutées à une version majeure. Ce composant est incrémenté dans un composant de version majeure pour indiquer que cette version incrémentielle n'est pas compatible avec d'autres versions incrémentielles du logiciel Element avec un composant mineur différent. Par exemple, 11.0 n'est pas compatible avec 11.1 et 11.1 n'est pas compatible avec 11.2.
+
+* *Micro*
++
+Le troisième nombre désigne un correctif compatible (version incrémentielle) à la version logicielle de l'élément représentée par les composants majeur.mineur. Par exemple, 11.0.1 est compatible avec 11.0.2 et 11.0.2 avec 11.0.3.
+
+
+
+Les numéros de version majeurs et mineurs doivent correspondre à la compatibilité. Les micro-numéros ne doivent pas nécessairement correspondre pour la compatibilité.

@@ -1,0 +1,41 @@
+---
+permalink: storage/concept_system_manage_nodes_cluster_capacity_in_a_mixed_node_environment.html 
+sidebar: sidebar 
+keywords: nodes, mixed environment, capacity, cluster capacity, mixed nodes, encrypted, non-encrypted, threshold 
+summary: Vous pouvez combiner plusieurs types de nœuds dans un cluster. Le SF-Series 2405, 3010, 4805, 6010, 9605 9010, 19210, 38410 et la série H peuvent coexister dans un cluster. 
+---
+= Capacité du cluster dans un environnement de nœuds mixtes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez combiner plusieurs types de nœuds dans un cluster. Le SF-Series 2405, 3010, 4805, 6010, 9605 9010, 19210, 38410 et la série H peuvent coexister dans un cluster.
+
+La série H comprend les nœuds H610S-1, H610S-2, H610S-4 et H410S. Ces nœuds sont compatibles avec 10 GbE et 25 GbE.
+
+Il est préférable de ne pas associer de nœuds non chiffrés et chiffrés. Dans un cluster à nœuds mixtes, aucun nœud ne peut dépasser 33 % de la capacité totale du cluster. Par exemple, dans un cluster doté de quatre nœuds SF-Series 4805, le plus grand nœud à ajouter seul est un système SF-Series 9605. Le seuil de capacité du cluster est calculé en fonction de la perte potentielle du nœud le plus grand dans ce cas.
+
+En fonction de votre version du logiciel Element, les nœuds de stockage SF-Series suivants ne sont pas pris en charge :
+
+[cols="40,40"]
+|===
+| À commencer par... | Nœud de stockage non pris en charge... 
+
+
+| Élément 12.7  a| 
+* SF2405
+* SF9608
+
+
+
+
+| Élément 12.0  a| 
+* SF3010
+* SF6010
+* SF9010
+
+
+|===
+Si vous tentez de mettre à niveau un de ces nœuds vers une version d'élément non prise en charge, une erreur s'affiche, indiquant que ce nœud n'est pas pris en charge par Element 12.x.

@@ -1,0 +1,29 @@
+---
+permalink: api/concept_element_api_ldap_api_methods.html 
+sidebar: sidebar 
+keywords: ldap,api,methods 
+summary: 'Vous pouvez utiliser le protocole Lightweight Directory Access Protocol \(LDAP\) pour authentifier l"accès au stockage Element. Les méthodes de l"API LDAP décrites dans cette section permettent de configurer l"accès LDAP au cluster de stockage.' 
+---
+= Méthodes d'API LDAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le protocole LDAP (Lightweight Directory Access Protocol) pour authentifier l'accès au stockage Element. Les méthodes de l'API LDAP décrites dans cette section permettent de configurer l'accès LDAP au cluster de stockage.
+
+* xref:reference_element_api_addldapclusteradmin.adoc[AddapClusterAdmin]
+* xref:reference_element_api_enableldapauthentication.adoc[EnableLdapAuthentication]
+* xref:reference_element_api_disableldapauthentication.adoc[DisableLdapAuthentication]
+* xref:reference_element_api_getldapconfiguration.adoc[GetLdapConfiguration]
+* xref:reference_element_api_testldapauthentication.adoc[TestLdapAuthentication]
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

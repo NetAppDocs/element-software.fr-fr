@@ -1,0 +1,23 @@
+---
+permalink: storage/concept_intro_clusters.html 
+sidebar: sidebar 
+keywords: clusters, about clusters, collection of nodes, nodes in a cluster, block storage, logical group, add nodes, access cluster 
+summary: 'Un cluster est le moyeu d"un système de stockage SolidFire et il est composé d"un ensemble de nœuds. Pour réaliser les fonctionnalités d"efficacité du stockage SolidFire, vous devez disposer d"au moins quatre nœuds dans un cluster. Un cluster apparaît sur le réseau comme un seul groupe logique, qui est ensuite accessible en tant que stockage bloc.' 
+---
+= Clusters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un cluster est le moyeu d'un système de stockage SolidFire et il est composé d'un ensemble de nœuds. Pour réaliser les fonctionnalités d'efficacité du stockage SolidFire, vous devez disposer d'au moins quatre nœuds dans un cluster. Un cluster apparaît sur le réseau comme un seul groupe logique, qui est ensuite accessible en tant que stockage bloc.
+
+La création d'un nouveau cluster initialise un nœud en tant que propriétaire des communications pour un cluster et établit des communications réseau pour chaque nœud du cluster. Ce processus n'est effectué qu'une seule fois pour chaque nouveau cluster. Vous pouvez créer un cluster à l'aide de l'interface utilisateur Element ou de l'API.
+
+Vous pouvez faire évoluer horizontalement un cluster en ajoutant des nœuds supplémentaires. Lorsque vous ajoutez un nouveau nœud, aucune interruption de service n'est constatée, et le cluster utilise automatiquement les performances et la capacité du nouveau nœud.
+
+Les administrateurs et les hôtes peuvent accéder au cluster à l'aide d'adresses IP virtuelles. Tout nœud du cluster peut héberger les adresses IP virtuelles. L'adresse IP virtuelle de gestion (MVIP) permet la gestion des clusters via une connexion 1 GbE, tandis que l'adresse IP virtuelle de stockage (SVIP) permet l'accès de l'hôte au stockage via une connexion 10 GbE. Ces adresses IP virtuelles permettent des connexions cohérentes, quelle que soit la taille ou la composition d'un cluster SolidFire. Si un nœud hébergeant une adresse IP virtuelle échoue, un autre nœud du cluster commence à héberger l'adresse IP virtuelle.
+
+
+NOTE: À partir de la version 11.0 de l'élément, les nœuds peuvent être configurés avec IPv4, IPv6 ou les deux adresses pour leur réseau de gestion. Cela s'applique à la fois aux nœuds de stockage et aux nœuds de gestion, à l'exception du nœud de gestion 11.3 et versions ultérieures qui ne prennent pas en charge IPv6. Lors de la création d'un cluster, seule une seule adresse IPv4 ou IPv6 peut être utilisée pour le MVIP et le type d'adresse correspondant doit être configuré sur tous les nœuds.

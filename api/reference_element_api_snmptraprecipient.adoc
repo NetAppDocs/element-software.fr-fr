@@ -1,0 +1,51 @@
+---
+permalink: api/reference_element_api_snmptraprecipient.html 
+sidebar: sidebar 
+keywords: object,objects,snmptraprecipient 
+summary: 'L"objet snmpTrapRecent contient des informations sur un hôte configuré pour recevoir les traps SNMP générés par le cluster de stockage. Vous pouvez utiliser la méthode GetSnmpTrapInfo API pour obtenir une liste des hôtes configurés pour recevoir des interruptions SNMP.' 
+---
+= SnmpRecipient
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet snmpTrapRecent contient des informations sur un hôte configuré pour recevoir les traps SNMP générés par le cluster de stockage. Vous pouvez utiliser le `GetSnmpTrapInfo` Méthode API pour obtenir la liste des hôtes configurés pour recevoir les traps SNMP.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+hôte
+ a| 
+Adresse IP ou nom d'hôte de l'hôte cible.
+ a| 
+chaîne
+
+
+
+ a| 
+port
+ a| 
+Numéro de port UDP sur l'hôte où le trap doit être envoyé. La plage valide est comprise entre 1 et 65535. 0 (zéro) n'est pas un numéro de port valide. Le port par défaut est 162.
+ a| 
+entier
+
+
+
+ a| 
+Communauté
+ a| 
+Chaîne de communauté SNMP.
+ a| 
+chaîne
+
+|===

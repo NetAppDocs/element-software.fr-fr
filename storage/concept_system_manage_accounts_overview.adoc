@@ -1,0 +1,26 @@
+---
+permalink: storage/concept_system_manage_accounts_overview.html 
+sidebar: sidebar 
+keywords: element, chap, cluster, accounts, administrator 
+summary: 'Dans les systèmes de stockage SolidFire, les locataires peuvent utiliser des comptes pour permettre aux clients de se connecter aux volumes d"un cluster. Vous pouvez également gérer les comptes d"administrateur de cluster pour un système de stockage SolidFire.' 
+---
+= Gestion des comptes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dans les systèmes de stockage SolidFire, les locataires peuvent utiliser des comptes pour permettre aux clients de se connecter aux volumes d'un cluster. Lorsque vous créez un volume, il est affecté à un compte spécifique. Vous pouvez également gérer les comptes d'administrateur de cluster pour un système de stockage SolidFire.
+
+* link:task_data_manage_accounts_work_with_accounts_task.html["Travailler avec des comptes à l'aide du protocole CHAP"]
+* link:concept_system_manage_manage_cluster_administrator_users.html["Gérez les comptes utilisateurs d'administrateur du cluster"]
+
+
+
+
+== Pour en savoir plus
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+

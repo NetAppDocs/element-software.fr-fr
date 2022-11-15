@@ -1,0 +1,133 @@
+---
+permalink: api/reference_element_api_getstoragecontainerefficiency.html 
+sidebar: sidebar 
+keywords: volume,virtual,container,volumes,get,getting,efficiency,vvol,GetStorageContainerEfficiency 
+summary: 'Vous pouvez utiliser la méthode GetStorageContainerEfficient pour extraire des informations relatives à l"efficacité d"un conteneur de stockage de volume virtuel.' 
+---
+= GetStorageConatencience
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetStorageContainerEfficiency` méthode pour récupérer des informations d'efficacité sur un conteneur de stockage de volume virtuel.
+
+
+
+== Paramètres
+
+Cette méthode dispose du paramètre d'entrée suivant :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+StorageautoreID
+ a| 
+ID du conteneur de stockage pour lequel récupérer des informations d'efficacité.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Valeurs de retour
+
+Cette méthode a les valeurs de retour suivantes :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+compression
+ a| 
+Quantité d'espace économisée par la compression des données pour tous les volumes virtuels du conteneur de stockage. Le pourcentage indiqué par une valeur de 1 signifie que les données ont été stockées sans compression.
+ a| 
+flottement
+
+
+
+ a| 
+déduplication
+ a| 
+Quantité d'espace économisé en ne dupliquant pas les données de tous les volumes virtuels du conteneur de stockage. Exprimé sous forme de ratio.
+ a| 
+flottement
+
+
+
+ a| 
+Volumes mal singularisés
+ a| 
+Volumes virtuels qui n'ont pas pu être interrogés afin de garantir l'efficacité des données. Les volumes manquants peuvent être causés par le cycle de collecte des déchets (GC) vieux d'une heure, la perte temporaire de connectivité réseau ou les services redémarrés depuis le cycle GC.
+ a| 
+tableau entier
+
+
+
+ a| 
+Provisionnement fin
+ a| 
+Rapport entre l'espace utilisé et la quantité d'espace alloué au stockage des données. Exprimé sous forme de ratio.
+ a| 
+flottement
+
+
+
+ a| 
+horodatage
+ a| 
+La dernière fois que des données sur l'efficacité ont été recueillies après GC.
+ a| 
+Chaîne de données ISO 8601
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "GetStorageContainerEfficiency",
+  "params": {
+    "storageContainerID" : "6c95e24f-9f0b-4793-affb-5a4bc6c3d7e1"
+  },
+  "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "compression": 1,
+    "deduplication": 1,
+    "missingVolumes": [],
+    "thinProvisioning": 1,
+    "timestamp": "2016-04-12T15:39:49Z"
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

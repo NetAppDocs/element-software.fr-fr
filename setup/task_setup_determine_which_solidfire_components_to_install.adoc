@@ -1,0 +1,67 @@
+---
+permalink: setup/task_setup_determine_which_solidfire_components_to_install.html 
+sidebar: sidebar 
+keywords: setup, element, solidfire active iq 
+summary: 'Vous pouvez vérifier quels composants SolidFire, tels que le nœud de gestion, Active IQ et l"agent de surveillance NetApp \(NMA\), vous devez effectuer l"installation, en fonction des choix de configuration et de déploiement.' 
+---
+= Déterminez les composants SolidFire à installer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez vérifier quels composants SolidFire, tels que le nœud de gestion, Active IQ et l'agent de surveillance NetApp (NMA), que vous devez installer, en fonction des choix de configuration et de déploiement.
+
+Le tableau suivant répertorie les composants supplémentaires et indique si vous devez les installer.
+
+[cols="3*"]
+|===
+| Composant | Cluster de stockage SolidFire autonome | Cluster NetApp HCI 
+
+
+ a| 
+Nœud de gestion
+ a| 
+Recommandé
+ a| 
+Installé par défaut, obligatoire
+
+
+
+ a| 
+Active IQ
+ a| 
+Recommandé*
+ a| 
+Recommandé*
+
+
+
+ a| 
+Agent de surveillance NetApp
+ a| 
+Non pris en charge
+ a| 
+Recommandé
+
+|===
+*Active IQ est requis pour les clusters de stockage SolidFire avec licence de capacité.
+
+.Étapes
+. Déterminer quels composants doivent être installés.
+. Terminez l'installation conformément à la link:../mnode/task_mnode_install.html["installez le nœud de gestion"] procédure.
++
+
+NOTE: Pour configurer Active IQ, utilisez `--telemetry_active` Paramètre dans le script d'installation pour permettre la collecte de données pour l'analytique par Active IQ.
+
+. Pour plus d'informations sur l'agent de surveillance NetApp, consultez ce document link:../mnode/task_mnode_enable_activeIQ.html["procédure"].
+
+
+
+
+== Pour en savoir plus
+
+* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
+

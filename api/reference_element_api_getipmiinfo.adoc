@@ -1,0 +1,195 @@
+---
+permalink: api/reference_element_api_getipmiinfo.html 
+sidebar: sidebar 
+keywords: hardware,sensor,info,ipmi,report,get,getting,getipmiinfo 
+summary: 'Vous pouvez utiliser la méthode GetIpmiInfo pour afficher un rapport détaillé des capteurs \(objets\) pour les ventilateurs de nœud, les températures d"admission et d"échappement et les alimentations contrôlées par le système.' 
+---
+= GetIpmiInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `GetIpmiInfo` méthode d'affichage d'un reporting détaillé des capteurs (objets) des ventilateurs des nœuds, des températures d'admission et d'échappement, et des blocs d'alimentation surveillés par le système.
+
+
+NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
+
+
+
+== Paramètres
+
+Cette méthode n'a pas de paramètres d'entrée.
+
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+capteurs
+ a| 
+Informations détaillées provenant de chaque capteur d'un nœud.
+ a| 
+Baie d'objets JSON
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "GetIpmiInfo",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== Exemple de réponse
+
+En raison de la longueur de la réponse renvoyée pour cette méthode API, des parties de la réponse ont été volontairement supprimées de ce document. Ce qui est inclus comprend les parties des informations matérielles que le système surveille afin de s'assurer que le nœud fonctionne à des performances optimales.
+
+[listing]
+----
+{
+  "id": 1,
+    "result": {
+      "ipmiInfo": {
+          "sensors": [
+            {
+              "entityID": "7.1 (System Board)",
+              "sensorID": "0x72",
+              "sensorName": "SEL",
+              "sensorType": "Event Logging Disabled",
+              "uniqueSensorID": "7.1:0x72"
+            },
+            {
+              "assertionsEnabled": [ "General Chassis intrusion" ],
+              "deassertionsEnabled": [ "General Chassis intrusion" ],
+              "entityID": "7.1 (System Board)", "sensorID": "0x73",
+              "sensorName": "Intrusion",
+              "sensorType": "Physical Security",
+              "uniqueSensorID": "7.1:0x73"
+            },
+            {THIS ENTIRE SECTION IS REPEATED FOR EACH FAN IN THE SYSTEM
+              "assertionEvents": [],
+              "assertionsEnabled": [],
+              "deassertionsEnabled": [],
+              "entityID": "7.1 (System Board)",
+              "eventMessageControl": "Per-threshold",
+              "lowerCritical": "720.000",
+              "lowerNonCritical": "840.000",
+              "maximumSensorRange": "Unspecified",
+              "minimumSensorRange": "Unspecified",
+              "negativeHysteresis": "600.000",
+              "nominalReading": "10080.000",
+              "normalMaximum": "23640.000",
+              "normalMinimum": "16680.000",
+              "positiveHysteresis": "600.000",
+              "readableThresholds": "lcr lnc",
+              "sensorID": "0x30",
+              "sensorName": "Fan1A RPM",
+              "sensorReading": "4440 (+/- 120) RPM",
+              "sensorType": "Fan",
+              "settableThresholds": "",
+              "status": "ok",
+              "thresholdReadMask": "lcr lnc",
+              "uniqueSensorID": "7.1:0x30"
+            },
+            .
+            .
+            .
+            {THIS ENTIRE SECTION IS REPEATED FOR THE EXHAUST TEMPERATURE OF EACH NODE
+              "assertionEvents": [],
+              "assertionsEnabled": [],
+              "entityID": "7.1 (System Board)",
+              "eventMessageControl": "Per-threshold",
+              "lowerCritical": "3.000",
+              "lowerNonCritical": "8.000",
+              "maximumSensorRange": "Unspecified",
+              "minimumSensorRange": "Unspecified",
+              "negativeHysteresis": "1.000",
+              "nominalReading": "23.000",
+              "normalMaximum": "69.000",
+              "normalMinimum": "11.000",
+              "positiveHysteresis": "1.000",
+              "readableThresholds": "lcr lnc unc ucr",
+              "sensorID": "0x1",
+              "sensorName": "Exhaust Temp",
+              "sensorReading": "44 (+/- 1) degrees C",
+              "sensorType": "Temperature",
+              "settableThresholds": "",
+              "status": "ok",
+              "uniqueSensorID": "7.1:0x1",
+              "upperCritical": "75.000",
+              "upperNonCritical": "70.000"
+            },
+            {THIS ENTIRE SECTION IS REPEATED FOR THE INLET TEMPERATURE OF EACH NODE
+              "assertionEvents": [],
+              "assertionsEnabled": [],
+              "deassertionsEnabled": [],
+              "entityID": "7.1 (System Board)",
+              "eventMessageControl": "Per-threshold",
+              "lowerCritical": "-7.000",
+              "lowerNonCritical": "3.000",
+              "maximumSensorRange": "Unspecified",
+              "minimumSensorRange": "Unspecified",
+              "negativeHysteresis": "1.000",
+              "nominalReading": "23.000",
+              "normalMaximum": "69.000",
+              "normalMinimum": "11.000",
+              "positiveHysteresis": "1.000",
+              "readableThresholds": "lcr lnc unc ucr",
+              "sensorID": "0x4",
+              "sensorName": "Inlet Temp",
+              "sensorReading": "20 (+/- 1) degrees C",
+              "sensorType": "Temperature",
+              "settableThresholds": "lcr lnc unc ucr",
+              "status": "ok",
+              "thresholdReadMask": "lcr lnc unc ucr",
+              "uniqueSensorID": "7.1:0x4",
+              "upperCritical": "47.000",
+              "upperNonCritical": "42.000"
+            },
+            {THIS ENTIRE SECTION IS REPEATED FOR EACH POWER SUPPLY ON EACH NODE
+              "assertionEvents": [],
+              "assertionsEnabled": [],
+              "entityID": "10.2 (Power Supply)",
+              "eventMessageControl": "Per-threshold", "maximumSensorRange": "Unspecified",
+              "minimumSensorRange": "Unspecified",
+              "negativeHysteresis": "Unspecified",
+              "nominalReading": "0.000",
+              "normalMaximum": "0.000",
+              "positiveHysteresis": "Unspecified",
+              "readableThresholds": "No Thresholds",
+              "sensorID": "0x6d",
+              "sensorName": "Voltage 2",
+              "sensorReading": "118 (+/- 0) Volts",
+              "sensorType": "Voltage",
+              "settableThresholds": "No Thresholds", "status": "ok", "uniqueSensorID": "10.2:0x6d"
+            },
+              .
+              .
+              .
+            }
+          ]
+        }
+      }
+    }
+----
+
+
+== Nouveau depuis la version
+
+9.6

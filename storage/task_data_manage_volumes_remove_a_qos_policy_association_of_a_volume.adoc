@@ -1,0 +1,30 @@
+---
+permalink: storage/task_data_manage_volumes_remove_a_qos_policy_association_of_a_volume.html 
+sidebar: sidebar 
+keywords: remove qos policy, disassociate from a volume, modify 
+summary: 'Vous pouvez supprimer une association de règles QoS d"un volume en sélectionnant les paramètres QoS personnalisés.' 
+---
+= Ne supprime pas l'association de la policy QoS d'un volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer une association de règles QoS d'un volume en sélectionnant les paramètres QoS personnalisés.
+
+Le volume à modifier doit être associé à une politique de QoS.
+
+. Sélectionnez *Management* > *volumes*.
+. Cliquez sur l'icône actions d'un volume contenant une stratégie QoS à modifier.
+. Cliquez sur *Modifier*.
+. Dans le menu qui s'affiche sous *qualité de service*, cliquez sur *Paramètres personnalisés*.
+. Modifiez *min IOPS*, *Max IOPS* et *Burst IOPS* ou conservez les paramètres par défaut.
+. Cliquez sur *Enregistrer les modifications*.
+
+
+
+
+== Trouvez plus d'informations
+
+xref:task_data_manage_volumes_deleting_a_qos_policy.adoc[Suppression d'une règle QoS]

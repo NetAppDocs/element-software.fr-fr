@@ -1,0 +1,140 @@
+---
+permalink: api/reference_element_api_createstoragecontainer.html 
+sidebar: sidebar 
+keywords: create,creating,storage,container,virtual,volume,volumes,vvol,vvols,CreateStorageContainer 
+summary: 'Vous pouvez utiliser la méthode CreateStorageContainer pour créer un conteneur de stockage de volume virtuel \(VVol\). Vous pouvez utiliser des conteneurs de stockage pour le reporting et l"allocation des ressources. Vous devez créer au moins un conteneur de stockage pour utiliser la fonctionnalité Virtual volumes.' 
+---
+= CreateStorageContainer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le `CreateStorageContainer` Méthode de création d'un conteneur de stockage de volume virtuel (VVol). Vous pouvez utiliser des conteneurs de stockage pour le reporting et l'allocation des ressources. Vous devez créer au moins un conteneur de stockage pour utiliser la fonctionnalité Virtual volumes.
+
+
+
+== Paramètres
+
+Cette méthode présente les paramètres d'entrée suivants :
+
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+nom
+ a| 
+Nom du conteneur de stockage. Respectez les restrictions de nommage des comptes du logiciel Element.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+
+
+ a| 
+ID compte
+ a| 
+Compte autre que le conteneur de stockage qui deviendra un conteneur de stockage.
+ a| 
+entier
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+InitiatorSecret
+ a| 
+Le secret de l'authentification CHAP pour l'initiateur.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+
+
+ a| 
+TargetSecret
+ a| 
+Le secret de l'authentification CHAP pour la cible.
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Non
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode a la valeur de retour suivante :
+
+|===
+
+
+| Nom | Description | Type 
+
+
+ a| 
+Conteneur de stockage
+ a| 
+Objet contenant des informations sur le nouveau conteneur de stockage.
+ a| 
+xref:reference_element_api_storagecontainer.adoc[Conteneur de stockage]
+
+|===
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "CreateStorageContainer",
+    "params": {
+        "name" : "example"
+    },
+    "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+    "storageContainer": {
+      "accountID": 8,
+      "initiatorSecret": "rVTOi25^H.d;cP}l",
+      "name": "example",
+      "protocolEndpointType": "SCSI",
+      "status": "active",
+      "storageContainerID": "a9ec1138-e386-4a44-90d7-b9acbbc05176",
+      "targetSecret": "6?AEIxWpvo6,!boM"
+    }
+  }
+}
+----
+
+
+== Nouveau depuis la version
+
+9.6

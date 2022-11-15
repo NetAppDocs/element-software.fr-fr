@@ -1,0 +1,42 @@
+---
+permalink: api/reference_element_api_loggingserver.html 
+sidebar: sidebar 
+keywords: object,objects,loggingServer 
+summary: 'L"objet Loggingiserveur contient des informations sur tous les hôtes de consignation configurés pour le cluster de stockage. Vous pouvez utiliser GetRemoteLoggingigs pour déterminer ce que sont les hôtes de consignation actuels, puis utiliser SetRemoteLoggingits pour définir la liste désirée des hôtes de consignation actuels et nouveaux.' 
+---
+= Serveur de consignation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'objet Loggingiserveur contient des informations sur tous les hôtes de consignation configurés pour le cluster de stockage. Vous pouvez utiliser `GetRemoteLoggingHosts` pour déterminer ce que sont les hôtes de journalisation actuels, puis utilisez `SetRemoteLoggingHosts` pour définir la liste souhaitée des hôtes de journalisation actuels et nouveaux.
+
+
+
+== Membres d'objet
+
+Cet objet contient les membres suivants :
+
+|===
+| Nom | Description | Type 
+
+
+ a| 
+hôte
+ a| 
+Adresse IP du serveur de journaux.
+ a| 
+chaîne
+
+
+
+ a| 
+port
+ a| 
+Numéro de port utilisé pour communiquer avec le serveur de journaux.
+ a| 
+entier
+
+|===

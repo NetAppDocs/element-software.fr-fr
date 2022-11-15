@@ -1,0 +1,28 @@
+---
+permalink: esds/concept_esds_monitor_clusters.html 
+sidebar: sidebar 
+keywords: solidfire esds installation, hcc, hybrid cloud control, esds clusters 
+summary: 'Vous pouvez surveiller les performances de vos clusters ESDS SolidFire et afficher l"inventaire à l"aide de l"interface utilisateur de contrôle du cloud hybride NetApp. Vous pouvez également collecter des journaux à des fins de dépannage avec l"interface de contrôle des clouds hybrides NetApp. »' 
+---
+= Surveiller les clusters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez surveiller les performances de vos clusters ESDS SolidFire et afficher l'inventaire à l'aide de l'interface utilisateur de contrôle du cloud hybride NetApp. Vous pouvez également collecter les journaux à des fins de dépannage avec l'interface utilisateur NetApp de contrôle des clouds hybrides.
+
+Voici les liens vers les informations relatives à la surveillance des clusters dans l'interface utilisateur NetApp Hybrid Cloud Control :
+
+* link:hccstorage/task-hcc-nodes.html["Affichez votre inventaire sur la page nœuds"]
+* link:hccstorage/task-hcc-volumes.html["Surveillez les volumes de votre cluster de stockage"]
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+
