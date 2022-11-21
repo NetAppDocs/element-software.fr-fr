@@ -11381,15 +11381,12 @@
   <block id="72b711eab7bf0193b651fa7a07068ae1" category="list-text">Entrez l'adresse IP de votre nœud de gestion dans un navigateur, y compris le port TCP pour l'enregistrement :<block ref="0e0152f7592ffa53464a10c6a48053e7" prefix=" " category="inline-code"></block>L'interface utilisateur de l'utilitaire d'enregistrement s'ouvre sur la page *Manage QoSSIOC Service Credentials* du plug-in.</block>
   <block id="26fc450c5cd9b7f28b10cff7659b479d" category="image-alt">La illustre l'interface utilisateur de l'utilitaire d'enregistrement pour le plug-in</block>
   <block id="0bd0c7dc69df55cee394b64eebcd27ab" category="list-text">Sélectionnez *enregistrement du plug-in vCenter*.</block>
-  <block id="e8b1bdd38a7601206cf400f05fbdc57d" category="paragraph">Depuis le plug-in Element pour vCenter Server 5:0 :</block>
-  <block id="05c0e13a813e930c3eab807f98959379" category="paragraph">Plug-in Element pour vCenter Server 4.10 ou version antérieure :</block>
   <block id="5c8b8f78ed09c86ecda3569ee8c3a3f0" category="list-text">Dans *Manage vCenter Plug-in*, sélectionnez *Update Plug-in*.</block>
   <block id="8d8ce4b808495ff41a197ebd82fa0d15" category="list-text">Confirmez ou mettez à jour les informations suivantes :</block>
   <block id="07cdef615c44d9173ab998dea612cb1c" category="list-text">L'adresse IPv4 ou le FQDN du service vCenter sur lequel vous enregistrez votre plug-in.</block>
   <block id="d5fcc07cbc4a070c18d26103f54f3f58" category="list-text">Nom d'utilisateur de vCenter Administrator.</block>
   <block id="b1e24f0b2fb8f66a9c2444bf0e385f97" category="admonition">Le nom d'utilisateur et les informations d'identification du mot de passe que vous entrez doivent correspondre à un utilisateur disposant des privilèges de rôle d'administrateur vCenter.</block>
   <block id="c2611280cf76890b83743a67ac6478e2" category="list-text">Mot de passe de l'administrateur vCenter.</block>
-  <block id="23fa7915a24406758b2d7b2b274fe1f3" category="list-text">(Pour les serveurs internes/sites distants) selon la version du plug-in Element pour vCenter, une URL personnalisée pour le fichier JSON de plug-in ou le plug-in ZIP :</block>
   <block id="1e35767408ad5bd29ecc61c301c556ef" category="list-text">Depuis le plug-in Element pour vCenter Server 5.0, une URL personnalisée pour le fichier JSON du plug-in.</block>
   <block id="b9d11c83e937a9ece9e8b7051bc68606" category="admonition">Vous pouvez sélectionner *URL personnalisée* pour personnaliser l'URL si vous utilisez un serveur HTTP ou HTTPS (site sombre) ou si vous avez modifié le nom de fichier JSON ou les paramètres réseau. Pour plus d'informations sur la configuration d'une URL, reportez-vous à la documentation du plug-in Element pour vCenter Server sur la modification des propriétés vCenter d'un serveur HTTP interne (site sombre).</block>
   <block id="ba85baaa049f62983a89ac7da1647abd" category="list-text">Pour le plug-in Element pour vCenter Server 4.10 ou version antérieure, une URL personnalisée pour le plug-in ZIP.</block>
@@ -12360,6 +12357,14 @@
   <block id="767682e703a28fefdc1067e1fcf04243" category="sidebar">Surveillez les volumes de votre cluster de stockage avec NetApp Cloud Control</block>
   <block id="f3ef8562bc46b3fd5d64fc8a88bab6f9" category="sidebar">Installez les nœuds H410S et H610S</block>
   <block id="d471727ba1fb423986701d5307906d08" category="list-text">Vérifiez que les points d'extension du plug-in apparaissent dans l'onglet *raccourcis* de vSphere Web client et dans le panneau latéral.</block>
-  <block id="290b380ec7760347344e9055b68f217d" category="paragraph">Depuis le plug-in Element pour vCenter Server 5.0, le point d'extension du plug-in distant NetApp Element :</block>
-  <block id="7491d78d51f3545fc9fe30d2249bc196" category="paragraph">Plug-in Element pour vCenter Server 4.10 ou version antérieure, points d'extension NetApp Element Configuration and Management :</block>
+  <block id="78d33ed700a31bfed5ec712d766def44" category="paragraph">Gammes H410 et H600, contrôleur de gestion de la carte mère du nœud de stockage (BMC)/interface de gestion de plateforme intelligente (IPMI)</block>
+  <block id="59f1e3a87c5b329f2a5a951d9bf325f8" category="paragraph">L'interface HTTPS et l'API permettent d'accéder au contrôle à distance des nœuds</block>
+  <block id="1381491a5bb8087f95db0601150c5c28" category="paragraph">Nœud de stockage BMC/IPMI séries H410 et H600</block>
+  <block id="ad097a4f1c93214faa0a1ca354a82225" category="paragraph">623 UDP</block>
+  <block id="483602128e75be96f5280855d8065878" category="paragraph">Port Remote Management Control Protocol. Ceci est nécessaire pour gérer les systèmes compatibles IPMI.</block>
+  <block id="3ef00ef1af91bf9fe0b72f4052a67f59" category="list-text">La page d'inscription du plug-in vCenter pour le plug-in Element pour vCenter Server 5.0 :</block>
+  <block id="1875d143de1e9be70dc9e780b41377fe" category="list-text">La page d'inscription du plug-in vCenter pour le plug-in Element pour vCenter Server 4.10 ou version antérieure :</block>
+  <block id="b8b146fd1e1ecdf074536a02bfe40871" category="list-text">(Pour les serveurs internes/sites distants) selon la version du plug-in Element pour vCenter, une URL personnalisée pour le fichier JSON ou le plug-in ZIP :</block>
+  <block id="1993643c12bb4ee547f04d8d85f8c4bf" category="list-text">Depuis le plug-in Element pour vCenter Server 5.0, le point d'extension du plug-in distant NetApp Element apparaît :</block>
+  <block id="1c63b3cd9a6d3bdf8b9b31aca68672d7" category="list-text">Pour le plug-in Element pour vCenter Server 4.10 ou version antérieure, les points d'extension NetApp Element Configuration and Management apparaissent :</block>
 </blocks>

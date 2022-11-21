@@ -482,11 +482,33 @@ L'interface HTTPS et l'accès API au cluster de stockage
  a| 
 PC administrateur système
  a| 
+Gammes H410 et H600, contrôleur de gestion de la carte mère du nœud de stockage (BMC)/interface de gestion de plateforme intelligente (IPMI)
+ a| 
+443
+ a| 
+L'interface HTTPS et l'API permettent d'accéder au contrôle à distance des nœuds
+
+
+
+ a| 
+PC administrateur système
+ a| 
 MIP du nœud de stockage
  a| 
 443
  a| 
 Création du cluster de stockage HTTPS, accès d'interface post-déploiement au cluster de stockage
+
+
+
+ a| 
+PC administrateur système
+ a| 
+Nœud de stockage BMC/IPMI séries H410 et H600
+ a| 
+623 UDP
+ a| 
+Port Remote Management Control Protocol. Ceci est nécessaire pour gérer les systèmes compatibles IPMI.
 
 
 
