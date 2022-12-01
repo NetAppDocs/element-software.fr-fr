@@ -137,5 +137,5 @@ Avec Element 12.5, vous pouvez automatiser le workflow de mise à niveau du logi
 * https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"^]
 * http://docs.netapp.com/sfe-122/index.jsp["Centre de documentation des logiciels SolidFire et Element pour les versions précédentes"^]
 * https://www.netapp.com/us/documentation/hci.aspx["Page Ressources NetApp HCI"^]
-* https://docs.netapp.com/us-en/hci/docs/fw_storage_nodes.html["Versions de firmware de stockage prises en charge pour les nœuds de stockage SolidFire"^]
+* link:../hardware/fw_storage_nodes.html["Versions de firmware de stockage prises en charge pour les nœuds de stockage SolidFire"]
 

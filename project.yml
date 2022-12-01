@@ -65,7 +65,7 @@ homepage:
       url: "/hardware/concept_sfseries_info.html"
     - title: Révisions de firmware prises en charge pour les nœuds de stockage NetApp
         H-Series
-      url: https://docs.netapp.com/us-en/hci/docs/fw_storage_nodes.html
+      url: "/hardware/fw_storage_nodes.html"
   - title: Gérer le stockage
     links:
     - title: Utilisez l'interface utilisateur du logiciel Element
