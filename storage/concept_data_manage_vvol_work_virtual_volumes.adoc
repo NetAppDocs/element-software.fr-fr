@@ -20,7 +20,7 @@ Une fois que vous avez activé la fonctionnalité VVol, un onglet VVol apparaît
 La majorité des configurations nécessaires à l'utilisation de la fonctionnalité Virtual volumes avec les systèmes de stockage logiciels Element sont effectuées dans vSphere. Consultez le _VMware vSphere Virtual volumes pour le stockage SolidFire_ pour enregistrer le fournisseur VASA dans vCenter, créer et gérer des datastores VVol, et gérer le stockage conformément aux règles.
 
 
-NOTE: N'enregistrez pas plusieurs fournisseurs NetApp Element VASA vers une seule instance de vCenter. Ainsi, lorsqu'un deuxième fournisseur NetApp Element VASA est ajouté, tous les data stores VVOL sont inaccessibles.
+NOTE: Pour Element 12.5 et versions antérieures, ne vous enregistrez pas plusieurs fournisseurs NetApp Element VASA dans une seule instance de vCenter. Ainsi, lorsqu'un deuxième fournisseur NetApp Element VASA est ajouté, tous les data stores VVOL sont inaccessibles.
 
 
 NOTE: La prise en charge de VASA pour plusieurs vCenters est disponible en tant que correctif de mise à niveau si vous avez déjà enregistré un fournisseur VASA auprès de votre vCenter. Pour installer, téléchargez le fichier VASA39 .tar.gz à partir du https://mysupport.netapp.com/products/element_software/VASA39/index.html["Téléchargements de logiciels NetApp"] et suivez les instructions dans le manifeste. Le fournisseur NetApp Element VASA utilise un certificat NetApp. Avec ce correctif, le certificat est utilisé non modifié par vCenter pour prendre en charge plusieurs vCenters pour VASA et VVol. Ne modifiez pas le certificat. Les certificats SSL personnalisés ne sont pas pris en charge par VASA.
