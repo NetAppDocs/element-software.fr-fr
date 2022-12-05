@@ -9712,7 +9712,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-12-01 12:54:15 +0000">12/01/2022</time>
+    <time datetime="2022-12-01 16:42:00 +0000">12/01/2022</time>
     
   
 
@@ -9722,8 +9722,1645 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
-<p>Directive non résolue dans &lt;stdin&gt; - inclure::https://raw.githubusercontent.com/NetAppDocs/hci/main/_include/fw_storage_nodes.adoc[]</p>
+<p>Les versions de firmware prises en charge pour les nœuds de stockage H-Series et SolidFire.</p>
+</div>
+<div class="paragraph">
+<p>*
+*
+* ,SF38410, SF19210, SF9605 ET SF4805</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="h610s">H610S</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Numéro de modèle (partie familiale):</strong> H610S <strong>numéros de modèle complets:</strong> H610S-1, H610S-1-ne, H610S-2, H610S-2-ne, H610S-4, H610S-2-ne, H610S-2-ne, H610S H610S-4-NE ET H610S-2F</p>
+</div>
+<div class="sect2">
+<h3 id="microprogramme-de-composant-géré-par-un-ensemble-de-micrologiciels-de-stockage">Microprogramme de composant géré par un ensemble de micrologiciels de stockage</h3>
+<div class="paragraph">
+<p>Pendant les délais de la version 11.x, le logiciel NetApp Element était le seul moyen de libérer du firmware. À partir d&#8217;Element 12.0, le concept de <strong>Storage Firmware Bundle</strong> a été introduit et les mises à jour du micrologiciel ont été désormais possibles par un ensemble de microprogramme de stockage ou de microprogramme de stockage fourni indépendamment dans une version d&#8217;Element 12.x.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/element-software/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Un tiret (<strong>-</strong>) dans le tableau suivant indique que le composant matériel particulier n&#8217;a PAS été pris en charge dans ce véhicule de libération.
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8461%;">
+<col style="width: 3.8475%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Relâchez le véhicule</th>
+<th class="tableblock halign-left valign-top">Date de publication</th>
+<th class="tableblock halign-left valign-top">BIOS</th>
+<th class="tableblock halign-left valign-top">BMC</th>
+<th class="tableblock halign-left valign-top">CPLD</th>
+<th class="tableblock halign-left valign-top">Carte réseau 10/25 GbE CX4</th>
+<th class="tableblock halign-left valign-top">Carte réseau 10/25 GbE CX5</th>
+<th class="tableblock halign-left valign-top">Cache NVDIMM module Smart (Gen1)</th>
+<th class="tableblock halign-left valign-top">Mémoire cache NVDIMM Energy Source (BPM) Smart (Gen1)</th>
+<th class="tableblock halign-left valign-top">Module NVDIMM cache Smart (Gen2) NVDIMM</th>
+<th class="tableblock halign-left valign-top">Mémoire cache NVDIMM Energy Source (BPM) Smart (Gen2)</th>
+<th class="tableblock halign-left valign-top">Cache NVDIMM module NVDIMM Micron (Gen1)</th>
+<th class="tableblock halign-left valign-top">Source d&#8217;énergie NVDIMM cache (PGEM) Agigatech (Gen1)</th>
+<th class="tableblock halign-left valign-top">Module NVDIMM cache Micron (Gen2) NVDIMM</th>
+<th class="tableblock halign-left valign-top">Source d&#8217;énergie NVDIMM cache (PGEM) Agigaech (Gen2)</th>
+<th class="tableblock halign-left valign-top">Source d&#8217;énergie NVDIMM cache (PGEM) Agigatech (Gen 3)</th>
+<th class="tableblock halign-left valign-top">Lecteur Samsung PM963 (SED)</th>
+<th class="tableblock halign-left valign-top">Lecteur Samsung PM963 (N-SED)</th>
+<th class="tableblock halign-left valign-top">Lecteur Samsung PM983 (SED)</th>
+<th class="tableblock halign-left valign-top">Lecteur Samsung PM983 (N-SED)</th>
+<th class="tableblock halign-left valign-top">Lecteur Kioxia CD5 (SED)</th>
+<th class="tableblock halign-left valign-top">Kioxia lecteur CD5 (N-SED)</th>
+<th class="tableblock halign-left valign-top">Disque CD5 (FIPS)</th>
+<th class="tableblock halign-left valign-top">Lecteur Samsung PM9A3 (SED)</th>
+<th class="tableblock halign-left valign-top">Drive SK Hynix PE8010 (SED)</th>
+<th class="tableblock halign-left valign-top">Drive SK Hynix PE8010 (N-SED)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.164.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10/20/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.94.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16.32.1010</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5602Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5900Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GDC5602Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11092A10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">110B2A10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.164.0 à NetApp Element 12.7</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10/20/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.94.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16.32.1010</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5602Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5900Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GDC5602Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11092A10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">110B2A10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.150.4</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06/08/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.94.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5602Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5900Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GDC5502Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11092A10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">110B2A10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.150.4 à NetApp Element 12.5</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06/08/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.94.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5602Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5900Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GDC5502Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11092A10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">110B2A10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.146.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/22/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.94.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5602Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5900Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GDC5502Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11092A10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">110B2A10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.99.4 à NetApp Element 12.3.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09/16/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.91.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5402Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5700Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.99.4 à NetApp Element 12.3.1.165</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12/06/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.91.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5402Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5700Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.99.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12/06/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.91.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5402Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5700Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.99.1 à NetApp Element 12.3.1.103</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09/16/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.86.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5402Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5700Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.99 à NetApp Element 12.3</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04/15/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.86.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5402Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5700Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.76.8</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/03/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.86.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5402Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5700Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.27.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09/29/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B03</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.84.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.02.1002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5302Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5600Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.76.8 à NetApp Element 12.2.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06/02/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.86.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5402Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5700Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.21 à NetApp Element 12.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09/29/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B03</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.84.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.22.1002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5302Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5600Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.76.8 à NetApp Element 12.0.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06/02/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.86.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5402Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5700Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 1.2.17 à NetApp Element 12.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03/20/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B03</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.78.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.22.1002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5200Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.8</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03/11/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B03</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.78.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">122</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.22.1002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5200Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0107</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.7</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11/21/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3A10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.76.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">117</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.22.1002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5200Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0107</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.5.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/20/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3A08</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.76.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">117</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.22.1002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5200Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0107</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.5</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09/26/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3A08</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.76.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">117</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.22.1002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5200Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0107</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.3.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/19/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3A08</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.76.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">117</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.22.1002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5200Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.3.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08/19/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3A08</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.76.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">117</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.22.1002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5200Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.1.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/19/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3A06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.70.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">117</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.22.1002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5200Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04/25/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3A06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.70.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">117</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.22.1002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5200Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.0.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/19/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3A06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.70.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">117</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.22.1002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25.3C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5200Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11/29/2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3A06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.70.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">117</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.22.1002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26.2C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CXV8501Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5202Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDA5200Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="micrologiciel-de-composant-non-géré-par-un-pack-de-microprogramme-de-stockage">Micrologiciel de composant non géré par un pack de microprogramme de stockage</h3>
+<div class="paragraph">
+<p>Les micrologiciels suivants ne sont pas gérés par un pack de microprogramme de stockage :</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Composant</th>
+<th class="tableblock halign-left valign-top">Version actuelle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Carte réseau 1/10 GbE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2d 0x80000b4b</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dispositif de démarrage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M161225i</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="h410s">H410S</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Numéro de modèle (partie famille):</strong> H410S <strong>numéros de modèle complets:</strong> H410S-0, H410S-1, H410S-1-ne et H410S-2</p>
+</div>
+<div class="sect2">
+<h3 id="microprogramme-de-composant-géré-par-un-ensemble-de-micrologiciels-de-stockage-2">Microprogramme de composant géré par un ensemble de micrologiciels de stockage</h3>
+<div class="paragraph">
+<p>Microprogramme de composant géré par un ensemble de micrologiciels de stockage.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3337%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Relâchez le véhicule</th>
+<th class="tableblock halign-left valign-top">Date de publication</th>
+<th class="tableblock halign-left valign-top">BIOS</th>
+<th class="tableblock halign-left valign-top">BMC</th>
+<th class="tableblock halign-left valign-top">Carte réseau 10/25 GbE SMCI Mellanox</th>
+<th class="tableblock halign-left valign-top">Mémoire cache NVDIMM RMS200</th>
+<th class="tableblock halign-left valign-top">Mémoire cache NVDIMM RMS300</th>
+<th class="tableblock halign-left valign-top">Lecteur Samsung PM863 (SED)</th>
+<th class="tableblock halign-left valign-top">Lecteur Samsung PM863 (N-SED)</th>
+<th class="tableblock halign-left valign-top">Drive Toshiba Hawk-4 (SED)</th>
+<th class="tableblock halign-left valign-top">Drive Toshiba Hawk-4 (N-SED)</th>
+<th class="tableblock halign-left valign-top">Lecteur Samsung PM883 (SED)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.164.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10/20/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NAT3.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.98.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7A04Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.164.0 à NetApp Element 12.7</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10/20/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NAT3.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.98.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7A04Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.150.4 à NetApp Element 12.5</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06/08/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NAT3.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.98.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7A04Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.99 à NetApp Element 12.3</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04/15/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.84.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.76.8 à NetApp Element 12.2.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06/02/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.84.00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.25.1020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 1.2.17 à NetApp Element 12.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03/20/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.21.1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.8.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/22/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.21.1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.8.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06/02/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.21.1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.8</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03/11/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.21.1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.7</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11/21/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.21.1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.5.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/19/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.21.1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.5</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09/26/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.21.1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.3.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/19/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.21.1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.3.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08/19/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.21.1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.1.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/19/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.17.2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04/25/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.17.2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.0.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/19/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.17.2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11/29/2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14.17.2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="micrologiciel-de-composant-non-géré-par-un-pack-de-microprogramme-de-stockage-2">Micrologiciel de composant non géré par un pack de microprogramme de stockage</h3>
+<div class="paragraph">
+<p>Les micrologiciels suivants ne sont pas gérés par un pack de microprogramme de stockage :</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Composant</th>
+<th class="tableblock halign-left valign-top">Version actuelle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CPLD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01.A1.06</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adaptateur SAS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16.00.01.00</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microcontrôleur (MCU)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.18</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Carte réseau 1/10 GbE SIOM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.93</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alimentation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Périphérique de démarrage SSDSCKJB240G7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N2010121</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dispositif d&#8217;amorçage MTFDDAV240TCB1AR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DOMU037</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sf38410-sf19210-sf9605-et-sf4805">SF38410, SF19210, SF9605 ET SF4805</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Numéros de modèle complets :</strong> SF38410, SF19210, SF9605 et SF4805</p>
+</div>
+<div class="sect2">
+<h3 id="microprogramme-de-composant-géré-par-un-ensemble-de-micrologiciels-de-stockage-3">Microprogramme de composant géré par un ensemble de micrologiciels de stockage</h3>
+<div class="paragraph">
+<p>Pendant les délais de la version 11.x, le logiciel NetApp Element était le seul moyen de libérer du firmware. À partir d&#8217;Element 12.0, le concept de <strong>Storage Firmware Bundle</strong> a été introduit et les mises à jour du micrologiciel ont été désormais possibles par un ensemble de microprogramme de stockage ou de microprogramme de stockage fourni indépendamment dans une version d&#8217;Element 12.x.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/element-software/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Un tiret (<strong>-</strong>) dans le tableau suivant indique que le composant matériel particulier n&#8217;a PAS été pris en charge dans ce véhicule de libération.
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Relâchez le véhicule</th>
+<th class="tableblock halign-left valign-top">Date de publication</th>
+<th class="tableblock halign-left valign-top">NIC</th>
+<th class="tableblock halign-left valign-top">MÉMOIRE CACHE NVDIMM RMS200 (RMS200)</th>
+<th class="tableblock halign-left valign-top">MÉMOIRE CACHE NVDIMM RMS200 (RMS300)</th>
+<th class="tableblock halign-left valign-top">Lecteur Samsung PM863 (SED)</th>
+<th class="tableblock halign-left valign-top">Lecteur Samsung PM863 (N-SED)</th>
+<th class="tableblock halign-left valign-top">Drive Toshiba Hawk-4 (SED)</th>
+<th class="tableblock halign-left valign-top">Drive Toshiba Hawk-4 (N-SED)</th>
+<th class="tableblock halign-left valign-top">Lecteur Samsung PM883 (SED)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.164.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10/20/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7A04Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.164.0 à NetApp Element 12.7</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10/20/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7A04Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.150.4</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06/08/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7A04Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.150.4 à NetApp Element 12.5</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06/08/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7A04Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.146.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/22/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7A04Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.99.4 à NetApp Element 12.3.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09/16/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.99.4 à NetApp Element 12.3.1.165</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12/06/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.99.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08/03/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.99.1 à NetApp Element 12.3.1.103</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09/16/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.99 à NetApp Element 12.3</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04/15/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.76.8</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/03/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.27.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09/29/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7104Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.76.8 à NetApp Element 12.2.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06/02/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.21 à NetApp Element 12.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09/29/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7104Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 2.76.8 à NetApp Element 12.0.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06/02/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7904Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ensemble de microprogramme de stockage 1.2.17 à NetApp Element 12.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03/20/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7104Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.8.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/22/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7104Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.8.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06/02/2021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7104Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.8</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03/11/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7104Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.7</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11/21/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7104Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.5.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/19/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7104Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.5</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09/26/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7104Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.3.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/19/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7104Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.3.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08/19/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7104Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.1.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/19/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7104Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04/25/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7104Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11.0.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02/19/2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7d8422bc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7104Q</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NetApp Element 11</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11/29/2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.10.18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ae3b8cc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5404Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GXT5103Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP7101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8ENP6101</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HXT7104Q</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="micrologiciel-de-composant-non-géré-par-un-pack-de-microprogramme-de-stockage-3">Micrologiciel de composant non géré par un pack de microprogramme de stockage</h3>
+<div class="paragraph">
+<p>Les micrologiciels suivants ne sont pas gérés par un pack de microprogramme de stockage :</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Composant</th>
+<th class="tableblock halign-left valign-top">Version actuelle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BIOS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.8.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IDRAC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.75.75.75</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Module d&#8217;identité</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N41WC 1.02</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adaptateur SAS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16.00.01.00</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alimentation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dispositif de démarrage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M161225i</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 
     </article>
