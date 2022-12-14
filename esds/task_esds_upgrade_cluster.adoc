@@ -13,6 +13,7 @@ summary: 'Ansible permet d"effectuer des mises à niveau sans interruption sur v
 [role="lead"]
 Ansible permet d'effectuer des mises à niveau sans interruption sur votre cluster SolidFire ESDS. À l'aide du `nar_solidfire_sds_upgrade` Rôle fourni par NetApp, Ansible effectue la mise à niveau d'un nœud à la fois sans compromettre la disponibilité des données pour tous les volumes.
 
+.Ce dont vous avez besoin
 Avant de procéder à la mise à niveau, assurez-vous que les conditions suivantes sont remplies :
 
 * Il n'y a pas de défaillances de cluster dans l'interface utilisateur d'Element.
@@ -35,6 +36,7 @@ hosts:
 * Le fichier d'inventaire contient les variables suivantes : sf_mgmt_virt_ip (MVIP), sf_cluster_admin_username, sf_cluster_admin_passwd et solidfire_Element_rpm (chemin vers le nouveau fichier RPM).
 
 
+.Présentation de la mise à niveau
 Voici un aperçu de ce qui se passe lors du processus de mise à niveau :
 
 * Les informations saisies dans le fichier d'inventaire sont validées.

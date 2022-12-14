@@ -13,7 +13,7 @@ summary: 'Vous devez activer SnapMirror sur le volume dans l"interface utilisate
 [role="lead"]
 Vous devez activer SnapMirror sur le volume dans l'interface utilisateur Element. Cela permet la réplication des données vers des volumes ONTAP spécifiés. Cette autorisation est autorisée par l'administrateur du cluster exécutant le logiciel NetApp Element pour SnapMirror afin de contrôler un volume.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez activé SnapMirror dans l'interface utilisateur Element pour le cluster.
 * Un terminal SnapMirror est disponible.
 * Le volume doit avoir une taille de bloc de 512 octets.

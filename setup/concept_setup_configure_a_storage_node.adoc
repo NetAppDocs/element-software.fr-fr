@@ -15,8 +15,8 @@ Vous devez configurer des nœuds individuels avant de pouvoir les ajouter à un 
 
 Deux options permettent de configurer des nœuds de stockage :
 
-*  a storage node using the per-node UI,Interface pour chaque nœud: Utiliser l'interface utilisateur par nœud (https://<node_management_IP>:442)[] pour configurer les paramètres réseau du nœud.
-*  a storage node using the TUI,TUI: Utilisez l'interface utilisateur du terminal de nœud (TUI) pour configurer le nœud.
+* <<Configurez un nœud de stockage à l'aide de l'interface utilisateur par nœud,Interface pour chaque nœud>>: Utiliser l'interface utilisateur par nœud (https://<node_management_IP>:442)[] pour configurer les paramètres réseau du nœud.
+* <<Configurez un nœud de stockage à l'aide de l'interface TUI,TUI>>: Utilisez l'interface utilisateur du terminal de nœud (TUI) pour configurer le nœud.
 
 
 Vous ne pouvez pas ajouter un nœud avec des adresses IP attribuées par DHCP à un cluster. Vous pouvez utiliser l'adresse IP DHCP pour configurer initialement le nœud dans l'interface utilisateur, l'interface utilisateur ou l'API de chaque nœud. Au cours de cette configuration initiale, vous pouvez ajouter des informations d'adresse IP statique pour pouvoir ajouter le nœud à un cluster.

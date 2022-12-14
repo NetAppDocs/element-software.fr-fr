@@ -34,6 +34,7 @@ Vous pouvez ajouter un bloc d'adresses IP en suivant la procédure suivante :
 . Sélectionnez *Enregistrer les modifications*.
 
 
+.Lien vers les articles de la base de connaissances de dépannage
 Lien vers les articles de la base de connaissances pour obtenir de l'aide pour résoudre les problèmes de gestion de vos plages d'adresses IP de VLAN.
 
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/Duplicate_IP_warning_after_adding_a_storage_node_in_VLAN_on_Element_cluster["Avertissement IP en double après ajout d'un nœud de stockage dans VLAN sur le cluster Element"^]

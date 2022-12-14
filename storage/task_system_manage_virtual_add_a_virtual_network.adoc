@@ -13,7 +13,7 @@ summary: 'Vous pouvez ajouter un nouveau réseau virtuel à une configuration de
 [role="lead"]
 Vous pouvez ajouter un nouveau réseau virtuel à une configuration de cluster pour permettre la connexion d'un environnement mutualisé à un cluster exécutant le logiciel Element.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Identifiez le bloc des adresses IP qui seront attribuées aux réseaux virtuels sur les nœuds de cluster.
 * Identifiez une adresse IP du réseau de stockage (SVIP) qui sera utilisée comme point de terminaison pour l'ensemble du trafic de stockage NetApp Element.
 

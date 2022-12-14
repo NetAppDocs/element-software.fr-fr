@@ -23,11 +23,11 @@ Les administrateurs et les hôtes peuvent accéder au cluster à l'aide d'adress
 NOTE: À partir de la version 11.0 de l'élément, les nœuds peuvent être configurés avec IPv4, IPv6 ou les deux adresses pour leur réseau de gestion. Cela s'applique à la fois aux nœuds de stockage et aux nœuds de gestion, à l'exception du nœud de gestion 11.3 et versions ultérieures qui ne prennent pas en charge IPv6. Lors de la création d'un cluster, seule une seule adresse IPv4 ou IPv6 peut être utilisée pour le MVIP et le type d'adresse correspondant doit être configuré sur tous les nœuds.
 
 .Plus d'informations sur les clusters
-*  storage clusters
-*  of thirds
-*  capacity
-*  efficiency
-*  cluster quorum
+* <<Clusters de stockage faisant autorité>>
+* <<Règle des tiers>>
+* <<La capacité inutilisée>>
+* <<Efficacité du stockage>>
+* <<Quorum du cluster de stockage>>
 
 
 

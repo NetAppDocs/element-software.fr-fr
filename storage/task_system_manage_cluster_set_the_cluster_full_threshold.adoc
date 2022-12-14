@@ -13,6 +13,7 @@ summary: Vous pouvez modifier le niveau auquel le système génère un avertisse
 [role="lead"]
 Vous pouvez modifier le niveau auquel le système génère un avertissement de remplissage de cluster de blocs en suivant les étapes ci-dessous. En outre, vous pouvez utiliser la méthode ModityClusterFullThreshold API pour modifier le niveau auquel le système génère un avertissement de bloc ou de métadonnées.
 
+.Ce dont vous avez besoin
 Vous devez disposer des privilèges d'administrateur de cluster.
 
 .Étapes

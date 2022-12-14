@@ -13,6 +13,7 @@ summary: 'Une fois les volumes couplés, vous devez affecter un volume source et
 [role="lead"]
 Une fois les volumes couplés, vous devez affecter un volume source et son volume cible de réplication. Une source ou une cible de réplication peut être un volume dans une paire de volumes. Vous pouvez également utiliser cette procédure pour rediriger les données envoyées vers un volume source vers un volume cible distant en cas d'indisponibilité du volume source.
 
+.Ce dont vous avez besoin
 Vous avez accès aux clusters contenant les volumes source et cible.
 
 .Étapes

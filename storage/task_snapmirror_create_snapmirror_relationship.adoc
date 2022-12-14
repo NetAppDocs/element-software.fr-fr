@@ -16,6 +16,7 @@ Vous devez créer une relation SnapMirror dans l'interface utilisateur NetApp El
 
 NOTE: Lorsqu'un volume n'est pas encore activé pour SnapMirror et que vous sélectionnez de créer une relation dans l'interface utilisateur d'Element, SnapMirror est automatiquement activé sur ce volume.
 
+.Ce dont vous avez besoin
 SnapMirror est activé sur le volume.
 
 .Étapes

@@ -13,7 +13,7 @@ summary: Vous pouvez remplacer à chaud un disque SSD défectueux.
 [role="lead"]
 Vous pouvez remplacer à chaud un disque SSD défectueux.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez un disque de remplacement.
 * Vous avez un bracelet antistatique (ESD), ou vous avez pris d'autres précautions antistatiques.
 * Vous avez contacté le support NetApp afin de vérifier que le disque SSD doit être remplacé et que la procédure de résolution est appropriée.
@@ -22,6 +22,7 @@ Lorsque vous appelez le support NetApp, vous aurez besoin du numéro de série o
 
 
 
+.Description de la tâche
 Ces instructions s'appliquent aux modèles de nœuds de stockage SolidFire suivants :
 
 * SF2405
@@ -68,9 +69,9 @@ Suivez ces bonnes pratiques lors de la gestion des disques :
 ====
 Voici une présentation générale des étapes à suivre :
 
-*  the drive from the cluster
-*  the drive from the chassis
-*  the drive to the cluster
+* <<Retirer le lecteur du cluster>>
+* <<Remplacez le lecteur du châssis>>
+* <<Ajoutez le lecteur au cluster>>
 
 
 

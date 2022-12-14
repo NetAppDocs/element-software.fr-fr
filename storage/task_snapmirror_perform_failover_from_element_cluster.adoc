@@ -15,7 +15,7 @@ Vous pouvez effectuer un basculement depuis le cluster Element pour rendre le vo
 
 Utilisez l'interface utilisateur de NetApp Element pour effectuer le basculement. Si l'interface utilisateur Element n'est pas disponible, vous pouvez également utiliser ONTAP System Manager ou l'interface de ligne de commandes ONTAP pour lancer la commande « interrompre la relation ».
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Une relation SnapMirror existe et possède au moins un snapshot valide sur le volume de destination.
 * Vous devez basculer vers le volume de destination en raison d'une panne ou d'un événement planifié sur le site primaire.
 

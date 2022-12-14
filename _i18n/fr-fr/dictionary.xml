@@ -5222,7 +5222,6 @@
   <block id="abb3dae171133339f899210b56c4d2b0" category="admonition">Vous devrez peut-être redémarrer votre nœud de gestion, en fonction de votre environnement.</block>
   <block id="2a9657ab3bc5d2dff84e7a553d41a3ff" category="summary">Vous pouvez récupérer des journaux à partir des services exécutés sur le nœud de gestion à l'aide de l'API REST.</block>
   <block id="7eada9b3aeba75afea1bb6e56efd98a1" category="paragraph">Vous pouvez récupérer des journaux à partir des services exécutés sur le nœud de gestion à l'aide de l'API REST. Vous pouvez extraire des journaux de tous les services publics ou spécifier des services spécifiques et utiliser les paramètres de requête pour mieux définir les résultats de retour.</block>
-  <block id="a711863513c11f3a6d86294acc7be0ba" category="list-title">Ce dont vous avez besoin, 8217;ll</block>
   <block id="fc78a25a814125bdaeb01b28be02a19d" category="list-text">Votre version du cluster exécute NetApp Element 11.3 ou une version ultérieure.</block>
   <block id="d95dde96d5f37c05bba91d1bff6d1a55" category="list-text">Vous avez déployé un nœud de gestion exécutant la version 11.3 ou ultérieure.</block>
   <block id="5d8cb69408d9a6773459aa0a397a3003" category="list-text">Ouvrez l'interface utilisateur de l'API REST sur le nœud de gestion.</block>
@@ -6652,11 +6651,9 @@
   <block id="d8aa96c19f08fe6b40bad0d6abbfdc9b" category="list-text"><block ref="74f0c0b4f9db788942fc0a005e59f061" prefix="" category="inline-code"></block></block>
   <block id="8a221a4f965f4cfc6edfd1e855cb0aaa" category="summary">Avant d'installer SolidFire ESDS, assurez-vous que vous effectuez les vérifications nécessaires et que votre environnement répond aux exigences de configuration, d'adressage IP et de mise en réseau.</block>
   <block id="88d5e6f116564d2c06f8abf0724efec5" category="doc">Effectuez les tâches préalables à l'installation</block>
-  <block id="f7dcb8224f85128ec87fe0a2442fc52a" category="list-title">&lt;fort&gt; installez le matériel requis&lt;/strong&gt;</block>
   <block id="72af4b89bf6c89e877a119046199a6b7" category="inline-link">Matrice d'interopérabilité NetApp (connexion requise)</block>
   <block id="04be9ab6e44a60450ae6452e609984be" category="list-text">Installez le serveur pris en charge. Voir<block ref="36e2db57610e5e592eafeefc265a5341" category="inline-link-rx"></block> pour en savoir plus.</block>
   <block id="fa5b69222b994a8a596eef2320a99a75" category="list-text">Vérifiez que la configuration matérielle est équilibrée et que tous les canaux sont remplis. Pour plus d'informations sur l'optimisation de la bande passante, reportez-vous au<block ref="404eae9bc7c2264c66c1f2a9c06f066b" category="inline-link-rx"></block> (connexion requise).</block>
-  <block id="2a97471ec199242556431779bd30838a" category="list-title">&lt;strong&gt; configure l'hôte (nœud)&lt;/strong&gt;</block>
   <block id="f5c6f9835df083f9a7848584832ffe51" category="list-text">Installez Red Hat Package Manager en fonction des versions prises en charge répertoriées dans<block ref="36e2db57610e5e592eafeefc265a5341" category="inline-link-rx"></block>.</block>
   <block id="6fa70406f47786b02c8769bd1b178120" category="list-text">Configurez un serveur NTP (Network Time Protocol) à utiliser avec tous les hôtes de votre réseau.</block>
   <block id="0ce895e38ab4717417ddcc44e6cf4e1c" category="list-text">Lorsque vous sélectionnez la destination d'installation, sélectionnez le bouton radio pour configurer manuellement le partitionnement du système de fichiers. Sur la page *Partitionnement manuel*, utilisez les boutons *+* et *-* pour supprimer toutes les partitions existantes et créer de nouvelles partitions et les dimensionner en suivant les recommandations indiquées ici. L'utilisation du schéma de partitionnement LVM par défaut vous permet de redimensionner facilement plus tard, si nécessaire.</block>
@@ -6684,7 +6681,6 @@
   <block id="68c4b5c87d48a6c6ca4cc14cfacaab03" category="list-text">Activez SSH sur vos nœuds.</block>
   <block id="f0a2de2efe6108942f8b79e50b1b6be5" category="inline-link">Article de la base de connaissances (connexion requise)</block>
   <block id="57208611101414fe2f0426e46c1f0d65" category="list-text">Si vous souhaitez désactiver IPv6, suivez les étapes décrites dans ce document<block ref="2a5c78b7a0390cd7a5313c37d3eb2c52" category="inline-link-rx"></block>.</block>
-  <block id="1a76b48d9d60fd8364da6ea0eaec3eff" category="list-title">&lt;forte&gt; installer le logiciel requis&lt;/strong&gt;</block>
   <block id="654fdbae1d58bcbbc420ee34e66cbecb" category="list-text">Installez Ansible, Git, Podman et Python 3.0.</block>
   <block id="94f57e8fc8a5e98d0aadd2f3fd717077" category="paragraph">Pour Element 12.5, la version Podman prise en charge dépend de votre version Red Hat Package Manager :</block>
   <block id="111f3cbd261a94954f796bd076317101" category="cell">Version de Red Hat Package Manager</block>
@@ -6694,7 +6690,6 @@
   <block id="9b894f3cda522ff568508c500c301f16" category="cell">8.1, 8.2, 8.3 et 8.4</block>
   <block id="f991179eef81959ca4ec71aa86a4df76" category="paragraph">3.1.x, 3.2.x, 3.3.x, 3.4.1 et 3.4.2</block>
   <block id="23e29da41b25c9d2df2b9c3e88b4f7e0" category="admonition">Dès qu'elle est disponible, NetApp vous recommande d'accepter les mises à jour de sécurité pour votre version Podman.</block>
-  <block id="e1633c03fa0d88ea4ec55f043ee4598c" category="list-title">&lt;strong&gt; Vérification que votre configuration correspond aux exigences NetApp&amp;#8217;s en matière d'installation de SolidFire ESDS&lt;/strong&gt;</block>
   <block id="697ea025ecb303d4f40d1bf3a8b4bde0" category="inline-link">Matrice d'interopérabilité NetApp (IMT)</block>
   <block id="30ec57363b9938495c0097cd8a0bcbbf" category="list-text">Utilisez la configuration ESDS de SolidFire répertoriée dans le<block ref="d73544449e4c516eccc06a758c5e6c47" category="inline-link-rx"></block> comme référence.</block>
   <block id="909806d31a8e12a761cf09c409cefaad" category="admonition">Si vous contactez le support NetApp pour obtenir de l'aide concernant les problèmes liés à SolidFire ESDS, le support vérifie d'abord que votre plateforme est conforme à la configuration de référence pour les SolidFire ESDS répertoriées dans le IMT. Si le service de support détermine que votre plateforme sous-jacente n'est pas conforme à la configuration de référence, le service de support vous guidera dans l'alignement des versions correctes du micrologiciel, des logiciels et/ou du matériel non compatibles avec les versions correctes du IMT.</block>
@@ -6708,7 +6703,6 @@
   <block id="34838a3f0559a6f772b5758da69cbbfb" category="list-text">Créez le PlayBook à utiliser pour la vérification de conformité.</block>
   <block id="e7b21406c191f4c1bb269d3ffee0368d" category="list-text">Exécutez le manuel de vérification de conformité comme indiqué dans l'exemple suivant :</block>
   <block id="37ea6b2cb8a75db09428d93d9a0416d0" category="admonition">Même après avoir commencé à utiliser le système ESDS de SolidFire, vous devez exécuter le contrôle de conformité régulièrement pour vous assurer que votre système est en conformité. Dans certains cas, le support NetApp vous demande d'exécuter la vérification de conformité pour vous aider à diagnostiquer et résoudre les problèmes.</block>
-  <block id="09acbcc09d76195cfde55a1522db4644" category="list-title">&lt;solide&gt; compréhension des besoins en matière de réseau et d'adresse IP&lt;/strong&gt;</block>
   <block id="cd9179614936afe6f50612f0cf8c5615" category="inline-link">Documentation Red Hat</block>
   <block id="f82fbefaef1108fe81a739d7c43f6e9f" category="list-text">Familiarisez-vous avec la configuration et la gestion des réseaux et des interfaces réseau dans Red Hat Package Manager. Voir la<block ref="a661302e878d4f2065d4f48e5679440c" category="inline-link-rx"></block>.</block>
   <block id="1c39f346a9b7cd529f0e7deeee5ce177" category="list-text">Configurez votre réseau en suivant les exigences IP détaillées ici :</block>
@@ -6733,7 +6727,6 @@
   <block id="3954d0109fc9c791be6d11e39804cb50" category="paragraph">Ports pour le réseau de gestion</block>
   <block id="ebff118a006e94651da911d800279c44" category="admonition">L'illustration ci-dessous est destinée à être un exemple. Votre matériel réel peut être différent en fonction du serveur dont vous disposez.</block>
   <block id="7300079506cb737ad309140b1f56eeda" category="list-text">Remplacez la MTU du port de commutateur par 9216 octets.</block>
-  <block id="4b7ef9f74fc5d5abcae07ceee277787a" category="list-title">&lt;forte&gt; Autoriser des ports spécifiques via votre datacenter et#8217;s pare-feu&lt;/strong&gt;</block>
   <block id="5cfb8e81e0263340cb87df666ea52280" category="list-text">Si<block ref="7ba21652408bcade58b8719451511f2a" prefix=" " category="inline-code"></block> Est activé sur le nœud de stockage exécutant Red Hat Package Manager, assurez-vous que les ports suivants sont ouverts, afin que vous puissiez gérer le système à distance, permettre aux clients hors de votre centre de données de se connecter aux ressources et de vous assurer que les services internes peuvent fonctionner correctement :</block>
   <block id="f31bbdd1b3e85bccd652680e16935819" category="cell">Source</block>
   <block id="12007e1d59f4d09c87dbe2c438256244" category="cell">Destination</block>
@@ -6775,11 +6768,9 @@
   <block id="f0f166a01d55488cbf1ae223ecbb6068" category="paragraph">Service QoSSIOC plug-in vCenter</block>
   <block id="b843120f7921517683f4de0687bf0a29" category="admonition">Les ports 2181, 2182 et 2183 sont nécessaires pour la base de données distribuée d'éléments. Ils sont ouverts dynamiquement à partir du conteneur d'éléments lorsque vous installez SolidFire ESDS.</block>
   <block id="0cb585626379a70b87a0e3ee14309e3b" category="list-text">Utiliser les commandes suivantes pour ouvrir les ports mentionnés ci-dessus :</block>
-  <block id="95f75258f8b33664eeaf8b541ff97858" category="list-title">&lt;fort&gt; configurez votre réseau hôte&lt;/strong&gt;</block>
   <block id="78ff65afbf92a15cd30dea91aefc1e9b" category="inline-link-macro">et des meilleures pratiques</block>
   <block id="f433801b7b771eb645906990697cb40d" category="list-text">Configurez votre réseau hôte à l'aide du <block ref="d5d50f06af9eb06fd5c8afba97ab5274" category="inline-link-macro-rx"></block> fournies.</block>
   <block id="9fe0e0876a07d2247ecb84a994e87a77" category="admonition">Vous devez suivre les étapes de configuration de votre réseau hôte pour garantir la réussite de l'installation de SolidFire ESDS.</block>
-  <block id="fb96b65afb5d2a139a12f87e3171372c" category="list-title">&lt;fort&gt; exigences supplémentaires&lt;/strong&gt;</block>
   <block id="6c92285fa6d3e827b198d120ea3ac674" category="inline-link">ici</block>
   <block id="d5272d5ecd1fe99c7097dfcca90c8f7d" category="list-text">Installez un seul recueil qui sera utilisé par le support NetApp pour la collecte des journaux de l'hôte. Vous pouvez installer une collecte à partir de<block ref="d3b16539387c5c512d10064586f79c65" category="inline-link-rx"></block>. Vous devez disposer d'un compte NetApp pour accéder au téléchargement. Vous pouvez également trouver le Guide d'installation de One Collect et les notes de version au même emplacement.</block>
   <block id="b4cac9f0dca24135289e8ff89afe6aa1" category="admonition">Vous devez télécharger et installer un Collect pour bénéficier d'une assistance optimale.</block>
@@ -11259,7 +11250,6 @@
   <block id="ced99676ffdce11db0cf7ce2a4a812b8" category="list-text">Vous avez vérifié que l'heure du système sur tous les nœuds est synchronisée et que le protocole NTP est correctement configuré pour le cluster de stockage et les nœuds. Chaque nœud doit être configuré avec un serveur de noms DNS dans l'interface utilisateur Web par nœud <block ref="eacc478b3484836aa839e1dec53ce433" prefix="(" category="inline-code"></block>) sans erreurs de cluster non résolues liées à l'inclinaison temporelle.</block>
   <block id="85aed6fa173952d69db4c99c1290921b" category="inline-link-macro">micrologiciel de stockage</block>
   <block id="4b1a9ce7f7fbe6c6a81ef1238b7e421a" category="list-text">Vous avez prévu suffisamment de temps pour votre <block ref="cff6d63ff47747e8e31df90baa037fdf" category="inline-link-macro-rx"></block> et <block ref="64ca0a1c0466cb0bbd500939e8f353f3" category="inline-link-macro-rx"></block> mises à niveau. Lorsque vous effectuez une mise à niveau vers Element 12.5 ou une version ultérieure, le processus de mise à niveau varie en fonction de la version du logiciel Element et des mises à jour du firmware.</block>
-  <block id="6ea7f8d4483b20144d2c82f1ed99c07a" category="section-title">Séquence de mise à niveau du système</block>
   <block id="11d9cbba51c832a014742a5da1938d41" category="paragraph">Utilisez la séquence suivante pour mettre à niveau votre système de stockage 100 % Flash SolidFire pour Element 12.5 ou une version ultérieure.</block>
   <block id="524813e84d210a04a3c005022becca08" category="inline-link-macro">Mise à jour des services de gestion à partir du cloud hybride Control</block>
   <block id="c43409e402c491faff614694ff49b45b" category="list-text"><block ref="d96c5e393dc7f7cfcba5644a67a6ff8a" category="inline-link-macro-rx"></block>.</block>
@@ -12553,4 +12543,28 @@
   <block id="c9c5cc2efc04287e6fe8d7feebf032aa" category="cell">N41WC 1.02</block>
   <block id="126078d2e17c3ac2589cca85b30163c7" category="cell">Dispositif de démarrage</block>
   <block id="64c9f5445140b2d5ab2eb8fe31bd6872" category="admonition">Pour Element 12.5 et versions antérieures, ne vous enregistrez pas plusieurs fournisseurs NetApp Element VASA dans une seule instance de vCenter. Ainsi, lorsqu'un deuxième fournisseur NetApp Element VASA est ajouté, tous les data stores VVOL sont inaccessibles.</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="list-title">Ce dont vous avez besoin</block>
+  <block id="f8317d9a65a7e996db437d8eabc22aeb" category="paragraph-title">Lien vers les articles de la base de connaissances de dépannage</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Résultat</block>
+  <block id="1505b4d22f5b2439d387f71ebb0fccd2" category="paragraph-title">Erreurs possibles</block>
+  <block id="50f33d14f129e4548c1c270fd6725a78" category="paragraph-title">Options de configuration</block>
+  <block id="6a31058d1e6208d43e0d620fb4953c23" category="paragraph-title">Options de gestion des ressources du cluster de stockage</block>
+  <block id="891a52ee80600fd58bac60927df7a3a9" category="section-title">[[enable_main_mode]]activez le mode de maintenance</block>
+  <block id="27404255e546058b4a4837fb07e90bbf" category="section-title">[[disable_main_mode]]Désactiver le mode de maintenance</block>
+  <block id="2cd70ba1e2d0b294626ea7f96d25a07f" category="paragraph-title">Options de collecte de journaux</block>
+  <block id="71f5771dab663d80ba4dad1627e3386a" category="paragraph-title">Présentation de la mise à niveau</block>
+  <block id="fa5cc5e49b65ffd46ba8881097cf8310" category="list-title">*Installer le matériel requis*</block>
+  <block id="6b170e726e4567decff7daaed3e1a08b" category="list-title">*Configurer l'hôte (nœud)*</block>
+  <block id="c86064ac886a0aab9f8ecf92f19f98b3" category="list-title">*Installer le logiciel requis*</block>
+  <block id="fd9cdaf80c90bdd2d3af18c1c856b60f" category="list-title">*Vérifiez que votre configuration correspond aux exigences de NetApp pour l'installation de SolidFire ESDS*</block>
+  <block id="9bfadf4c7ec72b1af0ecb9eaabaf58c8" category="list-title">*Comprendre les exigences en matière de réseau et d'adresse IP*</block>
+  <block id="a113f5f001cbfcc5dc2a0dde65f4e2d9" category="list-title">*Autoriser des ports spécifiques via le pare-feu de votre datacenter*</block>
+  <block id="45f450486d575041c747125231750ffe" category="list-title">*Configurer votre réseau hôte*</block>
+  <block id="abe03d597b94a3f77cae3615416163ef" category="list-title">*Compléter les exigences supplémentaires*</block>
+  <block id="64916198004d1ee19b1b50002f51f1a8" category="paragraph-title">Options de mise à niveau</block>
+  <block id="df5820ca7f238b48987ff74db1271e4a" category="paragraph-title">Options de mise à jour</block>
+  <block id="bac407daf00ae86b0f95e89cf84eeac1" category="section-title">[[sys_upgrade]]séquence de mise à niveau du système</block>
+  <block id="a31b6eafc73ca0db90a0d96e6fb9dc93" category="paragraph-title">Options de vérification de l'état</block>
+  <block id="2de79e7b8c77e4847d6bcd5a8ee879ce" category="section-title">[[sf_nodes]]SF38410, SF19210, SF9605 et SF4805</block>
+  <block id="63f488c7bb829c89f024839d6aa602f4" category="section-title">[[custom_pd]]domaines de protection personnalisés</block>
 </blocks>

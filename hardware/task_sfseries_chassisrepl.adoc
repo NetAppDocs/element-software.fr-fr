@@ -13,7 +13,7 @@ summary: 'Vous devrez peut-être remplacer le châssis si le ventilateur, l"unit
 [role="lead"]
 Vous devrez peut-être remplacer le châssis si le ventilateur, l'unité de traitement centrale (CPU) ou le module de mémoire DIMM (Dual Inline Memory module) tombe en panne, ou si vous devez résoudre les problèmes de surchauffe ou de démarrage. Les pannes de cluster dans l'interface utilisateur du logiciel NetApp Element et le voyant orange clignotant à l'avant du châssis indiquent qu'un remplacement de châssis est possible. Contactez le support NetApp avant de continuer.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez contacté le service de support NetApp.
 +
 Si vous commandez une pièce de rechange, vous devez avoir ouvert un dossier auprès du support NetApp.
@@ -27,6 +27,7 @@ Le support NetApp vous aidera à choisir si le modèle de gestion des données c
 * Vous avez un clavier et un moniteur.
 
 
+.Description de la tâche
 Les instructions de ce document s'appliquent si vous disposez d'un châssis à une unité de rack (1U) avec l'un des nœuds suivants :
 
 * SF2405

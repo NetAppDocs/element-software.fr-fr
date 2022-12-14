@@ -13,7 +13,7 @@ summary: 'Vous pouvez consulter les informations sur le volume virtuel de tous l
 [role="lead"]
 Vous pouvez consulter les informations sur le volume virtuel de tous les volumes virtuels actifs du cluster dans l'interface utilisateur d'Element. Vous pouvez également consulter les activités de performances de chaque volume virtuel, y compris l'entrée, la sortie, le débit, la latence informations sur la profondeur de la file d'attente et le volume.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez avoir activé les VVol dans l'interface d'Element pour le cluster.
 * Vous devez avoir créé un conteneur de stockage associé.
 * Vous devez avoir configuré votre cluster vSphere pour utiliser les VVol du logiciel Element.

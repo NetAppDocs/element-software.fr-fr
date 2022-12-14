@@ -13,7 +13,7 @@ summary: 'Si vous ne disposez pas d"informations d"identification administrateur
 [role="lead"]
 Si vous ne disposez pas d'informations d'identification administrateur de cluster pour un cluster distant, vous pouvez coupler un volume à un autre volume d'un cluster distant à l'aide d'une clé de couplage.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Assurez-vous que les clusters contenant les volumes sont appariés.
 * Assurez-vous qu'il y a un volume sur le cluster distant à utiliser pour le couplage.
 +

@@ -15,12 +15,12 @@ Les nœuds sont des ressources matérielles ou virtuelles regroupées dans un cl
 
 Le logiciel NetApp Element définit différents rôles de nœud pour un cluster. Les types de rôles de nœud sont les suivants :
 
-*  node
-*  node
-*  Channel node
+* <<Nœud de gestion>>
+* <<Nœud de stockage>>
+* <<Nœud Fibre Channel>>
 
 
- states of operation,L'état des nœuds est indiqué varient en fonction de l'association du cluster.
+<<Etat de fonctionnement du nœud,L'état des nœuds est indiqué>> varient en fonction de l'association du cluster.
 
 
 

@@ -16,7 +16,7 @@ keywords: netapp, element, cluster, volume, access
 [role="lead"]
 Vous pouvez créer de nouveaux groupes d'accès aux volumes, modifier le nom, les initiateurs associés ou les volumes associés de groupes d'accès, ou supprimer des groupes d'accès aux volumes existants à l'aide de NetApp Hybrid Cloud Control.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez des identifiants d'administrateur pour ce système de stockage 100 % Flash SolidFire.
 * Vous avez mis à niveau vos services de gestion vers au moins la version 2.15.28. La gestion du stockage NetApp Hybrid Cloud Control n'est pas disponible dans les versions précédentes de packs de services.
 * Assurez-vous de disposer d'un schéma de nommage logique pour les groupes d'accès aux volumes.

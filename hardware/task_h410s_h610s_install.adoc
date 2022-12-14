@@ -16,12 +16,12 @@ Avant de commencer avec votre système de stockage 100 % Flash, il est conseill�
 
 TIP: Voir la link:../media/hseries_isi.pdf["affiche"^] pour une représentation visuelle des instructions.
 
-*  diagrams
-*  for installation
-*  the rails
-*  and cable the nodes
-*  the nodes
-*  a cluster
+* <<Diagrammes de flux de travail>>
+* <<Avant l'installation>>
+* <<Installer les rails>>
+* <<Installez et câconnectez les nœuds>>
+* <<Configurez les nœuds>>
+* <<Création d'un cluster>>
 
 
 
@@ -87,8 +87,8 @@ La commande de matériel qui vous a été expédiée comprend un jeu de rails co
 
 TIP: Installez le matériel de fixation du bas du rack jusqu'en haut pour éviter que l'équipement ne se renverse. Si votre rack comprend des dispositifs de stabilisation, installez-les avant d'installer le matériel.
 
-* 
-* 
+* <<H410S>>
+* <<H610S>>
 
 
 
@@ -133,8 +133,8 @@ Vous installez le nœud de stockage H410S dans un châssis 2U à quatre nœuds. 
 
 CAUTION: Retirez tous les matériaux d'emballage et d'emballage de l'unité. Cela empêche la surchauffe et l'arrêt des nœuds.
 
-* 
-* 
+* <<H410S>>
+* <<H610S>>
 
 
 

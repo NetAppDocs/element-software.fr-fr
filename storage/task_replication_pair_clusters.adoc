@@ -13,7 +13,7 @@ summary: 'Vous devez coupler deux clusters pour utiliser la fonctionnalité de r
 [role="lead"]
 Vous devez coupler deux clusters pour utiliser la fonctionnalité de réplication en temps réel. Une fois que vous avez couplé et connecté deux clusters, vous pouvez configurer des volumes actifs sur un cluster pour qu'ils soient répliqués en continu sur un second cluster, assurant ainsi la protection continue des données (CDP).
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez disposer des privilèges d'administrateur de cluster sur un ou les deux clusters en cours d'association.
 * Tous les MIP et SIP de nœud sont acheminés les uns vers les autres.
 * Moins de 2000 ms de latence aller-retour entre les clusters.

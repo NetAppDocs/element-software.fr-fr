@@ -108,6 +108,7 @@ TIP: Si vous ne modifiez pas les informations d'identification des paramètres C
 
 Vous pouvez supprimer les conteneurs de stockage de l'interface utilisateur Element.
 
+.Ce dont vous avez besoin
 Assurez-vous que toutes les machines virtuelles ont été supprimées du datastore VVol.
 
 .Étapes

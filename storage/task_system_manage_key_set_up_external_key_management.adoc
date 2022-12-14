@@ -13,7 +13,7 @@ summary: 'Procédez comme suit et utilisez les méthodes de l"API Element réper
 [role="lead"]
 Procédez comme suit et utilisez les méthodes de l'API Element répertoriées pour configurer votre fonctionnalité de gestion externe des clés.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Si vous configurez la gestion externe des clés en association avec le chiffrement logiciel au repos, vous avez activé le chiffrement logiciel au repos à l'aide du link:../api/reference_element_api_createcluster.html["CreateCluster"] méthode sur un nouveau cluster qui ne contient pas de volumes.
 
 

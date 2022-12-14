@@ -13,11 +13,12 @@ summary: 'Vous pouvez créer un cluster de stockage une fois que vous avez confi
 [role="lead"]
 Vous pouvez créer un cluster de stockage une fois que vous avez configuré tous les nœuds individuels. Lorsque vous créez un cluster, un compte utilisateur d'administrateur de cluster est automatiquement créé pour vous. L'administrateur de cluster est autorisé à gérer tous les attributs de cluster et peut créer d'autres comptes d'administrateur de cluster.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez installé le nœud de gestion.
 * Vous avez configuré tous les nœuds individuels.
 
 
+.Description de la tâche
 Lors de la nouvelle configuration de nœud, des adresses IP de gestion (MIP) 1G ou 10G sont attribuées à chaque nœud. Vous devez utiliser l'une des adresses IP de nœud créées lors de la configuration pour ouvrir la page Créer un nouveau cluster. L'adresse IP que vous utilisez dépend du réseau que vous avez choisi pour la gestion du cluster.
 
 [IMPORTANT]

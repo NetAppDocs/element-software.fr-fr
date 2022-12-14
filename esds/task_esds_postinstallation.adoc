@@ -13,12 +13,13 @@ summary: Après avoir installé SolidFire ESDS, configurez le nom du cluster sur
 [role="lead"]
 Après avoir installé SolidFire ESDS, configurez le nom du cluster sur chaque nœud SolidFire ESDS. Vous pouvez ensuite créer un cluster SolidFire ESDS.
 
+.Description de la tâche
 Voici une présentation générale des tâches à effectuer après l'installation de SolidFire ESDS :
 
-*  the cluster name
-*  the license key
-*  a cluster
-*  drives to the cluster
+* <<Configurer le nom du cluster>>
+* <<Définissez la clé de licence>>
+* <<Création d'un cluster>>
+* <<Ajout de disques au cluster>>
 
 
 
@@ -92,6 +93,7 @@ Voir l'exemple de demande suivant :
 
 Lorsque vous créez un cluster SolidFire ESDS, vous avez besoin des informations de clé de licence. Le support NetApp doit également disposer des informations clés de licence pour vous aider dans la résolution des problèmes. La clé de licence pour le cluster ESDS de SolidFire est constituée du numéro de commande du cluster associé au numéro de série et active le modèle de licence pour la durée de capacité que vous avez acheté.
 
+.Description de la tâche
 Vous pouvez utiliser le `SetLicenseKey` Méthode permettant de définir la clé de licence pour le cluster de stockage SolidFire ESDS. Le `SetLicenseKey` la méthode possède les paramètres d'entrée suivants :
 
 [cols="5*"]

@@ -19,10 +19,10 @@ Avec le tableau de bord NetApp Hybrid Cloud Control, vous pouvez visualiser l'en
 
 NOTE: Lorsque vous lancez une nouvelle session NetApp Hybrid Cloud Control pour la première fois, il peut y avoir un retard dans le chargement de la vue du tableau de bord NetApp Hybrid Cloud Control lorsque le nœud de gestion gère de nombreux clusters. La durée de chargement varie en fonction du nombre de clusters gérés activement par le nœud de gestion. Pour les lancements suivants, vous aurez des temps de chargement plus courts.
 
-*  the NetApp HCC Dashboard
-*  storage resources
-*  storage capacity
-*  storage performance
+* <<Accédez au tableau de bord NetApp HCC>>
+* <<Surveillance des ressources de stockage>>
+* <<Surveiller la capacité de stockage>>
+* <<Contrôle des performances du stockage>>
 
 
 

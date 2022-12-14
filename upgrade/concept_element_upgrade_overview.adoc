@@ -26,11 +26,11 @@ Parmi ces composants : services de gestion, NetApp Hybrid Cloud Control, logicie
 
 
 ====
-Le ,séquence de mise à niveau du système Nous décrivons dans les tâches nécessaires à la mise à niveau d'un système de stockage 100 % Flash SolidFire. Idéalement, ces procédures sont exécutées dans le cadre d'une séquence de mise à niveau plus importante et non isolément. Si une mise à niveau ou une mise à jour basée sur les composants est nécessaire, reportez-vous aux conditions préalables requises pour vous assurer que des complexités supplémentaires sont traitées.
+Le <<sys_upgrade,séquence de mise à niveau du système>> Nous décrivons dans les tâches nécessaires à la mise à niveau d'un système de stockage 100 % Flash SolidFire. Idéalement, ces procédures sont exécutées dans le cadre d'une séquence de mise à niveau plus importante et non isolément. Si une mise à niveau ou une mise à jour basée sur les composants est nécessaire, reportez-vous aux conditions préalables requises pour vous assurer que des complexités supplémentaires sont traitées.
 
 Le link:task_sf_upgrade_all_vsphere.html["Séquence de mise à niveau de vSphere"] L'ajout du contenu du plug-in Element pour vCenter Server décrit les étapes supplémentaires requises pour la préinstallation et la post-mise à niveau pour vCenter Server.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous exécutez le nœud de gestion 11.3 ou version ultérieure. Les dernières versions du nœud de gestion disposent d'une architecture modulaire qui fournit des services individuels.
 +
 
@@ -46,7 +46,7 @@ Les mises à niveau utilisant NetApp Hybrid Cloud Control ne sont pas disponible
 
 
 
-== Séquence de mise à niveau du système
+== [[sys_upgrade]]séquence de mise à niveau du système
 
 Utilisez la séquence suivante pour mettre à niveau votre système de stockage 100 % Flash SolidFire pour Element 12.5 ou une version ultérieure.
 

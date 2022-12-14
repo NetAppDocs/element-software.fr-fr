@@ -21,7 +21,7 @@ En général, lorsque vous utilisez SnapMirror pour la reprise d'activité à pa
 
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Le nœud de destination de l'élément doit avoir été accessible à ONTAP.
 * Le volume Element doit avoir été activé pour la réplication SnapMirror.
 

@@ -13,13 +13,14 @@ summary: 'Chaque châssis SolidFire comprend deux unités d"alimentation pour la
 [role="lead"]
 Chaque châssis SolidFire comprend deux unités d'alimentation pour la redondance de l'alimentation. En cas de panne d'un bloc d'alimentation, vous devez le remplacer dès que possible pour vous assurer que le châssis dispose d'une source d'alimentation redondante.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez déterminé que l'unité d'alimentation doit être remplacée.
 * Vous avez une unité d'alimentation de remplacement.
 * Vous avez vérifié que le second bloc d'alimentation fonctionne.
 * Vous avez un bracelet antistatique (ESD), ou vous avez pris d'autres précautions antistatiques.
 
 
+.Description de la tâche
 Ces instructions s'appliquent si vous disposez d'un châssis à une unité de rack (1U) avec l'un des nœuds suivants :
 
 * SF2405

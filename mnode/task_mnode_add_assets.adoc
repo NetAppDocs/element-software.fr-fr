@@ -18,7 +18,7 @@ Vous pouvez ajouter une ressource de contrôleur à la configuration du nœud de
 
 Vous devrez peut-être ajouter une ressource si vous avez récemment fait évoluer votre installation et que de nouvelles ressources n'ont pas été ajoutées automatiquement à votre configuration. Utilisez ces API pour ajouter des ressources qui sont des ajouts récents à votre installation.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Votre version du cluster exécute NetApp Element 11.3 ou une version ultérieure.
 * Vous avez déployé un nœud de gestion exécutant la version 11.3 ou ultérieure.
 * Vous avez créé un nouveau rôle NetApp HCC dans vCenter afin de limiter les vues des services de nœud de gestion aux ressources NetApp uniquement. Voir link:task_mnode_create_netapp_hcc_role_vcenter.html["Créez un rôle NetApp HCC dans vCenter"]

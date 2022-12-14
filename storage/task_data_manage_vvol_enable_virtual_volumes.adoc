@@ -13,7 +13,7 @@ summary: 'Vous devez activer manuellement la fonctionnalité \(VVol\) vSphere Vi
 [role="lead"]
 Vous devez activer manuellement la fonctionnalité volumes virtuels vSphere (VVol) via le logiciel NetApp Element. Les VVol sont désactivés par défaut, mais le système du logiciel Element n'est pas automatiquement activé dans le cadre d'une nouvelle installation ou d'une mise à niveau. L'activation des VVol est une tâche de configuration ponctuelle.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Le cluster doit exécuter Element 9.0 ou version ultérieure.
 * Le cluster doit être connecté à un environnement ESXi 6.0 ou version ultérieure compatible avec les VVol.
 * Si vous utilisez Element 11.3 ou version ultérieure, le cluster doit être connecté à un environnement ESXi 6.0 Update 3 ou version ultérieure.

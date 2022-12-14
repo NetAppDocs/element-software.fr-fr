@@ -15,6 +15,7 @@ Vous pouvez créer un nouveau cluster après avoir configuré les différents n�
 
 Lors de la nouvelle configuration de nœud, des adresses IP de gestion (MIP) 1G ou 10G sont attribuées à chaque nœud. Vous devez utiliser l'une des adresses IP de nœud créées lors de la configuration pour ouvrir la page Créer un nouveau cluster. L'adresse IP que vous utilisez dépend du réseau que vous avez choisi pour la gestion du cluster.
 
+.Ce dont vous avez besoin
 Vous avez configuré les différents nœuds Fibre Channel.
 
 .Étapes

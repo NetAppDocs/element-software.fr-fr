@@ -22,7 +22,7 @@ NOTE: Si un noeud final existant a été créé à l'origine à l'aide de l'API 
 
 Pour plus de détails sur les méthodes API, voir link:../api/index.html["Gérez le stockage avec l'API Element"].
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez avoir activé SnapMirror dans l'interface utilisateur Element pour le cluster de stockage.
 * Vous connaissez les informations d'identification ONTAP pour le noeud final.
 

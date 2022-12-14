@@ -16,15 +16,16 @@ keywords: netapp, element, logs, collection, troubleshooting, monitor
 [role="lead"]
 Si vous rencontrez des problèmes lors de l'installation de votre système de stockage 100 % Flash SolidFire, vous pouvez collecter les journaux à l'adresse du support NetApp pour les aider à établir un diagnostic. Vous pouvez utiliser NetApp Hybrid Cloud Control ou l'API REST pour collecter les journaux dans un système Element.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vérifiez que votre cluster de stockage exécute la version 11.3 ou ultérieure du logiciel NetApp Element.
 * Vérifiez que vous avez déployé un nœud de gestion exécutant la version 11.3 ou ultérieure.
 
 
+.Options de collecte de journaux
 Choisissez l'une des options suivantes :
 
-*  NetApp Hybrid Cloud Control to collect logs
-*  the REST API to collect logs
+* <<Utilisez le contrôle du cloud hybride NetApp pour collecter les journaux>>
+* <<Utilisez l'API REST pour collecter les journaux>>
 
 
 

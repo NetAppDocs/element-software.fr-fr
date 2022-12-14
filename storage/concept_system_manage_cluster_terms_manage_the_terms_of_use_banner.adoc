@@ -13,9 +13,10 @@ summary: 'Vous pouvez activer, modifier ou configurer une bannière contenant un
 [role="lead"]
 Vous pouvez activer, modifier ou configurer une bannière contenant un message pour l'utilisateur.
 
- the Terms of Use banner
- the Terms of Use banner
- the Terms of Use banner
+.Options
+<<Activez la bannière Conditions d'utilisation>>
+<<Modifiez la bannière Conditions d'utilisation>>
+<<Désactivez la bannière Conditions d'utilisation>>
 
 
 
@@ -40,7 +41,7 @@ NOTE: Ne pas dépasser 4096 caractères.
 
 Vous pouvez modifier le texte qu'un utilisateur voit lorsqu'il sélectionne la bannière de connexion Conditions d'utilisation.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez disposer des privilèges d'administrateur de cluster pour configurer les conditions d'utilisation.
 * Assurez-vous que la fonctionnalité Conditions d'utilisation est activée.
 
@@ -61,7 +62,7 @@ NOTE: Ne pas dépasser 4096 caractères.
 
 Vous pouvez désactiver la bannière Conditions d'utilisation. Lorsque la bannière est désactivée, l'utilisateur n'est plus invité à accepter les conditions d'utilisation lors de l'utilisation de l'interface utilisateur Element.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez disposer des privilèges d'administrateur de cluster pour configurer les conditions d'utilisation.
 * Assurez-vous que les Conditions d'utilisation sont activées.
 

@@ -37,8 +37,10 @@ CAUTION: Assurez-vous de bien comprendre la disposition du nœud et du châssis,
 . Cliquez sur *configurer les domaines de protection*.
 
 
+.Résultat
 Selon la taille de votre cluster, les données synchronisées entre les domaines peuvent prendre un certain temps. Une fois la synchronisation des données terminée, vous pouvez afficher les affectations de protection Domain personnalisées sur la page *Cluster* > *Nodes* et le tableau de bord de l'interface utilisateur Web d'Element affiche l'état de protection du cluster dans le volet *Custom protection Domain Health*.
 
+.Erreurs possibles
 Voici quelques erreurs que vous pouvez voir après l'application d'une configuration de domaine de protection personnalisée :
 
 |===

@@ -14,12 +14,12 @@ summary: 'Les interfaces logicielles et les utilitaires d"intégration de NetApp
 Un système de stockage SolidFire peut être géré à l'aide de différentes interfaces logicielles et utilitaires d'intégration NetApp Element.
 
 .Options
-*  Element software user interface
-*  Element software API
-*  Element Plug-in for vCenter Server
-*  Hybrid Cloud Control
-*  node UIs
-*  integration utilities and tools
+* <<Interface utilisateur du logiciel NetApp Element>>
+* <<API du logiciel NetApp Element>>
+* <<Plug-in NetApp Element pour vCenter Server>>
+* <<Le contrôle des clouds hybrides NetApp>>
+* <<Interfaces utilisateur de nœud de gestion>>
+* <<Utilitaires et outils d'intégration supplémentaires>>
 
 
 

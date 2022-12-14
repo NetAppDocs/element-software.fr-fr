@@ -23,7 +23,7 @@ La vue avant d'un châssis à quatre nœuds avec nœuds H410S présente les baie
 
 image::hci_stor_node_ssd_bays.gif[La présente les baies associées à chaque nœud dans un châssis à quatre nœuds avec des nœuds H410S.]
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez vérifié que votre nœud de stockage est défectueux et doit être remplacé.
 * Vous avez obtenu un nouveau nœud de stockage.
 * Vous avez un bracelet antistatique (ESD) ou vous avez pris une autre protection antistatique.
@@ -32,9 +32,9 @@ image::hci_stor_node_ssd_bays.gif[La présente les baies associées à chaque n�
 
 Voici une présentation générale des étapes à suivre :
 
-*  to replace the node
-*  the node in the chassis
-*  the node to the cluster
+* <<Préparez-vous à remplacer le nœud>>
+* <<Remplacez le nœud dans le châssis>>
+* <<Ajoutez le nœud au cluster>>
 
 
 

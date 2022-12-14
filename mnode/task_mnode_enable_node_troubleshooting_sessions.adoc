@@ -41,9 +41,9 @@ WARNING: Sauf avis du support NetApp, toute modification de ce système n'est pa
 
 
 .Options de dépannage
-*  a cluster node
-*  a cluster node with NetApp Support
-*  a node that is not part of cluster
+* <<Dépanner un nœud de cluster>>
+* <<Dépanner un nœud de cluster avec le support NetApp>>
+* <<Dépannez un nœud qui ne fait pas partie du cluster>>
 
 
 

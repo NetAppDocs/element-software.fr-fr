@@ -73,9 +73,9 @@ Le logiciel Element Demo Node est un ensemble de fichiers VMware qui ont été e
 
 L'installation d'Element Demo Node sur VMware ESXi implique les tâches suivantes :
 
-*  network interfaces
-*  the demo node on an ESXi server
-*  the demo node on an ESXi server
+* <<Configurez les interfaces réseau>>
+* <<Enregistrez le nœud de démonstration sur un serveur ESXi>>
+* <<Démarrez le nœud de démonstration sur un serveur ESXi>>
 
 
 

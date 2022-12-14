@@ -22,6 +22,7 @@ Vous pouvez entrer jusqu'à cinq serveurs NTP différents.
 
 NOTE: Vous pouvez utiliser les adresses IPv4 et IPv6.
 
+.Ce dont vous avez besoin
 Vous devez disposer des privilèges d'administrateur de cluster pour configurer ce paramètre.
 
 .Étapes

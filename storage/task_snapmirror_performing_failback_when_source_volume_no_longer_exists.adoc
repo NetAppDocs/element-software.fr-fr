@@ -13,7 +13,7 @@ summary: 'Vous pouvez resynchroniser le volume source d"origine et revenir en ar
 [role="lead"]
 Vous pouvez resynchroniser le volume source d'origine et revenir en arrière à l'aide de l'interface utilisateur de NetApp Element. Cette section s'applique aux scénarios dans lesquels le volume source d'origine a été perdu, mais le cluster d'origine est toujours intact. Pour obtenir des instructions sur la restauration vers un nouveau cluster, consultez la documentation disponible sur le site de support NetApp.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez d'une relation de réplication rompue entre les volumes Element et ONTAP.
 * Le volume de l'élément est irrémédiablement perdu.
 * Le nom du volume d'origine apparaît comme INTROUVABLE.

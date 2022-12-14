@@ -20,7 +20,7 @@ Le chiffrement matériel au repos n'est pas activé par défaut lors de la créa
 
 WARNING: Pour les clusters de stockage 100 % Flash SolidFire, le chiffrement logiciel au repos doit être activé au cours de la création du cluster et ne peut pas être désactivé une fois le cluster créé. Pour les clusters SolidFire Enterprise SDS (ESDS), le chiffrement logiciel au repos est activé par défaut.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous disposez des privilèges d'administrateur de cluster pour activer ou modifier les paramètres de chiffrement.
 * Pour le chiffrement matériel au repos, vous avez vérifié que le cluster est en état de fonctionnement avant de modifier les paramètres de chiffrement.
 * Si vous désactivez le cryptage, deux nœuds doivent participer à un cluster pour accéder à la clé afin de désactiver le cryptage sur un disque.
@@ -36,9 +36,9 @@ Pour voir l'état actuel du chiffrement au repos et/ou logiciel au repos sur le 
 NOTE: Le tableau de bord de l'interface utilisateur du logiciel Element sur `https://<MVIP>/` à l'heure actuelle, le chiffrement des données au repos est uniquement affiché pour le chiffrement matériel.
 
 .Options
-*  hardware-based encryption at rest
-*  software-based encryption at rest
-*  hardware-based encryption at rest
+* <<Chiffrement matériel des données au repos>>
+* <<Chiffrement logiciel des données au repos>>
+* <<Désactivation du chiffrement matériel des données au repos>>
 
 
 

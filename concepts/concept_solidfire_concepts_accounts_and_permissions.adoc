@@ -15,9 +15,9 @@ Pour administrer et donner l'accès aux ressources de stockage de votre système
 
 Avec le stockage Element, vous pouvez créer et gérer les types de compte suivants :
 
-*  cluster administrator accounts,L'administrateur compte pour le cluster de stockage
-*  accounts,Les comptes utilisateurs de l'accès au volume de stockage
-*  cluster user accounts,Comptes utilisateurs de cluster faisant autorité pour NetApp Hybrid Cloud Control
+* <<Comptes d'administrateur du cluster de stockage,L'administrateur compte pour le cluster de stockage>>
+* <<Comptes d'utilisateur,Les comptes utilisateurs de l'accès au volume de stockage>>
+* <<Comptes d'utilisateur de cluster qui font autorité,Comptes utilisateurs de cluster faisant autorité pour NetApp Hybrid Cloud Control>>
 
 
 

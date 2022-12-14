@@ -22,7 +22,7 @@ Vous devrez peut-être procéder à une nouvelle clé dans le cadre de l'une des
 
 NOTE: Ce processus est asynchrone et renvoie une réponse avant la fin de l'opération de renouvellement de clé. Vous pouvez utiliser le link:../api/reference_element_api_getasyncresult.html["GetAsyncResult"] méthode d'interrogation du système pour voir quand le processus est terminé.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous avez activé le chiffrement logiciel au repos à l'aide du link:../api/reference_element_api_createcluster.html["CreateCluster"] D'une nouvelle méthode située sur un nouveau cluster, qui ne contient pas de volumes et n'a pas d'E/S. Utilisez le lien :../api/reference_element_api_getsoftwareencryptionatrestinfo.html[`GetSoftwareEncryptionatRestInfo`] pour confirmer que l'état est `enabled` avant de continuer.
 * Vous avez link:../storage/task_system_manage_key_set_up_external_key_management.html["établissement d'une relation de confiance"] Entre le cluster SolidFire et un serveur de clés externe (EKS). Exécutez le link:../api/reference_element_api_testkeyserverkmip.html["TestKeyProviderKmip"] méthode permettant de vérifier qu'une connexion au fournisseur de clés est établie.
 

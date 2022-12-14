@@ -13,9 +13,9 @@ summary: 'Effectuez cette procédure si vous souhaitez remplacer de manière pro
 [role="lead"]
 Choisissez parmi les procédures indiquées ci-dessous pour remplacer un disque de manière proactive, remplacer un disque après sa panne et remplacer un lecteur de cache. Remplacez un lecteur de métadonnées ou un lecteur de bloc dans votre cluster ESDS SolidFire. La page Element UI *Cluster > lecteurs* affiche les informations sur l'usure du disque.
 
-*  a drive proactively
-*  a faulty drive
-*  a cache drive
+* <<Remplacez un disque de manière proactive>>
+* <<Remplacer un lecteur défectueux>>
+* <<Remplacer un lecteur de cache>>
 
 
 
@@ -24,7 +24,7 @@ Choisissez parmi les procédures indiquées ci-dessous pour remplacer un disque 
 
 Effectuez cette procédure si vous souhaitez remplacer de manière proactive un lecteur de métadonnées ou un lecteur de bloc dans votre cluster ESDS SolidFire. La page Element UI *Cluster* > *Drives* affiche les informations d'usure du lecteur.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Dans l'interface utilisateur du logiciel NetApp Element, assurez-vous que le cluster est en bon état et qu'il n'y a aucun avertissement ni défaillance de cluster. Vous pouvez accéder à l'interface utilisateur d'Element à l'aide de l'adresse IP virtuelle de gestion (MVIP) du nœud de cluster principal.
 * Assurez-vous qu'aucune tâche n'est en cours d'exécution sur le cluster.
 * Assurez-vous de vous familiariser avec toutes les étapes.
@@ -115,7 +115,7 @@ Le numéro de série du nouveau disque que vous avez installé s'affiche.
 
 Si le lecteur de votre cluster SolidFire ESDS est défectueux, l'interface utilisateur de l'élément affiche une alerte. Avant de retirer le disque du cluster, vérifiez la raison de la défaillance en consultant les informations de l'interface IPMI de votre nœud/serveur. Ces étapes s'appliquent si vous remplacez un disque de bloc ou un lecteur de métadonnées.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Dans l'interface utilisateur du logiciel NetApp Element, vérifiez que le disque est défectueux. L'élément affiche une alerte en cas de panne d'un disque. Vous pouvez accéder à l'interface utilisateur d'Element à l'aide de l'adresse IP virtuelle de gestion (MVIP) du nœud de cluster principal.
 * Assurez-vous de vous familiariser avec toutes les étapes.
 * Veillez à prendre les précautions nécessaires pour éviter les décharges électrostatiques (ESD) lors de la manipulation des lecteurs.
@@ -199,7 +199,7 @@ Le numéro de série du nouveau disque que vous avez installé s'affiche.
 
 Effectuez cette procédure si vous souhaitez remplacer le lecteur de cache de votre cluster SolidFire ESDS. Le lecteur de cache est associé aux services de métadonnées. La page Element UI *Cluster* > *Drives* affiche les informations d'usure du lecteur.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Dans l'interface utilisateur du logiciel NetApp Element, assurez-vous que le cluster est en bon état et qu'il n'y a aucun avertissement ni défaillance de cluster. Vous pouvez accéder à l'interface utilisateur d'Element à l'aide de l'adresse IP virtuelle de gestion (MVIP) du nœud de cluster principal.
 * Assurez-vous qu'aucune tâche n'est en cours d'exécution sur le cluster.
 * Assurez-vous de vous familiariser avec toutes les étapes.
