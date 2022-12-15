@@ -9714,7 +9714,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-15 14:30:46 +0000">11/15/2022</time>
+    <time datetime="2022-12-15 15:16:23 +0000">12/15/2022</time>
     
   
 
@@ -9736,7 +9736,7 @@
 <p>À partir de l&#8217;élément 12.2, vous pouvez utiliser le <a href="../esds/reference_esds_use_maintenance_mode.html">"mode maintenance"</a> options d&#8217;activation et de désactivation du mode de maintenance pour les nœuds de cluster de stockage.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p><strong>Autorisations d&#8217;administrateur de cluster</strong> : vous disposez des autorisations en tant qu&#8217;administrateur sur le <a href="../concepts/concept_intro_clusters.html#authoritative-storage-clusters">"cluster de stockage faisant autorité"</a>. Le cluster faisant autorité est le premier cluster ajouté à l&#8217;inventaire des nœuds de gestion au cours de la configuration du système.</p>
@@ -9756,19 +9756,19 @@
 <div class="title">Options</div>
 <ul>
 <li>
-<p>a storage cluster</p>
+<p><a href="Ajout d&.html#8217;un cluster de stockage">Ajout d&.html</a></p>
 </li>
 <li>
-<p>storage cluster status</p>
+<p><a href="Confirmation de l&.html#8217;état du cluster de stockage">Confirmation de l&.html</a></p>
 </li>
 <li>
-<p>storage cluster credentials</p>
+<p><a href="Modifier les informations d&.html#8217;identification du cluster de stockage">Modifier les informations d&.html</a></p>
 </li>
 <li>
-<p>a storage cluster</p>
+<p><a href="#retirer-un-cluster-de-stockage">Retirer un cluster de stockage</a></p>
 </li>
 <li>
-<p>and disable maintenance mode</p>
+<p><a href="#activation-et-désactivation-du-mode-de-maintenance">Activation et désactivation du mode de maintenance</a></p>
 </li>
 </ul>
 </div>
@@ -9954,13 +9954,13 @@ Si vous sélectionnez <strong>Oui</strong> Suivant, le cluster sera supprimé de
 <h2 id="activation-et-désactivation-du-mode-de-maintenance">Activation et désactivation du mode de maintenance</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Si vous devez mettre un nœud de stockage hors ligne pour des opérations de maintenance telles que des mises à niveau logicielles ou des réparations d&#8217;hôtes, vous pouvez réduire de près l&#8217;impact sur les E/S sur le reste du cluster de stockage ,activation mode de maintenance pour ce nœud. Lorsque vous ,désactiver en mode de maintenance, le nœud est surveillé pour s&#8217;assurer que certains critères sont respectés avant que le nœud puisse basculer en mode de maintenance.</p>
+<p>Si vous devez mettre un nœud de stockage hors ligne pour des opérations de maintenance telles que des mises à niveau logicielles ou des réparations d&#8217;hôtes, vous pouvez réduire de près l&#8217;impact sur les E/S sur le reste du cluster de stockage <a href="#enable_main_mode">activation</a> mode de maintenance pour ce nœud. Lorsque vous <a href="#disable_main_mode">désactiver</a> en mode de maintenance, le nœud est surveillé pour s&#8217;assurer que certains critères sont respectés avant que le nœud puisse basculer en mode de maintenance.</p>
 </div>
 <div class="paragraph">
 <p>Des informations sont disponibles sur le <a href="../esds/reference_esds_use_maintenance_mode.html">"mode maintenance"</a> activer et désactiver les options de fonction et le <a href="../esds/reference_esds_use_maintenance_mode.html#possible-scenarios-while-using-maintenance-mode">"scénarios possibles lors de l&#8217;utilisation du mode de maintenance"</a>.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p><strong>Logiciel Element</strong> : votre cluster de stockage exécute le logiciel NetApp Element version 12.2 ou ultérieure.</p>
@@ -9977,7 +9977,7 @@ Si vous sélectionnez <strong>Oui</strong> Suivant, le cluster sera supprimé de
 </ul>
 </div>
 <div class="sect2">
-<h3 id="activer-le-mode-maintenance">Activer le mode maintenance</h3>
+<h3 id="activez-le-mode-de-maintenance"><a id="enable_main_mode"></a>activez le mode de maintenance</h3>
 <div class="paragraph">
 <p>Pour activer le mode maintenance d&#8217;un nœud de cluster de stockage, vous pouvez utiliser la procédure suivante.</p>
 </div>
@@ -10065,7 +10065,7 @@ Les options des fonctions du mode maintenance sont désactivées en lecture seul
 </div>
 </div>
 <div class="sect2">
-<h3 id="désactiver-le-mode-de-maintenance">Désactiver le mode de maintenance</h3>
+<h3 id="désactiver-le-mode-de-maintenance"><a id="disable_main_mode"></a>Désactiver le mode de maintenance</h3>
 <div class="paragraph">
 <p>Une fois qu&#8217;un nœud a été placé en mode maintenance, l&#8217;action <strong>Désactiver le mode maintenance</strong> est disponible pour ce nœud. Les actions sur les autres nœuds sont indisponibles jusqu&#8217;à la désactivation du mode de maintenance sur le nœud en cours de maintenance.</p>
 </div>
