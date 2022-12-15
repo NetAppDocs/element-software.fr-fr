@@ -55,14 +55,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/element-software/concepts/concept_data_manage_volumes_solidfire_quality_of_service.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/element-software/storage/concept_data_manage_volumes_solidfire_quality_of_service.html</loc>
       
       <lastmod>2022-11-15T14:30:46+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/element-software/storage/concept_data_manage_volumes_solidfire_quality_of_service.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/element-software/concepts/concept_data_manage_volumes_solidfire_quality_of_service.html</loc>
       
       <lastmod>2022-11-15T14:30:46+00:00</lastmod>
       
@@ -440,14 +440,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/element-software/concepts/concept_intro_solidfire_active_iq.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/element-software/storage/concept_intro_solidfire_active_iq.html</loc>
       
       <lastmod>2022-11-15T14:30:46+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/element-software/storage/concept_intro_solidfire_active_iq.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/element-software/concepts/concept_intro_solidfire_active_iq.html</loc>
       
       <lastmod>2022-11-15T14:30:46+00:00</lastmod>
       
@@ -846,6 +846,20 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/fr-fr/element-software/storage/</loc>
+      
+      <lastmod>2022-11-15T14:30:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/fr-fr/element-software/api/</loc>
+      
+      <lastmod>2022-11-15T14:30:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/fr-fr/element-software/hccstorage/</loc>
       
       <lastmod>2022-11-15T14:30:46+00:00</lastmod>
@@ -853,14 +867,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/element-software/setup/</loc>
+      <loc>https://docs.netapp.com/fr-fr/element-software/esds/</loc>
       
       <lastmod>2022-11-15T14:30:46+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/element-software/storage/</loc>
+      <loc>https://docs.netapp.com/fr-fr/element-software/setup/</loc>
       
       <lastmod>2022-11-15T14:30:46+00:00</lastmod>
       
@@ -875,20 +889,6 @@
   
     <url>
       <loc>https://docs.netapp.com/fr-fr/element-software/concepts/</loc>
-      
-      <lastmod>2022-11-15T14:30:46+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/element-software/api/</loc>
-      
-      <lastmod>2022-11-15T14:30:46+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/fr-fr/element-software/esds/</loc>
       
       <lastmod>2022-11-15T14:30:46+00:00</lastmod>
       
@@ -4166,7 +4166,7 @@
     <url>
       <loc>https://docs.netapp.com/fr-fr/element-software//search.html</loc>
       
-      <lastmod>2022-12-05T17:15:42+00:00</lastmod>
+      <lastmod>2022-12-15T12:16:21+00:00</lastmod>
       
     </url>
   
@@ -5004,14 +5004,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/element-software/setup/task_post_deploy_access_the_element_software_user_interface.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/element-software/storage/task_post_deploy_access_the_element_software_user_interface.html</loc>
       
       <lastmod>2022-11-15T14:30:46+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/fr-fr/element-software/storage/task_post_deploy_access_the_element_software_user_interface.html</loc>
+      <loc>https://docs.netapp.com/fr-fr/element-software/setup/task_post_deploy_access_the_element_software_user_interface.html</loc>
       
       <lastmod>2022-11-15T14:30:46+00:00</lastmod>
       
