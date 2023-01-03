@@ -189,6 +189,9 @@ Donne accès aux composants nécessaires à l'installation/la mise à jour du d�
 
 
 
+| Nœud de gestion | Nœud de stockage BMC/IPMI | 623 UDP | Port RMCP. Ceci est nécessaire pour gérer les systèmes compatibles IPMI. 
+
+
  a| 
 Nœud de gestion
  a| 
@@ -224,13 +227,14 @@ Interrogation SNMP
 
  a| 
 Serveur SNMP
- a| 
-MIP du nœud de stockage
- a| 
+| MIP du nœud de stockage  a| 
 161 UDP
  a| 
 Interrogation SNMP
 
+
+
+| Nœud de stockage BMC/IPMI | Nœud de gestion | 623 UDP | Port RMCP. Ceci est nécessaire pour gérer les systèmes compatibles IPMI. 
 
 
  a| 

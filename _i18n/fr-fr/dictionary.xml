@@ -12567,4 +12567,6 @@
   <block id="a31b6eafc73ca0db90a0d96e6fb9dc93" category="paragraph-title">Options de vérification de l'état</block>
   <block id="2de79e7b8c77e4847d6bcd5a8ee879ce" category="section-title">[[sf_nodes]]SF38410, SF19210, SF9605 et SF4805</block>
   <block id="63f488c7bb829c89f024839d6aa602f4" category="section-title">[[custom_pd]]domaines de protection personnalisés</block>
+  <block id="29d5a1c31c94981fab1916121b43f763" category="cell">Nœud de stockage BMC/IPMI</block>
+  <block id="291dd45cc603b1047e92bf5a13259357" category="cell">Port RMCP. Ceci est nécessaire pour gérer les systèmes compatibles IPMI.</block>
 </blocks>
