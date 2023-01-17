@@ -130,15 +130,15 @@ homepage:
       url: https://mysupport.netapp.com/site/products/all/details/element-software/guideme-tab
   - title: Versions antérieures
     links:
-    - title: Documentation relative à l'élément 12.3
-      url: https://docs.netapp.com/us-en/element-software-123/
+    - title: Documentation Element 12.3.x.
+      url: https://docs.netapp.com/us-en/element-software-123/index.html
+    - title: Documentation relative à l'élément 12.2.1
+      url: https://mysupport.netapp.com/documentation/docweb/index.html?productID=63945&language=en-US
     - title: Documentation relative à l'élément 12.2
-      url: https://docs.netapp.com/sfe-122/index.jsp
+      url: https://mysupport.netapp.com/documentation/docweb/index.html?productID=63593&language=en-US
+    - title: Documentation relative à l'élément 12.0.1
+      url: https://mysupport.netapp.com/documentation/docweb/index.html?productID=63946&language=en-US
     - title: Documentation relative à l'élément 12.0
-      url: https://docs.netapp.com/sfe-120/index.jsp
-    - title: Documentation relative à l'élément 11.8
-      url: https://docs.netapp.com/sfe-118/index.jsp
-    - title: Documentation relative à l'élément 11.5
-      url: https://docs.netapp.com/sfe-115/index.jsp
-    - title: Documentation relative à l'élément 11.3
-      url: https://docs.netapp.com/sfe-113/index.jsp
+      url: https://mysupport.netapp.com/documentation/docweb/index.html?productID=63368&language=en-US
+    - title: Element 11.8.2 et documentation antérieure
+      url: "/element-earlierversions.html"

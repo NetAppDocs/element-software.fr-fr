@@ -12,15 +12,22 @@ summary: La documentation des versions précédentes est disponible au cas où v
 
 
 [role="lead"]
-La documentation relative aux versions précédentes est disponible dans nos centres de documentation.
+La documentation relative aux versions précédentes est disponible sur le site du support NetApp.
 
 * https://docs.netapp.com/us-en/element-software-123/index.html["Documentation Element 12.3.x."^]
-* https://docs.netapp.com/sfe-122/index.jsp["Documentation relative à l'élément 12.2"^]
-* https://docs.netapp.com/sfe-120/index.jsp["Documentation relative à l'élément 12.0"^]
-* https://docs.netapp.com/sfe-118/index.jsp["Documentation relative à l'élément 11.8"^]
-* https://docs.netapp.com/sfe-117/index.jsp["Documentation relative à l'élément 11.7"^]
-* https://docs.netapp.com/sfe-115/index.jsp["Documentation relative à l'élément 11.5"^]
-* https://docs.netapp.com/sfe-113/index.jsp["Documentation relative à l'élément 11.3"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63945&language=en-US["Documentation relative à l'élément 12.2.1"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63593&language=en-US["Documentation relative à l'élément 12.2"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63946&language=en-US["Documentation relative à l'élément 12.0.1"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63368&language=en-US["Documentation relative à l'élément 12.0"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=64187&language=en-US["Documentation relative à l'élément 11.8.2"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63944&language=en-US["Documentation relative à l'élément 11.8.1"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63293&language=en-US["Documentation relative à l'élément 11.8"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63138&language=en-US["Documentation relative à l'élément 11.7"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63207&language=en-US["Documentation relative à l'élément 11.5.1"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63058&language=en-US["Documentation relative à l'élément 11.5"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63027&language=en-US["Documentation de l'élément 11,3P1"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63206&language=en-US["Documentation relative à l'élément 11.3.2"^]
+* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62654["Documentation d'Element 11.1 et versions antérieures"^]
 
 
 

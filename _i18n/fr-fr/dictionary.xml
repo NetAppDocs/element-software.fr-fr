@@ -11441,21 +11441,13 @@
   <block id="c512caf817d81cdc178fb65c97607344" category="list-text">Surveiller l'état de la mise à jour :<block ref="603c581ee731f9904f5d490c8e45586c" prefix=" " category="inline-code"></block></block>
   <block id="37bf500e2e9e1010fbba8f9d57fc6653" category="summary">La documentation des versions précédentes est disponible au cas où vous n’exécutiez pas la dernière version.</block>
   <block id="516f6af28c516e78fc33b4c052dabe39" category="doc">Versions antérieures de la documentation du logiciel SolidFire et NetApp Element</block>
-  <block id="125fc8b968e8e11cd6bd7e1494f62a67" category="paragraph">La documentation relative aux versions précédentes est disponible dans nos centres de documentation.</block>
   <block id="7275696d9abdd4848d9921861f886410" category="inline-link">Documentation Element 12.3.x.</block>
   <block id="b3c5f594b6d2e3e6a1ff3b84dd766edf" category="list-text"><block ref="b3c5f594b6d2e3e6a1ff3b84dd766edf" category="inline-link-rx"></block></block>
   <block id="f20c99cda6c5c700e6ea170eaea46329" category="inline-link">Documentation relative à l'élément 12.2</block>
-  <block id="aa3b5b7a1e2e66b47175110cd56daccb" category="list-text"><block ref="aa3b5b7a1e2e66b47175110cd56daccb" category="inline-link-rx"></block></block>
   <block id="b34dcfff8d81f43e815e568d47850358" category="inline-link">Documentation relative à l'élément 12.0</block>
-  <block id="85800e3b53059a802776bcb147eaa67e" category="list-text"><block ref="85800e3b53059a802776bcb147eaa67e" category="inline-link-rx"></block></block>
   <block id="390218c5d0ba4b058c4d3f239c6ae7eb" category="inline-link">Documentation relative à l'élément 11.8</block>
-  <block id="5fafd7076636fc57b7482292597c80d2" category="list-text"><block ref="5fafd7076636fc57b7482292597c80d2" category="inline-link-rx"></block></block>
   <block id="95044d6cb92a8dcd9435a8d6518710be" category="inline-link">Documentation relative à l'élément 11.7</block>
-  <block id="ef4ff55196c56aee6ea12eb45472f816" category="list-text"><block ref="ef4ff55196c56aee6ea12eb45472f816" category="inline-link-rx"></block></block>
   <block id="375779933a2fbd9bd07005095be3d556" category="inline-link">Documentation relative à l'élément 11.5</block>
-  <block id="efaae0e20dc4211df73e458c389a81a7" category="list-text"><block ref="efaae0e20dc4211df73e458c389a81a7" category="inline-link-rx"></block></block>
-  <block id="9fce286c78c5ad19ef27c4997c0ebc16" category="inline-link">Documentation relative à l'élément 11.3</block>
-  <block id="50262b0e556ed6d70532d1bdc0cd3a16" category="list-text"><block ref="50262b0e556ed6d70532d1bdc0cd3a16" category="inline-link-rx"></block></block>
   <block id="f227ec9d2608eaf21a09ac101a29c1d9" category="summary">Avec le stockage 100 % Flash NetApp SolidFire, vous pouvez gérer et contrôler les ressources de stockage avec NetApp Hybrid Cloud Control.</block>
   <block id="510b8ff88dd968b79868e0d7830ee804" category="doc">Gérez et contrôlez le stockage avec NetApp Hybrid Cloud Control</block>
   <block id="1e27e6d7158fdadb8e9c69f36679c5b6" category="paragraph">Grâce au stockage 100 % Flash NetApp SolidFire, vous pouvez gérer et surveiller vos ressources de stockage et configurer des composants de votre système de stockage à l'aide du contrôle de cloud hybride NetApp.</block>
@@ -12323,7 +12315,6 @@
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Communauté sur les blogs</block>
   <block id="a310588c148d934b9b30c31802d4a30b" category="sidebar">Communauté NetApp</block>
   <block id="213686afc3803be7caa09348765467fe" category="sidebar">Où obtenir de l'aide</block>
-  <block id="65475fb8d204c527f117e51b4e025657" category="sidebar">Documentation relative à l'élément 12.3</block>
   <block id="e558a93d8af634916bae37b7136be1d2" category="sidebar">GetSoftwareEncryptionNetAppInfo</block>
   <block id="19d0a846033170bad30679c08c8ddf47" category="sidebar">Installez ou restaurez un nœud de gestion</block>
   <block id="01f85930b405f5ff6ea401b95fb623af" category="sidebar">Utilisation de l'interface du nœud de gestion</block>
@@ -12569,4 +12560,27 @@
   <block id="63f488c7bb829c89f024839d6aa602f4" category="section-title">[[custom_pd]]domaines de protection personnalisés</block>
   <block id="29d5a1c31c94981fab1916121b43f763" category="cell">Nœud de stockage BMC/IPMI</block>
   <block id="291dd45cc603b1047e92bf5a13259357" category="cell">Port RMCP. Ceci est nécessaire pour gérer les systèmes compatibles IPMI.</block>
+  <block id="8a6b3244aec72df7ad902477699fbf45" category="paragraph">La documentation relative aux versions précédentes est disponible sur le site du support NetApp.</block>
+  <block id="66f6fdf25376c7fe6914452811137d26" category="inline-link">Documentation relative à l'élément 12.2.1</block>
+  <block id="39727693187ca34f4ef5c90c46a46394" category="list-text"><block ref="e27a77aaa07eb612231a495478159efc" category="inline-link-rx"></block></block>
+  <block id="e9425d653dfeb82137e081b24434673c" category="list-text"><block ref="14227707f4f0d9d690c553a1aea9d7eb" category="inline-link-rx"></block></block>
+  <block id="1dce52cd907ec226801f21c7f9442e05" category="inline-link">Documentation relative à l'élément 12.0.1</block>
+  <block id="bc91173b03fd405e73f45aa8549d6cb9" category="list-text"><block ref="ee91d2ac6b94108035b6f826b0faa9d7" category="inline-link-rx"></block></block>
+  <block id="37da8c3a9aa164a5fb4b67eb79e66e13" category="list-text"><block ref="bd503e5effeae246cf877d0805d52b34" category="inline-link-rx"></block></block>
+  <block id="1f63e3424206918b1e15bc38a7fbc4d3" category="inline-link">Documentation relative à l'élément 11.8.2</block>
+  <block id="c9e6d9a56a3dccb580282512254f1f37" category="list-text"><block ref="c20fed7afc57590e5202e9efe9742b67" category="inline-link-rx"></block></block>
+  <block id="e68c051352049b3838c60ff840321d35" category="inline-link">Documentation relative à l'élément 11.8.1</block>
+  <block id="e47c81b55e4a61a161552460d32c2c44" category="list-text"><block ref="0c35962df94e7352decd6723992e5263" category="inline-link-rx"></block></block>
+  <block id="ad02bc5bcbc3702c6a6fe08dc9f7cc46" category="list-text"><block ref="4396559246bc10267387dad9a81a7b88" category="inline-link-rx"></block></block>
+  <block id="3872977e6ae8da84b3f1d581c0a6d7c2" category="list-text"><block ref="05a06a7a4ff9a2d66fc355b16336a4a9" category="inline-link-rx"></block></block>
+  <block id="338bc7e00e7e9bcd9b127c2ea84dcd96" category="inline-link">Documentation relative à l'élément 11.5.1</block>
+  <block id="61451eda5fa6a2084df64ced352bebed" category="list-text"><block ref="668ab89b43646132e916722e1920e272" category="inline-link-rx"></block></block>
+  <block id="01385c034be02ec4f2710a56901f02fe" category="list-text"><block ref="615822f7dd8aa54b65ee98e31a3441d4" category="inline-link-rx"></block></block>
+  <block id="ebdc6512afcb64ecc9fb02a138ad1912" category="inline-link">Documentation de l'élément 11,3P1</block>
+  <block id="5fd0990dd681c6a8d28b0a2ca873ca5a" category="list-text"><block ref="32b2e16adcfd90589808c6883b4c7507" category="inline-link-rx"></block></block>
+  <block id="5230218c731f2132167cf858200bebb3" category="inline-link">Documentation relative à l'élément 11.3.2</block>
+  <block id="a869730ec0116e46159bbff419d5cc17" category="list-text"><block ref="2a166fd6597dedff39b139e3ce76f82b" category="inline-link-rx"></block></block>
+  <block id="bec35bb5875234837858b1ccdd637fca" category="inline-link">Documentation d'Element 11.1 et versions antérieures</block>
+  <block id="724428733630050ab3140356839e2af1" category="list-text"><block ref="724428733630050ab3140356839e2af1" category="inline-link-rx"></block></block>
+  <block id="b47307258c4d85ffb5f4141d7a660a9b" category="sidebar">Element 11.8.2 et documentation antérieure</block>
 </blocks>
