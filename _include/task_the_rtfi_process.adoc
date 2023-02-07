@@ -31,7 +31,7 @@ Pour configurer votre nœud une fois le processus RTFI terminé, reportez-vous �
 
 Utilisez la procédure suivante pour restaurer le logiciel Element sur votre nœud SolidFire.
 
-Pour plus d'informations sur la création d'une clé USB ou sur l'utilisation du contrôleur BMC pour exécuter le processus RTFI, reportez-vous à la section link:task_rtfi_deployment_and_install_options.html["Options de déploiement et d'installation de RTFI"].
+Pour plus d'informations sur la création d'une clé USB ou sur l'utilisation du contrôleur BMC pour exécuter le processus RTFI, reportez-vous à la section xref:task_rtfi_deployment_and_install_options.html[Options de déploiement et d'installation de RTFI].
 
 .Avant de commencer
 Vérifiez que vous répondez aux exigences suivantes :
@@ -71,7 +71,7 @@ Le nom et le numéro de version du logiciel de l'élément d'image RTFI s'affich
 . Dans l'invite initiale, vous êtes informé que le processus supprime toutes les données du nœud et que les données ne peuvent pas être récupérées une fois le processus démarré. Saisissez *Oui* pour commencer.
 +
 
-WARNING: Toutes les données et les informations de configuration sont effacées définitivement du nœud après l'exécution du processus. Si vous choisissez de ne pas continuer, vous êtes dirigé vers le link:task_rtfi_options_menu.html["Menu d'options RTFI"].
+WARNING: Toutes les données et les informations de configuration sont effacées définitivement du nœud après l'exécution du processus. Si vous choisissez de ne pas continuer, vous êtes dirigé vers le xref:task_rtfi_options_menu.html[Menu d'options RTFI].
 
 +
 
@@ -86,7 +86,7 @@ Un message indique que le processus RTFI est terminé et que le système s'étei
 Le nœud est maintenant prêt à être mis sous tension et configuré. Voir la https://docs.netapp.com/us-en/element-software/setup/concept_setup_overview.html["Documentation de configuration du stockage fournie par le logiciel Element"^] pour configurer le nœud de stockage.
 
 +
-Si vous avez rencontré un message d'erreur pendant le processus RTFI, reportez-vous à la section link:task_rtfi_options_menu.html["Menu d'options RTFI"].
+Si vous avez rencontré un message d'erreur pendant le processus RTFI, reportez-vous à la section xref:task_rtfi_options_menu.html[Menu d'options RTFI].
 
 
 
