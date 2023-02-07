@@ -1,0 +1,31 @@
+= Trouvez plus d'informations
+:allow-uri-read: 
+
+
+Les systèmes de stockage NetApp SolidFire utilisent le processus de retour à l'image d'usine (RTFI) pour écrire une image logicielle sur un nouveau nœud ou restaurer l'état d'usine d'un nœud. Le processus RTFI efface en toute sécurité toutes les données et configurations existantes (le cas échéant) et installe une image logicielle NetApp Element non configurée. Le processus RTFI est disponible pour tous les nœuds SolidFire.
+
+Les systèmes SolidFire utilisent un processus RTFI pour toutes les installations logicielles Element. Il s'agit notamment des installations manuelles internes réalisées par des développeurs, des installations automatiques par des tests de structure automatisés, des installations sur site par des ingénieurs de service et des clients, ainsi que des installations réalisées par divers intégrateurs et partenaires. Le même processus RTFI est utilisé sur tous les nœuds SolidFire, quel que soit le châssis ou le type de nœud utilisé, pour résoudre automatiquement les problèmes.
+
+Les intégrateurs destinés à ce guide sont les intégrateurs qui installent, configurent, utilisent ou résolvent les problèmes liés au stockage.
+
+* Linux : vous avez des antécédents avec les systèmes Linux.
+* Mise en réseau : vous connaissez bien les réseaux de serveurs et le stockage en réseau, notamment les adresses IP, les masques de réseau et les passerelles.
+
+
+
+WARNING: Le processus RTFI est destructeur de données et efface en toute sécurité toutes les données et les détails de configuration du nœud et installe un nouveau système d'exploitation. Vérifiez que le nœud utilisé pour le processus RTFI n'est pas actif dans le cadre d'un cluster.
+
+Déployer et installer l'image RTFI International Organization for Standardization (ISO) et effectuer le processus RTFI :
+
+* xref:task_rtfi_deployment_and_install_options.html[Options de déploiement et d'installation de RTFI]
+* xref:task_rtfi_process.html[Effectuer le processus RTFI]
+* xref:task_rtfi_options_menu.html[Menu d'options RTFI]
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

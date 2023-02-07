@@ -1,0 +1,107 @@
+---
+permalink: hardware/task_rtfi_options_menu.html 
+sidebar: sidebar 
+keywords: rtfi, return, factory, image, menu, options, upload, logs 
+summary: 'Découvrez les options du menu du RTFI en cas d"échec du processus du RTFI ou si vous choisissez de ne pas continuer à l"invite initiale du processus du RTFI.' 
+---
+= Menu d'options RTFI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le menu d'options suivant s'affiche si le processus RTFI échoue ou si vous choisissez de ne pas continuer à l'invite initiale du processus RTFI.
+
+image::../media/rtfi_menu_options.PNG[Options du menu SolidFire RTFI]
+
+
+NOTE: Contactez le support NetApp avant d'utiliser l'une des options de commande suivantes.
+
+[cols="25,75"]
+|===
+| Option | Description 
+
+
+| Redémarrer | Quitte le processus RTFI et redémarre le nœud dans son état actuel. Aucun nettoyage n'a été effectué. 
+
+
+| Mise hors tension | Met gracieusement hors tension le nœud dans son état actuel. Aucun nettoyage n'a été effectué. 
+
+
+| Quitter | Quitte le processus RTFI et ouvre une invite de commande. 
+
+
+| UploadLogs | Collecte tous les journaux sur le système et télécharge une seule archive de journal consolidée vers une URL spécifiée. 
+|===
+
+
+== Chargez les journaux
+
+Collectez tous les journaux du système et téléchargez-les vers une URL spécifiée en suivant la procédure ci-dessous.
+
+.Étapes
+. À l'invite du menu des options RTFI, entrez *UploadLogs*.
+. Entrez les informations du répertoire distant :
++
+.. Saisissez une URL qui inclut le protocole. Par exemple : `\ftp://,scp://,http://,orhttps://`.
+.. (Facultatif) Ajouter un nom d'utilisateur et un mot de passe intégrés. Par exemple : `scp://user:password@URLaddress.com`.
++
+
+NOTE: Pour une gamme complète d'options de syntaxe, reportez-vous à la section https://curl.se/docs/manpage.html["Gondolage"^] manuel d'utilisation.
+
++
+Le fichier journal est téléchargé et enregistré dans le répertoire spécifié en tant que `.tbz2` archivage.
+
+
+
+
+
+
+
+== Utiliser le tunnel de support
+
+Si vous avez besoin d'un support technique pour votre système NetApp HCI ou votre système de stockage 100 % Flash SolidFire, le support NetApp peut se connecter à distance à votre système. Pour démarrer une session et obtenir un accès à distance, le support NetApp peut ouvrir une connexion SSH (reverse Secure Shell) à votre environnement.
+
+Vous pouvez ouvrir un port TCP pour une connexion en tunnel SSH inversé avec le support NetApp. Cette connexion permet au support NetApp de se connecter à votre nœud de gestion.
+
+.Avant de commencer
+* Pour les services de gestion version 2.18 ou ultérieure, la fonctionnalité d'accès à distance est désactivée par défaut sur le nœud de gestion. Pour activer la fonctionnalité d'accès à distance, reportez-vous à la section https://docs.netapp.com/us-en/element-software/mnode/task_mnode_ssh_management.html["Gérez la fonctionnalité SSH sur le nœud de gestion"].
+* Si votre nœud de gestion est derrière un serveur proxy, les ports TCP suivants sont requis dans le fichier sshd.config :
++
+[cols="15,25,60"]
+|===
+| Port TCP | Description | Direction de la connexion 
+
+
+| 443 | Appels API/HTTPS pour le transfert du port inversé via le tunnel de support ouvert vers l'interface utilisateur Web | Nœud de gestion vers nœuds de stockage 
+
+
+| 22 | Accès connexion SSH | Nœud de gestion, vers nœuds de stockage ou depuis les nœuds de stockage vers le nœud de gestion 
+|===
+
+
+.Étapes
+* Connectez-vous à votre nœud de gestion et ouvrez une session de terminal.
+* À l'invite, entrez les informations suivantes :
++
+`rst -r  sfsupport.solidfire.com -u element -p <port_number>`
+
+* Pour fermer le tunnel de support à distance, entrez ce qui suit :
++
+`rst --killall`
+
+* (Facultatif) Désactiver https://docs.netapp.com/us-en/element-software/mnode/task_mnode_ssh_management.html["fonctionnalité d'accès à distance"] encore.
++
+
+NOTE: Si vous ne désactivez pas SSH, l'option SSH reste activée sur le nœud de gestion. La configuration SSH activée persiste sur le nœud de gestion via des mises à jour et des mises à niveau jusqu'à ce qu'elle soit désactivée manuellement.
+
+
+
+
+
+== Trouvez plus d'informations
+
+* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
+

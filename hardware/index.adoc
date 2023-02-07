@@ -15,6 +15,7 @@ Découvrez comment installer et gérer le matériel H-Series et SF-Series.
 
 * xref:concept_h410s_h610s_info.adoc[Informations sur le matériel H410S et H610S]
 * xref:concept_sfseries_info.adoc[Informations sur le matériel SF-Series]
+* xref:concept_rtfi_configure.html[Retour aux informations sur l'image d'usine]
 
 
 

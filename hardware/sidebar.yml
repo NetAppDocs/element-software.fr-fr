@@ -25,3 +25,13 @@ entries:
     url: "/hardware/task_sfseries_driverepl.html"
   - title: Remplacez une unité d'alimentation
     url: "/hardware/task_sfseries_psurepl.html"
+- title: Retour aux informations sur l'image d'usine
+  entries:
+  - title: Configurez l'image de retour à l'image d'usine
+    url: "/hardware/concept_rtfi_configure.html"
+  - title: Options de déploiement et d'installation de RTFI
+    url: "/hardware/task_rtfi_deployment_and_install_options.html"
+  - title: Le processus RTFI
+    url: "/hardware/task_rtfi_process.html"
+  - title: Menu d'options RTFI
+    url: "/hardware/task_rtfi_options_menu.html"
