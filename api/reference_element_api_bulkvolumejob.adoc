@@ -11,7 +11,7 @@ summary: 'L"objet bulkVolumeJob contient des informations sur les opérations de
 
 
 [role="lead"]
-L'objet bulkVolumeJob contient des informations sur les opérations de lecture ou d'écriture de volume en bloc, telles que le clonage ou la création de snapshots.
+Le `bulkVolumeJob` l'objet contient des informations sur les opérations de lecture ou d'écriture de volume en bloc, telles que le clonage ou la création de snapshots.
 
 
 
@@ -24,7 +24,7 @@ Cet objet contient les membres suivants :
 
 
  a| 
-attributs
+`attributes`
  a| 
 Attribut JSON du travail de volume en bloc.
  a| 
@@ -33,7 +33,7 @@ Objet JSON
 
 
  a| 
-ID bulkVolume
+`bulkVolumeID`
  a| 
 ID du travail du volume en bloc interne.
  a| 
@@ -42,7 +42,7 @@ entier
 
 
  a| 
-CREATETIME
+`createTime`
  a| 
 Horodatage créé pour le travail de volume en bloc au format UTC+0.
  a| 
@@ -51,7 +51,7 @@ Chaîne de date ISO 8601
 
 
  a| 
-SedTime
+`elapsedTime`
  a| 
 Nombre de secondes depuis le début du travail.
  a| 
@@ -60,7 +60,7 @@ chaîne
 
 
  a| 
-format
+`format`
  a| 
 Format de l'opération de volume en bloc. Valeurs possibles :
 
@@ -73,7 +73,7 @@ chaîne
 
 
  a| 
-clé
+`key`
  a| 
 Clé unique créée par la session de volume en bloc.
  a| 
@@ -82,7 +82,7 @@ chaîne
 
 
  a| 
-Pourcentage complet
+`percentComplete`
  a| 
 Pourcentage terminé signalé par l'opération.
  a| 
@@ -91,7 +91,7 @@ entier
 
 
  a| 
-RemainingTime
+`remainingTime`
  a| 
 Temps restant estimé en secondes.
  a| 
@@ -100,7 +100,7 @@ entier
 
 
  a| 
-SrcVolumeID
+`srcVolumeID`
  a| 
 ID du volume source.
  a| 
@@ -109,7 +109,7 @@ entier
 
 
  a| 
-état
+`status`
  a| 
 État de l'opération. Valeurs possibles :
 
@@ -124,7 +124,7 @@ chaîne
 
 
  a| 
-script
+`script`
  a| 
 Nom du script fourni.
  a| 
@@ -133,7 +133,7 @@ chaîne
 
 
  a| 
-ID de snapshot
+`snapshotID`
  a| 
 ID du snapshot si un snapshot est à la source du travail de volume en bloc.
  a| 
@@ -142,7 +142,7 @@ entier
 
 
  a| 
-type
+`type`
  a| 
 Type d'opération en bloc. Valeurs possibles :
 

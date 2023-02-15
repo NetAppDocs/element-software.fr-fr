@@ -11,7 +11,7 @@ summary: 'L"objet authSessionInfo contient des informations sur une session auth
 
 
 [role="lead"]
-L'objet authSessionInfo contient des informations sur une session auth.
+Le `authSessionInfo` l'objet contient des informations sur une session d'authentification.
 
 
 
@@ -24,7 +24,7 @@ Cet objet contient les membres suivants :
 
 
  a| 
-Access GroupList
+`accessGroupList`
  a| 
 Liste des groupes d'accès de l'utilisateur.
  a| 
@@ -33,7 +33,7 @@ tableau de chaînes
 
 
  a| 
-Méthode d'authentification
+`authMethod`
  a| 
 Le type d'autorisation dont dispose l'utilisateur admin du cluster. Valeurs possibles :
 
@@ -47,7 +47,7 @@ chaîne
 
 
  a| 
-ClusterAdminID
+`clusterAdminIDs`
  a| 
 Liste des ID administrateur de cluster associés à cette session. Pour les sessions liées à LDAP ou à un fournisseur d'identités tiers, il s'agit d'une liste agrégée d'administrateurs de cluster associés à cette session.
  a| 
@@ -56,7 +56,7 @@ tableau entier
 
 
  a| 
-Fin du délai d'attente
+`finalTimeout`
  a| 
 Heure à laquelle la session devient non valide.elle est définie lors de la création de la session et ne peut pas être modifiée.
  a| 
@@ -65,7 +65,7 @@ chaîne
 
 
  a| 
-IdpConfigversion
+`idpConfigVersion`
  a| 
 Version de configuration IDP lors de la création de la session.
  a| 
@@ -74,7 +74,7 @@ entier
 
 
  a| 
-Délai d'expiration des accès
+`lastAccessTimeout`
  a| 
 Heure à laquelle la session devient non valide en raison d'une inactivité.elle est définie sur une nouvelle valeur lorsque la session est accédée pour utilisation, jusqu'à l'heure où la session devient non valide en raison du délai d'expiration atteint.
  a| 
@@ -83,7 +83,7 @@ chaîne
 
 
  a| 
-Session CreationTime
+`sessionCreationTime`
  a| 
 Heure de création de la session.
  a| 
@@ -92,7 +92,7 @@ chaîne
 
 
  a| 
-ID de session
+`sessionID`
  a| 
 UUID de cette session.
  a| 
@@ -101,7 +101,7 @@ UUID
 
 
  a| 
-nom d'utilisateur
+`username`
  a| 
 Nom d'utilisateur associé à cette session. Pour les sessions liées à LDAP, il s'agit du DN LDAP de l'utilisateur. Pour les sessions liées à un IDP tiers, il s'agit d'une paire nom-valeur arbitraire qui sera utilisée pour les opérations d'audit au sein de la session. Il ne correspond pas nécessairement à un nom d'administrateur de cluster sur le cluster. Par exemple, un nom de sujet SAML, mais cela sera dicté par la configuration du IDP et le contenu résultant de l'assertion SAML.
  a| 

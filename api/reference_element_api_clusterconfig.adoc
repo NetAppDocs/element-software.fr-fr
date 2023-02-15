@@ -11,7 +11,7 @@ summary: 'L"objet clusterconfig renvoie des informations que le nœud utilise po
 
 
 [role="lead"]
-L'objet clusterconfig renvoie des informations que le nœud utilise pour communiquer avec le cluster.
+Le `clusterConfig` l'objet renvoie des informations que le nœud utilise pour communiquer avec le cluster.
 
 
 
@@ -24,7 +24,7 @@ Cet objet contient les membres suivants :
 
 
  a| 
-cipi
+`cipi`
  a| 
 Interface réseau utilisée pour la communication avec le cluster.
  a| 
@@ -33,7 +33,7 @@ chaîne
 
 
  a| 
-cluster
+`cluster`
  a| 
 Nom unique du cluster.
  a| 
@@ -42,7 +42,7 @@ chaîne
 
 
  a| 
-Chiffrement
+`encryptionCapable`
  a| 
 Indique si le nœud prend en charge le cryptage.
  a| 
@@ -51,7 +51,7 @@ booléen
 
 
  a| 
-ensemble
+`ensemble`
  a| 
 Nœuds qui participent au cluster.
  a| 
@@ -60,7 +60,7 @@ tableau de chaînes
 
 
  a| 
-FipsDriveConfiguration
+`fipsDriveConfiguration`
  a| 
 Indique si le nœud prend en charge les disques certifiés FIPS 140-2-2.
  a| 
@@ -69,7 +69,7 @@ booléen
 
 
  a| 
-HasLocalAdmin
+`hasLocalAdmin`
  a| 
 Indique si le cluster possède un administrateur local.
  a| 
@@ -78,7 +78,7 @@ booléen
 
 
  a| 
-mipi
+`mipi`
  a| 
 Interface réseau utilisée pour le management des nœuds.
  a| 
@@ -87,7 +87,7 @@ chaîne
 
 
  a| 
-nom
+`name`
  a| 
 Identificateur unique du cluster.
  a| 
@@ -96,7 +96,7 @@ chaîne
 
 
  a| 
-ID de nœud
+`nodeID`
  a| 
 Identificateur unique du nœud.
  a| 
@@ -105,7 +105,7 @@ entier
 
 
  a| 
-PendentionNodeID
+`pendingNodeID`
  a| 
 Identificateur unique pour le nœud en attente.
  a| 
@@ -114,7 +114,7 @@ entier
 
 
  a| 
-rôle
+`role`
  a| 
 Identifie le rôle du nœud.
  a| 
@@ -123,7 +123,7 @@ chaîne
 
 
  a| 
-sipi
+`sipi`
  a| 
 Interface réseau utilisée pour le stockage.
  a| 
@@ -132,7 +132,7 @@ chaîne
 
 
  a| 
-état
+`state`
  a| 
 Indique l'état du nœud.
  a| 
@@ -141,7 +141,7 @@ chaîne
 
 
  a| 
-version
+`version`
  a| 
 Indique la version du nœud.
  a| 

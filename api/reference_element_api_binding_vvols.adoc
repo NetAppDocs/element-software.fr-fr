@@ -24,7 +24,7 @@ Cet objet contient les membres suivants :
 
 
  a| 
-ProtocolEndpointID
+`protocolEndpointID`
  a| 
 ID unique du point final du protocole.
  a| 
@@ -33,7 +33,7 @@ UUID
 
 
  a| 
-ProtocolEndpointInBandID
+`protocolEndpointInBandID`
  a| 
 ScsiNADeviceID du noeud final de protocole.
  a| 
@@ -42,7 +42,7 @@ chaîne
 
 
  a| 
-ProtocolEndpointType
+`protocolEndpointType`
  a| 
 Type de noeud final de protocole. SCSI est la seule valeur renvoyée pour le type de point de terminaison de protocole.
  a| 
@@ -51,7 +51,7 @@ chaîne
 
 
  a| 
-VirtualVolumeBindingID
+`virtualVolumeBindingID`
  a| 
 ID unique de l'objet de liaison de volume virtuel.
  a| 
@@ -60,7 +60,7 @@ entier
 
 
  a| 
-VirtualVolumeHostID
+`virtualVolumeHostID`
  a| 
 ID unique de l'hôte du volume virtuel.
  a| 
@@ -69,7 +69,7 @@ UUID
 
 
  a| 
-ID virtualVolume
+`virtualVolumeID`
  a| 
 ID unique du volume virtuel.
  a| 
@@ -78,7 +78,7 @@ UUID
 
 
  a| 
-VirtualVolumeDeudaryID
+`virtualVolumeSecondaryID`
  a| 
 ID secondaire du volume virtuel.
  a| 

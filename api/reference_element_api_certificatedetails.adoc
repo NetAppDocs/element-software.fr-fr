@@ -11,7 +11,7 @@ summary: 'L"objet certificateDetails contient les informations décodées relati
 
 
 [role="lead"]
-L'objet certificateDetails contient les informations décodées relatives à un certificat de sécurité.
+Le `certificateDetails` l'objet contient les informations décodées relatives à un certificat de sécurité.
 
 
 
@@ -24,7 +24,7 @@ Cet objet contient les membres suivants :
 
 
  a| 
-émetteur
+`issuer`
  a| 
 Nom de l'émetteur.
  a| 
@@ -33,7 +33,7 @@ chaîne
 
 
  a| 
-module
+`modulus`
  a| 
 Module de la clé publique.
  a| 
@@ -42,7 +42,7 @@ chaîne
 
 
  a| 
-NotaAffeur
+`notAfter`
  a| 
 La date d'expiration du certificat.
  a| 
@@ -51,7 +51,7 @@ Chaîne ISO 8601
 
 
  a| 
-NotBefore
+`notBefore`
  a| 
 Date de début du certificat.
  a| 
@@ -60,7 +60,7 @@ Chaîne ISO 8601
 
 
  a| 
-série
+`serial`
  a| 
 Numéro de série du certificat.
  a| 
@@ -69,7 +69,7 @@ chaîne
 
 
  a| 
-Sha1Fingerprint
+`sha1Fingerprint`
  a| 
 Résumé de la version ENCODÉE DU certificat.
  a| 
@@ -78,7 +78,7 @@ chaîne
 
 
  a| 
-objet
+`subject`
  a| 
 Nom de l'objet.
  a| 

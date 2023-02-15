@@ -16,7 +16,7 @@ Le processus RTFI effectue les opérations de haut niveau suivantes :
 . Valide et clignote le micrologiciel.
 . Contrôle le matériel.
 . Teste le matériel.
-. Efface tous les lecteurs sélectionnés en toute sécurité.
+. Secure efface tous les lecteurs sélectionnés.
 . Divise le disque racine et crée des systèmes de fichiers.
 . Monte et décompresse l'image.
 . Configure le nom d'hôte, la mise en réseau (Dynamic Host Configuration Protocol), la configuration de cluster par défaut et le chargeur d'amorçage GRUB.

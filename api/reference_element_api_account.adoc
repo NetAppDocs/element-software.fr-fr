@@ -11,7 +11,7 @@ summary: 'L"objet compte contient des informations sur un compte. Cet objet incl
 
 
 [role="lead"]
-L'objet compte contient des informations sur un compte. Cet objet inclut uniquement les informations « configurées » sur le compte, pas les informations d'exécution ou d'utilisation.
+Le `account` l'objet contient des informations sur un compte. Cet objet inclut uniquement les informations « configurées » sur le compte, pas les informations d'exécution ou d'utilisation.
 
 
 
@@ -24,7 +24,7 @@ Cet objet contient les membres suivants :
 
 
  a| 
-ID compte
+`accountID`
  a| 
 ID de compte unique pour le compte.
  a| 
@@ -33,7 +33,7 @@ entier
 
 
  a| 
-attributs
+`attributes`
  a| 
 Liste des paires nom-valeur au format d'objet JSON.
  a| 
@@ -42,7 +42,7 @@ Objet JSON
 
 
  a| 
-EnableChap
+`enableChap`
  a| 
 Indique si les informations d'identification de compte CHAP peuvent être utilisées par un initiateur pour accéder aux volumes.
  a| 
@@ -51,7 +51,7 @@ booléen
 
 
  a| 
-InitiatorSecret
+`initiatorSecret`
  a| 
 Le secret CHAP de l'initiateur.
  a| 
@@ -60,7 +60,7 @@ chaîne
 
 
  a| 
-état
+`status`
  a| 
 Statut actuel du compte. Valeurs possibles :
 
@@ -74,7 +74,7 @@ chaîne
 
 
  a| 
-StorageautoreID
+`storageContainerID`
  a| 
 ID unique du conteneur de stockage de volume virtuel associé à ce compte.
  a| 
@@ -83,7 +83,7 @@ UUID
 
 
  a| 
-TargetSecret
+`targetSecret`
  a| 
 Le secret CHAP de la cible.
  a| 
@@ -92,7 +92,7 @@ chaîne
 
 
  a| 
-nom d'utilisateur
+`username`
  a| 
 Nom d'utilisateur du compte.
  a| 
@@ -101,7 +101,7 @@ chaîne
 
 
  a| 
-volumes
+`volumes`
  a| 
 Liste des ID de volume des volumes appartenant à ce compte.
  a| 
