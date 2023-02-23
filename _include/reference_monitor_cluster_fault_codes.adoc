@@ -1,19 +1,6 @@
----
-permalink: storage/reference_monitor_cluster_fault_codes.html 
-sidebar: sidebar 
-keywords: cluster fault codes, alerts, error codes, view 
-summary: 'Le système signale une erreur ou un état qui pourrait être intéressant en générant un code d"erreur, qui est répertorié sur la page alertes. Ces codes vous aident à déterminer quel composant du système a rencontré l"alerte et pourquoi l"alerte a été générée.' 
----
-= Codes d'anomalie du bloc d'instruments
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
-
-[role="lead"]
-Le système signale une erreur ou un état qui pourrait être intéressant en générant un code d'erreur, qui est répertorié sur la page alertes. Ces codes vous aident à déterminer quel composant du système a rencontré l'alerte et pourquoi l'alerte a été générée.
-
-La liste suivante présente les différents types de codes :
 
 * *AuthenticationServiceFault*
 +
