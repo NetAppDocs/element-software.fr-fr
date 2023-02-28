@@ -26,9 +26,9 @@ WARNING: Le processus RTFI est destructeur de données et efface en toute sécur
 
 Déployer et installer l'image RTFI International Organization for Standardization (ISO) et effectuer le processus RTFI :
 
-* xref:task_rtfi_deployment_and_install_options.html[Options de déploiement et d'installation de RTFI]
-* xref:task_rtfi_process.html[Effectuer le processus RTFI]
-* xref:task_rtfi_options_menu.html[Menu d'options RTFI]
+* xref:task_rtfi_deployment_and_install_options.adoc[Options de déploiement et d'installation de RTFI]
+* xref:task_rtfi_process.adoc[Effectuer le processus RTFI]
+* xref:task_rtfi_options_menu.adoc[Menu d'options RTFI]
 
 
 

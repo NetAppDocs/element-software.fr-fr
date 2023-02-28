@@ -40,7 +40,7 @@ Pour configurer votre nœud une fois le processus RTFI terminé, reportez-vous �
 
 Utilisez la procédure suivante pour restaurer le logiciel Element sur votre nœud SolidFire.
 
-Pour plus d'informations sur la création d'une clé USB ou sur l'utilisation du contrôleur BMC pour exécuter le processus RTFI, reportez-vous à la section xref:task_rtfi_deployment_and_install_options.html[Options de déploiement et d'installation de RTFI].
+Pour plus d'informations sur la création d'une clé USB ou sur l'utilisation du contrôleur BMC pour exécuter le processus RTFI, reportez-vous à la section xref:task_rtfi_deployment_and_install_options.adoc[Options de déploiement et d'installation de RTFI].
 
 .Avant de commencer
 Vérifiez que vous répondez aux exigences suivantes :
