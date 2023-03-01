@@ -11,12 +11,12 @@ summary: Vous pouvez mettre hors tension un cluster entier après avoir contact�
 
 
 [role="lead"]
-Vous pouvez mettre hors tension un cluster entier après avoir contacté le support NetApp et avoir effectué les étapes préliminaires.
+Pour mettre l'ensemble du cluster hors tension, effectuez la procédure suivante.
 
-Préparer le cluster à l'arrêt en procédant comme suit :
-
-* Arrête toutes les E/S.
-* Déconnectez toutes les sessions iSCSI.
+.Étapes
+. (Facultatif) Contactez le support NetApp pour obtenir de l'aide concernant la réalisation des étapes préliminaires.
+. Vérifiez que toutes les E/S sont arrêtées.
+. Déconnecter toutes les sessions iSCSI :
 +
 .. Accédez à l'adresse IP virtuelle de gestion (MVIP) du cluster pour ouvrir l'interface utilisateur Element.
 .. Notez les nœuds répertoriés dans la liste nœuds.
@@ -24,3 +24,21 @@ Préparer le cluster à l'arrêt en procédant comme suit :
 
 
 
+
+[NOTE]
+====
+Lorsque vous redémarrez le cluster, vous devez suivre certaines étapes pour vérifier que tous les nœuds sont mis en ligne :
+
+. Vérifiez que tous les niveaux de gravité critiques et `volumesOffline` les défaillances de cluster ont été résolues.
+. Attendez 10 à 15 minutes que le cluster se stabilise.
+. Commencez à amener les hôtes pour accéder aux données.
+
+
+Si vous souhaitez consacrer plus de temps à la mise sous tension des nœuds et à la vérification de leur bon fonctionnement après la maintenance, contactez le support technique pour obtenir de l'aide afin de retarder la synchronisation des données et d'éviter une synchronisation inutile des bacs.
+
+====
+
+
+== Trouvez plus d'informations
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/How_to_gracefully_shut_down_and_power_on_a_NetApp_Solidfire_HCI_storage_cluster["Comment mettre hors tension et hors tension en toute simplicité un cluster de stockage NetApp SolidFire/HCI"^]

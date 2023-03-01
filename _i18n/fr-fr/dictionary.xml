@@ -9255,9 +9255,6 @@
   <block id="02c521e9d0cf5b0c627a3117299416a5" category="paragraph">Indique si le nœud prend en charge le chiffrement de disque.</block>
   <block id="25145b9df35ba6ef8386c92cbc7e67aa" category="summary">Vous pouvez mettre hors tension un cluster entier après avoir contacté le support NetApp et avoir effectué les étapes préliminaires.</block>
   <block id="d3dc741b1e26e016be52c0a55b325fda" category="doc">Mettez un cluster hors tension</block>
-  <block id="7e75e710e04194aacb5b7f056ec5e471" category="paragraph">Préparer le cluster à l'arrêt en procédant comme suit :</block>
-  <block id="7bf4e8d030b2c47061505b2052e7e3c8" category="list-text">Arrête toutes les E/S.</block>
-  <block id="c1fc137e8581e89d2a694ed758b29c11" category="list-text">Déconnectez toutes les sessions iSCSI.</block>
   <block id="52774163f10fbc297ca1a2188d7b81c9" category="list-text">Accédez à l'adresse IP virtuelle de gestion (MVIP) du cluster pour ouvrir l'interface utilisateur Element.</block>
   <block id="ecb5391ff71658726fe4fbade2f9af5e" category="list-text">Notez les nœuds répertoriés dans la liste nœuds.</block>
   <block id="7a9ac18ef12501dac2ab0cc718dd03a4" category="list-text">Exécutez la méthode de l'API Shutdown avec l'option halt spécifiée sur chaque ID de noeud du cluster.</block>
@@ -12725,4 +12722,15 @@
   <block id="51de7a2a44178422229997edab051ac7" category="list-text"><block ref="51de7a2a44178422229997edab051ac7" category="inline-xref-macro-rx"></block></block>
   <block id="8f047e2b521fd8a37be46c7a429ab25b" category="list-text"><block ref="8f047e2b521fd8a37be46c7a429ab25b" category="inline-xref-macro-rx"></block></block>
   <block id="c2350b958761f326a00bd673fc30fdae" category="list-text"><block ref="c2350b958761f326a00bd673fc30fdae" category="inline-xref-macro-rx"></block></block>
+  <block id="57d4d715f0b6238380a88647e5064ab7" category="paragraph">Pour mettre l'ensemble du cluster hors tension, effectuez la procédure suivante.</block>
+  <block id="69824b5487e4b72a56fe97cb153b7404" category="list-text">(Facultatif) Contactez le support NetApp pour obtenir de l'aide concernant la réalisation des étapes préliminaires.</block>
+  <block id="f901f3a344a86528165d6bab6500fbc5" category="list-text">Vérifiez que toutes les E/S sont arrêtées.</block>
+  <block id="f0b8c58f8c65aac7a69a51384ac1a649" category="list-text">Déconnecter toutes les sessions iSCSI :</block>
+  <block id="391aec42faef3b52d4eaaefa153733b2" category="paragraph">Lorsque vous redémarrez le cluster, vous devez suivre certaines étapes pour vérifier que tous les nœuds sont mis en ligne :</block>
+  <block id="56312700a2d03ce6cacae049f3294807" category="list-text">Vérifiez que tous les niveaux de gravité critiques et<block ref="945c53fff9195b4e69a31c30b6a268c6" prefix=" " category="inline-code"></block> les défaillances de cluster ont été résolues.</block>
+  <block id="6331b65d2bb9f0f39b6e8331e5b2c669" category="list-text">Attendez 10 à 15 minutes que le cluster se stabilise.</block>
+  <block id="301bf6ea727a40a8d5cc8608cc0c41d7" category="list-text">Commencez à amener les hôtes pour accéder aux données.</block>
+  <block id="c192e3c2dbd374233d4685406db01520" category="paragraph">Si vous souhaitez consacrer plus de temps à la mise sous tension des nœuds et à la vérification de leur bon fonctionnement après la maintenance, contactez le support technique pour obtenir de l'aide afin de retarder la synchronisation des données et d'éviter une synchronisation inutile des bacs.</block>
+  <block id="eef615f9029df3b19885b836d67d03a3" category="inline-link">Comment mettre hors tension et hors tension en toute simplicité un cluster de stockage NetApp SolidFire/HCI</block>
+  <block id="b8c22947a9d726cf79f399d361ecc7a2" category="paragraph"><block ref="b8c22947a9d726cf79f399d361ecc7a2" category="inline-link-rx"></block></block>
 </blocks>
