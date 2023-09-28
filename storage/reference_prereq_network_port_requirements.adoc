@@ -15,22 +15,6 @@ Vous devrez peut-être autoriser les ports TCP suivants à travers le pare-feu d
 
 Tous les ports sont le protocole TCP, sauf indication contraire, et doivent permettre des communications bidirectionnelles entre le serveur de support NetApp, le nœud de gestion et les nœuds exécutant le logiciel Element.
 
-[NOTE]
-====
-L'interface Web NetApp Hybrid Cloud Control et les packages logiciels de téléchargement d'API depuis le référentiel logiciel en ligne NetApp. Pour cette raison, certaines adresses URL ou IP peuvent se résoudre à d'autres adresses URL ou adresses IP basées sur le réseau de diffusion de contenu. Si possible, vous devez travailler avec un ingénieur réseau pour ajouter ces URL ou adresses IP aux règles de pare-feu, en procédant comme suit :
-
-.Étapes
-. Utilisez les utilitaires wget ou curl pour accéder à une URL (support-sg-nawest.netapp.com, par exemple).
-. Vérifiez la connectivité comme indiqué dans l'exemple suivant :
-+
-image::network_ports.PNG[Vérifiez la connectivité des ports]
-
-. Échec de réception de l'accès à l'URL (différent de support-sg-nawest.netapp.com).
-. Modifiez les règles de pare-feu pour autoriser la nouvelle URL.
-. Répétez les étapes ci-dessus jusqu'à ce que la tentative d'accès réussisse.
-
-
-====
 
 TIP: Activez ICMP entre le nœud de gestion, les nœuds exécutant le logiciel Element et le cluster MVIP.
 
@@ -132,27 +116,6 @@ Cluster de stockage MVIP
 442
  a| 
 Accès à l'interface et à l'API pour les mises à niveau du nœud de stockage et du logiciel Element
-
-
-
- a| 
-Nœud de gestion
- a| 
-Notification de nouvelle version :
-
-* `https://support.netapp.com/aods/`
-
-
-Téléchargement de logiciels :
-
-* `https://support-sg-emea.netapp.com`
-* `https://support-sg-naeast.netapp.com`
-* `https://support-sg-nawest.netapp.com`
-
- a| 
-443
- a| 
-Mises à niveau du service des nœuds de gestion
 
 
 

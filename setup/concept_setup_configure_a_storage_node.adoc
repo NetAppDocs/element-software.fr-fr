@@ -15,7 +15,7 @@ Vous devez configurer des nœuds individuels avant de pouvoir les ajouter à un 
 
 Deux options permettent de configurer des nœuds de stockage :
 
-* <<Configurez un nœud de stockage à l'aide de l'interface utilisateur par nœud,Interface pour chaque nœud>>: Utiliser l'interface utilisateur par nœud (https://<node_management_IP>:442)[] pour configurer les paramètres réseau du nœud.
+* <<Configurez un nœud de stockage à l'aide de l'interface utilisateur par nœud,Interface pour chaque nœud>>: Utiliser l'interface utilisateur par nœud  pour configurer les paramètres réseau du nœud.
 * <<Configurez un nœud de stockage à l'aide de l'interface TUI,TUI>>: Utilisez l'interface utilisateur du terminal de nœud (TUI) pour configurer le nœud.
 
 

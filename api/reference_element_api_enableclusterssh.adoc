@@ -14,9 +14,6 @@ summary: Vous pouvez utiliser la méthode EnableClusterSsh pour activer le servi
 Vous pouvez utiliser le `EnableClusterSsh` Méthode d'activation du service SSH sur tous les nœuds du cluster de stockage
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètre
 

@@ -13,9 +13,6 @@ summary: 'La gestion externe des clés \(EKM\) assure la gestion de la clé d"au
 [role="lead"]
 La gestion externe des clés (EKM) assure la gestion de la clé d'authentification sécurisée (AK) en association avec un serveur de clés externe hors cluster (EKS). Les clés de verrouillage sont utilisées pour verrouiller et déverrouiller les disques à autocryptage (SED) lorsque link:../concepts/concept_solidfire_concepts_security.html["chiffrement des données au repos"] est activé sur le cluster. Le EKS fournit une génération et un stockage sécurisés des clés de sécurité. Le cluster utilise le protocole KMIP (Key Management Interoperability Protocol), un protocole standard défini PAR OASIS, pour communiquer avec le EKS.
 
-
-NOTE: Seul le chiffrement logiciel au repos est disponible pour les clusters SolidFire Enterprise SDS.
-
 * link:task_system_manage_key_set_up_external_key_management.html["Configurer la gestion externe"]
 * link:task_system_manage_rekey_software_ear_master_key.html["Chiffrement logiciel de nouvelle clé pour la clé principale REST"]
 * link:concept_system_manage_key_recover_inaccessible_or_invalid_authentication_keys["Récupérer les clés d'authentification inaccessibles ou non valides"]

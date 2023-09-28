@@ -34,7 +34,7 @@ ProtectionDomainLayout
  a| 
 Liste des nœuds, chacun avec ses domaines de protection associés.
  a| 
-Liste JSON de link:reference_element_api_nodeprotectiondomains.md#GUID-3750B3B8-6A66-402F-85F1-E828005084BB["Domaines de protection des noeuds"] objets.
+Liste JSON de link:reference_element_api_nodeprotectiondomains.html["Domaines de protection des noeuds"] objets.
 
 |===
 

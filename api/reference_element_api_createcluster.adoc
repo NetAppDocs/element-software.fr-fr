@@ -55,7 +55,7 @@ Non
  a| 
 EnableSoftwareEncryptionAtRest
  a| 
-Activez ce paramètre pour utiliser le chiffrement logiciel au repos. Valeur par défaut définie sur true dans les clusters SolidFire Enterprise SDS. Par défaut, sur false dans tous les autres clusters. Une fois le chiffrement logiciel au repos activé, ce dernier ne peut pas être désactivé sur le cluster.
+Activez ce paramètre pour utiliser le chiffrement logiciel au repos. La valeur par défaut est false dans tous les clusters. Une fois le chiffrement logiciel au repos activé, ce dernier ne peut pas être désactivé sur le cluster.
  a| 
 booléen
  a| 

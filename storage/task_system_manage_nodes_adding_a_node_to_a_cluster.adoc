@@ -20,20 +20,18 @@ Vous pouvez ajouter des nœuds de plus petite ou plus grande capacité à un clu
 
 NOTE: Si un nouveau nœud ajouté augmente la capacité totale du cluster de plus de 50 %, une partie de cette capacité devient inutilisable (« bloqué »), afin de lui conformer à la règle de capacité. Cela reste le cas jusqu'à l'ajout de stockage supplémentaire. Si un nœud très volumineux est ajouté qui obéit également à la règle de capacité, le nœud précédemment bloqué ne sera plus bloqué, tandis que le nouveau nœud ajouté est bloqué. La capacité doit toujours être ajoutée par paires pour éviter ce problème. Lorsqu'un nœud est bloqué, la défaillance du cluster strandeCapacity est déclenchée.
 
-https://www.youtube.com/embed/2smVHWkikXY?rel=0["Vidéo NetApp : l'évolutivité à votre rythme : développement d'un cluster SolidFire"]
+https://www.youtube.com/embed/2smVHWkikXY?rel=0["Vidéo NetApp : l'évolutivité à votre rythme : développement d'un cluster SolidFire"^]
 
-Vous pouvez ajouter des nœuds aux clusters SolidFire Enterprise SDS (SolidFire ESDS) ou aux appliances NetApp HCI.
-
-Les nœuds ESDS SolidFire sont signalés par un préfixe de type noeud « `CFC`, par exemple, « `S FNc100.` ».
+Vous pouvez ajouter des nœuds aux appliances NetApp HCI.
 
 .Étapes
 . Sélectionnez *Cluster* > *Nodes*.
 . Cliquez sur *en attente* pour afficher la liste des nœuds en attente.
 +
-Lorsque le processus d'ajout de nœuds (nœuds ESDS SolidFire ou ESDS non SolidFire) est terminé, ils apparaissent dans la liste noeuds actifs. Les nœuds en attente apparaissent alors dans la liste en attente active.
+Lorsque le processus d'ajout de nœuds est terminé, ils apparaissent dans la liste nœuds actifs. Les nœuds en attente apparaissent alors dans la liste en attente active.
 
 +
-Pour les nœuds qui ne sont pas des nœuds ESDS SolidFire, SolidFire installe la version logicielle Element du cluster sur les nœuds en attente lorsque vous les ajoutez à un cluster. Cette opération peut prendre quelques minutes.
+SolidFire installe la version du logiciel Element du cluster sur les nœuds en attente lorsque vous les ajoutez à un cluster. Cette opération peut prendre quelques minutes.
 
 . Effectuez l'une des opérations suivantes :
 +

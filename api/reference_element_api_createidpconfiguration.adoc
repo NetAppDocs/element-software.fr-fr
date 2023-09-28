@@ -65,7 +65,7 @@ IdpConfigInfo
  a| 
 Informations sur la configuration du fournisseur d'identités tiers.
  a| 
-link:reference_element_api_idpconfiginfo.md#GUID-7DAF8B5D-7803-417F-822B-F5B1A4E3EA93["IdpConfigInfo"]
+link:reference_element_api_idpconfiginfo.html["IdpConfigInfo"]
 
 |===
 

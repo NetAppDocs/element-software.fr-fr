@@ -14,9 +14,6 @@ summary: 'Vous pouvez utiliser la méthode SetNetworkConfig pour définir la con
 Vous pouvez utiliser le `SetNetworkConfig` méthode de définition de la configuration réseau d'un nœud. Pour afficher les paramètres réseau actuels d'un nœud, exécutez le `GetNetworkConfig` Méthode API.
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètre
 

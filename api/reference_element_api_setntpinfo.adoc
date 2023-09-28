@@ -14,9 +14,6 @@ summary: 'Vous pouvez utiliser la méthode SetNtpInfo pour configurer NTP sur le
 Vous pouvez utiliser le `SetNtpInfo` Méthode de configuration NTP sur les nœuds du cluster. Les valeurs que vous définissez avec cette interface s'appliquent à tous les nœuds du cluster. Si un serveur de diffusion NTP diffuse régulièrement des informations d'heure sur votre réseau, vous pouvez éventuellement configurer des nœuds en tant que clients de diffusion.
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètres
 

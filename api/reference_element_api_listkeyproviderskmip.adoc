@@ -77,7 +77,7 @@ KmipKeyProviders
  a| 
 Liste de fournisseurs de clés KMIP créés.
  a| 
-link:reference_element_api_keyproviderkmip.md#["KeyProviderKmip"] baie
+link:reference_element_api_keyproviderkmip.html["KeyProviderKmip"] baie
 
 |===
 

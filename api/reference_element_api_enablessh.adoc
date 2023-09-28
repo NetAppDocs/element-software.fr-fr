@@ -14,9 +14,6 @@ summary: 'Vous pouvez utiliser la méthode EnableSsh pour activer le service SSH
 Vous pouvez utiliser le `EnableSsh` Méthode permettant d'activer le service Secure Shell (SSH) pour un seul nœud. Cette méthode n'affecte pas la durée du délai d'expiration SSH à l'échelle du cluster, et ne dispense pas que le nœud ait la désactivation de SSH par le délai SSH global.
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètre
 

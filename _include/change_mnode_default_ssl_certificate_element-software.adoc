@@ -1,16 +1,7 @@
----
-permalink: storage/reference_post_deploy_change_default_ssl_certificate.html 
-sidebar: sidebar 
-keywords: ssl certificate, SSL, private key, self-signed, cluster, nodes, user-defined certificate, API, change default certificate, certificate, Element API 
-summary: 'Vous pouvez modifier le certificat SSL par défaut et la clé privée du nœud de stockage du cluster à l"aide de l"API NetApp Element.' 
----
-= Modifiez le certificat SSL par défaut du logiciel Element
+= Trouvez plus d'informations
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
-[role="lead"]
 Vous pouvez modifier le certificat SSL par défaut et la clé privée du nœud de stockage du cluster à l'aide de l'API NetApp Element.
 
 Lors de la création d'un cluster logiciel NetApp Element, le cluster crée un certificat SSL unique et une clé privée auto-signés qui sont utilisés pour toutes les communications HTTPS via l'interface utilisateur d'Element, l'interface utilisateur par nœud ou les API. Le logiciel Element prend en charge les certificats auto-signés ainsi que les certificats émis et vérifiés par une autorité de certification (AC) de confiance.

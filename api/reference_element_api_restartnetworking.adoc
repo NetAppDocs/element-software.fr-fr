@@ -13,9 +13,6 @@ summary: Vous pouvez utiliser la méthode RestartNetworking pour redémarrer les
 [role="lead"]
 Vous pouvez utiliser le `RestartNetworking` méthode de redémarrage des services réseau sur un noeud.
 
-
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
 AVERTISSEMENT :
 
 Cette méthode redémarre tous les services réseau d'un nœud, ce qui entraîne une perte temporaire de connectivité réseau.

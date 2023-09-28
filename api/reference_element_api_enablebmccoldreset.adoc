@@ -14,9 +14,6 @@ summary: 'Vous pouvez utiliser la méthode EnableBmcColdReset pour activer une t
 Vous pouvez utiliser le `EnableBmcColdReset` Méthode permettant d'activer une tâche d'arrière-plan qui réinitialise régulièrement le contrôleur BMC (Baseboard Management Controller) pour tous les nœuds du cluster.
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètre
 

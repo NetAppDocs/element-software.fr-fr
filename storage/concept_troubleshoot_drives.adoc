@@ -39,6 +39,6 @@ IMPORTANT: Les systèmes de stockage SolidFire ne prennent pas en charge la supp
 * xref:task_troubleshoot_remove_mdss_drives.adoc[Retirez les lecteurs MDSS]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2844771["Remplacement des disques des nœuds de stockage SolidFire"]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2846859["Remplacement des disques pour les nœuds de stockage de la gamme H600S"]
-* link:hardware/concept_h410s_h610s_info.html["Informations sur le matériel H410S et H610S"]
-* link:hardware/concept_sfseries_info.html["Informations sur le matériel SF-Series"]
+* link:../hardware/concept_h410s_h610s_info.html["Informations sur le matériel H410S et H610S"]
+* link:../hardware/concept_sfseries_info.html["Informations sur le matériel SF-Series"]
 

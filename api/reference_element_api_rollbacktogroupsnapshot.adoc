@@ -15,9 +15,13 @@ Vous pouvez utiliser `RollbackToGroupSnapshot` restauration de tous les volumes 
 
 Le retour à un instantané de groupe crée un instantané temporaire de chaque volume dans le snapshot de groupe.
 
+[NOTE]
+====
+* La création d'un snapshot est autorisée si la plénitude du cluster est aux étapes 1, 2 ou 3. Les snapshots ne sont pas créés lorsque la plénitude de cluster est à l'étape 4 ou 5.
+* La restauration de volumes vers un snapshot de groupe peut échouer lorsque la synchronisation des tranches est en cours. Réessayez `RollbackToGroupSnapshot` une fois la synchronisation terminée.
 
-NOTE: La création d'un snapshot est autorisée si la plénitude du cluster est aux étapes 1, 2 ou 3. Les snapshots ne sont pas créés lorsque la plénitude de cluster est à l'étape 4 ou 5.
 
+====
 
 
 == Paramètres

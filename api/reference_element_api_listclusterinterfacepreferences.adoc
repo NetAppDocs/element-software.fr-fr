@@ -14,9 +14,6 @@ summary: 'La méthode ListClusterInterfacePreference permet aux systèmes intég
 Le `ListClusterInterfacePreference` Méthode permet aux systèmes intégrés avec des clusters de stockage exécutant le logiciel Element de lister les préférences d'interface de cluster existantes stockées sur le système. Cette méthode est destinée à un usage interne.
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètres
 

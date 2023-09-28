@@ -14,9 +14,6 @@ summary: 'Vous pouvez utiliser la méthode GetSshInfo pour interroger l"état du
 Vous pouvez utiliser le `GetSshInfo` Méthode d'interrogation de l'état du service SSH sur un seul nœud
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètres
 

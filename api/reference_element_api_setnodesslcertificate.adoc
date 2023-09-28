@@ -14,6 +14,9 @@ summary: Vous pouvez utiliser la méthode SetNodeSSLCertificate pour définir un
 Vous pouvez utiliser le `SetNodeSSLCertificate` Méthode permettant de définir un certificat SSL utilisateur et une clé privée pour le nœud de gestion.
 
 
+NOTE: Après avoir utilisé l'API, vous devez redémarrer le nœud de gestion.
+
+
 
 == Paramètres
 

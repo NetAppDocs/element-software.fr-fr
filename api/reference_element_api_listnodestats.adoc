@@ -14,9 +14,6 @@ summary: 'Vous pouvez utiliser la méthode ListNodeStats pour afficher les mesur
 Vous pouvez utiliser le `ListNodeStats` méthode d'affichage des mesures d'activité générales pour tous les nœuds de stockage d'un cluster de stockage.
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètres
 

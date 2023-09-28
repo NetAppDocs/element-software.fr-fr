@@ -18,8 +18,6 @@ Vous pouvez ajouter des clusters de stockage à l'inventaire des ressources des 
 
 Après l'ajout d'un cluster de stockage, vous pouvez surveiller les performances du cluster, modifier les informations d'identification du cluster de stockage pour l'actif géré ou supprimer un cluster de stockage de l'inventaire des actifs du nœud de gestion s'il n'a plus besoin d'être géré à l'aide de HCC.
 
-À partir de l'élément 12.2, vous pouvez utiliser le link:../esds/reference_esds_use_maintenance_mode.html["mode maintenance"] options d'activation et de désactivation du mode de maintenance pour les nœuds de cluster de stockage.
-
 .Ce dont vous avez besoin
 * *Autorisations d'administrateur de cluster* : vous disposez des autorisations en tant qu'administrateur sur le link:../concepts/concept_intro_clusters.html#authoritative-storage-clusters["cluster de stockage faisant autorité"]. Le cluster faisant autorité est le premier cluster ajouté à l'inventaire des nœuds de gestion au cours de la configuration du système.
 * *Logiciel Element* : votre cluster de stockage exécute le logiciel NetApp Element version 11.3 ou ultérieure.
@@ -61,7 +59,6 @@ NOTE: Seuls les clusters de stockage distants qui ne sont pas gérés actuelleme
 
 NOTE: Une fois le cluster de stockage ajouté, l'inventaire du cluster peut prendre jusqu'à 2 minutes pour actualiser et afficher le nouvel ajout. Vous devrez peut-être actualiser la page de votre navigateur pour voir les modifications.
 
-. Si vous ajoutez des clusters ESDS Element, entrez ou téléchargez votre clé privée SSH et votre compte utilisateur SSH.
 
 
 
@@ -118,8 +115,6 @@ CAUTION: Si vous sélectionnez *Oui* Suivant, le cluster sera supprimé de l'ins
 == Activation et désactivation du mode de maintenance
 
 Si vous devez mettre un nœud de stockage hors ligne pour des opérations de maintenance telles que des mises à niveau logicielles ou des réparations d'hôtes, vous pouvez réduire de près l'impact sur les E/S sur le reste du cluster de stockage <<enable_main_mode,activation>> mode de maintenance pour ce nœud. Lorsque vous <<disable_main_mode,désactiver>> en mode de maintenance, le nœud est surveillé pour s'assurer que certains critères sont respectés avant que le nœud puisse basculer en mode de maintenance.
-
-Des informations sont disponibles sur le link:../esds/reference_esds_use_maintenance_mode.html["mode maintenance"] activer et désactiver les options de fonction et le link:../esds/reference_esds_use_maintenance_mode.html#possible-scenarios-while-using-maintenance-mode["scénarios possibles lors de l'utilisation du mode de maintenance"].
 
 .Ce dont vous avez besoin
 * *Logiciel Element* : votre cluster de stockage exécute le logiciel NetApp Element version 12.2 ou ultérieure.

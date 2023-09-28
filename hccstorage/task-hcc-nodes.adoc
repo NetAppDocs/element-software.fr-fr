@@ -18,8 +18,6 @@ Vous pouvez afficher vos ressources de stockage dans votre système et détermin
 
 Vous pouvez afficher les informations de stockage de vos systèmes à plusieurs nœuds. Si link:../concepts/concept_solidfire_concepts_data_protection.html#custom_pd["domaines de protection personnalisés"] vous pouvez voir les domaines de protection affectés à des nœuds spécifiques.
 
-Pour les nœuds SolidFire Enterprise SDS, vous pouvez surveiller l'inventaire dans l'onglet stockage.
-
 .Étapes
 . Ouvrez l'adresse IP du nœud de gestion dans un navigateur Web. Par exemple :
 +

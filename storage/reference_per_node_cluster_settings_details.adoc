@@ -15,9 +15,6 @@ Vous pouvez vérifier les paramètres du cluster d'un nœud de stockage après l
 
 La liste suivante décrit les paramètres de cluster d'un nœud de stockage indiqué dans la page *Paramètres de cluster* de l'interface utilisateur par nœud (https://<node[] IP>:442/hcc/node/cluster-settings).
 
-
-NOTE: Si vous exécutez un cluster SolidFire Enterprise SDS, la plupart des paramètres réseau de l'interface utilisateur par nœud ne peuvent pas être modifiés après le déploiement d'un nœud.
-
 * *Rôle*
 +
 Rôle qui lui est attribué dans le cluster. Valeurs possibles :

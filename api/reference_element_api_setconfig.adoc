@@ -14,9 +14,6 @@ summary: Vous pouvez utiliser la méthode setconfig pour définir les informatio
 Vous pouvez utiliser le `SetConfig` méthode de définition des informations sur le réseau et le cluster du nœud. Cette méthode inclut les mêmes paramètres dans une méthode API unique qui sont disponibles à l'aide des deux `SetClusterConfig` et `SetNetworkConfig` méthodes. Seuls les champs que vous souhaitez modifier doivent être inclus avec cette méthode.
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètre
 

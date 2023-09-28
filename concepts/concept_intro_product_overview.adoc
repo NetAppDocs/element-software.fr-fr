@@ -31,19 +31,11 @@ Le système SolidFire offre les fonctionnalités suivantes :
 
 
 
-== Options de déploiement de SolidFire
+== Déploiement SolidFire
 
-SolidFire propose plusieurs options de déploiement :
+Nœuds de stockage fournis par NetApp et intégrés au logiciel NetApp Element
 
-* Utilisation de nœuds de stockage fournis par NetApp et intégrés au logiciel NetApp Element
-+
 link:../concepts/concept_solidfire_concepts_solidfire_architecture_overview.html["Présentation de l'architecture de stockage 100 % Flash de SolidFire"]
-
-* Utilisez votre propre serveur pour exécuter le logiciel Element avec le SolidFire Enterprise SDS conteneurisé
-+
-link:../esds/concept_get_started_esds.html["Découvrez le SDS d'entreprise NetApp SolidFire"]
-
-
 
 
 

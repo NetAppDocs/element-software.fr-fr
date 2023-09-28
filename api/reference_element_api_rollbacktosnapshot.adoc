@@ -17,9 +17,13 @@ Le nouveau snapshot est activé et le snapshot existant est conservé jusqu'à s
 
 *CLUSTER_PLÉNITUDE*
 
+[NOTE]
+====
+* Vous pouvez créer des instantanés si la plénitude de cluster est aux étapes 1, 2 ou 3. Vous ne pouvez pas créer de snapshots lorsque la plénitude de cluster atteint l'étape 4 ou 5.
+* La restauration d'un volume vers un snapshot peut échouer lorsque la synchronisation des coupes est en cours. Réessayez `RollbackToSnapshot` une fois la synchronisation terminée.
 
-NOTE: Vous pouvez créer des instantanés si la plénitude de cluster est aux étapes 1, 2 ou 3. Vous ne pouvez pas créer de snapshots lorsque la plénitude de cluster atteint l'étape 4 ou 5.
 
+====
 
 
 == Paramètres

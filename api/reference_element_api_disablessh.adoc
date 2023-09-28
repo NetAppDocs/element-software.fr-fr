@@ -14,9 +14,6 @@ summary: 'Vous pouvez utiliser la méthode DisableSsh pour désactiver le servic
 Vous pouvez utiliser le `DisableSsh` Méthode de désactivation du service SSH pour un seul nœud de stockage. Cette méthode n'affecte pas la durée du délai d'expiration du service SSH à l'échelle du cluster.
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètre
 

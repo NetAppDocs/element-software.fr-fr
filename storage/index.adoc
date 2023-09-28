@@ -19,7 +19,7 @@ L'interface logicielle repose sur l'API Element.
 
 * link:task_post_deploy_access_the_element_software_user_interface.html["Accédez à l'interface utilisateur du logiciel Element"]
 * link:task_post_deploy_configure_system_options.html["Configuration des options du système SolidFire après le déploiement"]
-* link:concept_upgrade_storage_components.html["Mise à niveau des composants du système de stockage"]
+* link:../upgrade/concept_element_upgrade_overview.html["Mise à niveau des composants du système de stockage"]
 * link:task_intro_use_basic_options_in_the_element_software_ui.html["Utilisez les options de base de l'interface utilisateur du logiciel Element"]
 * link:concept_system_manage_accounts_overview.html["Gestion des comptes"]
 * link:concept_system_manage_system_management.html["Gérez votre système"]

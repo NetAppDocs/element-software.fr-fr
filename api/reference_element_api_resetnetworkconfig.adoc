@@ -14,9 +14,6 @@ summary: 'Vous pouvez utiliser la méthode ResetNetworkConfig pour résoudre les
 Vous pouvez utiliser le `ResetNetworkConfig` méthode permettant de résoudre les problèmes de configuration réseau d'un nœud individuel. Cette méthode réinitialise la configuration réseau d'un nœud individuel sur les paramètres par défaut d'usine.
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètres
 

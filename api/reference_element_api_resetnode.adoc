@@ -14,9 +14,6 @@ summary: 'Vous pouvez utiliser la méthode ResetNode pour réinitialiser un nœu
 Vous pouvez utiliser le `ResetNode` méthode pour réinitialiser les paramètres d'usine d'un nœud. Toutes les données, les packages (mises à jour logicielles, etc.), les configurations et les fichiers journaux sont supprimés du nœud lorsque vous appelez cette méthode. Toutefois, les paramètres réseau du nœud sont conservés lors de cette opération. Les nœuds qui participent à un cluster ne peuvent pas être réinitialisés sur les paramètres d'usine.
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètres
 

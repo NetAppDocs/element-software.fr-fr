@@ -102,5 +102,5 @@ Une fois que le système a résolu une alerte, toutes les informations concernan
 == Trouvez plus d'informations
 
 * xref:reference_monitor_cluster_fault_codes.adoc[Codes d'anomalie du bloc d'instruments]
-* link:api/index.html["Gérez le stockage avec l'API Element"]
+* link:../api/index.html["Gérez le stockage avec l'API Element"]
 

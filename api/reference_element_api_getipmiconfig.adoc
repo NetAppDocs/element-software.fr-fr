@@ -14,9 +14,6 @@ summary: Vous pouvez utiliser la méthode GetIpmiConfig pour récupérer les inf
 Vous pouvez utiliser le `GetIpmiConfig` méthode pour récupérer les informations relatives au capteur matériel à partir des capteurs de votre nœud.
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètre
 

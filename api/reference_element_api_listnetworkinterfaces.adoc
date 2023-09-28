@@ -14,9 +14,6 @@ summary: 'Vous pouvez utiliser la méthode ListNetworkinterfaces pour lister les
 Vous pouvez utiliser le `ListNetworkInterfaces` méthode permettant de lister des informations sur chaque interface réseau sur un nœud. Cette méthode d'API est destinée à être utilisée sur des nœuds individuels. L'authentification par ID utilisateur et mot de passe est requise pour l'accès aux nœuds individuels. Cependant, vous pouvez utiliser cette méthode sur le cluster si la force du paramètre reçoit la valeur true dans l'appel de méthode. Lorsque le paramètre est utilisé sur le cluster, toutes les interfaces sont répertoriées.
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètre
 

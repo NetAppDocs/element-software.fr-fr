@@ -14,9 +14,6 @@ summary: 'Vous pouvez utiliser la méthode GetIpmiInfo pour afficher un rapport 
 Vous pouvez utiliser le `GetIpmiInfo` méthode d'affichage d'un reporting détaillé des capteurs (objets) des ventilateurs des nœuds, des températures d'admission et d'échappement, et des blocs d'alimentation surveillés par le système.
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètres
 

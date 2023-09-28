@@ -15,9 +15,6 @@ Vous pouvez modifier les paramètres réseau du nœud de stockage pour donner au
 
 Vous pouvez voir les paramètres réseau d'un noeud de stockage sur la page *Paramètres réseau* lorsque vous vous connectez au noeud (https://<node[] IP>:442/hcc/node/network-settings). Vous pouvez sélectionner les paramètres *Bond1G* (gestion) ou *Bond10G* (stockage). La liste suivante décrit les paramètres que vous pouvez modifier lorsqu'un nœud de stockage est à l'état disponible, en attente ou actif :
 
-
-NOTE: Si vous exécutez un cluster SolidFire Enterprise SDS, la plupart des paramètres réseau de l'interface utilisateur par nœud ne peuvent pas être modifiés après le déploiement d'un nœud.
-
 * *Méthode*
 +
 Méthode utilisée pour configurer l'interface. Méthodes possibles :

@@ -14,9 +14,6 @@ summary: 'Vous pouvez utiliser la méthode DisableClusterSsh pour désactiver le
 Vous pouvez utiliser le `DisableClusterSsh` Méthode de désactivation du service SSH pour l'ensemble du cluster de stockage. Lorsque vous ajoutez des nœuds au cluster de stockage, ce paramètre hérite de ce paramètre au niveau du cluster.
 
 
-NOTE: SolidFire Enterprise SDS ne prend pas en charge cette méthode. Si vous utilisez cette méthode sur un système ESDS SolidFire, la méthode renvoie une erreur.
-
-
 
 == Paramètre
 

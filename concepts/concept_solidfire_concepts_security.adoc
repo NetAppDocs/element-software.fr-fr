@@ -28,9 +28,6 @@ link:../storage/task_system_manage_cluster_enable_and_disable_encryption_for_a_c
 Un autre type de chiffrement logiciel au repos permet de chiffrer toutes les données écrites sur les SSD du cluster de stockage. link:../storage/task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.html["Lorsque cette option est activée"^], il crypte toutes les données écrites et décrypte toutes les données lues automatiquement dans le logiciel. Le chiffrement logiciel au repos assure la mise en miroir de l'implémentation du lecteur SED (Self-Encrypting Drive) dans le matériel pour assurer la sécurité des données en l'absence de SED.
 
 
-NOTE: Le chiffrement logiciel au repos est activé par défaut dans tous les nœuds SolidFire Enterprise SDS. Le chiffrement logiciel au repos fournit une couche logicielle principale de chiffrement de sécurité des données dans les nœuds SDS d'entreprise SolidFire, qui n'incluent pas les disques à autocryptage (SED).
-
-
 WARNING: Pour les clusters de stockage 100 % Flash SolidFire, le chiffrement logiciel au repos doit être activé au cours de la création du cluster et ne peut pas être désactivé une fois le cluster créé.
 
 Les solutions logicielles et matérielles de chiffrement au repos peuvent être utilisées de manière indépendante ou en association.

@@ -14,6 +14,9 @@ summary: Vous pouvez utiliser la méthode SetSSLCertificate pour définir un cer
 Vous pouvez utiliser le `SetSSLCertificate` Méthode permettant de définir un certificat SSL utilisateur et une clé privée pour les nœuds de stockage du cluster.
 
 
+NOTE: Après avoir utilisé l'API, vous devez redémarrer le nœud de gestion.
+
+
 
 == Paramètres
 
