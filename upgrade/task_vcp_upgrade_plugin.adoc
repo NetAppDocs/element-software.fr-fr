@@ -31,7 +31,7 @@ Cette procédure de mise à niveau couvre les scénarios de mise à niveau suiva
 * Vous mettez à niveau vers un client Web HTML5 8.0 ou 7.0.
 +
 
-IMPORTANT: Le plug-in Element pour vCenter 5.0 et les versions ultérieures n'est pas compatible avec vCenter Server 6.7 et 6.5.
+IMPORTANT: Le plug-in Element pour vCenter 5.0 ou version ultérieure n'est pas compatible avec vCenter Server 6.7 et 6.5.
 
 
 

@@ -67,7 +67,7 @@ Communications iSCSI du client
  a| 
 Nœud de gestion
  a| 
-sfsupport.solidfire.com
+`sfsupport.solidfire.com`
  a| 
 22
  a| 
@@ -122,7 +122,7 @@ Accès à l'interface et à l'API pour les mises à niveau du nœud de stockage 
  a| 
 Nœud de gestion
  a| 
-monitoring.solidfire.com
+`monitoring.solidfire.com`
  a| 
 443
  a| 

@@ -64,8 +64,8 @@ chaîne
  a| 
 Format de l'opération de volume en bloc. Valeurs possibles :
 
-* compressé
 * natif
+* non compressé
 
  a| 
 chaîne
