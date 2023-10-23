@@ -1,7 +1,6 @@
 ---
 section: upgrade
-title: Mettez à niveau votre système de stockage 100 % Flash NetApp SolidFire pour
-  Element 12.5 ou une version ultérieure
+title: Mettez à niveau votre système de stockage 100 % Flash NetApp SolidFire
 entries:
 - title: Présentation de la séquence de mise à niveau
   url: "/upgrade/concept_element_upgrade_overview.html"

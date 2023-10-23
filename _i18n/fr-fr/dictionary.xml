@@ -4107,7 +4107,6 @@
   <block id="e4129684446aea2a0364c5466dc85146" category="paragraph">Nom d'utilisateur CHAP spécifié par l'initiateur lors d'une session iSCSI.</block>
   <block id="ef72c37be9d1b9e6e5bbd6ef09448abe" category="paragraph">direction</block>
   <block id="e7eefd9834440f0ab15e111471053cf0" category="paragraph">Direction d'authentification, par exemple, unidirectionnel (initiateur uniquement) ou bidirectionnel (initiateur et cible).</block>
-  <block id="cd6217be1698a09a848043a5d6c72040" category="paragraph">*Disponible à partir de l'élément 12.7.</block>
   <block id="d75770a94c059a1d35360e5ac1f6153f" category="summary">Vous pouvez utiliser l'authentification multifacteur \(MFA\) pour gérer les sessions utilisateur à l'aide d'un fournisseur d'identité tiers \(IDP\) via le langage de marquage d'assertion de sécurité \(SAML\).</block>
   <block id="9fba87d16629109ef300e4ed7ad24d7f" category="paragraph">Vous pouvez utiliser l'authentification multifacteur (MFA) pour gérer les sessions utilisateur à l'aide d'un fournisseur d'identité tiers via le langage SAML (Security assertion Markup Language).</block>
   <block id="993977e3f068bdc36dab7b26598cb224" category="list-text"><block ref="993977e3f068bdc36dab7b26598cb224" category="inline-xref-macro-rx"></block></block>
@@ -5123,7 +5122,6 @@
   <block id="9440025bb9d633cec83a85e7a9cb4ba8" category="paragraph">Etat d'opérationnalState</block>
   <block id="9657129e12fbfe99a53283bf6ea49124" category="paragraph">L'état opérationnel de base du Vserver. Valeurs possibles :</block>
   <block id="c6ad545ed5197a02a4f86759e091d934" category="summary">Un système de stockage 100 % Flash SolidFire comprend des composants matériels, tels que des disques et des nœuds, qui sont combinés dans un pool de ressources de stockage. En tant que système de stockage unique, ce cluster unifié est géré à l'aide du logiciel NetApp Element.</block>
-  <block id="b7faeba39aadbf9af836a1e70f5708d7" category="doc">SolidFire et Element 12.5 et documentation ultérieure</block>
   <block id="474c6800f0719d621f24fc2682a27460" category="summary">Vous pouvez utiliser l'API du nœud de gestion (nœud M) pour mettre à niveau les services système, gérer les ressources et les paramètres de cluster, exécuter des tests et utilitaires système, configurer Active IQ pour le contrôle du système, et activer ou désactiver l'accès SSH du support NetApp pour le dépannage.</block>
   <block id="b2fc999fbccff4aaaffa26387ba2644f" category="doc">Présentation de l'interface de l'API REST du nœud de gestion</block>
   <block id="f092926fa32883d124eb34471b6d25b2" category="paragraph">À l'aide de l'interface utilisateur de l'API REST intégrée <block ref="c65dd28928a2f354717971258c7d9ec8" prefix="(" category="inline-code"></block>), vous pouvez exécuter ou comprendre des API relatives aux services de nœud de gestion, y compris la configuration du serveur proxy, les mises à jour du niveau de service ou la gestion des ressources.</block>
@@ -11472,7 +11470,6 @@
   <block id="27f2e04c96b5ac3b10c4de8069658227" category="sidebar">Utilisation de snapshots de groupe pour la protection des données</block>
   <block id="cf35d1bd4f63afd1c731729075f91d65" category="sidebar">Les volumes sont de retour vers un snapshot de groupe</block>
   <block id="e9c9178d0dcc22e83ce4dafbccebece2" category="sidebar">Configurez des domaines de protection personnalisés</block>
-  <block id="a3fc65b85282a6a88ae5d5d3defca6e5" category="sidebar">Mettez à niveau votre système de stockage 100 % Flash NetApp SolidFire pour Element 12.5 ou une version ultérieure</block>
   <block id="b837bae0f441ebacd86887d737939282" category="sidebar">Procédures de mise à niveau du système</block>
   <block id="2e531c00d20727b760f0fefbb4c65c82" category="sidebar">Affichez votre inventaire sur la page nœuds du contrôle du cloud hybride NetApp</block>
   <block id="767682e703a28fefdc1067e1fcf04243" category="sidebar">Surveillez les volumes de votre cluster de stockage avec NetApp Cloud Control</block>
@@ -12017,4 +12014,6 @@
   <block id="86eccd8202a873aee7f9acfbe920bb59" category="paragraph"><block ref="00a55ff76496c3c45ca20071f6151bfc" prefix="" category="inline-code"></block></block>
   <block id="474ed7ffbbc0fc1d58ad983e7ef700f6" category="admonition">Le plug-in Element pour vCenter 5.0 ou version ultérieure n'est pas compatible avec vCenter Server 6.7 et 6.5.</block>
   <block id="dfd25ff244b001be7beece9729517779" category="list-text">non compressé</block>
+  <block id="54b283655ec8649a11478759bf661650" category="list-text">Disponible à partir de Element 12.7.</block>
+  <block id="909a1c829d29d09da00949e5c8b87a0e" category="sidebar">Mettez à niveau votre système de stockage 100 % Flash NetApp SolidFire</block>
 </blocks>

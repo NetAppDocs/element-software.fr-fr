@@ -58,4 +58,5 @@ Direction d'authentification, par exemple, unidirectionnel (initiateur uniquemen
 chaîne
 
 |===
-*Disponible à partir de l'élément 12.7.
+* Disponible à partir de Element 12.7.
+
