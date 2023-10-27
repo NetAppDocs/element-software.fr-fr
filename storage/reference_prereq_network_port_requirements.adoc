@@ -2,7 +2,7 @@
 permalink: storage/reference_prereq_network_port_requirements.html 
 sidebar: sidebar 
 keywords: network port requirements, TCP ports, firewall, utilities, URL, access attempt, ICMP, MIP, SIP, MVIP, SVIP 
-summary: 'Vous devrez peut-être autoriser les ports TCP suivants à travers le pare-feu de périphérie de votre centre de données afin de pouvoir gérer le système à distance et permettre aux clients situés en dehors de votre centre de données de se connecter aux ressources. Certains de ces ports peuvent ne pas être requis, selon l"utilisation du système.' 
+summary: 'Vous devrez peut-être autoriser les ports TCP suivants à travers le pare-feu de votre data Center pour que vous puissiez gérer le système à distance et permettre aux clients situés à l"extérieur de votre data Center de se connecter aux ressources. Certains de ces ports peuvent ne pas être requis, selon l"utilisation du système.' 
 ---
 = Configuration requise pour les ports réseau
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Vous devrez peut-être autoriser les ports TCP suivants à travers le 
 
 
 [role="lead"]
-Vous devrez peut-être autoriser les ports TCP et UDP suivants via le pare-feu de votre centre de données pour pouvoir gérer le système à distance et permettre aux clients situés à l'extérieur de votre centre de données de se connecter aux ressources. Certains de ces ports peuvent ne pas être requis, selon l'utilisation du système.
+Vous devrez peut-être autoriser les ports TCP et UDP suivants via le pare-feu de périphérie de votre centre de données pour pouvoir gérer le système à distance et permettre aux clients situés à l'extérieur de votre centre de données de se connecter aux ressources. Certains de ces ports peuvent ne pas être requis, selon l'utilisation du système.
 
 Tous les ports sont TCP, sauf indication contraire, et tous les ports TCP doivent prendre en charge la communication de liaison tridirectionnelle entre le serveur de support NetApp, le nœud de gestion et les nœuds exécutant le logiciel Element. Par exemple, l'hôte d'une source de nœud de gestion communique avec l'hôte d'une destination MVIP de cluster de stockage via le port TCP 443, et l'hôte de destination communique de nouveau avec l'hôte source via n'importe quel port.
 
