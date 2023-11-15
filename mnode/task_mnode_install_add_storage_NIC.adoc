@@ -121,5 +121,5 @@ https://$mnode_IP:442/json-rpc/10.0 \
 
 * link:task_mnode_add_assets.html["Ajoutez une ressource de contrôleur au nœud de gestion"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
-* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"]
 

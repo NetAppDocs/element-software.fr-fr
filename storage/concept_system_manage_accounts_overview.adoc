@@ -21,6 +21,6 @@ Dans les systèmes de stockage SolidFire, les locataires peuvent utiliser des co
 
 == Pour en savoir plus
 
-* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
 

@@ -42,6 +42,6 @@ Voir les détails `GetFipsReport` ou `ListDriveHardware` dans le link:../api/ind
 
 == Trouvez plus d'informations
 
-* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
 

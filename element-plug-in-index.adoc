@@ -20,5 +20,5 @@ Pour en savoir plus sur le plug-in Element pour vCenter Server, consultez le htt
 
 == Pour en savoir plus
 
-* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"]
 

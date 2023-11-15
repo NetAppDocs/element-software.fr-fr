@@ -33,5 +33,5 @@ image::../media/sf_and_element_workflow_for_setup_shorter_workflow.png[Configure
 == Trouvez plus d'informations
 
 * link:../setup/concept_setup_whats_next.html["Découvrez les prochaines étapes à suivre pour utiliser le stockage"]
-* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"]
 

@@ -71,6 +71,6 @@ Certains nœuds offrent des fonctionnalités de gestion hors bande supplémentai
 == Pour en savoir plus
 
 * https://docs.netapp.com/us-en/hci/docs/hci_prereqs_network_switch.html["Configuration requise pour le réseau et les commutateurs NetApp HCI"^]
-* https://www.netapp.com/data-storage/solidfire/documentation["Page Ressources SolidFire et Element"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
 
