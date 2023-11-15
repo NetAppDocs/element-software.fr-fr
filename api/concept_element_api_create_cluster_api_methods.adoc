@@ -22,6 +22,6 @@ Vous pouvez utiliser ces méthodes d'API pour créer un cluster de stockage. Tou
 
 == Trouvez plus d'informations
 
-* https://www.netapp.com/data-storage/solidfire/documentation/["Page des ressources NetApp SolidFire"^]
+* https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"]
 * https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["Documentation relative aux versions antérieures des produits NetApp SolidFire et Element"^]
 

@@ -391,8 +391,6 @@
   <block id="6ab62d383908172ba1559c687cc9e79d" category="list-text"><block ref="6ab62d383908172ba1559c687cc9e79d" category="inline-xref-macro-rx"></block></block>
   <block id="fe0ac658f2ed85de2fb9de9021e54f11" category="inline-xref-macro">Réyncrelation SnapMirrorCet</block>
   <block id="141218207edca3157cfd1fdfb14ea44d" category="list-text"><block ref="141218207edca3157cfd1fdfb14ea44d" category="inline-xref-macro-rx"></block></block>
-  <block id="1c1519037df87ff4dd08fe6e757ff03f" category="inline-link">Page des ressources NetApp SolidFire</block>
-  <block id="abc0c04174a58217258765895984ed4e" category="list-text"><block ref="abc0c04174a58217258765895984ed4e" category="inline-link-rx"></block></block>
   <block id="89e3bb4cf03209dcb9c85e2455cde9c3" category="inline-link">Documentation relative aux versions antérieures des produits NetApp SolidFire et Element</block>
   <block id="461166164223a1234073a2c9d388d33a" category="list-text"><block ref="461166164223a1234073a2c9d388d33a" category="inline-link-rx"></block></block>
   <block id="5bca61520bd936a82d1e115d323d5a60" category="summary">Vous pouvez utiliser la méthode TestLdapAuthentication pour valider les paramètres d'authentification LDAP actuellement activés. Si la configuration est correcte, l'appel API renvoie l'appartenance au groupe de l'utilisateur testé.</block>
@@ -12016,4 +12014,6 @@
   <block id="331d6d490990c63b2cee0dc04fe2589b" category="paragraph">Tous les ports sont TCP, sauf indication contraire, et tous les ports TCP doivent prendre en charge la communication de liaison tridirectionnelle entre le serveur de support NetApp, le nœud de gestion et les nœuds exécutant le logiciel Element. Par exemple, l'hôte d'une source de nœud de gestion communique avec l'hôte d'une destination MVIP de cluster de stockage via le port TCP 443, et l'hôte de destination communique de nouveau avec l'hôte source via n'importe quel port.</block>
   <block id="f814466eb9bcf561b354422b41f381f3" category="summary">Vous devrez peut-être autoriser les ports TCP suivants à travers le pare-feu de votre data Center pour que vous puissiez gérer le système à distance et permettre aux clients situés à l'extérieur de votre data Center de se connecter aux ressources. Certains de ces ports peuvent ne pas être requis, selon l'utilisation du système.</block>
   <block id="c04c3f3380a29245247f6e8a6c77a880" category="paragraph">Vous devrez peut-être autoriser les ports TCP et UDP suivants via le pare-feu de périphérie de votre centre de données pour pouvoir gérer le système à distance et permettre aux clients situés à l'extérieur de votre centre de données de se connecter aux ressources. Certains de ces ports peuvent ne pas être requis, selon l'utilisation du système.</block>
+  <block id="5858de35bb153f56bdb4f3fbd003b515" category="list-text"><block ref="5858de35bb153f56bdb4f3fbd003b515" category="inline-link-rx"></block></block>
+  <block id="591c130bf36c26fe5946fac7eeba4c11" category="list-text"><block ref="5858de35bb153f56bdb4f3fbd003b515" category="inline-link-rx"></block>présentation]</block>
 </blocks>
