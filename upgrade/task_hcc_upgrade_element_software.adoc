@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: upgrade/task_hcc_upgrade_element_software.html 
 summary: 'La mise à niveau du logiciel NetApp Element s"inscrit dans le cadre de la mise à niveau de ses systèmes SolidFire.' 
-keywords: netapp, solidfire, cluster, element, H610S upgrade, hcc, ansible upgrades, upgrade role 
+keywords: netapp, solidfire, cluster, element, H610S upgrade, hcc, upgrade role 
 ---
 = Mettez à niveau le logiciel Element
 :hardbreaks:
