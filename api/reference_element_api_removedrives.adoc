@@ -11,7 +11,7 @@ summary: 'Vous pouvez utiliser la méthode RemoveDrives pour supprimer de maniè
 
 
 [role="lead"]
-Vous pouvez utiliser le `RemoveDrives` méthode de retrait proactif des disques faisant partie du cluster Vous pouvez utiliser cette méthode pour réduire la capacité du cluster ou préparer le remplacement des disques presque en fin de vie. Toutes les données présentes sur les disques sont supprimées et migrées vers d'autres disques du cluster avant que le disque ne soit retiré du cluster.
+Vous pouvez utiliser le `RemoveDrives` méthode de retrait proactif des disques faisant partie du cluster Vous pouvez utiliser cette méthode pour réduire la capacité du cluster ou préparer le remplacement des disques presque en fin de vie. `RemoveDrives` Crée une troisième copie des données de bloc sur les autres nœuds du cluster et attend la fin de la synchronisation avant de déplacer les disques vers la liste « disponible ». Les lecteurs de la liste « disponible » sont complètement supprimés du système et ne disposent pas de services en cours d'exécution ni de données actives.
 
 `RemoveDrives` est une méthode asynchrone. Selon la capacité totale des disques supprimés, il peut prendre plusieurs minutes pour migrer toutes les données.
 
