@@ -35,3 +35,5 @@ entries:
     url: "/hardware/task_rtfi_process.html"
   - title: Menu d'options RTFI
     url: "/hardware/task_rtfi_options_menu.html"
+- title: Versions de firmware prises en charge pour les nœuds de stockage
+  url: "/hardware/fw_storage_nodes.html"
