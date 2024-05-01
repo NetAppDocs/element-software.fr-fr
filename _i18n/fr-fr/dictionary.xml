@@ -2012,7 +2012,6 @@
   <block id="5ffce89810db963197914e99fa41565d" category="paragraph">Nom d'un script exécutable. Si aucun nom de script n'est indiqué, la clé et l'URL sont nécessaires pour accéder aux nœuds de stockage Element. Le script est exécuté sur le nœud principal, et la clé et l'URL sont renvoyées au script afin que le serveur Web local puisse être contacté.</block>
   <block id="9b479e5e1be54276f914b4a04af63458" category="paragraph">ScriptParameters</block>
   <block id="2101debca20755a4bf2792764750c8ad" category="paragraph">Paramètres JSON à transmettre au script.</block>
-  <block id="42c56c6f739ec986c961aefb154dcc6b" category="paragraph">Attributs JSON pour la tâche de volume en bloc.</block>
   <block id="b8e143ae62ce68a06396ba6b5fc3f89a" category="paragraph">ID du processus asynchrone à vérifier pour l'achèvement.</block>
   <block id="3c6e0b8a9c15224a8228b9a98ca1531d" category="paragraph">clé</block>
   <block id="1cf67e15c0f74187a6558d9af0d0b5c3" category="paragraph">Clé opaque identifiant la session de manière unique.</block>
@@ -6163,21 +6162,6 @@
   <block id="0e93badeabe261c69b6984cdc67bfc5d" category="summary">Découvrez les initiateurs et comment les utiliser pour autoriser l'accès au stockage dans des groupes d'accès de volume.</block>
   <block id="6430db21988dbbdfca7783c89a7710df" category="doc">Initiateurs</block>
   <block id="80d6153382e70910f8e51a18694440a4" category="paragraph">Les initiateurs permettent aux clients externes d'accéder aux volumes d'un cluster, servant de point d'entrée pour la communication entre les clients et les volumes. Vous pouvez utiliser des initiateurs pour l'accès CHAP aux volumes de stockage plutôt qu'en fonction du compte. Un seul initiateur, lorsqu'il est ajouté à un groupe d'accès de volume, permet aux membres du groupe d'accès de volume d'accéder à tous les volumes de stockage ajoutés au groupe sans nécessiter d'authentification. Un initiateur ne peut appartenir à qu'un seul groupe d'accès.</block>
-  <block id="a824a1096e208a26b70c360a0da8b545" category="summary">Pour en savoir plus sur les tâches relatives au système de stockage SolidFire, consultez le Centre de documentation SolidFire et les ressources disponibles sur la page des ressources NetApp SolidFire.</block>
-  <block id="4bb047f8c530785002e490ef17fa725e" category="doc">Où trouver des informations complémentaires</block>
-  <block id="34515669e219305dec5f0b81dbef8b1e" category="paragraph">Dans le Centre de documentation, vous trouverez également des informations sur l'installation et la maintenance du matériel, des ressources de contenu supplémentaires disponibles, des liens vers les problèmes connus et les problèmes résolus, ainsi que les dernières notes de version.</block>
-  <block id="662a5ad8c6ae651da9220e35d3f16a18" category="list-text">*Page des ressources NetApp pour SolidFire*</block>
-  <block id="c39c68328651c80dceb0f36d050a7109" category="paragraph">Fournit des ressources sur le logiciel Element, notamment des liens vers du contenu vidéo et des rapports techniques.</block>
-  <block id="4b3e0d4570a278a1af3fe11601c01d47" category="inline-link">Les ressources de stockage SolidFire 100 % Flash</block>
-  <block id="c16fe39e6b501b8347fb1dd55ba312c6" category="paragraph"><block ref="c16fe39e6b501b8347fb1dd55ba312c6" category="inline-link-rx"></block></block>
-  <block id="4a9c1435e759b5c6dd543fceea09ea44" category="list-text">*Centre de documentation NetApp SolidFire*</block>
-  <block id="028b8f4057634cf2f3954305a74dc779" category="paragraph">Fournit des informations sur l'installation et la maintenance du matériel, des ressources de contenu supplémentaires disponibles, des liens vers des problèmes connus et résolus, ainsi que les dernières notes de version.</block>
-  <block id="99876372740307113d18bf0a8023fbbf" category="inline-link">Centre de documentation SolidFire et Element 11.3</block>
-  <block id="248dd8632f43e9f4128a672b09c790eb" category="paragraph"><block ref="248dd8632f43e9f4128a672b09c790eb" category="inline-link-rx"></block></block>
-  <block id="3bb4917b4da580a3845e4291809fe942" category="list-text">*https://kb.netapp.com/app/answers/answer_view/a_id/1000941/loc/en_US[NetApp éléments SolidFire problèmes connus]*</block>
-  <block id="e4245eba0095196ee103a1119cfa1d87" category="paragraph">Fournit une liste des problèmes connus dans les versions actuelles et antérieures du logiciel Element.</block>
-  <block id="454d39955c29112d76b1bd6072c2dcdf" category="list-text">*https://kb.netapp.com/app/answers/answer_view/a_id/1000933[NetApp questions résolues de l'élément SolidFire]*</block>
-  <block id="e864e5177c5d98d5b8250b49810e1194" category="paragraph">Fournit une liste des problèmes résolus dans les versions actuelles et antérieures du logiciel Element.</block>
   <block id="04b17abba7ea5ab35fcee00206d57cac" category="summary">Les volumes virtuels vSphere sont un modèle de stockage utilisé par VMware qui permet de déplacer une grande partie de la gestion du stockage pour vSphere du système de stockage vers VMware vCenter. Avec les volumes virtuels \(vvols\), vous pouvez allouer du stockage en fonction des besoins de machines virtuelles individuelles.</block>
   <block id="54560a3123d5dd49f3c38f44783146d2" category="doc">Volumes virtuels (vvols)</block>
   <block id="d741faf41017eca425e168e5907c82e1" category="paragraph">Les volumes virtuels vSphere sont un modèle de stockage utilisé par VMware qui permet de déplacer une grande partie de la gestion du stockage pour vSphere du système de stockage vers VMware vCenter. Avec Virtual volumes (vvols), vous pouvez allouer du stockage en fonction des besoins de machines virtuelles individuelles.</block>
@@ -8128,23 +8112,6 @@
   <block id="659e7c1ea26c762b893197b29f236b19" category="list-text">Saisissez un *Nouveau nom d'horaire*.</block>
   <block id="00c756dbe6a76f0e40cd9e066e55c3b0" category="list-text">Sélectionnez un *Type d'horaire* dans la liste.</block>
   <block id="8153c611348a6600ffa35b1d360cddf1" category="list-text">*Facultatif :* cochez la case *Programme récurrent* pour répéter l'instantané programmé périodiquement.</block>
-  <block id="501b98bdb184166086d9ae33cf2360ff" category="summary">Pour en savoir plus sur l'utilisation et la gestion des systèmes de stockage 100 % Flash NetApp HCI et SolidFire, consultez les ressources disponibles dans les pages centres de documentation et ressources des deux produits.</block>
-  <block id="7431f7a183aa9cfe2910bb761205485d" category="doc">Où trouver la documentation produit et d'autres informations</block>
-  <block id="1c276549c628a78c4d4d38a454a53866" category="paragraph">Dans les centres de documentation, vous trouverez également des informations sur l'installation et la maintenance du matériel, des ressources de contenu supplémentaires disponibles, des liens vers les problèmes connus et les problèmes résolus, ainsi que les dernières notes de version. Les pages Ressources contiennent des liens vers des fiches techniques, des rapports techniques, des livres blancs et des vidéos.</block>
-  <block id="ad0a505756223d68dc11afeae3459351" category="inline-link">Documentation NetApp HCI</block>
-  <block id="69407a8ea5033d98b78f2bec8e414753" category="list-text"><block ref="69407a8ea5033d98b78f2bec8e414753" category="inline-link-rx"></block></block>
-  <block id="630892b254754255bd524cb995b1de04" category="inline-link">Centre de documentation SolidFire et Element 12.2</block>
-  <block id="b96d5059df63546231a635bb7440dbd4" category="list-text"><block ref="b96d5059df63546231a635bb7440dbd4" category="inline-link-rx"></block></block>
-  <block id="2a967aa6bf55d76db9823f4232586589" category="inline-link">Centre de documentation SolidFire et Element 12.0</block>
-  <block id="a19510c49f28b61467b9471fae60229b" category="list-text"><block ref="a19510c49f28b61467b9471fae60229b" category="inline-link-rx"></block></block>
-  <block id="69695b2e4c70193011d7b658125e9906" category="inline-link">Centre de documentation SolidFire et Element 11.8</block>
-  <block id="6eda8130d86d6c395a1615f6ff53c74a" category="list-text"><block ref="6eda8130d86d6c395a1615f6ff53c74a" category="inline-link-rx"></block></block>
-  <block id="cad93526483d33b276e378bc7f3deaea" category="inline-link">Centre de documentation SolidFire et Element 11.7</block>
-  <block id="a4cba27ccc43d00c0bd0c00a74974b97" category="list-text"><block ref="a4cba27ccc43d00c0bd0c00a74974b97" category="inline-link-rx"></block></block>
-  <block id="275b3db58911d0480b2a907dde87b422" category="inline-link">Centre de documentation SolidFire et Element 11.5</block>
-  <block id="319d00f06f0a5e8e99d071d51fe10259" category="list-text"><block ref="319d00f06f0a5e8e99d071d51fe10259" category="inline-link-rx"></block></block>
-  <block id="de71a625454de99f599dff258c53dbb8" category="inline-link">Page Ressources SolidFire</block>
-  <block id="b81ee69dc01cdd048b45d27758827feb" category="list-text"><block ref="b81ee69dc01cdd048b45d27758827feb" category="inline-link-rx"></block></block>
   <block id="a1f849873b24a052c89f589412d24b58" category="summary">Vous pouvez sauvegarder des snapshots SolidFire dans des magasins d'objets externes compatibles avec Amazon S3.</block>
   <block id="4aa1ed5df34629824188a7704a6c2004" category="list-text">Cliquez sur** protection des données** &gt; *snapshots*.</block>
   <block id="e7b204c0d57cfe87f0135c8ccfccd550" category="list-text">Dans la boîte de dialogue *Integrated Backup* sous *Backup to*, sélectionnez *S3*.</block>
@@ -11993,4 +11960,5 @@
   <block id="b9bbae8efe5c0f15ffba3f05d619b861" category="list-text">À partir du 2023 novembre, vous ne pouvez pas démarrer de mise à niveau de composant à l'aide de NetApp Hybrid Cloud Control ou de l'API REST, car les certificats de clé de signature (privé et public) ont expiré le 5 novembre 2023. Vous pouvez résoudre ce problème en suivant la solution de contournement décrite dans l'article de la base de connaissances<block ref="43e83b9864cac922c7475bad0e74a40f" category="inline-link-rx"></block>.</block>
   <block id="9f94ad22fed97f22703d9d145f565bfb" category="paragraph">Vous pouvez utiliser le<block ref="e7d385ef5ac889916654bf5f865952f1" prefix=" " category="inline-code"></block> méthode de retrait proactif des disques faisant partie du cluster Vous pouvez utiliser cette méthode pour réduire la capacité du cluster ou préparer le remplacement des disques presque en fin de vie.<block ref="e7d385ef5ac889916654bf5f865952f1" prefix=" " category="inline-code"></block> Crée une troisième copie des données de bloc sur les autres nœuds du cluster et attend la fin de la synchronisation avant de déplacer les disques vers la liste « disponible ». Les lecteurs de la liste « disponible » sont complètement supprimés du système et ne disposent pas de services en cours d'exécution ni de données actives.</block>
   <block id="f9beecbb3d1ea8584ca694bab8a73de7" category="sidebar">Versions de firmware prises en charge pour les nœuds de stockage</block>
+  <block id="3f42de2af50c4c43d7f7e9e5b724d437" category="paragraph">Liste des paires nom-valeur au format d'objet JSON. <block ref="65c96e1c78eaa97668865607183bf923" category="inline-link-macro-rx"></block>.</block>
 </blocks>

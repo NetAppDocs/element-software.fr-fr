@@ -84,7 +84,7 @@ Non
  a| 
 attributs
  a| 
-Attributs JSON pour la tâche de volume en bloc.
+Liste des paires nom-valeur au format d'objet JSON. link:reference_element_api_attributes.html["En savoir plus >>"].
  a| 
 Objet JSON
  a| 
