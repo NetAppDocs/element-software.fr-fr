@@ -10493,7 +10493,6 @@
   <block id="a0b278d8005f2dc2b9518ad7c52c1e27" category="list-text">*Mises à jour des services de gestion*: Vous avez mis à jour votre<block ref="f6e495ec9a99fcd5692d41358780e884" category="inline-link-rx"></block> à la dernière version. Les mises à jour du plug-in vCenter sont distribuées par le biais de mises à jour de services de gestion publiées en dehors des principales versions des produits pour le stockage 100 % Flash SolidFire de NetApp.</block>
   <block id="aac8ad795776bcaba9b87cb70791d2d1" category="list-text">*Mises à niveau des nœuds de gestion* :</block>
   <block id="4c02ebe342ea429a0d2a2a23be2ddd19" category="inline-link-macro">mise à niveau</block>
-  <block id="9163ac7fa12bb2150fecf2f1b174db4d" category="list-text">Depuis le plug-in Element vCenter 5.0, vous exécutez un nœud de gestion qui a été <block ref="23cc83378d4b0551eef4ac573737e008" category="inline-link-macro-rx"></block> à la version 12.3.x ou ultérieure.</block>
   <block id="5e3078320e7b08b85d42398585874ce3" category="list-text">Pour le plug-in Element vCenter 4.4 à 4.10, vous exécutez un nœud de gestion <block ref="23cc83378d4b0551eef4ac573737e008" category="inline-link-macro-rx"></block> à la version 11.3 ou ultérieure. Le plug-in vCenter 4.4 ou version ultérieure requiert un nœud de gestion 11.3 ou version ultérieure doté d'une architecture modulaire fournissant des services individuels. Votre nœud de gestion doit être mis sous tension avec son adresse IP ou son adresse DHCP configurée.</block>
   <block id="924861571eeb51fd5eb1d806da0f0e5e" category="list-text">*Mises à niveau du stockage Element* :</block>
   <block id="b9ad9c0000e5c2b012be9c9ba83b7cff" category="list-text">Depuis le plug-in Element vCenter 5.0, un cluster exécute le logiciel NetApp Element 12.3.x ou une version ultérieure.</block>
@@ -10508,9 +10507,7 @@
   <block id="d5fcc07cbc4a070c18d26103f54f3f58" category="list-text">Nom d'utilisateur de vCenter Administrator.</block>
   <block id="b1e24f0b2fb8f66a9c2444bf0e385f97" category="admonition">Le nom d'utilisateur et les informations d'identification du mot de passe que vous entrez doivent correspondre à un utilisateur disposant des privilèges de rôle d'administrateur vCenter.</block>
   <block id="c2611280cf76890b83743a67ac6478e2" category="list-text">Mot de passe de l'administrateur vCenter.</block>
-  <block id="1e35767408ad5bd29ecc61c301c556ef" category="list-text">Depuis le plug-in Element pour vCenter Server 5.0, une URL personnalisée pour le fichier JSON du plug-in.</block>
   <block id="b9d11c83e937a9ece9e8b7051bc68606" category="admonition">Vous pouvez sélectionner *URL personnalisée* pour personnaliser l'URL si vous utilisez un serveur HTTP ou HTTPS (site sombre) ou si vous avez modifié le nom de fichier JSON ou les paramètres réseau. Pour plus d'informations sur la configuration d'une URL, reportez-vous à la documentation du plug-in Element pour vCenter Server sur la modification des propriétés vCenter d'un serveur HTTP interne (site sombre).</block>
-  <block id="ba85baaa049f62983a89ac7da1647abd" category="list-text">Pour le plug-in Element pour vCenter Server 4.10 ou version antérieure, une URL personnalisée pour le plug-in ZIP.</block>
   <block id="daa4768416116e6634bf75e379507244" category="admonition">Vous pouvez sélectionner *URL personnalisée* pour personnaliser l'URL si vous utilisez un serveur HTTP ou HTTPS (site sombre) ou si vous avez modifié le nom de fichier ZIP ou les paramètres réseau. Pour plus d'informations sur la configuration d'une URL, reportez-vous à la documentation du plug-in Element pour vCenter Server sur la modification des propriétés vCenter d'un serveur HTTP interne (site sombre).</block>
   <block id="35165f9b14f6cde03fa7f6f9b03732ba" category="list-text">Sélectionnez *mettre à jour*.</block>
   <block id="14b68e07a69ae90b19c2bd823797ff21" category="paragraph">Une bannière apparaît dans l'interface utilisateur de l'utilitaire d'enregistrement lorsque l'enregistrement a réussi.</block>
@@ -11415,10 +11412,7 @@
   <block id="1381491a5bb8087f95db0601150c5c28" category="paragraph">Nœud de stockage BMC/IPMI séries H410 et H600</block>
   <block id="ad097a4f1c93214faa0a1ca354a82225" category="paragraph">623 UDP</block>
   <block id="483602128e75be96f5280855d8065878" category="paragraph">Port Remote Management Control Protocol. Ceci est nécessaire pour gérer les systèmes compatibles IPMI.</block>
-  <block id="1875d143de1e9be70dc9e780b41377fe" category="list-text">La page d'inscription du plug-in vCenter pour le plug-in Element pour vCenter Server 4.10 ou version antérieure :</block>
   <block id="b8b146fd1e1ecdf074536a02bfe40871" category="list-text">(Pour les serveurs internes/sites distants) selon la version du plug-in Element pour vCenter, une URL personnalisée pour le fichier JSON ou le plug-in ZIP :</block>
-  <block id="1993643c12bb4ee547f04d8d85f8c4bf" category="list-text">Depuis le plug-in Element pour vCenter Server 5.0, le point d'extension du plug-in distant NetApp Element apparaît :</block>
-  <block id="1c63b3cd9a6d3bdf8b9b31aca68672d7" category="list-text">Pour le plug-in Element pour vCenter Server 4.10 ou version antérieure, les points d'extension NetApp Element Configuration and Management apparaissent :</block>
   <block id="e9bda769b7371811c281817667bdd729" category="paragraph">^1^pour une matrice complète de firmware et de pilotes pour votre matériel, reportez-vous à la section <block ref="d11d83532a3cbdacb76bb5921c49349a" category="inline-link-macro-rx"></block>.</block>
   <block id="30517a909d76c1d4d845af0c1c57795a" category="admonition">Pour obtenir une matrice complète de micrologiciel et de micrologiciel de pilote pour votre matériel, reportez-vous à la section <block ref="d11d83532a3cbdacb76bb5921c49349a" category="inline-link-macro-rx"></block>.</block>
   <block id="0dc2c3036c99248e0e9f340a2cfc8fb1" category="summary">Versions de firmware et de pilotes prises en charge pour les nœuds de stockage.</block>
@@ -11914,7 +11908,6 @@
   <block id="badb045d93b6de2fe8d2a1a664b92d6f" category="paragraph">Cette procédure de mise à niveau couvre les scénarios de mise à niveau suivants :</block>
   <block id="61517793d4523320c7cd75e303ad36ff" category="list-text">Vous mettez à niveau vers un client Web HTML5 8.0 ou 7.0.</block>
   <block id="609cfd925544c2aaccb703dcb95eed4d" category="admonition">Lorsque vous effectuez une mise à niveau d'Element Plug-in pour vCenter Server 4.x vers 5.x, les clusters déjà configurés avec le plug-in sont perdus car les données ne peuvent pas être copiées d'une instance vCenter vers un plug-in distant. Vous devez ajouter à nouveau les clusters au plug-in distant. Il s'agit d'une activité ponctuelle lors de la mise à niveau d'un plug-in local vers un plug-in distant.</block>
-  <block id="4edf62fd94cfb84b727afbee52aa8128" category="list-text">Page d'enregistrement du plug-in vCenter pour Element Plug-in pour vCenter Server 5.x :</block>
   <block id="0ac35a688d7a23e1caba58dbbf08c4d7" category="paragraph">L'onglet *Storage* répertorie les clusters de stockage qui font partie de votre installation. Si un cluster n'est pas accessible via NetApp Hybrid Cloud Control, il ne s'affiche pas sur la page *mises à niveau*. Si vous avez des clusters exécutant Element 12.0 ou une version ultérieure, la version actuelle des packs de firmware est répertoriée pour ces clusters. Si les nœuds d'un cluster ont des versions de micrologiciel différentes ou lorsque la mise à niveau progresse, vous verrez *multiple* dans la colonne *version actuelle du bundle de micrologiciels*. Vous pouvez sélectionner *multiple* pour accéder à la page *Nodes* pour comparer les versions du micrologiciel. Si tous les clusters exécutent des versions Element avant la version 12.0, aucune information concernant les numéros de version des packs de firmware n'apparaît.</block>
   <block id="df3b4418989705f2099ec054a495c6ff" category="paragraph">Si le cluster est à jour et/ou qu'aucun package de mise à niveau n'est disponible, les onglets *Element* et *Firmware Only* ne s'affichent pas. Ces onglets ne s'affichent pas également lorsqu'une mise à niveau est en cours. Si l'onglet *Element* est affiché mais pas l'onglet *Firmware Only*, aucun progiciel de microprogramme n'est disponible.</block>
   <block id="c7f3047b6654f1cb88fcfe6e47c92593" category="cell">Cet état s'affiche lorsque l'API du service de stockage renvoie un état de mise à niveau qui ne figure pas dans la liste énumérée des États de mise à niveau possibles.</block>
@@ -11937,11 +11930,9 @@
   <block id="1e924e133c06d37b8d10cb78b719f4ce" category="paragraph"><block ref="1e924e133c06d37b8d10cb78b719f4ce" category="inline-link-macro-rx"></block></block>
   <block id="939f531b35412529043c2c302552fa24" category="list-text"><block ref="939f531b35412529043c2c302552fa24" category="inline-link-rx"></block></block>
   <block id="ce397f79b5032c3e327db3efe5a6048a" category="inline-link">Notes de version du plug-in vCenter 5.2</block>
-  <block id="4718467fa890cd0dcf159b3d461cedbe" category="list-text"><block ref="6bd87cf3d55c2ead3ab585e965bea4db" category="inline-link-rx"></block> _NOUVEAU_</block>
   <block id="410ecb079e286058eeb2bc6b56d9379c" category="list-text"><block ref="410ecb079e286058eeb2bc6b56d9379c" category="inline-link-rx"></block></block>
   <block id="faf6c38631911f7840c3498b4ec9f746" category="inline-link-macro">Avis concernant les services de gestion 2.24.40 (plug-in NetApp Element pour VMware vCenter Server 5.2.12)</block>
   <block id="db3a980db6ffcc2055052c6c4a453020" category="list-text"><block ref="db3a980db6ffcc2055052c6c4a453020" category="inline-link-macro-rx"></block></block>
-  <block id="eea7cb3a63edf642e1f15162351dfce7" category="list-text">Vous effectuez une mise à niveau vers Element Plug-in pour vCenter Server 5.2, 5.1 ou 5.0.</block>
   <block id="c9c6a2f6fa07c1f8c580586914c37e79" category="image-alt">Décrit les points d'extension du plug-in après une mise à niveau ou une installation réussie pour Element Plug-in 5.1 ou version ultérieure</block>
   <block id="f35f89119a6374d18bd89e0103590c61" category="image-alt">Décrit les points d'extension du plug-in après une mise à niveau ou une installation réussie pour Element Plug-in 4.10 ou version antérieure</block>
   <block id="1583ff28675a9e24a50fa1079a5dd985" category="paragraph"><block ref="43638993383f845bcd8925bd4e266bc9" prefix="" category="inline-code"></block></block>
@@ -11965,4 +11956,16 @@
   <block id="33e725144c3cab7870356fc4239ecbe1" category="paragraph">La panne bloque une mise à niveau. Valeurs possibles :</block>
   <block id="590996f1f1dee9768eb0e638aefabed3" category="list-text">True : la panne bloque une mise à niveau.</block>
   <block id="79acae02e5f768f11852bf8bab56f648" category="list-text">FALSE : la panne ne bloque pas une mise à niveau.</block>
+  <block id="976b368b923346c8ea4ccc71e72749f5" category="inline-link-macro">Avis concernant les services de gestion 2.25.42 (plug-in NetApp Element pour VMware vCenter Server 5.3.9)</block>
+  <block id="4d67cefe38dafa645f353279e4fbc37b" category="list-text"><block ref="4d67cefe38dafa645f353279e4fbc37b" category="inline-link-macro-rx"></block></block>
+  <block id="d3c4a89052a32dd9783dd119f30d6d47" category="inline-link">Notes de version du plug-in vCenter 5.3</block>
+  <block id="0c21440ced3ddae10d1eea32870fdf02" category="list-text"><block ref="ce90fd614158a5c7e0a42a5908fa1cd7" category="inline-link-rx"></block> _NOUVEAU_</block>
+  <block id="6bd87cf3d55c2ead3ab585e965bea4db" category="list-text"><block ref="6bd87cf3d55c2ead3ab585e965bea4db" category="inline-link-rx"></block></block>
+  <block id="bef71f962ff7a233f3e8439eeb8dac70" category="list-text">Vous effectuez une mise à niveau vers Element Plug-in pour vCenter Server 5.3, 5.2, 5.1 ou 5.0.</block>
+  <block id="1b72ac6198c042d0bd992d1bb6e9d9bd" category="paragraph">Vous exécutez un nœud de gestion qui a été <block ref="23cc83378d4b0551eef4ac573737e008" category="inline-link-macro-rx"></block> à la version 12.3.x ou ultérieure.</block>
+  <block id="98e5a822cb59ab0389d49ffe93acad7a" category="paragraph">La page enregistrement du plug-in vCenter s'affiche :</block>
+  <block id="dfc8b4f16eed3f1e78f9b406c473dd25" category="paragraph">Une URL personnalisée pour le fichier JSON de plug-in.</block>
+  <block id="bfb37ae14420b32b4119e40e73553257" category="paragraph">Une URL personnalisée pour le plug-in ZIP.</block>
+  <block id="8e0d59cc781c5557d1fdc81fdff04d8f" category="paragraph">Le point d'extension du plug-in distant NetApp Element s'affiche :</block>
+  <block id="5770384eddfc0ac7f73f0f6242a52b50" category="paragraph">Les points d'extension Configuration et gestion de NetApp Element apparaissent :</block>
 </blocks>
