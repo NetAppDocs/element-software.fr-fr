@@ -24,6 +24,19 @@ Cet objet contient les membres suivants :
 
 
  a| 
+Surclassement de pâtés de maisonsBoutiques
+ a| 
+La panne bloque une mise à niveau. Valeurs possibles :
+
+* True : la panne bloque une mise à niveau.
+* FALSE : la panne ne bloque pas une mise à niveau.
+
+ a| 
+booléen
+
+
+
+ a| 
 ClusterFaultID
  a| 
 ID unique associé à chaque panne du cluster.
