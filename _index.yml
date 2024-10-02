@@ -1,6 +1,6 @@
 ---
 indexpage:
-  title: Documentation SolidFire et Element
+  title: Documentation des logiciels SolidFire et Element 12.7
   summary: Un système de stockage 100 % Flash SolidFire comprend des composants matériels,
     tels que des disques et des nœuds, qui sont combinés dans un pool de ressources
     de stockage. En tant que système de stockage unique, ce cluster unifié est géré
@@ -11,7 +11,7 @@ indexpage:
     tels que des disques et des nœuds, qui sont combinés dans un pool de ressources
     de stockage. En utilisant l'interface Element, l'API ou d'autres outils de gestion,
     vous pouvez gérer ces clusters de ressources de stockage avec le logiciel NetApp
-    Element. Ce site contient la documentation du logiciel Element 12.5 et 12.7.
+    Element. Ce site contient la documentation du logiciel Element.
   tiles:
   - title: Commencez
     links:
@@ -86,6 +86,8 @@ indexpage:
       url: https://mysupport.netapp.com/site/products/all/details/element-software/guideme-tab
   - title: Versions antérieures
     links:
+    - title: Documentation relative à l'élément 12.5
+      url: https://docs.netapp.com/us-en/element-software-125/index.html
     - title: Documentation Element 12.3.x.
       url: https://docs.netapp.com/us-en/element-software-123/index.html
     - title: Documentation relative à l'élément 12.2.1
