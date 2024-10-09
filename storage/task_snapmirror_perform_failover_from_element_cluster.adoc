@@ -1,7 +1,7 @@
 ---
 permalink: storage/task_snapmirror_perform_failover_from_element_cluster.html 
 sidebar: sidebar 
-keywords: failover, cluster, perform a failover, snapmirror 
+keywords: element, ui, failover, cluster, perform a failover, snapmirror 
 summary: 'Vous pouvez effectuer un basculement depuis le cluster Element pour rendre le volume de destination accessible en lecture/écriture et aux hôtes côté destination. Avant d"effectuer un basculement à partir du cluster Element, vous devez interrompre la relation SnapMirror.' 
 ---
 = Effectuer un basculement à partir d'un cluster Element

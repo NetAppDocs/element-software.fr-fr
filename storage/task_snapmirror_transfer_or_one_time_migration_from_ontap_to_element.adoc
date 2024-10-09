@@ -1,7 +1,7 @@
 ---
 permalink: storage/task_snapmirror_transfer_or_one_time_migration_from_ontap_to_element.html 
 sidebar: sidebar 
-keywords: transfer, perform, source volume, snapmirror, dr, disaster recovery, one-time migration 
+keywords: element, ui, transfer, perform, source, volume, snapmirror, dr, disaster, recovery, one-time, migration 
 summary: 'En général, lorsque vous utilisez SnapMirror pour la reprise d"activité à partir d"un cluster de stockage SolidFire exécutant le logiciel NetApp Element vers le logiciel ONTAP, Element est la source et ONTAP, destination. Cependant, dans certains cas, le système de stockage ONTAP peut servir de source et d"élément comme destination.' 
 ---
 = Effectuez un transfert ou une migration ponctuelle de ONTAP vers Element

@@ -1,0 +1,25 @@
+---
+permalink: storage/task-element-replication-create-snapmirror-endpoint.html 
+sidebar: sidebar 
+keywords: ontap, cli, create, snapmirror, endpoint 
+summary: 'Vous devez créer un terminal SnapMirror avant de pouvoir créer une relation de réplication. Vous ne pouvez effectuer cette tâche que dans l"interface utilisateur Web du logiciel Element ou à l"aide des méthodes de l"API.' 
+---
+= Créer un terminal SnapMirror
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez créer un terminal SnapMirror avant de pouvoir créer une relation de réplication. Vous ne pouvez effectuer cette tâche que dans l'interface utilisateur Web du logiciel Element ou à l'aide de link:../api/concept_element_api_snapmirror_api_methods.html["Méthodes d'API SnapMirror"].
+
+.Avant de commencer
+Vous devez avoir activé SnapMirror sur le cluster Element.
+
+.Étapes
+. Cliquez sur *Data protection* > *SnapMirror Endpoints*.
+. Cliquez sur *Créer un point final*.
+. Dans la boîte de dialogue *Créer un nouveau point final*, entrez l'adresse IP de gestion du cluster ONTAP.
+. Entrez l'ID utilisateur et le mot de passe de l'administrateur du cluster ONTAP.
+. Cliquez sur *Créer un point final*.
+

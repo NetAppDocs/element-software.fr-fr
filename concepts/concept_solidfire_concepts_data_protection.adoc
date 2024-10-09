@@ -105,7 +105,7 @@ Les systèmes exécutant Element 10.1 et versions ultérieures intègrent un cod
 
 À partir des systèmes Element 10.3 et ONTAP 9.4, vous pouvez répliquer des volumes ONTAP émis vers des volumes Element dans des cas d'utilisation spécifiques, avec une fonctionnalité limitée.
 
-Pour plus d'informations, consultez la documentation ONTAP.
+Pour plus d'informations, voir link:../storage/element-replication-index.html["Réplication entre le logiciel NetApp Element et ONTAP (interface de ligne de commande ONTAP)"].
 
 
 

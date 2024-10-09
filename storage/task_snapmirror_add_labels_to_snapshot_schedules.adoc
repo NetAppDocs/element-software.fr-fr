@@ -1,7 +1,7 @@
 ---
 permalink: storage/task_snapmirror_add_labels_to_snapshot_schedules.html 
 sidebar: sidebar 
-keywords: snapmirror labels, add labels to snapshot schedules, snapmirror policies 
+keywords: element, ui, snapmirror, labels, schedules, policies 
 summary: 'Vous pouvez ajouter des étiquettes SnapMirror aux planifications Snapshot afin de vous assurer qu"une règle SnapMirror est appliquée. Vous pouvez afficher les étiquettes disponibles dans la boîte de dialogue correspondante ou dans NetAppONTAP System Manager.' 
 ---
 = Ajoutez des étiquettes SnapMirror aux planifications de snapshots

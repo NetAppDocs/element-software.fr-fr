@@ -1,7 +1,7 @@
 ---
 permalink: storage/task_snapmirror_enable_on_the_cluster.html 
 sidebar: sidebar 
-keywords: snapmirror, enable, cluster, ui, manually enable 
+keywords: element, snapmirror, enable, cluster, ui, manually enable 
 summary: 'Vous devez activer manuellement la fonctionnalité SnapMirror au niveau du cluster via l"interface utilisateur NetApp Element. Le système est fourni avec la fonctionnalité SnapMirror désactivée par défaut, qui n"est pas automatiquement activé dans le cadre d"une nouvelle installation ou mise à niveau. L"activation de la fonctionnalité SnapMirror est une tâche de configuration ponctuelle.' 
 ---
 = Activation de SnapMirror sur le cluster
