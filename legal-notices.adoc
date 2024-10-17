@@ -65,6 +65,7 @@ Les fichiers de notification fournissent des informations sur les droits d'auteu
 * link:./media/mgmt-216.pdf["Avis concernant les services de gestion 2.16 (plug-in NetApp Element pour vCenter Server 4.6.29)"^]
 * link:./media/mgmt-214.pdf["Avis concernant les services de gestion 2.14 (plug-in NetApp Element pour vCenter Server 4.5.42)"^]
 * link:./media/mgmt-213.pdf["Avis concernant les services de gestion 2.13 (plug-in NetApp Element pour vCenter Server 4.5.42)"^]
+* link:./media/storage_firmware_bundle_2.182.0_notices.pdf["Avis concernant le pack de micrologiciels de stockage 2.182.0"^]
 * link:./media/storage_firmware_bundle_2.175.0_notices.pdf["Avis concernant le pack de micrologiciels de stockage 2.175.0"^]
 * link:./media/storage_firmware_bundle_2.164.0_notices.pdf["Remarque concernant le pack de microprogramme de stockage 2.164.0"^]
 * link:./media/storage_firmware_bundle_2.150_notices.pdf["Remarque concernant le pack de microprogramme de stockage 2.150"^]
