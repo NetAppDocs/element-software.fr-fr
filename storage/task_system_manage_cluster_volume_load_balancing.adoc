@@ -1,0 +1,43 @@
+---
+permalink: storage/task_system_manage_cluster_volume_load_balancing.html 
+sidebar: sidebar 
+keywords: cluster, volume, volumes, load, balancing, actual, IOPS 
+summary: 'À partir de la version Element 12.8, vous pouvez activer l"équilibrage de la charge de volume afin d"équilibrer les volumes entre les nœuds en fonction des IOPS réelles de chaque volume au lieu des IOPS minimales configurées dans la règle de qualité de service.' 
+---
+= Activer et désactiver l'équilibrage de la charge des volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+À partir de la version Element 12.8, vous pouvez utiliser l'équilibrage de la charge des volumes pour équilibrer les volumes entre les nœuds en fonction des IOPS réelles de chaque volume, au lieu des IOPS minimales configurées dans la règle de qualité de service. Vous pouvez activer et désactiver l'équilibrage de la charge des volumes, qui est désactivé par défaut, à l'aide de l'interface utilisateur ou de l'API d'Element.
+
+.Étapes
+. Sélectionnez *Cluster* > *Paramètres*.
+. Dans la section Cluster Specific, modifier l'état de Volume Load Balancing :
++
+[role="tabbed-block"]
+====
+.Activer l'équilibrage de la charge des volumes
+--
+Sélectionnez *Activer l'équilibrage de charge sur les IOPS réelles* et confirmez votre sélection.
+
+--
+.Désactiver l'équilibrage de la charge des volumes :
+--
+Sélectionnez *Désactiver l'équilibrage de charge sur les IOPS réelles* et confirmez votre sélection.
+
+--
+====
+. Si vous le souhaitez, sélectionnez *Rapports* > *Présentation* pour confirmer le changement d'état du solde sur les IOPS réelles. Vous devrez peut-être faire défiler les informations d'intégrité du cluster pour afficher son état.
+
+
+
+
+== Trouvez plus d'informations
+
+* link:../api/reference_element_api_enablefeature.html["Activez l'équilibrage de la charge des volumes à l'aide de l'API"]
+* https://docs.netapp.com/us-en/element-software/api/reference_element_api_disablefeature.html["Désactivez l'équilibrage de la charge des volumes à l'aide de l'API"]
+* link:../hccstorage/task-hcc-qos-policies.html["Création et gestion de règles de QoS pour les volumes"]
+

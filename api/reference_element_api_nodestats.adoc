@@ -123,6 +123,21 @@ entier
 
 
  a| 
+NodeHeat
+ a| 
+Informations sur l'utilisation des nœuds. Disponible à partir de Element 12.8. Membres :
+
+* Primaires TotalHeat : le nombre total d'IOPS par nœud configuré pour le système primaire est en moyenne supérieur à 24 heures
+* RecentPrimaryTotalHeat : nombre moyen d'IOPS totales du nœud principal par rapport aux IOPS configurées du nœud sur une heure
+* RecentTotalHeat : nombre moyen d'IOPS par nœud configuré sur une heure
+* TotalHeat : le nombre total d'IOPS par nœud configuré en moyenne sur 24 heures
+
+ a| 
+Objet JSON
+
+
+
+ a| 
 ReadLatcyUSecTotal
  a| 
 Valeur de la durée totale passée à effectuer des opérations de lecture sur le nœud par monotoniquement accrue.

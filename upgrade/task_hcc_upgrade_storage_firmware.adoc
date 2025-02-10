@@ -60,7 +60,12 @@ NOTE: Pour obtenir une matrice complète de micrologiciel et de micrologiciel de
 ^2^si vous combinez un cluster avec une charge d'opérations d'E/S par seconde en écriture élevée et une durée de mise à jour du micrologiciel plus longue, le temps de synchronisation des données augmente.
 
 +
-^3^à partir de l'élément 12.7, les nœuds de stockage SF2405 et SF9608 ainsi que les nœuds FC FC0025 et SF-FCN-01 ne sont pas pris en charge. Si vous tentez de mettre à niveau un de ces nœuds vers Element 12.7, une erreur s'affiche, indiquant que ce nœud n'est pas pris en charge par Element 12.7.
+^3^ les nœuds suivants ne sont pas pris en charge. Si vous tentez de mettre à niveau l'un de ces nœuds vers une version d'élément non prise en charge, une erreur s'affiche indiquant que le nœud n'est pas pris en charge par l'élément 12.x :
+
++
+** À partir des nœuds de stockage Element 12.8, SF4805, SF9605, SF19210 et SF38410.
+** À partir des nœuds de stockage Element 12.7, SF2405 et SF9608, ainsi que des nœuds FC FC0025 et SF-FCN-01.
+
 
 * *Contrat de licence utilisateur final (CLUF)* : à partir des services de gestion 2.20.69, vous devez accepter et enregistrer le CLUF avant d'utiliser l'interface utilisateur ou l'API de contrôle du cloud hybride NetApp pour mettre à niveau le micrologiciel de stockage :
 +

@@ -24,6 +24,15 @@ En fonction de votre version du logiciel Element, les nœuds de stockage SF-Seri
 | À commencer par... | Nœud de stockage non pris en charge... 
 
 
+| Élément 12.8  a| 
+* SF4805
+* SF9605
+* SF19210
+* SF38410
+
+
+
+
 | Élément 12.7  a| 
 * SF2405
 * SF9608
@@ -38,4 +47,4 @@ En fonction de votre version du logiciel Element, les nœuds de stockage SF-Seri
 
 
 |===
-Si vous tentez de mettre à niveau un de ces nœuds vers une version d'élément non prise en charge, une erreur s'affiche, indiquant que ce nœud n'est pas pris en charge par Element 12.x.
+Si vous tentez de mettre à niveau l'un de ces nœuds vers une version d'élément non prise en charge, une erreur s'affiche indiquant que le nœud n'est pas pris en charge par l'élément 12.x.

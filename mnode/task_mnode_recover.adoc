@@ -115,7 +115,7 @@ NOTE: Si vous avez besoin d'une carte réseau supplémentaire pour isoler le tra
 
 == Configurer la synchronisation de l'heure
 
-. Assurez-vous que le temps est synchronisé entre le nœud de gestion et le cluster de stockage à l'aide de NTP :
+. Vérifier que l'heure est synchronisée entre le nœud de gestion et le cluster de stockage à l'aide du protocole NTP :
 
 
 

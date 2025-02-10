@@ -1,0 +1,90 @@
+---
+permalink: api/reference_element_api_disablefeature.html 
+sidebar: sidebar 
+keywords: SNMP,disable,disabling,DisableFeature,vvols,virtual volumes 
+summary: Vous pouvez utiliser la méthode DisableFeature pour désactiver VolumeLoadBalanceOnActualIOPS. 
+---
+= DisableFeature
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser la `DisableFeature` méthode pour désactiver la `VolumeLoadBalanceOnActualIOPS` fonction. `VolumeLoadBalanceOnActualIOPS` est désactivé par défaut.
+
+[NOTE]
+====
+Si vous tentez de désactiver une autre fonctionnalité, telle que les VVol, le message d'erreur suivant s'affiche :
+
+[listing]
+----
+{"error":{"code":500,"message":"VolumeLoadBalanceOnActualIOPS is the only feature that can be disabled","name":"xAPINotPermitted"},"id":null}
+----
+====
+
+
+== Paramètre
+
+Cette méthode possède le paramètre d'entrée suivant.
+
+[cols="1a,3a,1a,1a,1a"]
+|===
+| Nom | Description | Type | Valeur par défaut | Obligatoire 
+
+
+ a| 
+fonction
+ a| 
+Désactiver une fonction de cluster. Valeur possible :
+
+* `VolumeLoadBalanceOnActualIOPS`: Désactivez l'équilibrage des tranches sur les IOPS réelles plutôt que sur les IOPS min.
+
+ a| 
+chaîne
+ a| 
+Aucune
+ a| 
+Oui.
+
+|===
+
+
+== Retour de valeur
+
+Cette méthode n'a pas de valeurs de retour.
+
+
+
+== Exemple de demande
+
+Les demandes pour cette méthode sont similaires à l'exemple suivant :
+
+[listing]
+----
+{
+  "method": "DisableFeature",
+    "params": {
+        "feature" : "VolumeLoadBalanceOnActualIOPS"
+    },
+    "id": 1
+}
+----
+
+
+== Exemple de réponse
+
+Cette méthode renvoie une réponse similaire à l'exemple suivant :
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {}
+}
+----
+
+
+== Nouveau depuis la version
+
+12,8

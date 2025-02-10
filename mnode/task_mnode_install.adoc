@@ -18,7 +18,7 @@ Vous pouvez installer manuellement le nœud de gestion de votre cluster exécuta
 
 Ce processus manuel est destiné aux administrateurs du stockage 100 % Flash SolidFire qui n'utilisent pas le moteur de déploiement NetApp pour l'installation d'un nœud de gestion.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * Votre version du cluster exécute NetApp Element 11.3 ou une version ultérieure.
 * Votre installation utilise IPv4. Le nœud de gestion 11.3 ne prend pas en charge IPv6.
 +
@@ -53,21 +53,15 @@ NOTE: Si vous devez prendre en charge IPv6, vous pouvez utiliser le nœud de ges
 .Description de la tâche
 Le nœud de gestion Element 12.2 est une mise à niveau optionnelle. Elle n'est pas requise pour les déploiements existants.
 
-Avant de suivre cette procédure, vous devez comprendre link:../concepts/concept_solidfire_concepts_volumes.html#persistent-volumes["Volumes persistants"] et si vous voulez ou non les utiliser. Les volumes persistants sont facultatifs mais recommandés pour la restauration des données de configuration du nœud de gestion en cas de perte de machine virtuelle.
-
-.Étapes
-. <<Téléchargez ISO ou OVA et déployez la VM>>
-. <<create_mnode_admin,Créez le noeud de gestion admin et configurez le réseau>>
-. <<Configurer la synchronisation de l'heure>>
-. <<Configurez le nœud de gestion>>
-. <<Configurer les actifs du contrôleur>>
+Avant de suivre cette procédure, vous devez comprendre link:../concepts/concept_solidfire_concepts_volumes.html#persistent-volumes["Volumes persistants"]et savoir si vous voulez les utiliser ou non. Les volumes persistants sont facultatifs mais recommandés pour la restauration des données de configuration du nœud de gestion en cas de perte de machine virtuelle.
 
 
 
+== Étape 1 : télécharger ISO ou OVA et déployer la machine virtuelle
 
-== Téléchargez ISO ou OVA et déployez la VM
+Télécharger la version ISO ou OVA appropriée depuis le site de support NetApp et installer la machine virtuelle.
 
-. Téléchargez le fichier OVA ou ISO pour votre installation sur le link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["Logiciel Element"^] Sur le site de support NetApp.
+. Téléchargez la certification OVA ou ISO pour votre installation depuis la link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["Logiciel Element"^] page du site de support NetApp. La nouvelle OVA contient un certificat SSL mis à jour.
 +
 .. Sélectionnez *Télécharger la dernière version* et acceptez le CLUF.
 .. Sélectionnez l'image du nœud de gestion à télécharger.
@@ -111,8 +105,11 @@ NOTE: L'installation d'un nœud de gestion à l'aide de l'image peut entraîner 
 
 
 
-== Créez le noeud de gestion admin et configurez le réseau
+== Étape 2 : création du noeud de gestion admin et configuration du réseau
 
+Une fois l'installation de la machine virtuelle terminée, créez l'utilisateur admin du nœud de gestion et configurez le réseau du nœud de gestion.
+
+.Étapes
 . À l'aide de l'interface utilisateur du terminal (TUI), créez un utilisateur d'administrateur de nœud de gestion.
 +
 
@@ -139,9 +136,12 @@ NOTE: Si vous avez besoin d'une carte réseau supplémentaire pour isoler le tra
 
 
 
-== Configurer la synchronisation de l'heure
+== Étape 3 : configurer la synchronisation de l'heure
 
-. Assurez-vous que le temps est synchronisé entre le nœud de gestion et le cluster de stockage à l'aide de NTP :
+Avant de configurer le nœud de gestion, synchronisez l'heure entre le nœud de gestion et le cluster de stockage.
+
+.Étapes
+. Vérifier que l'heure est synchronisée entre le nœud de gestion et le cluster de stockage à l'aide du protocole NTP :
 
 
 
@@ -216,8 +216,11 @@ NOTE: Ne modifiez pas le NTP après avoir terminé la configuration de synchroni
 
 
 
-== Configurez le nœud de gestion
+== Étape 4 : configuration du nœud de gestion
 
+Configurez le nœud de gestion à l'aide de la `setup-mnode` commande.
+
+.Étapes
 . Configurez et exécutez la commande de configuration du nœud de gestion :
 +
 
@@ -279,8 +282,11 @@ NOTE: Utilisez un nom de compte unique pour les volumes persistants différent d
 
 
 
-== Configurer les actifs du contrôleur
+== Étape 5 : configuration des ressources du contrôleur
 
+Recherchez l'ID d'installation et ajoutez une ressource de contrôleur vCenter.
+
+.Étapes
 . Identifiez l'ID d'installation :
 +
 .. Dans un navigateur, connectez-vous à l'interface de l'API REST du nœud de gestion :
@@ -336,7 +342,8 @@ NOTE: Vous devez créer un nouveau rôle NetApp HCC dans vCenter pour ajouter un
 
 
 
-[discrete]
+
+
 == En savoir plus
 
 * link:../concepts/concept_solidfire_concepts_volumes.html#persistent-volumes["Volumes persistants"]

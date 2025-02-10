@@ -53,6 +53,8 @@ entries:
       url: "/storage/task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.html"
     - title: Définissez le seuil maximal du cluster
       url: "/storage/task_system_manage_cluster_set_the_cluster_full_threshold.html"
+    - title: Activer et désactiver l'équilibrage de la charge des volumes
+      url: "/storage/task_system_manage_cluster_volume_load_balancing.html"
     - title: Activez et désactivez l'accès au support
       url: "/storage/task_system_manage_cluster_enable_and_disable_support_access.html"
     - title: Gérez la bannière Conditions d'utilisation

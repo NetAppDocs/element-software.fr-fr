@@ -19,6 +19,7 @@ Vous pouvez configurer des paramètres tels que le seuil de remplissage du clust
 * xref:concept_data_manage_vvol_work_virtual_volumes.adoc[Utilisation des volumes virtuels]
 * xref:task_snapmirror_use_replication_between_element_and_ontap_clusters.adoc[Utilisez la réplication SnapMirror entre les clusters Element et ONTAP]
 * xref:task_system_manage_cluster_set_the_cluster_full_threshold.adoc[Définissez le seuil maximal du cluster]
+* xref:task_system_manage_cluster_volume_load_balancing.adoc[Activer et désactiver l'équilibrage de la charge des volumes]
 * xref:task_system_manage_cluster_enable_and_disable_support_access.adoc[Activez et désactivez l'accès au support]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Flash_Storage/SF_Series/How_are_the_blockSpace_thresholds_calculated_for_Element["Comment les seuils de blocage d'espace sont-ils calculés pour l'élément"]
 * xref:task_system_manage_cluster_enable_and_disable_encryption_for_a_cluster.adoc[Activez et désactivez le cryptage pour un cluster]
@@ -27,8 +28,8 @@ Vous pouvez configurer des paramètres tels que le seuil de remplissage du clust
 * xref:concept_system_manage_snmp_manage_snmp.adoc[Gérer SNMP]
 * xref:concept_system_manage_drives_managing_drives.adoc[Gérer les disques]
 * xref:concept_system_manage_nodes_manage_nodes.adoc[Gérer des nœuds]
-* xref:concept_system_manage_virtual_manage_virtual_networks.adoc[Gérer des réseaux virtuels]
 * xref:task_system_manage_fc_view_fibre_channel_ports_details.adoc[Afficher les détails des ports Fibre Channel]
+* xref:concept_system_manage_virtual_manage_virtual_networks.adoc[Gérer des réseaux virtuels]
 
 
 

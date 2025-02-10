@@ -42,8 +42,9 @@ Les instructions de ce document s'appliquent si vous disposez d'un châssis à u
 
 [NOTE]
 ====
-Les nœuds suivants ne sont pas pris en charge en fonction de la version du logiciel Element :
+Selon la version du logiciel Element, les nœuds suivants ne sont pas pris en charge :
 
+* À partir des nœuds de stockage Element 12.8, SF4805, SF9605, SF19210 et SF38410.
 * À partir des nœuds de stockage Element 12.7, SF2405 et SF9608, ainsi que des nœuds FC FC0025 et SF-FCN-01.
 * À partir des nœuds de stockage Element 12.0, SF3010, SF6010 et SF9010.
 

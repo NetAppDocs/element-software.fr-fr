@@ -20,8 +20,16 @@ Parmi ces composants : services de gestion, NetApp Hybrid Cloud Control, logicie
 
 [NOTE]
 ====
-* À partir du 2023 novembre, vous ne pouvez pas démarrer de mise à niveau de composant à l'aide de NetApp Hybrid Cloud Control ou de l'API REST, car les certificats de clé de signature (privé et public) ont expiré le 5 novembre 2023. Vous pouvez résoudre ce problème en suivant la solution de contournement décrite dans l'article de la base de connaissances https://kb.netapp.com/onprem/solidfire/Element_OS/SolidFire_and_HCI_upgrades_unable_to_start_due_to_upgrade_package_upload_error["Les mises à niveau de SolidFire et de HCI ne peuvent pas démarrer en raison d'une erreur de téléchargement du pack de mise à niveau"^].
-* À partir de l'élément 12.7, les nœuds de stockage SF2405 et SF9608, ainsi que les nœuds FC FC0025 et SF-FCN-01 ne sont pas pris en charge. Si vous tentez de mettre à niveau un de ces nœuds vers Element 12.7, une erreur s'affiche, indiquant que ce nœud n'est pas pris en charge par Element 12.7.
+* Depuis le 2023 novembre, vous ne pouvez pas démarrer de mise à niveau de composant avec NetApp Hybrid Cloud Control ou l'API REST, car les certificats de clé de signature (privé et public) ont expiré le 5 novembre 2023. Pour contourner ce problème, vous pouvez link:task_hcc_upgrade_management_node.html["mise à niveau du nœud de gestion sans déplacement des données"]passer à la version 12.8 avant d'utiliser le logiciel NetApp de contrôle du cloud hybride ou l'API REST pour mettre à niveau les services de gestion, le logiciel Element et le firmware de stockage.
++
+Si vous déployez un nouveau nœud de gestion avec la version 12.8, vous pouvez utiliser le contrôle du cloud hybride NetApp ou l'API REST pour effectuer les mises à niveau des composants dans l'ordre indiqué dans la <<sys_upgrade,séquence de mise à niveau du système>>.
+
+* Les nœuds suivants ne sont pas pris en charge. Si vous tentez de mettre à niveau l'un de ces nœuds vers une version d'élément non prise en charge, une erreur s'affiche indiquant que le nœud n'est pas pris en charge par l'élément 12.x :
++
+** À partir des nœuds de stockage Element 12.8, SF4805, SF9605, SF19210 et SF38410.
+** À partir des nœuds de stockage Element 12.7, SF2405 et SF9608, ainsi que des nœuds FC FC0025 et SF-FCN-01.
+
+
 * Depuis Element 12.5, NetApp HealthTools n'est plus pris en charge pour les mises à niveau du logiciel Element. Si vous exécutez Element 11.0 ou 11.1, vous devez d'abord https://docs.netapp.com/us-en/element-software-123/upgrade/task_hcc_upgrade_element_software.html#upgrade-element-software-at-connected-sites-using-healthtools["Effectuez la mise à niveau vers Element 12.3 à l'aide de HealthTools"^] Puis mettez à niveau vers Element 12.5 ou version ultérieure avec NetApp Hybrid Cloud Control.
 
 
@@ -30,7 +38,7 @@ Le <<sys_upgrade,séquence de mise à niveau du système>> Nous décrivons dans 
 
 Le link:task_sf_upgrade_all_vsphere.html["Séquence de mise à niveau de vSphere"] L'ajout du contenu du plug-in Element pour vCenter Server décrit les étapes supplémentaires requises pour la préinstallation et la post-mise à niveau pour vCenter Server.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * Vous exécutez le nœud de gestion 11.3 ou version ultérieure. Les dernières versions du nœud de gestion disposent d'une architecture modulaire qui fournit des services individuels.
 +
 

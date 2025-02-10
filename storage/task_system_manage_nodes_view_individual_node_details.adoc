@@ -21,7 +21,6 @@ Vous pouvez afficher les détails de chaque nœud, notamment les balises de serv
 +
 ** *ID de nœud* : ID généré par le système pour le nœud.
 ** *Nom de noeud* : nom d'hôte du noeud.
-** *4K IOPS* disponibles : le nombre d'IOPS configuré pour le nœud.
 ** *Rôle de nœud* : rôle dont dispose le nœud dans le cluster. Valeurs possibles :
 +
 *** Cluster Master : nœud qui effectue des tâches administratives à l'échelle du cluster et qui contient MVIP et SVIP.
@@ -31,6 +30,7 @@ Vous pouvez afficher les détails de chaque nœud, notamment les balises de serv
 
 ** *Type de nœud* : type de modèle du nœud.
 ** *Disques actifs* : nombre de disques actifs dans le nœud.
+** *Utilisation des nœuds* : pourcentage d'utilisation des nœuds basé sur nodeHeat. La valeur affichée est recentPrimaryTotalHeat en pourcentage. Disponible à partir de Element 12.8.
 ** *IP de gestion* : adresse IP de gestion (MIP) attribuée au nœud pour les tâches d'administration réseau 1 GbE ou 10 GbE.
 ** *IP du cluster* : adresse IP du cluster (CIP) attribuée au nœud utilisé pour la communication entre les nœuds du même cluster.
 ** *Adresse IP de stockage* : adresse IP de stockage (SIP) attribuée au nœud utilisé pour la découverte du réseau iSCSI et tout le trafic du réseau de données.
@@ -39,6 +39,7 @@ Vous pouvez afficher les détails de chaque nœud, notamment les balises de serv
 ** *Version* : la version du logiciel s'exécutant sur chaque nœud.
 ** *Port de réplication* : port utilisé sur les nœuds pour la réplication à distance.
 ** *Service Tag* : numéro de numéro de service unique attribué au nœud.
+** *Domaine de protection personnalisé* : domaine de protection personnalisé affecté au nœud.
 
 
 
