@@ -99,17 +99,6 @@ entier
 
 
  a| 
-Utilisation des clusters
- a| 
-Capacité du cluster utilisée.
- a| 
-S/O
- a| 
-flottement
-
-
-
- a| 
 DdesiredMetadahods
  a| 
 Les services de métadonnées (tranche) transférés vers si les métadonnées du volume sont migrées entre les services de métadonnées. Une valeur « null » signifie que le volume n'effectue pas la migration.
@@ -144,6 +133,17 @@ Services de métadonnées (tranche) sur lesquels se trouvent les métadonnées d
 S/O
  a| 
 Objet JSON
+
+
+
+ a| 
+IOPS normales
+ a| 
+Nombre moyen d'IOPS pour l'ensemble du cluster au cours des 500 dernières millisecondes.
+ a| 
+Point dans le temps
+ a| 
+entier
 
 
 

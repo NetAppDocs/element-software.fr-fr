@@ -114,8 +114,8 @@ entier
 État de l'opération. Valeurs possibles :
 
 * préparation
-* actif
-* l'a fait
+* exécution
+* Terminé
 * échec
 
  a| 

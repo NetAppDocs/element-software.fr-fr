@@ -30,7 +30,7 @@ Blocs PerDeuxièmement
  a| 
 Le nombre de blocs de données transférés par seconde du cluster source vers le cluster cible. Présent uniquement si le membre de type est défini sur distant.
  a| 
-flottement
+entier
 
 
 
@@ -97,7 +97,7 @@ SedTime
  a| 
 Temps écoulé, en secondes, depuis le démarrage de la tâche de synchronisation.
  a| 
-flottement
+flottant ou entier en fonction du type d'opération de synchronisation
 
 
 
@@ -124,7 +124,7 @@ Pourcentage complet
  a| 
 Pourcentage d'achèvement de la tâche de synchronisation.
  a| 
-entier
+flottant ou entier en fonction du type d'opération de synchronisation
 
 
 
@@ -133,7 +133,7 @@ RemainingTime
  a| 
 Temps estimé, en secondes, pour terminer l'opération.
  a| 
-entier
+flottement
 
 
 

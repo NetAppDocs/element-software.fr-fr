@@ -51,6 +51,15 @@ entier
 
 
  a| 
+IosInProgress
+ a| 
+Nombre d'E/S en cours sur ce lecteur.
+ a| 
+entier
+
+
+
+ a| 
 VieRemainingPercent
  a| 
 Indicateur d'usure du support d'entraînement.
@@ -87,9 +96,36 @@ entier
 
 
  a| 
+lectures
+ a| 
+Nombre d'appels de lecture () par seconde vers ce lecteur.
+ a| 
+entier
+
+
+
+ a| 
 Octets
  a| 
 Nombre total d'octets lus à partir du lecteur en raison des opérations client.
+ a| 
+entier
+
+
+
+ a| 
+ReadsCombined
+ a| 
+Le nombre d'appels de lecture() à des secteurs adjacents qui pourraient être combinés en une lecture plus grande.
+ a| 
+entier
+
+
+
+ a| 
+ReadMsec
+ a| 
+Nombre de millisecondes passées à lire.
  a| 
 entier
 
@@ -168,9 +204,36 @@ entier
 
 
  a| 
+écritures
+ a| 
+Nombre d'appels d'écriture () par seconde vers ce lecteur.
+ a| 
+entier
+
+
+
+ a| 
 Octets
  a| 
 Nombre total d'octets écrits sur le lecteur en raison de l'activité du client.
+ a| 
+entier
+
+
+
+ a| 
+WritesCombined
+ a| 
+Le nombre d'appels write() vers des secteurs adjacents qui pourraient être combinés en une écriture plus grande.
+ a| 
+entier
+
+
+
+ a| 
+WriteMsec
+ a| 
+Nombre de millisecondes consacrées à l'écriture.
  a| 
 entier
 
@@ -189,3 +252,5 @@ entier
 == Trouvez plus d'informations
 
 xref:reference_element_api_getdrivestats.adoc[GetDriveStats]
+
+ // 2025 FEB 27, DOC-4778

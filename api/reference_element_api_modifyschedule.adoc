@@ -182,13 +182,17 @@ Oui.
  a| 
 Nom unique donné au planning, période de conservation du snapshot créé et ID du volume à partir duquel le snapshot a été créé. Valeurs valides :
 
+* `enableRemoteReplication`: Indique si le snapshot doit être inclus dans la réplication distante. (booléen)
+* `ensureSerialCreation`: Indique si la création d'un nouveau snapshot doit être autorisée si une réplication de snapshot précédente est en cours. (booléen)
+* `name`: Nom du snapshot à utiliser. (chaîne)
+* `retention`: Durée de conservation de l'instantané. Selon l'heure, il s'affiche dans l'un des formats suivants :
++
+** fifo : le snapshot est conservé selon le principe FIFO. Si ce champ est vide, l'instantané est conservé à tout jamais. (chaîne)
+** HH:mm:ss
+
+
 * `volumeID`: ID du volume à inclure dans le snapshot. (entier)
 * `volumes`: Liste des ID de volume à inclure dans le snapshot de groupe. (tableau entier)
-* `name`: Nom du snapshot à utiliser. (chaîne)
-* `enableRemoteReplication`: Indique si le snapshot doit être inclus dans la réplication distante. (booléen)
-* `retention`: Durée pendant laquelle l'instantané sera conservé en HH:mm:ss Si ce champ est vide, l'instantané est conservé à tout jamais. (chaîne)
-* `fifo`: L'instantané est conservé sur la base du premier entré en premier sorti (FIFO). (chaîne)
-* `ensureSerialCreation`: Spécifiez si une nouvelle création de snapshot doit être autorisée si une réplication de snapshot précédente est en cours. (booléen)
 
  a| 
 link:reference_element_api_schedule.html["planification"^]

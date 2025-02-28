@@ -61,6 +61,7 @@ Avant de suivre cette procédure, vous devez comprendre link:../concepts/concept
 
 Télécharger la version ISO ou OVA appropriée depuis le site de support NetApp et installer la machine virtuelle.
 
+.Étapes
 . Téléchargez la certification OVA ou ISO pour votre installation depuis la link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["Logiciel Element"^] page du site de support NetApp. La nouvelle OVA contient un certificat SSL mis à jour.
 +
 .. Sélectionnez *Télécharger la dernière version* et acceptez le CLUF.
