@@ -157,7 +157,7 @@ Inclut le nom unique donné au planning, la période de conservation du snapshot
 * `name`: Nom du snapshot à utiliser. (chaîne)
 * `retention`: Durée de conservation de l'instantané. Selon l'heure, il s'affiche dans l'un des formats suivants :
 +
-** fifo : le snapshot est conservé selon le principe FIFO. Si ce champ est vide, l'instantané est conservé à tout jamais. (chaîne)
+** `fifo`: L'instantané est conservé sur la base du premier entré, premier sorti (FIFO). Si ce champ est vide, l'instantané est conservé à tout jamais. (chaîne)
 ** HH:mm:ss
 
 
