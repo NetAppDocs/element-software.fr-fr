@@ -61,9 +61,13 @@ NOTE: Un compte d'administrateur de cluster local (non LDAP) est nécessaire pou
 
 
 +
+[NOTE]
+====
+Toutes les autorisations sont disponibles pour le type d'accès administrateur.
 
-NOTE: Toutes les autorisations sont disponibles pour le type d'accès administrateur.
+Certains types d'accès sont disponibles via l'API et ne sont pas disponibles dans l'interface utilisateur d'Element.
 
+====
 +
 ** *Type* : le type d'administrateur de cluster. Valeurs possibles :
 +
@@ -152,12 +156,9 @@ Vous pouvez utiliser l'interface utilisateur Element pour modifier les mots de p
 . Cliquez sur *Enregistrer les modifications*.
 
 
-
-
-== Trouvez plus d'informations
-
+.Informations associées
+* link:../api/reference_element_api_app_b_access_control.html["En savoir plus sur les types d'accès disponibles pour les API Element"]
 * link:task_system_manage_enable_ldap_authentication.html["Activez l'authentification LDAP à l'aide de l'interface utilisateur Element"]
 * link:concept_system_manage_manage_ldap.html["Désactivez LDAP"]
-* https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
 
