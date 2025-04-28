@@ -29,12 +29,17 @@ Si vous effectuez une mise à niveau sans déplacement d'un nœud de gestion exi
 
 .Étapes
 . Connectez-vous au client Web vSphere en tant qu'administrateur vCenter.
-. Dans le menu du client vSphere, sélectionnez *VM* > *modèles*.
+. Dans le menu du client vSphere, sélectionnez *VM et modèles*.
+. Cliquez avec le bouton droit de la souris sur la machine virtuelle (VM) et sélectionnez *alimentation* > *Arrêter le système d'exploitation invité*.
++
+Attendez que la machine virtuelle soit mise hors tension.
+
 . Cliquez avec le bouton droit de la souris sur la machine virtuelle et sélectionnez *compatibilité* > *mise à niveau de la compatibilité VM*.
 . Sélectionnez *Oui*.
 . Sélectionnez ESXi 6.7 ou une version ultérieure, selon la version de votre environnement vSphere.
 . Sélectionnez *OK*.
-. Une fois la mise à niveau terminée, sélectionnez *vSphere client refresh* et vérifiez que VM Compatibility est à la version souhaitée.
+. Une fois la mise à niveau terminée, cliquez avec le bouton droit de la souris sur la machine virtuelle et sélectionnez *Marche* > *Marche*.
+. Sélectionnez *vSphere client refresh* et vérifiez que la version de VM Compatibility est la version souhaitée.
 
 
 
@@ -57,7 +62,7 @@ NOTE: Si vous ne mettez pas à jour les services de gestion suivis par le stocka
 
 === Mettez à niveau un nœud de gestion vers la version 12.5 ou ultérieure à partir de la version 12.3.x ou ultérieure
 
-Vous pouvez effectuer une mise à niveau sans déplacement du nœud de gestion depuis la version 12.3.x ou ultérieure vers la version 12.5 ou ultérieure, sans avoir à provisionner une nouvelle machine virtuelle de nœud de gestion.
+Vous pouvez effectuer une mise à niveau sans déplacement du nœud de gestion de la version 12.3.x ou ultérieure vers la version 12.5 ou ultérieure sans avoir à provisionner une nouvelle machine virtuelle de nœud de gestion.
 
 
 NOTE: Le nœud de gestion Element 12.5 ou version ultérieure est une mise à niveau facultative. Elle n'est pas requise pour les déploiements existants.
@@ -80,8 +85,8 @@ NOTE: Les volumes persistants peuvent nécessiter une carte réseau supplémenta
 
 
 .Étapes
-. Connectez-vous à la machine virtuelle du nœud de gestion via SSH ou l'accès à la console.
-. Téléchargez le https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["ISO du nœud de gestion"^] Pour le logiciel Element du site de support NetApp vers la machine virtuelle du nœud de gestion.
+. Connectez-vous à la machine virtuelle du nœud de gestion via une connexion SSH ou un accès à la console.
+. Téléchargez le https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["ISO du nœud de gestion"^] logiciel pour Element depuis le site du support NetApp vers la VM du nœud de gestion.
 +
 
 NOTE: Le nom de l'ISO est similaire à `solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`

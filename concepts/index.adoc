@@ -23,11 +23,3 @@ Découvrez les concepts de base du logiciel Element.
 * xref:concept_solidfire_concepts_data_protection.adoc[Protection des données]
 * xref:concept_data_manage_volumes_solidfire_quality_of_service.adoc[La performance et la qualité de service]
 
-
-
-
-== Trouvez plus d'informations
-
-* https://www.netapp.com/data-storage/solidfire/["Présentation du stockage 100 % Flash de SolidFire"^]
-* https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"]
-

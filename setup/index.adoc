@@ -38,11 +38,3 @@ Découvrez comment configurer le système de stockage pour votre environnement.
 
 
 
-
-
-
-== Trouvez plus d'informations
-
-* https://www.netapp.com/data-storage/solidfire/["Présentation du stockage 100 % Flash de SolidFire"^]
-* https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"]
-
