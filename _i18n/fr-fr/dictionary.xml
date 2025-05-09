@@ -12311,7 +12311,6 @@
   <block id="906ea05443e4b488a42f3f06305353ee" category="paragraph">Avant de suivre cette procédure, vous devez comprendre <block ref="6cc910c0977361227d631be0efac7242" category="inline-link-macro-rx"></block>et savoir si vous voulez les utiliser ou non. Les volumes persistants sont facultatifs mais recommandés pour la restauration des données de configuration du nœud de gestion en cas de perte de machine virtuelle.</block>
   <block id="6d8cd87a85946daeae42cb54aade3baa" category="section-title">Étape 1 : télécharger ISO ou OVA et déployer la machine virtuelle</block>
   <block id="90c4d8ddd76d9f5f86c144316cec5657" category="paragraph">Télécharger la version ISO ou OVA appropriée depuis le site de support NetApp et installer la machine virtuelle.</block>
-  <block id="4aee9657f267c579c49541b5f19ca32c" category="list-text">Téléchargez la certification OVA ou ISO pour votre installation depuis la <block ref="00b11b6abe7f0003872aa657422c59ae" category="inline-link-macro-rx"></block> page du site de support NetApp. La nouvelle OVA contient un certificat SSL mis à jour.</block>
   <block id="c6913d34fefabb7329dba971ad99632d" category="section-title">Étape 2 : création du noeud de gestion admin et configuration du réseau</block>
   <block id="8e1cc7b20e9f183452b777f8a4fb586d" category="paragraph">Une fois l'installation de la machine virtuelle terminée, créez l'utilisateur admin du nœud de gestion et configurez le réseau du nœud de gestion.</block>
   <block id="5e0472334bca93d0d28d3eeaaf723518" category="section-title">Étape 3 : configurer la synchronisation de l'heure</block>
@@ -12394,4 +12393,5 @@
   <block id="a879c8e657832d392ef358d2440c3faf" category="paragraph">Vous pouvez effectuer une mise à niveau sans déplacement du nœud de gestion de la version 12.3.x ou ultérieure vers la version 12.5 ou ultérieure sans avoir à provisionner une nouvelle machine virtuelle de nœud de gestion.</block>
   <block id="6a309ddf9d0a46d94d5772dacb71dbc0" category="list-text">Connectez-vous à la machine virtuelle du nœud de gestion via une connexion SSH ou un accès à la console.</block>
   <block id="7258351fe62749f68f4b75a51c56912b" category="list-text">Téléchargez le<block ref="ef86b20d3f4c031a449af5dec98fb6d8" category="inline-link-rx"></block> logiciel pour Element depuis le site du support NetApp vers la VM du nœud de gestion.</block>
+  <block id="e43f2538484fde027e53efbedb634fce" category="list-text">Téléchargez la certification OVA ou ISO pour votre installation depuis la <block ref="00b11b6abe7f0003872aa657422c59ae" category="inline-link-macro-rx"></block> page du site de support NetApp.</block>
 </blocks>
