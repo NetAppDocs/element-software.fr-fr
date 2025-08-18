@@ -9788,7 +9788,6 @@
   <block id="2f00805e044ca70467775f06c1872f89" category="paragraph">Serveur LDAP</block>
   <block id="5483ab43104d3514dfdd7917f5a51b09" category="paragraph">389 TCP/UDP</block>
   <block id="19a0425f816e3267d5a9f5ee03f4fc4f" category="paragraph">(Facultatif) recherche LDAP</block>
-  <block id="6ca93b96b4cd5e33a779ecc83fde0268" category="paragraph">Mises à niveau du firmware du stockage Element</block>
   <block id="94a2163bb19fc95c5d537943a7a7a263" category="paragraph">(Facultatif) communication HTTPS vers le terminal S3/Swift pour la sauvegarde et la restauration</block>
   <block id="ed26bc39a920ff3cacdfe283ccd802dc" category="paragraph">514 TCP/UDP</block>
   <block id="525aa1c52ef30b3901ee99d7dfaa1989" category="paragraph">10514 TCP/UDP</block>
@@ -12394,4 +12393,5 @@
   <block id="6a309ddf9d0a46d94d5772dacb71dbc0" category="list-text">Connectez-vous à la machine virtuelle du nœud de gestion via une connexion SSH ou un accès à la console.</block>
   <block id="7258351fe62749f68f4b75a51c56912b" category="list-text">Téléchargez le<block ref="ef86b20d3f4c031a449af5dec98fb6d8" category="inline-link-rx"></block> logiciel pour Element depuis le site du support NetApp vers la VM du nœud de gestion.</block>
   <block id="e43f2538484fde027e53efbedb634fce" category="list-text">Téléchargez la certification OVA ou ISO pour votre installation depuis la <block ref="00b11b6abe7f0003872aa657422c59ae" category="inline-link-macro-rx"></block> page du site de support NetApp.</block>
+  <block id="bd000e3a7a010d55765a9684adc1c25f" category="paragraph">Mises à niveau du stockage des éléments</block>
 </blocks>
