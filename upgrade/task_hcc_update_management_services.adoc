@@ -19,8 +19,9 @@ Après avoir installé le nœud de gestion 11.3 ou une version ultérieure, vous
 Depuis la version Element 11.3, la conception du nœud de gestion a été modifiée en fonction d'une nouvelle architecture modulaire qui fournit des services individuels. Ces services modulaires prennent en charge des fonctionnalités de gestion centrales et étendues pour un système de stockage 100 % Flash SolidFire. Les services de gestion comprennent la télémétrie système, les services de journalisation et de mise à jour, le service QoSSIOC pour le plug-in Element pour vCenter Server, le contrôle du cloud hybride NetApp, et bien plus encore.
 
 .Description de la tâche
-* Vous devez effectuer la mise à niveau vers le dernier pack de services de gestion avant de mettre à niveau votre logiciel Element.
+Le pack de services de gestion 2.27 inclut le plug-in Element pour vCenter Server 5.5, qui est uniquement compatible avec le nœud de gestion 12.8. Lorsque vous effectuez une mise à jour vers les services de gestion 2.27, vous devez modifier la séquence de mise à niveau et mettre à jour le bundle de services de gestion _après_ la mise à niveau vers Element 12.8 pour assurer la compatibilité entre le nœud de gestion et les services de gestion.
 
+Si vous effectuez une mise à jour vers les services de gestion 2.21.61 à 2.26.40, vous devez mettre à jour le bundle de services de gestion _avant_ la mise à niveau vers Element 12.8.
 
 [NOTE]
 ====

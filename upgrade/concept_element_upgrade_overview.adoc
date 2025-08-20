@@ -59,17 +59,21 @@ Les mises à niveau utilisant NetApp Hybrid Cloud Control ne sont pas disponible
 Utilisez la séquence suivante pour mettre à niveau votre système de stockage 100 % Flash SolidFire pour Element 12.5 ou une version ultérieure.
 
 .Étapes
+. link:task_hcc_upgrade_element_prechecks.html["Exécutez les contrôles d'intégrité du stockage Element avant de mettre à niveau le stockage"] .
+. link:task_hcc_upgrade_element_software.html["Mettez à niveau le firmware de stockage et le logiciel Element"].
 . link:task_hcc_update_management_services.html["Mise à jour des services de gestion à partir du cloud hybride Control"].
 +
+[IMPORTANT]
+====
+** Le pack de services de gestion 2.27 inclut le plug-in Element pour vCenter Server 5.5, qui est uniquement compatible avec le nœud de gestion 12.8. Lorsque vous effectuez une mise à jour vers les services de gestion 2.27, vous devez modifier la séquence de mise à niveau et mettre à jour le bundle de services de gestion _après_ la mise à niveau vers Element 12.8 pour assurer la compatibilité entre le nœud de gestion et les services de gestion.
+** Si vous effectuez une mise à jour vers les services de gestion 2.21.61 à 2.26.40, vous devez mettre à jour le bundle de services de gestion _avant_ la mise à niveau vers Element 12.8.
 
-IMPORTANT: Si vous mettez à jour les services de gestion vers la version 2.16 ou ultérieure et que vous exécutez un nœud de gestion 11.3 à 11.8, vous devez augmenter la RAM de la machine virtuelle du nœud de gestion avant de mettre à jour les services de gestion.
 
+====
 +
 
-IMPORTANT: Vous devez effectuer la mise à jour vers le dernier pack de services de gestion avant de mettre à niveau votre logiciel Element.
+IMPORTANT: Si vous mettez à jour les services de gestion vers la version 2.16 ou ultérieure et que vous exécutez un nœud de gestion 11.3 à 11.8, vous devrez augmenter la RAM de votre machine virtuelle de nœud de gestion avant de mettre à jour les services de gestion.
 
-. link:task_hcc_upgrade_element_prechecks.html["Exécutez des vérifications de l'état du stockage Element avant la mise à niveau du stockage"].
-. link:task_hcc_upgrade_element_software.html["Mettez à niveau le firmware de stockage et le logiciel Element"].
 . link:task_hcc_upgrade_storage_firmware.html["(Facultatif) mettez uniquement à niveau le firmware de votre stockage Element"].
 +
 

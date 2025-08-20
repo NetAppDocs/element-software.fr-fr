@@ -6,13 +6,13 @@ entries:
   url: "/upgrade/concept_element_upgrade_overview.html"
 - title: Procédures de mise à niveau du système
   entries:
-  - title: Services de gestion de la mise à jour
-    url: "/upgrade/task_hcc_update_management_services.html"
   - title: Exécutez des vérifications de l'état du stockage Element avant la mise
       à niveau du stockage
     url: "/upgrade/task_hcc_upgrade_element_prechecks.html"
   - title: Mettez à niveau le logiciel Element
     url: "/upgrade/task_hcc_upgrade_element_software.html"
+  - title: Services de gestion de la mise à jour
+    url: "/upgrade/task_hcc_update_management_services.html"
   - title: Mettre à niveau le firmware du stockage
     url: "/upgrade/task_hcc_upgrade_storage_firmware.html"
   - title: Mettre à niveau un nœud de gestion
