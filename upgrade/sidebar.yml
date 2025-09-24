@@ -9,14 +9,14 @@ entries:
   - title: Exécutez des vérifications de l'état du stockage Element avant la mise
       à niveau du stockage
     url: "/upgrade/task_hcc_upgrade_element_prechecks.html"
-  - title: Mettez à niveau le logiciel Element
-    url: "/upgrade/task_hcc_upgrade_element_software.html"
-  - title: Services de gestion de la mise à jour
-    url: "/upgrade/task_hcc_update_management_services.html"
-  - title: Mettre à niveau le firmware du stockage
-    url: "/upgrade/task_hcc_upgrade_storage_firmware.html"
   - title: Mettre à niveau un nœud de gestion
     url: "/upgrade/task_hcc_upgrade_management_node.html"
+  - title: Services de gestion de la mise à jour
+    url: "/upgrade/task_hcc_update_management_services.html"
+  - title: Mettez à niveau le logiciel Element
+    url: "/upgrade/task_hcc_upgrade_element_software.html"
+  - title: Mettre à niveau le firmware du stockage
+    url: "/upgrade/task_hcc_upgrade_storage_firmware.html"
   - title: Mettez à niveau le plug-in Element pour vCenter Server
     url: "/upgrade/task_vcp_upgrade_plugin.html"
 - title: Mettez à niveau vos composants vSphere d'un système de stockage NetApp SolidFire

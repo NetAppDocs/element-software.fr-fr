@@ -60,7 +60,11 @@ Utilisez la séquence suivante pour mettre à niveau votre système de stockage 
 
 .Étapes
 . link:task_hcc_upgrade_element_prechecks.html["Exécutez les contrôles d'intégrité du stockage Element avant de mettre à niveau le stockage"] .
-. link:task_hcc_upgrade_element_software.html["Mettez à niveau le firmware de stockage et le logiciel Element"].
+. link:task_hcc_upgrade_management_node.html["(Facultatif) mettre à niveau votre nœud de gestion"].
++
+
+NOTE: La mise à niveau du système d'exploitation du nœud de gestion n'est plus nécessaire pour mettre à niveau le logiciel Element sur le cluster de stockage. Si le nœud de gestion est la version 11.3 ou ultérieure, il vous suffit de mettre à niveau les services de gestion vers la dernière version pour effectuer les mises à niveau Element avec NetApp Hybrid Cloud Control. Suivez la procédure de mise à niveau du nœud de gestion pour votre scénario si vous souhaitez mettre à niveau le système d'exploitation du nœud de gestion pour d'autres raisons, telles que la résolution des problèmes de sécurité.
+
 . link:task_hcc_update_management_services.html["Mise à jour des services de gestion à partir du cloud hybride Control"].
 +
 [IMPORTANT]
@@ -74,15 +78,11 @@ Utilisez la séquence suivante pour mettre à niveau votre système de stockage 
 
 IMPORTANT: Si vous mettez à jour les services de gestion vers la version 2.16 ou ultérieure et que vous exécutez un nœud de gestion 11.3 à 11.8, vous devrez augmenter la RAM de votre machine virtuelle de nœud de gestion avant de mettre à jour les services de gestion.
 
+. link:task_hcc_upgrade_element_software.html["Mettez à niveau le firmware de stockage et le logiciel Element"].
 . link:task_hcc_upgrade_storage_firmware.html["(Facultatif) mettez uniquement à niveau le firmware de votre stockage Element"].
 +
 
 NOTE: Cette tâche peut être effectuée lorsqu'une nouvelle mise à niveau du firmware de stockage est disponible en dehors d'une version majeure.
-
-. link:task_hcc_upgrade_management_node.html["(Facultatif) mettre à niveau votre nœud de gestion"].
-+
-
-NOTE: La mise à niveau du système d'exploitation du nœud de gestion n'est plus nécessaire pour mettre à niveau le logiciel Element sur le cluster de stockage. Si le nœud de gestion est la version 11.3 ou ultérieure, il vous suffit de mettre à niveau les services de gestion vers la dernière version pour effectuer les mises à niveau Element avec NetApp Hybrid Cloud Control. Suivez la procédure de mise à niveau du nœud de gestion pour votre scénario si vous souhaitez mettre à niveau le système d'exploitation du nœud de gestion pour d'autres raisons, telles que la résolution des problèmes de sécurité.
 
 . link:task_vcp_upgrade_plugin.html["Mettez à niveau le plug-in Element pour vCenter Server"].
 
