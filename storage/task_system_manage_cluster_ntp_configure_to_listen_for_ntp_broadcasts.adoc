@@ -13,6 +13,8 @@ summary: 'En utilisant le mode broadcast, vous pouvez demander à chaque nœud d
 [role="lead"]
 En utilisant le mode de diffusion, vous pouvez demander à chaque nœud d'un cluster d'écouter sur le réseau les messages de diffusion NTP (Network Time Protocol) d'un serveur particulier.
 
+Le NTP est utilisé pour synchroniser les horloges sur un réseau. La connexion à un serveur NTP interne ou externe doit faire partie de la configuration initiale du cluster.
+
 .Ce dont vous avez besoin
 * Vous devez disposer des privilèges d'administrateur de cluster pour configurer ce paramètre.
 * Vous devez configurer un serveur NTP sur votre réseau en tant que serveur de diffusion.
@@ -30,6 +32,7 @@ En utilisant le mode de diffusion, vous pouvez demander à chaque nœud d'un clu
 
 == Trouvez plus d'informations
 
+* link:../storage/task_system_manage_cluster_ntp_configure.html["Configuration des serveurs Network Time Protocol pour que le cluster puisse effectuer une requête"]
 * https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
 

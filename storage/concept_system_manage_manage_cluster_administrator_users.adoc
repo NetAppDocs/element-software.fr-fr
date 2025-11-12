@@ -77,7 +77,7 @@ Certains types d'accès sont disponibles via l'API et ne sont pas disponibles da
 
 ** *Attributes* : si le compte administrateur de cluster a été créé à l'aide de l'API d'élément, cette colonne affiche toutes les paires nom-valeur qui ont été définies à l'aide de cette méthode.
 +
-Voir link:../api/index.html["Référence de l'API du logiciel NetApp Element"].
+Voirlink:../api/concept_element_api_about_the_api.html["Référence de l'API du logiciel NetApp Element"] .
 
 
 
@@ -91,7 +91,7 @@ Vous pouvez créer de nouveaux comptes d'administrateur de cluster avec des auto
 
 Si vous souhaitez créer un compte administrateur de cluster LDAP, assurez-vous que LDAP est configuré sur le cluster avant de commencer.
 
-link:task_system_manage_enable_ldap_authentication.html["Activez l'authentification LDAP à l'aide de l'interface utilisateur Element"]
+link:concept_system_manage_manage_ldap.html["Activez l'authentification LDAP à l'aide de l'interface utilisateur Element"]
 
 Vous pouvez modifier ultérieurement les privilèges du compte administrateur du cluster pour les rapports, les nœuds, les disques, les volumes, les comptes, et l'accès au niveau du cluster. Lorsque vous activez une autorisation, le système attribue un accès en écriture à ce niveau. Le système accorde à l'utilisateur administrateur un accès en lecture seule pour les niveaux que vous ne sélectionnez pas.
 
@@ -158,7 +158,7 @@ Vous pouvez utiliser l'interface utilisateur Element pour modifier les mots de p
 
 .Informations associées
 * link:../api/reference_element_api_app_b_access_control.html["En savoir plus sur les types d'accès disponibles pour les API Element"]
-* link:task_system_manage_enable_ldap_authentication.html["Activez l'authentification LDAP à l'aide de l'interface utilisateur Element"]
+* link:concept_system_manage_manage_ldap.html["Activez l'authentification LDAP à l'aide de l'interface utilisateur Element"]
 * link:concept_system_manage_manage_ldap.html["Désactivez LDAP"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
 

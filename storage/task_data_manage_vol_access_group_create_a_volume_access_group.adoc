@@ -61,7 +61,7 @@ TIP: Vous pouvez trouver l'IQN de l'initiateur pour chaque volume en sélectionn
 
 Lorsque vous modifiez un initiateur, vous pouvez basculer l'attribut requiredCHAP sur vrai, ce qui vous permet de définir le secret de l'initiateur cible. Pour plus d'informations, reportez-vous à la section informations sur l'API relative à la méthode ModilyInitiator.
 
-link:../api/index.html["Gérez le stockage avec l'API Element"]
+link:../api/concept_element_api_about_the_api.html["Gérez le stockage avec l'API Element"]
 
 |===
 . *Facultatif:* Ajouter d'autres initiateurs si nécessaire.

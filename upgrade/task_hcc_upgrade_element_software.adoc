@@ -34,6 +34,9 @@ Depuis Element 12.5, NetApp HealthTools n'est plus pris en charge pour les mises
 * *Nœud de gestion* : pour l'interface utilisateur et l'API de contrôle de cloud hybride NetApp, le nœud de gestion de votre environnement exécute la version 11.3.
 * *Cluster Health*: Vous avez vérifié que le cluster est prêt à être mis à niveau. Voir link:task_hcc_upgrade_element_prechecks.html["Exécutez des vérifications de l'état du stockage Element avant la mise à niveau du stockage"].
 * *Contrôleur de gestion de la carte mère (BMC) mis à jour pour les nœuds de stockage H610S*: Vous avez mis à niveau la version BMC pour vos nœuds H610S. Voir la link:https://docs.netapp.com/us-en/hci/docs/rn_H610S_BMC_3.84.07.html["notes de version et instructions de mise à niveau"^].
+
+
+[[element-upgrade-tim]]
 * *Temps de mise à niveau* : vous avez prévu suffisamment de temps pour effectuer votre mise à niveau. Lorsque vous effectuez une mise à niveau vers Element 12.5 ou une version ultérieure, le processus de mise à niveau varie en fonction de la version actuelle du logiciel Element et des mises à jour du firmware.
 +
 [cols="20,20,20,20,20"]

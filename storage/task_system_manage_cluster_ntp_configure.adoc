@@ -13,6 +13,8 @@ summary: 'Vous pouvez demander à chaque nœud d"un cluster d"interroger un serv
 [role="lead"]
 Vous pouvez demander à chaque nœud d'un cluster d'interroger un serveur NTP (Network Time Protocol) pour les mises à jour. Le cluster contacte uniquement les serveurs configurés et demande les informations NTP à leur place.
 
+Le NTP est utilisé pour synchroniser les horloges sur un réseau. La connexion à un serveur NTP interne ou externe doit faire partie de la configuration initiale du cluster.
+
 Configurez le protocole NTP sur le cluster afin de pointer vers un serveur NTP local. Vous pouvez utiliser l'adresse IP ou le nom d'hôte FQDN. Le serveur NTP par défaut à l'heure de création du cluster est défini sur us.pool.ntp.org. Cependant, une connexion à ce site ne peut pas toujours être établie en fonction de l'emplacement physique du cluster SolidFire.
 
 L'utilisation du FQDN dépend de la mise en place et de l'exploitation des paramètres DNS de chaque nœud de stockage. Pour ce faire, configurez les serveurs DNS sur chaque nœud de stockage et assurez-vous que les ports sont ouverts en consultant la page Configuration requise du port réseau.
@@ -37,6 +39,7 @@ Vous devez disposer des privilèges d'administrateur de cluster pour configurer 
 
 == Trouvez plus d'informations
 
+* link:../storage/task_system_manage_cluster_ntp_configure_to_listen_for_ntp_broadcasts.html["Configurez le cluster pour écouter les diffusions NTP"]
 * https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
 

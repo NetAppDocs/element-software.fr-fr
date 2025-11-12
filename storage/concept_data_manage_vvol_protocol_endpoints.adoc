@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: protocol endpoint, access, cluster, storage node, iscsi supported 
 summary: 'Les terminaux PE sont des points d"accès utilisés par un hôte pour gérer le stockage sur un cluster exécutant le logiciel NetApp Element. Les terminaux de protocole ne peuvent pas être supprimés ou modifiés par un utilisateur, ne sont pas associés à un compte et ne peuvent pas être ajoutés à un groupe d"accès de volume.' 
 ---
-= Terminaux PE
+= Découvrez les points de terminaison du protocole
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

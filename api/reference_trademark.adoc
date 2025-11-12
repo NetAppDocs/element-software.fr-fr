@@ -10,6 +10,7 @@ summary:
 :imagesdir: ../media/
 
 
+[role="lead"]
 NetApp, le logo NETAPP et les marques mentionnées sur la page des marques commerciales NetApp sont des marques commerciales de NetApp, Inc. Les autres noms de sociétés et de produits peuvent être des marques commerciales de leurs propriétaires respectifs.
 
 http://www.netapp.com/us/legal/netapptmlist.aspx[]

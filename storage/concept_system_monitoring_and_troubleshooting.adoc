@@ -21,7 +21,7 @@ Vous devez surveiller le système à des fins de diagnostic et obtenir des infor
 * link:task_monitor_iscsi_sessions.html["Afficher les sessions iSCSI"]
 * link:task_monitor_fibre_channel_sessions.html["Afficher les sessions Fibre Channel"]
 * link:concept_troubleshoot_drives.html["Résoudre les problèmes liés aux disques"]
-* link:concept_troubleshoot_nodes.html["Résoudre les problèmes"]
+* link:concept_remove_nodes_from_cluster.html["Résoudre les problèmes"]
 * link:concept_per_node_work_with_utilities.html["Utilisation d'utilitaires par nœud pour les nœuds de stockage"]
 * link:concept_mnode_work_with_the_management_node.html["Travaillez avec le nœud de gestion"]
 * link:concept_monitor_understand_cluster_fullness_levels.html["Comprendre les niveaux de remplissage du cluster"]

@@ -61,7 +61,6 @@ Caractéristiques des nœuds Fibre Channel :
 
 == Etat de fonctionnement du nœud
 
-[role="lead"]
 Un nœud peut être dans l'un des États suivant le niveau de configuration.
 
 * *Disponible*
@@ -90,7 +89,8 @@ Une authentification est requise pour modifier le nœud.
 
 Dans chacun de ces États, certains champs sont en lecture seule.
 
-[discrete]
+
+
 == Trouvez plus d'informations
 
 * https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"]

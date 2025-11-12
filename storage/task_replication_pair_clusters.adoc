@@ -28,6 +28,20 @@ Vous pouvez coupler un cluster avec quatre autres clusters au maximum pour répl
 
 
 
+== Couplez des clusters à l'aide de MVIP ou d'une clé de couplage
+
+Vous pouvez coupler un cluster source et cible à l'aide du MVIP du cluster cible si un administrateur de cluster a accès aux deux clusters. Si l'accès à l'administrateur de cluster n'est disponible que sur un seul cluster d'une paire de clusters, une clé de couplage peut être utilisée sur le cluster cible pour terminer le couplage du cluster.
+
+. Sélectionnez l'une des méthodes suivantes pour coupler les clusters :
++
+** link:task_replication_pair_cluster_using_mvip.html["Couplez des clusters à l'aide de MVIP"]Utilisez cette méthode si l'administrateur du cluster a accès aux deux clusters. Cette méthode utilise le MVIP du cluster distant pour apparier deux clusters.
+** link:task_replication_pair_cluster_using_pairing_key.html["Couplez des clusters à l'aide d'une clé de couplage"]Utilisez cette méthode si l'administrateur du cluster n'a accès qu'à un seul des clusters. Cette méthode génère une clé d'appariement qui peut être utilisée sur le cluster cible pour finaliser l'appariement des clusters.
+
+
+
+
+
+
 == Trouvez plus d'informations
 
 xref:reference_prereq_network_port_requirements.adoc[Configuration requise pour les ports réseau]

@@ -15,7 +15,7 @@ Le système Element utilise l'API NetApp Element pour ses fonctionnalités. L'in
 
 Vous pouvez utiliser le journal d'API pour identifier les méthodes d'API utilisées pour certaines tâches et voir comment utiliser les méthodes et objets d'API pour créer des applications personnalisées.
 
-Pour plus d'informations sur chaque méthode, reportez-vous à la section link:../api/index.html["Référence de l'API du logiciel Element"].
+Pour plus d'informations sur chaque méthode, consultez link:../api/concept_element_api_about_the_api.html["Référence de l'API du logiciel Element"].
 
 . Dans la barre de navigation de l'interface utilisateur Element, cliquez sur *log API*.
 . Pour modifier le type d'activité API affiché dans la fenêtre Journal API, effectuez les opérations suivantes :
@@ -37,7 +37,7 @@ Pour plus d'informations sur chaque méthode, reportez-vous à la section link:.
 
 == Trouvez plus d'informations
 
-* link:../api/index.html["Gestion du stockage avec l'API Element"]
+* link:../api/concept_element_api_about_the_api.html["Gestion du stockage avec l'API Element"]
 * https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
 

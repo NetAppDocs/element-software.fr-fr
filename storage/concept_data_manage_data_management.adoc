@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: virtual volumes, volumes, manage 
 summary: 'Vous pouvez gérer les données d"un cluster exécutant le logiciel Element à partir de l"onglet gestion dans l"interface utilisateur d"Element. Les fonctions de gestion de cluster disponibles incluent la création et la gestion des volumes de données, des comptes utilisateurs, des groupes d"accès aux volumes, des initiateurs et des règles de qualité de service \(QoS\).' 
 ---
-= Gérez les volumes et les volumes virtuels
+= Découvrez comment gérer les volumes et les volumes virtuels.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,10 +13,62 @@ summary: 'Vous pouvez gérer les données d"un cluster exécutant le logiciel El
 [role="lead"]
 Vous pouvez gérer les données d'un cluster exécutant le logiciel Element à partir de l'onglet gestion dans l'interface utilisateur d'Element. Les fonctions de gestion de cluster disponibles incluent la création et la gestion des volumes de données, des groupes d'accès aux volumes, des initiateurs et des règles de qualité de service (QoS).
 
-* link:task_data_manage_volumes_work_with_volumes_task.html["Utilisation de volumes"]
-* link:concept_data_manage_vvol_work_virtual_volumes.html["Utilisation des volumes virtuels"]
-* link:concept_data_manage_vol_access_group_work_with_volume_access_groups_and_initiators.html["Utilisation des groupes d'accès de volumes et des initiateurs"]
 
+
+== Utilisation de volumes
+
+Le système SolidFire provisionne le stockage à l'aide de volumes. Les volumes sont des périphériques de bloc accessibles sur le réseau par des clients iSCSI ou Fibre Channel. Dans la page volumes de l'onglet gestion, vous pouvez créer, modifier, cloner et supprimer des volumes d'un nœud. Vous pouvez également consulter des statistiques sur la bande passante du volume et sur l'utilisation des E/S.
+
+link:../storage/concept_data_manage_volumes_quality_of_service_policies.html["Apprenez à travailler avec les volumes"]
+
+
+
+== Utilisation des volumes virtuels
+
+Vous pouvez afficher des informations et effectuer des tâches pour les volumes virtuels et leurs conteneurs de stockage associés, les points de terminaison de protocole, les liaisons et les hôtes à l'aide de l'interface utilisateur Element.
+
+Le système de stockage logiciel NetApp Element est livré avec la fonctionnalité de volumes virtuels (VVol) désactivée. Vous devez effectuer une tâche ponctuelle pour activer manuellement la fonctionnalité VVol vSphere via l'interface utilisateur Element.
+
+Une fois que vous avez activé la fonctionnalité VVol, un onglet VVol apparaît dans l'interface utilisateur avec laquelle offre une surveillance liée aux VVol et des options de gestion limitées. De plus, un composant logiciel côté stockage appelé VASA Provider sert de service de sensibilisation du stockage pour vSphere. La plupart des commandes VVol, comme la création, le clonage et la modification de VVol, sont lancées par un hôte vCenter Server ou ESXi et traduites par le fournisseur VASA en API Element pour le système de stockage du logiciel Element. Les commandes de création, de suppression et de gestion de conteneurs de stockage et de suppression de volumes virtuels peuvent être lancées à l'aide de l'interface utilisateur Element.
+
+La majorité des configurations nécessaires à l'utilisation de la fonctionnalité Virtual volumes avec les systèmes de stockage logiciels Element sont effectuées dans vSphere. Consultez le _VMware vSphere Virtual volumes pour le stockage SolidFire_ pour enregistrer le fournisseur VASA dans vCenter, créer et gérer des datastores VVol, et gérer le stockage conformément aux règles.
+
+
+NOTE: Pour Element 12.5 et versions antérieures, ne vous enregistrez pas plusieurs fournisseurs NetApp Element VASA dans une seule instance de vCenter. Ainsi, lorsqu'un deuxième fournisseur NetApp Element VASA est ajouté, tous les data stores VVOL sont inaccessibles.
+
+
+NOTE: La prise en charge de VASA pour plusieurs vCenters est disponible en tant que correctif de mise à niveau si vous avez déjà enregistré un fournisseur VASA auprès de votre vCenter. Pour installer, téléchargez le fichier VASA39 .tar.gz à partir du https://mysupport.netapp.com/products/element_software/VASA39/index.html["Téléchargements de logiciels NetApp"] et suivez les instructions dans le manifeste. Le fournisseur NetApp Element VASA utilise un certificat NetApp. Avec ce correctif, le certificat est utilisé non modifié par vCenter pour prendre en charge plusieurs vCenters pour VASA et VVol. Ne modifiez pas le certificat. Les certificats SSL personnalisés ne sont pas pris en charge par VASA.
+
+link:../storage/task_data_manage_vvol_enable_virtual_volumes.html["Apprenez-en davantage sur le travail avec les volumes virtuels"]
+
+
+
+== Utilisation des groupes d'accès de volumes et des initiateurs
+
+Vous pouvez utiliser des initiateurs iSCSI ou des initiateurs Fibre Channel pour accéder aux volumes définis au sein des groupes d'accès de volume.
+
+Vous pouvez créer des groupes d'accès en mappant les IQN des initiateurs iSCSI ou les WWPN Fibre Channel dans une collection de volumes. Chaque IQN que vous ajoutez à un groupe d'accès peut accéder à chaque volume du groupe sans nécessiter d'authentification CHAP.
+
+Il existe deux types de méthodes d'authentification CHAP :
+
+* Authentification CHAP au niveau du compte : vous pouvez attribuer une authentification CHAP au compte.
+* Authentification CHAP au niveau de l'initiateur : vous pouvez attribuer une cible CHAP unique et des secrets à des initiateurs spécifiques sans être lié à un seul CHAP sur un seul compte. Cette authentification CHAP au niveau de l'initiateur remplace les informations d'identification au niveau du compte.
+
+
+Si vous le souhaitez, vous pouvez également appliquer l'autorisation d'initiateur et l'authentification CHAP par initiateur. Ces options peuvent être définies par initiateur et un groupe d'accès peut contenir plusieurs initiateurs avec différentes options.
+
+Chaque WWPN que vous ajoutez à un groupe d'accès active l'accès réseau Fibre Channel aux volumes du groupe d'accès.
+
+
+NOTE: Les groupes d'accès de volume ont les limites suivantes :
+
+* Un maximum de 64 IQN ou WWPN sont autorisés dans un groupe d'accès.
+* Un groupe d'accès peut être composé de 2000 volumes au maximum.
+* Un IQN ou un WWPN ne peut appartenir qu'à un seul groupe d'accès.
+* Un seul volume peut appartenir à quatre groupes d'accès maximum.
+
+
+link:../storage/task_data_manage_vol_access_group_create_a_volume_access_group.html["Découvrez comment travailler avec les groupes d'accès en volume et les initiateurs"]
 
 
 

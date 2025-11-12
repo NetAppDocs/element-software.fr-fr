@@ -15,7 +15,7 @@ Vous pouvez créer des initiateurs iSCSI ou Fibre Channel et éventuellement leu
 
 Vous pouvez également attribuer des attributs CHAP basés sur initator à l'aide d'un appel d'API. Pour ajouter un nom de compte CHAP et des informations d'identification par initiateur, vous devez utiliser le `CreateInitiator` Appel API pour supprimer et ajouter un accès CHAP et des attributs. L'accès des initiateurs peut être limité à un ou plusieurs VLAN en spécifiant un ou plusieurs virtualNetworkID via le `CreateInitiators` et `ModifyInitiators` Appels API. Si aucun réseau virtuel n'est spécifié, l'initiateur peut accéder à tous les réseaux.
 
-Pour plus de détails, reportez-vous aux informations de référence de l'API.link:../api/index.html["Gérez le stockage avec l'API Element"]
+Pour plus de détails, consultez la documentation de référence de l'API. link:../api/concept_element_api_about_the_api.html["Gérez le stockage avec l'API Element"]
 
 .Étapes
 . Cliquez sur *Management* > *Initiators*.

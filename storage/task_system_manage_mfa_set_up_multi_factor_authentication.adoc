@@ -11,9 +11,11 @@ summary: 'Vous pouvez utiliser ces étapes de base avec l"API Element pour confi
 
 
 [role="lead"]
+L'authentification multifacteur (MFA) fait appel à un fournisseur d'identités tiers via le langage SAML pour gérer les sessions utilisateur. L'authentification multifacteur permet aux administrateurs de configurer d'autres facteurs d'authentification, tels que le mot de passe et l'e-mail, ainsi que le mot de passe et l'e-mail.
+
 Vous pouvez utiliser ces étapes de base avec l'API Element pour configurer votre cluster afin qu'il utilise l'authentification multifacteur.
 
-Vous trouverez des détails sur chaque méthode API dans le link:../api/index.html["Référence de l'API d'élément"].
+Vous trouverez des informations détaillées sur chaque méthode de l'API dans le link:../api/concept_element_api_about_the_api.html["Référence de l'API d'élément"].
 
 . Créez une nouvelle configuration IDP pour le cluster en appelant la méthode d'API suivante et en transmettant les métadonnées IDP au format JSON : `CreateIdpConfiguration`
 +

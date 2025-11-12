@@ -67,7 +67,7 @@ Par exemple, pour ajouter un numéro de port personnalisé, entrez <nom d'hôte 
 . *Facultatif:* sélectionnez *utiliser le protocole LDAPS*.
 . Entrez les informations requises dans *Paramètres généraux*.
 +
-image::../media/element_new_ldap_servers.jpg[element pour les nouveaux serveurs ldap]
+image::../media/element_new_ldap_servers.jpg[Capture d'écran des informations des paramètres généraux]
 
 . Cliquez sur *Activer LDAP*.
 . Cliquez sur *Tester l'authentification utilisateur* si vous souhaitez tester l'accès au serveur pour un utilisateur.
@@ -77,7 +77,7 @@ image::../media/element_new_ldap_servers.jpg[element pour les nouveaux serveurs 
 +
 .. Cliquez sur *User* > *View*.
 +
-image::../media/element_new_cluster_admin.jpg[nouvel administrateur de cluster element]
+image::../media/element_new_cluster_admin.jpg[Capture d'écran de la page Créer un nouvel utilisateur]
 
 .. Pour le nouvel utilisateur, cliquez sur *LDAP* pour le Type d'utilisateur et collez le groupe que vous avez copié dans le champ Nom unique.
 .. Sélectionnez les autorisations, généralement toutes les autorisations.

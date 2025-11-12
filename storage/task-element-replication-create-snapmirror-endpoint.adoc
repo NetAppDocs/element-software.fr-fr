@@ -11,7 +11,7 @@ summary: 'Vous devez créer un terminal SnapMirror avant de pouvoir créer une r
 
 
 [role="lead"]
-Vous devez créer un terminal SnapMirror avant de pouvoir créer une relation de réplication. Vous ne pouvez effectuer cette tâche que dans l'interface utilisateur Web du logiciel Element ou à l'aide de link:../api/concept_element_api_snapmirror_api_methods.html["Méthodes d'API SnapMirror"].
+Vous devez créer un point de terminaison SnapMirror avant de pouvoir créer une relation de réplication. Vous pouvez uniquement effectuer cette tâche dans l'interface utilisateur Web du logiciel Element ou en utilisant le link:../api/reference_element_api_abortsnapmirrorrelationship.html["Méthodes d'API SnapMirror"].
 
 .Avant de commencer
 Vous devez avoir activé SnapMirror sur le cluster Element.

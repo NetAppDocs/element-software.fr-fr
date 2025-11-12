@@ -41,4 +41,4 @@ Utilisé pour la création et la maintenance de fournisseurs clés qui gèrent d
 * TestKeyProviderKmip
 
 
-Pour plus d'informations sur les méthodes API, voir link:../api/index.html["Informations de référence API"].
+Pour plus d'informations sur les méthodes de l'API, consultez link:../api/concept_element_api_about_the_api.html["Informations de référence API"].

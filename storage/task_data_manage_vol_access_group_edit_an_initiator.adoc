@@ -15,7 +15,7 @@ Vous pouvez modifier l'alias d'un initiateur existant ou ajouter un alias s'il n
 
 Pour ajouter un nom de compte CHAP et des informations d'identification par initiateur, vous devez utiliser le `ModifyInitiator` Appel API pour supprimer et ajouter un accès CHAP et des attributs.
 
-Voir link:../api/index.html["Gérez le stockage avec l'API Element"].
+Voirlink:../api/concept_element_api_about_the_api.html["Gérez le stockage avec l'API Element"] .
 
 .Étapes
 . Cliquez sur *Management* > *Initiators*.

@@ -69,7 +69,7 @@ La création du cluster peut prendre plusieurs minutes, en fonction du nombre de
 
 == Pour en savoir plus
 
-* link:../api/index.html["Gestion du stockage avec l'API Element"]
+* link:../api/concept_element_api_about_the_api.html["Gestion du stockage avec l'API Element"]
 * https://docs.netapp.com/us-en/element-software/index.html["Documentation SolidFire et Element"]
 * https://docs.netapp.com/us-en/vcp/index.html["Plug-in NetApp Element pour vCenter Server"^]
 

@@ -14,8 +14,6 @@ summary: La documentation des versions précédentes est disponible au cas où v
 [role="lead"]
 La documentation relative aux versions précédentes est disponible sur le site du support NetApp.
 
-* https://docs.netapp.com/us-en/element-software-125/index.html["Documentation relative à l'élément 12.5"^]
-* https://docs.netapp.com/us-en/element-software-123/index.html["Documentation Element 12.3.x."^]
 * https://mysupport.netapp.com/documentation/docweb/index.html?productID=63945&language=en-US["Documentation relative à l'élément 12.2.1"^]
 * https://mysupport.netapp.com/documentation/docweb/index.html?productID=63593&language=en-US["Documentation relative à l'élément 12.2"^]
 * https://mysupport.netapp.com/documentation/docweb/index.html?productID=63946&language=en-US["Documentation relative à l'élément 12.0.1"^]

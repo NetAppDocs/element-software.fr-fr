@@ -13,7 +13,7 @@ summary: 'Vous pouvez modifier les paramètres réseau du nœud de stockage pour
 [role="lead"]
 Vous pouvez modifier les paramètres réseau du nœud de stockage pour donner au nœud un nouvel ensemble d'attributs réseau.
 
-Vous pouvez voir les paramètres réseau d'un noeud de stockage sur la page *Paramètres réseau* lorsque vous vous connectez au noeud (https://<node[] IP>:442/hcc/node/network-settings). Vous pouvez sélectionner les paramètres *Bond1G* (gestion) ou *Bond10G* (stockage). La liste suivante décrit les paramètres que vous pouvez modifier lorsqu'un nœud de stockage est à l'état disponible, en attente ou actif :
+Vous pouvez consulter les paramètres réseau d'un nœud de stockage sur la page *Paramètres réseau* une fois connecté au nœud. (`https://<node_IP>:442/hcc/node/network-settings`). Vous pouvez sélectionner les paramètres *Bond1G* (gestion) ou *Bond10G* (stockage). La liste suivante décrit les paramètres que vous pouvez modifier lorsqu'un nœud de stockage est à l'état Disponible, En attente ou Actif :
 
 * *Méthode*
 +

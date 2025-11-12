@@ -158,7 +158,7 @@ sudo service ntpd stop
 . Modifiez le fichier de configuration NTP `/etc/ntp.conf`:
 +
 .. Commenter les serveurs par défaut (`server 0.gentoo.pool.ntp.org`) en ajoutant un `#` devant chaque.
-.. Ajoutez une nouvelle ligne pour chaque serveur de temps par défaut que vous souhaitez ajouter. Les serveurs de temps par défaut doivent être les mêmes serveurs NTP utilisés sur le cluster de stockage que ceux que vous utiliserez dans un link:task_mnode_install.html#set-up-the-management-node["plus tard"].
+.. Ajoutez une nouvelle ligne pour chaque serveur de temps par défaut que vous souhaitez ajouter. Les serveurs de temps par défaut doivent être les mêmes serveurs NTP que ceux utilisés sur le cluster de stockage que vous utiliserez dans un <<set-up-the-management-node,plus tard>>.
 +
 [listing]
 ----
@@ -213,7 +213,7 @@ NOTE: N'activez pas cette option si vous apportez de futures modifications à la
 
 
 
-NOTE: Ne modifiez pas le NTP après avoir terminé la configuration de synchronisation de l'heure car elle affecte le NTP lorsque vous exécutez le link:task_mnode_install.html#set-up-the-management-node["commande setup"] sur le nœud de gestion.
+NOTE: Ne modifiez pas le protocole NTP après avoir terminé la configuration de la synchronisation horaire, car cela affectera le protocole NTP lors de son exécution. <<set-up-the-management-node,commande setup>> sur le nœud de gestion.
 
 
 
@@ -240,7 +240,7 @@ NOTE: La forme abrégée du nom de commande est entre parenthèses ( ) et peut �
 
 +
 *** *--mNode_admin_user (-mu) [username]* : nom d'utilisateur du compte administrateur du nœud de gestion. Il s'agit probablement du nom d'utilisateur du compte utilisateur que vous avez utilisé pour vous connecter au nœud de gestion.
-*** *--Storage_mvip (-sm) [adresse MVIP]* : adresse IP virtuelle de gestion (MVIP) du cluster de stockage exécutant le logiciel Element. Configurez le nœud de gestion avec le même cluster de stockage que vous avez utilisé pendant link:task_mnode_install.html#configure-time-sync["Configuration de serveurs NTP"].
+*** *--storage_mvip (-sm) [Adresse MVIP]*: L'adresse IP virtuelle de gestion (MVIP) du cluster de stockage exécutant le logiciel Element. Configurez le nœud de gestion avec le même cluster de stockage que celui que vous avez utilisé lors de <<configure-time-sync,Configuration de serveurs NTP>>.
 *** *--Storage_username (-su) [username]* : le nom d'utilisateur de l'administrateur du cluster de stockage pour le cluster spécifié par `--storage_mvip` paramètre.
 *** *--télémétrie_active (-t) [true]* : conservez la valeur true qui permet la collecte de données pour l'analyse par Active IQ.
 

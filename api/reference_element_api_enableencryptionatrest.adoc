@@ -13,12 +13,13 @@ summary: 'Vous pouvez utiliser la méthode EnableEncryptionAtRest pour activer l
 [role="lead"]
 Vous pouvez utiliser le `EnableEncryptionAtRest` Méthode permettant d'activer le chiffrement AES 256 bits au repos sur le cluster. Le cluster peut ainsi gérer la clé de chiffrement utilisée pour les disques sur chaque nœud. Cette fonctionnalité n'est pas activée par défaut.
 
+[NOTE]
+====
+* Cette méthode n'active pas le chiffrement logiciel au repos. Ceci peut uniquement être effectué à l'aide du link:../api/reference_element_api_createcluster.html["créer une méthode de cluster"^] avec `enableSoftwareEncryptionAtRest` réglez sur `true`.
+* Pour consulter l'état actuel du chiffrement au repos, du chiffrement logiciel au repos ou des deux sur le cluster, utilisez link:../api/reference_element_api_getclusterinfo.html["obtenir la méthode d'information sur le cluster"]. Vous pouvez utiliser le `GetSoftwareEncryptionAtRestInfo` link:../api/reference_element_api_getsoftwareencryptionatrestinfo.html["méthode d'obtention des informations que le cluster utilise pour chiffrer les données au repos"].
 
-TIP: Pour voir l'état actuel du chiffrement au repos et/ou logiciel au repos sur le cluster, utilisez le link:../api/reference_element_api_getclusterinfo["obtenir la méthode d'information sur le cluster"^]. Vous pouvez utiliser le `GetSoftwareEncryptionAtRestInfo` link:../api/reference_element_api_getsoftwareencryptionatrestinfo["méthode d'obtention des informations que le cluster utilise pour chiffrer les données au repos"^].
 
-
-NOTE: Cette méthode n'active pas le chiffrement logiciel au repos. Ceci peut uniquement être effectué à l'aide du link:../api/reference_element_api_createcluster.html["créer une méthode de cluster"^] avec `enableSoftwareEncryptionAtRest` réglez sur `true`.
-
+====
 Lorsque vous activez le chiffrement au repos, le cluster gère automatiquement les clés de chiffrement en interne pour les disques de chaque nœud du cluster.
 
 Si un keyProviderID est spécifié, le mot de passe est généré et récupéré selon le type de fournisseur de clés. Cette opération est généralement effectuée à l'aide d'un serveur de clés KMIP (Key Management Interoperability Protocol) dans le cas d'un fournisseur de clés KMIP. Après cette opération, le fournisseur spécifié est considéré comme actif et ne peut pas être supprimé tant que le chiffrement au repos n'est pas désactivé à l'aide du `DisableEncryptionAtRest` méthode.

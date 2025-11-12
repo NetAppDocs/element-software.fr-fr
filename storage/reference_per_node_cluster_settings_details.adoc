@@ -13,7 +13,7 @@ summary: 'Vous pouvez vérifier les paramètres du cluster d"un nœud de stockag
 [role="lead"]
 Vous pouvez vérifier les paramètres du cluster d'un nœud de stockage après la configuration du cluster et modifier le nom d'hôte du nœud.
 
-La liste suivante décrit les paramètres de cluster d'un nœud de stockage indiqué dans la page *Paramètres de cluster* de l'interface utilisateur par nœud (https://<node[] IP>:442/hcc/node/cluster-settings).
+La liste suivante décrit les paramètres de cluster pour un nœud de stockage indiqué sur la page *Paramètres de cluster* de l'interface utilisateur du nœud. (`https://<node_IP>:442/hcc/node/cluster-settings`).
 
 * *Rôle*
 +

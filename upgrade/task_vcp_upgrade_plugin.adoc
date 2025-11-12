@@ -22,7 +22,7 @@ Vous pouvez mettre à jour l'enregistrement du plug-in sur vCenter Server Virtua
 ====
 Le pack de services de gestion 2.27 inclut le plug-in Element pour vCenter Server 5.5, qui est uniquement compatible avec le nœud de gestion 12.8. Lorsque vous effectuez une mise à jour vers les services de gestion 2.27, vous devez modifier la séquence de mise à niveau et mettre à jour le bundle de services de gestion _après_ la mise à niveau vers Element 12.8 pour assurer la compatibilité entre le nœud de gestion et les services de gestion.
 
-Le pack de services de gestion 2.22.7 inclut le plug-in Element pour vCenter Server 5.0, qui contient le plug-in distant. Si vous utilisez le plug-in Element, vous devez effectuer une mise à niveau vers les services de gestion 2.22.7 ou une version ultérieure afin de respecter la directive VMware qui supprime la prise en charge des plug-ins locaux. https://kb.vmware.com/s/article/87880["En savoir plus >>"^] .
+Le pack de services de gestion 2.22.7 inclut le plug-in Element pour vCenter Server 5.0, qui contient le plug-in distant. Si vous utilisez le plug-in Element, vous devez mettre à niveau vos services de gestion vers la version 2.22.7 ou ultérieure afin de vous conformer à la directive VMware qui supprime la prise en charge des plug-ins locaux. https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-sdks-tools/8-0/developing-local-plug-ins-client-sdk/about-this-book-local/deprecation-of-local-plug-in-architecture.html["En savoir plus >>"^].
 
 ====
 [role="tabbed-block"]

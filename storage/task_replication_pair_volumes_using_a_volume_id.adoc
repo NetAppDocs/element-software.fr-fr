@@ -11,7 +11,7 @@ summary: 'Vous pouvez coupler un volume à un autre volume sur un cluster distan
 
 
 [role="lead"]
-Vous pouvez coupler un volume à un autre volume sur un cluster distant si vous disposez des informations d'identification d'administrateur de cluster pour le cluster distant.
+Vous pouvez associer un volume à un autre volume sur un cluster distant si vous disposez d'un accès d'administrateur de cluster aux deux clusters sur lesquels les volumes doivent être associés. Cette méthode utilise l'identifiant du volume sur le cluster distant pour établir une connexion.
 
 .Ce dont vous avez besoin
 * Assurez-vous que les clusters contenant les volumes sont appariés.

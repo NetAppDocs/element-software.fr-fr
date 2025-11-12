@@ -22,7 +22,7 @@ Vous pouvez ajouter plusieurs initiateurs à un groupe d'accès de volume exista
 
 Vous pouvez attribuer des attributs CHAP basés sur initator à l'aide d'un appel d'API. Pour ajouter un nom de compte CHAP et des informations d'identification par initiateur, vous devez utiliser l'appel API ModimodiyInitiator pour supprimer et ajouter des droits d'accès et des attributs CHAP.
 
-Pour plus de détails, voir link:../api/index.html["Gérez le stockage avec l'API Element"].
+Pour plus de détails, voirlink:../api/concept_element_api_about_the_api.html["Gérez le stockage avec l'API Element"] .
 
 .Étapes
 . Cliquez sur *Management* > *Initiators*.
