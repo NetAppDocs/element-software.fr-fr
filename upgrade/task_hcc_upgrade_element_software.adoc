@@ -18,9 +18,9 @@ Pour mettre à niveau le logiciel NetApp Element, vous pouvez utiliser l'interfa
 
 [CAUTION]
 ====
-Le pack de services de gestion 2.27 inclut le plug-in Element pour vCenter Server 5.5, qui est uniquement compatible avec le nœud de gestion 12.8. Lorsque vous effectuez une mise à jour vers les services de gestion 2.27, vous devez modifier la séquence de mise à niveau et mettre à jour le bundle de services de gestion _après_ la mise à niveau vers Element 12.8 pour assurer la compatibilité entre le nœud de gestion et les services de gestion.
+Le pack de services de gestion 2.27 inclut le plug-in Element pour vCenter Server 5.5, qui est uniquement compatible avec le nœud de gestion 12.8 ou ultérieur. Lorsque vous effectuez une mise à jour vers les services de gestion 2.27, vous devez modifier la séquence de mise à niveau et mettre à jour le bundle de services de gestion _après_ la mise à niveau vers Element 12.9 pour assurer la compatibilité entre le nœud de gestion et les services de gestion.
 
-Si vous effectuez une mise à jour vers les services de gestion 2.21.61 à 2.26.40, vous devez mettre à jour le bundle de services de gestion _avant_ la mise à niveau vers Element 12.8.
+Si vous effectuez une mise à jour vers les services de gestion 2.21.61 à 2.26.40, vous devez mettre à jour le bundle de services de gestion _avant_ la mise à niveau vers Element 12.9.
 
 ====
 .Avant de commencer

@@ -11,7 +11,7 @@ summary: 'L"objet Loggingiserveur contient des informations sur tous les hôtes 
 
 
 [role="lead"]
-L'objet Loggingiserveur contient des informations sur tous les hôtes de consignation configurés pour le cluster de stockage. Vous pouvez utiliser `GetRemoteLoggingHosts` pour déterminer ce que sont les hôtes de journalisation actuels, puis utilisez `SetRemoteLoggingHosts` pour définir la liste souhaitée des hôtes de journalisation actuels et nouveaux.
+L'objet loggingServer stocke les informations relatives aux hôtes de journalisation configurés pour le cluster de stockage.  Utiliser `GetRemoteLoggingHosts` pour afficher les hôtes de journalisation actuels, puis utiliser `SetRemoteLoggingHosts` pour définir la liste souhaitée des hôtes de journalisation actuels et nouveaux.
 
 
 
@@ -26,7 +26,7 @@ Cet objet contient les membres suivants :
  a| 
 hôte
  a| 
-Adresse IP du serveur de journaux.
+Nom de domaine complet (FQDN) ou adresse IP du serveur de journalisation
  a| 
 chaîne
 
@@ -35,8 +35,12 @@ chaîne
  a| 
 port
  a| 
-Numéro de port utilisé pour communiquer avec le serveur de journaux.
+Numéro de port utilisé pour communiquer avec le serveur de journalisation
  a| 
 entier
 
 |===
+.Informations associées
+* link:reference_element_api_getremotelogginghosts.html["GetRemoteLoggingits"]
+* link:reference_element_api_setremotelogginghosts.html["SetRemoteLoggingids"]
+

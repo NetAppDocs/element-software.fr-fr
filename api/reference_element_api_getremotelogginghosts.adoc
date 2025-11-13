@@ -17,13 +17,13 @@ Vous pouvez utiliser le `GetRemoteLoggingHosts` méthode d'obtention de la liste
 
 == Paramètres
 
-Cette méthode n'a pas de paramètres d'entrée.
+Il n'y a pas de paramètres d'entrée pour `GetRemoteLoggingHosts` .
 
 
 
 == Retour de valeur
 
-Cette méthode a la valeur de retour suivante :
+Le `GetRemoteLoggingHosts` Cette méthode a la valeur de retour suivante :
 
 |===
 | Nom | Description | Type 
@@ -32,7 +32,7 @@ Cette méthode a la valeur de retour suivante :
  a| 
 Distanciles
  a| 
-Liste des informations d'adresse IP et de port sur les hôtes configurés pour recevoir les informations de journalisation transmises.
+Liste l'adresse IP, le nom de domaine complet (FQDN) et les informations de port des hôtes configurés pour recevoir les informations de journalisation transférées.
  a| 
 xref:reference_element_api_loggingserver.adoc[Serveur de consignation] baie
 
@@ -69,6 +69,10 @@ Cette méthode renvoie une réponse similaire à l'exemple suivant :
          },
          {
            "host": "172.16.1.25"
+         },
+         {
+            "host": "syslogs.lab.company.net",
+            "port": 514
          }
       ]
    }
@@ -78,7 +82,7 @@ Cette méthode renvoie une réponse similaire à l'exemple suivant :
 
 == Nouveau depuis la version
 
-9.6
+Disponible à partir d' ONTAP 9.6.
 
 
 

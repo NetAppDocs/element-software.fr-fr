@@ -20,9 +20,9 @@ Parmi ces composants : services de gestion, NetApp Hybrid Cloud Control, logicie
 
 [NOTE]
 ====
-* Depuis le 2023 novembre, vous ne pouvez pas démarrer de mise à niveau de composant avec NetApp Hybrid Cloud Control ou l'API REST, car les certificats de clé de signature (privé et public) ont expiré le 5 novembre 2023. Pour contourner ce problème, vous pouvez link:task_hcc_upgrade_management_node.html["mise à niveau du nœud de gestion sans déplacement des données"]passer à la version 12.8 avant d'utiliser le logiciel NetApp de contrôle du cloud hybride ou l'API REST pour mettre à niveau les services de gestion, le logiciel Element et le firmware de stockage.
+* À compter de novembre 2023, vous ne pourrez plus lancer de mise à niveau de composant à l'aide de NetApp Hybrid Cloud Control ou de l'API REST, car les certificats de clé de signature (privée et publique) ont expiré le 5 novembre 2023. Vous pouvez contourner ce problème enlink:task_hcc_upgrade_management_node.html["mise à niveau du nœud de gestion sans déplacement des données"] à la version 12.8 ou ultérieure avant d'utiliser NetApp Hybrid Cloud Control ou l'API REST pour mettre à niveau les services de gestion, le logiciel Element et le firmware de stockage.
 +
-Si vous déployez un nouveau nœud de gestion avec la version 12.8, vous pouvez utiliser le contrôle du cloud hybride NetApp ou l'API REST pour effectuer les mises à niveau des composants dans l'ordre indiqué dans la <<sys_upgrade,séquence de mise à niveau du système>>.
+Si vous déployez un nouveau nœud de gestion avec la version 12.8 ou ultérieure, vous pouvez utiliser NetApp Hybrid Cloud Control ou l'API REST pour effectuer les mises à niveau des composants dans l'ordre indiqué.<<sys_upgrade,séquence de mise à niveau du système>> .
 
 * Les nœuds suivants ne sont pas pris en charge. Si vous tentez de mettre à niveau l'un de ces nœuds vers une version d'élément non prise en charge, une erreur s'affiche indiquant que le nœud n'est pas pris en charge par l'élément 12.x :
 +
@@ -69,8 +69,8 @@ NOTE: Il n'est plus nécessaire de mettre à niveau le système d'exploitation d
 +
 [IMPORTANT]
 ====
-** Le pack de services de gestion 2.27 inclut le plug-in Element pour vCenter Server 5.5, qui est uniquement compatible avec le nœud de gestion 12.8. Lorsque vous effectuez une mise à jour vers les services de gestion 2.27, vous devez modifier la séquence de mise à niveau et mettre à jour le bundle de services de gestion _après_ la mise à niveau vers Element 12.8 pour assurer la compatibilité entre le nœud de gestion et les services de gestion.
-** Si vous effectuez une mise à jour vers les services de gestion 2.21.61 à 2.26.40, vous devez mettre à jour le bundle de services de gestion _avant_ la mise à niveau vers Element 12.8.
+** Le pack de services de gestion 2.27 inclut le plug-in Element pour vCenter Server 5.5, qui est uniquement compatible avec le nœud de gestion 12.8 ou ultérieur. Lorsque vous effectuez une mise à jour vers les services de gestion 2.27, vous devez modifier la séquence de mise à niveau et mettre à jour le bundle de services de gestion _après_ la mise à niveau vers Element 12.9 pour assurer la compatibilité entre le nœud de gestion et les services de gestion.
+** Si vous effectuez une mise à jour vers les services de gestion 2.21.61 à 2.26.40, vous devez mettre à jour le bundle de services de gestion _avant_ la mise à niveau vers Element 12.9.
 
 
 ====

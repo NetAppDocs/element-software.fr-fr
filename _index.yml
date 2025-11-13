@@ -7,11 +7,11 @@ indexpage:
     à l'aide du logiciel NetApp Element.
   keywords: solidfire, all-flash, storage, hardware, install, maintain, element software,
     esos, element cli
-  lead: Un système de stockage 100 % Flash SolidFire comprend des composants matériels,
-    tels que des disques et des nœuds, qui sont combinés dans un pool de ressources
-    de stockage. En utilisant l'interface Element, l'API ou d'autres outils de gestion,
-    vous pouvez gérer ces clusters de ressources de stockage avec le logiciel NetApp
-    Element. Ce site contient la documentation du logiciel Element 12.8.
+  lead: Un système de stockage 100 % flash SolidFire est composé de composants matériels
+    tels que des disques et des nœuds qui sont combinés en un pool de ressources de
+    stockage. Vous pouvez gérer ces clusters de ressources de stockage avec le logiciel
+    NetApp Element en utilisant l'interface Element, l'API ou d'autres outils de gestion.
+    Ce site contient la documentation du logiciel Element 12.9.
   tiles:
   - title: Commencez
     links:

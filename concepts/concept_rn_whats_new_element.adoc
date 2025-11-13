@@ -12,10 +12,24 @@ summary: NetApp met régulièrement à jour les logiciels SolidFire et Element p
 
 
 [role="lead"]
-NetApp met régulièrement à jour les logiciels SolidFire et Element pour vous apporter de nouvelles fonctionnalités, des améliorations et des correctifs. La dernière version d'Element 12.8 comprend des mises à jour des composants système et de sécurité, des améliorations opérationnelles et des problèmes résolus.
+NetApp met régulièrement à jour les logiciels SolidFire et Element afin de vous proposer de nouvelles fonctionnalités, des améliorations et des correctifs de bugs. Element 12.9 est la dernière version et comprend des mises à jour de sécurité et des composants système, des améliorations opérationnelles et des problèmes résolus.
 
 
-NOTE: Les mises à jour cumulatives logicielles et micrologicielles sont installées dans le cadre d'une mise à niveau d'Element 12.8 basée sur la version actuelle d'élément exécutée sur un cluster de stockage. Par exemple, si un cluster exécute actuellement Element 12.5, vous pouvez effectuer une mise à niveau directe vers Element 12.8 pour obtenir les mises à jour cumulatives à partir des éléments 12.7 et 12.8. Pour connaître les chemins de mise à niveau pris en charge, consultez l'article de la base de connaissances https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_is_the_upgrade_matrix_for_storage_clusters_running_NetApp_Element_software["Quelle est la matrice de mise à niveau pour les clusters de stockage exécutant le logiciel NetApp Element"^] .
+NOTE: Les mises à jour cumulatives des logiciels et des microprogrammes sont installées dans le cadre d'une mise à niveau d'Element 12.9 basée sur la version actuelle d'Element exécutée sur un cluster de stockage. Par exemple, si un cluster exécute actuellement Element 12.5, vous pouvez effectuer une mise à niveau directe vers Element 12.9 pour obtenir les mises à jour cumulatives des versions Element 12.7, 12.8 et 12.9. Pour connaître les chemins de mise à niveau pris en charge, consultez l'article de la base de connaissances. https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_is_the_upgrade_matrix_for_storage_clusters_running_NetApp_Element_software["Quelle est la matrice de mise à niveau pour les clusters de stockage exécutant le logiciel NetApp Element"^] .
+
+
+
+== Élément 12.9
+
+Découvrez les nouveautés d'Element 12.9.
+
+
+
+=== Prise en charge des noms de domaine pleinement qualifiés (FQDN) dans « SetRemoteLoggingHosts »
+
+À partir d'Element 12.9, vous pouvez utiliser `SetRemoteLoggingHosts` méthode pour configurer un nom de domaine pleinement qualifié (FQDN) ou une adresse IP comme valeur d'hôte de journalisation pour un cluster de stockage.  Vous pouvez consulter la valeur de l'hôte FQDN dans la réponse pour le `GetRemoteLoggingHosts` méthode.  Pour Element 12.8 et versions antérieures, vous ne pouvez configurer qu'une adresse IP comme valeur d'hôte de journalisation.
+
+https://docs.netapp.com/us-en/element-software/api/reference_element_api_loggingserver.html["Apprenez-en davantage sur la configuration de l'hôte de journalisation"]
 
 
 
